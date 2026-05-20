@@ -62,8 +62,8 @@ def _home_page() -> None:
 
     def _on_loaded(data: dict, source: str) -> None:
         load_policies(data)
-        count = len(data.get("policies", []))
-        st.success(f"Loaded {count} policies from {source}.")
+        count = len(st.session_state.policy_items)
+        st.success(f"Loaded {count} policy items from {source}.")
         st.page_link("pages/1_Identity_Mapping.py", label="Continue → Identity Mapping", icon="➡️")
 
     # ── Tab 1: Upload file ────────────────────────────────────────────

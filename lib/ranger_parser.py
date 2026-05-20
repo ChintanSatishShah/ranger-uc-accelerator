@@ -81,6 +81,12 @@ def _allowed_accesses(item: dict[str, Any]) -> list[str]:
 
 def parse_ranger_policies(json_data: dict[str, Any] | list[Any]) -> dict[str, Any]:
     """Parse a Ranger export and return normalized policy items, warnings, etc."""
+    # Unwrap Ranger ACL provider test format: { testCases: [{ servicePolicies: {...} }] }
+    if isinstance(json_data, dict) and "testCases" in json_data:
+        test_cases = json_data.get("testCases") or []
+        if test_cases and isinstance(test_cases[0], dict) and "servicePolicies" in test_cases[0]:
+            json_data = test_cases[0]["servicePolicies"]
+
     if isinstance(json_data, list):
         policies = json_data
         service_name = "unknown"

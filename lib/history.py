@@ -89,6 +89,7 @@ def list_archives() -> list[dict[str, Any]]:
                 "metadata": data.get("metadata", {}),
                 "filepath": str(filepath),
                 "size_kb": filepath.stat().st_size / 1024,
+                "parsed_data": data.get("parsed_data", {}),
                 "policy_items": data.get("policy_items", []),
                 "identity_map": data.get("identity_map", {}),
                 "generated_sql": data.get("generated_sql", ""),

@@ -16,10 +16,15 @@ kerberos_issues = parsed["kerberosIssues"]
 groups = [i for i in identities if i["type"] == "group"]
 users = [i for i in identities if i["type"] == "user"]
 
-st.title("👥 Identity Mapping")
-st.caption(
-    f"Map {len(groups)} groups and {len(users)} users from Ranger to Databricks principals"
-)
+_title_col, _nav_col = st.columns([3, 2])
+with _title_col:
+    st.title("👥 Identity Mapping")
+    st.caption(
+        f"Map {len(groups)} groups and {len(users)} users from Ranger to Databricks principals"
+    )
+with _nav_col:
+    st.write("")
+    st.page_link("pages/2_Review_Policies.py", label="Continue → Review Policies", icon="➡️")
 
 # ── Catalog name ──────────────────────────────────────────────────────
 with st.container(border=True):

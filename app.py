@@ -66,7 +66,7 @@ def _home_page() -> None:
         st.success(f"Loaded {count} policies from {source}.")
         st.page_link("pages/1_Identity_Mapping.py", label="Continue → Identity Mapping", icon="➡️")
 
-    # ── Tab 1: Upload file or pick from input/ folder ─────────────────
+    # ── Tab 1: Upload file ────────────────────────────────────────────
     with tab_upload:
         uploaded = st.file_uploader(
             "Ranger policy export (.json)",
@@ -81,30 +81,6 @@ def _home_page() -> None:
                 _on_loaded(data, uploaded.name)
             except json.JSONDecodeError:
                 st.error("Invalid JSON — please upload a Ranger policy export.")
-
-        # Show all JSON files; separate samples (no user_ prefix) from user uploads
-        all_input = sorted(INPUT_DIR.glob("*.json"))
-        sample_files = [f for f in all_input if not f.name.startswith("user_")]
-        user_files = [f for f in all_input if f.name.startswith("user_")]
-        if sample_files or user_files:
-            groups: list[str] = []
-            if sample_files:
-                groups.append("── Samples ──")
-                groups.extend(f.name for f in sample_files)
-            if user_files:
-                groups.append("── My uploads ──")
-                groups.extend(f.name for f in user_files)
-            st.markdown("**Or pick from `input/` folder:**")
-            chosen = st.selectbox("input/ files", groups, label_visibility="collapsed")
-            is_header = chosen.startswith("──")
-            if st.button("Load selected file", use_container_width=True, disabled=is_header):
-                try:
-                    data = json.loads((INPUT_DIR / chosen).read_text())
-                    _on_loaded(data, chosen)
-                except (json.JSONDecodeError, OSError) as e:
-                    st.error(f"Could not read file: {e}")
-        else:
-            st.caption("Drop `.json` files into the `input/` folder to make them available here.")
 
     # ── Tab 2: Paste raw JSON ─────────────────────────────────────────
     with tab_paste:

@@ -23,8 +23,25 @@ Open http://localhost:8501
 | 2 | **Identity Mapping** | Map Ranger groups/users to Databricks principals, flag Kerberos issues |
 | 3 | **Review Policies** | Filter / approve / reject parsed policy items with SQL preview |
 | 4 | **Generate SQL** | Full Unity Catalog migration script — GRANTs, row filters, column masks |
-| 5 | **Gap Analysis** | Deny policies, Kerberos issues, delegate admin, wildcards, readiness score |
+| 5 | **Gap Analysis** | Kerberos issues, delegate admin, wildcards, readiness score |
 | 6 | **Deploy** | 5-phase deployment checklist with SQL snippets and Databricks doc links |
+| 📋 | **History** | View, restore, and export past migration sessions with JSON archives |
+
+## Session History & Archiving
+
+All migration sessions are automatically archived as JSON to `~/.ranger_uc_history/` for persistence and auditability:
+
+- **Save Session** — After uploading policies, you can archive the entire session with custom notes
+- **Local Storage** — All archives stored locally as JSON (no cloud dependency)
+- **Restore Session** — Reload any past migration from the History page to continue where you left off
+- **Export to ZIP** — Download complete archives (Ranger export, policy items, identity mappings, generated SQL)
+- **Audit Trail** — Each archive includes metadata: timestamp, source cluster, target catalog, and notes
+
+**Use Cases:**
+- Compare multiple migration approaches (try different identity mappings)
+- Audit compliance: track all policy changes and approvals
+- Batch migrations: save, share, and restore across teams
+- Non-destructive exploration: archive before making major changes
 
 ## Supported Ranger Policy Types
 

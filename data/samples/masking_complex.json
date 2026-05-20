@@ -1,0 +1,87 @@
+{
+  "serviceName": "hive_prod",
+  "policies": [
+    {
+      "id": 203,
+      "guid": "policy-203",
+      "isEnabled": true,
+      "service": "hive_prod",
+      "name": "financial_data_masking",
+      "policyType": 1,
+      "description": "Complex masking - Conditional masks with custom expressions",
+      "isAuditEnabled": true,
+      "resources": {
+        "database": {
+          "values": [
+            "finance"
+          ]
+        },
+        "table": {
+          "values": [
+            "transactions",
+            "accounts"
+          ]
+        },
+        "column": {
+          "values": [
+            "account_number",
+            "transaction_amount",
+            "customer_id",
+            "birth_date"
+          ]
+        }
+      },
+      "dataMaskPolicyItems": [
+        {
+          "dataMaskInfo": {
+            "dataMaskType": "CUSTOM",
+            "valueExpr": "CASE WHEN transaction_amount < 1000 THEN transaction_amount ELSE CAST('XXXXX' AS DECIMAL) END"
+          },
+          "groups": [
+            "junior_analysts"
+          ]
+        },
+        {
+          "dataMaskInfo": {
+            "dataMaskType": "MASK_DATE_SHOW_YEAR",
+            "conditionExpr": "age < 18"
+          },
+          "groups": [
+            "marketing_team"
+          ]
+        },
+        {
+          "dataMaskInfo": {
+            "dataMaskType": "MASK_SHOW_LAST_4"
+          },
+          "users": [
+            "compliance_officer@company.com"
+          ],
+          "groups": [
+            "audit_team"
+          ],
+          "conditions": [
+            {
+              "type": "accessed-after-expiry",
+              "values": [
+                "yes"
+              ]
+            }
+          ]
+        },
+        {
+          "dataMaskInfo": {
+            "dataMaskType": "MASK_NONE"
+          },
+          "users": [
+            "cfo@company.com",
+            "controller@company.com"
+          ],
+          "groups": [
+            "finance_leadership"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "serviceName": "hive_prod",
+  "policies": [
+    {
+      "id": 103,
+      "guid": "policy-103",
+      "isEnabled": true,
+      "service": "hive_prod",
+      "name": "customer_pii_filters",
+      "policyType": 2,
+      "description": "Complex row filter - Multi-condition with user context",
+      "isAuditEnabled": true,
+      "resources": {
+        "database": {
+          "values": [
+            "customer_360"
+          ]
+        },
+        "table": {
+          "values": [
+            "customer_details"
+          ]
+        }
+      },
+      "rowFilterPolicyItems": [
+        {
+          "rowFilterInfo": {
+            "filterExpr": "country IN ('USA', 'CAN') AND customer_tier IN ('GOLD', 'PLATINUM') AND consent_given = TRUE"
+          },
+          "groups": [
+            "customer_success",
+            "vip_account_managers"
+          ]
+        },
+        {
+          "rowFilterInfo": {
+            "filterExpr": "(assigned_to = CURRENT_USER() OR team_id IN (SELECT team_id FROM user_teams WHERE user_name = CURRENT_USER()))"
+          },
+          "groups": [
+            "account_managers",
+            "support_team"
+          ]
+        }
+      ]
+    }
+  ]
+}

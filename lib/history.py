@@ -10,7 +10,7 @@ from typing import Any
 import streamlit as st
 
 
-HISTORY_DIR = Path.home() / ".ranger_uc_history"
+HISTORY_DIR = Path(__file__).parent.parent / "data" / "output"
 HISTORY_DIR.mkdir(exist_ok=True)
 
 
@@ -22,15 +22,23 @@ def _sanitize_filename(name: str, max_len: int = 40) -> str:
 
 def save_session(parsed_data: dict[str, Any], policy_items: list[Any],
                  identity_map: dict[str, str], catalog_name: str,
-                 generated_sql: str, notes: str = "") -> str:
-    """Save current session to JSON archive. Returns filename."""
+                 generated_sql: str, notes: str = "", label: str = "") -> str:
+    """Save current session to JSON archive. Returns filename.
+
+    label: optional slug appended to the filename to disambiguate archives
+           that share the same serviceName (e.g. when batch-importing samples).
+    """
     if not parsed_data:
         raise ValueError("No policies loaded to archive.")
-    
+
     timestamp = datetime.utcnow().isoformat()
     service_name = parsed_data.get("serviceName", "ranger_export")
     safe_name = _sanitize_filename(service_name)
-    filename = f"{safe_name}_{datetime.utcnow().strftime('%Y%m%d_%H%M%S')}.json"
+    ts = datetime.utcnow().strftime("%Y%m%d_%H%M%S")
+    if label:
+        filename = f"{_sanitize_filename(label, max_len=80)}_{ts}.json"
+    else:
+        filename = f"{safe_name}_{ts}.json"
     filepath = HISTORY_DIR / filename
     
     archive = {
@@ -66,7 +74,7 @@ def load_session(filename: str) -> dict[str, Any]:
 
 
 def list_archives() -> list[dict[str, Any]]:
-    """List all archived sessions with metadata."""
+    """List all archived sessions with metadata and preview content."""
     archives = []
     for filepath in sorted(HISTORY_DIR.glob("*.json"), reverse=True):
         try:
@@ -77,6 +85,9 @@ def list_archives() -> list[dict[str, Any]]:
                 "metadata": data.get("metadata", {}),
                 "filepath": str(filepath),
                 "size_kb": filepath.stat().st_size / 1024,
+                "policy_items": data.get("policy_items", []),
+                "identity_map": data.get("identity_map", {}),
+                "generated_sql": data.get("generated_sql", ""),
             })
         except (json.JSONDecodeError, OSError):
             continue

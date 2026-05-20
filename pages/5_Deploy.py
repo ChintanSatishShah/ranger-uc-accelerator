@@ -5,7 +5,6 @@ import streamlit as st
 
 from lib.state import gaps, init_state, render_sidebar_summary, require_policies, stats
 
-st.set_page_config(page_title="Deploy", page_icon="🚀", layout="wide")
 init_state()
 render_sidebar_summary()
 require_policies()

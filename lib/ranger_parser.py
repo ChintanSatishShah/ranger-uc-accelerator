@@ -32,6 +32,21 @@ MASK_TYPE_MAP: dict[str, str] = {
     "MASK_NULL": "NULLIFY",
 }
 
+HDFS_ACCESS_MAP: dict[str, str] = {
+    "read": "READ FILES",
+    "write": "WRITE FILES",
+    "execute": "READ FILES",
+    "all": "ALL PRIVILEGES",
+}
+
+HBASE_ACCESS_MAP: dict[str, str] = {
+    "read": "SELECT",
+    "write": "MODIFY",
+    "create": "CREATE",
+    "admin": "ALL PRIVILEGES",
+    "all": "ALL PRIVILEGES",
+}
+
 SEVERITY = {
     "info": "info",
     "warning": "warning",
@@ -74,7 +89,19 @@ def parse_ranger_policies(json_data: dict[str, Any] | list[Any]) -> dict[str, An
     else:
         policies = json_data.get("policies") or []
         service_name = json_data.get("serviceName", "unknown")
-        service_type = json_data.get("serviceType", "hive")
+        _st = (json_data.get("serviceType") or "").lower()
+        if not _st:
+            _sn = service_name.lower()
+            _first_resources = ((json_data.get("policies") or [{}])[0].get("resources") or {})
+            if "hdfs" in _sn or "hadoop" in _sn or "path" in _first_resources:
+                _st = "hdfs"
+            elif "hbase" in _sn or (
+                "table" in _first_resources and "column-family" in _first_resources
+            ):
+                _st = "hbase"
+            else:
+                _st = "hive"
+        service_type = _st
         cluster_name = json_data.get("clusterName", "unknown")
 
     catalog = "main"
@@ -135,7 +162,82 @@ def parse_ranger_policies(json_data: dict[str, Any] | list[Any]) -> dict[str, An
                 ),
             })
 
-        # ── Resource-based grants ──
+        # ── HDFS path grants → UC External Location ──
+        if service_type == "hdfs":
+            paths = (resources.get("path") or {}).get("values") or ["/"]
+            is_recursive = (resources.get("path") or {}).get("isRecursive", False)
+            for item in policy.get("policyItems") or []:
+                principals = _principals(item.get("groups") or [], item.get("users") or [])
+                accesses = list(dict.fromkeys(
+                    HDFS_ACCESS_MAP.get(a["type"], a["type"].upper())
+                    for a in (item.get("accesses") or [])
+                    if a.get("isAllowed")
+                ))
+                for p in principals:
+                    identities.add((p["type"], p["name"]))
+                for path in paths:
+                    for principal in principals:
+                        item_counter += 1
+                        results.append({
+                            "id": f'{policy.get("id")}-hdfs-{principal["name"]}-{item_counter}',
+                            "rangerPolicyId": policy.get("id"),
+                            "rangerPolicyName": policy.get("name"),
+                            "rangerPolicyDesc": policy.get("description", ""),
+                            "type": "hdfs_grant",
+                            "path": path,
+                            "isRecursive": is_recursive,
+                            "schema": None,
+                            "table": None,
+                            "privileges": accesses,
+                            "principal": principal,
+                            "delegateAdmin": item.get("delegateAdmin", False),
+                            "enabled": is_enabled,
+                            "status": "pending",
+                        })
+            continue  # no row filters or masks for HDFS
+
+        # ── HBase table grants → UC table/schema grants ──
+        if service_type == "hbase":
+            hbase_tables = (resources.get("table") or {}).get("values") or ["*"]
+            col_families = (resources.get("column-family") or {}).get("values") or ["*"]
+            for item in policy.get("policyItems") or []:
+                principals = _principals(item.get("groups") or [], item.get("users") or [])
+                accesses = list(dict.fromkeys(
+                    HBASE_ACCESS_MAP.get(a["type"], a["type"].upper())
+                    for a in (item.get("accesses") or [])
+                    if a.get("isAllowed")
+                ))
+                for p in principals:
+                    identities.add((p["type"], p["name"]))
+                for hbtbl in hbase_tables:
+                    if ":" in hbtbl:
+                        ns, tbl = hbtbl.split(":", 1)
+                        tbl_resolved = None if tbl == "*" else tbl
+                    elif hbtbl == "*":
+                        ns, tbl_resolved = "_all_namespaces", None
+                    else:
+                        ns, tbl_resolved = "default", hbtbl
+                    for principal in principals:
+                        item_counter += 1
+                        results.append({
+                            "id": f'{policy.get("id")}-hbase-{principal["name"]}-{item_counter}',
+                            "rangerPolicyId": policy.get("id"),
+                            "rangerPolicyName": policy.get("name"),
+                            "rangerPolicyDesc": policy.get("description", ""),
+                            "type": "hbase_grant",
+                            "catalog": catalog,
+                            "schema": ns,
+                            "table": tbl_resolved,
+                            "col_families": col_families if col_families != ["*"] else [],
+                            "privileges": accesses,
+                            "principal": principal,
+                            "delegateAdmin": item.get("delegateAdmin", False),
+                            "enabled": is_enabled,
+                            "status": "pending",
+                        })
+            continue  # no row filters or masks for HBase
+
+        # ── Resource-based grants (Hive / default) ──
         for item in policy.get("policyItems") or []:
             principals = _principals(item.get("groups") or [], item.get("users") or [])
             accesses = list(dict.fromkeys(_allowed_accesses(item)))
@@ -313,6 +415,38 @@ def generate_uc_sql(
                 f"-- Note: delegateAdmin=true in Ranger. "
                 f"Consider granting MANAGE on {target} if admin delegation is needed."
             )
+
+    elif t == "hdfs_grant":
+        path = item.get("path") or "/"
+        is_recursive = item.get("isRecursive", False)
+        safe_loc = _safe(path.strip("/")) or "root"
+        recursive_note = " (recursive)" if is_recursive else ""
+        lines.append(f"-- HDFS path: {path}{recursive_note}")
+        lines.append("-- ⚠ Create a UC External Location covering this path first,")
+        lines.append("--   then replace the placeholder below with the actual location name.")
+        for priv in item.get("privileges") or []:
+            lines.append(f"GRANT {priv} ON EXTERNAL LOCATION `<ext_loc_{safe_loc}>` TO {principal};")
+        if item.get("delegateAdmin"):
+            lines.append("-- Note: delegateAdmin=true. Consider granting MANAGE on the External Location.")
+
+    elif t == "hbase_grant":
+        schema = item.get("schema") or "default"
+        table = item.get("table")
+        cf_list = item.get("col_families") or []
+        if schema == "_all_namespaces":
+            lines.append("-- ⚠ HBase wildcard (*) spans all namespaces — cannot be automatically translated.")
+            lines.append(f"-- Grant on specific schemas under catalog {cat} manually.")
+        else:
+            if cf_list:
+                lines.append(f"-- HBase column-families ({', '.join(cf_list)}) have no direct UC equivalent — table-level grant applied.")
+            target = f"TABLE {cat}.{schema}.{table}" if table else f"SCHEMA {cat}.{schema}"
+            if not table:
+                lines.append(f"GRANT USE CATALOG ON CATALOG {cat} TO {principal};")
+                lines.append(f"GRANT USE SCHEMA ON SCHEMA {cat}.{schema} TO {principal};")
+            for priv in item.get("privileges") or []:
+                lines.append(f"GRANT {priv} ON {target} TO {principal};")
+            if item.get("delegateAdmin"):
+                lines.append(f"-- Note: delegateAdmin=true. Consider MANAGE on {target} if admin delegation needed.")
 
     elif t == "deny":
         privs = ", ".join(item.get("privileges") or [])
@@ -592,6 +726,7 @@ def calculate_stats(policy_items: list[dict[str, Any]]) -> dict[str, Any]:
     stats = {
         "total": len(policy_items),
         "grants": 0, "denies": 0, "rowFilters": 0, "masks": 0,
+        "hdfsGrants": 0, "hbaseGrants": 0,
         "approved": 0, "needsReview": 0, "pending": 0, "rejected": 0,
         "disabled": 0,
     }
@@ -603,6 +738,8 @@ def calculate_stats(policy_items: list[dict[str, Any]]) -> dict[str, Any]:
         elif t == "deny": stats["denies"] += 1
         elif t == "row_filter": stats["rowFilters"] += 1
         elif t == "column_mask": stats["masks"] += 1
+        elif t == "hdfs_grant": stats["hdfsGrants"] += 1
+        elif t == "hbase_grant": stats["hbaseGrants"] += 1
 
         s = p.get("status")
         if s == "approved": stats["approved"] += 1

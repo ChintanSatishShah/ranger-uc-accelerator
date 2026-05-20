@@ -89,9 +89,6 @@ def render_sidebar_summary() -> None:
     """Render the migration summary in the Streamlit sidebar."""
     parsed = st.session_state.get("parsed_data")
     with st.sidebar:
-        st.markdown("# Ranger → UC")
-        st.markdown("**Migration Accelerator**")
-        st.divider()
         if parsed:
             s = stats()
             st.markdown("**Migration Summary**")
@@ -107,7 +104,7 @@ def render_sidebar_summary() -> None:
                 reset()
                 st.rerun()
         else:
-            st.info("No policies loaded yet.")
+            st.caption("No policies loaded yet.")
 
 
 def save_current_session(notes: str = "") -> str:

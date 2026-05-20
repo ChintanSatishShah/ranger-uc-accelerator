@@ -38,6 +38,12 @@ htmlcov/
 # Streamlit local state (keep .streamlit/config.toml in repo)
 .streamlit/local/
 
+# Project I/O — keep folders, ignore contents
+data/input/*
+!data/input/.gitkeep
+data/output/*
+!data/output/.gitkeep
+
 # IDEs and editors
 .vscode/
 .idea/

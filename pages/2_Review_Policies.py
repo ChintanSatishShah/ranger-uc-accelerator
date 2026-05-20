@@ -13,7 +13,6 @@ from lib.state import (
     update_policy_status,
 )
 
-st.set_page_config(page_title="Review Policies", page_icon="🛡", layout="wide")
 init_state()
 render_sidebar_summary()
 require_policies()

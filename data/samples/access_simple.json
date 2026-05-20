@@ -1,0 +1,51 @@
+{
+  "serviceName": "hive_prod",
+  "serviceDef": {
+    "name": "hive"
+  },
+  "policies": [
+    {
+      "id": 1,
+      "guid": "policy-001",
+      "isEnabled": true,
+      "version": 1,
+      "service": "hive_prod",
+      "name": "customer_table_select",
+      "policyType": 0,
+      "description": "Simple policy - Allow analyst to select from customers table",
+      "isAuditEnabled": true,
+      "resources": {
+        "database": {
+          "values": [
+            "sales"
+          ],
+          "isExcludes": false,
+          "isRecursive": false
+        },
+        "table": {
+          "values": [
+            "customers"
+          ],
+          "isExcludes": false,
+          "isRecursive": false
+        }
+      },
+      "policyItems": [
+        {
+          "accesses": [
+            {
+              "type": "select",
+              "isAllowed": true
+            }
+          ],
+          "users": [
+            "analyst1@company.com"
+          ],
+          "groups": [],
+          "conditions": [],
+          "delegateAdmin": false
+        }
+      ]
+    }
+  ]
+}

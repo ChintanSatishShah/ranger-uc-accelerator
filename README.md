@@ -1,8 +1,6 @@
-# Ranger → Unity Catalog Migration Accelerator (Streamlit)
+# Ranger → Unity Catalog Migration Accelerator
 
-Streamlit port of the Ranger → Unity Catalog migration tool. Converts Apache
-Ranger policies (Cloudera CDP / HDP / standalone) into Databricks Unity Catalog
-SQL — with gap analysis, identity mapping, and a deployment checklist.
+A Streamlit app that parses Apache Ranger policy exports and generates Databricks Unity Catalog SQL — covering grants, row filters, column masks, HDFS External Location grants, and HBase table grants — with identity mapping, gap analysis, session archiving, and a deployment checklist.
 
 ## Quick Start
 
@@ -15,43 +13,37 @@ streamlit run app.py
 
 Open http://localhost:8501
 
+Compatible with Cloudera CDP 7.x, HDP 2.x/3.x, and standalone Apache Ranger 2.x.
+
+---
+
 ## Workflow
 
 | Step | Page | Description |
 |------|------|-------------|
-| 1 | **Upload** (home) | Parse Ranger JSON export or load the built-in 15-policy sample |
-| 2 | **Identity Mapping** | Map Ranger groups/users to Databricks principals, flag Kerberos issues |
-| 3 | **Review Policies** | Filter / approve / reject parsed policy items with SQL preview |
-| 4 | **Generate SQL** | Full Unity Catalog migration script — GRANTs, row filters, column masks |
-| 5 | **Gap Analysis** | Kerberos issues, delegate admin, wildcards, readiness score |
-| 6 | **Deploy** | 5-phase deployment checklist with SQL snippets and Databricks doc links |
-| 📋 | **History** | View, restore, and export past migration sessions with JSON archives |
+| 0 | **Policy Import** (home) | Upload a Ranger JSON export, paste raw JSON, or load a built-in sample |
+| 1 | **Identity Mapping** | Map Ranger users/groups to Databricks principals; Kerberos principals auto-flagged |
+| 2 | **Review Policies** | Filter, approve, or reject parsed policy items with inline SQL preview |
+| 3 | **Generate SQL** | Full Unity Catalog migration script — GRANTs, row filters, column masks |
+| 4 | **Gap Analysis** | Deny policies, Kerberos issues, delegateAdmin, wildcards, readiness score |
+| 5 | **Deploy** | 5-phase deployment checklist with SQL snippets and Databricks doc links |
+| 📋 | **Session Archive** | Save, preview, restore, and export past migration sessions |
+| 📖 | **Migration Mappings** | Reference: how every Ranger construct maps to Unity Catalog SQL |
+| ⚠️ | **Cautions & Constraints** | Known gaps, limitations, and services not automatically translated |
 
-## Session History & Archiving
+---
 
-All migration sessions are automatically archived as JSON to `~/.ranger_uc_history/` for persistence and auditability:
+## Loading Policies
 
-- **Save Session** — After uploading policies, you can archive the entire session with custom notes
-- **Local Storage** — All archives stored locally as JSON (no cloud dependency)
-- **Restore Session** — Reload any past migration from the History page to continue where you left off
-- **Export to ZIP** — Download complete archives (Ranger export, policy items, identity mappings, generated SQL)
-- **Audit Trail** — Each archive includes metadata: timestamp, source cluster, target catalog, and notes
+Three input methods are available on the home page:
 
-**Use Cases:**
-- Compare multiple migration approaches (try different identity mappings)
-- Audit compliance: track all policy changes and approvals
-- Batch migrations: save, share, and restore across teams
-- Non-destructive exploration: archive before making major changes
+| Tab | Method |
+|-----|--------|
+| **Upload File** | Upload a `.json` Ranger export; also shows any files already in `data/input/` |
+| **Paste JSON** | Paste raw JSON directly; saved automatically to `data/input/` for reuse |
+| **Load Sample** | 45 built-in sample policies covering all Ranger service types and policy patterns |
 
-## Supported Ranger Policy Types
-
-- Resource-based grants (SELECT, MODIFY, CREATE, DROP, ALTER, ALL)
-- Row-level filters → UC SQL filter functions
-- Column masking (MASK, LAST_4, HASH, NULL, NONE) → UC mask functions
-- Delegate admin detection → UC MANAGE privilege advisory
-- Kerberos principal and service account detection
-
-## How to Export Ranger Policies
+### Export from Ranger Admin
 
 ```bash
 curl -u admin:password \
@@ -59,24 +51,160 @@ curl -u admin:password \
   -o ranger_policies.json
 ```
 
-Works with Cloudera CDP 7.x, HDP 2.x/3.x, and standalone Apache Ranger 2.x.
+---
+
+## Supported Policy Types & Services
+
+### Hive (default)
+| Ranger policy type | UC output |
+|---|---|
+| `policyItems` (grants) | `GRANT <privilege> ON TABLE/SCHEMA ... TO ...` |
+| `denyPolicyItems` | SQL comment block with remediation advice (no UC DENY) |
+| `rowFilterPolicyItems` | `CREATE FUNCTION` + `ALTER TABLE SET ROW FILTER` |
+| `dataMaskPolicyItems` | `CREATE FUNCTION` + `ALTER COLUMN SET MASK` |
+
+**Privilege mapping:**
+
+| Ranger | UC |
+|---|---|
+| select, read, index, lock | SELECT |
+| update, write | MODIFY |
+| create | CREATE |
+| drop | DROP |
+| alter | ALTER |
+| all | ALL PRIVILEGES |
+| execute | EXECUTE |
+
+**Column mask types:** MASK (full redact), MASK_SHOW_LAST_4, MASK_HASH, MASK_NULL, MASK_NONE — each generates a `CREATE OR REPLACE FUNCTION` using `IS_ACCOUNT_GROUP_MEMBER` for per-group masking.
+
+### HDFS
+Detected automatically when `serviceName` contains `hdfs`/`hadoop` or when policies use a `path` resource.
+
+| Ranger access | UC privilege |
+|---|---|
+| read | READ FILES |
+| write | WRITE FILES |
+| execute | READ FILES |
+| all | ALL PRIVILEGES |
+
+Generated SQL: `GRANT READ FILES ON EXTERNAL LOCATION \`<ext_loc_placeholder>\` TO \`user\`;`
+
+> A placeholder is used because External Location names are admin-defined. Replace each `<ext_loc_...>` with the actual location name after creating External Locations in the UC Admin Console.
+
+### HBase
+Detected automatically when `serviceName` contains `hbase` or when policies use both `table` and `column-family` resources (assumes HBase data migrated to Delta tables).
+
+| Ranger access | UC privilege |
+|---|---|
+| read | SELECT |
+| write | MODIFY |
+| create | CREATE |
+| admin | ALL PRIVILEGES |
+
+HBase namespace parsing: `namespace:table` → `catalog.namespace.table`, `namespace:*` → schema-level grant, `*` (all namespaces) → manual review comment.
+
+Column families have no UC equivalent — a table-level grant is generated with a comment noting the column families.
+
+---
+
+## Known Gaps & Constraints
+
+| Issue | Severity | Handling |
+|---|---|---|
+| Deny policies | 🔴 Critical | Comment block only — UC has no DENY mechanism |
+| Kerberos principals | 🔴 Critical | Auto-detected; must map to service principals via SCIM/M2M |
+| Row filter expressions | 🟡 Review | Copied verbatim — validate for Hive UDFs or request-context attributes |
+| HDFS External Location names | 🟡 Review | Placeholder generated; replace with real names |
+| HBase column families | 🟡 Review | Falls back to table-level grant; no column-family isolation in UC |
+| delegateAdmin | 🟡 Review | Comment suggests MANAGE privilege — review each case |
+| Wildcard table (`*`) | 🟡 Review | Expanded to schema-level grant (forward-looking scope) |
+| MASK_SHOW_FIRST_4 / MASK_DATE_SHOW_YEAR | 🟡 Info | Falls back to full redaction — implement custom expression manually |
+| Disabled policies | ℹ️ Info | Parsed but excluded from SQL unless manually approved |
+| Kafka, YARN, Storm, Knox, Atlas | ❌ Out of scope | No UC equivalent — excluded from translation |
+
+See the **Cautions & Constraints** reference page in the app for full details.
+
+---
+
+## Session Archiving
+
+All migration sessions can be saved as JSON archives in `data/output/`:
+
+- **Save & Archive** — archive the current session with optional notes from the Session Archive page
+- **Restore Session** — reload any archived session to continue or compare approaches
+- **Download ZIP** — export a complete archive package (Ranger JSON, policy items, identity map, generated SQL)
+- **Delete** — remove individual archives
+
+Archive filenames use the format `<source_filename>_YYYYMMDD_HHMMSS.json` for easy identification.
+
+The Session Archive page shows each archive with:
+- Colored metadata badges (date, item count, file size, service name)
+- Preview tabs: **Summary** (type + status breakdown), **SQL Script**, **Identity Map**
+- Step-by-step replay guide for restoring and continuing a session
+
+---
+
+## Sample Files
+
+45 built-in samples in `data/samples/` covering all policy types and services:
+
+| Category | Samples |
+|---|---|
+| Hive access | Simple, medium, complex grants |
+| Row filters | Simple, medium, complex filter expressions |
+| Column masks | Simple, medium, complex mask types |
+| Tag-based | Simple, medium, complex tag policies |
+| Cloudera CDP | 15-policy production-style sample |
+| HDFS | 10 samples (allaudit, incremental, zones, resourcespec, multiple accesses) |
+| HBase | 5 samples (basic, namespace, multiple matching policies) |
+| Hive engine | Full policy engine test samples including mask+filter, mutex, roles, incremental |
+
+---
 
 ## Project Layout
 
 ```
-ranger-migrator-streamlit/
-├── app.py                    # Upload page (home / entrypoint)
+ranger-uc-accelerator/
+├── app.py                          # Entrypoint + navigation (st.navigation)
 ├── pages/
 │   ├── 1_Identity_Mapping.py
 │   ├── 2_Review_Policies.py
 │   ├── 3_Generate_SQL.py
 │   ├── 4_Gap_Analysis.py
-│   └── 5_Deploy.py
+│   ├── 5_Deploy.py
+│   ├── 6_History.py                # Session Archive
+│   ├── 7_Migration_Mappings.py     # Reference: mappings (read-only)
+│   └── 8_Cautions_Constraints.py  # Reference: gaps & limitations (read-only)
 ├── lib/
-│   ├── ranger_parser.py      # Parser + UC SQL generator + gap analyzer
-│   ├── sample_data.py        # 15-policy Cloudera CDP sample
-│   └── state.py              # Session-state helpers
-├── .streamlit/config.toml
+│   ├── ranger_parser.py            # Parser, SQL generator, gap analyzer
+│   ├── sample_data.py              # 45-sample catalog
+│   ├── history.py                  # Session archiving (save/load/list/delete/zip)
+│   └── state.py                    # Streamlit session-state helpers
+├── data/
+│   ├── input/                      # Uploaded / pasted JSON files (gitignored)
+│   ├── output/                     # Session archives (gitignored)
+│   └── samples/                    # 45 built-in sample policy files
 ├── requirements.txt
 └── README.md
+```
+
+---
+
+## Navigation Structure
+
+```
+Migration Steps
+  Policy Import       ← home page; upload / paste / sample
+  Identity Mapping
+  Review Policies
+  Generate SQL
+  Gap Analysis
+  Deploy
+
+History
+  Session Archive
+
+References
+  Migration Mappings
+  Cautions & Constraints
 ```

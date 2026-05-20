@@ -1,0 +1,65 @@
+{
+  "serviceName": "hive_prod",
+  "policies": [
+    {
+      "id": 102,
+      "guid": "policy-102",
+      "isEnabled": true,
+      "service": "hive_prod",
+      "name": "sales_data_filters",
+      "policyType": 2,
+      "description": "Medium row filter - Different filters for different groups",
+      "isAuditEnabled": true,
+      "resources": {
+        "database": {
+          "values": [
+            "sales"
+          ]
+        },
+        "table": {
+          "values": [
+            "transactions"
+          ]
+        }
+      },
+      "rowFilterPolicyItems": [
+        {
+          "rowFilterInfo": {
+            "filterExpr": "region IN ('WEST', 'CENTRAL') AND order_date >= '2024-01-01'"
+          },
+          "accesses": [
+            {
+              "type": "select",
+              "isAllowed": true
+            }
+          ],
+          "groups": [
+            "regional_managers"
+          ]
+        },
+        {
+          "rowFilterInfo": {
+            "filterExpr": "department = 'SALES' AND status = 'ACTIVE'"
+          },
+          "users": [
+            "sales_analyst@company.com"
+          ],
+          "groups": [
+            "sales_analysts"
+          ]
+        },
+        {
+          "rowFilterInfo": {
+            "filterExpr": "TRUE"
+          },
+          "users": [
+            "cfo@company.com"
+          ],
+          "groups": [
+            "executives"
+          ]
+        }
+      ]
+    }
+  ]
+}

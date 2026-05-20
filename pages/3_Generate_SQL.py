@@ -8,7 +8,6 @@ import streamlit as st
 from lib.ranger_parser import generate_full_script
 from lib.state import init_state, render_sidebar_summary, require_policies, stats
 
-st.set_page_config(page_title="Generate SQL", page_icon="💻", layout="wide")
 init_state()
 render_sidebar_summary()
 require_policies()

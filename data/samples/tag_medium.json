@@ -1,0 +1,109 @@
+{
+  "serviceName": "tag_prod",
+  "policies": [
+    {
+      "id": 302,
+      "guid": "policy-302",
+      "isEnabled": true,
+      "service": "tag_prod",
+      "name": "data_classification_policy",
+      "policyType": 0,
+      "description": "Medium tag policy - Multiple tags with different access levels",
+      "isAuditEnabled": true,
+      "resources": {
+        "tag": {
+          "values": [
+            "CONFIDENTIAL",
+            "INTERNAL",
+            "PUBLIC"
+          ]
+        }
+      },
+      "policyItems": [
+        {
+          "accesses": [
+            {
+              "type": "select",
+              "isAllowed": true
+            },
+            {
+              "type": "update",
+              "isAllowed": true
+            }
+          ],
+          "users": [
+            "data_steward@company.com"
+          ],
+          "groups": [
+            "data_governance"
+          ],
+          "conditions": []
+        }
+      ]
+    },
+    {
+      "id": 303,
+      "guid": "policy-303",
+      "isEnabled": true,
+      "service": "tag_prod",
+      "name": "public_data_access",
+      "policyType": 0,
+      "description": "Allow all employees to access public data",
+      "isAuditEnabled": true,
+      "resources": {
+        "tag": {
+          "values": [
+            "PUBLIC"
+          ]
+        }
+      },
+      "policyItems": [
+        {
+          "accesses": [
+            {
+              "type": "select",
+              "isAllowed": true
+            }
+          ],
+          "groups": [
+            "all_employees"
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDefinitions": {
+    "CONFIDENTIAL": {
+      "name": "CONFIDENTIAL",
+      "attributeDefs": {
+        "level": "high",
+        "retention_years": "7"
+      }
+    },
+    "INTERNAL": {
+      "name": "INTERNAL",
+      "attributeDefs": {
+        "level": "medium",
+        "retention_years": "5"
+      }
+    },
+    "PUBLIC": {
+      "name": "PUBLIC",
+      "attributeDefs": {
+        "level": "low",
+        "retention_years": "3"
+      }
+    }
+  },
+  "resourceTags": {
+    "finance.transactions": [
+      "CONFIDENTIAL"
+    ],
+    "sales.reports": [
+      "INTERNAL"
+    ],
+    "marketing.campaigns": [
+      "PUBLIC"
+    ]
+  }
+}

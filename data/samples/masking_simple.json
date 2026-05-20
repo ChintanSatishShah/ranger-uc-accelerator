@@ -1,0 +1,49 @@
+{
+  "serviceName": "hive_prod",
+  "policies": [
+    {
+      "id": 201,
+      "guid": "policy-201",
+      "isEnabled": true,
+      "service": "hive_prod",
+      "name": "ssn_masking",
+      "policyType": 1,
+      "description": "Simple masking - Hide SSN except last 4 digits",
+      "isAuditEnabled": true,
+      "resources": {
+        "database": {
+          "values": [
+            "hr"
+          ]
+        },
+        "table": {
+          "values": [
+            "employees"
+          ]
+        },
+        "column": {
+          "values": [
+            "ssn"
+          ]
+        }
+      },
+      "dataMaskPolicyItems": [
+        {
+          "dataMaskInfo": {
+            "dataMaskType": "MASK_SHOW_LAST_4"
+          },
+          "accesses": [
+            {
+              "type": "select",
+              "isAllowed": true
+            }
+          ],
+          "users": [],
+          "groups": [
+            "hr_staff"
+          ]
+        }
+      ]
+    }
+  ]
+}

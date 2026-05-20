@@ -62,6 +62,7 @@ def _home_page() -> None:
 
     def _on_loaded(data: dict, source: str) -> None:
         load_policies(data)
+        st.session_state["_last_source_file"] = source
         count = len(st.session_state.policy_items)
         st.success(f"Loaded {count} policy items from {source}.")
         st.page_link("pages/1_Identity_Mapping.py", label="Continue → Identity Mapping", icon="➡️")
@@ -78,7 +79,7 @@ def _home_page() -> None:
                 data = json.loads(uploaded.read())
                 saved_name = _save_to_input(data, uploaded.name)
                 st.caption(f"Saved to `data/input/{saved_name}`")
-                _on_loaded(data, uploaded.name)
+                _on_loaded(data, saved_name)
             except json.JSONDecodeError:
                 st.error("Invalid JSON — please upload a Ranger policy export.")
 
@@ -139,7 +140,7 @@ def _home_page() -> None:
         ):
             try:
                 data = load_sample(_label_to_file[_selected])
-                _on_loaded(data, _selected)
+                _on_loaded(data, _label_to_file[_selected])
             except FileNotFoundError:
                 st.error("Sample file not found. Check that the input/ folder is present.")
 

@@ -106,15 +106,21 @@ approve / reject decisions, identity mappings, and the generated SQL.
         total = len(policy_items)
 
         source_name = re.sub(r"_\d{8}_\d{6}$", "", archive["filename"].removesuffix(".json"))
-        expander_label = f"📦  {source_name}  ·  {timestamp[:10]}  ·  {total} items  ·  {service}"
+        expander_label = (
+            f"📦  {source_name}"
+            f"  ·  {timestamp[:10]}"
+            f"  ·  {total} items"
+            f"  ·  {archive['size_kb']:.1f} KB"
+            f"  ·  {service}"
+        )
         if notes_text:
             expander_label += f'  —  "{notes_text}"'
 
         with st.expander(expander_label):
 
             # ── Metadata badges + action buttons ─────────────────────────
-            badge_col, btn_col = st.columns([3, 1])
-            with badge_col:
+            info_col, btn_col = st.columns([3, 1])
+            with info_col:
                 badges = (
                     _badge(timestamp[:10], "#dbeafe", "#1e40af")
                     + _badge(f"{total} items", "#dcfce7", "#166534")

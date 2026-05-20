@@ -39,9 +39,13 @@ Three input methods are available on the home page:
 
 | Tab | Method |
 |-----|--------|
-| **Upload File** | Upload a `.json` Ranger export; also shows any files already in `data/input/` |
+| **Upload File** | Upload a `.json` Ranger export; saved automatically to `data/input/` with a `user_` prefix |
 | **Paste JSON** | Paste raw JSON directly; saved automatically to `data/input/` for reuse |
-| **Load Sample** | 45 built-in sample policies covering all Ranger service types and policy patterns |
+| **Load Sample** | 49 built-in sample policies covering all Ranger service types and policy patterns |
+
+After loading, a **View loaded JSON** expander appears above the export snippet so you can inspect the raw Ranger export in a scrollable window.
+
+The tool also accepts **Ranger ACL provider test files** (the `testCases[].servicePolicies` format used in `agents-common/src/test/resources/policyengine`) — the wrapper is unwrapped automatically.
 
 ### Export from Ranger Admin
 
@@ -135,29 +139,31 @@ All migration sessions can be saved as JSON archives in `data/output/`:
 - **Download ZIP** — export a complete archive package (Ranger JSON, policy items, identity map, generated SQL)
 - **Delete** — remove individual archives
 
-Archive filenames use the format `<source_filename>_YYYYMMDD_HHMMSS.json` for easy identification.
+User session filenames use the format `user_<service>_YYYYMMDD_HHMMSS.json`. Pre-generated sample archives (no timestamp) are tracked in git.
 
 The Session Archive page shows each archive with:
-- Colored metadata badges (date, item count, file size, service name)
-- Preview tabs: **Summary** (type + status breakdown), **SQL Script**, **Identity Map**
+- **Collapsible heading** displaying date · item count · file size · service name at a glance
+- **Side-by-side view** when expanded: left pane shows input attributes (service metadata, policy type breakdown, schemas, principals, original Ranger JSON); right pane shows output (status breakdown, identity map, generated SQL)
 - Step-by-step replay guide for restoring and continuing a session
 
 ---
 
 ## Sample Files
 
-45 built-in samples in `data/samples/` covering all policy types and services:
+49 built-in samples in `data/input/` covering all policy types and services:
 
 | Category | Samples |
 |---|---|
+| Cloudera CDP | 15-policy production-style sample |
 | Hive access | Simple, medium, complex grants |
 | Row filters | Simple, medium, complex filter expressions |
 | Column masks | Simple, medium, complex mask types |
 | Tag-based | Simple, medium, complex tag policies |
-| Cloudera CDP | 15-policy production-style sample |
-| HDFS | 10 samples (allaudit, incremental, zones, resourcespec, multiple accesses) |
-| HBase | 5 samples (basic, namespace, multiple matching policies) |
-| Hive engine | Full policy engine test samples including mask+filter, mutex, roles, incremental |
+| Hive engine | Full policy engine test samples: mask+filter, mutex, roles, incremental, partial resources |
+| HDFS | 11 samples (allaudit, noaudit, incremental, zones, resourcespec, multiple accesses, tag-based, AWS) |
+| HBase | 5 samples (basic, namespace, multiple matching, tag-based) |
+| ACL Provider Tests | 4 samples from the Ranger `agents-common` test suite (default Hive, HDFS, mask+filter, resource hierarchy tags) |
+| Other services | Kafka, Atlas |
 
 ---
 
@@ -177,13 +183,12 @@ ranger-uc-accelerator/
 │   └── 8_Cautions_Constraints.py  # Reference: gaps & limitations (read-only)
 ├── lib/
 │   ├── ranger_parser.py            # Parser, SQL generator, gap analyzer
-│   ├── sample_data.py              # 45-sample catalog
+│   ├── sample_data.py              # 49-sample catalog
 │   ├── history.py                  # Session archiving (save/load/list/delete/zip)
 │   └── state.py                    # Streamlit session-state helpers
 ├── data/
-│   ├── input/                      # Uploaded / pasted JSON files (gitignored)
-│   ├── output/                     # Session archives (gitignored)
-│   └── samples/                    # 45 built-in sample policy files
+│   ├── input/                      # 49 sample JSON files (git-tracked) + user uploads (user_* gitignored)
+│   └── output/                     # Pre-generated sample archives (git-tracked) + user sessions (user_* gitignored)
 ├── requirements.txt
 └── README.md
 ```

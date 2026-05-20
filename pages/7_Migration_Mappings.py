@@ -284,6 +284,31 @@ st.dataframe(
     hide_index=True,
 )
 
+st.header("10. ACL Provider Test Format")
+st.markdown(
+    "Ranger ships with policy engine and ACL provider test files under "
+    "`agents-common/src/test/resources/policyengine/`. These use a `testCases` wrapper:"
+)
+st.code(
+    """{
+  "testCases": [{
+    "name": "...",
+    "servicePolicies": {
+      "serviceName": "hivedev",
+      "policies": [ ... ],
+      "tagPolicies": { ... }
+    }
+  }]
+}""",
+    language="json",
+)
+st.info(
+    "This tool automatically unwraps the `testCases[0].servicePolicies` structure, so these files "
+    "can be loaded and parsed exactly like a standard Ranger export. "
+    "Only the first `testCases` entry is used.",
+    icon="ℹ️",
+)
+
 st.header("11. HDFS Policy Mapping")
 st.markdown(
     "HDFS policies (`serviceName` containing `hdfs`) are detected automatically. "

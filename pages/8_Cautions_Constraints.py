@@ -20,6 +20,28 @@ st.caption(
     "Items marked 🔴 require manual intervention; 🟡 require review."
 )
 
+# ── Supported input formats ───────────────────────────────────────────
+st.header("Supported Input Formats")
+st.markdown(
+    "The tool accepts two Ranger JSON structures:"
+)
+st.dataframe(
+    {
+        "Format": ["Standard Ranger export", "ACL provider / policy engine test file"],
+        "Top-level key": ["`serviceName` + `policies`", "`testCases[].servicePolicies`"],
+        "How to obtain": [
+            "Ranger Admin UI → Export or `curl .../exportJson?serviceName=...`",
+            "Apache Ranger source: `agents-common/src/test/resources/policyengine/test_*.json`",
+        ],
+        "Notes": [
+            "Primary format for production migrations",
+            "Wrapper unwrapped automatically; only first testCase is used",
+        ],
+    },
+    use_container_width=True,
+    hide_index=True,
+)
+
 # ── Critical gaps ─────────────────────────────────────────────────────
 st.header("Critical Gaps")
 
@@ -185,17 +207,15 @@ st.markdown(
 )
 st.dataframe(
     {
-        "Ranger service": ["Kafka", "Atlas (tag-based)", "YARN", "Storm", "Knox"],
+        "Ranger service": ["Kafka", "YARN", "Storm", "Knox"],
         "Why not supported": [
             "Kafka ACLs are managed outside UC",
-            "Tag policies only partially resolved — requires resourceTags metadata",
             "YARN resource queues have no UC equivalent",
             "Storm topologies have no UC equivalent",
             "Knox gateway policies have no UC equivalent",
         ],
         "Path forward": [
             "Use Kafka-native ACLs or Lakehouse Federation",
-            "Include resourceTags in export JSON; review tag-based placeholders manually",
             "Out of scope for this tool",
             "Out of scope for this tool",
             "Out of scope for this tool",
@@ -203,6 +223,11 @@ st.dataframe(
     },
     use_container_width=True,
     hide_index=True,
+)
+st.info(
+    "**Atlas tag-based policies** are supported with limitations — see the "
+    "Tag-Based Policies section below for details.",
+    icon="ℹ️",
 )
 
 # ── Tag-Based Policies ────────────────────────────────────────────────

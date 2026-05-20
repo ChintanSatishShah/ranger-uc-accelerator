@@ -145,6 +145,12 @@ def _home_page() -> None:
 
     st.divider()
 
+    # ── Loaded JSON preview ───────────────────────────────────────────
+    if st.session_state.get("raw_json"):
+        with st.expander("📄 View loaded JSON", expanded=False):
+            with st.container(height=400):
+                st.json(st.session_state.raw_json, expanded=1)
+
     # ── Export command snippet ────────────────────────────────────────
     st.markdown("##### 💻 Export from Ranger Admin")
     st.code(
@@ -172,7 +178,7 @@ def _home_page() -> None:
         st.markdown("**🛡 SQL Generation**")
         st.caption("GRANT, filters, masks")
 
-    # ── Workflow steps + loaded JSON preview ─────────────────────────
+    # ── Workflow steps ────────────────────────────────────────────────
     if st.session_state.get("parsed_data"):
         st.divider()
         st.markdown("##### Next steps")
@@ -181,10 +187,6 @@ def _home_page() -> None:
         st.page_link("pages/3_Generate_SQL.py", label="3 · Generate SQL", icon="💻")
         st.page_link("pages/4_Gap_Analysis.py", label="4 · Gap Analysis", icon="⚠️")
         st.page_link("pages/5_Deploy.py", label="5 · Deploy", icon="🚀")
-
-        with st.expander("📄 View loaded JSON", expanded=False):
-            with st.container(height=400):
-                st.json(st.session_state.raw_json, expanded=1)
 
 
 # ── Navigation ────────────────────────────────────────────────────────

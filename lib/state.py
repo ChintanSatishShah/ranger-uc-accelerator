@@ -5,6 +5,7 @@ from typing import Any
 
 import streamlit as st
 
+from .history import save_session as _save_session
 from .ranger_parser import (
     calculate_stats,
     generate_gap_analysis,
@@ -88,8 +89,8 @@ def render_sidebar_summary() -> None:
     """Render the migration summary in the Streamlit sidebar."""
     parsed = st.session_state.get("parsed_data")
     with st.sidebar:
-        st.markdown("### Ranger → UC")
-        st.caption("Migration Accelerator")
+        st.markdown("# Ranger → UC")
+        st.markdown("**Migration Accelerator**")
         st.divider()
         if parsed:
             s = stats()
@@ -107,3 +108,24 @@ def render_sidebar_summary() -> None:
                 st.rerun()
         else:
             st.info("No policies loaded yet.")
+
+
+def save_current_session(notes: str = "") -> str:
+    """Archive the current session. Returns filename."""
+    return _save_session(
+        parsed_data=st.session_state.parsed_data,
+        policy_items=st.session_state.policy_items,
+        identity_map=st.session_state.identity_map,
+        catalog_name=st.session_state.catalog_name,
+        generated_sql=st.session_state.generated_sql,
+        notes=notes,
+    )
+
+
+def restore_session(archive: dict[str, Any]) -> None:
+    """Restore a session from an archive."""
+    st.session_state.parsed_data = archive["parsed_data"]
+    st.session_state.policy_items = archive["policy_items"]
+    st.session_state.identity_map = archive["identity_map"]
+    st.session_state.catalog_name = archive["metadata"].get("catalog_name", "main")
+    st.session_state.generated_sql = archive.get("generated_sql", "")

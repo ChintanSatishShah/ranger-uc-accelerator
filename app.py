@@ -12,7 +12,7 @@ from lib.sample_data import SAMPLE_RANGER_EXPORT
 from lib.state import init_state, load_policies, render_sidebar_summary
 
 st.set_page_config(
-    page_title="Ranger → Unity Catalog Migrator",
+    page_title="Migrator",
     page_icon="🛡️",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -28,16 +28,14 @@ st.markdown(
                 background:rgba(124,58,237,0.08);border:1px solid rgba(124,58,237,0.2);
                 color:#7c3aed;font-size:11px;font-family:monospace;letter-spacing:1px;
                 margin-bottom:12px;">
-      🛡 GOVERNANCE MIGRATION
+      🛡 GOVERNANCE POLICY MIGRATION
     </div>
     """,
     unsafe_allow_html=True,
 )
-st.title("Apache Ranger → Unity Catalog")
+st.title("Apache Ranger → Unity Catalog Migrator")
 st.write(
-    "Upload your Ranger policy export from Cloudera CDP, HDP, or any Hadoop distribution. "
-    "The tool parses all policy types — grants, denies, row filters, and column masks — "
-    "and generates equivalent Unity Catalog SQL."
+    "The tool parses all the policy types supported by Unity Catalog — grants, row filters, and column masks — and generates equivalent Unity Catalog SQL."
 )
 
 # ── Upload + Sample ───────────────────────────────────────────────────
@@ -62,7 +60,7 @@ with col_upload:
 with col_sample:
     st.subheader("🗄 Load Sample Policies")
     st.caption("15 policies · Cloudera CDP 7.1 export")
-    sample_tags = "  ".join(f"`{t}`" for t in ("Grants", "Denies", "Filters", "Masks"))
+    sample_tags = "  ".join(f"`{t}`" for t in ("Grants", "Filters", "Masks"))
     st.markdown(sample_tags)
     if st.button("Load 15-policy sample", type="primary", use_container_width=True):
         load_policies(SAMPLE_RANGER_EXPORT)
@@ -92,8 +90,8 @@ with f2:
     st.markdown("**👥 Identity Mapping**")
     st.caption("Kerberos → IdP / SCIM")
 with f3:
-    st.markdown("**👁 Gap Analysis**")
-    st.caption("Deny, Kerberos, audit")
+    st.markdown("**� Gap Analysis**")
+    st.caption("Kerberos, audit, readiness")
 with f4:
     st.markdown("**🛡 SQL Generation**")
     st.caption("GRANT, filters, masks")

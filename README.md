@@ -29,7 +29,6 @@ Open http://localhost:8501
 ## Supported Ranger Policy Types
 
 - Resource-based grants (SELECT, MODIFY, CREATE, DROP, ALTER, ALL)
-- Deny policies (flagged with restructuring guidance — UC has no DENY)
 - Row-level filters → UC SQL filter functions
 - Column masking (MASK, LAST_4, HASH, NULL, NONE) → UC mask functions
 - Delegate admin detection → UC MANAGE privilege advisory

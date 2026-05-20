@@ -89,6 +89,7 @@ def parse_ranger_policies(json_data: dict[str, Any] | list[Any]) -> dict[str, An
         tables = (resources.get("table") or {}).get("values") or ["*"]
         columns = (resources.get("column") or {}).get("values") or ["*"]
         is_enabled = policy.get("isEnabled", True) is not False
+        item_counter = 0  # Counter for unique IDs within each policy
 
         if not is_enabled:
             warnings.append({
@@ -144,8 +145,9 @@ def parse_ranger_policies(json_data: dict[str, Any] | list[Any]) -> dict[str, An
             for db in dbs:
                 for tbl in tables:
                     for principal in principals:
+                        item_counter += 1
                         results.append({
-                            "id": f'{policy.get("id")}-grant-{db}-{tbl}-{principal["name"]}',
+                            "id": f'{policy.get("id")}-grant-{db}-{tbl}-{principal["name"]}-{item_counter}',
                             "rangerPolicyId": policy.get("id"),
                             "rangerPolicyName": policy.get("name"),
                             "rangerPolicyDesc": policy.get("description", ""),
@@ -171,6 +173,7 @@ def parse_ranger_policies(json_data: dict[str, Any] | list[Any]) -> dict[str, An
             for db in dbs:
                 for tbl in tables:
                     for principal in principals:
+                        item_counter += 1
                         warnings.append({
                             "policyId": policy.get("id"),
                             "policyName": policy.get("name"),
@@ -186,7 +189,7 @@ def parse_ranger_policies(json_data: dict[str, Any] | list[Any]) -> dict[str, An
                             ),
                         })
                         results.append({
-                            "id": f'{policy.get("id")}-deny-{db}-{tbl}-{principal["name"]}',
+                            "id": f'{policy.get("id")}-deny-{db}-{tbl}-{principal["name"]}-{item_counter}',
                             "rangerPolicyId": policy.get("id"),
                             "rangerPolicyName": policy.get("name"),
                             "rangerPolicyDesc": policy.get("description", ""),
@@ -210,9 +213,10 @@ def parse_ranger_policies(json_data: dict[str, Any] | list[Any]) -> dict[str, An
 
             for db in dbs:
                 for tbl in tables:
+                    item_counter += 1
                     primary = principals[0] if principals else {"type": "group", "name": "ALL"}
                     results.append({
-                        "id": f'{policy.get("id")}-rowfilter-{db}-{tbl}-{primary["name"]}',
+                        "id": f'{policy.get("id")}-rowfilter-{db}-{tbl}-{primary["name"]}-{item_counter}',
                         "rangerPolicyId": policy.get("id"),
                         "rangerPolicyName": policy.get("name"),
                         "rangerPolicyDesc": policy.get("description", ""),
@@ -239,9 +243,10 @@ def parse_ranger_policies(json_data: dict[str, Any] | list[Any]) -> dict[str, An
             for db in dbs:
                 for tbl in tables:
                     for col in columns:
+                        item_counter += 1
                         primary = principals[0] if principals else {"type": "group", "name": "ALL"}
                         results.append({
-                            "id": f'{policy.get("id")}-mask-{db}-{tbl}-{col}-{primary["name"]}',
+                            "id": f'{policy.get("id")}-mask-{db}-{tbl}-{col}-{primary["name"]}-{item_counter}',
                             "rangerPolicyId": policy.get("id"),
                             "rangerPolicyName": policy.get("name"),
                             "rangerPolicyDesc": policy.get("description", ""),

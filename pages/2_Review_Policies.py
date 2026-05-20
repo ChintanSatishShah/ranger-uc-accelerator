@@ -22,6 +22,11 @@ TYPE_LABELS = {
     "deny": "DENY",
     "row_filter": "ROW FILTER",
     "column_mask": "COL MASK",
+    "tag_set": "SET TAGS",
+    "tag_grant": "TAG GRANT",
+    "tag_placeholder": "TAG (no map)",
+    "hdfs_grant": "HDFS GRANT",
+    "hbase_grant": "HBASE GRANT",
 }
 STATUS_LABELS = {
     "pending": "Pending",
@@ -56,8 +61,8 @@ chip_cols = st.columns(8)
 chip_data = [
     ("Grants", s["grants"]), ("Denies", s["denies"]),
     ("Row Filters", s["rowFilters"]), ("Col Masks", s["masks"]),
-    ("Approved", s["approved"]), ("Needs Review", s["needsReview"]),
-    ("Pending", s["pending"]), ("Skipped", s["rejected"]),
+    ("Tag Sets", s.get("tagSets", 0) + s.get("tagGrants", 0) + s.get("tagPlaceholders", 0)),
+    ("Approved", s["approved"]), ("Needs Review", s["needsReview"]), ("Pending", s["pending"]),
 ]
 for col, (label, val) in zip(chip_cols, chip_data):
     col.metric(label, val)
@@ -74,8 +79,12 @@ if warnings:
 f1, f2, f3 = st.columns([3, 1, 1])
 search = f1.text_input("Search policies, schemas, principals", label_visibility="collapsed",
                       placeholder="Search policies, schemas, principals…")
-type_filter = f2.selectbox("Type", ["All", "grant", "deny", "row_filter", "column_mask"],
-                           label_visibility="collapsed")
+type_filter = f2.selectbox(
+    "Type",
+    ["All", "grant", "deny", "row_filter", "column_mask",
+     "tag_set", "tag_grant", "tag_placeholder", "hdfs_grant", "hbase_grant"],
+    label_visibility="collapsed",
+)
 status_filter = f3.selectbox("Status", ["All", "pending", "approved", "needs_review", "rejected"],
                              label_visibility="collapsed")
 
@@ -105,12 +114,27 @@ if not filtered:
     st.info("No policies match your filters.")
 else:
     for item in filtered:
+        itype = item.get("type", "grant")
         principal_name = (item.get("principal") or {}).get("name", "")
-        resource = f"`{catalog}.{item['schema']}{('.' + item['table']) if item.get('table') else '.*'}`"
+        schema = item.get("schema") or ""
+        table = item.get("table")
+        if itype == "tag_set":
+            col = item.get("column")
+            resource = f"`{catalog}.{schema}.{table}{'.' + col if col else ''}`"
+        elif itype == "tag_placeholder":
+            tags = ", ".join(item.get("tag_names") or [])
+            resource = f"tags: `{tags}`"
+        elif itype in ("hdfs_grant",):
+            resource = f"`{item.get('path', '/')}`"
+        elif schema:
+            resource = f"`{catalog}.{schema}{('.' + table) if table else '.*'}`"
+        else:
+            resource = f"`{catalog}.*`"
         privs = ", ".join(item.get("privileges") or [])
+        type_label = TYPE_LABELS.get(itype, itype.upper())
         header = (
-            f"**[{TYPE_LABELS[item['type']]}]** {resource} → "
-            f"`{principal_name}`"
+            f"**[{type_label}]** {resource}"
+            + (f" → `{principal_name}`" if principal_name else "")
             + (f" · [{privs}]" if privs else "")
             + (" · _disabled_" if not item.get("enabled", True) else "")
             + f" · _{STATUS_LABELS[item['status']]}_"
@@ -119,7 +143,7 @@ else:
         with st.expander(header, expanded=False):
             d1, d2 = st.columns([3, 2])
             with d1:
-                st.markdown(f"**Ranger Policy:** {item['rangerPolicyName']} _(ID {item['rangerPolicyId']})_")
+                st.markdown(f"**Ranger Policy:** {item['rangerPolicyName']} _(ID {item.get('rangerPolicyId', '—')})_")
                 if item.get("rangerPolicyDesc"):
                     st.caption(item["rangerPolicyDesc"])
                 st.markdown(

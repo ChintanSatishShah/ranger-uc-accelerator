@@ -178,12 +178,15 @@ they were when you archived.
                     with c1:
                         st.markdown("**By type**")
                         for type_key, label_text in [
-                            ("grant",        "Hive grants"),
-                            ("hdfs_grant",   "HDFS grants"),
-                            ("hbase_grant",  "HBase grants"),
-                            ("deny",         "Deny policies"),
-                            ("row_filter",   "Row filters"),
-                            ("column_mask",  "Column masks"),
+                            ("grant",            "Hive grants"),
+                            ("tag_set",          "Tag SET TAGS"),
+                            ("tag_grant",        "Tag grants"),
+                            ("tag_placeholder",  "Tag (no map)"),
+                            ("hdfs_grant",       "HDFS grants"),
+                            ("hbase_grant",      "HBase grants"),
+                            ("deny",             "Deny policies"),
+                            ("row_filter",       "Row filters"),
+                            ("column_mask",      "Column masks"),
                         ]:
                             n = type_counts.get(type_key, 0)
                             if n:

@@ -206,17 +206,27 @@ st.dataframe(
 )
 
 # ── Tag-Based Policies ────────────────────────────────────────────────
-st.header("Tag-Based Policies — Partial Support")
+st.header("Tag-Based Policies — Supported with Limitations")
 st.markdown(
     """
-Ranger tag-based policies (Atlas tags) have partial support:
+Tag-based policies are translated in two parts:
 
-- If the export contains `resourceTags` metadata mapping tags to real table/column names,
-  the tool can resolve them and generate concrete GRANT or mask statements.
-- If `resourceTags` is absent, placeholder comments are emitted instead.
+**Part 1 — `ALTER TABLE SET TAGS`** (always generated when `resourceTags` is present):
+- Each resource path in `resourceTags` generates a `SET TAGS` or `ALTER COLUMN SET TAGS` statement
+- Tag attributes from `tagDefinitions.attributeDefs` are included as additional tag key-value pairs
+- This part works fully when `resourceTags` is included in the export
 
-**Action required:** ensure Atlas metadata is included in your Ranger export, or manually
-replace placeholders with real object names after generation.
+**Part 2 — GRANT statements** (tag access policies):
+- When `resourceTags` is present: grants are resolved to the specific tagged tables/columns ✅
+- When `resourceTags` is absent: placeholder comment emitted — table names unknown ⚠️
+
+**Row filters and column masks on tag policies** are resolved using the same `resourceTags` mapping.
+
+**Limitations:**
+- `allowExceptions` on tag policies are not translated
+- Request-context conditions (`ip-range`, `user-zone`) in tag policy `conditions[]` are noted in a comment but not translated — UC has no equivalent condition matching
+- Atlas-native tag inheritance (child resources inheriting parent tags) is not resolved — only explicit `resourceTags` entries are used
+- If your Ranger admin did not export `resourceTags`, add it manually or re-export using Atlas REST API
 """
 )
 

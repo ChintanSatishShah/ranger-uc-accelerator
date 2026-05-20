@@ -110,6 +110,65 @@ def parse_ranger_policies(json_data: dict[str, Any] | list[Any]) -> dict[str, An
     identities: set[tuple[str, str]] = set()  # (type, name)
     kerberos_issues: list[dict[str, Any]] = []
 
+    # ── Tag metadata: tagDefinitions + resourceTags (top-level fields) ───────
+    tag_definitions: dict[str, Any] = {}
+    tag_to_resources: dict[str, list[dict[str, Any]]] = {}  # tag_name → [{schema,table,column}]
+
+    if isinstance(json_data, dict):
+        raw_td = json_data.get("tagDefinitions") or {}
+        if isinstance(raw_td, dict):
+            tag_definitions = raw_td
+        elif isinstance(raw_td, list):
+            tag_definitions = {t["name"]: t for t in raw_td if isinstance(t, dict) and "name" in t}
+
+        raw_rt = json_data.get("resourceTags") or {}
+        resource_tags_dict: dict[str, list] = raw_rt if isinstance(raw_rt, dict) else {}
+
+        for res_path, tn_val in resource_tags_dict.items():
+            tn_list = tn_val if isinstance(tn_val, list) else [tn_val]
+            parts = res_path.split(".")
+            if len(parts) == 3:
+                rt_schema, rt_table, rt_col = parts[0], parts[1], parts[2]
+            elif len(parts) == 2:
+                rt_schema, rt_table, rt_col = parts[0], parts[1], None
+            else:
+                continue
+            for tn in tn_list:
+                tag_to_resources.setdefault(tn, []).append(
+                    {"schema": rt_schema, "table": rt_table, "column": rt_col}
+                )
+
+        # Generate tag_set items (ALTER TABLE / ALTER COLUMN SET TAGS)
+        for res_path, tn_val in resource_tags_dict.items():
+            tn_list = tn_val if isinstance(tn_val, list) else [tn_val]
+            parts = res_path.split(".")
+            if len(parts) == 3:
+                ts_schema, ts_table, ts_col = parts[0], parts[1], parts[2]
+            elif len(parts) == 2:
+                ts_schema, ts_table, ts_col = parts[0], parts[1], None
+            else:
+                continue
+            tag_attrs: dict[str, str] = {}
+            for tn in tn_list:
+                tag_attrs[tn] = "true"
+                for k, v in (tag_definitions.get(tn, {}).get("attributeDefs") or {}).items():
+                    tag_attrs[k] = str(v)
+            results.append({
+                "id": f"tag_set_{ts_schema}_{ts_table}_{ts_col or 'tbl'}",
+                "rangerPolicyId": None,
+                "rangerPolicyName": f"SET TAGS — {res_path}",
+                "rangerPolicyDesc": "",
+                "type": "tag_set",
+                "catalog": catalog,
+                "schema": ts_schema,
+                "table": ts_table,
+                "column": ts_col,
+                "tag_attrs": tag_attrs,
+                "principal": {"type": "system", "name": ""},
+                "enabled": True,
+                "status": "pending",
+            })
+
     for policy in policies:
         resources = policy.get("resources") or {}
         dbs = (resources.get("database") or {}).get("values") or ["default"]
@@ -161,6 +220,129 @@ def parse_ranger_policies(json_data: dict[str, Any] | list[Any]) -> dict[str, An
                     else "Create a corresponding Databricks service principal and use OAuth M2M tokens instead of keytabs."
                 ),
             })
+
+        # ── Tag-based policies ───────────────────────────────────────────────
+        tag_resource_vals = (resources.get("tag") or {}).get("values") or []
+        if tag_resource_vals:
+            def _resolve_tag_tables(tag_vals: list[str]) -> list[dict]:
+                seen: set = set()
+                out: list[dict] = []
+                for tn in tag_vals:
+                    for r in tag_to_resources.get(tn, []):
+                        key = (r["schema"], r["table"])
+                        if key not in seen:
+                            seen.add(key)
+                            out.append(r)
+                return out
+
+            # Access grants
+            for item in policy.get("policyItems") or []:
+                principals = _principals(item.get("groups") or [], item.get("users") or [])
+                accesses = list(dict.fromkeys(_allowed_accesses(item)))
+                for p in principals:
+                    identities.add((p["type"], p["name"]))
+                resolved = _resolve_tag_tables(tag_resource_vals)
+                if resolved:
+                    for res in resolved:
+                        for principal in principals:
+                            item_counter += 1
+                            results.append({
+                                "id": f'{policy.get("id")}-tag_grant-{res["schema"]}-{res["table"]}-{principal["name"]}-{item_counter}',
+                                "rangerPolicyId": policy.get("id"),
+                                "rangerPolicyName": policy.get("name"),
+                                "rangerPolicyDesc": policy.get("description", ""),
+                                "type": "tag_grant",
+                                "catalog": catalog,
+                                "schema": res["schema"],
+                                "table": res["table"],
+                                "columns": None,
+                                "privileges": accesses,
+                                "principal": principal,
+                                "tag_names": tag_resource_vals,
+                                "delegateAdmin": item.get("delegateAdmin", False),
+                                "enabled": is_enabled,
+                                "status": "pending",
+                            })
+                else:
+                    for principal in principals:
+                        item_counter += 1
+                        results.append({
+                            "id": f'{policy.get("id")}-tag_placeholder-{principal["name"]}-{item_counter}',
+                            "rangerPolicyId": policy.get("id"),
+                            "rangerPolicyName": policy.get("name"),
+                            "rangerPolicyDesc": policy.get("description", ""),
+                            "type": "tag_placeholder",
+                            "tag_names": tag_resource_vals,
+                            "privileges": accesses,
+                            "principal": principal,
+                            "schema": None, "table": None,
+                            "enabled": is_enabled,
+                            "status": "needs_review",
+                        })
+
+            # Row filters on tag policies
+            for item in policy.get("rowFilterPolicyItems") or []:
+                principals = _principals(item.get("groups") or [], item.get("users") or [])
+                for p in principals:
+                    identities.add((p["type"], p["name"]))
+                row_info = item.get("rowFilterInfo") or {}
+                primary = principals[0] if principals else {"type": "group", "name": "ALL"}
+                tag_tables = _resolve_tag_tables(tag_resource_vals) or [
+                    {"schema": f"<schema_with_{'_'.join(tag_resource_vals)}>",
+                     "table": f"<table_with_{'_'.join(tag_resource_vals)}>", "column": None}
+                ]
+                for res in tag_tables:
+                    item_counter += 1
+                    results.append({
+                        "id": f'{policy.get("id")}-rowfilter-tag-{res["table"]}-{primary["name"]}-{item_counter}',
+                        "rangerPolicyId": policy.get("id"),
+                        "rangerPolicyName": policy.get("name"),
+                        "rangerPolicyDesc": policy.get("description", ""),
+                        "type": "row_filter",
+                        "catalog": catalog,
+                        "schema": res["schema"],
+                        "table": res["table"],
+                        "columns": None, "privileges": [],
+                        "principal": primary,
+                        "allPrincipals": principals,
+                        "filterExpr": row_info.get("filterExpr", ""),
+                        "enabled": is_enabled,
+                        "status": "needs_review",
+                    })
+
+            # Column masks on tag policies
+            for item in policy.get("dataMaskPolicyItems") or []:
+                principals = _principals(item.get("groups") or [], item.get("users") or [])
+                for p in principals:
+                    identities.add((p["type"], p["name"]))
+                mask_info = item.get("dataMaskInfo") or {}
+                primary = principals[0] if principals else {"type": "group", "name": "ALL"}
+                tag_tables = _resolve_tag_tables(tag_resource_vals) or [
+                    {"schema": f"<schema_with_{'_'.join(tag_resource_vals)}>",
+                     "table": f"<table_with_{'_'.join(tag_resource_vals)}>", "column": None}
+                ]
+                for res in tag_tables:
+                    col = res.get("column") or f"<col_with_{'_'.join(tag_resource_vals)}>"
+                    item_counter += 1
+                    results.append({
+                        "id": f'{policy.get("id")}-mask-tag-{res["table"]}-{col}-{primary["name"]}-{item_counter}',
+                        "rangerPolicyId": policy.get("id"),
+                        "rangerPolicyName": policy.get("name"),
+                        "rangerPolicyDesc": policy.get("description", ""),
+                        "type": "column_mask",
+                        "catalog": catalog,
+                        "schema": res["schema"],
+                        "table": res["table"],
+                        "columns": [col], "privileges": [],
+                        "principal": primary,
+                        "allPrincipals": principals,
+                        "maskType": mask_info.get("dataMaskType", "MASK"),
+                        "maskExpr": mask_info.get("valueExpr", ""),
+                        "enabled": is_enabled,
+                        "status": "needs_review",
+                    })
+
+            continue  # skip Hive/HDFS/HBase resource processing
 
         # ── HDFS path grants → UC External Location ──
         if service_type == "hdfs":
@@ -448,6 +630,42 @@ def generate_uc_sql(
             if item.get("delegateAdmin"):
                 lines.append(f"-- Note: delegateAdmin=true. Consider MANAGE on {target} if admin delegation needed.")
 
+    elif t == "tag_set":
+        schema = item.get("schema") or ""
+        table = item.get("table") or ""
+        column = item.get("column")
+        tag_attrs = item.get("tag_attrs") or {}
+        pairs = ", ".join(f"'{k}' = '{v}'" for k, v in tag_attrs.items())
+        if column:
+            lines.append(f"ALTER TABLE {cat}.{schema}.{table}")
+            lines.append(f"  ALTER COLUMN {column} SET TAGS ({pairs});")
+        else:
+            lines.append(f"ALTER TABLE {cat}.{schema}.{table} SET TAGS ({pairs});")
+
+    elif t == "tag_grant":
+        tag_names = item.get("tag_names") or []
+        lines.append(f"-- Tag-based grant (tags: {', '.join(tag_names)})")
+        schema = item.get("schema") or ""
+        table = item.get("table")
+        target = f"TABLE {cat}.{schema}.{table}" if table else f"SCHEMA {cat}.{schema}"
+        if not table:
+            lines.append(f"GRANT USE CATALOG ON CATALOG {cat} TO {principal};")
+            lines.append(f"GRANT USE SCHEMA ON SCHEMA {cat}.{schema} TO {principal};")
+        for priv in item.get("privileges") or []:
+            lines.append(f"GRANT {priv} ON {target} TO {principal};")
+        if item.get("delegateAdmin"):
+            lines.append(f"-- Note: delegateAdmin=true. Consider MANAGE on {target}.")
+
+    elif t == "tag_placeholder":
+        tag_names = item.get("tag_names") or []
+        privs = ", ".join(item.get("privileges") or [])
+        placeholder = f"<table_with_{'_'.join(tag_names)}>"
+        lines.append(f"-- ⚠ Tag-based policy — tags: {', '.join(tag_names)}")
+        lines.append(f"-- Principal: {principal_name} | Privileges: {privs}")
+        lines.append("-- No resourceTags metadata in export — table names cannot be resolved automatically.")
+        lines.append("-- Add 'resourceTags' to the export JSON, or replace the placeholder below:")
+        lines.append(f"-- GRANT {privs} ON TABLE {cat}.<schema>.{placeholder} TO {principal};")
+
     elif t == "deny":
         privs = ", ".join(item.get("privileges") or [])
         lines.append("-- ⛔ DENY NOT SUPPORTED IN UNITY CATALOG")
@@ -727,6 +945,7 @@ def calculate_stats(policy_items: list[dict[str, Any]]) -> dict[str, Any]:
         "total": len(policy_items),
         "grants": 0, "denies": 0, "rowFilters": 0, "masks": 0,
         "hdfsGrants": 0, "hbaseGrants": 0,
+        "tagSets": 0, "tagGrants": 0, "tagPlaceholders": 0,
         "approved": 0, "needsReview": 0, "pending": 0, "rejected": 0,
         "disabled": 0,
     }
@@ -740,6 +959,9 @@ def calculate_stats(policy_items: list[dict[str, Any]]) -> dict[str, Any]:
         elif t == "column_mask": stats["masks"] += 1
         elif t == "hdfs_grant": stats["hdfsGrants"] += 1
         elif t == "hbase_grant": stats["hbaseGrants"] += 1
+        elif t == "tag_set": stats["tagSets"] += 1
+        elif t == "tag_grant": stats["tagGrants"] += 1
+        elif t == "tag_placeholder": stats["tagPlaceholders"] += 1
 
         s = p.get("status")
         if s == "approved": stats["approved"] += 1

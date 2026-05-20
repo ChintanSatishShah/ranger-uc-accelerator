@@ -225,7 +225,66 @@ st.info(
 )
 
 # ── Grant with USE ─────────────────────────────────────────────────────
-st.header("9. HDFS Policy Mapping")
+st.header("9. Tag-Based Policy Translation")
+st.markdown(
+    "Tag policies use `resources.tag` instead of `resources.database/table`. "
+    "The tool handles them in two parts:"
+)
+col_a, col_b = st.columns(2)
+with col_a:
+    st.markdown("**Part 1 — SET TAGS (from `resourceTags`)**")
+    st.markdown(
+        "The top-level `resourceTags` field maps resource paths to tag names. "
+        "Each entry becomes an `ALTER TABLE SET TAGS` or `ALTER TABLE ALTER COLUMN SET TAGS` statement. "
+        "Tag attributes from `tagDefinitions.attributeDefs` are included as additional tag pairs."
+    )
+    st.code(
+        """-- Column-level (schema.table.column):
+ALTER TABLE main.sales.customers
+  ALTER COLUMN ssn SET TAGS (
+    'PII' = 'true', 'level' = 'high', 'category' = 'sensitive'
+  );
+
+-- Table-level (schema.table):
+ALTER TABLE main.finance.transactions
+  SET TAGS ('CONFIDENTIAL' = 'true', 'retention_years' = '7');""",
+        language="sql",
+    )
+with col_b:
+    st.markdown("**Part 2 — Tag-based grants (from policy `policyItems`)**")
+    st.markdown(
+        "Each `policyItems` entry in a tag policy resolves to GRANT statements "
+        "on the specific tables that carry those tags (via `resourceTags`). "
+        "If `resourceTags` is absent, a placeholder comment is emitted."
+    )
+    st.code(
+        """-- Tag-based grant (tags: PII)
+GRANT SELECT ON TABLE main.sales.customers
+  TO `data_protection_team`;
+
+-- When resourceTags is missing:
+-- ⚠ Tag-based policy — tags: PII
+-- GRANT SELECT ON TABLE main.<schema>.<table_with_PII>
+--   TO `data_protection_team`;""",
+        language="sql",
+    )
+
+st.info(
+    "Row filters and column masks on tag policies are also resolved to the tagged tables "
+    "and generate the same `CREATE FUNCTION` + `ALTER TABLE SET ROW FILTER / SET MASK` SQL as Hive policies.",
+    icon="ℹ️",
+)
+st.dataframe(
+    {
+        "resourceTags present?": ["Yes", "Yes (tag not in map)", "No"],
+        "policyItems output": ["tag_grant — GRANT on resolved tables", "tag_placeholder — comment only", "tag_placeholder — comment only"],
+        "resourceTags output": ["tag_set — ALTER TABLE SET TAGS per resource", "tag_set — ALTER TABLE SET TAGS per resource", "Nothing (no data)"],
+    },
+    use_container_width=True,
+    hide_index=True,
+)
+
+st.header("11. HDFS Policy Mapping")
 st.markdown(
     "HDFS policies (`serviceName` containing `hdfs`) are detected automatically. "
     "The `path` resource maps to a UC **External Location** grant."
@@ -248,7 +307,7 @@ GRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_data_finance>` TO `analyst_group
     language="sql",
 )
 
-st.header("10. HBase Policy Mapping")
+st.header("12. HBase Policy Mapping")
 st.markdown(
     "HBase policies (`serviceName` containing `hbase`) map to UC table/schema grants, "
     "assuming HBase data has been migrated to Delta tables. "
@@ -293,7 +352,7 @@ GRANT ALL PRIVILEGES ON SCHEMA main.namespace_1 TO `user1`;""",
     language="sql",
 )
 
-st.header("12. Schema-Level Grant Pattern")
+st.header("13. Schema-Level Grant Pattern")
 st.markdown(
     "When a Ranger policy targets a database without a specific table (wildcard or schema-only), "
     "the tool prepends `USE CATALOG` and `USE SCHEMA` grants so the principal can navigate the hierarchy:"

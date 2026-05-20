@@ -141,7 +141,7 @@ def _home_page() -> None:
                 data = load_sample(_label_to_file[_selected])
                 _on_loaded(data, _selected)
             except FileNotFoundError:
-                st.error("Sample file not found. Check that the samples/ folder is present.")
+                st.error("Sample file not found. Check that the input/ folder is present.")
 
     st.divider()
 

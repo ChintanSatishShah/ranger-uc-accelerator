@@ -1,10 +1,14 @@
 """Session Archive — save, preview, and restore migration sessions."""
 from __future__ import annotations
 
+import json
 import re
 from collections import Counter
+from pathlib import Path
 
 import streamlit as st
+
+_INPUT_DIR = Path(__file__).parent.parent / "data" / "input"
 
 from lib.history import (
     delete_archive,
@@ -102,7 +106,7 @@ approve / reject decisions, identity mappings, and the generated SQL.
         total = len(policy_items)
 
         source_name = re.sub(r"_\d{8}_\d{6}$", "", archive["filename"].removesuffix(".json"))
-        expander_label = f"📦  {source_name}"
+        expander_label = f"📦  {source_name}  ·  {timestamp[:10]}  ·  {total} items  ·  {service}"
         if notes_text:
             expander_label += f'  —  "{notes_text}"'
 
@@ -122,18 +126,18 @@ approve / reject decisions, identity mappings, and the generated SQL.
                            + (f"  ·  source: {source_file}" if source_file and source_file != source_name else ""))
 
             with btn_col:
-                if st.button("🔄 Restore", key=f"load_{i}", use_container_width=True, type="primary"):
+                if st.button("🔄 Restore Session", key=f"load_{i}", use_container_width=True, type="primary"):
                     try:
                         loaded = load_session(archive["filename"])
                         restore_session(loaded)
-                        st.success("Session restored.")
+                        st.success("Session restored — use the sidebar to navigate.")
                         st.rerun()
                     except Exception as e:
                         st.error(f"Failed to restore: {e}")
                 try:
                     zip_data = export_session_as_zip(archive["filename"])
                     st.download_button(
-                        label="📥 ZIP",
+                        label="📥 Download ZIP",
                         data=zip_data,
                         file_name=f"{source_name}.zip",
                         mime="application/zip",
@@ -153,7 +157,7 @@ approve / reject decisions, identity mappings, and the generated SQL.
 
             # ─ LEFT: Input attributes ────────────────────────────────────
             with left:
-                st.markdown("#### 📥 Input")
+                st.markdown("#### 📂 Input")
 
                 # Service metadata
                 svc_type = parsed_data.get("serviceType") or "hive"
@@ -198,13 +202,22 @@ approve / reject decisions, identity mappings, and the generated SQL.
                 if kerberos:
                     st.warning(f"{len(kerberos)} Kerberos / service-account principal(s) detected", icon="⚠️")
 
-                # Raw JSON viewer
-                with st.expander("📄 View raw parsed data"):
-                    st.json(parsed_data, expanded=False)
+                # Load and display the original input JSON from data/input/
+                with st.expander("📄 View input JSON"):
+                    src = meta.get("source_file", "")
+                    input_path = _INPUT_DIR / src if src else None
+                    if input_path and input_path.exists():
+                        try:
+                            raw = json.loads(input_path.read_text())
+                            st.json(raw, expanded=False)
+                        except Exception:
+                            st.caption(f"Could not load `{src}`")
+                    else:
+                        st.caption("Source file not found in `data/input/`.")
 
             # ─ RIGHT: Output attributes ───────────────────────────────────
             with right:
-                st.markdown("#### 📤 Output")
+                st.markdown("#### 🎯 Output")
 
                 # Status breakdown
                 if policy_items:

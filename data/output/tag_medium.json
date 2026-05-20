@@ -1,0 +1,556 @@
+{
+  "metadata": {
+    "timestamp": "2026-05-20T12:59:58.044007",
+    "service_name": "tag_prod",
+    "cluster_name": "unknown",
+    "catalog_name": "main",
+    "source_file": "tag_medium.json",
+    "notes": ""
+  },
+  "parsed_data": {
+    "results": [
+      {
+        "id": "tag_set_finance_transactions_tbl",
+        "rangerPolicyId": null,
+        "rangerPolicyName": "SET TAGS \u2014 finance.transactions",
+        "rangerPolicyDesc": "",
+        "type": "tag_set",
+        "catalog": "main",
+        "schema": "finance",
+        "table": "transactions",
+        "column": null,
+        "tag_attrs": {
+          "CONFIDENTIAL": "true",
+          "level": "high",
+          "retention_years": "7"
+        },
+        "principal": {
+          "type": "system",
+          "name": ""
+        },
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "tag_set_sales_reports_tbl",
+        "rangerPolicyId": null,
+        "rangerPolicyName": "SET TAGS \u2014 sales.reports",
+        "rangerPolicyDesc": "",
+        "type": "tag_set",
+        "catalog": "main",
+        "schema": "sales",
+        "table": "reports",
+        "column": null,
+        "tag_attrs": {
+          "INTERNAL": "true",
+          "level": "medium",
+          "retention_years": "5"
+        },
+        "principal": {
+          "type": "system",
+          "name": ""
+        },
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "tag_set_marketing_campaigns_tbl",
+        "rangerPolicyId": null,
+        "rangerPolicyName": "SET TAGS \u2014 marketing.campaigns",
+        "rangerPolicyDesc": "",
+        "type": "tag_set",
+        "catalog": "main",
+        "schema": "marketing",
+        "table": "campaigns",
+        "column": null,
+        "tag_attrs": {
+          "PUBLIC": "true",
+          "level": "low",
+          "retention_years": "3"
+        },
+        "principal": {
+          "type": "system",
+          "name": ""
+        },
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "302-tag_grant-finance-transactions-data_governance-1",
+        "rangerPolicyId": 302,
+        "rangerPolicyName": "data_classification_policy",
+        "rangerPolicyDesc": "Medium tag policy - Multiple tags with different access levels",
+        "type": "tag_grant",
+        "catalog": "main",
+        "schema": "finance",
+        "table": "transactions",
+        "columns": null,
+        "privileges": [
+          "SELECT",
+          "MODIFY"
+        ],
+        "principal": {
+          "type": "group",
+          "name": "data_governance"
+        },
+        "tag_names": [
+          "CONFIDENTIAL",
+          "INTERNAL",
+          "PUBLIC"
+        ],
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "302-tag_grant-finance-transactions-data_steward@company.com-2",
+        "rangerPolicyId": 302,
+        "rangerPolicyName": "data_classification_policy",
+        "rangerPolicyDesc": "Medium tag policy - Multiple tags with different access levels",
+        "type": "tag_grant",
+        "catalog": "main",
+        "schema": "finance",
+        "table": "transactions",
+        "columns": null,
+        "privileges": [
+          "SELECT",
+          "MODIFY"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "data_steward@company.com"
+        },
+        "tag_names": [
+          "CONFIDENTIAL",
+          "INTERNAL",
+          "PUBLIC"
+        ],
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "302-tag_grant-sales-reports-data_governance-3",
+        "rangerPolicyId": 302,
+        "rangerPolicyName": "data_classification_policy",
+        "rangerPolicyDesc": "Medium tag policy - Multiple tags with different access levels",
+        "type": "tag_grant",
+        "catalog": "main",
+        "schema": "sales",
+        "table": "reports",
+        "columns": null,
+        "privileges": [
+          "SELECT",
+          "MODIFY"
+        ],
+        "principal": {
+          "type": "group",
+          "name": "data_governance"
+        },
+        "tag_names": [
+          "CONFIDENTIAL",
+          "INTERNAL",
+          "PUBLIC"
+        ],
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "302-tag_grant-sales-reports-data_steward@company.com-4",
+        "rangerPolicyId": 302,
+        "rangerPolicyName": "data_classification_policy",
+        "rangerPolicyDesc": "Medium tag policy - Multiple tags with different access levels",
+        "type": "tag_grant",
+        "catalog": "main",
+        "schema": "sales",
+        "table": "reports",
+        "columns": null,
+        "privileges": [
+          "SELECT",
+          "MODIFY"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "data_steward@company.com"
+        },
+        "tag_names": [
+          "CONFIDENTIAL",
+          "INTERNAL",
+          "PUBLIC"
+        ],
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "302-tag_grant-marketing-campaigns-data_governance-5",
+        "rangerPolicyId": 302,
+        "rangerPolicyName": "data_classification_policy",
+        "rangerPolicyDesc": "Medium tag policy - Multiple tags with different access levels",
+        "type": "tag_grant",
+        "catalog": "main",
+        "schema": "marketing",
+        "table": "campaigns",
+        "columns": null,
+        "privileges": [
+          "SELECT",
+          "MODIFY"
+        ],
+        "principal": {
+          "type": "group",
+          "name": "data_governance"
+        },
+        "tag_names": [
+          "CONFIDENTIAL",
+          "INTERNAL",
+          "PUBLIC"
+        ],
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "302-tag_grant-marketing-campaigns-data_steward@company.com-6",
+        "rangerPolicyId": 302,
+        "rangerPolicyName": "data_classification_policy",
+        "rangerPolicyDesc": "Medium tag policy - Multiple tags with different access levels",
+        "type": "tag_grant",
+        "catalog": "main",
+        "schema": "marketing",
+        "table": "campaigns",
+        "columns": null,
+        "privileges": [
+          "SELECT",
+          "MODIFY"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "data_steward@company.com"
+        },
+        "tag_names": [
+          "CONFIDENTIAL",
+          "INTERNAL",
+          "PUBLIC"
+        ],
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "303-tag_grant-marketing-campaigns-all_employees-1",
+        "rangerPolicyId": 303,
+        "rangerPolicyName": "public_data_access",
+        "rangerPolicyDesc": "Allow all employees to access public data",
+        "type": "tag_grant",
+        "catalog": "main",
+        "schema": "marketing",
+        "table": "campaigns",
+        "columns": null,
+        "privileges": [
+          "SELECT"
+        ],
+        "principal": {
+          "type": "group",
+          "name": "all_employees"
+        },
+        "tag_names": [
+          "PUBLIC"
+        ],
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      }
+    ],
+    "warnings": [],
+    "identities": [
+      {
+        "type": "group",
+        "name": "all_employees"
+      },
+      {
+        "type": "group",
+        "name": "data_governance"
+      },
+      {
+        "type": "user",
+        "name": "data_steward@company.com"
+      }
+    ],
+    "kerberosIssues": [
+      {
+        "policyId": 302,
+        "policyName": "data_classification_policy",
+        "principal": "data_steward@company.com",
+        "type": "kerberos_principal",
+        "severity": "warning",
+        "message": "\"data_steward@company.com\" looks like a Kerberos principal \u2014 needs mapping to Databricks service principal or managed identity",
+        "recommendation": "Map to a Databricks user via SCIM/IdP integration. Remove the Kerberos realm suffix."
+      }
+    ],
+    "serviceName": "tag_prod",
+    "serviceType": "hive",
+    "clusterName": "unknown",
+    "totalRangerPolicies": 2
+  },
+  "policy_items": [
+    {
+      "id": "tag_set_finance_transactions_tbl",
+      "rangerPolicyId": null,
+      "rangerPolicyName": "SET TAGS \u2014 finance.transactions",
+      "rangerPolicyDesc": "",
+      "type": "tag_set",
+      "catalog": "main",
+      "schema": "finance",
+      "table": "transactions",
+      "column": null,
+      "tag_attrs": {
+        "CONFIDENTIAL": "true",
+        "level": "high",
+        "retention_years": "7"
+      },
+      "principal": {
+        "type": "system",
+        "name": ""
+      },
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "tag_set_sales_reports_tbl",
+      "rangerPolicyId": null,
+      "rangerPolicyName": "SET TAGS \u2014 sales.reports",
+      "rangerPolicyDesc": "",
+      "type": "tag_set",
+      "catalog": "main",
+      "schema": "sales",
+      "table": "reports",
+      "column": null,
+      "tag_attrs": {
+        "INTERNAL": "true",
+        "level": "medium",
+        "retention_years": "5"
+      },
+      "principal": {
+        "type": "system",
+        "name": ""
+      },
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "tag_set_marketing_campaigns_tbl",
+      "rangerPolicyId": null,
+      "rangerPolicyName": "SET TAGS \u2014 marketing.campaigns",
+      "rangerPolicyDesc": "",
+      "type": "tag_set",
+      "catalog": "main",
+      "schema": "marketing",
+      "table": "campaigns",
+      "column": null,
+      "tag_attrs": {
+        "PUBLIC": "true",
+        "level": "low",
+        "retention_years": "3"
+      },
+      "principal": {
+        "type": "system",
+        "name": ""
+      },
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "302-tag_grant-finance-transactions-data_governance-1",
+      "rangerPolicyId": 302,
+      "rangerPolicyName": "data_classification_policy",
+      "rangerPolicyDesc": "Medium tag policy - Multiple tags with different access levels",
+      "type": "tag_grant",
+      "catalog": "main",
+      "schema": "finance",
+      "table": "transactions",
+      "columns": null,
+      "privileges": [
+        "SELECT",
+        "MODIFY"
+      ],
+      "principal": {
+        "type": "group",
+        "name": "data_governance"
+      },
+      "tag_names": [
+        "CONFIDENTIAL",
+        "INTERNAL",
+        "PUBLIC"
+      ],
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "302-tag_grant-finance-transactions-data_steward@company.com-2",
+      "rangerPolicyId": 302,
+      "rangerPolicyName": "data_classification_policy",
+      "rangerPolicyDesc": "Medium tag policy - Multiple tags with different access levels",
+      "type": "tag_grant",
+      "catalog": "main",
+      "schema": "finance",
+      "table": "transactions",
+      "columns": null,
+      "privileges": [
+        "SELECT",
+        "MODIFY"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "data_steward@company.com"
+      },
+      "tag_names": [
+        "CONFIDENTIAL",
+        "INTERNAL",
+        "PUBLIC"
+      ],
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "302-tag_grant-sales-reports-data_governance-3",
+      "rangerPolicyId": 302,
+      "rangerPolicyName": "data_classification_policy",
+      "rangerPolicyDesc": "Medium tag policy - Multiple tags with different access levels",
+      "type": "tag_grant",
+      "catalog": "main",
+      "schema": "sales",
+      "table": "reports",
+      "columns": null,
+      "privileges": [
+        "SELECT",
+        "MODIFY"
+      ],
+      "principal": {
+        "type": "group",
+        "name": "data_governance"
+      },
+      "tag_names": [
+        "CONFIDENTIAL",
+        "INTERNAL",
+        "PUBLIC"
+      ],
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "302-tag_grant-sales-reports-data_steward@company.com-4",
+      "rangerPolicyId": 302,
+      "rangerPolicyName": "data_classification_policy",
+      "rangerPolicyDesc": "Medium tag policy - Multiple tags with different access levels",
+      "type": "tag_grant",
+      "catalog": "main",
+      "schema": "sales",
+      "table": "reports",
+      "columns": null,
+      "privileges": [
+        "SELECT",
+        "MODIFY"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "data_steward@company.com"
+      },
+      "tag_names": [
+        "CONFIDENTIAL",
+        "INTERNAL",
+        "PUBLIC"
+      ],
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "302-tag_grant-marketing-campaigns-data_governance-5",
+      "rangerPolicyId": 302,
+      "rangerPolicyName": "data_classification_policy",
+      "rangerPolicyDesc": "Medium tag policy - Multiple tags with different access levels",
+      "type": "tag_grant",
+      "catalog": "main",
+      "schema": "marketing",
+      "table": "campaigns",
+      "columns": null,
+      "privileges": [
+        "SELECT",
+        "MODIFY"
+      ],
+      "principal": {
+        "type": "group",
+        "name": "data_governance"
+      },
+      "tag_names": [
+        "CONFIDENTIAL",
+        "INTERNAL",
+        "PUBLIC"
+      ],
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "302-tag_grant-marketing-campaigns-data_steward@company.com-6",
+      "rangerPolicyId": 302,
+      "rangerPolicyName": "data_classification_policy",
+      "rangerPolicyDesc": "Medium tag policy - Multiple tags with different access levels",
+      "type": "tag_grant",
+      "catalog": "main",
+      "schema": "marketing",
+      "table": "campaigns",
+      "columns": null,
+      "privileges": [
+        "SELECT",
+        "MODIFY"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "data_steward@company.com"
+      },
+      "tag_names": [
+        "CONFIDENTIAL",
+        "INTERNAL",
+        "PUBLIC"
+      ],
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "303-tag_grant-marketing-campaigns-all_employees-1",
+      "rangerPolicyId": 303,
+      "rangerPolicyName": "public_data_access",
+      "rangerPolicyDesc": "Allow all employees to access public data",
+      "type": "tag_grant",
+      "catalog": "main",
+      "schema": "marketing",
+      "table": "campaigns",
+      "columns": null,
+      "privileges": [
+        "SELECT"
+      ],
+      "principal": {
+        "type": "group",
+        "name": "all_employees"
+      },
+      "tag_names": [
+        "PUBLIC"
+      ],
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "approved"
+    }
+  ],
+  "identity_map": {
+    "all_employees": "all_employees",
+    "data_governance": "data_governance",
+    "data_steward@company.com": "data_steward@company.com"
+  },
+  "generated_sql": "-- \u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n-- \u2551  Unity Catalog Migration Script                          \u2551\n-- \u2551  Generated by Ranger \u2192 UC Migrator                       \u2551\n-- \u2551  Source: tag_prod\n-- \u2551  Target Catalog: main\n-- \u2551  Date: 2026-05-20\n-- \u2551  Policies: 10 of 10\n-- \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: SET TAGS \u2014 finance.transactions (Ranger ID: None)\n-- Type: TAG_SET | Principal: \n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nALTER TABLE main.finance.transactions SET TAGS ('CONFIDENTIAL' = 'true', 'level' = 'high', 'retention_years' = '7');\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: SET TAGS \u2014 sales.reports (Ranger ID: None)\n-- Type: TAG_SET | Principal: \n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nALTER TABLE main.sales.reports SET TAGS ('INTERNAL' = 'true', 'level' = 'medium', 'retention_years' = '5');\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: SET TAGS \u2014 marketing.campaigns (Ranger ID: None)\n-- Type: TAG_SET | Principal: \n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nALTER TABLE main.marketing.campaigns SET TAGS ('PUBLIC' = 'true', 'level' = 'low', 'retention_years' = '3');\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: data_classification_policy (Ranger ID: 302)\n-- Type: TAG_GRANT | Principal: data_governance\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: CONFIDENTIAL, INTERNAL, PUBLIC)\nGRANT SELECT ON TABLE main.finance.transactions TO `data_governance`;\nGRANT MODIFY ON TABLE main.finance.transactions TO `data_governance`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: data_classification_policy (Ranger ID: 302)\n-- Type: TAG_GRANT | Principal: data_steward@company.com\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: CONFIDENTIAL, INTERNAL, PUBLIC)\nGRANT SELECT ON TABLE main.finance.transactions TO `data_steward@company.com`;\nGRANT MODIFY ON TABLE main.finance.transactions TO `data_steward@company.com`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: data_classification_policy (Ranger ID: 302)\n-- Type: TAG_GRANT | Principal: data_governance\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: CONFIDENTIAL, INTERNAL, PUBLIC)\nGRANT SELECT ON TABLE main.sales.reports TO `data_governance`;\nGRANT MODIFY ON TABLE main.sales.reports TO `data_governance`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: data_classification_policy (Ranger ID: 302)\n-- Type: TAG_GRANT | Principal: data_steward@company.com\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: CONFIDENTIAL, INTERNAL, PUBLIC)\nGRANT SELECT ON TABLE main.sales.reports TO `data_steward@company.com`;\nGRANT MODIFY ON TABLE main.sales.reports TO `data_steward@company.com`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: data_classification_policy (Ranger ID: 302)\n-- Type: TAG_GRANT | Principal: data_governance\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: CONFIDENTIAL, INTERNAL, PUBLIC)\nGRANT SELECT ON TABLE main.marketing.campaigns TO `data_governance`;\nGRANT MODIFY ON TABLE main.marketing.campaigns TO `data_governance`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: data_classification_policy (Ranger ID: 302)\n-- Type: TAG_GRANT | Principal: data_steward@company.com\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: CONFIDENTIAL, INTERNAL, PUBLIC)\nGRANT SELECT ON TABLE main.marketing.campaigns TO `data_steward@company.com`;\nGRANT MODIFY ON TABLE main.marketing.campaigns TO `data_steward@company.com`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: public_data_access (Ranger ID: 303)\n-- Type: TAG_GRANT | Principal: all_employees\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: PUBLIC)\nGRANT SELECT ON TABLE main.marketing.campaigns TO `all_employees`;\n"
+}

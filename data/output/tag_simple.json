@@ -1,0 +1,361 @@
+{
+  "metadata": {
+    "timestamp": "2026-05-20T12:59:58.043344",
+    "service_name": "tag_prod",
+    "cluster_name": "unknown",
+    "catalog_name": "main",
+    "source_file": "tag_simple.json",
+    "notes": ""
+  },
+  "parsed_data": {
+    "results": [
+      {
+        "id": "tag_set_sales_customers_ssn",
+        "rangerPolicyId": null,
+        "rangerPolicyName": "SET TAGS \u2014 sales.customers.ssn",
+        "rangerPolicyDesc": "",
+        "type": "tag_set",
+        "catalog": "main",
+        "schema": "sales",
+        "table": "customers",
+        "column": "ssn",
+        "tag_attrs": {
+          "PII": "true",
+          "level": "high",
+          "category": "sensitive"
+        },
+        "principal": {
+          "type": "system",
+          "name": ""
+        },
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "tag_set_sales_customers_email",
+        "rangerPolicyId": null,
+        "rangerPolicyName": "SET TAGS \u2014 sales.customers.email",
+        "rangerPolicyDesc": "",
+        "type": "tag_set",
+        "catalog": "main",
+        "schema": "sales",
+        "table": "customers",
+        "column": "email",
+        "tag_attrs": {
+          "PII": "true",
+          "level": "high",
+          "category": "sensitive"
+        },
+        "principal": {
+          "type": "system",
+          "name": ""
+        },
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "tag_set_hr_employees_salary",
+        "rangerPolicyId": null,
+        "rangerPolicyName": "SET TAGS \u2014 hr.employees.salary",
+        "rangerPolicyDesc": "",
+        "type": "tag_set",
+        "catalog": "main",
+        "schema": "hr",
+        "table": "employees",
+        "column": "salary",
+        "tag_attrs": {
+          "PII": "true",
+          "level": "high",
+          "category": "sensitive"
+        },
+        "principal": {
+          "type": "system",
+          "name": ""
+        },
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "301-tag_grant-sales-customers-data_protection_team-1",
+        "rangerPolicyId": 301,
+        "rangerPolicyName": "pii_tag_access",
+        "rangerPolicyDesc": "Simple tag policy - Restrict PII tagged data",
+        "type": "tag_grant",
+        "catalog": "main",
+        "schema": "sales",
+        "table": "customers",
+        "columns": null,
+        "privileges": [
+          "SELECT"
+        ],
+        "principal": {
+          "type": "group",
+          "name": "data_protection_team"
+        },
+        "tag_names": [
+          "PII"
+        ],
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "301-tag_grant-sales-customers-legal-2",
+        "rangerPolicyId": 301,
+        "rangerPolicyName": "pii_tag_access",
+        "rangerPolicyDesc": "Simple tag policy - Restrict PII tagged data",
+        "type": "tag_grant",
+        "catalog": "main",
+        "schema": "sales",
+        "table": "customers",
+        "columns": null,
+        "privileges": [
+          "SELECT"
+        ],
+        "principal": {
+          "type": "group",
+          "name": "legal"
+        },
+        "tag_names": [
+          "PII"
+        ],
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "301-tag_grant-hr-employees-data_protection_team-3",
+        "rangerPolicyId": 301,
+        "rangerPolicyName": "pii_tag_access",
+        "rangerPolicyDesc": "Simple tag policy - Restrict PII tagged data",
+        "type": "tag_grant",
+        "catalog": "main",
+        "schema": "hr",
+        "table": "employees",
+        "columns": null,
+        "privileges": [
+          "SELECT"
+        ],
+        "principal": {
+          "type": "group",
+          "name": "data_protection_team"
+        },
+        "tag_names": [
+          "PII"
+        ],
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "301-tag_grant-hr-employees-legal-4",
+        "rangerPolicyId": 301,
+        "rangerPolicyName": "pii_tag_access",
+        "rangerPolicyDesc": "Simple tag policy - Restrict PII tagged data",
+        "type": "tag_grant",
+        "catalog": "main",
+        "schema": "hr",
+        "table": "employees",
+        "columns": null,
+        "privileges": [
+          "SELECT"
+        ],
+        "principal": {
+          "type": "group",
+          "name": "legal"
+        },
+        "tag_names": [
+          "PII"
+        ],
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      }
+    ],
+    "warnings": [],
+    "identities": [
+      {
+        "type": "group",
+        "name": "data_protection_team"
+      },
+      {
+        "type": "group",
+        "name": "legal"
+      }
+    ],
+    "kerberosIssues": [],
+    "serviceName": "tag_prod",
+    "serviceType": "hive",
+    "clusterName": "unknown",
+    "totalRangerPolicies": 1
+  },
+  "policy_items": [
+    {
+      "id": "tag_set_sales_customers_ssn",
+      "rangerPolicyId": null,
+      "rangerPolicyName": "SET TAGS \u2014 sales.customers.ssn",
+      "rangerPolicyDesc": "",
+      "type": "tag_set",
+      "catalog": "main",
+      "schema": "sales",
+      "table": "customers",
+      "column": "ssn",
+      "tag_attrs": {
+        "PII": "true",
+        "level": "high",
+        "category": "sensitive"
+      },
+      "principal": {
+        "type": "system",
+        "name": ""
+      },
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "tag_set_sales_customers_email",
+      "rangerPolicyId": null,
+      "rangerPolicyName": "SET TAGS \u2014 sales.customers.email",
+      "rangerPolicyDesc": "",
+      "type": "tag_set",
+      "catalog": "main",
+      "schema": "sales",
+      "table": "customers",
+      "column": "email",
+      "tag_attrs": {
+        "PII": "true",
+        "level": "high",
+        "category": "sensitive"
+      },
+      "principal": {
+        "type": "system",
+        "name": ""
+      },
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "tag_set_hr_employees_salary",
+      "rangerPolicyId": null,
+      "rangerPolicyName": "SET TAGS \u2014 hr.employees.salary",
+      "rangerPolicyDesc": "",
+      "type": "tag_set",
+      "catalog": "main",
+      "schema": "hr",
+      "table": "employees",
+      "column": "salary",
+      "tag_attrs": {
+        "PII": "true",
+        "level": "high",
+        "category": "sensitive"
+      },
+      "principal": {
+        "type": "system",
+        "name": ""
+      },
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "301-tag_grant-sales-customers-data_protection_team-1",
+      "rangerPolicyId": 301,
+      "rangerPolicyName": "pii_tag_access",
+      "rangerPolicyDesc": "Simple tag policy - Restrict PII tagged data",
+      "type": "tag_grant",
+      "catalog": "main",
+      "schema": "sales",
+      "table": "customers",
+      "columns": null,
+      "privileges": [
+        "SELECT"
+      ],
+      "principal": {
+        "type": "group",
+        "name": "data_protection_team"
+      },
+      "tag_names": [
+        "PII"
+      ],
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "301-tag_grant-sales-customers-legal-2",
+      "rangerPolicyId": 301,
+      "rangerPolicyName": "pii_tag_access",
+      "rangerPolicyDesc": "Simple tag policy - Restrict PII tagged data",
+      "type": "tag_grant",
+      "catalog": "main",
+      "schema": "sales",
+      "table": "customers",
+      "columns": null,
+      "privileges": [
+        "SELECT"
+      ],
+      "principal": {
+        "type": "group",
+        "name": "legal"
+      },
+      "tag_names": [
+        "PII"
+      ],
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "301-tag_grant-hr-employees-data_protection_team-3",
+      "rangerPolicyId": 301,
+      "rangerPolicyName": "pii_tag_access",
+      "rangerPolicyDesc": "Simple tag policy - Restrict PII tagged data",
+      "type": "tag_grant",
+      "catalog": "main",
+      "schema": "hr",
+      "table": "employees",
+      "columns": null,
+      "privileges": [
+        "SELECT"
+      ],
+      "principal": {
+        "type": "group",
+        "name": "data_protection_team"
+      },
+      "tag_names": [
+        "PII"
+      ],
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "301-tag_grant-hr-employees-legal-4",
+      "rangerPolicyId": 301,
+      "rangerPolicyName": "pii_tag_access",
+      "rangerPolicyDesc": "Simple tag policy - Restrict PII tagged data",
+      "type": "tag_grant",
+      "catalog": "main",
+      "schema": "hr",
+      "table": "employees",
+      "columns": null,
+      "privileges": [
+        "SELECT"
+      ],
+      "principal": {
+        "type": "group",
+        "name": "legal"
+      },
+      "tag_names": [
+        "PII"
+      ],
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "approved"
+    }
+  ],
+  "identity_map": {
+    "data_protection_team": "data_protection_team",
+    "legal": "legal"
+  },
+  "generated_sql": "-- \u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n-- \u2551  Unity Catalog Migration Script                          \u2551\n-- \u2551  Generated by Ranger \u2192 UC Migrator                       \u2551\n-- \u2551  Source: tag_prod\n-- \u2551  Target Catalog: main\n-- \u2551  Date: 2026-05-20\n-- \u2551  Policies: 7 of 7\n-- \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: SET TAGS \u2014 sales.customers.ssn (Ranger ID: None)\n-- Type: TAG_SET | Principal: \n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nALTER TABLE main.sales.customers\n  ALTER COLUMN ssn SET TAGS ('PII' = 'true', 'level' = 'high', 'category' = 'sensitive');\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: SET TAGS \u2014 sales.customers.email (Ranger ID: None)\n-- Type: TAG_SET | Principal: \n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nALTER TABLE main.sales.customers\n  ALTER COLUMN email SET TAGS ('PII' = 'true', 'level' = 'high', 'category' = 'sensitive');\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: SET TAGS \u2014 hr.employees.salary (Ranger ID: None)\n-- Type: TAG_SET | Principal: \n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nALTER TABLE main.hr.employees\n  ALTER COLUMN salary SET TAGS ('PII' = 'true', 'level' = 'high', 'category' = 'sensitive');\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: pii_tag_access (Ranger ID: 301)\n-- Type: TAG_GRANT | Principal: data_protection_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: PII)\nGRANT SELECT ON TABLE main.sales.customers TO `data_protection_team`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: pii_tag_access (Ranger ID: 301)\n-- Type: TAG_GRANT | Principal: legal\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: PII)\nGRANT SELECT ON TABLE main.sales.customers TO `legal`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: pii_tag_access (Ranger ID: 301)\n-- Type: TAG_GRANT | Principal: data_protection_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: PII)\nGRANT SELECT ON TABLE main.hr.employees TO `data_protection_team`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: pii_tag_access (Ranger ID: 301)\n-- Type: TAG_GRANT | Principal: legal\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: PII)\nGRANT SELECT ON TABLE main.hr.employees TO `legal`;\n"
+}

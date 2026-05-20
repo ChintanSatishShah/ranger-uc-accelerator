@@ -1,0 +1,198 @@
+{
+  "serviceName": "tag_prod",
+  "policies": [
+    {
+      "id": 304,
+      "guid": "policy-304",
+      "isEnabled": true,
+      "service": "tag_prod",
+      "name": "gdpr_compliance_policy",
+      "policyType": 0,
+      "description": "Complex tag policy - GDPR with geography and expiry",
+      "isAuditEnabled": true,
+      "resources": {
+        "tag": {
+          "values": [
+            "PII",
+            "PII_EU",
+            "FINANCIAL",
+            "SENSITIVE"
+          ]
+        }
+      },
+      "policyItems": [
+        {
+          "accesses": [
+            {
+              "type": "select",
+              "isAllowed": true
+            },
+            {
+              "type": "update",
+              "isAllowed": true
+            }
+          ],
+          "users": [
+            "dpo@company.com"
+          ],
+          "groups": [
+            "data_protection_officers",
+            "privacy_team"
+          ],
+          "conditions": [
+            {
+              "type": "ip-range",
+              "values": [
+                "10.0.0.0/8"
+              ]
+            }
+          ]
+        }
+      ],
+      "rowFilterPolicyItems": [
+        {
+          "rowFilterInfo": {
+            "filterExpr": "consent_given = TRUE AND data_retention_date > CURRENT_DATE()"
+          },
+          "users": [],
+          "groups": [
+            "marketing_team",
+            "sales_team"
+          ]
+        }
+      ],
+      "dataMaskPolicyItems": [
+        {
+          "dataMaskInfo": {
+            "dataMaskType": "MASK_HASH"
+          },
+          "groups": [
+            "analytics_team",
+            "data_science"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 305,
+      "guid": "policy-305",
+      "isEnabled": true,
+      "service": "tag_prod",
+      "name": "financial_regulatory_policy",
+      "policyType": 0,
+      "description": "SOX/PCI compliance for financial tags",
+      "isAuditEnabled": true,
+      "resources": {
+        "tag": {
+          "values": [
+            "SOX",
+            "PCI_DSS",
+            "FINANCIAL"
+          ]
+        }
+      },
+      "policyItems": [
+        {
+          "accesses": [
+            {
+              "type": "select",
+              "isAllowed": true
+            }
+          ],
+          "users": [
+            "auditor@company.com"
+          ],
+          "groups": [
+            "audit_team",
+            "compliance_team"
+          ],
+          "delegateAdmin": false
+        }
+      ],
+      "denyPolicyItems": [
+        {
+          "accesses": [
+            {
+              "type": "update",
+              "isAllowed": true
+            },
+            {
+              "type": "drop",
+              "isAllowed": true
+            }
+          ],
+          "groups": [
+            "contractors",
+            "external_vendors"
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDefinitions": {
+    "PII": {
+      "name": "PII",
+      "attributeDefs": {
+        "classification": "restricted",
+        "gdpr_applicable": "true"
+      }
+    },
+    "PII_EU": {
+      "name": "PII_EU",
+      "attributeDefs": {
+        "classification": "restricted",
+        "gdpr_applicable": "true",
+        "geography": "EU"
+      }
+    },
+    "FINANCIAL": {
+      "name": "FINANCIAL",
+      "attributeDefs": {
+        "classification": "confidential",
+        "sox_applicable": "true"
+      }
+    },
+    "SENSITIVE": {
+      "name": "SENSITIVE",
+      "attributeDefs": {
+        "classification": "restricted",
+        "encryption_required": "true"
+      }
+    },
+    "SOX": {
+      "name": "SOX",
+      "attributeDefs": {
+        "regulation": "Sarbanes-Oxley",
+        "audit_required": "true"
+      }
+    },
+    "PCI_DSS": {
+      "name": "PCI_DSS",
+      "attributeDefs": {
+        "regulation": "Payment Card Industry",
+        "encryption_required": "true"
+      }
+    }
+  },
+  "resourceTags": {
+    "finance.accounts.account_balance": [
+      "FINANCIAL",
+      "SOX"
+    ],
+    "finance.transactions.credit_card": [
+      "PCI_DSS",
+      "SENSITIVE"
+    ],
+    "customer_360.customers.email": [
+      "PII"
+    ],
+    "customer_360.customers_eu.email": [
+      "PII",
+      "PII_EU"
+    ],
+    "hr.payroll.salary": [
+      "FINANCIAL",
+      "SENSITIVE"
+    ]
+  }
+}

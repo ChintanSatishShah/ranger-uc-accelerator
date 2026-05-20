@@ -1,0 +1,72 @@
+{
+  "serviceName": "hive_prod",
+  "policies": [
+    {
+      "id": 202,
+      "guid": "policy-202",
+      "isEnabled": true,
+      "service": "hive_prod",
+      "name": "customer_pii_masking",
+      "policyType": 1,
+      "description": "Medium masking - Multiple columns with different mask types",
+      "isAuditEnabled": true,
+      "resources": {
+        "database": {
+          "values": [
+            "customer_360"
+          ]
+        },
+        "table": {
+          "values": [
+            "customers"
+          ]
+        },
+        "column": {
+          "values": [
+            "email",
+            "phone",
+            "credit_card"
+          ]
+        }
+      },
+      "dataMaskPolicyItems": [
+        {
+          "dataMaskInfo": {
+            "dataMaskType": "MASK_SHOW_FIRST_4",
+            "conditionExpr": "country = 'USA'"
+          },
+          "accesses": [
+            {
+              "type": "select",
+              "isAllowed": true
+            }
+          ],
+          "groups": [
+            "support_team",
+            "customer_service"
+          ]
+        },
+        {
+          "dataMaskInfo": {
+            "dataMaskType": "MASK_HASH"
+          },
+          "users": [
+            "data_scientist@company.com"
+          ],
+          "groups": [
+            "analytics_team"
+          ]
+        },
+        {
+          "dataMaskInfo": {
+            "dataMaskType": "MASK_NULL"
+          },
+          "groups": [
+            "contractors",
+            "external_vendors"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,224 @@
+{
+  "metadata": {
+    "timestamp": "2026-05-20T12:59:58.066739",
+    "service_name": "hbasedev",
+    "cluster_name": "unknown",
+    "catalog_name": "main",
+    "source_file": "test_policyengine_hbase.json",
+    "notes": ""
+  },
+  "parsed_data": {
+    "results": [
+      {
+        "id": "1-hbase-public-1",
+        "rangerPolicyId": 1,
+        "rangerPolicyName": "table=finance; column-family=restricted*: audit-all-access",
+        "rangerPolicyDesc": "",
+        "type": "hbase_grant",
+        "catalog": "main",
+        "schema": "default",
+        "table": "finance",
+        "col_families": [
+          "restricted*"
+        ],
+        "privileges": [],
+        "principal": {
+          "type": "group",
+          "name": "public"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "2-hbase-finance-1",
+        "rangerPolicyId": 2,
+        "rangerPolicyName": "table=finance; column-family=restricted*",
+        "rangerPolicyDesc": "",
+        "type": "hbase_grant",
+        "catalog": "main",
+        "schema": "default",
+        "table": "finance",
+        "col_families": [
+          "restricted*"
+        ],
+        "privileges": [
+          "SELECT",
+          "MODIFY"
+        ],
+        "principal": {
+          "type": "group",
+          "name": "finance"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "2-hbase-finance-admin-2",
+        "rangerPolicyId": 2,
+        "rangerPolicyName": "table=finance; column-family=restricted*",
+        "rangerPolicyDesc": "",
+        "type": "hbase_grant",
+        "catalog": "main",
+        "schema": "default",
+        "table": "finance",
+        "col_families": [
+          "restricted*"
+        ],
+        "privileges": [
+          "ALL PRIVILEGES"
+        ],
+        "principal": {
+          "type": "group",
+          "name": "finance-admin"
+        },
+        "delegateAdmin": true,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "3-hbase-public-1",
+        "rangerPolicyId": 3,
+        "rangerPolicyName": "table=*; column-family=<excluding>restricted*",
+        "rangerPolicyDesc": "",
+        "type": "hbase_grant",
+        "catalog": "main",
+        "schema": "_all_namespaces",
+        "table": null,
+        "col_families": [
+          "restricted*"
+        ],
+        "privileges": [
+          "SELECT"
+        ],
+        "principal": {
+          "type": "group",
+          "name": "public"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      }
+    ],
+    "warnings": [],
+    "identities": [
+      {
+        "type": "group",
+        "name": "finance"
+      },
+      {
+        "type": "group",
+        "name": "finance-admin"
+      },
+      {
+        "type": "group",
+        "name": "public"
+      }
+    ],
+    "kerberosIssues": [],
+    "serviceName": "hbasedev",
+    "serviceType": "hbase",
+    "clusterName": "unknown",
+    "totalRangerPolicies": 3
+  },
+  "policy_items": [
+    {
+      "id": "1-hbase-public-1",
+      "rangerPolicyId": 1,
+      "rangerPolicyName": "table=finance; column-family=restricted*: audit-all-access",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "finance",
+      "col_families": [
+        "restricted*"
+      ],
+      "privileges": [],
+      "principal": {
+        "type": "group",
+        "name": "public"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "2-hbase-finance-1",
+      "rangerPolicyId": 2,
+      "rangerPolicyName": "table=finance; column-family=restricted*",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "finance",
+      "col_families": [
+        "restricted*"
+      ],
+      "privileges": [
+        "SELECT",
+        "MODIFY"
+      ],
+      "principal": {
+        "type": "group",
+        "name": "finance"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "2-hbase-finance-admin-2",
+      "rangerPolicyId": 2,
+      "rangerPolicyName": "table=finance; column-family=restricted*",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "finance",
+      "col_families": [
+        "restricted*"
+      ],
+      "privileges": [
+        "ALL PRIVILEGES"
+      ],
+      "principal": {
+        "type": "group",
+        "name": "finance-admin"
+      },
+      "delegateAdmin": true,
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "3-hbase-public-1",
+      "rangerPolicyId": 3,
+      "rangerPolicyName": "table=*; column-family=<excluding>restricted*",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "_all_namespaces",
+      "table": null,
+      "col_families": [
+        "restricted*"
+      ],
+      "privileges": [
+        "SELECT"
+      ],
+      "principal": {
+        "type": "group",
+        "name": "public"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "approved"
+    }
+  ],
+  "identity_map": {
+    "finance": "finance",
+    "finance-admin": "finance-admin",
+    "public": "public"
+  },
+  "generated_sql": "-- \u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n-- \u2551  Unity Catalog Migration Script                          \u2551\n-- \u2551  Generated by Ranger \u2192 UC Migrator                       \u2551\n-- \u2551  Source: hbasedev\n-- \u2551  Target Catalog: main\n-- \u2551  Date: 2026-05-20\n-- \u2551  Policies: 4 of 4\n-- \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: table=finance; column-family=restricted*: audit-all-access (Ranger ID: 1)\n-- Type: HBASE_GRANT | Principal: public\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- HBase column-families (restricted*) have no direct UC equivalent \u2014 table-level grant applied.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: table=finance; column-family=restricted* (Ranger ID: 2)\n-- Type: HBASE_GRANT | Principal: finance\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- HBase column-families (restricted*) have no direct UC equivalent \u2014 table-level grant applied.\nGRANT SELECT ON TABLE main.default.finance TO `finance`;\nGRANT MODIFY ON TABLE main.default.finance TO `finance`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: table=finance; column-family=restricted* (Ranger ID: 2)\n-- Type: HBASE_GRANT | Principal: finance-admin\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- HBase column-families (restricted*) have no direct UC equivalent \u2014 table-level grant applied.\nGRANT ALL PRIVILEGES ON TABLE main.default.finance TO `finance-admin`;\n-- Note: delegateAdmin=true. Consider MANAGE on TABLE main.default.finance if admin delegation needed.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: table=*; column-family=<excluding>restricted* (Ranger ID: 3)\n-- Type: HBASE_GRANT | Principal: public\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 HBase wildcard (*) spans all namespaces \u2014 cannot be automatically translated.\n-- Grant on specific schemas under catalog main manually.\n"
+}

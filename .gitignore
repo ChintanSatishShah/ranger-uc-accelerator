@@ -38,11 +38,9 @@ htmlcov/
 # Streamlit local state (keep .streamlit/config.toml in repo)
 .streamlit/local/
 
-# Project I/O — keep folders, ignore contents
-data/input/*
-!data/input/.gitkeep
-data/output/*
-!data/output/.gitkeep
+# Project I/O — sample files are tracked; user-generated files (user_ prefix) are ignored
+data/input/user_*
+data/output/user_*
 
 # IDEs and editors
 .vscode/

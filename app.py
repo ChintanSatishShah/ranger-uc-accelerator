@@ -21,9 +21,11 @@ def _slugify(name: str) -> str:
     return re.sub(r"[^a-z0-9_-]", "_", name.lower())[:40]
 
 
-def _save_to_input(data: dict, filename: str) -> None:
-    """Persist raw JSON to data/input/ so it appears in the folder picker."""
-    (INPUT_DIR / filename).write_text(json.dumps(data, indent=2))
+def _save_to_input(data: dict, filename: str) -> str:
+    """Persist raw JSON to data/input/ with user_ prefix. Returns saved filename."""
+    safe = f"user_{filename}" if not filename.startswith("user_") else filename
+    (INPUT_DIR / safe).write_text(json.dumps(data, indent=2))
+    return safe
 
 st.set_page_config(
     page_title="Ranger → UC Migration Accelerator",
@@ -74,21 +76,28 @@ def _home_page() -> None:
         if uploaded is not None:
             try:
                 data = json.loads(uploaded.read())
-                _save_to_input(data, uploaded.name)
-                st.caption(f"Saved to `data/input/{uploaded.name}`")
+                saved_name = _save_to_input(data, uploaded.name)
+                st.caption(f"Saved to `data/input/{saved_name}`")
                 _on_loaded(data, uploaded.name)
             except json.JSONDecodeError:
                 st.error("Invalid JSON — please upload a Ranger policy export.")
 
-        input_files = sorted(INPUT_DIR.glob("*.json"))
-        if input_files:
+        # Show all JSON files; separate samples (no user_ prefix) from user uploads
+        all_input = sorted(INPUT_DIR.glob("*.json"))
+        sample_files = [f for f in all_input if not f.name.startswith("user_")]
+        user_files = [f for f in all_input if f.name.startswith("user_")]
+        if sample_files or user_files:
+            groups: list[str] = []
+            if sample_files:
+                groups.append("── Samples ──")
+                groups.extend(f.name for f in sample_files)
+            if user_files:
+                groups.append("── My uploads ──")
+                groups.extend(f.name for f in user_files)
             st.markdown("**Or pick from `input/` folder:**")
-            chosen = st.selectbox(
-                "input/ files",
-                [f.name for f in input_files],
-                label_visibility="collapsed",
-            )
-            if st.button("Load from input/", use_container_width=True):
+            chosen = st.selectbox("input/ files", groups, label_visibility="collapsed")
+            is_header = chosen.startswith("──")
+            if st.button("Load selected file", use_container_width=True, disabled=is_header):
                 try:
                     data = json.loads((INPUT_DIR / chosen).read_text())
                     _on_loaded(data, chosen)
@@ -113,7 +122,7 @@ def _home_page() -> None:
                     data = json.loads(raw)
                     service = data.get("serviceName", "pasted")
                     ts = datetime.now().strftime("%Y%m%d_%H%M%S")
-                    fname = f"pasted_{_slugify(service)}_{ts}.json"
+                    fname = f"user_pasted_{_slugify(service)}_{ts}.json"
                     _save_to_input(data, fname)
                     st.caption(f"Saved to `data/input/{fname}`")
                     _on_loaded(data, fname)

@@ -4,7 +4,7 @@ from __future__ import annotations
 import json
 import os
 
-SAMPLES_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "samples")
+SAMPLES_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "input")
 
 SAMPLE_FILES: list[dict] = [
     # ── Cloudera CDP ──────────────────────────────────────────────────

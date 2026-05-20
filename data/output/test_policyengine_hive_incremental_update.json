@@ -1,0 +1,707 @@
+{
+  "metadata": {
+    "timestamp": "2026-05-20T12:59:58.052576",
+    "service_name": "hivedev",
+    "cluster_name": "unknown",
+    "catalog_name": "main",
+    "source_file": "test_policyengine_hive_incremental_update.json",
+    "notes": ""
+  },
+  "parsed_data": {
+    "results": [
+      {
+        "id": "1-grant-default-*-public-1",
+        "rangerPolicyId": 1,
+        "rangerPolicyName": "db=default: audit-all-access",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "default",
+        "table": null,
+        "columns": null,
+        "privileges": [],
+        "principal": {
+          "type": "group",
+          "name": "public"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "2-grant-default-test*-group1-1",
+        "rangerPolicyId": 2,
+        "rangerPolicyName": "db=default; table=test*; column=*",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "default",
+        "table": "test*",
+        "columns": null,
+        "privileges": [
+          "SELECT"
+        ],
+        "principal": {
+          "type": "group",
+          "name": "group1"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "2-grant-default-test*-group2-2",
+        "rangerPolicyId": 2,
+        "rangerPolicyName": "db=default; table=test*; column=*",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "default",
+        "table": "test*",
+        "columns": null,
+        "privileges": [
+          "SELECT"
+        ],
+        "principal": {
+          "type": "group",
+          "name": "group2"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "2-grant-default-test*-user1-3",
+        "rangerPolicyId": 2,
+        "rangerPolicyName": "db=default; table=test*; column=*",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "default",
+        "table": "test*",
+        "columns": null,
+        "privileges": [
+          "SELECT"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "user1"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "2-grant-default-test*-user2-4",
+        "rangerPolicyId": 2,
+        "rangerPolicyName": "db=default; table=test*; column=*",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "default",
+        "table": "test*",
+        "columns": null,
+        "privileges": [
+          "SELECT"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "user2"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "2-grant-default-test*-admin-5",
+        "rangerPolicyId": 2,
+        "rangerPolicyName": "db=default; table=test*; column=*",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "default",
+        "table": "test*",
+        "columns": null,
+        "privileges": [
+          "CREATE",
+          "DROP"
+        ],
+        "principal": {
+          "type": "group",
+          "name": "admin"
+        },
+        "delegateAdmin": true,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "2-grant-default-test*-admin-6",
+        "rangerPolicyId": 2,
+        "rangerPolicyName": "db=default; table=test*; column=*",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "default",
+        "table": "test*",
+        "columns": null,
+        "privileges": [
+          "CREATE",
+          "DROP"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "admin"
+        },
+        "delegateAdmin": true,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "3-grant-db1-tbl*-group1-1",
+        "rangerPolicyId": 3,
+        "rangerPolicyName": "db=db1; table=tbl*; column=*",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "db1",
+        "table": "tbl*",
+        "columns": null,
+        "privileges": [
+          "SELECT"
+        ],
+        "principal": {
+          "type": "group",
+          "name": "group1"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "3-grant-db1-tbl*-group2-2",
+        "rangerPolicyId": 3,
+        "rangerPolicyName": "db=db1; table=tbl*; column=*",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "db1",
+        "table": "tbl*",
+        "columns": null,
+        "privileges": [
+          "SELECT"
+        ],
+        "principal": {
+          "type": "group",
+          "name": "group2"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "3-grant-db1-tbl*-user1-3",
+        "rangerPolicyId": 3,
+        "rangerPolicyName": "db=db1; table=tbl*; column=*",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "db1",
+        "table": "tbl*",
+        "columns": null,
+        "privileges": [
+          "SELECT"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "user1"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "3-grant-db1-tbl*-user2-4",
+        "rangerPolicyId": 3,
+        "rangerPolicyName": "db=db1; table=tbl*; column=*",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "db1",
+        "table": "tbl*",
+        "columns": null,
+        "privileges": [
+          "SELECT"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "user2"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "4-grant-db1-tmp-group1-1",
+        "rangerPolicyId": 4,
+        "rangerPolicyName": "db=db1; table=tmp; column=tmp*",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "db1",
+        "table": "tmp",
+        "columns": [
+          "tmp*"
+        ],
+        "privileges": [
+          "SELECT"
+        ],
+        "principal": {
+          "type": "group",
+          "name": "group1"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "4-grant-db1-tmp-group2-2",
+        "rangerPolicyId": 4,
+        "rangerPolicyName": "db=db1; table=tmp; column=tmp*",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "db1",
+        "table": "tmp",
+        "columns": [
+          "tmp*"
+        ],
+        "privileges": [
+          "SELECT"
+        ],
+        "principal": {
+          "type": "group",
+          "name": "group2"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "4-grant-db1-tmp-user1-3",
+        "rangerPolicyId": 4,
+        "rangerPolicyName": "db=db1; table=tmp; column=tmp*",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "db1",
+        "table": "tmp",
+        "columns": [
+          "tmp*"
+        ],
+        "privileges": [
+          "SELECT"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "user1"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "4-grant-db1-tmp-user2-4",
+        "rangerPolicyId": 4,
+        "rangerPolicyName": "db=db1; table=tmp; column=tmp*",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "db1",
+        "table": "tmp",
+        "columns": [
+          "tmp*"
+        ],
+        "privileges": [
+          "SELECT"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "user2"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      }
+    ],
+    "warnings": [],
+    "identities": [
+      {
+        "type": "group",
+        "name": "admin"
+      },
+      {
+        "type": "group",
+        "name": "group1"
+      },
+      {
+        "type": "group",
+        "name": "group2"
+      },
+      {
+        "type": "group",
+        "name": "public"
+      },
+      {
+        "type": "user",
+        "name": "admin"
+      },
+      {
+        "type": "user",
+        "name": "user1"
+      },
+      {
+        "type": "user",
+        "name": "user2"
+      }
+    ],
+    "kerberosIssues": [],
+    "serviceName": "hivedev",
+    "serviceType": "hive",
+    "clusterName": "unknown",
+    "totalRangerPolicies": 4
+  },
+  "policy_items": [
+    {
+      "id": "1-grant-default-*-public-1",
+      "rangerPolicyId": 1,
+      "rangerPolicyName": "db=default: audit-all-access",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": null,
+      "columns": null,
+      "privileges": [],
+      "principal": {
+        "type": "group",
+        "name": "public"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "2-grant-default-test*-group1-1",
+      "rangerPolicyId": 2,
+      "rangerPolicyName": "db=default; table=test*; column=*",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "test*",
+      "columns": null,
+      "privileges": [
+        "SELECT"
+      ],
+      "principal": {
+        "type": "group",
+        "name": "group1"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "2-grant-default-test*-group2-2",
+      "rangerPolicyId": 2,
+      "rangerPolicyName": "db=default; table=test*; column=*",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "test*",
+      "columns": null,
+      "privileges": [
+        "SELECT"
+      ],
+      "principal": {
+        "type": "group",
+        "name": "group2"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "2-grant-default-test*-user1-3",
+      "rangerPolicyId": 2,
+      "rangerPolicyName": "db=default; table=test*; column=*",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "test*",
+      "columns": null,
+      "privileges": [
+        "SELECT"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "user1"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "2-grant-default-test*-user2-4",
+      "rangerPolicyId": 2,
+      "rangerPolicyName": "db=default; table=test*; column=*",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "test*",
+      "columns": null,
+      "privileges": [
+        "SELECT"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "user2"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "2-grant-default-test*-admin-5",
+      "rangerPolicyId": 2,
+      "rangerPolicyName": "db=default; table=test*; column=*",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "test*",
+      "columns": null,
+      "privileges": [
+        "CREATE",
+        "DROP"
+      ],
+      "principal": {
+        "type": "group",
+        "name": "admin"
+      },
+      "delegateAdmin": true,
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "2-grant-default-test*-admin-6",
+      "rangerPolicyId": 2,
+      "rangerPolicyName": "db=default; table=test*; column=*",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "test*",
+      "columns": null,
+      "privileges": [
+        "CREATE",
+        "DROP"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "admin"
+      },
+      "delegateAdmin": true,
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "3-grant-db1-tbl*-group1-1",
+      "rangerPolicyId": 3,
+      "rangerPolicyName": "db=db1; table=tbl*; column=*",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "db1",
+      "table": "tbl*",
+      "columns": null,
+      "privileges": [
+        "SELECT"
+      ],
+      "principal": {
+        "type": "group",
+        "name": "group1"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "3-grant-db1-tbl*-group2-2",
+      "rangerPolicyId": 3,
+      "rangerPolicyName": "db=db1; table=tbl*; column=*",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "db1",
+      "table": "tbl*",
+      "columns": null,
+      "privileges": [
+        "SELECT"
+      ],
+      "principal": {
+        "type": "group",
+        "name": "group2"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "3-grant-db1-tbl*-user1-3",
+      "rangerPolicyId": 3,
+      "rangerPolicyName": "db=db1; table=tbl*; column=*",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "db1",
+      "table": "tbl*",
+      "columns": null,
+      "privileges": [
+        "SELECT"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "user1"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "3-grant-db1-tbl*-user2-4",
+      "rangerPolicyId": 3,
+      "rangerPolicyName": "db=db1; table=tbl*; column=*",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "db1",
+      "table": "tbl*",
+      "columns": null,
+      "privileges": [
+        "SELECT"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "user2"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "4-grant-db1-tmp-group1-1",
+      "rangerPolicyId": 4,
+      "rangerPolicyName": "db=db1; table=tmp; column=tmp*",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "db1",
+      "table": "tmp",
+      "columns": [
+        "tmp*"
+      ],
+      "privileges": [
+        "SELECT"
+      ],
+      "principal": {
+        "type": "group",
+        "name": "group1"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "4-grant-db1-tmp-group2-2",
+      "rangerPolicyId": 4,
+      "rangerPolicyName": "db=db1; table=tmp; column=tmp*",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "db1",
+      "table": "tmp",
+      "columns": [
+        "tmp*"
+      ],
+      "privileges": [
+        "SELECT"
+      ],
+      "principal": {
+        "type": "group",
+        "name": "group2"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "4-grant-db1-tmp-user1-3",
+      "rangerPolicyId": 4,
+      "rangerPolicyName": "db=db1; table=tmp; column=tmp*",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "db1",
+      "table": "tmp",
+      "columns": [
+        "tmp*"
+      ],
+      "privileges": [
+        "SELECT"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "user1"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "4-grant-db1-tmp-user2-4",
+      "rangerPolicyId": 4,
+      "rangerPolicyName": "db=db1; table=tmp; column=tmp*",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "db1",
+      "table": "tmp",
+      "columns": [
+        "tmp*"
+      ],
+      "privileges": [
+        "SELECT"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "user2"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "approved"
+    }
+  ],
+  "identity_map": {
+    "admin": "admin",
+    "group1": "group1",
+    "group2": "group2",
+    "public": "public",
+    "user1": "user1",
+    "user2": "user2"
+  },
+  "generated_sql": "-- \u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n-- \u2551  Unity Catalog Migration Script                          \u2551\n-- \u2551  Generated by Ranger \u2192 UC Migrator                       \u2551\n-- \u2551  Source: hivedev\n-- \u2551  Target Catalog: main\n-- \u2551  Date: 2026-05-20\n-- \u2551  Policies: 15 of 15\n-- \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default: audit-all-access (Ranger ID: 1)\n-- Type: GRANT | Principal: public\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT USE CATALOG ON CATALOG main TO `public`;\nGRANT USE SCHEMA ON SCHEMA main.default TO `public`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; table=test*; column=* (Ranger ID: 2)\n-- Type: GRANT | Principal: group1\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.default.test* TO `group1`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; table=test*; column=* (Ranger ID: 2)\n-- Type: GRANT | Principal: group2\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.default.test* TO `group2`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; table=test*; column=* (Ranger ID: 2)\n-- Type: GRANT | Principal: user1\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.default.test* TO `user1`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; table=test*; column=* (Ranger ID: 2)\n-- Type: GRANT | Principal: user2\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.default.test* TO `user2`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; table=test*; column=* (Ranger ID: 2)\n-- Type: GRANT | Principal: admin\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT CREATE ON TABLE main.default.test* TO `admin`;\nGRANT DROP ON TABLE main.default.test* TO `admin`;\n-- Note: delegateAdmin=true in Ranger. Consider granting MANAGE on TABLE main.default.test* if admin delegation is needed.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; table=test*; column=* (Ranger ID: 2)\n-- Type: GRANT | Principal: admin\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT CREATE ON TABLE main.default.test* TO `admin`;\nGRANT DROP ON TABLE main.default.test* TO `admin`;\n-- Note: delegateAdmin=true in Ranger. Consider granting MANAGE on TABLE main.default.test* if admin delegation is needed.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=db1; table=tbl*; column=* (Ranger ID: 3)\n-- Type: GRANT | Principal: group1\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.db1.tbl* TO `group1`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=db1; table=tbl*; column=* (Ranger ID: 3)\n-- Type: GRANT | Principal: group2\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.db1.tbl* TO `group2`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=db1; table=tbl*; column=* (Ranger ID: 3)\n-- Type: GRANT | Principal: user1\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.db1.tbl* TO `user1`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=db1; table=tbl*; column=* (Ranger ID: 3)\n-- Type: GRANT | Principal: user2\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.db1.tbl* TO `user2`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=db1; table=tmp; column=tmp* (Ranger ID: 4)\n-- Type: GRANT | Principal: group1\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.db1.tmp TO `group1`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=db1; table=tmp; column=tmp* (Ranger ID: 4)\n-- Type: GRANT | Principal: group2\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.db1.tmp TO `group2`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=db1; table=tmp; column=tmp* (Ranger ID: 4)\n-- Type: GRANT | Principal: user1\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.db1.tmp TO `user1`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=db1; table=tmp; column=tmp* (Ranger ID: 4)\n-- Type: GRANT | Principal: user2\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.db1.tmp TO `user2`;\n"
+}

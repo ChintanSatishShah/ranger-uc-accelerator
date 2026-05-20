@@ -1,0 +1,243 @@
+{
+  "metadata": {
+    "timestamp": "2026-05-20T12:59:58.048279",
+    "service_name": "hivedev",
+    "cluster_name": "unknown",
+    "catalog_name": "main",
+    "source_file": "test_policyengine_hive_default_policies.json",
+    "notes": ""
+  },
+  "parsed_data": {
+    "results": [
+      {
+        "id": "1-grant-*-*-public-1",
+        "rangerPolicyId": 1,
+        "rangerPolicyName": "database=*,table=*,column=* - audit-all-access",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "*",
+        "table": null,
+        "columns": null,
+        "privileges": [],
+        "principal": {
+          "type": "group",
+          "name": "public"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "2-grant-*-*-public-1",
+        "rangerPolicyId": 2,
+        "rangerPolicyName": "database=* - allow anyone to create database; grant owner all access ",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "*",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "CREATE"
+        ],
+        "principal": {
+          "type": "group",
+          "name": "public"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "2-grant-*-*-{OWNER}-2",
+        "rangerPolicyId": 2,
+        "rangerPolicyName": "database=* - allow anyone to create database; grant owner all access ",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "*",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "ALL PRIVILEGES"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "{OWNER}"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "3-grant-*-*-{OWNER}-1",
+        "rangerPolicyId": 3,
+        "rangerPolicyName": "database=*,table=* - allow owner all access to table",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "*",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "ALL PRIVILEGES"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "{OWNER}"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "4-grant-*-*-{OWNER}-1",
+        "rangerPolicyId": 4,
+        "rangerPolicyName": "database=*;table=*;column=* - allow owner all access to column",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "*",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "ALL PRIVILEGES"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "{OWNER}"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      }
+    ],
+    "warnings": [],
+    "identities": [
+      {
+        "type": "group",
+        "name": "public"
+      },
+      {
+        "type": "user",
+        "name": "{OWNER}"
+      }
+    ],
+    "kerberosIssues": [],
+    "serviceName": "hivedev",
+    "serviceType": "hive",
+    "clusterName": "unknown",
+    "totalRangerPolicies": 4
+  },
+  "policy_items": [
+    {
+      "id": "1-grant-*-*-public-1",
+      "rangerPolicyId": 1,
+      "rangerPolicyName": "database=*,table=*,column=* - audit-all-access",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "*",
+      "table": null,
+      "columns": null,
+      "privileges": [],
+      "principal": {
+        "type": "group",
+        "name": "public"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "2-grant-*-*-public-1",
+      "rangerPolicyId": 2,
+      "rangerPolicyName": "database=* - allow anyone to create database; grant owner all access ",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "*",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "CREATE"
+      ],
+      "principal": {
+        "type": "group",
+        "name": "public"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "2-grant-*-*-{OWNER}-2",
+      "rangerPolicyId": 2,
+      "rangerPolicyName": "database=* - allow anyone to create database; grant owner all access ",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "*",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "ALL PRIVILEGES"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "{OWNER}"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "3-grant-*-*-{OWNER}-1",
+      "rangerPolicyId": 3,
+      "rangerPolicyName": "database=*,table=* - allow owner all access to table",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "*",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "ALL PRIVILEGES"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "{OWNER}"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "4-grant-*-*-{OWNER}-1",
+      "rangerPolicyId": 4,
+      "rangerPolicyName": "database=*;table=*;column=* - allow owner all access to column",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "*",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "ALL PRIVILEGES"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "{OWNER}"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "approved"
+    }
+  ],
+  "identity_map": {
+    "public": "public",
+    "{OWNER}": "{OWNER}"
+  },
+  "generated_sql": "-- \u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n-- \u2551  Unity Catalog Migration Script                          \u2551\n-- \u2551  Generated by Ranger \u2192 UC Migrator                       \u2551\n-- \u2551  Source: hivedev\n-- \u2551  Target Catalog: main\n-- \u2551  Date: 2026-05-20\n-- \u2551  Policies: 5 of 5\n-- \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: database=*,table=*,column=* - audit-all-access (Ranger ID: 1)\n-- Type: GRANT | Principal: public\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT USE CATALOG ON CATALOG main TO `public`;\nGRANT USE SCHEMA ON SCHEMA main.* TO `public`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: database=* - allow anyone to create database; grant owner all access  (Ranger ID: 2)\n-- Type: GRANT | Principal: public\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT USE CATALOG ON CATALOG main TO `public`;\nGRANT USE SCHEMA ON SCHEMA main.* TO `public`;\nGRANT CREATE ON SCHEMA main.* TO `public`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: database=* - allow anyone to create database; grant owner all access  (Ranger ID: 2)\n-- Type: GRANT | Principal: {OWNER}\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT USE CATALOG ON CATALOG main TO `{OWNER}`;\nGRANT USE SCHEMA ON SCHEMA main.* TO `{OWNER}`;\nGRANT ALL PRIVILEGES ON SCHEMA main.* TO `{OWNER}`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: database=*,table=* - allow owner all access to table (Ranger ID: 3)\n-- Type: GRANT | Principal: {OWNER}\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT USE CATALOG ON CATALOG main TO `{OWNER}`;\nGRANT USE SCHEMA ON SCHEMA main.* TO `{OWNER}`;\nGRANT ALL PRIVILEGES ON SCHEMA main.* TO `{OWNER}`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: database=*;table=*;column=* - allow owner all access to column (Ranger ID: 4)\n-- Type: GRANT | Principal: {OWNER}\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT USE CATALOG ON CATALOG main TO `{OWNER}`;\nGRANT USE SCHEMA ON SCHEMA main.* TO `{OWNER}`;\nGRANT ALL PRIVILEGES ON SCHEMA main.* TO `{OWNER}`;\n"
+}

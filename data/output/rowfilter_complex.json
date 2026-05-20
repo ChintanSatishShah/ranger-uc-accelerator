@@ -1,0 +1,163 @@
+{
+  "metadata": {
+    "timestamp": "2026-05-20T12:59:58.042921",
+    "service_name": "hive_prod",
+    "cluster_name": "unknown",
+    "catalog_name": "main",
+    "source_file": "rowfilter_complex.json",
+    "notes": ""
+  },
+  "parsed_data": {
+    "results": [
+      {
+        "id": "103-rowfilter-customer_360-customer_details-customer_success-1",
+        "rangerPolicyId": 103,
+        "rangerPolicyName": "customer_pii_filters",
+        "rangerPolicyDesc": "Complex row filter - Multi-condition with user context",
+        "type": "row_filter",
+        "catalog": "main",
+        "schema": "customer_360",
+        "table": "customer_details",
+        "columns": null,
+        "privileges": [],
+        "principal": {
+          "type": "group",
+          "name": "customer_success"
+        },
+        "allPrincipals": [
+          {
+            "type": "group",
+            "name": "customer_success"
+          },
+          {
+            "type": "group",
+            "name": "vip_account_managers"
+          }
+        ],
+        "filterExpr": "country IN ('USA', 'CAN') AND customer_tier IN ('GOLD', 'PLATINUM') AND consent_given = TRUE",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "103-rowfilter-customer_360-customer_details-account_managers-2",
+        "rangerPolicyId": 103,
+        "rangerPolicyName": "customer_pii_filters",
+        "rangerPolicyDesc": "Complex row filter - Multi-condition with user context",
+        "type": "row_filter",
+        "catalog": "main",
+        "schema": "customer_360",
+        "table": "customer_details",
+        "columns": null,
+        "privileges": [],
+        "principal": {
+          "type": "group",
+          "name": "account_managers"
+        },
+        "allPrincipals": [
+          {
+            "type": "group",
+            "name": "account_managers"
+          },
+          {
+            "type": "group",
+            "name": "support_team"
+          }
+        ],
+        "filterExpr": "(assigned_to = CURRENT_USER() OR team_id IN (SELECT team_id FROM user_teams WHERE user_name = CURRENT_USER()))",
+        "enabled": true,
+        "status": "approved"
+      }
+    ],
+    "warnings": [],
+    "identities": [
+      {
+        "type": "group",
+        "name": "account_managers"
+      },
+      {
+        "type": "group",
+        "name": "customer_success"
+      },
+      {
+        "type": "group",
+        "name": "support_team"
+      },
+      {
+        "type": "group",
+        "name": "vip_account_managers"
+      }
+    ],
+    "kerberosIssues": [],
+    "serviceName": "hive_prod",
+    "serviceType": "hive",
+    "clusterName": "unknown",
+    "totalRangerPolicies": 1
+  },
+  "policy_items": [
+    {
+      "id": "103-rowfilter-customer_360-customer_details-customer_success-1",
+      "rangerPolicyId": 103,
+      "rangerPolicyName": "customer_pii_filters",
+      "rangerPolicyDesc": "Complex row filter - Multi-condition with user context",
+      "type": "row_filter",
+      "catalog": "main",
+      "schema": "customer_360",
+      "table": "customer_details",
+      "columns": null,
+      "privileges": [],
+      "principal": {
+        "type": "group",
+        "name": "customer_success"
+      },
+      "allPrincipals": [
+        {
+          "type": "group",
+          "name": "customer_success"
+        },
+        {
+          "type": "group",
+          "name": "vip_account_managers"
+        }
+      ],
+      "filterExpr": "country IN ('USA', 'CAN') AND customer_tier IN ('GOLD', 'PLATINUM') AND consent_given = TRUE",
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "103-rowfilter-customer_360-customer_details-account_managers-2",
+      "rangerPolicyId": 103,
+      "rangerPolicyName": "customer_pii_filters",
+      "rangerPolicyDesc": "Complex row filter - Multi-condition with user context",
+      "type": "row_filter",
+      "catalog": "main",
+      "schema": "customer_360",
+      "table": "customer_details",
+      "columns": null,
+      "privileges": [],
+      "principal": {
+        "type": "group",
+        "name": "account_managers"
+      },
+      "allPrincipals": [
+        {
+          "type": "group",
+          "name": "account_managers"
+        },
+        {
+          "type": "group",
+          "name": "support_team"
+        }
+      ],
+      "filterExpr": "(assigned_to = CURRENT_USER() OR team_id IN (SELECT team_id FROM user_teams WHERE user_name = CURRENT_USER()))",
+      "enabled": true,
+      "status": "approved"
+    }
+  ],
+  "identity_map": {
+    "account_managers": "account_managers",
+    "customer_success": "customer_success",
+    "support_team": "support_team",
+    "vip_account_managers": "vip_account_managers"
+  },
+  "generated_sql": "-- \u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n-- \u2551  Unity Catalog Migration Script                          \u2551\n-- \u2551  Generated by Ranger \u2192 UC Migrator                       \u2551\n-- \u2551  Source: hive_prod\n-- \u2551  Target Catalog: main\n-- \u2551  Date: 2026-05-20\n-- \u2551  Policies: 2 of 2\n-- \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: customer_pii_filters (Ranger ID: 103)\n-- Type: ROW_FILTER | Principal: customer_success\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Row Filter for: customer_success\n-- Original expression: country IN ('USA', 'CAN') AND customer_tier IN ('GOLD', 'PLATINUM') AND consent_given = TRUE\n\nCREATE OR REPLACE FUNCTION main.customer_360.rf_customer_details_customer_success()\nRETURNS BOOLEAN\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('customer_success'),\n  country IN ('USA', 'CAN') AND customer_tier IN ('GOLD', 'PLATINUM') AND consent_given = TRUE,\n  TRUE  -- Allow all for non-matching groups (adjust as needed)\n);\n\nALTER TABLE main.customer_360.customer_details\nSET ROW FILTER main.customer_360.rf_customer_details_customer_success ON ();\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: customer_pii_filters (Ranger ID: 103)\n-- Type: ROW_FILTER | Principal: account_managers\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Row Filter for: account_managers\n-- Original expression: (assigned_to = CURRENT_USER() OR team_id IN (SELECT team_id FROM user_teams WHERE user_name = CURRENT_USER()))\n\nCREATE OR REPLACE FUNCTION main.customer_360.rf_customer_details_account_managers()\nRETURNS BOOLEAN\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('account_managers'),\n  (assigned_to = CURRENT_USER() OR team_id IN (SELECT team_id FROM user_teams WHERE user_name = CURRENT_USER())),\n  TRUE  -- Allow all for non-matching groups (adjust as needed)\n);\n\nALTER TABLE main.customer_360.customer_details\nSET ROW FILTER main.customer_360.rf_customer_details_account_managers ON ();\n"
+}

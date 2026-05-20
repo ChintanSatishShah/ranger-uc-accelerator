@@ -1,0 +1,705 @@
+{
+  "metadata": {
+    "timestamp": "2026-05-20T12:59:58.068243",
+    "service_name": "kafkadev",
+    "cluster_name": "unknown",
+    "catalog_name": "main",
+    "source_file": "test_policyengine_kafka.json",
+    "notes": ""
+  },
+  "parsed_data": {
+    "results": [
+      {
+        "id": "10-grant-default-*-user1-1",
+        "rangerPolicyId": 10,
+        "rangerPolicyName": "10: test-topic publish/consume allowed",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "default",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "PUBLISH",
+          "CONSUME"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "user1"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "101-grant-default-*-user2-1",
+        "rangerPolicyId": 101,
+        "rangerPolicyName": "101: test-topic publish/consume allowed",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "default",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "PUBLISH",
+          "CONSUME"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "user2"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "102-grant-default-*-user3-1",
+        "rangerPolicyId": 102,
+        "rangerPolicyName": "102: test-topic publish/consume allowed",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "default",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "CONSUME"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "user3"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "103-grant-default-*-user4-1",
+        "rangerPolicyId": 103,
+        "rangerPolicyName": "103: test-topic publish/consume allowed",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "default",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "CONSUME"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "user4"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "103-grant-default-*-user5-2",
+        "rangerPolicyId": 103,
+        "rangerPolicyName": "103: test-topic publish/consume allowed",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "default",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "CONSUME"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "user5"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "104-grant-default-*-user6-1",
+        "rangerPolicyId": 104,
+        "rangerPolicyName": "104: test-topic publish/consume allowed",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "default",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "PUBLISH",
+          "CONSUME"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "user6"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "20-grant-default-*-user1-1",
+        "rangerPolicyId": 20,
+        "rangerPolicyName": "02: transation id",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "default",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "PUBLISH"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "user1"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "30-grant-default-*-user1-1",
+        "rangerPolicyId": 30,
+        "rangerPolicyName": "create/alter access for user1 on cluster-1",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "default",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "CREATE",
+          "ALTER"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "user1"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "301-grant-default-*-user31-1",
+        "rangerPolicyId": 301,
+        "rangerPolicyName": "Alter access for user31 on cluster-2",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "default",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "ALTER"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "user31"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "302-grant-default-*-user32-1",
+        "rangerPolicyId": 302,
+        "rangerPolicyName": "Alter access for user32 on cluster-1",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "default",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "ALTER"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "user32"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "40-grant-default-*-user1-1",
+        "rangerPolicyId": 40,
+        "rangerPolicyName": "delegationtoken",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "default",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "DESCRIBE"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "user1"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "50-grant-default-*-user1-1",
+        "rangerPolicyId": 50,
+        "rangerPolicyName": "consumergroup-1 access",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "default",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "CONSUME"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "user1"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "52-grant-default-*-user4-1",
+        "rangerPolicyId": 52,
+        "rangerPolicyName": "consumergroup-2 access for user4",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "default",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "CONSUME"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "user4"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "110-grant-default-*-user2-1",
+        "rangerPolicyId": 110,
+        "rangerPolicyName": "110: test-topic-1/2 consume allowed for user2",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "default",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "CONSUME"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "user2"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "111-grant-default-*-user2-1",
+        "rangerPolicyId": 111,
+        "rangerPolicyName": "110: new-topic-1/2 allowed for user2",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "default",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "CONSUME"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "user2"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      }
+    ],
+    "warnings": [],
+    "identities": [
+      {
+        "type": "user",
+        "name": "user1"
+      },
+      {
+        "type": "user",
+        "name": "user2"
+      },
+      {
+        "type": "user",
+        "name": "user3"
+      },
+      {
+        "type": "user",
+        "name": "user31"
+      },
+      {
+        "type": "user",
+        "name": "user32"
+      },
+      {
+        "type": "user",
+        "name": "user4"
+      },
+      {
+        "type": "user",
+        "name": "user5"
+      },
+      {
+        "type": "user",
+        "name": "user6"
+      }
+    ],
+    "kerberosIssues": [],
+    "serviceName": "kafkadev",
+    "serviceType": "hive",
+    "clusterName": "unknown",
+    "totalRangerPolicies": 14
+  },
+  "policy_items": [
+    {
+      "id": "10-grant-default-*-user1-1",
+      "rangerPolicyId": 10,
+      "rangerPolicyName": "10: test-topic publish/consume allowed",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "PUBLISH",
+        "CONSUME"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "user1"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "101-grant-default-*-user2-1",
+      "rangerPolicyId": 101,
+      "rangerPolicyName": "101: test-topic publish/consume allowed",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "PUBLISH",
+        "CONSUME"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "user2"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "102-grant-default-*-user3-1",
+      "rangerPolicyId": 102,
+      "rangerPolicyName": "102: test-topic publish/consume allowed",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "CONSUME"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "user3"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "103-grant-default-*-user4-1",
+      "rangerPolicyId": 103,
+      "rangerPolicyName": "103: test-topic publish/consume allowed",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "CONSUME"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "user4"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "103-grant-default-*-user5-2",
+      "rangerPolicyId": 103,
+      "rangerPolicyName": "103: test-topic publish/consume allowed",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "CONSUME"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "user5"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "104-grant-default-*-user6-1",
+      "rangerPolicyId": 104,
+      "rangerPolicyName": "104: test-topic publish/consume allowed",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "PUBLISH",
+        "CONSUME"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "user6"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "20-grant-default-*-user1-1",
+      "rangerPolicyId": 20,
+      "rangerPolicyName": "02: transation id",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "PUBLISH"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "user1"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "30-grant-default-*-user1-1",
+      "rangerPolicyId": 30,
+      "rangerPolicyName": "create/alter access for user1 on cluster-1",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "CREATE",
+        "ALTER"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "user1"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "301-grant-default-*-user31-1",
+      "rangerPolicyId": 301,
+      "rangerPolicyName": "Alter access for user31 on cluster-2",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "ALTER"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "user31"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "302-grant-default-*-user32-1",
+      "rangerPolicyId": 302,
+      "rangerPolicyName": "Alter access for user32 on cluster-1",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "ALTER"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "user32"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "40-grant-default-*-user1-1",
+      "rangerPolicyId": 40,
+      "rangerPolicyName": "delegationtoken",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "DESCRIBE"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "user1"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "50-grant-default-*-user1-1",
+      "rangerPolicyId": 50,
+      "rangerPolicyName": "consumergroup-1 access",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "CONSUME"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "user1"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "52-grant-default-*-user4-1",
+      "rangerPolicyId": 52,
+      "rangerPolicyName": "consumergroup-2 access for user4",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "CONSUME"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "user4"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "110-grant-default-*-user2-1",
+      "rangerPolicyId": 110,
+      "rangerPolicyName": "110: test-topic-1/2 consume allowed for user2",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "CONSUME"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "user2"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "111-grant-default-*-user2-1",
+      "rangerPolicyId": 111,
+      "rangerPolicyName": "110: new-topic-1/2 allowed for user2",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "CONSUME"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "user2"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "approved"
+    }
+  ],
+  "identity_map": {
+    "user1": "user1",
+    "user2": "user2",
+    "user3": "user3",
+    "user31": "user31",
+    "user32": "user32",
+    "user4": "user4",
+    "user5": "user5",
+    "user6": "user6"
+  },
+  "generated_sql": "-- \u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n-- \u2551  Unity Catalog Migration Script                          \u2551\n-- \u2551  Generated by Ranger \u2192 UC Migrator                       \u2551\n-- \u2551  Source: kafkadev\n-- \u2551  Target Catalog: main\n-- \u2551  Date: 2026-05-20\n-- \u2551  Policies: 15 of 15\n-- \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: 10: test-topic publish/consume allowed (Ranger ID: 10)\n-- Type: GRANT | Principal: user1\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT USE CATALOG ON CATALOG main TO `user1`;\nGRANT USE SCHEMA ON SCHEMA main.default TO `user1`;\nGRANT PUBLISH ON SCHEMA main.default TO `user1`;\nGRANT CONSUME ON SCHEMA main.default TO `user1`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: 101: test-topic publish/consume allowed (Ranger ID: 101)\n-- Type: GRANT | Principal: user2\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT USE CATALOG ON CATALOG main TO `user2`;\nGRANT USE SCHEMA ON SCHEMA main.default TO `user2`;\nGRANT PUBLISH ON SCHEMA main.default TO `user2`;\nGRANT CONSUME ON SCHEMA main.default TO `user2`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: 102: test-topic publish/consume allowed (Ranger ID: 102)\n-- Type: GRANT | Principal: user3\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT USE CATALOG ON CATALOG main TO `user3`;\nGRANT USE SCHEMA ON SCHEMA main.default TO `user3`;\nGRANT CONSUME ON SCHEMA main.default TO `user3`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: 103: test-topic publish/consume allowed (Ranger ID: 103)\n-- Type: GRANT | Principal: user4\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT USE CATALOG ON CATALOG main TO `user4`;\nGRANT USE SCHEMA ON SCHEMA main.default TO `user4`;\nGRANT CONSUME ON SCHEMA main.default TO `user4`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: 103: test-topic publish/consume allowed (Ranger ID: 103)\n-- Type: GRANT | Principal: user5\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT USE CATALOG ON CATALOG main TO `user5`;\nGRANT USE SCHEMA ON SCHEMA main.default TO `user5`;\nGRANT CONSUME ON SCHEMA main.default TO `user5`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: 104: test-topic publish/consume allowed (Ranger ID: 104)\n-- Type: GRANT | Principal: user6\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT USE CATALOG ON CATALOG main TO `user6`;\nGRANT USE SCHEMA ON SCHEMA main.default TO `user6`;\nGRANT PUBLISH ON SCHEMA main.default TO `user6`;\nGRANT CONSUME ON SCHEMA main.default TO `user6`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: 02: transation id (Ranger ID: 20)\n-- Type: GRANT | Principal: user1\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT USE CATALOG ON CATALOG main TO `user1`;\nGRANT USE SCHEMA ON SCHEMA main.default TO `user1`;\nGRANT PUBLISH ON SCHEMA main.default TO `user1`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: create/alter access for user1 on cluster-1 (Ranger ID: 30)\n-- Type: GRANT | Principal: user1\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT USE CATALOG ON CATALOG main TO `user1`;\nGRANT USE SCHEMA ON SCHEMA main.default TO `user1`;\nGRANT CREATE ON SCHEMA main.default TO `user1`;\nGRANT ALTER ON SCHEMA main.default TO `user1`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: Alter access for user31 on cluster-2 (Ranger ID: 301)\n-- Type: GRANT | Principal: user31\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT USE CATALOG ON CATALOG main TO `user31`;\nGRANT USE SCHEMA ON SCHEMA main.default TO `user31`;\nGRANT ALTER ON SCHEMA main.default TO `user31`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: Alter access for user32 on cluster-1 (Ranger ID: 302)\n-- Type: GRANT | Principal: user32\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT USE CATALOG ON CATALOG main TO `user32`;\nGRANT USE SCHEMA ON SCHEMA main.default TO `user32`;\nGRANT ALTER ON SCHEMA main.default TO `user32`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: delegationtoken (Ranger ID: 40)\n-- Type: GRANT | Principal: user1\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT USE CATALOG ON CATALOG main TO `user1`;\nGRANT USE SCHEMA ON SCHEMA main.default TO `user1`;\nGRANT DESCRIBE ON SCHEMA main.default TO `user1`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: consumergroup-1 access (Ranger ID: 50)\n-- Type: GRANT | Principal: user1\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT USE CATALOG ON CATALOG main TO `user1`;\nGRANT USE SCHEMA ON SCHEMA main.default TO `user1`;\nGRANT CONSUME ON SCHEMA main.default TO `user1`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: consumergroup-2 access for user4 (Ranger ID: 52)\n-- Type: GRANT | Principal: user4\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT USE CATALOG ON CATALOG main TO `user4`;\nGRANT USE SCHEMA ON SCHEMA main.default TO `user4`;\nGRANT CONSUME ON SCHEMA main.default TO `user4`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: 110: test-topic-1/2 consume allowed for user2 (Ranger ID: 110)\n-- Type: GRANT | Principal: user2\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT USE CATALOG ON CATALOG main TO `user2`;\nGRANT USE SCHEMA ON SCHEMA main.default TO `user2`;\nGRANT CONSUME ON SCHEMA main.default TO `user2`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: 110: new-topic-1/2 allowed for user2 (Ranger ID: 111)\n-- Type: GRANT | Principal: user2\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT USE CATALOG ON CATALOG main TO `user2`;\nGRANT USE SCHEMA ON SCHEMA main.default TO `user2`;\nGRANT CONSUME ON SCHEMA main.default TO `user2`;\n"
+}

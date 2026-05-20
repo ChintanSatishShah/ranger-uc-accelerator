@@ -1,0 +1,333 @@
+{
+  "metadata": {
+    "timestamp": "2026-05-20T12:59:58.067111",
+    "service_name": "hbasedev",
+    "cluster_name": "unknown",
+    "catalog_name": "main",
+    "source_file": "test_policyengine_hbase_multiple_matching_policies.json",
+    "notes": ""
+  },
+  "parsed_data": {
+    "results": [
+      {
+        "id": "1-hbase-user1-1",
+        "rangerPolicyId": 1,
+        "rangerPolicyName": "table=default,*; column-family=default,*; column=default, *: audit-all-access",
+        "rangerPolicyDesc": "",
+        "type": "hbase_grant",
+        "catalog": "main",
+        "schema": "default",
+        "table": "default",
+        "col_families": [
+          "default",
+          "*"
+        ],
+        "privileges": [
+          "SELECT",
+          "MODIFY",
+          "CREATE",
+          "ALL PRIVILEGES"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "user1"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "1-hbase-user1-2",
+        "rangerPolicyId": 1,
+        "rangerPolicyName": "table=default,*; column-family=default,*; column=default, *: audit-all-access",
+        "rangerPolicyDesc": "",
+        "type": "hbase_grant",
+        "catalog": "main",
+        "schema": "_all_namespaces",
+        "table": null,
+        "col_families": [
+          "default",
+          "*"
+        ],
+        "privileges": [
+          "SELECT",
+          "MODIFY",
+          "CREATE",
+          "ALL PRIVILEGES"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "user1"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "1-hbase-hrt_qa-3",
+        "rangerPolicyId": 1,
+        "rangerPolicyName": "table=default,*; column-family=default,*; column=default, *: audit-all-access",
+        "rangerPolicyDesc": "",
+        "type": "hbase_grant",
+        "catalog": "main",
+        "schema": "default",
+        "table": "default",
+        "col_families": [
+          "default",
+          "*"
+        ],
+        "privileges": [
+          "SELECT"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "hrt_qa"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "1-hbase-hrt_qa-4",
+        "rangerPolicyId": 1,
+        "rangerPolicyName": "table=default,*; column-family=default,*; column=default, *: audit-all-access",
+        "rangerPolicyDesc": "",
+        "type": "hbase_grant",
+        "catalog": "main",
+        "schema": "_all_namespaces",
+        "table": null,
+        "col_families": [
+          "default",
+          "*"
+        ],
+        "privileges": [
+          "SELECT"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "hrt_qa"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "2-hbase-user1-1",
+        "rangerPolicyId": 2,
+        "rangerPolicyName": "table=*; column-family=*; column=*: audit-all-access",
+        "rangerPolicyDesc": "",
+        "type": "hbase_grant",
+        "catalog": "main",
+        "schema": "_all_namespaces",
+        "table": null,
+        "col_families": [],
+        "privileges": [
+          "SELECT",
+          "MODIFY",
+          "CREATE",
+          "ALL PRIVILEGES"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "user1"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "2-hbase-hrt_qa-2",
+        "rangerPolicyId": 2,
+        "rangerPolicyName": "table=*; column-family=*; column=*: audit-all-access",
+        "rangerPolicyDesc": "",
+        "type": "hbase_grant",
+        "catalog": "main",
+        "schema": "_all_namespaces",
+        "table": null,
+        "col_families": [],
+        "privileges": [
+          "SELECT",
+          "MODIFY"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "hrt_qa"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      }
+    ],
+    "warnings": [],
+    "identities": [
+      {
+        "type": "user",
+        "name": "hrt_qa"
+      },
+      {
+        "type": "user",
+        "name": "user1"
+      }
+    ],
+    "kerberosIssues": [],
+    "serviceName": "hbasedev",
+    "serviceType": "hbase",
+    "clusterName": "unknown",
+    "totalRangerPolicies": 2
+  },
+  "policy_items": [
+    {
+      "id": "1-hbase-user1-1",
+      "rangerPolicyId": 1,
+      "rangerPolicyName": "table=default,*; column-family=default,*; column=default, *: audit-all-access",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "default",
+      "col_families": [
+        "default",
+        "*"
+      ],
+      "privileges": [
+        "SELECT",
+        "MODIFY",
+        "CREATE",
+        "ALL PRIVILEGES"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "user1"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "1-hbase-user1-2",
+      "rangerPolicyId": 1,
+      "rangerPolicyName": "table=default,*; column-family=default,*; column=default, *: audit-all-access",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "_all_namespaces",
+      "table": null,
+      "col_families": [
+        "default",
+        "*"
+      ],
+      "privileges": [
+        "SELECT",
+        "MODIFY",
+        "CREATE",
+        "ALL PRIVILEGES"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "user1"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "1-hbase-hrt_qa-3",
+      "rangerPolicyId": 1,
+      "rangerPolicyName": "table=default,*; column-family=default,*; column=default, *: audit-all-access",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "default",
+      "col_families": [
+        "default",
+        "*"
+      ],
+      "privileges": [
+        "SELECT"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "hrt_qa"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "1-hbase-hrt_qa-4",
+      "rangerPolicyId": 1,
+      "rangerPolicyName": "table=default,*; column-family=default,*; column=default, *: audit-all-access",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "_all_namespaces",
+      "table": null,
+      "col_families": [
+        "default",
+        "*"
+      ],
+      "privileges": [
+        "SELECT"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "hrt_qa"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "2-hbase-user1-1",
+      "rangerPolicyId": 2,
+      "rangerPolicyName": "table=*; column-family=*; column=*: audit-all-access",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "_all_namespaces",
+      "table": null,
+      "col_families": [],
+      "privileges": [
+        "SELECT",
+        "MODIFY",
+        "CREATE",
+        "ALL PRIVILEGES"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "user1"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "2-hbase-hrt_qa-2",
+      "rangerPolicyId": 2,
+      "rangerPolicyName": "table=*; column-family=*; column=*: audit-all-access",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "_all_namespaces",
+      "table": null,
+      "col_families": [],
+      "privileges": [
+        "SELECT",
+        "MODIFY"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "hrt_qa"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "approved"
+    }
+  ],
+  "identity_map": {
+    "hrt_qa": "hrt_qa",
+    "user1": "user1"
+  },
+  "generated_sql": "-- \u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n-- \u2551  Unity Catalog Migration Script                          \u2551\n-- \u2551  Generated by Ranger \u2192 UC Migrator                       \u2551\n-- \u2551  Source: hbasedev\n-- \u2551  Target Catalog: main\n-- \u2551  Date: 2026-05-20\n-- \u2551  Policies: 6 of 6\n-- \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: table=default,*; column-family=default,*; column=default, *: audit-all-access (Ranger ID: 1)\n-- Type: HBASE_GRANT | Principal: user1\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- HBase column-families (default, *) have no direct UC equivalent \u2014 table-level grant applied.\nGRANT SELECT ON TABLE main.default.default TO `user1`;\nGRANT MODIFY ON TABLE main.default.default TO `user1`;\nGRANT CREATE ON TABLE main.default.default TO `user1`;\nGRANT ALL PRIVILEGES ON TABLE main.default.default TO `user1`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: table=default,*; column-family=default,*; column=default, *: audit-all-access (Ranger ID: 1)\n-- Type: HBASE_GRANT | Principal: user1\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 HBase wildcard (*) spans all namespaces \u2014 cannot be automatically translated.\n-- Grant on specific schemas under catalog main manually.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: table=default,*; column-family=default,*; column=default, *: audit-all-access (Ranger ID: 1)\n-- Type: HBASE_GRANT | Principal: hrt_qa\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- HBase column-families (default, *) have no direct UC equivalent \u2014 table-level grant applied.\nGRANT SELECT ON TABLE main.default.default TO `hrt_qa`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: table=default,*; column-family=default,*; column=default, *: audit-all-access (Ranger ID: 1)\n-- Type: HBASE_GRANT | Principal: hrt_qa\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 HBase wildcard (*) spans all namespaces \u2014 cannot be automatically translated.\n-- Grant on specific schemas under catalog main manually.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: table=*; column-family=*; column=*: audit-all-access (Ranger ID: 2)\n-- Type: HBASE_GRANT | Principal: user1\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 HBase wildcard (*) spans all namespaces \u2014 cannot be automatically translated.\n-- Grant on specific schemas under catalog main manually.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: table=*; column-family=*; column=*: audit-all-access (Ranger ID: 2)\n-- Type: HBASE_GRANT | Principal: hrt_qa\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 HBase wildcard (*) spans all namespaces \u2014 cannot be automatically translated.\n-- Grant on specific schemas under catalog main manually.\n"
+}

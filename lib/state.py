@@ -107,8 +107,11 @@ def render_sidebar_summary() -> None:
             st.caption("No policies loaded yet.")
 
 
-def save_current_session(notes: str = "") -> str:
-    """Archive the current session. Returns filename."""
+def save_current_session(notes: str = "", source_file: str = "") -> str:
+    """Archive the current session. Returns filename (prefixed with user_)."""
+    service = (st.session_state.parsed_data or {}).get("serviceName", "session")
+    import re as _re
+    safe = _re.sub(r"[^a-z0-9_-]", "_", service.lower())[:40]
     return _save_session(
         parsed_data=st.session_state.parsed_data,
         policy_items=st.session_state.policy_items,
@@ -116,6 +119,9 @@ def save_current_session(notes: str = "") -> str:
         catalog_name=st.session_state.catalog_name,
         generated_sql=st.session_state.generated_sql,
         notes=notes,
+        label=f"user_{safe}",
+        add_timestamp=True,
+        source_file=source_file,
     )
 
 

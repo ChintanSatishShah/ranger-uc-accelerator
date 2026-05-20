@@ -1,0 +1,80 @@
+{
+  "serviceName": "hive_prod",
+  "serviceDef": {
+    "name": "hive"
+  },
+  "policies": [
+    {
+      "id": 2,
+      "guid": "policy-002",
+      "isEnabled": true,
+      "version": 1,
+      "service": "hive_prod",
+      "name": "sales_schema_full_access",
+      "policyType": 0,
+      "description": "Medium policy - Sales team full access to sales schema tables",
+      "isAuditEnabled": true,
+      "resources": {
+        "database": {
+          "values": [
+            "sales"
+          ],
+          "isExcludes": false,
+          "isRecursive": false
+        },
+        "table": {
+          "values": [
+            "customers",
+            "orders",
+            "products"
+          ],
+          "isExcludes": false,
+          "isRecursive": false
+        }
+      },
+      "policyItems": [
+        {
+          "accesses": [
+            {
+              "type": "select",
+              "isAllowed": true
+            },
+            {
+              "type": "update",
+              "isAllowed": true
+            },
+            {
+              "type": "create",
+              "isAllowed": true
+            }
+          ],
+          "users": [
+            "sales_manager@company.com"
+          ],
+          "groups": [
+            "sales_team",
+            "data_analysts"
+          ],
+          "conditions": [],
+          "delegateAdmin": false
+        }
+      ],
+      "denyPolicyItems": [
+        {
+          "accesses": [
+            {
+              "type": "drop",
+              "isAllowed": true
+            }
+          ],
+          "users": [],
+          "groups": [
+            "sales_team"
+          ],
+          "conditions": [],
+          "delegateAdmin": false
+        }
+      ]
+    }
+  ]
+}

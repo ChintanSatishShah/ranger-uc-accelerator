@@ -22,11 +22,13 @@ def _sanitize_filename(name: str, max_len: int = 40) -> str:
 
 def save_session(parsed_data: dict[str, Any], policy_items: list[Any],
                  identity_map: dict[str, str], catalog_name: str,
-                 generated_sql: str, notes: str = "", label: str = "") -> str:
+                 generated_sql: str, notes: str = "", label: str = "",
+                 add_timestamp: bool = True, source_file: str = "") -> str:
     """Save current session to JSON archive. Returns filename.
 
-    label: optional slug appended to the filename to disambiguate archives
-           that share the same serviceName (e.g. when batch-importing samples).
+    label:         slug used as the filename base.
+    add_timestamp: when False the filename is exactly <label>.json (for sample archives).
+    source_file:   original input filename stored in metadata for reference.
     """
     if not parsed_data:
         raise ValueError("No policies loaded to archive.")
@@ -36,17 +38,19 @@ def save_session(parsed_data: dict[str, Any], policy_items: list[Any],
     safe_name = _sanitize_filename(service_name)
     ts = datetime.utcnow().strftime("%Y%m%d_%H%M%S")
     if label:
-        filename = f"{_sanitize_filename(label, max_len=80)}_{ts}.json"
+        base = _sanitize_filename(label, max_len=80)
+        filename = f"{base}.json" if not add_timestamp else f"{base}_{ts}.json"
     else:
         filename = f"{safe_name}_{ts}.json"
     filepath = HISTORY_DIR / filename
-    
+
     archive = {
         "metadata": {
             "timestamp": timestamp,
             "service_name": service_name,
             "cluster_name": parsed_data.get("clusterName", "unknown"),
             "catalog_name": catalog_name,
+            "source_file": source_file or label or service_name,
             "notes": notes,
         },
         "parsed_data": parsed_data,

@@ -1,0 +1,57 @@
+{
+  "serviceName": "tag_prod",
+  "policies": [
+    {
+      "id": 301,
+      "guid": "policy-301",
+      "isEnabled": true,
+      "service": "tag_prod",
+      "name": "pii_tag_access",
+      "policyType": 0,
+      "description": "Simple tag policy - Restrict PII tagged data",
+      "isAuditEnabled": true,
+      "resources": {
+        "tag": {
+          "values": [
+            "PII"
+          ]
+        }
+      },
+      "policyItems": [
+        {
+          "accesses": [
+            {
+              "type": "select",
+              "isAllowed": true
+            }
+          ],
+          "users": [],
+          "groups": [
+            "data_protection_team",
+            "legal"
+          ]
+        }
+      ]
+    }
+  ],
+  "tagDefinitions": {
+    "PII": {
+      "name": "PII",
+      "attributeDefs": {
+        "level": "high",
+        "category": "sensitive"
+      }
+    }
+  },
+  "resourceTags": {
+    "sales.customers.ssn": [
+      "PII"
+    ],
+    "sales.customers.email": [
+      "PII"
+    ],
+    "hr.employees.salary": [
+      "PII"
+    ]
+  }
+}

@@ -1,0 +1,383 @@
+{
+  "metadata": {
+    "timestamp": "2026-05-20T12:59:58.057144",
+    "service_name": "hivedev",
+    "cluster_name": "unknown",
+    "catalog_name": "main",
+    "source_file": "test_policyengine_tag_hive_filebased.json",
+    "notes": ""
+  },
+  "parsed_data": {
+    "results": [
+      {
+        "id": "101-grant-*-*-public-1",
+        "rangerPolicyId": 101,
+        "rangerPolicyName": "db=*: audit-all-access",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "*",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "ALL PRIVILEGES"
+        ],
+        "principal": {
+          "type": "group",
+          "name": "public"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "101-grant-*-*-hive-2",
+        "rangerPolicyId": 101,
+        "rangerPolicyName": "db=*: audit-all-access",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "*",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "ALL PRIVILEGES"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "hive"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "101-grant-*-*-user1-3",
+        "rangerPolicyId": 101,
+        "rangerPolicyName": "db=*: audit-all-access",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "*",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "ALL PRIVILEGES"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "user1"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "101-grant-*-*-user2-4",
+        "rangerPolicyId": 101,
+        "rangerPolicyName": "db=*: audit-all-access",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "*",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "ALL PRIVILEGES"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "user2"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "102-grant-*-*-public-1",
+        "rangerPolicyId": 102,
+        "rangerPolicyName": "db=*, udf=*: audit-all-access",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "*",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "ALL PRIVILEGES"
+        ],
+        "principal": {
+          "type": "group",
+          "name": "public"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "102-grant-*-*-hive-2",
+        "rangerPolicyId": 102,
+        "rangerPolicyName": "db=*, udf=*: audit-all-access",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "*",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "ALL PRIVILEGES"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "hive"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "102-grant-*-*-user1-3",
+        "rangerPolicyId": 102,
+        "rangerPolicyName": "db=*, udf=*: audit-all-access",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "*",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "ALL PRIVILEGES"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "user1"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "102-grant-*-*-user2-4",
+        "rangerPolicyId": 102,
+        "rangerPolicyName": "db=*, udf=*: audit-all-access",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "*",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "ALL PRIVILEGES"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "user2"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      }
+    ],
+    "warnings": [],
+    "identities": [
+      {
+        "type": "group",
+        "name": "public"
+      },
+      {
+        "type": "user",
+        "name": "hive"
+      },
+      {
+        "type": "user",
+        "name": "user1"
+      },
+      {
+        "type": "user",
+        "name": "user2"
+      }
+    ],
+    "kerberosIssues": [],
+    "serviceName": "hivedev",
+    "serviceType": "hive",
+    "clusterName": "unknown",
+    "totalRangerPolicies": 2
+  },
+  "policy_items": [
+    {
+      "id": "101-grant-*-*-public-1",
+      "rangerPolicyId": 101,
+      "rangerPolicyName": "db=*: audit-all-access",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "*",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "ALL PRIVILEGES"
+      ],
+      "principal": {
+        "type": "group",
+        "name": "public"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "101-grant-*-*-hive-2",
+      "rangerPolicyId": 101,
+      "rangerPolicyName": "db=*: audit-all-access",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "*",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "ALL PRIVILEGES"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "hive"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "101-grant-*-*-user1-3",
+      "rangerPolicyId": 101,
+      "rangerPolicyName": "db=*: audit-all-access",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "*",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "ALL PRIVILEGES"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "user1"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "101-grant-*-*-user2-4",
+      "rangerPolicyId": 101,
+      "rangerPolicyName": "db=*: audit-all-access",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "*",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "ALL PRIVILEGES"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "user2"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "102-grant-*-*-public-1",
+      "rangerPolicyId": 102,
+      "rangerPolicyName": "db=*, udf=*: audit-all-access",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "*",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "ALL PRIVILEGES"
+      ],
+      "principal": {
+        "type": "group",
+        "name": "public"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "102-grant-*-*-hive-2",
+      "rangerPolicyId": 102,
+      "rangerPolicyName": "db=*, udf=*: audit-all-access",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "*",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "ALL PRIVILEGES"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "hive"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "102-grant-*-*-user1-3",
+      "rangerPolicyId": 102,
+      "rangerPolicyName": "db=*, udf=*: audit-all-access",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "*",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "ALL PRIVILEGES"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "user1"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "approved"
+    },
+    {
+      "id": "102-grant-*-*-user2-4",
+      "rangerPolicyId": 102,
+      "rangerPolicyName": "db=*, udf=*: audit-all-access",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "*",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "ALL PRIVILEGES"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "user2"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "approved"
+    }
+  ],
+  "identity_map": {
+    "public": "public",
+    "hive": "hive",
+    "user1": "user1",
+    "user2": "user2"
+  },
+  "generated_sql": "-- \u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n-- \u2551  Unity Catalog Migration Script                          \u2551\n-- \u2551  Generated by Ranger \u2192 UC Migrator                       \u2551\n-- \u2551  Source: hivedev\n-- \u2551  Target Catalog: main\n-- \u2551  Date: 2026-05-20\n-- \u2551  Policies: 8 of 8\n-- \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=*: audit-all-access (Ranger ID: 101)\n-- Type: GRANT | Principal: public\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT USE CATALOG ON CATALOG main TO `public`;\nGRANT USE SCHEMA ON SCHEMA main.* TO `public`;\nGRANT ALL PRIVILEGES ON SCHEMA main.* TO `public`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=*: audit-all-access (Ranger ID: 101)\n-- Type: GRANT | Principal: hive\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT USE CATALOG ON CATALOG main TO `hive`;\nGRANT USE SCHEMA ON SCHEMA main.* TO `hive`;\nGRANT ALL PRIVILEGES ON SCHEMA main.* TO `hive`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=*: audit-all-access (Ranger ID: 101)\n-- Type: GRANT | Principal: user1\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT USE CATALOG ON CATALOG main TO `user1`;\nGRANT USE SCHEMA ON SCHEMA main.* TO `user1`;\nGRANT ALL PRIVILEGES ON SCHEMA main.* TO `user1`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=*: audit-all-access (Ranger ID: 101)\n-- Type: GRANT | Principal: user2\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT USE CATALOG ON CATALOG main TO `user2`;\nGRANT USE SCHEMA ON SCHEMA main.* TO `user2`;\nGRANT ALL PRIVILEGES ON SCHEMA main.* TO `user2`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=*, udf=*: audit-all-access (Ranger ID: 102)\n-- Type: GRANT | Principal: public\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT USE CATALOG ON CATALOG main TO `public`;\nGRANT USE SCHEMA ON SCHEMA main.* TO `public`;\nGRANT ALL PRIVILEGES ON SCHEMA main.* TO `public`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=*, udf=*: audit-all-access (Ranger ID: 102)\n-- Type: GRANT | Principal: hive\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT USE CATALOG ON CATALOG main TO `hive`;\nGRANT USE SCHEMA ON SCHEMA main.* TO `hive`;\nGRANT ALL PRIVILEGES ON SCHEMA main.* TO `hive`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=*, udf=*: audit-all-access (Ranger ID: 102)\n-- Type: GRANT | Principal: user1\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT USE CATALOG ON CATALOG main TO `user1`;\nGRANT USE SCHEMA ON SCHEMA main.* TO `user1`;\nGRANT ALL PRIVILEGES ON SCHEMA main.* TO `user1`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=*, udf=*: audit-all-access (Ranger ID: 102)\n-- Type: GRANT | Principal: user2\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT USE CATALOG ON CATALOG main TO `user2`;\nGRANT USE SCHEMA ON SCHEMA main.* TO `user2`;\nGRANT ALL PRIVILEGES ON SCHEMA main.* TO `user2`;\n"
+}

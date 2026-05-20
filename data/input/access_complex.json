@@ -1,0 +1,125 @@
+{
+  "serviceName": "hive_prod",
+  "serviceDef": {
+    "name": "hive"
+  },
+  "policies": [
+    {
+      "id": 3,
+      "guid": "policy-003",
+      "isEnabled": true,
+      "version": 1,
+      "service": "hive_prod",
+      "name": "enterprise_data_governance",
+      "policyType": 0,
+      "description": "Complex policy - Tiered access across multiple schemas with exclusions and delegation",
+      "isAuditEnabled": true,
+      "resources": {
+        "database": {
+          "values": [
+            "sales",
+            "marketing",
+            "finance"
+          ],
+          "isExcludes": false,
+          "isRecursive": true
+        },
+        "table": {
+          "values": [
+            "*"
+          ],
+          "isExcludes": false,
+          "isRecursive": true
+        },
+        "column": {
+          "values": [
+            "*"
+          ],
+          "isExcludes": true,
+          "isRecursive": false
+        }
+      },
+      "policyItems": [
+        {
+          "accesses": [
+            {
+              "type": "select",
+              "isAllowed": true
+            }
+          ],
+          "users": [],
+          "groups": [
+            "all_employees"
+          ],
+          "conditions": [],
+          "delegateAdmin": false
+        },
+        {
+          "accesses": [
+            {
+              "type": "select",
+              "isAllowed": true
+            },
+            {
+              "type": "update",
+              "isAllowed": true
+            },
+            {
+              "type": "create",
+              "isAllowed": true
+            },
+            {
+              "type": "alter",
+              "isAllowed": true
+            }
+          ],
+          "users": [
+            "data_admin@company.com"
+          ],
+          "groups": [
+            "data_engineering",
+            "platform_team"
+          ],
+          "conditions": [],
+          "delegateAdmin": true
+        }
+      ],
+      "denyPolicyItems": [
+        {
+          "accesses": [
+            {
+              "type": "select",
+              "isAllowed": true
+            }
+          ],
+          "users": [
+            "contractor1@company.com"
+          ],
+          "groups": [
+            "external_vendors"
+          ],
+          "conditions": [],
+          "delegateAdmin": false
+        }
+      ],
+      "allowExceptions": [
+        {
+          "accesses": [
+            {
+              "type": "select",
+              "isAllowed": true
+            }
+          ],
+          "users": [
+            "auditor@company.com"
+          ],
+          "groups": [
+            "compliance_team"
+          ],
+          "conditions": [],
+          "delegateAdmin": false
+        }
+      ]
+    }
+  ]
+}

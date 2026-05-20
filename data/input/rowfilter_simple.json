@@ -1,0 +1,44 @@
+{
+  "serviceName": "hive_prod",
+  "policies": [
+    {
+      "id": 101,
+      "guid": "policy-101",
+      "isEnabled": true,
+      "service": "hive_prod",
+      "name": "regional_sales_filter",
+      "policyType": 2,
+      "description": "Simple row filter - Regional manager sees only their region",
+      "isAuditEnabled": true,
+      "resources": {
+        "database": {
+          "values": [
+            "sales"
+          ]
+        },
+        "table": {
+          "values": [
+            "orders"
+          ]
+        }
+      },
+      "rowFilterPolicyItems": [
+        {
+          "rowFilterInfo": {
+            "filterExpr": "region = 'WEST'"
+          },
+          "accesses": [
+            {
+              "type": "select",
+              "isAllowed": true
+            }
+          ],
+          "users": [
+            "west_manager@company.com"
+          ],
+          "groups": []
+        }
+      ]
+    }
+  ]
+}

@@ -74,13 +74,15 @@ st.header("3. Resource Mapping")
 st.markdown("Ranger `resources` fields map to UC object hierarchy:")
 st.dataframe(
     {
-        "Ranger resource": ["database", "table (specific)", "table = * (wildcard)", "column"],
-        "UC object": ["SCHEMA", "TABLE", "SCHEMA (all tables)", "column (used in masks)"],
+        "Ranger resource": ["database", "table (specific)", "table = * (wildcard)", "column", "url", "udf"],
+        "UC object": ["SCHEMA", "TABLE", "SCHEMA (all tables)", "column (used in masks)", "External Location", "FUNCTION"],
         "GRANT target": [
             "SCHEMA `catalog.schema`",
             "TABLE `catalog.schema.table`",
             "SCHEMA `catalog.schema` — with USE CATALOG + USE SCHEMA prepended",
             "N/A — columns appear only in mask policies",
+            "EXTERNAL LOCATION `<ext_loc_...>` — placeholder; replace with actual name",
+            "FUNCTION `catalog.schema.udf_name`",
         ],
     },
     use_container_width=True,
@@ -100,6 +102,7 @@ with col1:
     st.markdown(
         "- `policyItems[].groups` → group principals\n"
         "- `policyItems[].users` → user principals\n"
+        "- `policyItems[].roles` → role principals\n"
         "- First principal used for function names in masks/filters\n"
         "- All principals listed in `allPrincipals` for review"
     )
@@ -161,18 +164,21 @@ st.dataframe(
         "Ranger mask type": [
             "MASK", "MASK_SHOW_LAST_4", "MASK_SHOW_FIRST_4",
             "MASK_HASH", "MASK_NONE", "MASK_DATE_SHOW_YEAR", "MASK_NULL",
+            "Custom (valueExpr)",
         ],
         "Internal alias": [
             "REDACT", "LAST_4", "FIRST_4", "HASH", "NONE", "DATE_YEAR", "NULLIFY",
+            "CUSTOM",
         ],
         "UC function body": [
             "'***REDACTED***'",
             "CONCAT('***-**-', RIGHT(val, 4))",
-            "⚠ Not yet implemented — falls back to REDACT",
+            "CONCAT(LEFT(val, 4), '***')",
             "SHA2(val, 256)",
             "No SQL generated — comment only",
-            "⚠ Not yet implemented — falls back to REDACT",
+            "MAKE_DATE(YEAR(val), 1, 1)  (val DATE → DATE)",
             "NULL",
+            "Expression from valueExpr used verbatim — review before executing",
         ],
     },
     use_container_width=True,
@@ -387,4 +393,73 @@ st.code(
 GRANT USE SCHEMA ON SCHEMA main.sales TO `analyst_group`;
 GRANT SELECT ON SCHEMA main.sales TO `analyst_group`;""",
     language="sql",
+)
+
+st.header("14. URL Resource → External Location Grant")
+st.markdown(
+    "Hive policies with a `url` resource (S3, ADLS, or GCS paths referenced directly in Hive) "
+    "are translated to UC **External Location** grants using the same access map as HDFS:"
+)
+st.dataframe(
+    {
+        "Ranger URL access": ["read", "write", "execute", "all"],
+        "UC privilege": ["READ FILES", "WRITE FILES", "READ FILES", "ALL PRIVILEGES"],
+        "Notes": ["", "", "Closest equivalent — no execute concept in UC", ""],
+    },
+    use_container_width=True,
+    hide_index=True,
+)
+st.markdown("**Example output:**")
+st.code(
+    """-- HDFS path: s3a://my-bucket/data/finance/ (recursive)
+-- ⚠ Create a UC External Location covering this path first,
+--   then replace the placeholder below with the actual location name.
+GRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_my-bucket_data_finance>` TO `analyst_group`;""",
+    language="sql",
+)
+st.info(
+    "URL policies reuse the `hdfs_grant` internal type and produce identical SQL to HDFS path policies. "
+    "The External Location placeholder must be replaced with the real location name.",
+    icon="ℹ️",
+)
+
+st.header("15. UDF Resource → GRANT EXECUTE ON FUNCTION")
+st.markdown(
+    "Hive policies with a `udf` resource generate `GRANT EXECUTE ON FUNCTION` statements. "
+    "The `database` resource (if present) maps to the UC schema."
+)
+st.code(
+    """-- ⚠ Ensure function main.hr.udf is registered in UC before granting.
+GRANT EXECUTE ON FUNCTION `main`.`hr`.`udf` TO `analyst_group`;
+-- Note: delegateAdmin=true. Consider granting MANAGE on FUNCTION main.hr.udf.""",
+    language="sql",
+)
+st.warning(
+    "UDF names are taken verbatim from the Ranger export. "
+    "Verify each function is registered in UC (or migrated from Hive) before executing.",
+    icon="⚠️",
+)
+
+st.header("16. Gap Analysis Warning Categories")
+st.markdown(
+    "The parser detects several Ranger-specific constructs that have no direct UC equivalent "
+    "and surfaces them in the Gap Analysis page as warnings:"
+)
+st.dataframe(
+    {
+        "Warning category": ["deny_all_else", "validity_schedule", "conditions"],
+        "Ranger source": [
+            "`isDenyAllElse: true` on a policy",
+            "`validitySchedules[]` on a policy",
+            "`conditions[]` on any policyItems entry",
+        ],
+        "Severity": ["Critical", "Warning", "Warning"],
+        "Notes": [
+            "Policy denies all access not explicitly allowed — UC additive model has no equivalent; restructure access",
+            "Time-scoped grants not supported in UC — grants are permanent; implement via scheduled jobs if needed",
+            "Request-context conditions (IP range, user zone) not supported in UC",
+        ],
+    },
+    use_container_width=True,
+    hide_index=True,
 )

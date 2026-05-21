@@ -1,6 +1,6 @@
 # Ranger → Unity Catalog Migration Accelerator
 
-A Streamlit app that parses Apache Ranger policy exports and generates Databricks Unity Catalog SQL — covering grants, row filters, column masks, HDFS External Location grants, and HBase table grants — with identity mapping, gap analysis, session archiving, and a deployment checklist.
+A Streamlit app that parses Apache Ranger policy exports and generates Databricks Unity Catalog SQL — covering grants, row filters, column masks, HDFS/URL External Location grants, HBase table grants, and UDF function grants — with identity mapping, gap analysis, session archiving, and a deployment checklist.
 
 ## Quick Start
 
@@ -79,7 +79,42 @@ curl -u admin:password \
 | all | ALL PRIVILEGES |
 | execute | EXECUTE |
 
-**Column mask types:** MASK (full redact), MASK_SHOW_LAST_4, MASK_HASH, MASK_NULL, MASK_NONE — each generates a `CREATE OR REPLACE FUNCTION` using `IS_ACCOUNT_GROUP_MEMBER` for per-group masking.
+**Principal types:** `policyItems[].groups`, `policyItems[].users`, and `policyItems[].roles` are all extracted as policy principals. Ranger roles translate directly to backtick-quoted role names in generated SQL.
+
+**Column mask types:** All Ranger mask types are now supported:
+
+| Ranger type | UC function body |
+|---|---|
+| MASK | `'***REDACTED***'` |
+| MASK_SHOW_LAST_4 | `CONCAT('***-**-', RIGHT(val, 4))` |
+| MASK_SHOW_FIRST_4 | `CONCAT(LEFT(val, 4), '***')` |
+| MASK_HASH | `SHA2(val, 256)` |
+| MASK_DATE_SHOW_YEAR | `MAKE_DATE(YEAR(val), 1, 1)` (returns DATE) |
+| MASK_NULL | `NULL` |
+| MASK_NONE | Comment only — no masking applied |
+| Custom `valueExpr` | Expression used verbatim in function body |
+
+### URL Resource (Hive policies)
+Hive policies with a `url` resource (e.g., S3/ADLS paths referenced directly in Hive) are translated to UC External Location grants using the same access map as HDFS:
+
+| Ranger access | UC privilege |
+|---|---|
+| read | READ FILES |
+| write | WRITE FILES |
+| execute | READ FILES |
+| all | ALL PRIVILEGES |
+
+Generated SQL uses an `<ext_loc_...>` placeholder — replace with the actual External Location name.
+
+### UDF Resource (Hive policies)
+Hive policies with a `udf` resource generate `GRANT EXECUTE ON FUNCTION` statements:
+
+```sql
+-- ⚠ Ensure function main.hr.udf is registered in UC before granting.
+GRANT EXECUTE ON FUNCTION `main`.`hr`.`udf` TO `analyst_group`;
+```
+
+The `database` resource (if present) maps to the UC schema. UDF names are used as-is — verify they are registered in UC before executing.
 
 ### HDFS
 Detected automatically when `serviceName` contains `hdfs`/`hadoop` or when policies use a `path` resource.
@@ -117,12 +152,15 @@ Column families have no UC equivalent — a table-level grant is generated with 
 |---|---|---|
 | Deny policies | 🔴 Critical | Comment block only — UC has no DENY mechanism |
 | Kerberos principals | 🔴 Critical | Auto-detected; must map to service principals via SCIM/M2M |
+| `isDenyAllElse` flag | 🔴 Critical | Flagged in Gap Analysis — no UC equivalent; must restructure access |
 | Row filter expressions | 🟡 Review | Copied verbatim — validate for Hive UDFs or request-context attributes |
-| HDFS External Location names | 🟡 Review | Placeholder generated; replace with real names |
+| HDFS / URL External Location names | 🟡 Review | Placeholder generated; replace with real names |
 | HBase column families | 🟡 Review | Falls back to table-level grant; no column-family isolation in UC |
+| UDF grants | 🟡 Review | Function must exist in UC before GRANT EXECUTE is valid |
 | delegateAdmin | 🟡 Review | Comment suggests MANAGE privilege — review each case |
 | Wildcard table (`*`) | 🟡 Review | Expanded to schema-level grant (forward-looking scope) |
-| MASK_SHOW_FIRST_4 / MASK_DATE_SHOW_YEAR | 🟡 Info | Falls back to full redaction — implement custom expression manually |
+| `validitySchedules` | 🟡 Review | Flagged in Gap Analysis — UC has no time-scoped grants |
+| Policy `conditions` | 🟡 Review | Flagged in Gap Analysis — UC has no request-context conditions |
 | Disabled policies | ℹ️ Info | Parsed but excluded from SQL unless manually approved |
 | Kafka, YARN, Storm, Knox, Atlas | ❌ Out of scope | No UC equivalent — excluded from translation |
 

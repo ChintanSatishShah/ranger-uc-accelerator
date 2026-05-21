@@ -101,22 +101,25 @@ This works when:
         """
     )
 
-with st.expander("🟡 Column Mask Types — partial coverage"):
+with st.expander("🟡 Column Mask Types — full coverage with review required"):
     st.markdown(
         """
-Not all Ranger mask types have a direct UC equivalent. The current mapping:
+All Ranger mask types are now translated. The current mapping:
 
-| Ranger type | Status | Notes |
+| Ranger type | Status | UC function body |
 |---|---|---|
-| MASK | ✅ Supported | Full redact → `'***REDACTED***'` |
+| MASK | ✅ Supported | `'***REDACTED***'` |
 | MASK_SHOW_LAST_4 | ✅ Supported | `CONCAT('***-**-', RIGHT(val, 4))` |
+| MASK_SHOW_FIRST_4 | ✅ Supported | `CONCAT(LEFT(val, 4), '***')` |
 | MASK_HASH | ✅ Supported | `SHA2(val, 256)` |
 | MASK_NULL | ✅ Supported | Returns `NULL` |
 | MASK_NONE | ✅ Supported | Comment only — no masking applied |
-| MASK_SHOW_FIRST_4 | ⚠ Falls back to REDACT | Implement manually if needed |
-| MASK_DATE_SHOW_YEAR | ⚠ Falls back to REDACT | Use `MAKE_DATE(YEAR(val), 1, 1)` as custom expr |
+| MASK_DATE_SHOW_YEAR | ✅ Supported | `MAKE_DATE(YEAR(val), 1, 1)` — column must be DATE type |
+| Custom `valueExpr` | ✅ Supported | Expression used verbatim — **review before executing** |
 
-Custom mask expressions (`valueExpr` in the export) are not yet handled — they fall back to full redaction.
+**Action required:** test every generated mask function against sample data before applying to production.
+Custom `valueExpr` expressions may reference Hive UDFs or Ranger request-context attributes that do not
+exist in Databricks — validate each one.
         """
     )
 
@@ -160,11 +163,58 @@ be re-enabled, while others may be obsolete and should be excluded entirely.
         """
     )
 
+with st.expander("🔴 isDenyAllElse — no UC equivalent"):
+    st.markdown(
+        """
+Ranger policies with `isDenyAllElse: true` implicitly deny all access not covered by an explicit allow
+in that policy. Unity Catalog's additive model has no equivalent mechanism.
+
+**What this tool does:** detects `isDenyAllElse: true` and flags it as a critical warning in the Gap Analysis.
+
+**What you must do manually:**
+- Ensure that no other policy grants access to the resource for principals not listed in this policy
+- Consider restricting the resource to a dedicated schema with tightly controlled membership
+- Do not assume the UC migration will preserve the "deny everything else" behaviour automatically
+        """
+    )
+
+with st.expander("🟡 validitySchedules — no time-scoped grants in UC"):
+    st.markdown(
+        """
+Ranger supports `validitySchedules` on policies — time windows during which a policy is active
+(e.g., grant access only during business hours). Unity Catalog grants are permanent; there is
+no built-in time-scoping mechanism.
+
+**What this tool does:** detects `validitySchedules` and flags them as warnings in the Gap Analysis.
+
+**What you must do manually:**
+- If time-scoped access is required, implement it via scheduled Databricks jobs that grant/revoke
+  at the appropriate times
+- Consider whether permanent access is acceptable for the principal in question
+        """
+    )
+
+with st.expander("🟡 Policy conditions — request-context matching not supported"):
+    st.markdown(
+        """
+Ranger `conditions[]` on policy items allow access decisions based on request-context attributes
+such as IP ranges (`ip-range`), user zones, or time of day. Unity Catalog has no equivalent
+request-context condition matching.
+
+**What this tool does:** detects conditions on any policy item and flags them as warnings in the Gap Analysis.
+
+**What you must do manually:**
+- Evaluate whether the condition was a security control or an operational convenience
+- For IP-based restrictions, consider Databricks network policies or private connectivity instead
+- For user-zone conditions, restructure into separate groups with distinct grants
+        """
+    )
+
 # ── Unsupported Services ──────────────────────────────────────────────
 st.header("Supported Non-Hive Services (with Limitations)")
 st.markdown(
-    "Beyond Hive, this tool also translates **HDFS** and **HBase** policies. "
-    "Both have limitations you should review before executing the generated SQL."
+    "Beyond Hive, this tool also translates **HDFS**, **HBase**, Hive **URL**, and Hive **UDF** policies. "
+    "All have limitations you should review before executing the generated SQL."
 )
 
 with st.expander("🟡 HDFS Policies → UC External Location grants", expanded=True):
@@ -182,6 +232,38 @@ HDFS path policies (`resources.path`) are translated to UC **External Location**
 1. Create External Locations in UC Admin Console for all HDFS paths in the export
 2. Replace each `<ext_loc_...>` placeholder in the generated SQL with the real location name
 3. `isDenyAllElse` and `allowExceptions` in HDFS policies are not translated — review manually
+        """
+    )
+
+with st.expander("🟡 Hive URL Policies → UC External Location grants"):
+    st.markdown(
+        """
+Hive policies with a `url` resource (S3, ADLS, or GCS paths referenced directly in Hive storage
+policies) are translated to UC **External Location** grants using the same access map as HDFS.
+
+- `read` → `GRANT READ FILES ON EXTERNAL LOCATION ...`
+- `write` → `GRANT WRITE FILES ON EXTERNAL LOCATION ...`
+- `execute` → treated as `READ FILES`
+
+**Limitation:** Same as HDFS — External Location names are not known. Each `<ext_loc_...>` placeholder
+must be replaced with the actual name after creating the External Location in UC Admin Console.
+        """
+    )
+
+with st.expander("🟡 Hive UDF Policies → GRANT EXECUTE ON FUNCTION"):
+    st.markdown(
+        """
+Hive policies with a `udf` resource generate `GRANT EXECUTE ON FUNCTION` statements in UC.
+
+**Limitation:** The tool does not verify that the UDF exists in UC. Hive UDFs must be:
+1. Rewritten as Databricks Unity Catalog functions (Python or SQL UDFs)
+2. Registered in the correct catalog and schema in UC
+3. Tested before granting access to other principals
+
+**Before executing:**
+- Confirm every UDF name in the generated SQL is registered in UC
+- Hive UDFs that use Java/JAR implementations need a full reimplementation as UC functions
+- `GRANT EXECUTE ON FUNCTION` will fail with a "function not found" error if the UDF does not exist
         """
     )
 
@@ -263,7 +345,10 @@ st.markdown(
 2. **Test row filters and masks** against sample queries before applying to production tables.
 3. **Verify principal names** exist in your Databricks account (SCIM sync complete, service principals created).
 4. **Review deny comment blocks** — these require architectural decisions before the gap can be closed.
-5. **Check for UDF dependencies** in row filter expressions — migrate any Hive UDFs to Databricks first.
-6. **Apply in a dev/staging environment** first; the Deploy page provides an execution checklist.
+5. **Register UDFs in UC** before executing `GRANT EXECUTE ON FUNCTION` statements — the grant will fail if the function does not exist.
+6. **Replace External Location placeholders** (`<ext_loc_...>`) in HDFS and URL grants with real location names.
+7. **Check for UDF dependencies** in row filter expressions — migrate any Hive UDFs to Databricks first.
+8. **Review Gap Analysis warnings** for `isDenyAllElse`, `validitySchedules`, and `conditions` — these require manual remediation.
+9. **Apply in a dev/staging environment** first; the Deploy page provides an execution checklist.
 """
 )

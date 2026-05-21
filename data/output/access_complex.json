@@ -1,12 +1,629 @@
 {
   "metadata": {
-    "timestamp": "2026-05-21T09:48:01.795156",
     "service_name": "hive_prod",
-    "cluster_name": "unknown",
-    "catalog_name": "main",
     "source_file": "access_complex.json",
-    "notes": ""
+    "archived_at": "2026-05-21",
+    "total_items": 18,
+    "stats": {
+      "total": 18,
+      "grants": 12,
+      "denies": 6,
+      "rowFilters": 0,
+      "masks": 0,
+      "hdfsGrants": 0,
+      "hbaseGrants": 0,
+      "udfGrants": 0,
+      "tagSets": 0,
+      "tagGrants": 0,
+      "tagPlaceholders": 0,
+      "approved": 0,
+      "needsReview": 6,
+      "pending": 12,
+      "rejected": 0,
+      "disabled": 0,
+      "schemaCount": 3,
+      "principalCount": 6,
+      "schemas": [
+        "finance",
+        "marketing",
+        "sales"
+      ],
+      "principals": [
+        "all_employees",
+        "contractor1@company.com",
+        "data_admin@company.com",
+        "data_engineering",
+        "external_vendors",
+        "platform_team"
+      ]
+    }
   },
+  "policy_items": [
+    {
+      "id": "3-grant-sales-*-all_employees-1",
+      "rangerPolicyId": 3,
+      "rangerPolicyName": "enterprise_data_governance",
+      "rangerPolicyDesc": "Complex policy - Tiered access across multiple schemas with exclusions and delegation",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "sales",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "SELECT"
+      ],
+      "principal": {
+        "type": "group",
+        "name": "all_employees"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "3-grant-marketing-*-all_employees-2",
+      "rangerPolicyId": 3,
+      "rangerPolicyName": "enterprise_data_governance",
+      "rangerPolicyDesc": "Complex policy - Tiered access across multiple schemas with exclusions and delegation",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "marketing",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "SELECT"
+      ],
+      "principal": {
+        "type": "group",
+        "name": "all_employees"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "3-grant-finance-*-all_employees-3",
+      "rangerPolicyId": 3,
+      "rangerPolicyName": "enterprise_data_governance",
+      "rangerPolicyDesc": "Complex policy - Tiered access across multiple schemas with exclusions and delegation",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "finance",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "SELECT"
+      ],
+      "principal": {
+        "type": "group",
+        "name": "all_employees"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "3-grant-sales-*-data_engineering-4",
+      "rangerPolicyId": 3,
+      "rangerPolicyName": "enterprise_data_governance",
+      "rangerPolicyDesc": "Complex policy - Tiered access across multiple schemas with exclusions and delegation",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "sales",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "SELECT",
+        "MODIFY",
+        "CREATE",
+        "ALTER"
+      ],
+      "principal": {
+        "type": "group",
+        "name": "data_engineering"
+      },
+      "delegateAdmin": true,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "3-grant-sales-*-platform_team-5",
+      "rangerPolicyId": 3,
+      "rangerPolicyName": "enterprise_data_governance",
+      "rangerPolicyDesc": "Complex policy - Tiered access across multiple schemas with exclusions and delegation",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "sales",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "SELECT",
+        "MODIFY",
+        "CREATE",
+        "ALTER"
+      ],
+      "principal": {
+        "type": "group",
+        "name": "platform_team"
+      },
+      "delegateAdmin": true,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "3-grant-sales-*-data_admin@company.com-6",
+      "rangerPolicyId": 3,
+      "rangerPolicyName": "enterprise_data_governance",
+      "rangerPolicyDesc": "Complex policy - Tiered access across multiple schemas with exclusions and delegation",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "sales",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "SELECT",
+        "MODIFY",
+        "CREATE",
+        "ALTER"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "data_admin@company.com"
+      },
+      "delegateAdmin": true,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "3-grant-marketing-*-data_engineering-7",
+      "rangerPolicyId": 3,
+      "rangerPolicyName": "enterprise_data_governance",
+      "rangerPolicyDesc": "Complex policy - Tiered access across multiple schemas with exclusions and delegation",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "marketing",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "SELECT",
+        "MODIFY",
+        "CREATE",
+        "ALTER"
+      ],
+      "principal": {
+        "type": "group",
+        "name": "data_engineering"
+      },
+      "delegateAdmin": true,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "3-grant-marketing-*-platform_team-8",
+      "rangerPolicyId": 3,
+      "rangerPolicyName": "enterprise_data_governance",
+      "rangerPolicyDesc": "Complex policy - Tiered access across multiple schemas with exclusions and delegation",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "marketing",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "SELECT",
+        "MODIFY",
+        "CREATE",
+        "ALTER"
+      ],
+      "principal": {
+        "type": "group",
+        "name": "platform_team"
+      },
+      "delegateAdmin": true,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "3-grant-marketing-*-data_admin@company.com-9",
+      "rangerPolicyId": 3,
+      "rangerPolicyName": "enterprise_data_governance",
+      "rangerPolicyDesc": "Complex policy - Tiered access across multiple schemas with exclusions and delegation",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "marketing",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "SELECT",
+        "MODIFY",
+        "CREATE",
+        "ALTER"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "data_admin@company.com"
+      },
+      "delegateAdmin": true,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "3-grant-finance-*-data_engineering-10",
+      "rangerPolicyId": 3,
+      "rangerPolicyName": "enterprise_data_governance",
+      "rangerPolicyDesc": "Complex policy - Tiered access across multiple schemas with exclusions and delegation",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "finance",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "SELECT",
+        "MODIFY",
+        "CREATE",
+        "ALTER"
+      ],
+      "principal": {
+        "type": "group",
+        "name": "data_engineering"
+      },
+      "delegateAdmin": true,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "3-grant-finance-*-platform_team-11",
+      "rangerPolicyId": 3,
+      "rangerPolicyName": "enterprise_data_governance",
+      "rangerPolicyDesc": "Complex policy - Tiered access across multiple schemas with exclusions and delegation",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "finance",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "SELECT",
+        "MODIFY",
+        "CREATE",
+        "ALTER"
+      ],
+      "principal": {
+        "type": "group",
+        "name": "platform_team"
+      },
+      "delegateAdmin": true,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "3-grant-finance-*-data_admin@company.com-12",
+      "rangerPolicyId": 3,
+      "rangerPolicyName": "enterprise_data_governance",
+      "rangerPolicyDesc": "Complex policy - Tiered access across multiple schemas with exclusions and delegation",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "finance",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "SELECT",
+        "MODIFY",
+        "CREATE",
+        "ALTER"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "data_admin@company.com"
+      },
+      "delegateAdmin": true,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "3-deny-sales-*-external_vendors-13",
+      "rangerPolicyId": 3,
+      "rangerPolicyName": "enterprise_data_governance",
+      "rangerPolicyDesc": "Complex policy - Tiered access across multiple schemas with exclusions and delegation",
+      "type": "deny",
+      "catalog": "main",
+      "schema": "sales",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "SELECT"
+      ],
+      "principal": {
+        "type": "group",
+        "name": "external_vendors"
+      },
+      "enabled": true,
+      "status": "needs_review"
+    },
+    {
+      "id": "3-deny-sales-*-contractor1@company.com-14",
+      "rangerPolicyId": 3,
+      "rangerPolicyName": "enterprise_data_governance",
+      "rangerPolicyDesc": "Complex policy - Tiered access across multiple schemas with exclusions and delegation",
+      "type": "deny",
+      "catalog": "main",
+      "schema": "sales",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "SELECT"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "contractor1@company.com"
+      },
+      "enabled": true,
+      "status": "needs_review"
+    },
+    {
+      "id": "3-deny-marketing-*-external_vendors-15",
+      "rangerPolicyId": 3,
+      "rangerPolicyName": "enterprise_data_governance",
+      "rangerPolicyDesc": "Complex policy - Tiered access across multiple schemas with exclusions and delegation",
+      "type": "deny",
+      "catalog": "main",
+      "schema": "marketing",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "SELECT"
+      ],
+      "principal": {
+        "type": "group",
+        "name": "external_vendors"
+      },
+      "enabled": true,
+      "status": "needs_review"
+    },
+    {
+      "id": "3-deny-marketing-*-contractor1@company.com-16",
+      "rangerPolicyId": 3,
+      "rangerPolicyName": "enterprise_data_governance",
+      "rangerPolicyDesc": "Complex policy - Tiered access across multiple schemas with exclusions and delegation",
+      "type": "deny",
+      "catalog": "main",
+      "schema": "marketing",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "SELECT"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "contractor1@company.com"
+      },
+      "enabled": true,
+      "status": "needs_review"
+    },
+    {
+      "id": "3-deny-finance-*-external_vendors-17",
+      "rangerPolicyId": 3,
+      "rangerPolicyName": "enterprise_data_governance",
+      "rangerPolicyDesc": "Complex policy - Tiered access across multiple schemas with exclusions and delegation",
+      "type": "deny",
+      "catalog": "main",
+      "schema": "finance",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "SELECT"
+      ],
+      "principal": {
+        "type": "group",
+        "name": "external_vendors"
+      },
+      "enabled": true,
+      "status": "needs_review"
+    },
+    {
+      "id": "3-deny-finance-*-contractor1@company.com-18",
+      "rangerPolicyId": 3,
+      "rangerPolicyName": "enterprise_data_governance",
+      "rangerPolicyDesc": "Complex policy - Tiered access across multiple schemas with exclusions and delegation",
+      "type": "deny",
+      "catalog": "main",
+      "schema": "finance",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "SELECT"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "contractor1@company.com"
+      },
+      "enabled": true,
+      "status": "needs_review"
+    }
+  ],
+  "identity_map": {},
+  "generated_sql": "-- \u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n-- \u2551  Unity Catalog Migration Script                          \u2551\n-- \u2551  Generated by Ranger \u2192 UC Migrator                       \u2551\n-- \u2551  Source: hive_prod\n-- \u2551  Target Catalog: main\n-- \u2551  Date: 2026-05-21\n-- \u2551  Policies: 6 of 18\n-- \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: enterprise_data_governance (Ranger ID: 3)\n-- Type: DENY | Principal: external_vendors\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: SELECT on main.sales.* for external_vendors\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove external_vendors from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: enterprise_data_governance (Ranger ID: 3)\n-- Type: DENY | Principal: contractor1@company.com\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: SELECT on main.sales.* for contractor1@company.com\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove contractor1@company.com from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: enterprise_data_governance (Ranger ID: 3)\n-- Type: DENY | Principal: external_vendors\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: SELECT on main.marketing.* for external_vendors\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove external_vendors from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: enterprise_data_governance (Ranger ID: 3)\n-- Type: DENY | Principal: contractor1@company.com\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: SELECT on main.marketing.* for contractor1@company.com\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove contractor1@company.com from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: enterprise_data_governance (Ranger ID: 3)\n-- Type: DENY | Principal: external_vendors\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: SELECT on main.finance.* for external_vendors\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove external_vendors from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: enterprise_data_governance (Ranger ID: 3)\n-- Type: DENY | Principal: contractor1@company.com\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: SELECT on main.finance.* for contractor1@company.com\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove contractor1@company.com from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n",
+  "gap_analysis": [
+    {
+      "category": "Deny Policies",
+      "severity": "critical",
+      "count": 6,
+      "description": "Unity Catalog uses an additive (allowlist) permission model with no DENY mechanism.",
+      "items": [
+        {
+          "resource": "sales.*",
+          "principal": "external_vendors",
+          "detail": "Denied: SELECT"
+        },
+        {
+          "resource": "sales.*",
+          "principal": "contractor1@company.com",
+          "detail": "Denied: SELECT"
+        },
+        {
+          "resource": "marketing.*",
+          "principal": "external_vendors",
+          "detail": "Denied: SELECT"
+        },
+        {
+          "resource": "marketing.*",
+          "principal": "contractor1@company.com",
+          "detail": "Denied: SELECT"
+        },
+        {
+          "resource": "finance.*",
+          "principal": "external_vendors",
+          "detail": "Denied: SELECT"
+        },
+        {
+          "resource": "finance.*",
+          "principal": "contractor1@company.com",
+          "detail": "Denied: SELECT"
+        }
+      ],
+      "remediation": "Restructure into separate schemas with restricted grants. Use row filters for partial access. Remove principals from over-privileged groups."
+    },
+    {
+      "category": "Kerberos / Service Accounts",
+      "severity": "critical",
+      "count": 2,
+      "description": "Kerberos principals and service accounts need to be mapped to Databricks service principals or cloud managed identities.",
+      "items": [
+        {
+          "resource": "enterprise_data_governance",
+          "principal": "data_admin@company.com",
+          "detail": "Kerberos realm principal"
+        },
+        {
+          "resource": "enterprise_data_governance",
+          "principal": "contractor1@company.com",
+          "detail": "Kerberos realm principal"
+        }
+      ],
+      "remediation": "Create Databricks service principals for each service account. Configure OAuth M2M authentication. Sync user principals via SCIM from your IdP."
+    },
+    {
+      "category": "Delegate Admin",
+      "severity": "warning",
+      "count": 9,
+      "description": "Ranger delegateAdmin allows principals to manage policies for their resources. Unity Catalog uses MANAGE privilege instead.",
+      "items": [
+        {
+          "resource": "sales.*",
+          "principal": "data_engineering",
+          "detail": "Has delegateAdmin in Ranger"
+        },
+        {
+          "resource": "sales.*",
+          "principal": "platform_team",
+          "detail": "Has delegateAdmin in Ranger"
+        },
+        {
+          "resource": "sales.*",
+          "principal": "data_admin@company.com",
+          "detail": "Has delegateAdmin in Ranger"
+        },
+        {
+          "resource": "marketing.*",
+          "principal": "data_engineering",
+          "detail": "Has delegateAdmin in Ranger"
+        },
+        {
+          "resource": "marketing.*",
+          "principal": "platform_team",
+          "detail": "Has delegateAdmin in Ranger"
+        },
+        {
+          "resource": "marketing.*",
+          "principal": "data_admin@company.com",
+          "detail": "Has delegateAdmin in Ranger"
+        },
+        {
+          "resource": "finance.*",
+          "principal": "data_engineering",
+          "detail": "Has delegateAdmin in Ranger"
+        },
+        {
+          "resource": "finance.*",
+          "principal": "platform_team",
+          "detail": "Has delegateAdmin in Ranger"
+        },
+        {
+          "resource": "finance.*",
+          "principal": "data_admin@company.com",
+          "detail": "Has delegateAdmin in Ranger"
+        }
+      ],
+      "remediation": "Grant MANAGE privilege on the corresponding UC object, or assign the principal as a metastore/catalog admin if broader admin access is needed."
+    },
+    {
+      "category": "Wildcard Table Access",
+      "severity": "warning",
+      "count": 12,
+      "description": "Ranger wildcard table policies (database.*) translate to schema-level grants in UC. Verify this is intentional.",
+      "items": [
+        {
+          "resource": "sales.*",
+          "principal": "all_employees",
+          "detail": "Privileges: SELECT"
+        },
+        {
+          "resource": "marketing.*",
+          "principal": "all_employees",
+          "detail": "Privileges: SELECT"
+        },
+        {
+          "resource": "finance.*",
+          "principal": "all_employees",
+          "detail": "Privileges: SELECT"
+        },
+        {
+          "resource": "sales.*",
+          "principal": "data_engineering",
+          "detail": "Privileges: SELECT, MODIFY, CREATE, ALTER"
+        },
+        {
+          "resource": "sales.*",
+          "principal": "platform_team",
+          "detail": "Privileges: SELECT, MODIFY, CREATE, ALTER"
+        },
+        {
+          "resource": "sales.*",
+          "principal": "data_admin@company.com",
+          "detail": "Privileges: SELECT, MODIFY, CREATE, ALTER"
+        },
+        {
+          "resource": "marketing.*",
+          "principal": "data_engineering",
+          "detail": "Privileges: SELECT, MODIFY, CREATE, ALTER"
+        },
+        {
+          "resource": "marketing.*",
+          "principal": "platform_team",
+          "detail": "Privileges: SELECT, MODIFY, CREATE, ALTER"
+        },
+        {
+          "resource": "marketing.*",
+          "principal": "data_admin@company.com",
+          "detail": "Privileges: SELECT, MODIFY, CREATE, ALTER"
+        },
+        {
+          "resource": "finance.*",
+          "principal": "data_engineering",
+          "detail": "Privileges: SELECT, MODIFY, CREATE, ALTER"
+        },
+        {
+          "resource": "finance.*",
+          "principal": "platform_team",
+          "detail": "Privileges: SELECT, MODIFY, CREATE, ALTER"
+        },
+        {
+          "resource": "finance.*",
+          "principal": "data_admin@company.com",
+          "detail": "Privileges: SELECT, MODIFY, CREATE, ALTER"
+        }
+      ],
+      "remediation": "Review if schema-level grants are appropriate. Consider granting on specific tables for least-privilege access."
+    }
+  ],
   "parsed_data": {
     "results": [
       {
@@ -509,415 +1126,5 @@
     "serviceType": "hive",
     "clusterName": "unknown",
     "totalRangerPolicies": 1
-  },
-  "policy_items": [
-    {
-      "id": "3-grant-sales-*-all_employees-1",
-      "rangerPolicyId": 3,
-      "rangerPolicyName": "enterprise_data_governance",
-      "rangerPolicyDesc": "Complex policy - Tiered access across multiple schemas with exclusions and delegation",
-      "type": "grant",
-      "catalog": "main",
-      "schema": "sales",
-      "table": null,
-      "columns": null,
-      "privileges": [
-        "SELECT"
-      ],
-      "principal": {
-        "type": "group",
-        "name": "all_employees"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "3-grant-marketing-*-all_employees-2",
-      "rangerPolicyId": 3,
-      "rangerPolicyName": "enterprise_data_governance",
-      "rangerPolicyDesc": "Complex policy - Tiered access across multiple schemas with exclusions and delegation",
-      "type": "grant",
-      "catalog": "main",
-      "schema": "marketing",
-      "table": null,
-      "columns": null,
-      "privileges": [
-        "SELECT"
-      ],
-      "principal": {
-        "type": "group",
-        "name": "all_employees"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "3-grant-finance-*-all_employees-3",
-      "rangerPolicyId": 3,
-      "rangerPolicyName": "enterprise_data_governance",
-      "rangerPolicyDesc": "Complex policy - Tiered access across multiple schemas with exclusions and delegation",
-      "type": "grant",
-      "catalog": "main",
-      "schema": "finance",
-      "table": null,
-      "columns": null,
-      "privileges": [
-        "SELECT"
-      ],
-      "principal": {
-        "type": "group",
-        "name": "all_employees"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "3-grant-sales-*-data_engineering-4",
-      "rangerPolicyId": 3,
-      "rangerPolicyName": "enterprise_data_governance",
-      "rangerPolicyDesc": "Complex policy - Tiered access across multiple schemas with exclusions and delegation",
-      "type": "grant",
-      "catalog": "main",
-      "schema": "sales",
-      "table": null,
-      "columns": null,
-      "privileges": [
-        "SELECT",
-        "MODIFY",
-        "CREATE",
-        "ALTER"
-      ],
-      "principal": {
-        "type": "group",
-        "name": "data_engineering"
-      },
-      "delegateAdmin": true,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "3-grant-sales-*-platform_team-5",
-      "rangerPolicyId": 3,
-      "rangerPolicyName": "enterprise_data_governance",
-      "rangerPolicyDesc": "Complex policy - Tiered access across multiple schemas with exclusions and delegation",
-      "type": "grant",
-      "catalog": "main",
-      "schema": "sales",
-      "table": null,
-      "columns": null,
-      "privileges": [
-        "SELECT",
-        "MODIFY",
-        "CREATE",
-        "ALTER"
-      ],
-      "principal": {
-        "type": "group",
-        "name": "platform_team"
-      },
-      "delegateAdmin": true,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "3-grant-sales-*-data_admin@company.com-6",
-      "rangerPolicyId": 3,
-      "rangerPolicyName": "enterprise_data_governance",
-      "rangerPolicyDesc": "Complex policy - Tiered access across multiple schemas with exclusions and delegation",
-      "type": "grant",
-      "catalog": "main",
-      "schema": "sales",
-      "table": null,
-      "columns": null,
-      "privileges": [
-        "SELECT",
-        "MODIFY",
-        "CREATE",
-        "ALTER"
-      ],
-      "principal": {
-        "type": "user",
-        "name": "data_admin@company.com"
-      },
-      "delegateAdmin": true,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "3-grant-marketing-*-data_engineering-7",
-      "rangerPolicyId": 3,
-      "rangerPolicyName": "enterprise_data_governance",
-      "rangerPolicyDesc": "Complex policy - Tiered access across multiple schemas with exclusions and delegation",
-      "type": "grant",
-      "catalog": "main",
-      "schema": "marketing",
-      "table": null,
-      "columns": null,
-      "privileges": [
-        "SELECT",
-        "MODIFY",
-        "CREATE",
-        "ALTER"
-      ],
-      "principal": {
-        "type": "group",
-        "name": "data_engineering"
-      },
-      "delegateAdmin": true,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "3-grant-marketing-*-platform_team-8",
-      "rangerPolicyId": 3,
-      "rangerPolicyName": "enterprise_data_governance",
-      "rangerPolicyDesc": "Complex policy - Tiered access across multiple schemas with exclusions and delegation",
-      "type": "grant",
-      "catalog": "main",
-      "schema": "marketing",
-      "table": null,
-      "columns": null,
-      "privileges": [
-        "SELECT",
-        "MODIFY",
-        "CREATE",
-        "ALTER"
-      ],
-      "principal": {
-        "type": "group",
-        "name": "platform_team"
-      },
-      "delegateAdmin": true,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "3-grant-marketing-*-data_admin@company.com-9",
-      "rangerPolicyId": 3,
-      "rangerPolicyName": "enterprise_data_governance",
-      "rangerPolicyDesc": "Complex policy - Tiered access across multiple schemas with exclusions and delegation",
-      "type": "grant",
-      "catalog": "main",
-      "schema": "marketing",
-      "table": null,
-      "columns": null,
-      "privileges": [
-        "SELECT",
-        "MODIFY",
-        "CREATE",
-        "ALTER"
-      ],
-      "principal": {
-        "type": "user",
-        "name": "data_admin@company.com"
-      },
-      "delegateAdmin": true,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "3-grant-finance-*-data_engineering-10",
-      "rangerPolicyId": 3,
-      "rangerPolicyName": "enterprise_data_governance",
-      "rangerPolicyDesc": "Complex policy - Tiered access across multiple schemas with exclusions and delegation",
-      "type": "grant",
-      "catalog": "main",
-      "schema": "finance",
-      "table": null,
-      "columns": null,
-      "privileges": [
-        "SELECT",
-        "MODIFY",
-        "CREATE",
-        "ALTER"
-      ],
-      "principal": {
-        "type": "group",
-        "name": "data_engineering"
-      },
-      "delegateAdmin": true,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "3-grant-finance-*-platform_team-11",
-      "rangerPolicyId": 3,
-      "rangerPolicyName": "enterprise_data_governance",
-      "rangerPolicyDesc": "Complex policy - Tiered access across multiple schemas with exclusions and delegation",
-      "type": "grant",
-      "catalog": "main",
-      "schema": "finance",
-      "table": null,
-      "columns": null,
-      "privileges": [
-        "SELECT",
-        "MODIFY",
-        "CREATE",
-        "ALTER"
-      ],
-      "principal": {
-        "type": "group",
-        "name": "platform_team"
-      },
-      "delegateAdmin": true,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "3-grant-finance-*-data_admin@company.com-12",
-      "rangerPolicyId": 3,
-      "rangerPolicyName": "enterprise_data_governance",
-      "rangerPolicyDesc": "Complex policy - Tiered access across multiple schemas with exclusions and delegation",
-      "type": "grant",
-      "catalog": "main",
-      "schema": "finance",
-      "table": null,
-      "columns": null,
-      "privileges": [
-        "SELECT",
-        "MODIFY",
-        "CREATE",
-        "ALTER"
-      ],
-      "principal": {
-        "type": "user",
-        "name": "data_admin@company.com"
-      },
-      "delegateAdmin": true,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "3-deny-sales-*-external_vendors-13",
-      "rangerPolicyId": 3,
-      "rangerPolicyName": "enterprise_data_governance",
-      "rangerPolicyDesc": "Complex policy - Tiered access across multiple schemas with exclusions and delegation",
-      "type": "deny",
-      "catalog": "main",
-      "schema": "sales",
-      "table": null,
-      "columns": null,
-      "privileges": [
-        "SELECT"
-      ],
-      "principal": {
-        "type": "group",
-        "name": "external_vendors"
-      },
-      "enabled": true,
-      "status": "needs_review"
-    },
-    {
-      "id": "3-deny-sales-*-contractor1@company.com-14",
-      "rangerPolicyId": 3,
-      "rangerPolicyName": "enterprise_data_governance",
-      "rangerPolicyDesc": "Complex policy - Tiered access across multiple schemas with exclusions and delegation",
-      "type": "deny",
-      "catalog": "main",
-      "schema": "sales",
-      "table": null,
-      "columns": null,
-      "privileges": [
-        "SELECT"
-      ],
-      "principal": {
-        "type": "user",
-        "name": "contractor1@company.com"
-      },
-      "enabled": true,
-      "status": "needs_review"
-    },
-    {
-      "id": "3-deny-marketing-*-external_vendors-15",
-      "rangerPolicyId": 3,
-      "rangerPolicyName": "enterprise_data_governance",
-      "rangerPolicyDesc": "Complex policy - Tiered access across multiple schemas with exclusions and delegation",
-      "type": "deny",
-      "catalog": "main",
-      "schema": "marketing",
-      "table": null,
-      "columns": null,
-      "privileges": [
-        "SELECT"
-      ],
-      "principal": {
-        "type": "group",
-        "name": "external_vendors"
-      },
-      "enabled": true,
-      "status": "needs_review"
-    },
-    {
-      "id": "3-deny-marketing-*-contractor1@company.com-16",
-      "rangerPolicyId": 3,
-      "rangerPolicyName": "enterprise_data_governance",
-      "rangerPolicyDesc": "Complex policy - Tiered access across multiple schemas with exclusions and delegation",
-      "type": "deny",
-      "catalog": "main",
-      "schema": "marketing",
-      "table": null,
-      "columns": null,
-      "privileges": [
-        "SELECT"
-      ],
-      "principal": {
-        "type": "user",
-        "name": "contractor1@company.com"
-      },
-      "enabled": true,
-      "status": "needs_review"
-    },
-    {
-      "id": "3-deny-finance-*-external_vendors-17",
-      "rangerPolicyId": 3,
-      "rangerPolicyName": "enterprise_data_governance",
-      "rangerPolicyDesc": "Complex policy - Tiered access across multiple schemas with exclusions and delegation",
-      "type": "deny",
-      "catalog": "main",
-      "schema": "finance",
-      "table": null,
-      "columns": null,
-      "privileges": [
-        "SELECT"
-      ],
-      "principal": {
-        "type": "group",
-        "name": "external_vendors"
-      },
-      "enabled": true,
-      "status": "needs_review"
-    },
-    {
-      "id": "3-deny-finance-*-contractor1@company.com-18",
-      "rangerPolicyId": 3,
-      "rangerPolicyName": "enterprise_data_governance",
-      "rangerPolicyDesc": "Complex policy - Tiered access across multiple schemas with exclusions and delegation",
-      "type": "deny",
-      "catalog": "main",
-      "schema": "finance",
-      "table": null,
-      "columns": null,
-      "privileges": [
-        "SELECT"
-      ],
-      "principal": {
-        "type": "user",
-        "name": "contractor1@company.com"
-      },
-      "enabled": true,
-      "status": "needs_review"
-    }
-  ],
-  "identity_map": {
-    "all_employees": "all_employees",
-    "data_engineering": "data_engineering",
-    "external_vendors": "external_vendors",
-    "platform_team": "platform_team",
-    "contractor1@company.com": "contractor1@company.com",
-    "data_admin@company.com": "data_admin@company.com"
-  },
-  "generated_sql": "-- \u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n-- \u2551  Unity Catalog Migration Script                          \u2551\n-- \u2551  Generated by Ranger \u2192 UC Migrator                       \u2551\n-- \u2551  Source: hive_prod\n-- \u2551  Target Catalog: main\n-- \u2551  Date: 2026-05-21\n-- \u2551  Policies: 6 of 18\n-- \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: enterprise_data_governance (Ranger ID: 3)\n-- Type: DENY | Principal: external_vendors\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: SELECT on main.sales.* for external_vendors\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove external_vendors from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: enterprise_data_governance (Ranger ID: 3)\n-- Type: DENY | Principal: contractor1@company.com\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: SELECT on main.sales.* for contractor1@company.com\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove contractor1@company.com from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: enterprise_data_governance (Ranger ID: 3)\n-- Type: DENY | Principal: external_vendors\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: SELECT on main.marketing.* for external_vendors\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove external_vendors from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: enterprise_data_governance (Ranger ID: 3)\n-- Type: DENY | Principal: contractor1@company.com\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: SELECT on main.marketing.* for contractor1@company.com\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove contractor1@company.com from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: enterprise_data_governance (Ranger ID: 3)\n-- Type: DENY | Principal: external_vendors\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: SELECT on main.finance.* for external_vendors\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove external_vendors from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: enterprise_data_governance (Ranger ID: 3)\n-- Type: DENY | Principal: contractor1@company.com\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: SELECT on main.finance.* for contractor1@company.com\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove contractor1@company.com from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n"
+  }
 }

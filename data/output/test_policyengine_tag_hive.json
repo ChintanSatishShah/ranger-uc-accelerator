@@ -1,12 +1,284 @@
 {
   "metadata": {
-    "timestamp": "2026-05-21T09:48:01.795156",
     "service_name": "hivedev",
-    "cluster_name": "unknown",
-    "catalog_name": "main",
     "source_file": "test_policyengine_tag_hive.json",
-    "notes": ""
+    "archived_at": "2026-05-21",
+    "total_items": 10,
+    "stats": {
+      "total": 10,
+      "grants": 5,
+      "denies": 1,
+      "rowFilters": 0,
+      "masks": 0,
+      "hdfsGrants": 0,
+      "hbaseGrants": 0,
+      "udfGrants": 4,
+      "tagSets": 0,
+      "tagGrants": 0,
+      "tagPlaceholders": 0,
+      "approved": 0,
+      "needsReview": 1,
+      "pending": 9,
+      "rejected": 0,
+      "disabled": 0,
+      "schemaCount": 2,
+      "principalCount": 6,
+      "schemas": [
+        "*",
+        "default"
+      ],
+      "principals": [
+        "denieduser",
+        "hive",
+        "public",
+        "user-override",
+        "user1",
+        "user2"
+      ]
+    }
   },
+  "policy_items": [
+    {
+      "id": "101-grant-*-*-public-1",
+      "rangerPolicyId": 101,
+      "rangerPolicyName": "db=*: audit-all-access",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "*",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "ALL PRIVILEGES"
+      ],
+      "principal": {
+        "type": "group",
+        "name": "public"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "101-grant-*-*-hive-2",
+      "rangerPolicyId": 101,
+      "rangerPolicyName": "db=*: audit-all-access",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "*",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "ALL PRIVILEGES"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "hive"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "101-grant-*-*-user1-3",
+      "rangerPolicyId": 101,
+      "rangerPolicyName": "db=*: audit-all-access",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "*",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "ALL PRIVILEGES"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "user1"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "101-grant-*-*-user2-4",
+      "rangerPolicyId": 101,
+      "rangerPolicyName": "db=*: audit-all-access",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "*",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "ALL PRIVILEGES"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "user2"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "102-udf-*-*-public-1",
+      "rangerPolicyId": 102,
+      "rangerPolicyName": "db=*, udf=*: audit-all-access",
+      "rangerPolicyDesc": "",
+      "type": "udf_grant",
+      "catalog": "main",
+      "schema": "*",
+      "udf_name": "*",
+      "principal": {
+        "type": "group",
+        "name": "public"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "102-udf-*-*-hive-2",
+      "rangerPolicyId": 102,
+      "rangerPolicyName": "db=*, udf=*: audit-all-access",
+      "rangerPolicyDesc": "",
+      "type": "udf_grant",
+      "catalog": "main",
+      "schema": "*",
+      "udf_name": "*",
+      "principal": {
+        "type": "user",
+        "name": "hive"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "102-udf-*-*-user1-3",
+      "rangerPolicyId": 102,
+      "rangerPolicyName": "db=*, udf=*: audit-all-access",
+      "rangerPolicyDesc": "",
+      "type": "udf_grant",
+      "catalog": "main",
+      "schema": "*",
+      "udf_name": "*",
+      "principal": {
+        "type": "user",
+        "name": "user1"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "102-udf-*-*-user2-4",
+      "rangerPolicyId": 102,
+      "rangerPolicyName": "db=*, udf=*: audit-all-access",
+      "rangerPolicyDesc": "",
+      "type": "udf_grant",
+      "catalog": "main",
+      "schema": "*",
+      "udf_name": "*",
+      "principal": {
+        "type": "user",
+        "name": "user2"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "103-deny-default-table2-denieduser-1",
+      "rangerPolicyId": 103,
+      "rangerPolicyName": "db=default, table=table2: audit-all-access",
+      "rangerPolicyDesc": "",
+      "type": "deny",
+      "catalog": "main",
+      "schema": "default",
+      "table": "table2",
+      "columns": null,
+      "privileges": [
+        "SELECT"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "denieduser"
+      },
+      "enabled": true,
+      "status": "needs_review"
+    },
+    {
+      "id": "104-grant-default-table-override-user-override-1",
+      "rangerPolicyId": 104,
+      "rangerPolicyName": "db=default, table=table-override: audit-all-access",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "table-override",
+      "columns": null,
+      "privileges": [
+        "SELECT"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "user-override"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    }
+  ],
+  "identity_map": {},
+  "generated_sql": "-- \u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n-- \u2551  Unity Catalog Migration Script                          \u2551\n-- \u2551  Generated by Ranger \u2192 UC Migrator                       \u2551\n-- \u2551  Source: hivedev\n-- \u2551  Target Catalog: main\n-- \u2551  Date: 2026-05-21\n-- \u2551  Policies: 1 of 10\n-- \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default, table=table2: audit-all-access (Ranger ID: 103)\n-- Type: DENY | Principal: denieduser\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: SELECT on main.default.table2 for denieduser\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove denieduser from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n",
+  "gap_analysis": [
+    {
+      "category": "Deny Policies",
+      "severity": "critical",
+      "count": 1,
+      "description": "Unity Catalog uses an additive (allowlist) permission model with no DENY mechanism.",
+      "items": [
+        {
+          "resource": "default.table2",
+          "principal": "denieduser",
+          "detail": "Denied: SELECT"
+        }
+      ],
+      "remediation": "Restructure into separate schemas with restricted grants. Use row filters for partial access. Remove principals from over-privileged groups."
+    },
+    {
+      "category": "Wildcard Table Access",
+      "severity": "warning",
+      "count": 4,
+      "description": "Ranger wildcard table policies (database.*) translate to schema-level grants in UC. Verify this is intentional.",
+      "items": [
+        {
+          "resource": "*.*",
+          "principal": "public",
+          "detail": "Privileges: ALL PRIVILEGES"
+        },
+        {
+          "resource": "*.*",
+          "principal": "hive",
+          "detail": "Privileges: ALL PRIVILEGES"
+        },
+        {
+          "resource": "*.*",
+          "principal": "user1",
+          "detail": "Privileges: ALL PRIVILEGES"
+        },
+        {
+          "resource": "*.*",
+          "principal": "user2",
+          "detail": "Privileges: ALL PRIVILEGES"
+        }
+      ],
+      "remediation": "Review if schema-level grants are appropriate. Consider granting on specific tables for least-privilege access."
+    }
+  ],
   "parsed_data": {
     "results": [
       {
@@ -94,18 +366,14 @@
         "status": "pending"
       },
       {
-        "id": "102-grant-*-*-public-1",
+        "id": "102-udf-*-*-public-1",
         "rangerPolicyId": 102,
         "rangerPolicyName": "db=*, udf=*: audit-all-access",
         "rangerPolicyDesc": "",
-        "type": "grant",
+        "type": "udf_grant",
         "catalog": "main",
         "schema": "*",
-        "table": null,
-        "columns": null,
-        "privileges": [
-          "ALL PRIVILEGES"
-        ],
+        "udf_name": "*",
         "principal": {
           "type": "group",
           "name": "public"
@@ -115,18 +383,14 @@
         "status": "pending"
       },
       {
-        "id": "102-grant-*-*-hive-2",
+        "id": "102-udf-*-*-hive-2",
         "rangerPolicyId": 102,
         "rangerPolicyName": "db=*, udf=*: audit-all-access",
         "rangerPolicyDesc": "",
-        "type": "grant",
+        "type": "udf_grant",
         "catalog": "main",
         "schema": "*",
-        "table": null,
-        "columns": null,
-        "privileges": [
-          "ALL PRIVILEGES"
-        ],
+        "udf_name": "*",
         "principal": {
           "type": "user",
           "name": "hive"
@@ -136,18 +400,14 @@
         "status": "pending"
       },
       {
-        "id": "102-grant-*-*-user1-3",
+        "id": "102-udf-*-*-user1-3",
         "rangerPolicyId": 102,
         "rangerPolicyName": "db=*, udf=*: audit-all-access",
         "rangerPolicyDesc": "",
-        "type": "grant",
+        "type": "udf_grant",
         "catalog": "main",
         "schema": "*",
-        "table": null,
-        "columns": null,
-        "privileges": [
-          "ALL PRIVILEGES"
-        ],
+        "udf_name": "*",
         "principal": {
           "type": "user",
           "name": "user1"
@@ -157,18 +417,14 @@
         "status": "pending"
       },
       {
-        "id": "102-grant-*-*-user2-4",
+        "id": "102-udf-*-*-user2-4",
         "rangerPolicyId": 102,
         "rangerPolicyName": "db=*, udf=*: audit-all-access",
         "rangerPolicyDesc": "",
-        "type": "grant",
+        "type": "udf_grant",
         "catalog": "main",
         "schema": "*",
-        "table": null,
-        "columns": null,
-        "privileges": [
-          "ALL PRIVILEGES"
-        ],
+        "udf_name": "*",
         "principal": {
           "type": "user",
           "name": "user2"
@@ -260,225 +516,5 @@
     "serviceType": "hive",
     "clusterName": "unknown",
     "totalRangerPolicies": 4
-  },
-  "policy_items": [
-    {
-      "id": "101-grant-*-*-public-1",
-      "rangerPolicyId": 101,
-      "rangerPolicyName": "db=*: audit-all-access",
-      "rangerPolicyDesc": "",
-      "type": "grant",
-      "catalog": "main",
-      "schema": "*",
-      "table": null,
-      "columns": null,
-      "privileges": [
-        "ALL PRIVILEGES"
-      ],
-      "principal": {
-        "type": "group",
-        "name": "public"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "101-grant-*-*-hive-2",
-      "rangerPolicyId": 101,
-      "rangerPolicyName": "db=*: audit-all-access",
-      "rangerPolicyDesc": "",
-      "type": "grant",
-      "catalog": "main",
-      "schema": "*",
-      "table": null,
-      "columns": null,
-      "privileges": [
-        "ALL PRIVILEGES"
-      ],
-      "principal": {
-        "type": "user",
-        "name": "hive"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "101-grant-*-*-user1-3",
-      "rangerPolicyId": 101,
-      "rangerPolicyName": "db=*: audit-all-access",
-      "rangerPolicyDesc": "",
-      "type": "grant",
-      "catalog": "main",
-      "schema": "*",
-      "table": null,
-      "columns": null,
-      "privileges": [
-        "ALL PRIVILEGES"
-      ],
-      "principal": {
-        "type": "user",
-        "name": "user1"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "101-grant-*-*-user2-4",
-      "rangerPolicyId": 101,
-      "rangerPolicyName": "db=*: audit-all-access",
-      "rangerPolicyDesc": "",
-      "type": "grant",
-      "catalog": "main",
-      "schema": "*",
-      "table": null,
-      "columns": null,
-      "privileges": [
-        "ALL PRIVILEGES"
-      ],
-      "principal": {
-        "type": "user",
-        "name": "user2"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "102-grant-*-*-public-1",
-      "rangerPolicyId": 102,
-      "rangerPolicyName": "db=*, udf=*: audit-all-access",
-      "rangerPolicyDesc": "",
-      "type": "grant",
-      "catalog": "main",
-      "schema": "*",
-      "table": null,
-      "columns": null,
-      "privileges": [
-        "ALL PRIVILEGES"
-      ],
-      "principal": {
-        "type": "group",
-        "name": "public"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "102-grant-*-*-hive-2",
-      "rangerPolicyId": 102,
-      "rangerPolicyName": "db=*, udf=*: audit-all-access",
-      "rangerPolicyDesc": "",
-      "type": "grant",
-      "catalog": "main",
-      "schema": "*",
-      "table": null,
-      "columns": null,
-      "privileges": [
-        "ALL PRIVILEGES"
-      ],
-      "principal": {
-        "type": "user",
-        "name": "hive"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "102-grant-*-*-user1-3",
-      "rangerPolicyId": 102,
-      "rangerPolicyName": "db=*, udf=*: audit-all-access",
-      "rangerPolicyDesc": "",
-      "type": "grant",
-      "catalog": "main",
-      "schema": "*",
-      "table": null,
-      "columns": null,
-      "privileges": [
-        "ALL PRIVILEGES"
-      ],
-      "principal": {
-        "type": "user",
-        "name": "user1"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "102-grant-*-*-user2-4",
-      "rangerPolicyId": 102,
-      "rangerPolicyName": "db=*, udf=*: audit-all-access",
-      "rangerPolicyDesc": "",
-      "type": "grant",
-      "catalog": "main",
-      "schema": "*",
-      "table": null,
-      "columns": null,
-      "privileges": [
-        "ALL PRIVILEGES"
-      ],
-      "principal": {
-        "type": "user",
-        "name": "user2"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "103-deny-default-table2-denieduser-1",
-      "rangerPolicyId": 103,
-      "rangerPolicyName": "db=default, table=table2: audit-all-access",
-      "rangerPolicyDesc": "",
-      "type": "deny",
-      "catalog": "main",
-      "schema": "default",
-      "table": "table2",
-      "columns": null,
-      "privileges": [
-        "SELECT"
-      ],
-      "principal": {
-        "type": "user",
-        "name": "denieduser"
-      },
-      "enabled": true,
-      "status": "needs_review"
-    },
-    {
-      "id": "104-grant-default-table-override-user-override-1",
-      "rangerPolicyId": 104,
-      "rangerPolicyName": "db=default, table=table-override: audit-all-access",
-      "rangerPolicyDesc": "",
-      "type": "grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": "table-override",
-      "columns": null,
-      "privileges": [
-        "SELECT"
-      ],
-      "principal": {
-        "type": "user",
-        "name": "user-override"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    }
-  ],
-  "identity_map": {
-    "public": "public",
-    "denieduser": "denieduser",
-    "hive": "hive",
-    "user-override": "user-override",
-    "user1": "user1",
-    "user2": "user2"
-  },
-  "generated_sql": "-- \u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n-- \u2551  Unity Catalog Migration Script                          \u2551\n-- \u2551  Generated by Ranger \u2192 UC Migrator                       \u2551\n-- \u2551  Source: hivedev\n-- \u2551  Target Catalog: main\n-- \u2551  Date: 2026-05-21\n-- \u2551  Policies: 1 of 10\n-- \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default, table=table2: audit-all-access (Ranger ID: 103)\n-- Type: DENY | Principal: denieduser\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: SELECT on main.default.table2 for denieduser\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove denieduser from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n"
+  }
 }

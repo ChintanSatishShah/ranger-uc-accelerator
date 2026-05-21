@@ -1,12 +1,1127 @@
 {
   "metadata": {
-    "timestamp": "2026-05-21T09:48:01.795156",
     "service_name": "cm_hbase",
-    "cluster_name": "unknown",
-    "catalog_name": "main",
     "source_file": "hbase-test-policies.json",
-    "notes": ""
+    "archived_at": "2026-05-21",
+    "total_items": 53,
+    "stats": {
+      "total": 53,
+      "grants": 0,
+      "denies": 0,
+      "rowFilters": 0,
+      "masks": 0,
+      "hdfsGrants": 0,
+      "hbaseGrants": 53,
+      "udfGrants": 0,
+      "tagSets": 0,
+      "tagGrants": 0,
+      "tagPlaceholders": 0,
+      "approved": 0,
+      "needsReview": 0,
+      "pending": 53,
+      "rejected": 0,
+      "disabled": 0,
+      "schemaCount": 2,
+      "principalCount": 39,
+      "schemas": [
+        "SYSTEM",
+        "default"
+      ],
+      "principals": [
+        "atlas",
+        "fb00_bbrut",
+        "fb00_braff",
+        "fb00_xbgdta",
+        "fb00_xda017",
+        "fb00_xda029",
+        "fb00_xda034",
+        "fb00_xda035",
+        "fb00_xda041",
+        "fb00_xda042",
+        "fb00_xda043",
+        "fb00_xda052",
+        "fb00_xda060",
+        "fb00_xda062",
+        "fb00_xda066",
+        "fb00_xda085",
+        "fb00_xda092",
+        "fb00_xda107",
+        "fb00_xda108",
+        "fb00_xda126",
+        "fb00_xda143",
+        "fb00_xda144",
+        "fb00_xds020",
+        "fb00_xoi022",
+        "fb00_xoi025",
+        "fb00_xoi033",
+        "fb00_xoi097",
+        "fb00_xoi098",
+        "fb00_xoi099",
+        "fb00_xpr203",
+        "fb00_xpx091",
+        "hbase",
+        "hive",
+        "pr00_xbgdta",
+        "qqsens",
+        "rangerlookup",
+        "sd00_xlx001",
+        "xagcla",
+        "{USER}"
+      ]
+    }
   },
+  "policy_items": [
+    {
+      "id": "4-hbase-pr00_xbgdta-1",
+      "rangerPolicyId": 4,
+      "rangerPolicyName": "all - table, column-family, column",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "prospects",
+      "col_families": [],
+      "privileges": [],
+      "principal": {
+        "type": "group",
+        "name": "pr00_xbgdta"
+      },
+      "delegateAdmin": true,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "4-hbase-hbase-2",
+      "rangerPolicyId": 4,
+      "rangerPolicyName": "all - table, column-family, column",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "prospects",
+      "col_families": [],
+      "privileges": [],
+      "principal": {
+        "type": "user",
+        "name": "hbase"
+      },
+      "delegateAdmin": true,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "4-hbase-hive-3",
+      "rangerPolicyId": 4,
+      "rangerPolicyName": "all - table, column-family, column",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "prospects",
+      "col_families": [],
+      "privileges": [],
+      "principal": {
+        "type": "user",
+        "name": "hive"
+      },
+      "delegateAdmin": true,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "4-hbase-pr00_xbgdta-4",
+      "rangerPolicyId": 4,
+      "rangerPolicyName": "all - table, column-family, column",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "invoices",
+      "col_families": [],
+      "privileges": [],
+      "principal": {
+        "type": "group",
+        "name": "pr00_xbgdta"
+      },
+      "delegateAdmin": true,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "4-hbase-hbase-5",
+      "rangerPolicyId": 4,
+      "rangerPolicyName": "all - table, column-family, column",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "invoices",
+      "col_families": [],
+      "privileges": [],
+      "principal": {
+        "type": "user",
+        "name": "hbase"
+      },
+      "delegateAdmin": true,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "4-hbase-hive-6",
+      "rangerPolicyId": 4,
+      "rangerPolicyName": "all - table, column-family, column",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "invoices",
+      "col_families": [],
+      "privileges": [],
+      "principal": {
+        "type": "user",
+        "name": "hive"
+      },
+      "delegateAdmin": true,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "4-hbase-rangerlookup-7",
+      "rangerPolicyId": 4,
+      "rangerPolicyName": "all - table, column-family, column",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "prospects",
+      "col_families": [],
+      "privileges": [],
+      "principal": {
+        "type": "user",
+        "name": "rangerlookup"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "4-hbase-rangerlookup-8",
+      "rangerPolicyId": 4,
+      "rangerPolicyName": "all - table, column-family, column",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "invoices",
+      "col_families": [],
+      "privileges": [],
+      "principal": {
+        "type": "user",
+        "name": "rangerlookup"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "4-hbase-qqsens-9",
+      "rangerPolicyId": 4,
+      "rangerPolicyName": "all - table, column-family, column",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "prospects",
+      "col_families": [],
+      "privileges": [],
+      "principal": {
+        "type": "group",
+        "name": "qqsens"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "4-hbase-fb00_xbgdta-10",
+      "rangerPolicyId": 4,
+      "rangerPolicyName": "all - table, column-family, column",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "prospects",
+      "col_families": [],
+      "privileges": [],
+      "principal": {
+        "type": "group",
+        "name": "fb00_xbgdta"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "4-hbase-qqsens-11",
+      "rangerPolicyId": 4,
+      "rangerPolicyName": "all - table, column-family, column",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "invoices",
+      "col_families": [],
+      "privileges": [],
+      "principal": {
+        "type": "group",
+        "name": "qqsens"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "4-hbase-fb00_xbgdta-12",
+      "rangerPolicyId": 4,
+      "rangerPolicyName": "all - table, column-family, column",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "invoices",
+      "col_families": [],
+      "privileges": [],
+      "principal": {
+        "type": "group",
+        "name": "fb00_xbgdta"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "5-hbase-atlas-1",
+      "rangerPolicyId": 5,
+      "rangerPolicyName": "ATLAS_HBASE_TABLES",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "atlas_janus",
+      "col_families": [],
+      "privileges": [],
+      "principal": {
+        "type": "user",
+        "name": "atlas"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "5-hbase-atlas-2",
+      "rangerPolicyId": 5,
+      "rangerPolicyName": "ATLAS_HBASE_TABLES",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "ATLAS_ENTITY_AUDIT_EVENTS",
+      "col_families": [],
+      "privileges": [],
+      "principal": {
+        "type": "user",
+        "name": "atlas"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "782-hbase-{USER}-1",
+      "rangerPolicyId": 782,
+      "rangerPolicyName": "SYSTEM",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "SYSTEM",
+      "table": null,
+      "col_families": [],
+      "privileges": [],
+      "principal": {
+        "type": "user",
+        "name": "{USER}"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "821-hbase-fb00_xda017-1",
+      "rangerPolicyId": 821,
+      "rangerPolicyName": "fb00_xda017",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "fb00_*da017*",
+      "col_families": [],
+      "privileges": [],
+      "principal": {
+        "type": "group",
+        "name": "fb00_xda017"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "821-hbase-xagcla-2",
+      "rangerPolicyId": 821,
+      "rangerPolicyName": "fb00_xda017",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "fb00_*da017*",
+      "col_families": [],
+      "privileges": [],
+      "principal": {
+        "type": "group",
+        "name": "xagcla"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "822-hbase-fb00_xda029-1",
+      "rangerPolicyId": 822,
+      "rangerPolicyName": "fb00_xda029",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "fb00_*da029*",
+      "col_families": [],
+      "privileges": [],
+      "principal": {
+        "type": "group",
+        "name": "fb00_xda029"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "823-hbase-fb00_xda034-1",
+      "rangerPolicyId": 823,
+      "rangerPolicyName": "fb00_xda034",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "fb00_*da034*",
+      "col_families": [],
+      "privileges": [],
+      "principal": {
+        "type": "group",
+        "name": "fb00_xda034"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "824-hbase-fb00_xda035-1",
+      "rangerPolicyId": 824,
+      "rangerPolicyName": "fb00_xda035",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "fb00_*da035*",
+      "col_families": [],
+      "privileges": [],
+      "principal": {
+        "type": "group",
+        "name": "fb00_xda035"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "825-hbase-fb00_xda041-1",
+      "rangerPolicyId": 825,
+      "rangerPolicyName": "fb00_xda041",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "fb00_*da041*",
+      "col_families": [],
+      "privileges": [],
+      "principal": {
+        "type": "group",
+        "name": "fb00_xda041"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "826-hbase-fb00_xda043-1",
+      "rangerPolicyId": 826,
+      "rangerPolicyName": "fb00_xda043",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "fb00_*da043*",
+      "col_families": [],
+      "privileges": [],
+      "principal": {
+        "type": "group",
+        "name": "fb00_xda043"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "827-hbase-fb00_xda052-1",
+      "rangerPolicyId": 827,
+      "rangerPolicyName": "fb00_xda052",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "fb00_*da052*",
+      "col_families": [],
+      "privileges": [],
+      "principal": {
+        "type": "group",
+        "name": "fb00_xda052"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "828-hbase-fb00_xda060-1",
+      "rangerPolicyId": 828,
+      "rangerPolicyName": "fb00_xda060",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "fb00_*da060*",
+      "col_families": [],
+      "privileges": [],
+      "principal": {
+        "type": "group",
+        "name": "fb00_xda060"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "829-hbase-fb00_xda066-1",
+      "rangerPolicyId": 829,
+      "rangerPolicyName": "fb00_xda066",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "fb00_*da066*",
+      "col_families": [],
+      "privileges": [],
+      "principal": {
+        "type": "group",
+        "name": "fb00_xda066"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "830-hbase-fb00_xda085-1",
+      "rangerPolicyId": 830,
+      "rangerPolicyName": "fb00_xda085",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "fb00_*da085*",
+      "col_families": [],
+      "privileges": [],
+      "principal": {
+        "type": "group",
+        "name": "fb00_xda085"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "831-hbase-fb00_xda092-1",
+      "rangerPolicyId": 831,
+      "rangerPolicyName": "fb00_xda092",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "fb00_*da092*",
+      "col_families": [],
+      "privileges": [],
+      "principal": {
+        "type": "group",
+        "name": "fb00_xda092"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "832-hbase-fb00_xda126-1",
+      "rangerPolicyId": 832,
+      "rangerPolicyName": "fb00_xda126",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "fb00_*da126*",
+      "col_families": [],
+      "privileges": [],
+      "principal": {
+        "type": "group",
+        "name": "fb00_xda126"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "832-hbase-fb00_xda085-2",
+      "rangerPolicyId": 832,
+      "rangerPolicyName": "fb00_xda126",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "fb00_*da126*",
+      "col_families": [],
+      "privileges": [],
+      "principal": {
+        "type": "group",
+        "name": "fb00_xda085"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "833-hbase-fb00_xds020-1",
+      "rangerPolicyId": 833,
+      "rangerPolicyName": "fb00_xds020",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "fb00_*ds020*",
+      "col_families": [],
+      "privileges": [],
+      "principal": {
+        "type": "group",
+        "name": "fb00_xds020"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "834-hbase-fb00_xoi022-1",
+      "rangerPolicyId": 834,
+      "rangerPolicyName": "fb00_xoi022",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "fb00_*oi022*",
+      "col_families": [],
+      "privileges": [],
+      "principal": {
+        "type": "group",
+        "name": "fb00_xoi022"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "834-hbase-fb00_braff-2",
+      "rangerPolicyId": 834,
+      "rangerPolicyName": "fb00_xoi022",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "fb00_*oi022*",
+      "col_families": [],
+      "privileges": [],
+      "principal": {
+        "type": "group",
+        "name": "fb00_braff"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "834-hbase-fb00_bbrut-3",
+      "rangerPolicyId": 834,
+      "rangerPolicyName": "fb00_xoi022",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "fb00_*oi022*",
+      "col_families": [],
+      "privileges": [],
+      "principal": {
+        "type": "group",
+        "name": "fb00_bbrut"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "834-hbase-fb00_xoi099-4",
+      "rangerPolicyId": 834,
+      "rangerPolicyName": "fb00_xoi022",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "fb00_*oi022*",
+      "col_families": [],
+      "privileges": [],
+      "principal": {
+        "type": "group",
+        "name": "fb00_xoi099"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "834-hbase-fb00_xoi098-5",
+      "rangerPolicyId": 834,
+      "rangerPolicyName": "fb00_xoi022",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "fb00_*oi022*",
+      "col_families": [],
+      "privileges": [],
+      "principal": {
+        "type": "group",
+        "name": "fb00_xoi098"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "834-hbase-fb00_xoi097-6",
+      "rangerPolicyId": 834,
+      "rangerPolicyName": "fb00_xoi022",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "fb00_*oi022*",
+      "col_families": [],
+      "privileges": [],
+      "principal": {
+        "type": "group",
+        "name": "fb00_xoi097"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "834-hbase-sd00_xlx001-7",
+      "rangerPolicyId": 834,
+      "rangerPolicyName": "fb00_xoi022",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "fb00_*oi022*",
+      "col_families": [],
+      "privileges": [],
+      "principal": {
+        "type": "group",
+        "name": "sd00_xlx001"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "834-hbase-fb00_xda085-8",
+      "rangerPolicyId": 834,
+      "rangerPolicyName": "fb00_xoi022",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "fb00_*oi022*",
+      "col_families": [],
+      "privileges": [],
+      "principal": {
+        "type": "group",
+        "name": "fb00_xda085"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "834-hbase-fb00_xda126-9",
+      "rangerPolicyId": 834,
+      "rangerPolicyName": "fb00_xoi022",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "fb00_*oi022*",
+      "col_families": [],
+      "privileges": [],
+      "principal": {
+        "type": "group",
+        "name": "fb00_xda126"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "834-hbase-fb00_xda017-10",
+      "rangerPolicyId": 834,
+      "rangerPolicyName": "fb00_xoi022",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "fb00_*oi022*",
+      "col_families": [],
+      "privileges": [],
+      "principal": {
+        "type": "group",
+        "name": "fb00_xda017"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "834-hbase-qqsens-11",
+      "rangerPolicyId": 834,
+      "rangerPolicyName": "fb00_xoi022",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "fb00_*oi022*",
+      "col_families": [],
+      "privileges": [],
+      "principal": {
+        "type": "group",
+        "name": "qqsens"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "834-hbase-fb00_xda062-12",
+      "rangerPolicyId": 834,
+      "rangerPolicyName": "fb00_xoi022",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "fb00_*oi022*",
+      "col_families": [],
+      "privileges": [],
+      "principal": {
+        "type": "group",
+        "name": "fb00_xda062"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "834-hbase-fb00_xpr203-13",
+      "rangerPolicyId": 834,
+      "rangerPolicyName": "fb00_xoi022",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "fb00_*oi022*",
+      "col_families": [],
+      "privileges": [],
+      "principal": {
+        "type": "group",
+        "name": "fb00_xpr203"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "834-hbase-fb00_xda144-14",
+      "rangerPolicyId": 834,
+      "rangerPolicyName": "fb00_xoi022",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "fb00_*oi022*",
+      "col_families": [],
+      "privileges": [],
+      "principal": {
+        "type": "group",
+        "name": "fb00_xda144"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "834-hbase-fb00_xda143-15",
+      "rangerPolicyId": 834,
+      "rangerPolicyName": "fb00_xoi022",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "fb00_*oi022*",
+      "col_families": [],
+      "privileges": [],
+      "principal": {
+        "type": "group",
+        "name": "fb00_xda143"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "834-hbase-fb00_xda108-16",
+      "rangerPolicyId": 834,
+      "rangerPolicyName": "fb00_xoi022",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "fb00_*oi022*",
+      "col_families": [],
+      "privileges": [],
+      "principal": {
+        "type": "group",
+        "name": "fb00_xda108"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "834-hbase-fb00_xoi033-17",
+      "rangerPolicyId": 834,
+      "rangerPolicyName": "fb00_xoi022",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "fb00_*oi022*",
+      "col_families": [],
+      "privileges": [],
+      "principal": {
+        "type": "group",
+        "name": "fb00_xoi033"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "834-hbase-fb00_xda042-18",
+      "rangerPolicyId": 834,
+      "rangerPolicyName": "fb00_xoi022",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "fb00_*oi022*",
+      "col_families": [],
+      "privileges": [],
+      "principal": {
+        "type": "group",
+        "name": "fb00_xda042"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "834-hbase-fb00_xpx091-19",
+      "rangerPolicyId": 834,
+      "rangerPolicyName": "fb00_xoi022",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "fb00_*oi022*",
+      "col_families": [],
+      "privileges": [],
+      "principal": {
+        "type": "group",
+        "name": "fb00_xpx091"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "834-hbase-fb00_xda107-20",
+      "rangerPolicyId": 834,
+      "rangerPolicyName": "fb00_xoi022",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "fb00_*oi022*",
+      "col_families": [],
+      "privileges": [],
+      "principal": {
+        "type": "group",
+        "name": "fb00_xda107"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "835-hbase-fb00_xoi025-1",
+      "rangerPolicyId": 835,
+      "rangerPolicyName": "fb00_xoi025",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "fb00_*oi025*",
+      "col_families": [],
+      "privileges": [],
+      "principal": {
+        "type": "group",
+        "name": "fb00_xoi025"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "836-hbase-fb00_xoi033-1",
+      "rangerPolicyId": 836,
+      "rangerPolicyName": "fb00_xoi033",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "fb00_*oi033*",
+      "col_families": [],
+      "privileges": [],
+      "principal": {
+        "type": "group",
+        "name": "fb00_xoi033"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "836-hbase-fb00_xpr203-2",
+      "rangerPolicyId": 836,
+      "rangerPolicyName": "fb00_xoi033",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "fb00_*oi033*",
+      "col_families": [],
+      "privileges": [],
+      "principal": {
+        "type": "group",
+        "name": "fb00_xpr203"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    }
+  ],
+  "identity_map": {},
+  "generated_sql": "-- \u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n-- \u2551  Unity Catalog Migration Script                          \u2551\n-- \u2551  Generated by Ranger \u2192 UC Migrator                       \u2551\n-- \u2551  Source: cm_hbase\n-- \u2551  Target Catalog: main\n-- \u2551  Date: 2026-05-21\n-- \u2551  Policies: 0 of 53\n-- \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\n\n",
+  "gap_analysis": [
+    {
+      "category": "Delegate Admin",
+      "severity": "warning",
+      "count": 6,
+      "description": "Ranger delegateAdmin allows principals to manage policies for their resources. Unity Catalog uses MANAGE privilege instead.",
+      "items": [
+        {
+          "resource": "default.prospects",
+          "principal": "pr00_xbgdta",
+          "detail": "Has delegateAdmin in Ranger"
+        },
+        {
+          "resource": "default.prospects",
+          "principal": "hbase",
+          "detail": "Has delegateAdmin in Ranger"
+        },
+        {
+          "resource": "default.prospects",
+          "principal": "hive",
+          "detail": "Has delegateAdmin in Ranger"
+        },
+        {
+          "resource": "default.invoices",
+          "principal": "pr00_xbgdta",
+          "detail": "Has delegateAdmin in Ranger"
+        },
+        {
+          "resource": "default.invoices",
+          "principal": "hbase",
+          "detail": "Has delegateAdmin in Ranger"
+        },
+        {
+          "resource": "default.invoices",
+          "principal": "hive",
+          "detail": "Has delegateAdmin in Ranger"
+        }
+      ],
+      "remediation": "Grant MANAGE privilege on the corresponding UC object, or assign the principal as a metastore/catalog admin if broader admin access is needed."
+    }
+  ],
   "parsed_data": {
     "results": [
       {
@@ -1181,1056 +2296,5 @@
     "serviceType": "hbase",
     "clusterName": "unknown",
     "totalRangerPolicies": 19
-  },
-  "policy_items": [
-    {
-      "id": "4-hbase-pr00_xbgdta-1",
-      "rangerPolicyId": 4,
-      "rangerPolicyName": "all - table, column-family, column",
-      "rangerPolicyDesc": "",
-      "type": "hbase_grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": "prospects",
-      "col_families": [],
-      "privileges": [],
-      "principal": {
-        "type": "group",
-        "name": "pr00_xbgdta"
-      },
-      "delegateAdmin": true,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "4-hbase-hbase-2",
-      "rangerPolicyId": 4,
-      "rangerPolicyName": "all - table, column-family, column",
-      "rangerPolicyDesc": "",
-      "type": "hbase_grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": "prospects",
-      "col_families": [],
-      "privileges": [],
-      "principal": {
-        "type": "user",
-        "name": "hbase"
-      },
-      "delegateAdmin": true,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "4-hbase-hive-3",
-      "rangerPolicyId": 4,
-      "rangerPolicyName": "all - table, column-family, column",
-      "rangerPolicyDesc": "",
-      "type": "hbase_grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": "prospects",
-      "col_families": [],
-      "privileges": [],
-      "principal": {
-        "type": "user",
-        "name": "hive"
-      },
-      "delegateAdmin": true,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "4-hbase-pr00_xbgdta-4",
-      "rangerPolicyId": 4,
-      "rangerPolicyName": "all - table, column-family, column",
-      "rangerPolicyDesc": "",
-      "type": "hbase_grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": "invoices",
-      "col_families": [],
-      "privileges": [],
-      "principal": {
-        "type": "group",
-        "name": "pr00_xbgdta"
-      },
-      "delegateAdmin": true,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "4-hbase-hbase-5",
-      "rangerPolicyId": 4,
-      "rangerPolicyName": "all - table, column-family, column",
-      "rangerPolicyDesc": "",
-      "type": "hbase_grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": "invoices",
-      "col_families": [],
-      "privileges": [],
-      "principal": {
-        "type": "user",
-        "name": "hbase"
-      },
-      "delegateAdmin": true,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "4-hbase-hive-6",
-      "rangerPolicyId": 4,
-      "rangerPolicyName": "all - table, column-family, column",
-      "rangerPolicyDesc": "",
-      "type": "hbase_grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": "invoices",
-      "col_families": [],
-      "privileges": [],
-      "principal": {
-        "type": "user",
-        "name": "hive"
-      },
-      "delegateAdmin": true,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "4-hbase-rangerlookup-7",
-      "rangerPolicyId": 4,
-      "rangerPolicyName": "all - table, column-family, column",
-      "rangerPolicyDesc": "",
-      "type": "hbase_grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": "prospects",
-      "col_families": [],
-      "privileges": [],
-      "principal": {
-        "type": "user",
-        "name": "rangerlookup"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "4-hbase-rangerlookup-8",
-      "rangerPolicyId": 4,
-      "rangerPolicyName": "all - table, column-family, column",
-      "rangerPolicyDesc": "",
-      "type": "hbase_grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": "invoices",
-      "col_families": [],
-      "privileges": [],
-      "principal": {
-        "type": "user",
-        "name": "rangerlookup"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "4-hbase-qqsens-9",
-      "rangerPolicyId": 4,
-      "rangerPolicyName": "all - table, column-family, column",
-      "rangerPolicyDesc": "",
-      "type": "hbase_grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": "prospects",
-      "col_families": [],
-      "privileges": [],
-      "principal": {
-        "type": "group",
-        "name": "qqsens"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "4-hbase-fb00_xbgdta-10",
-      "rangerPolicyId": 4,
-      "rangerPolicyName": "all - table, column-family, column",
-      "rangerPolicyDesc": "",
-      "type": "hbase_grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": "prospects",
-      "col_families": [],
-      "privileges": [],
-      "principal": {
-        "type": "group",
-        "name": "fb00_xbgdta"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "4-hbase-qqsens-11",
-      "rangerPolicyId": 4,
-      "rangerPolicyName": "all - table, column-family, column",
-      "rangerPolicyDesc": "",
-      "type": "hbase_grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": "invoices",
-      "col_families": [],
-      "privileges": [],
-      "principal": {
-        "type": "group",
-        "name": "qqsens"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "4-hbase-fb00_xbgdta-12",
-      "rangerPolicyId": 4,
-      "rangerPolicyName": "all - table, column-family, column",
-      "rangerPolicyDesc": "",
-      "type": "hbase_grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": "invoices",
-      "col_families": [],
-      "privileges": [],
-      "principal": {
-        "type": "group",
-        "name": "fb00_xbgdta"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "5-hbase-atlas-1",
-      "rangerPolicyId": 5,
-      "rangerPolicyName": "ATLAS_HBASE_TABLES",
-      "rangerPolicyDesc": "",
-      "type": "hbase_grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": "atlas_janus",
-      "col_families": [],
-      "privileges": [],
-      "principal": {
-        "type": "user",
-        "name": "atlas"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "5-hbase-atlas-2",
-      "rangerPolicyId": 5,
-      "rangerPolicyName": "ATLAS_HBASE_TABLES",
-      "rangerPolicyDesc": "",
-      "type": "hbase_grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": "ATLAS_ENTITY_AUDIT_EVENTS",
-      "col_families": [],
-      "privileges": [],
-      "principal": {
-        "type": "user",
-        "name": "atlas"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "782-hbase-{USER}-1",
-      "rangerPolicyId": 782,
-      "rangerPolicyName": "SYSTEM",
-      "rangerPolicyDesc": "",
-      "type": "hbase_grant",
-      "catalog": "main",
-      "schema": "SYSTEM",
-      "table": null,
-      "col_families": [],
-      "privileges": [],
-      "principal": {
-        "type": "user",
-        "name": "{USER}"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "821-hbase-fb00_xda017-1",
-      "rangerPolicyId": 821,
-      "rangerPolicyName": "fb00_xda017",
-      "rangerPolicyDesc": "",
-      "type": "hbase_grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": "fb00_*da017*",
-      "col_families": [],
-      "privileges": [],
-      "principal": {
-        "type": "group",
-        "name": "fb00_xda017"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "821-hbase-xagcla-2",
-      "rangerPolicyId": 821,
-      "rangerPolicyName": "fb00_xda017",
-      "rangerPolicyDesc": "",
-      "type": "hbase_grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": "fb00_*da017*",
-      "col_families": [],
-      "privileges": [],
-      "principal": {
-        "type": "group",
-        "name": "xagcla"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "822-hbase-fb00_xda029-1",
-      "rangerPolicyId": 822,
-      "rangerPolicyName": "fb00_xda029",
-      "rangerPolicyDesc": "",
-      "type": "hbase_grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": "fb00_*da029*",
-      "col_families": [],
-      "privileges": [],
-      "principal": {
-        "type": "group",
-        "name": "fb00_xda029"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "823-hbase-fb00_xda034-1",
-      "rangerPolicyId": 823,
-      "rangerPolicyName": "fb00_xda034",
-      "rangerPolicyDesc": "",
-      "type": "hbase_grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": "fb00_*da034*",
-      "col_families": [],
-      "privileges": [],
-      "principal": {
-        "type": "group",
-        "name": "fb00_xda034"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "824-hbase-fb00_xda035-1",
-      "rangerPolicyId": 824,
-      "rangerPolicyName": "fb00_xda035",
-      "rangerPolicyDesc": "",
-      "type": "hbase_grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": "fb00_*da035*",
-      "col_families": [],
-      "privileges": [],
-      "principal": {
-        "type": "group",
-        "name": "fb00_xda035"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "825-hbase-fb00_xda041-1",
-      "rangerPolicyId": 825,
-      "rangerPolicyName": "fb00_xda041",
-      "rangerPolicyDesc": "",
-      "type": "hbase_grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": "fb00_*da041*",
-      "col_families": [],
-      "privileges": [],
-      "principal": {
-        "type": "group",
-        "name": "fb00_xda041"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "826-hbase-fb00_xda043-1",
-      "rangerPolicyId": 826,
-      "rangerPolicyName": "fb00_xda043",
-      "rangerPolicyDesc": "",
-      "type": "hbase_grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": "fb00_*da043*",
-      "col_families": [],
-      "privileges": [],
-      "principal": {
-        "type": "group",
-        "name": "fb00_xda043"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "827-hbase-fb00_xda052-1",
-      "rangerPolicyId": 827,
-      "rangerPolicyName": "fb00_xda052",
-      "rangerPolicyDesc": "",
-      "type": "hbase_grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": "fb00_*da052*",
-      "col_families": [],
-      "privileges": [],
-      "principal": {
-        "type": "group",
-        "name": "fb00_xda052"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "828-hbase-fb00_xda060-1",
-      "rangerPolicyId": 828,
-      "rangerPolicyName": "fb00_xda060",
-      "rangerPolicyDesc": "",
-      "type": "hbase_grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": "fb00_*da060*",
-      "col_families": [],
-      "privileges": [],
-      "principal": {
-        "type": "group",
-        "name": "fb00_xda060"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "829-hbase-fb00_xda066-1",
-      "rangerPolicyId": 829,
-      "rangerPolicyName": "fb00_xda066",
-      "rangerPolicyDesc": "",
-      "type": "hbase_grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": "fb00_*da066*",
-      "col_families": [],
-      "privileges": [],
-      "principal": {
-        "type": "group",
-        "name": "fb00_xda066"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "830-hbase-fb00_xda085-1",
-      "rangerPolicyId": 830,
-      "rangerPolicyName": "fb00_xda085",
-      "rangerPolicyDesc": "",
-      "type": "hbase_grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": "fb00_*da085*",
-      "col_families": [],
-      "privileges": [],
-      "principal": {
-        "type": "group",
-        "name": "fb00_xda085"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "831-hbase-fb00_xda092-1",
-      "rangerPolicyId": 831,
-      "rangerPolicyName": "fb00_xda092",
-      "rangerPolicyDesc": "",
-      "type": "hbase_grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": "fb00_*da092*",
-      "col_families": [],
-      "privileges": [],
-      "principal": {
-        "type": "group",
-        "name": "fb00_xda092"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "832-hbase-fb00_xda126-1",
-      "rangerPolicyId": 832,
-      "rangerPolicyName": "fb00_xda126",
-      "rangerPolicyDesc": "",
-      "type": "hbase_grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": "fb00_*da126*",
-      "col_families": [],
-      "privileges": [],
-      "principal": {
-        "type": "group",
-        "name": "fb00_xda126"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "832-hbase-fb00_xda085-2",
-      "rangerPolicyId": 832,
-      "rangerPolicyName": "fb00_xda126",
-      "rangerPolicyDesc": "",
-      "type": "hbase_grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": "fb00_*da126*",
-      "col_families": [],
-      "privileges": [],
-      "principal": {
-        "type": "group",
-        "name": "fb00_xda085"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "833-hbase-fb00_xds020-1",
-      "rangerPolicyId": 833,
-      "rangerPolicyName": "fb00_xds020",
-      "rangerPolicyDesc": "",
-      "type": "hbase_grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": "fb00_*ds020*",
-      "col_families": [],
-      "privileges": [],
-      "principal": {
-        "type": "group",
-        "name": "fb00_xds020"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "834-hbase-fb00_xoi022-1",
-      "rangerPolicyId": 834,
-      "rangerPolicyName": "fb00_xoi022",
-      "rangerPolicyDesc": "",
-      "type": "hbase_grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": "fb00_*oi022*",
-      "col_families": [],
-      "privileges": [],
-      "principal": {
-        "type": "group",
-        "name": "fb00_xoi022"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "834-hbase-fb00_braff-2",
-      "rangerPolicyId": 834,
-      "rangerPolicyName": "fb00_xoi022",
-      "rangerPolicyDesc": "",
-      "type": "hbase_grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": "fb00_*oi022*",
-      "col_families": [],
-      "privileges": [],
-      "principal": {
-        "type": "group",
-        "name": "fb00_braff"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "834-hbase-fb00_bbrut-3",
-      "rangerPolicyId": 834,
-      "rangerPolicyName": "fb00_xoi022",
-      "rangerPolicyDesc": "",
-      "type": "hbase_grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": "fb00_*oi022*",
-      "col_families": [],
-      "privileges": [],
-      "principal": {
-        "type": "group",
-        "name": "fb00_bbrut"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "834-hbase-fb00_xoi099-4",
-      "rangerPolicyId": 834,
-      "rangerPolicyName": "fb00_xoi022",
-      "rangerPolicyDesc": "",
-      "type": "hbase_grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": "fb00_*oi022*",
-      "col_families": [],
-      "privileges": [],
-      "principal": {
-        "type": "group",
-        "name": "fb00_xoi099"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "834-hbase-fb00_xoi098-5",
-      "rangerPolicyId": 834,
-      "rangerPolicyName": "fb00_xoi022",
-      "rangerPolicyDesc": "",
-      "type": "hbase_grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": "fb00_*oi022*",
-      "col_families": [],
-      "privileges": [],
-      "principal": {
-        "type": "group",
-        "name": "fb00_xoi098"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "834-hbase-fb00_xoi097-6",
-      "rangerPolicyId": 834,
-      "rangerPolicyName": "fb00_xoi022",
-      "rangerPolicyDesc": "",
-      "type": "hbase_grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": "fb00_*oi022*",
-      "col_families": [],
-      "privileges": [],
-      "principal": {
-        "type": "group",
-        "name": "fb00_xoi097"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "834-hbase-sd00_xlx001-7",
-      "rangerPolicyId": 834,
-      "rangerPolicyName": "fb00_xoi022",
-      "rangerPolicyDesc": "",
-      "type": "hbase_grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": "fb00_*oi022*",
-      "col_families": [],
-      "privileges": [],
-      "principal": {
-        "type": "group",
-        "name": "sd00_xlx001"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "834-hbase-fb00_xda085-8",
-      "rangerPolicyId": 834,
-      "rangerPolicyName": "fb00_xoi022",
-      "rangerPolicyDesc": "",
-      "type": "hbase_grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": "fb00_*oi022*",
-      "col_families": [],
-      "privileges": [],
-      "principal": {
-        "type": "group",
-        "name": "fb00_xda085"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "834-hbase-fb00_xda126-9",
-      "rangerPolicyId": 834,
-      "rangerPolicyName": "fb00_xoi022",
-      "rangerPolicyDesc": "",
-      "type": "hbase_grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": "fb00_*oi022*",
-      "col_families": [],
-      "privileges": [],
-      "principal": {
-        "type": "group",
-        "name": "fb00_xda126"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "834-hbase-fb00_xda017-10",
-      "rangerPolicyId": 834,
-      "rangerPolicyName": "fb00_xoi022",
-      "rangerPolicyDesc": "",
-      "type": "hbase_grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": "fb00_*oi022*",
-      "col_families": [],
-      "privileges": [],
-      "principal": {
-        "type": "group",
-        "name": "fb00_xda017"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "834-hbase-qqsens-11",
-      "rangerPolicyId": 834,
-      "rangerPolicyName": "fb00_xoi022",
-      "rangerPolicyDesc": "",
-      "type": "hbase_grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": "fb00_*oi022*",
-      "col_families": [],
-      "privileges": [],
-      "principal": {
-        "type": "group",
-        "name": "qqsens"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "834-hbase-fb00_xda062-12",
-      "rangerPolicyId": 834,
-      "rangerPolicyName": "fb00_xoi022",
-      "rangerPolicyDesc": "",
-      "type": "hbase_grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": "fb00_*oi022*",
-      "col_families": [],
-      "privileges": [],
-      "principal": {
-        "type": "group",
-        "name": "fb00_xda062"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "834-hbase-fb00_xpr203-13",
-      "rangerPolicyId": 834,
-      "rangerPolicyName": "fb00_xoi022",
-      "rangerPolicyDesc": "",
-      "type": "hbase_grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": "fb00_*oi022*",
-      "col_families": [],
-      "privileges": [],
-      "principal": {
-        "type": "group",
-        "name": "fb00_xpr203"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "834-hbase-fb00_xda144-14",
-      "rangerPolicyId": 834,
-      "rangerPolicyName": "fb00_xoi022",
-      "rangerPolicyDesc": "",
-      "type": "hbase_grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": "fb00_*oi022*",
-      "col_families": [],
-      "privileges": [],
-      "principal": {
-        "type": "group",
-        "name": "fb00_xda144"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "834-hbase-fb00_xda143-15",
-      "rangerPolicyId": 834,
-      "rangerPolicyName": "fb00_xoi022",
-      "rangerPolicyDesc": "",
-      "type": "hbase_grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": "fb00_*oi022*",
-      "col_families": [],
-      "privileges": [],
-      "principal": {
-        "type": "group",
-        "name": "fb00_xda143"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "834-hbase-fb00_xda108-16",
-      "rangerPolicyId": 834,
-      "rangerPolicyName": "fb00_xoi022",
-      "rangerPolicyDesc": "",
-      "type": "hbase_grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": "fb00_*oi022*",
-      "col_families": [],
-      "privileges": [],
-      "principal": {
-        "type": "group",
-        "name": "fb00_xda108"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "834-hbase-fb00_xoi033-17",
-      "rangerPolicyId": 834,
-      "rangerPolicyName": "fb00_xoi022",
-      "rangerPolicyDesc": "",
-      "type": "hbase_grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": "fb00_*oi022*",
-      "col_families": [],
-      "privileges": [],
-      "principal": {
-        "type": "group",
-        "name": "fb00_xoi033"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "834-hbase-fb00_xda042-18",
-      "rangerPolicyId": 834,
-      "rangerPolicyName": "fb00_xoi022",
-      "rangerPolicyDesc": "",
-      "type": "hbase_grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": "fb00_*oi022*",
-      "col_families": [],
-      "privileges": [],
-      "principal": {
-        "type": "group",
-        "name": "fb00_xda042"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "834-hbase-fb00_xpx091-19",
-      "rangerPolicyId": 834,
-      "rangerPolicyName": "fb00_xoi022",
-      "rangerPolicyDesc": "",
-      "type": "hbase_grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": "fb00_*oi022*",
-      "col_families": [],
-      "privileges": [],
-      "principal": {
-        "type": "group",
-        "name": "fb00_xpx091"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "834-hbase-fb00_xda107-20",
-      "rangerPolicyId": 834,
-      "rangerPolicyName": "fb00_xoi022",
-      "rangerPolicyDesc": "",
-      "type": "hbase_grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": "fb00_*oi022*",
-      "col_families": [],
-      "privileges": [],
-      "principal": {
-        "type": "group",
-        "name": "fb00_xda107"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "835-hbase-fb00_xoi025-1",
-      "rangerPolicyId": 835,
-      "rangerPolicyName": "fb00_xoi025",
-      "rangerPolicyDesc": "",
-      "type": "hbase_grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": "fb00_*oi025*",
-      "col_families": [],
-      "privileges": [],
-      "principal": {
-        "type": "group",
-        "name": "fb00_xoi025"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "836-hbase-fb00_xoi033-1",
-      "rangerPolicyId": 836,
-      "rangerPolicyName": "fb00_xoi033",
-      "rangerPolicyDesc": "",
-      "type": "hbase_grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": "fb00_*oi033*",
-      "col_families": [],
-      "privileges": [],
-      "principal": {
-        "type": "group",
-        "name": "fb00_xoi033"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "836-hbase-fb00_xpr203-2",
-      "rangerPolicyId": 836,
-      "rangerPolicyName": "fb00_xoi033",
-      "rangerPolicyDesc": "",
-      "type": "hbase_grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": "fb00_*oi033*",
-      "col_families": [],
-      "privileges": [],
-      "principal": {
-        "type": "group",
-        "name": "fb00_xpr203"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    }
-  ],
-  "identity_map": {
-    "fb00_bbrut": "fb00_bbrut",
-    "fb00_braff": "fb00_braff",
-    "fb00_xbgdta": "fb00_xbgdta",
-    "fb00_xda017": "fb00_xda017",
-    "fb00_xda029": "fb00_xda029",
-    "fb00_xda034": "fb00_xda034",
-    "fb00_xda035": "fb00_xda035",
-    "fb00_xda041": "fb00_xda041",
-    "fb00_xda042": "fb00_xda042",
-    "fb00_xda043": "fb00_xda043",
-    "fb00_xda052": "fb00_xda052",
-    "fb00_xda060": "fb00_xda060",
-    "fb00_xda062": "fb00_xda062",
-    "fb00_xda066": "fb00_xda066",
-    "fb00_xda085": "fb00_xda085",
-    "fb00_xda092": "fb00_xda092",
-    "fb00_xda107": "fb00_xda107",
-    "fb00_xda108": "fb00_xda108",
-    "fb00_xda126": "fb00_xda126",
-    "fb00_xda143": "fb00_xda143",
-    "fb00_xda144": "fb00_xda144",
-    "fb00_xds020": "fb00_xds020",
-    "fb00_xoi022": "fb00_xoi022",
-    "fb00_xoi025": "fb00_xoi025",
-    "fb00_xoi033": "fb00_xoi033",
-    "fb00_xoi097": "fb00_xoi097",
-    "fb00_xoi098": "fb00_xoi098",
-    "fb00_xoi099": "fb00_xoi099",
-    "fb00_xpr203": "fb00_xpr203",
-    "fb00_xpx091": "fb00_xpx091",
-    "pr00_xbgdta": "pr00_xbgdta",
-    "qqsens": "qqsens",
-    "sd00_xlx001": "sd00_xlx001",
-    "xagcla": "xagcla",
-    "atlas": "atlas",
-    "hbase": "hbase",
-    "hive": "hive",
-    "rangerlookup": "rangerlookup",
-    "{USER}": "{USER}"
-  },
-  "generated_sql": "-- \u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n-- \u2551  Unity Catalog Migration Script                          \u2551\n-- \u2551  Generated by Ranger \u2192 UC Migrator                       \u2551\n-- \u2551  Source: cm_hbase\n-- \u2551  Target Catalog: main\n-- \u2551  Date: 2026-05-21\n-- \u2551  Policies: 0 of 53\n-- \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\n\n"
+  }
 }

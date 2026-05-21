@@ -492,6 +492,67 @@ def parse_ranger_policies(json_data: dict[str, Any] | list[Any]) -> dict[str, An
                         })
             continue  # no row filters or masks for HBase
 
+        # ── URL resource → UC External Location grants (reuse hdfs_grant type) ──
+        url_vals = (resources.get("url") or {}).get("values") or []
+        if url_vals:
+            for item in policy.get("policyItems") or []:
+                principals = _principals(item.get("groups") or [], item.get("users") or [], item.get("roles") or [])
+                accesses = list(dict.fromkeys(
+                    HDFS_ACCESS_MAP.get(a["type"], "READ FILES")
+                    for a in (item.get("accesses") or [])
+                    if a.get("isAllowed")
+                ))
+                for p in principals:
+                    identities.add((p["type"], p["name"]))
+                for url_path in url_vals:
+                    for principal in principals:
+                        item_counter += 1
+                        results.append({
+                            "id": f'{policy.get("id")}-url-{principal["name"]}-{item_counter}',
+                            "rangerPolicyId": policy.get("id"),
+                            "rangerPolicyName": policy.get("name"),
+                            "rangerPolicyDesc": policy.get("description", ""),
+                            "type": "hdfs_grant",
+                            "path": url_path,
+                            "isRecursive": (resources.get("url") or {}).get("isRecursive", False),
+                            "schema": None,
+                            "table": None,
+                            "privileges": accesses,
+                            "principal": principal,
+                            "delegateAdmin": item.get("delegateAdmin", False),
+                            "enabled": is_enabled,
+                            "status": "pending",
+                        })
+            continue  # no row filters or masks for URL policies
+
+        # ── UDF resource → GRANT EXECUTE ON FUNCTION ──
+        udf_vals = (resources.get("udf") or {}).get("values") or []
+        if udf_vals:
+            udf_dbs = (resources.get("database") or {}).get("values") or ["default"]
+            for item in policy.get("policyItems") or []:
+                principals = _principals(item.get("groups") or [], item.get("users") or [], item.get("roles") or [])
+                for p in principals:
+                    identities.add((p["type"], p["name"]))
+                for udf_db in udf_dbs:
+                    for udf_name in udf_vals:
+                        for principal in principals:
+                            item_counter += 1
+                            results.append({
+                                "id": f'{policy.get("id")}-udf-{udf_db}-{udf_name}-{principal["name"]}-{item_counter}',
+                                "rangerPolicyId": policy.get("id"),
+                                "rangerPolicyName": policy.get("name"),
+                                "rangerPolicyDesc": policy.get("description", ""),
+                                "type": "udf_grant",
+                                "catalog": catalog,
+                                "schema": udf_db,
+                                "udf_name": udf_name,
+                                "principal": principal,
+                                "delegateAdmin": item.get("delegateAdmin", False),
+                                "enabled": is_enabled,
+                                "status": "pending",
+                            })
+            continue  # no row filters or masks for UDF policies
+
         # ── Resource-based grants (Hive / default) ──
         for item in policy.get("policyItems") or []:
             principals = _principals(item.get("groups") or [], item.get("users") or [], item.get("roles") or [])
@@ -702,6 +763,14 @@ def generate_uc_sql(
                 lines.append(f"GRANT {priv} ON {target} TO {principal};")
             if item.get("delegateAdmin"):
                 lines.append(f"-- Note: delegateAdmin=true. Consider MANAGE on {target} if admin delegation needed.")
+
+    elif t == "udf_grant":
+        udf_name = item.get("udf_name") or "unknown"
+        schema = item.get("schema") or "default"
+        lines.append(f"-- ⚠ Ensure function {cat}.{schema}.{udf_name} is registered in UC before granting.")
+        lines.append(f"GRANT EXECUTE ON FUNCTION `{cat}`.`{schema}`.`{udf_name}` TO {principal};")
+        if item.get("delegateAdmin"):
+            lines.append(f"-- Note: delegateAdmin=true. Consider granting MANAGE on FUNCTION {cat}.{schema}.{udf_name}.")
 
     elif t == "tag_set":
         schema = item.get("schema") or ""
@@ -1133,7 +1202,7 @@ def calculate_stats(policy_items: list[dict[str, Any]]) -> dict[str, Any]:
     stats = {
         "total": len(policy_items),
         "grants": 0, "denies": 0, "rowFilters": 0, "masks": 0,
-        "hdfsGrants": 0, "hbaseGrants": 0,
+        "hdfsGrants": 0, "hbaseGrants": 0, "udfGrants": 0,
         "tagSets": 0, "tagGrants": 0, "tagPlaceholders": 0,
         "approved": 0, "needsReview": 0, "pending": 0, "rejected": 0,
         "disabled": 0,
@@ -1148,6 +1217,7 @@ def calculate_stats(policy_items: list[dict[str, Any]]) -> dict[str, Any]:
         elif t == "column_mask": stats["masks"] += 1
         elif t == "hdfs_grant": stats["hdfsGrants"] += 1
         elif t == "hbase_grant": stats["hbaseGrants"] += 1
+        elif t == "udf_grant": stats["udfGrants"] += 1
         elif t == "tag_set": stats["tagSets"] += 1
         elif t == "tag_grant": stats["tagGrants"] += 1
         elif t == "tag_placeholder": stats["tagPlaceholders"] += 1

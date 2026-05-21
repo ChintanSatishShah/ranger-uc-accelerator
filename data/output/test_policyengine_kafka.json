@@ -1,12 +1,452 @@
 {
   "metadata": {
-    "timestamp": "2026-05-21T09:48:01.795156",
     "service_name": "kafkadev",
-    "cluster_name": "unknown",
-    "catalog_name": "main",
     "source_file": "test_policyengine_kafka.json",
-    "notes": ""
+    "archived_at": "2026-05-21",
+    "total_items": 15,
+    "stats": {
+      "total": 15,
+      "grants": 15,
+      "denies": 0,
+      "rowFilters": 0,
+      "masks": 0,
+      "hdfsGrants": 0,
+      "hbaseGrants": 0,
+      "udfGrants": 0,
+      "tagSets": 0,
+      "tagGrants": 0,
+      "tagPlaceholders": 0,
+      "approved": 0,
+      "needsReview": 0,
+      "pending": 15,
+      "rejected": 0,
+      "disabled": 0,
+      "schemaCount": 1,
+      "principalCount": 8,
+      "schemas": [
+        "default"
+      ],
+      "principals": [
+        "user1",
+        "user2",
+        "user3",
+        "user31",
+        "user32",
+        "user4",
+        "user5",
+        "user6"
+      ]
+    }
   },
+  "policy_items": [
+    {
+      "id": "10-grant-default-*-user1-1",
+      "rangerPolicyId": 10,
+      "rangerPolicyName": "10: test-topic publish/consume allowed",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "PUBLISH",
+        "CONSUME"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "user1"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "101-grant-default-*-user2-1",
+      "rangerPolicyId": 101,
+      "rangerPolicyName": "101: test-topic publish/consume allowed",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "PUBLISH",
+        "CONSUME"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "user2"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "102-grant-default-*-user3-1",
+      "rangerPolicyId": 102,
+      "rangerPolicyName": "102: test-topic publish/consume allowed",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "CONSUME"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "user3"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "103-grant-default-*-user4-1",
+      "rangerPolicyId": 103,
+      "rangerPolicyName": "103: test-topic publish/consume allowed",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "CONSUME"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "user4"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "103-grant-default-*-user5-2",
+      "rangerPolicyId": 103,
+      "rangerPolicyName": "103: test-topic publish/consume allowed",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "CONSUME"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "user5"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "104-grant-default-*-user6-1",
+      "rangerPolicyId": 104,
+      "rangerPolicyName": "104: test-topic publish/consume allowed",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "PUBLISH",
+        "CONSUME"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "user6"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "20-grant-default-*-user1-1",
+      "rangerPolicyId": 20,
+      "rangerPolicyName": "02: transation id",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "PUBLISH"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "user1"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "30-grant-default-*-user1-1",
+      "rangerPolicyId": 30,
+      "rangerPolicyName": "create/alter access for user1 on cluster-1",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "CREATE",
+        "ALTER"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "user1"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "301-grant-default-*-user31-1",
+      "rangerPolicyId": 301,
+      "rangerPolicyName": "Alter access for user31 on cluster-2",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "ALTER"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "user31"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "302-grant-default-*-user32-1",
+      "rangerPolicyId": 302,
+      "rangerPolicyName": "Alter access for user32 on cluster-1",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "ALTER"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "user32"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "40-grant-default-*-user1-1",
+      "rangerPolicyId": 40,
+      "rangerPolicyName": "delegationtoken",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "DESCRIBE"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "user1"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "50-grant-default-*-user1-1",
+      "rangerPolicyId": 50,
+      "rangerPolicyName": "consumergroup-1 access",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "CONSUME"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "user1"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "52-grant-default-*-user4-1",
+      "rangerPolicyId": 52,
+      "rangerPolicyName": "consumergroup-2 access for user4",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "CONSUME"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "user4"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "110-grant-default-*-user2-1",
+      "rangerPolicyId": 110,
+      "rangerPolicyName": "110: test-topic-1/2 consume allowed for user2",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "CONSUME"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "user2"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "111-grant-default-*-user2-1",
+      "rangerPolicyId": 111,
+      "rangerPolicyName": "110: new-topic-1/2 allowed for user2",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "CONSUME"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "user2"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    }
+  ],
+  "identity_map": {},
+  "generated_sql": "-- \u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n-- \u2551  Unity Catalog Migration Script                          \u2551\n-- \u2551  Generated by Ranger \u2192 UC Migrator                       \u2551\n-- \u2551  Source: kafkadev\n-- \u2551  Target Catalog: main\n-- \u2551  Date: 2026-05-21\n-- \u2551  Policies: 0 of 15\n-- \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\n\n",
+  "gap_analysis": [
+    {
+      "category": "Wildcard Table Access",
+      "severity": "warning",
+      "count": 15,
+      "description": "Ranger wildcard table policies (database.*) translate to schema-level grants in UC. Verify this is intentional.",
+      "items": [
+        {
+          "resource": "default.*",
+          "principal": "user1",
+          "detail": "Privileges: PUBLISH, CONSUME"
+        },
+        {
+          "resource": "default.*",
+          "principal": "user2",
+          "detail": "Privileges: PUBLISH, CONSUME"
+        },
+        {
+          "resource": "default.*",
+          "principal": "user3",
+          "detail": "Privileges: CONSUME"
+        },
+        {
+          "resource": "default.*",
+          "principal": "user4",
+          "detail": "Privileges: CONSUME"
+        },
+        {
+          "resource": "default.*",
+          "principal": "user5",
+          "detail": "Privileges: CONSUME"
+        },
+        {
+          "resource": "default.*",
+          "principal": "user6",
+          "detail": "Privileges: PUBLISH, CONSUME"
+        },
+        {
+          "resource": "default.*",
+          "principal": "user1",
+          "detail": "Privileges: PUBLISH"
+        },
+        {
+          "resource": "default.*",
+          "principal": "user1",
+          "detail": "Privileges: CREATE, ALTER"
+        },
+        {
+          "resource": "default.*",
+          "principal": "user31",
+          "detail": "Privileges: ALTER"
+        },
+        {
+          "resource": "default.*",
+          "principal": "user32",
+          "detail": "Privileges: ALTER"
+        },
+        {
+          "resource": "default.*",
+          "principal": "user1",
+          "detail": "Privileges: DESCRIBE"
+        },
+        {
+          "resource": "default.*",
+          "principal": "user1",
+          "detail": "Privileges: CONSUME"
+        },
+        {
+          "resource": "default.*",
+          "principal": "user4",
+          "detail": "Privileges: CONSUME"
+        },
+        {
+          "resource": "default.*",
+          "principal": "user2",
+          "detail": "Privileges: CONSUME"
+        },
+        {
+          "resource": "default.*",
+          "principal": "user2",
+          "detail": "Privileges: CONSUME"
+        }
+      ],
+      "remediation": "Review if schema-level grants are appropriate. Consider granting on specific tables for least-privilege access."
+    }
+  ],
   "parsed_data": {
     "results": [
       {
@@ -369,337 +809,5 @@
     "serviceType": "hive",
     "clusterName": "unknown",
     "totalRangerPolicies": 14
-  },
-  "policy_items": [
-    {
-      "id": "10-grant-default-*-user1-1",
-      "rangerPolicyId": 10,
-      "rangerPolicyName": "10: test-topic publish/consume allowed",
-      "rangerPolicyDesc": "",
-      "type": "grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": null,
-      "columns": null,
-      "privileges": [
-        "PUBLISH",
-        "CONSUME"
-      ],
-      "principal": {
-        "type": "user",
-        "name": "user1"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "101-grant-default-*-user2-1",
-      "rangerPolicyId": 101,
-      "rangerPolicyName": "101: test-topic publish/consume allowed",
-      "rangerPolicyDesc": "",
-      "type": "grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": null,
-      "columns": null,
-      "privileges": [
-        "PUBLISH",
-        "CONSUME"
-      ],
-      "principal": {
-        "type": "user",
-        "name": "user2"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "102-grant-default-*-user3-1",
-      "rangerPolicyId": 102,
-      "rangerPolicyName": "102: test-topic publish/consume allowed",
-      "rangerPolicyDesc": "",
-      "type": "grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": null,
-      "columns": null,
-      "privileges": [
-        "CONSUME"
-      ],
-      "principal": {
-        "type": "user",
-        "name": "user3"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "103-grant-default-*-user4-1",
-      "rangerPolicyId": 103,
-      "rangerPolicyName": "103: test-topic publish/consume allowed",
-      "rangerPolicyDesc": "",
-      "type": "grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": null,
-      "columns": null,
-      "privileges": [
-        "CONSUME"
-      ],
-      "principal": {
-        "type": "user",
-        "name": "user4"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "103-grant-default-*-user5-2",
-      "rangerPolicyId": 103,
-      "rangerPolicyName": "103: test-topic publish/consume allowed",
-      "rangerPolicyDesc": "",
-      "type": "grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": null,
-      "columns": null,
-      "privileges": [
-        "CONSUME"
-      ],
-      "principal": {
-        "type": "user",
-        "name": "user5"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "104-grant-default-*-user6-1",
-      "rangerPolicyId": 104,
-      "rangerPolicyName": "104: test-topic publish/consume allowed",
-      "rangerPolicyDesc": "",
-      "type": "grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": null,
-      "columns": null,
-      "privileges": [
-        "PUBLISH",
-        "CONSUME"
-      ],
-      "principal": {
-        "type": "user",
-        "name": "user6"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "20-grant-default-*-user1-1",
-      "rangerPolicyId": 20,
-      "rangerPolicyName": "02: transation id",
-      "rangerPolicyDesc": "",
-      "type": "grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": null,
-      "columns": null,
-      "privileges": [
-        "PUBLISH"
-      ],
-      "principal": {
-        "type": "user",
-        "name": "user1"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "30-grant-default-*-user1-1",
-      "rangerPolicyId": 30,
-      "rangerPolicyName": "create/alter access for user1 on cluster-1",
-      "rangerPolicyDesc": "",
-      "type": "grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": null,
-      "columns": null,
-      "privileges": [
-        "CREATE",
-        "ALTER"
-      ],
-      "principal": {
-        "type": "user",
-        "name": "user1"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "301-grant-default-*-user31-1",
-      "rangerPolicyId": 301,
-      "rangerPolicyName": "Alter access for user31 on cluster-2",
-      "rangerPolicyDesc": "",
-      "type": "grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": null,
-      "columns": null,
-      "privileges": [
-        "ALTER"
-      ],
-      "principal": {
-        "type": "user",
-        "name": "user31"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "302-grant-default-*-user32-1",
-      "rangerPolicyId": 302,
-      "rangerPolicyName": "Alter access for user32 on cluster-1",
-      "rangerPolicyDesc": "",
-      "type": "grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": null,
-      "columns": null,
-      "privileges": [
-        "ALTER"
-      ],
-      "principal": {
-        "type": "user",
-        "name": "user32"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "40-grant-default-*-user1-1",
-      "rangerPolicyId": 40,
-      "rangerPolicyName": "delegationtoken",
-      "rangerPolicyDesc": "",
-      "type": "grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": null,
-      "columns": null,
-      "privileges": [
-        "DESCRIBE"
-      ],
-      "principal": {
-        "type": "user",
-        "name": "user1"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "50-grant-default-*-user1-1",
-      "rangerPolicyId": 50,
-      "rangerPolicyName": "consumergroup-1 access",
-      "rangerPolicyDesc": "",
-      "type": "grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": null,
-      "columns": null,
-      "privileges": [
-        "CONSUME"
-      ],
-      "principal": {
-        "type": "user",
-        "name": "user1"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "52-grant-default-*-user4-1",
-      "rangerPolicyId": 52,
-      "rangerPolicyName": "consumergroup-2 access for user4",
-      "rangerPolicyDesc": "",
-      "type": "grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": null,
-      "columns": null,
-      "privileges": [
-        "CONSUME"
-      ],
-      "principal": {
-        "type": "user",
-        "name": "user4"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "110-grant-default-*-user2-1",
-      "rangerPolicyId": 110,
-      "rangerPolicyName": "110: test-topic-1/2 consume allowed for user2",
-      "rangerPolicyDesc": "",
-      "type": "grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": null,
-      "columns": null,
-      "privileges": [
-        "CONSUME"
-      ],
-      "principal": {
-        "type": "user",
-        "name": "user2"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "111-grant-default-*-user2-1",
-      "rangerPolicyId": 111,
-      "rangerPolicyName": "110: new-topic-1/2 allowed for user2",
-      "rangerPolicyDesc": "",
-      "type": "grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": null,
-      "columns": null,
-      "privileges": [
-        "CONSUME"
-      ],
-      "principal": {
-        "type": "user",
-        "name": "user2"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    }
-  ],
-  "identity_map": {
-    "user1": "user1",
-    "user2": "user2",
-    "user3": "user3",
-    "user31": "user31",
-    "user32": "user32",
-    "user4": "user4",
-    "user5": "user5",
-    "user6": "user6"
-  },
-  "generated_sql": "-- \u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n-- \u2551  Unity Catalog Migration Script                          \u2551\n-- \u2551  Generated by Ranger \u2192 UC Migrator                       \u2551\n-- \u2551  Source: kafkadev\n-- \u2551  Target Catalog: main\n-- \u2551  Date: 2026-05-21\n-- \u2551  Policies: 0 of 15\n-- \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\n\n"
+  }
 }

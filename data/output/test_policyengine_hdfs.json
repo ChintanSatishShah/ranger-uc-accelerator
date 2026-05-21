@@ -1,12 +1,470 @@
 {
   "metadata": {
-    "timestamp": "2026-05-21T09:48:01.795156",
     "service_name": "hdfsdev",
-    "cluster_name": "unknown",
-    "catalog_name": "main",
     "source_file": "test_policyengine_hdfs.json",
-    "notes": ""
+    "archived_at": "2026-05-21",
+    "total_items": 18,
+    "stats": {
+      "total": 18,
+      "grants": 0,
+      "denies": 0,
+      "rowFilters": 0,
+      "masks": 0,
+      "hdfsGrants": 18,
+      "hbaseGrants": 0,
+      "udfGrants": 0,
+      "tagSets": 0,
+      "tagGrants": 0,
+      "tagPlaceholders": 0,
+      "approved": 0,
+      "needsReview": 0,
+      "pending": 18,
+      "rejected": 0,
+      "disabled": 0,
+      "schemaCount": 0,
+      "principalCount": 12,
+      "schemas": [],
+      "principals": [
+        "finance",
+        "non-user1",
+        "non-user2",
+        "non-user3",
+        "non-user5",
+        "non-user6",
+        "non-user7",
+        "non-user8",
+        "public",
+        "user1",
+        "user2",
+        "user3"
+      ]
+    }
   },
+  "policy_items": [
+    {
+      "id": "10-hdfs-user1-1",
+      "rangerPolicyId": 10,
+      "rangerPolicyName": "allow-read-to-user1,user3 /test/restricted/",
+      "rangerPolicyDesc": "",
+      "type": "hdfs_grant",
+      "path": "/test/restricted/",
+      "isRecursive": true,
+      "schema": null,
+      "table": null,
+      "privileges": [
+        "READ FILES"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "user1"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "10-hdfs-user2-2",
+      "rangerPolicyId": 10,
+      "rangerPolicyName": "allow-read-to-user1,user3 /test/restricted/",
+      "rangerPolicyDesc": "",
+      "type": "hdfs_grant",
+      "path": "/test/restricted/",
+      "isRecursive": true,
+      "schema": null,
+      "table": null,
+      "privileges": [
+        "READ FILES"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "user2"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "10-hdfs-user3-3",
+      "rangerPolicyId": 10,
+      "rangerPolicyName": "allow-read-to-user1,user3 /test/restricted/",
+      "rangerPolicyDesc": "",
+      "type": "hdfs_grant",
+      "path": "/test/restricted/",
+      "isRecursive": true,
+      "schema": null,
+      "table": null,
+      "privileges": [
+        "READ FILES"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "user3"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "11-hdfs-public-1",
+      "rangerPolicyId": 11,
+      "rangerPolicyName": "allow-read-to-public /test/forbidden/",
+      "rangerPolicyDesc": "",
+      "type": "hdfs_grant",
+      "path": "/test/forbidden/",
+      "isRecursive": true,
+      "schema": null,
+      "table": null,
+      "privileges": [
+        "READ FILES"
+      ],
+      "principal": {
+        "type": "group",
+        "name": "public"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "20-hdfs-public-1",
+      "rangerPolicyId": 20,
+      "rangerPolicyName": "allow-read-to-user2 /test/restricted/",
+      "rangerPolicyDesc": "",
+      "type": "hdfs_grant",
+      "path": "/test/restricted/",
+      "isRecursive": true,
+      "schema": null,
+      "table": null,
+      "privileges": [
+        "READ FILES",
+        "WRITE FILES"
+      ],
+      "principal": {
+        "type": "group",
+        "name": "public"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "20-hdfs-user2-2",
+      "rangerPolicyId": 20,
+      "rangerPolicyName": "allow-read-to-user2 /test/restricted/",
+      "rangerPolicyDesc": "",
+      "type": "hdfs_grant",
+      "path": "/test/restricted/",
+      "isRecursive": true,
+      "schema": null,
+      "table": null,
+      "privileges": [
+        "READ FILES",
+        "WRITE FILES"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "user2"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "20-hdfs-non-user1-3",
+      "rangerPolicyId": 20,
+      "rangerPolicyName": "allow-read-to-user2 /test/restricted/",
+      "rangerPolicyDesc": "",
+      "type": "hdfs_grant",
+      "path": "/test/restricted/",
+      "isRecursive": true,
+      "schema": null,
+      "table": null,
+      "privileges": [
+        "READ FILES",
+        "WRITE FILES"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "non-user1"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "20-hdfs-non-user2-4",
+      "rangerPolicyId": 20,
+      "rangerPolicyName": "allow-read-to-user2 /test/restricted/",
+      "rangerPolicyDesc": "",
+      "type": "hdfs_grant",
+      "path": "/test/restricted/",
+      "isRecursive": true,
+      "schema": null,
+      "table": null,
+      "privileges": [
+        "READ FILES",
+        "WRITE FILES"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "non-user2"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "20-hdfs-non-user3-5",
+      "rangerPolicyId": 20,
+      "rangerPolicyName": "allow-read-to-user2 /test/restricted/",
+      "rangerPolicyDesc": "",
+      "type": "hdfs_grant",
+      "path": "/test/restricted/",
+      "isRecursive": true,
+      "schema": null,
+      "table": null,
+      "privileges": [
+        "READ FILES",
+        "WRITE FILES"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "non-user3"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "30-hdfs-public-1",
+      "rangerPolicyId": 30,
+      "rangerPolicyName": "deny-read-to-user3 /test/restricted/",
+      "rangerPolicyDesc": "",
+      "type": "hdfs_grant",
+      "path": "/test/restricted/",
+      "isRecursive": true,
+      "schema": null,
+      "table": null,
+      "privileges": [
+        "READ FILES"
+      ],
+      "principal": {
+        "type": "group",
+        "name": "public"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "30-hdfs-non-user5-2",
+      "rangerPolicyId": 30,
+      "rangerPolicyName": "deny-read-to-user3 /test/restricted/",
+      "rangerPolicyDesc": "",
+      "type": "hdfs_grant",
+      "path": "/test/restricted/",
+      "isRecursive": true,
+      "schema": null,
+      "table": null,
+      "privileges": [
+        "READ FILES"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "non-user5"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "30-hdfs-non-user6-3",
+      "rangerPolicyId": 30,
+      "rangerPolicyName": "deny-read-to-user3 /test/restricted/",
+      "rangerPolicyDesc": "",
+      "type": "hdfs_grant",
+      "path": "/test/restricted/",
+      "isRecursive": true,
+      "schema": null,
+      "table": null,
+      "privileges": [
+        "READ FILES"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "non-user6"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "30-hdfs-non-user7-4",
+      "rangerPolicyId": 30,
+      "rangerPolicyName": "deny-read-to-user3 /test/restricted/",
+      "rangerPolicyDesc": "",
+      "type": "hdfs_grant",
+      "path": "/test/restricted/",
+      "isRecursive": true,
+      "schema": null,
+      "table": null,
+      "privileges": [
+        "READ FILES"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "non-user7"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "30-hdfs-non-user8-5",
+      "rangerPolicyId": 30,
+      "rangerPolicyName": "deny-read-to-user3 /test/restricted/",
+      "rangerPolicyDesc": "",
+      "type": "hdfs_grant",
+      "path": "/test/restricted/",
+      "isRecursive": true,
+      "schema": null,
+      "table": null,
+      "privileges": [
+        "READ FILES"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "non-user8"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "1-hdfs-public-1",
+      "rangerPolicyId": 1,
+      "rangerPolicyName": "audit-all-access under /finance/restricted/",
+      "rangerPolicyDesc": "",
+      "type": "hdfs_grant",
+      "path": "/finance/restricted/",
+      "isRecursive": true,
+      "schema": null,
+      "table": null,
+      "privileges": [],
+      "principal": {
+        "type": "group",
+        "name": "public"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "2-hdfs-public-1",
+      "rangerPolicyId": 2,
+      "rangerPolicyName": "allow-read-to-all under /public/",
+      "rangerPolicyDesc": "",
+      "type": "hdfs_grant",
+      "path": "/public/*",
+      "isRecursive": true,
+      "schema": null,
+      "table": null,
+      "privileges": [
+        "READ FILES"
+      ],
+      "principal": {
+        "type": "group",
+        "name": "public"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "3-hdfs-finance-1",
+      "rangerPolicyId": 3,
+      "rangerPolicyName": "allow-read-to-finance under /finance/restricted",
+      "rangerPolicyDesc": "",
+      "type": "hdfs_grant",
+      "path": "/finance/restricted",
+      "isRecursive": true,
+      "schema": null,
+      "table": null,
+      "privileges": [
+        "READ FILES"
+      ],
+      "principal": {
+        "type": "group",
+        "name": "finance"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "4-hdfs-public-1",
+      "rangerPolicyId": 4,
+      "rangerPolicyName": "invalid policy with a single backslash",
+      "rangerPolicyDesc": "",
+      "type": "hdfs_grant",
+      "path": "\\",
+      "isRecursive": true,
+      "schema": null,
+      "table": null,
+      "privileges": [
+        "READ FILES"
+      ],
+      "principal": {
+        "type": "group",
+        "name": "public"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    }
+  ],
+  "identity_map": {},
+  "generated_sql": "-- \u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n-- \u2551  Unity Catalog Migration Script                          \u2551\n-- \u2551  Generated by Ranger \u2192 UC Migrator                       \u2551\n-- \u2551  Source: hdfsdev\n-- \u2551  Target Catalog: main\n-- \u2551  Date: 2026-05-21\n-- \u2551  Policies: 0 of 18\n-- \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\n\n",
+  "gap_analysis": [
+    {
+      "category": "isDenyAllElse Policies",
+      "severity": "critical",
+      "count": 2,
+      "description": "These policies use isDenyAllElse=true in Ranger, meaning all principals not explicitly listed are denied. Unity Catalog has no equivalent \u2014 generated grants will not restrict unlisted principals.",
+      "items": [
+        {
+          "resource": "allow-read-to-user1,user3 /test/restricted/",
+          "principal": "\u2014",
+          "detail": "isDenyAllElse=true in Ranger"
+        },
+        {
+          "resource": "deny-any-to-everybody /test/forbidden/",
+          "principal": "\u2014",
+          "detail": "isDenyAllElse=true in Ranger"
+        }
+      ],
+      "remediation": "Audit all principals with access to these resources in UC. Only grant access to explicitly listed principals."
+    },
+    {
+      "category": "Policy Conditions (Not Translated)",
+      "severity": "warning",
+      "count": 2,
+      "description": "These policies include conditions (e.g. ip-range, time-of-day, custom evaluators) that restrict access in Ranger but have no UC equivalent. Generated grants apply unconditionally.",
+      "items": [
+        {
+          "resource": "deny-read-to-user3 /test/restricted/",
+          "principal": "\u2014",
+          "detail": "Policy \"deny-read-to-user3 /test/restricted/\" has conditions [ScriptConditionEvaluator] with no UC equivalent \u2014 grants will apply unconditionally"
+        },
+        {
+          "resource": "allow-read-to-finance under /finance/restricted",
+          "principal": "\u2014",
+          "detail": "Policy \"allow-read-to-finance under /finance/restricted\" has conditions [ScriptConditionEvaluator] with no UC equivalent \u2014 grants will apply unconditionally"
+        }
+      ],
+      "remediation": "Enforce IP-range and context-based restrictions at the network or application layer. Review each affected policy carefully before executing the migration SQL."
+    }
+  ],
   "parsed_data": {
     "results": [
       {
@@ -480,403 +938,5 @@
     "serviceType": "hdfs",
     "clusterName": "unknown",
     "totalRangerPolicies": 9
-  },
-  "policy_items": [
-    {
-      "id": "10-hdfs-user1-1",
-      "rangerPolicyId": 10,
-      "rangerPolicyName": "allow-read-to-user1,user3 /test/restricted/",
-      "rangerPolicyDesc": "",
-      "type": "hdfs_grant",
-      "path": "/test/restricted/",
-      "isRecursive": true,
-      "schema": null,
-      "table": null,
-      "privileges": [
-        "READ FILES"
-      ],
-      "principal": {
-        "type": "user",
-        "name": "user1"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "10-hdfs-user2-2",
-      "rangerPolicyId": 10,
-      "rangerPolicyName": "allow-read-to-user1,user3 /test/restricted/",
-      "rangerPolicyDesc": "",
-      "type": "hdfs_grant",
-      "path": "/test/restricted/",
-      "isRecursive": true,
-      "schema": null,
-      "table": null,
-      "privileges": [
-        "READ FILES"
-      ],
-      "principal": {
-        "type": "user",
-        "name": "user2"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "10-hdfs-user3-3",
-      "rangerPolicyId": 10,
-      "rangerPolicyName": "allow-read-to-user1,user3 /test/restricted/",
-      "rangerPolicyDesc": "",
-      "type": "hdfs_grant",
-      "path": "/test/restricted/",
-      "isRecursive": true,
-      "schema": null,
-      "table": null,
-      "privileges": [
-        "READ FILES"
-      ],
-      "principal": {
-        "type": "user",
-        "name": "user3"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "11-hdfs-public-1",
-      "rangerPolicyId": 11,
-      "rangerPolicyName": "allow-read-to-public /test/forbidden/",
-      "rangerPolicyDesc": "",
-      "type": "hdfs_grant",
-      "path": "/test/forbidden/",
-      "isRecursive": true,
-      "schema": null,
-      "table": null,
-      "privileges": [
-        "READ FILES"
-      ],
-      "principal": {
-        "type": "group",
-        "name": "public"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "20-hdfs-public-1",
-      "rangerPolicyId": 20,
-      "rangerPolicyName": "allow-read-to-user2 /test/restricted/",
-      "rangerPolicyDesc": "",
-      "type": "hdfs_grant",
-      "path": "/test/restricted/",
-      "isRecursive": true,
-      "schema": null,
-      "table": null,
-      "privileges": [
-        "READ FILES",
-        "WRITE FILES"
-      ],
-      "principal": {
-        "type": "group",
-        "name": "public"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "20-hdfs-user2-2",
-      "rangerPolicyId": 20,
-      "rangerPolicyName": "allow-read-to-user2 /test/restricted/",
-      "rangerPolicyDesc": "",
-      "type": "hdfs_grant",
-      "path": "/test/restricted/",
-      "isRecursive": true,
-      "schema": null,
-      "table": null,
-      "privileges": [
-        "READ FILES",
-        "WRITE FILES"
-      ],
-      "principal": {
-        "type": "user",
-        "name": "user2"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "20-hdfs-non-user1-3",
-      "rangerPolicyId": 20,
-      "rangerPolicyName": "allow-read-to-user2 /test/restricted/",
-      "rangerPolicyDesc": "",
-      "type": "hdfs_grant",
-      "path": "/test/restricted/",
-      "isRecursive": true,
-      "schema": null,
-      "table": null,
-      "privileges": [
-        "READ FILES",
-        "WRITE FILES"
-      ],
-      "principal": {
-        "type": "user",
-        "name": "non-user1"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "20-hdfs-non-user2-4",
-      "rangerPolicyId": 20,
-      "rangerPolicyName": "allow-read-to-user2 /test/restricted/",
-      "rangerPolicyDesc": "",
-      "type": "hdfs_grant",
-      "path": "/test/restricted/",
-      "isRecursive": true,
-      "schema": null,
-      "table": null,
-      "privileges": [
-        "READ FILES",
-        "WRITE FILES"
-      ],
-      "principal": {
-        "type": "user",
-        "name": "non-user2"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "20-hdfs-non-user3-5",
-      "rangerPolicyId": 20,
-      "rangerPolicyName": "allow-read-to-user2 /test/restricted/",
-      "rangerPolicyDesc": "",
-      "type": "hdfs_grant",
-      "path": "/test/restricted/",
-      "isRecursive": true,
-      "schema": null,
-      "table": null,
-      "privileges": [
-        "READ FILES",
-        "WRITE FILES"
-      ],
-      "principal": {
-        "type": "user",
-        "name": "non-user3"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "30-hdfs-public-1",
-      "rangerPolicyId": 30,
-      "rangerPolicyName": "deny-read-to-user3 /test/restricted/",
-      "rangerPolicyDesc": "",
-      "type": "hdfs_grant",
-      "path": "/test/restricted/",
-      "isRecursive": true,
-      "schema": null,
-      "table": null,
-      "privileges": [
-        "READ FILES"
-      ],
-      "principal": {
-        "type": "group",
-        "name": "public"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "30-hdfs-non-user5-2",
-      "rangerPolicyId": 30,
-      "rangerPolicyName": "deny-read-to-user3 /test/restricted/",
-      "rangerPolicyDesc": "",
-      "type": "hdfs_grant",
-      "path": "/test/restricted/",
-      "isRecursive": true,
-      "schema": null,
-      "table": null,
-      "privileges": [
-        "READ FILES"
-      ],
-      "principal": {
-        "type": "user",
-        "name": "non-user5"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "30-hdfs-non-user6-3",
-      "rangerPolicyId": 30,
-      "rangerPolicyName": "deny-read-to-user3 /test/restricted/",
-      "rangerPolicyDesc": "",
-      "type": "hdfs_grant",
-      "path": "/test/restricted/",
-      "isRecursive": true,
-      "schema": null,
-      "table": null,
-      "privileges": [
-        "READ FILES"
-      ],
-      "principal": {
-        "type": "user",
-        "name": "non-user6"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "30-hdfs-non-user7-4",
-      "rangerPolicyId": 30,
-      "rangerPolicyName": "deny-read-to-user3 /test/restricted/",
-      "rangerPolicyDesc": "",
-      "type": "hdfs_grant",
-      "path": "/test/restricted/",
-      "isRecursive": true,
-      "schema": null,
-      "table": null,
-      "privileges": [
-        "READ FILES"
-      ],
-      "principal": {
-        "type": "user",
-        "name": "non-user7"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "30-hdfs-non-user8-5",
-      "rangerPolicyId": 30,
-      "rangerPolicyName": "deny-read-to-user3 /test/restricted/",
-      "rangerPolicyDesc": "",
-      "type": "hdfs_grant",
-      "path": "/test/restricted/",
-      "isRecursive": true,
-      "schema": null,
-      "table": null,
-      "privileges": [
-        "READ FILES"
-      ],
-      "principal": {
-        "type": "user",
-        "name": "non-user8"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "1-hdfs-public-1",
-      "rangerPolicyId": 1,
-      "rangerPolicyName": "audit-all-access under /finance/restricted/",
-      "rangerPolicyDesc": "",
-      "type": "hdfs_grant",
-      "path": "/finance/restricted/",
-      "isRecursive": true,
-      "schema": null,
-      "table": null,
-      "privileges": [],
-      "principal": {
-        "type": "group",
-        "name": "public"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "2-hdfs-public-1",
-      "rangerPolicyId": 2,
-      "rangerPolicyName": "allow-read-to-all under /public/",
-      "rangerPolicyDesc": "",
-      "type": "hdfs_grant",
-      "path": "/public/*",
-      "isRecursive": true,
-      "schema": null,
-      "table": null,
-      "privileges": [
-        "READ FILES"
-      ],
-      "principal": {
-        "type": "group",
-        "name": "public"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "3-hdfs-finance-1",
-      "rangerPolicyId": 3,
-      "rangerPolicyName": "allow-read-to-finance under /finance/restricted",
-      "rangerPolicyDesc": "",
-      "type": "hdfs_grant",
-      "path": "/finance/restricted",
-      "isRecursive": true,
-      "schema": null,
-      "table": null,
-      "privileges": [
-        "READ FILES"
-      ],
-      "principal": {
-        "type": "group",
-        "name": "finance"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "4-hdfs-public-1",
-      "rangerPolicyId": 4,
-      "rangerPolicyName": "invalid policy with a single backslash",
-      "rangerPolicyDesc": "",
-      "type": "hdfs_grant",
-      "path": "\\",
-      "isRecursive": true,
-      "schema": null,
-      "table": null,
-      "privileges": [
-        "READ FILES"
-      ],
-      "principal": {
-        "type": "group",
-        "name": "public"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    }
-  ],
-  "identity_map": {
-    "finance": "finance",
-    "public": "public",
-    "non-user1": "non-user1",
-    "non-user2": "non-user2",
-    "non-user3": "non-user3",
-    "non-user5": "non-user5",
-    "non-user6": "non-user6",
-    "non-user7": "non-user7",
-    "non-user8": "non-user8",
-    "user1": "user1",
-    "user2": "user2",
-    "user3": "user3"
-  },
-  "generated_sql": "-- \u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n-- \u2551  Unity Catalog Migration Script                          \u2551\n-- \u2551  Generated by Ranger \u2192 UC Migrator                       \u2551\n-- \u2551  Source: hdfsdev\n-- \u2551  Target Catalog: main\n-- \u2551  Date: 2026-05-21\n-- \u2551  Policies: 0 of 18\n-- \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\n\n"
+  }
 }

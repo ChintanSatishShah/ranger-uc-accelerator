@@ -1,12 +1,191 @@
 {
   "metadata": {
-    "timestamp": "2026-05-21T09:48:01.795156",
     "service_name": "hbasedev",
-    "cluster_name": "unknown",
-    "catalog_name": "main",
     "source_file": "test_policyengine_hbase_multiple_matching_policies.json",
-    "notes": ""
+    "archived_at": "2026-05-21",
+    "total_items": 6,
+    "stats": {
+      "total": 6,
+      "grants": 0,
+      "denies": 0,
+      "rowFilters": 0,
+      "masks": 0,
+      "hdfsGrants": 0,
+      "hbaseGrants": 6,
+      "udfGrants": 0,
+      "tagSets": 0,
+      "tagGrants": 0,
+      "tagPlaceholders": 0,
+      "approved": 0,
+      "needsReview": 0,
+      "pending": 6,
+      "rejected": 0,
+      "disabled": 0,
+      "schemaCount": 2,
+      "principalCount": 2,
+      "schemas": [
+        "_all_namespaces",
+        "default"
+      ],
+      "principals": [
+        "hrt_qa",
+        "user1"
+      ]
+    }
   },
+  "policy_items": [
+    {
+      "id": "1-hbase-user1-1",
+      "rangerPolicyId": 1,
+      "rangerPolicyName": "table=default,*; column-family=default,*; column=default, *: audit-all-access",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "default",
+      "col_families": [
+        "default",
+        "*"
+      ],
+      "privileges": [
+        "SELECT",
+        "MODIFY",
+        "CREATE",
+        "ALL PRIVILEGES"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "user1"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "1-hbase-user1-2",
+      "rangerPolicyId": 1,
+      "rangerPolicyName": "table=default,*; column-family=default,*; column=default, *: audit-all-access",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "_all_namespaces",
+      "table": null,
+      "col_families": [
+        "default",
+        "*"
+      ],
+      "privileges": [
+        "SELECT",
+        "MODIFY",
+        "CREATE",
+        "ALL PRIVILEGES"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "user1"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "1-hbase-hrt_qa-3",
+      "rangerPolicyId": 1,
+      "rangerPolicyName": "table=default,*; column-family=default,*; column=default, *: audit-all-access",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": "default",
+      "col_families": [
+        "default",
+        "*"
+      ],
+      "privileges": [
+        "SELECT"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "hrt_qa"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "1-hbase-hrt_qa-4",
+      "rangerPolicyId": 1,
+      "rangerPolicyName": "table=default,*; column-family=default,*; column=default, *: audit-all-access",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "_all_namespaces",
+      "table": null,
+      "col_families": [
+        "default",
+        "*"
+      ],
+      "privileges": [
+        "SELECT"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "hrt_qa"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "2-hbase-user1-1",
+      "rangerPolicyId": 2,
+      "rangerPolicyName": "table=*; column-family=*; column=*: audit-all-access",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "_all_namespaces",
+      "table": null,
+      "col_families": [],
+      "privileges": [
+        "SELECT",
+        "MODIFY",
+        "CREATE",
+        "ALL PRIVILEGES"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "user1"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "2-hbase-hrt_qa-2",
+      "rangerPolicyId": 2,
+      "rangerPolicyName": "table=*; column-family=*; column=*: audit-all-access",
+      "rangerPolicyDesc": "",
+      "type": "hbase_grant",
+      "catalog": "main",
+      "schema": "_all_namespaces",
+      "table": null,
+      "col_families": [],
+      "privileges": [
+        "SELECT",
+        "MODIFY"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "hrt_qa"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    }
+  ],
+  "identity_map": {},
+  "generated_sql": "-- \u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n-- \u2551  Unity Catalog Migration Script                          \u2551\n-- \u2551  Generated by Ranger \u2192 UC Migrator                       \u2551\n-- \u2551  Source: hbasedev\n-- \u2551  Target Catalog: main\n-- \u2551  Date: 2026-05-21\n-- \u2551  Policies: 0 of 6\n-- \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\n\n",
+  "gap_analysis": [],
   "parsed_data": {
     "results": [
       {
@@ -174,160 +353,5 @@
     "serviceType": "hbase",
     "clusterName": "unknown",
     "totalRangerPolicies": 2
-  },
-  "policy_items": [
-    {
-      "id": "1-hbase-user1-1",
-      "rangerPolicyId": 1,
-      "rangerPolicyName": "table=default,*; column-family=default,*; column=default, *: audit-all-access",
-      "rangerPolicyDesc": "",
-      "type": "hbase_grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": "default",
-      "col_families": [
-        "default",
-        "*"
-      ],
-      "privileges": [
-        "SELECT",
-        "MODIFY",
-        "CREATE",
-        "ALL PRIVILEGES"
-      ],
-      "principal": {
-        "type": "user",
-        "name": "user1"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "1-hbase-user1-2",
-      "rangerPolicyId": 1,
-      "rangerPolicyName": "table=default,*; column-family=default,*; column=default, *: audit-all-access",
-      "rangerPolicyDesc": "",
-      "type": "hbase_grant",
-      "catalog": "main",
-      "schema": "_all_namespaces",
-      "table": null,
-      "col_families": [
-        "default",
-        "*"
-      ],
-      "privileges": [
-        "SELECT",
-        "MODIFY",
-        "CREATE",
-        "ALL PRIVILEGES"
-      ],
-      "principal": {
-        "type": "user",
-        "name": "user1"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "1-hbase-hrt_qa-3",
-      "rangerPolicyId": 1,
-      "rangerPolicyName": "table=default,*; column-family=default,*; column=default, *: audit-all-access",
-      "rangerPolicyDesc": "",
-      "type": "hbase_grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": "default",
-      "col_families": [
-        "default",
-        "*"
-      ],
-      "privileges": [
-        "SELECT"
-      ],
-      "principal": {
-        "type": "user",
-        "name": "hrt_qa"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "1-hbase-hrt_qa-4",
-      "rangerPolicyId": 1,
-      "rangerPolicyName": "table=default,*; column-family=default,*; column=default, *: audit-all-access",
-      "rangerPolicyDesc": "",
-      "type": "hbase_grant",
-      "catalog": "main",
-      "schema": "_all_namespaces",
-      "table": null,
-      "col_families": [
-        "default",
-        "*"
-      ],
-      "privileges": [
-        "SELECT"
-      ],
-      "principal": {
-        "type": "user",
-        "name": "hrt_qa"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "2-hbase-user1-1",
-      "rangerPolicyId": 2,
-      "rangerPolicyName": "table=*; column-family=*; column=*: audit-all-access",
-      "rangerPolicyDesc": "",
-      "type": "hbase_grant",
-      "catalog": "main",
-      "schema": "_all_namespaces",
-      "table": null,
-      "col_families": [],
-      "privileges": [
-        "SELECT",
-        "MODIFY",
-        "CREATE",
-        "ALL PRIVILEGES"
-      ],
-      "principal": {
-        "type": "user",
-        "name": "user1"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "2-hbase-hrt_qa-2",
-      "rangerPolicyId": 2,
-      "rangerPolicyName": "table=*; column-family=*; column=*: audit-all-access",
-      "rangerPolicyDesc": "",
-      "type": "hbase_grant",
-      "catalog": "main",
-      "schema": "_all_namespaces",
-      "table": null,
-      "col_families": [],
-      "privileges": [
-        "SELECT",
-        "MODIFY"
-      ],
-      "principal": {
-        "type": "user",
-        "name": "hrt_qa"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    }
-  ],
-  "identity_map": {
-    "hrt_qa": "hrt_qa",
-    "user1": "user1"
-  },
-  "generated_sql": "-- \u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n-- \u2551  Unity Catalog Migration Script                          \u2551\n-- \u2551  Generated by Ranger \u2192 UC Migrator                       \u2551\n-- \u2551  Source: hbasedev\n-- \u2551  Target Catalog: main\n-- \u2551  Date: 2026-05-21\n-- \u2551  Policies: 0 of 6\n-- \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\n\n"
+  }
 }

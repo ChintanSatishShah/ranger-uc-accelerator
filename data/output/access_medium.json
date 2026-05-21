@@ -1,12 +1,349 @@
 {
   "metadata": {
-    "timestamp": "2026-05-21T09:48:01.795156",
     "service_name": "hive_prod",
-    "cluster_name": "unknown",
-    "catalog_name": "main",
     "source_file": "access_medium.json",
-    "notes": ""
+    "archived_at": "2026-05-21",
+    "total_items": 12,
+    "stats": {
+      "total": 12,
+      "grants": 9,
+      "denies": 3,
+      "rowFilters": 0,
+      "masks": 0,
+      "hdfsGrants": 0,
+      "hbaseGrants": 0,
+      "udfGrants": 0,
+      "tagSets": 0,
+      "tagGrants": 0,
+      "tagPlaceholders": 0,
+      "approved": 0,
+      "needsReview": 3,
+      "pending": 9,
+      "rejected": 0,
+      "disabled": 0,
+      "schemaCount": 1,
+      "principalCount": 3,
+      "schemas": [
+        "sales"
+      ],
+      "principals": [
+        "data_analysts",
+        "sales_manager@company.com",
+        "sales_team"
+      ]
+    }
   },
+  "policy_items": [
+    {
+      "id": "2-grant-sales-customers-sales_team-1",
+      "rangerPolicyId": 2,
+      "rangerPolicyName": "sales_schema_full_access",
+      "rangerPolicyDesc": "Medium policy - Sales team full access to sales schema tables",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "sales",
+      "table": "customers",
+      "columns": null,
+      "privileges": [
+        "SELECT",
+        "MODIFY",
+        "CREATE"
+      ],
+      "principal": {
+        "type": "group",
+        "name": "sales_team"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "2-grant-sales-customers-data_analysts-2",
+      "rangerPolicyId": 2,
+      "rangerPolicyName": "sales_schema_full_access",
+      "rangerPolicyDesc": "Medium policy - Sales team full access to sales schema tables",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "sales",
+      "table": "customers",
+      "columns": null,
+      "privileges": [
+        "SELECT",
+        "MODIFY",
+        "CREATE"
+      ],
+      "principal": {
+        "type": "group",
+        "name": "data_analysts"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "2-grant-sales-customers-sales_manager@company.com-3",
+      "rangerPolicyId": 2,
+      "rangerPolicyName": "sales_schema_full_access",
+      "rangerPolicyDesc": "Medium policy - Sales team full access to sales schema tables",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "sales",
+      "table": "customers",
+      "columns": null,
+      "privileges": [
+        "SELECT",
+        "MODIFY",
+        "CREATE"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "sales_manager@company.com"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "2-grant-sales-orders-sales_team-4",
+      "rangerPolicyId": 2,
+      "rangerPolicyName": "sales_schema_full_access",
+      "rangerPolicyDesc": "Medium policy - Sales team full access to sales schema tables",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "sales",
+      "table": "orders",
+      "columns": null,
+      "privileges": [
+        "SELECT",
+        "MODIFY",
+        "CREATE"
+      ],
+      "principal": {
+        "type": "group",
+        "name": "sales_team"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "2-grant-sales-orders-data_analysts-5",
+      "rangerPolicyId": 2,
+      "rangerPolicyName": "sales_schema_full_access",
+      "rangerPolicyDesc": "Medium policy - Sales team full access to sales schema tables",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "sales",
+      "table": "orders",
+      "columns": null,
+      "privileges": [
+        "SELECT",
+        "MODIFY",
+        "CREATE"
+      ],
+      "principal": {
+        "type": "group",
+        "name": "data_analysts"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "2-grant-sales-orders-sales_manager@company.com-6",
+      "rangerPolicyId": 2,
+      "rangerPolicyName": "sales_schema_full_access",
+      "rangerPolicyDesc": "Medium policy - Sales team full access to sales schema tables",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "sales",
+      "table": "orders",
+      "columns": null,
+      "privileges": [
+        "SELECT",
+        "MODIFY",
+        "CREATE"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "sales_manager@company.com"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "2-grant-sales-products-sales_team-7",
+      "rangerPolicyId": 2,
+      "rangerPolicyName": "sales_schema_full_access",
+      "rangerPolicyDesc": "Medium policy - Sales team full access to sales schema tables",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "sales",
+      "table": "products",
+      "columns": null,
+      "privileges": [
+        "SELECT",
+        "MODIFY",
+        "CREATE"
+      ],
+      "principal": {
+        "type": "group",
+        "name": "sales_team"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "2-grant-sales-products-data_analysts-8",
+      "rangerPolicyId": 2,
+      "rangerPolicyName": "sales_schema_full_access",
+      "rangerPolicyDesc": "Medium policy - Sales team full access to sales schema tables",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "sales",
+      "table": "products",
+      "columns": null,
+      "privileges": [
+        "SELECT",
+        "MODIFY",
+        "CREATE"
+      ],
+      "principal": {
+        "type": "group",
+        "name": "data_analysts"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "2-grant-sales-products-sales_manager@company.com-9",
+      "rangerPolicyId": 2,
+      "rangerPolicyName": "sales_schema_full_access",
+      "rangerPolicyDesc": "Medium policy - Sales team full access to sales schema tables",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "sales",
+      "table": "products",
+      "columns": null,
+      "privileges": [
+        "SELECT",
+        "MODIFY",
+        "CREATE"
+      ],
+      "principal": {
+        "type": "user",
+        "name": "sales_manager@company.com"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "2-deny-sales-customers-sales_team-10",
+      "rangerPolicyId": 2,
+      "rangerPolicyName": "sales_schema_full_access",
+      "rangerPolicyDesc": "Medium policy - Sales team full access to sales schema tables",
+      "type": "deny",
+      "catalog": "main",
+      "schema": "sales",
+      "table": "customers",
+      "columns": null,
+      "privileges": [
+        "DROP"
+      ],
+      "principal": {
+        "type": "group",
+        "name": "sales_team"
+      },
+      "enabled": true,
+      "status": "needs_review"
+    },
+    {
+      "id": "2-deny-sales-orders-sales_team-11",
+      "rangerPolicyId": 2,
+      "rangerPolicyName": "sales_schema_full_access",
+      "rangerPolicyDesc": "Medium policy - Sales team full access to sales schema tables",
+      "type": "deny",
+      "catalog": "main",
+      "schema": "sales",
+      "table": "orders",
+      "columns": null,
+      "privileges": [
+        "DROP"
+      ],
+      "principal": {
+        "type": "group",
+        "name": "sales_team"
+      },
+      "enabled": true,
+      "status": "needs_review"
+    },
+    {
+      "id": "2-deny-sales-products-sales_team-12",
+      "rangerPolicyId": 2,
+      "rangerPolicyName": "sales_schema_full_access",
+      "rangerPolicyDesc": "Medium policy - Sales team full access to sales schema tables",
+      "type": "deny",
+      "catalog": "main",
+      "schema": "sales",
+      "table": "products",
+      "columns": null,
+      "privileges": [
+        "DROP"
+      ],
+      "principal": {
+        "type": "group",
+        "name": "sales_team"
+      },
+      "enabled": true,
+      "status": "needs_review"
+    }
+  ],
+  "identity_map": {},
+  "generated_sql": "-- \u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n-- \u2551  Unity Catalog Migration Script                          \u2551\n-- \u2551  Generated by Ranger \u2192 UC Migrator                       \u2551\n-- \u2551  Source: hive_prod\n-- \u2551  Target Catalog: main\n-- \u2551  Date: 2026-05-21\n-- \u2551  Policies: 3 of 12\n-- \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: sales_schema_full_access (Ranger ID: 2)\n-- Type: DENY | Principal: sales_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: DROP on main.sales.customers for sales_team\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove sales_team from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: sales_schema_full_access (Ranger ID: 2)\n-- Type: DENY | Principal: sales_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: DROP on main.sales.orders for sales_team\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove sales_team from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: sales_schema_full_access (Ranger ID: 2)\n-- Type: DENY | Principal: sales_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: DROP on main.sales.products for sales_team\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove sales_team from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n",
+  "gap_analysis": [
+    {
+      "category": "Deny Policies",
+      "severity": "critical",
+      "count": 3,
+      "description": "Unity Catalog uses an additive (allowlist) permission model with no DENY mechanism.",
+      "items": [
+        {
+          "resource": "sales.customers",
+          "principal": "sales_team",
+          "detail": "Denied: DROP"
+        },
+        {
+          "resource": "sales.orders",
+          "principal": "sales_team",
+          "detail": "Denied: DROP"
+        },
+        {
+          "resource": "sales.products",
+          "principal": "sales_team",
+          "detail": "Denied: DROP"
+        }
+      ],
+      "remediation": "Restructure into separate schemas with restricted grants. Use row filters for partial access. Remove principals from over-privileged groups."
+    },
+    {
+      "category": "Kerberos / Service Accounts",
+      "severity": "critical",
+      "count": 1,
+      "description": "Kerberos principals and service accounts need to be mapped to Databricks service principals or cloud managed identities.",
+      "items": [
+        {
+          "resource": "sales_schema_full_access",
+          "principal": "sales_manager@company.com",
+          "detail": "Kerberos realm principal"
+        }
+      ],
+      "remediation": "Create Databricks service principals for each service account. Configure OAuth M2M authentication. Sync user principals via SCIM from your IdP."
+    }
+  ],
   "parsed_data": {
     "results": [
       {
@@ -332,280 +669,5 @@
     "serviceType": "hive",
     "clusterName": "unknown",
     "totalRangerPolicies": 1
-  },
-  "policy_items": [
-    {
-      "id": "2-grant-sales-customers-sales_team-1",
-      "rangerPolicyId": 2,
-      "rangerPolicyName": "sales_schema_full_access",
-      "rangerPolicyDesc": "Medium policy - Sales team full access to sales schema tables",
-      "type": "grant",
-      "catalog": "main",
-      "schema": "sales",
-      "table": "customers",
-      "columns": null,
-      "privileges": [
-        "SELECT",
-        "MODIFY",
-        "CREATE"
-      ],
-      "principal": {
-        "type": "group",
-        "name": "sales_team"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "2-grant-sales-customers-data_analysts-2",
-      "rangerPolicyId": 2,
-      "rangerPolicyName": "sales_schema_full_access",
-      "rangerPolicyDesc": "Medium policy - Sales team full access to sales schema tables",
-      "type": "grant",
-      "catalog": "main",
-      "schema": "sales",
-      "table": "customers",
-      "columns": null,
-      "privileges": [
-        "SELECT",
-        "MODIFY",
-        "CREATE"
-      ],
-      "principal": {
-        "type": "group",
-        "name": "data_analysts"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "2-grant-sales-customers-sales_manager@company.com-3",
-      "rangerPolicyId": 2,
-      "rangerPolicyName": "sales_schema_full_access",
-      "rangerPolicyDesc": "Medium policy - Sales team full access to sales schema tables",
-      "type": "grant",
-      "catalog": "main",
-      "schema": "sales",
-      "table": "customers",
-      "columns": null,
-      "privileges": [
-        "SELECT",
-        "MODIFY",
-        "CREATE"
-      ],
-      "principal": {
-        "type": "user",
-        "name": "sales_manager@company.com"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "2-grant-sales-orders-sales_team-4",
-      "rangerPolicyId": 2,
-      "rangerPolicyName": "sales_schema_full_access",
-      "rangerPolicyDesc": "Medium policy - Sales team full access to sales schema tables",
-      "type": "grant",
-      "catalog": "main",
-      "schema": "sales",
-      "table": "orders",
-      "columns": null,
-      "privileges": [
-        "SELECT",
-        "MODIFY",
-        "CREATE"
-      ],
-      "principal": {
-        "type": "group",
-        "name": "sales_team"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "2-grant-sales-orders-data_analysts-5",
-      "rangerPolicyId": 2,
-      "rangerPolicyName": "sales_schema_full_access",
-      "rangerPolicyDesc": "Medium policy - Sales team full access to sales schema tables",
-      "type": "grant",
-      "catalog": "main",
-      "schema": "sales",
-      "table": "orders",
-      "columns": null,
-      "privileges": [
-        "SELECT",
-        "MODIFY",
-        "CREATE"
-      ],
-      "principal": {
-        "type": "group",
-        "name": "data_analysts"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "2-grant-sales-orders-sales_manager@company.com-6",
-      "rangerPolicyId": 2,
-      "rangerPolicyName": "sales_schema_full_access",
-      "rangerPolicyDesc": "Medium policy - Sales team full access to sales schema tables",
-      "type": "grant",
-      "catalog": "main",
-      "schema": "sales",
-      "table": "orders",
-      "columns": null,
-      "privileges": [
-        "SELECT",
-        "MODIFY",
-        "CREATE"
-      ],
-      "principal": {
-        "type": "user",
-        "name": "sales_manager@company.com"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "2-grant-sales-products-sales_team-7",
-      "rangerPolicyId": 2,
-      "rangerPolicyName": "sales_schema_full_access",
-      "rangerPolicyDesc": "Medium policy - Sales team full access to sales schema tables",
-      "type": "grant",
-      "catalog": "main",
-      "schema": "sales",
-      "table": "products",
-      "columns": null,
-      "privileges": [
-        "SELECT",
-        "MODIFY",
-        "CREATE"
-      ],
-      "principal": {
-        "type": "group",
-        "name": "sales_team"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "2-grant-sales-products-data_analysts-8",
-      "rangerPolicyId": 2,
-      "rangerPolicyName": "sales_schema_full_access",
-      "rangerPolicyDesc": "Medium policy - Sales team full access to sales schema tables",
-      "type": "grant",
-      "catalog": "main",
-      "schema": "sales",
-      "table": "products",
-      "columns": null,
-      "privileges": [
-        "SELECT",
-        "MODIFY",
-        "CREATE"
-      ],
-      "principal": {
-        "type": "group",
-        "name": "data_analysts"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "2-grant-sales-products-sales_manager@company.com-9",
-      "rangerPolicyId": 2,
-      "rangerPolicyName": "sales_schema_full_access",
-      "rangerPolicyDesc": "Medium policy - Sales team full access to sales schema tables",
-      "type": "grant",
-      "catalog": "main",
-      "schema": "sales",
-      "table": "products",
-      "columns": null,
-      "privileges": [
-        "SELECT",
-        "MODIFY",
-        "CREATE"
-      ],
-      "principal": {
-        "type": "user",
-        "name": "sales_manager@company.com"
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "pending"
-    },
-    {
-      "id": "2-deny-sales-customers-sales_team-10",
-      "rangerPolicyId": 2,
-      "rangerPolicyName": "sales_schema_full_access",
-      "rangerPolicyDesc": "Medium policy - Sales team full access to sales schema tables",
-      "type": "deny",
-      "catalog": "main",
-      "schema": "sales",
-      "table": "customers",
-      "columns": null,
-      "privileges": [
-        "DROP"
-      ],
-      "principal": {
-        "type": "group",
-        "name": "sales_team"
-      },
-      "enabled": true,
-      "status": "needs_review"
-    },
-    {
-      "id": "2-deny-sales-orders-sales_team-11",
-      "rangerPolicyId": 2,
-      "rangerPolicyName": "sales_schema_full_access",
-      "rangerPolicyDesc": "Medium policy - Sales team full access to sales schema tables",
-      "type": "deny",
-      "catalog": "main",
-      "schema": "sales",
-      "table": "orders",
-      "columns": null,
-      "privileges": [
-        "DROP"
-      ],
-      "principal": {
-        "type": "group",
-        "name": "sales_team"
-      },
-      "enabled": true,
-      "status": "needs_review"
-    },
-    {
-      "id": "2-deny-sales-products-sales_team-12",
-      "rangerPolicyId": 2,
-      "rangerPolicyName": "sales_schema_full_access",
-      "rangerPolicyDesc": "Medium policy - Sales team full access to sales schema tables",
-      "type": "deny",
-      "catalog": "main",
-      "schema": "sales",
-      "table": "products",
-      "columns": null,
-      "privileges": [
-        "DROP"
-      ],
-      "principal": {
-        "type": "group",
-        "name": "sales_team"
-      },
-      "enabled": true,
-      "status": "needs_review"
-    }
-  ],
-  "identity_map": {
-    "data_analysts": "data_analysts",
-    "sales_team": "sales_team",
-    "sales_manager@company.com": "sales_manager@company.com"
-  },
-  "generated_sql": "-- \u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n-- \u2551  Unity Catalog Migration Script                          \u2551\n-- \u2551  Generated by Ranger \u2192 UC Migrator                       \u2551\n-- \u2551  Source: hive_prod\n-- \u2551  Target Catalog: main\n-- \u2551  Date: 2026-05-21\n-- \u2551  Policies: 3 of 12\n-- \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: sales_schema_full_access (Ranger ID: 2)\n-- Type: DENY | Principal: sales_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: DROP on main.sales.customers for sales_team\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove sales_team from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: sales_schema_full_access (Ranger ID: 2)\n-- Type: DENY | Principal: sales_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: DROP on main.sales.orders for sales_team\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove sales_team from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: sales_schema_full_access (Ranger ID: 2)\n-- Type: DENY | Principal: sales_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: DROP on main.sales.products for sales_team\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove sales_team from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n"
+  }
 }

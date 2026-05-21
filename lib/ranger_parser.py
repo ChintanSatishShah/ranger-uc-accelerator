@@ -55,10 +55,11 @@ SEVERITY = {
 }
 
 
-def _principals(groups: list[str], users: list[str]) -> list[dict[str, str]]:
+def _principals(groups: list[str], users: list[str], roles: list[str] | None = None) -> list[dict[str, str]]:
     return (
         [{"type": "group", "name": g} for g in groups]
         + [{"type": "user", "name": u} for u in users]
+        + [{"type": "role", "name": r} for r in (roles or [])]
     )
 
 
@@ -193,6 +194,72 @@ def parse_ranger_policies(json_data: dict[str, Any] | list[Any]) -> dict[str, An
                 "recommendation": "Review if this policy is still needed before migration. If deprecated, exclude it.",
             })
 
+        # isDenyAllElse — default-deny semantics cannot be enforced in UC
+        if policy.get("isDenyAllElse"):
+            warnings.append({
+                "policyId": policy.get("id"),
+                "policyName": policy.get("name"),
+                "category": "deny_all_else",
+                "severity": SEVERITY["critical"],
+                "message": (
+                    f'Policy "{policy.get("name")}" uses isDenyAllElse=true — '
+                    "all principals not explicitly listed are denied in Ranger; "
+                    "UC grants do not enforce this restriction"
+                ),
+                "recommendation": (
+                    "Audit all principals with access to this resource in UC. "
+                    "Ensure only explicitly listed principals receive grants."
+                ),
+            })
+
+        # Validity schedules — time-bound policies have no UC equivalent
+        _schedules = policy.get("validitySchedules") or []
+        if _schedules:
+            _s0 = _schedules[0]
+            warnings.append({
+                "policyId": policy.get("id"),
+                "policyName": policy.get("name"),
+                "category": "validity_schedule",
+                "severity": SEVERITY["warning"],
+                "message": (
+                    f'Policy "{policy.get("name")}" is time-limited in Ranger '
+                    f'({_s0.get("startTime", "—")} → {_s0.get("endTime", "no end")}) '
+                    "— UC grants are permanent"
+                ),
+                "recommendation": (
+                    "Manage the grant lifecycle manually or via automation. "
+                    "Revoke the grant in UC when the validity period ends."
+                ),
+            })
+
+        # Conditions in policy items — IP-range, time-of-day, custom evaluators not translated
+        _condition_types: set[str] = set()
+        for _it in (
+            (policy.get("policyItems") or [])
+            + (policy.get("denyPolicyItems") or [])
+            + (policy.get("rowFilterPolicyItems") or [])
+            + (policy.get("dataMaskPolicyItems") or [])
+        ):
+            for _cond in (_it.get("conditions") or []):
+                if _cond.get("type"):
+                    _condition_types.add(_cond["type"])
+        if _condition_types:
+            warnings.append({
+                "policyId": policy.get("id"),
+                "policyName": policy.get("name"),
+                "category": "conditions",
+                "severity": SEVERITY["warning"],
+                "message": (
+                    f'Policy "{policy.get("name")}" has conditions '
+                    f'[{", ".join(sorted(_condition_types))}] with no UC equivalent — '
+                    "grants will apply unconditionally"
+                ),
+                "recommendation": (
+                    "IP-range, time-based, and custom conditions cannot be enforced in UC. "
+                    "Apply equivalent restrictions at the network or application layer."
+                ),
+            })
+
         # Kerberos / service account detection
         for user in _flatten_users(policy):
             looks_kerb = (
@@ -243,7 +310,7 @@ def parse_ranger_policies(json_data: dict[str, Any] | list[Any]) -> dict[str, An
 
             # Access grants
             for item in policy.get("policyItems") or []:
-                principals = _principals(item.get("groups") or [], item.get("users") or [])
+                principals = _principals(item.get("groups") or [], item.get("users") or [], item.get("roles") or [])
                 accesses = list(dict.fromkeys(_allowed_accesses(item)))
                 for p in principals:
                     identities.add((p["type"], p["name"]))
@@ -288,7 +355,7 @@ def parse_ranger_policies(json_data: dict[str, Any] | list[Any]) -> dict[str, An
 
             # Row filters on tag policies
             for item in policy.get("rowFilterPolicyItems") or []:
-                principals = _principals(item.get("groups") or [], item.get("users") or [])
+                principals = _principals(item.get("groups") or [], item.get("users") or [], item.get("roles") or [])
                 for p in principals:
                     identities.add((p["type"], p["name"]))
                 row_info = item.get("rowFilterInfo") or {}
@@ -318,7 +385,7 @@ def parse_ranger_policies(json_data: dict[str, Any] | list[Any]) -> dict[str, An
 
             # Column masks on tag policies
             for item in policy.get("dataMaskPolicyItems") or []:
-                principals = _principals(item.get("groups") or [], item.get("users") or [])
+                principals = _principals(item.get("groups") or [], item.get("users") or [], item.get("roles") or [])
                 for p in principals:
                     identities.add((p["type"], p["name"]))
                 mask_info = item.get("dataMaskInfo") or {}
@@ -355,7 +422,7 @@ def parse_ranger_policies(json_data: dict[str, Any] | list[Any]) -> dict[str, An
             paths = (resources.get("path") or {}).get("values") or ["/"]
             is_recursive = (resources.get("path") or {}).get("isRecursive", False)
             for item in policy.get("policyItems") or []:
-                principals = _principals(item.get("groups") or [], item.get("users") or [])
+                principals = _principals(item.get("groups") or [], item.get("users") or [], item.get("roles") or [])
                 accesses = list(dict.fromkeys(
                     HDFS_ACCESS_MAP.get(a["type"], a["type"].upper())
                     for a in (item.get("accesses") or [])
@@ -389,7 +456,7 @@ def parse_ranger_policies(json_data: dict[str, Any] | list[Any]) -> dict[str, An
             hbase_tables = (resources.get("table") or {}).get("values") or ["*"]
             col_families = (resources.get("column-family") or {}).get("values") or ["*"]
             for item in policy.get("policyItems") or []:
-                principals = _principals(item.get("groups") or [], item.get("users") or [])
+                principals = _principals(item.get("groups") or [], item.get("users") or [], item.get("roles") or [])
                 accesses = list(dict.fromkeys(
                     HBASE_ACCESS_MAP.get(a["type"], a["type"].upper())
                     for a in (item.get("accesses") or [])
@@ -427,7 +494,7 @@ def parse_ranger_policies(json_data: dict[str, Any] | list[Any]) -> dict[str, An
 
         # ── Resource-based grants (Hive / default) ──
         for item in policy.get("policyItems") or []:
-            principals = _principals(item.get("groups") or [], item.get("users") or [])
+            principals = _principals(item.get("groups") or [], item.get("users") or [], item.get("roles") or [])
             accesses = list(dict.fromkeys(_allowed_accesses(item)))
             for p in principals:
                 identities.add((p["type"], p["name"]))
@@ -455,7 +522,7 @@ def parse_ranger_policies(json_data: dict[str, Any] | list[Any]) -> dict[str, An
 
         # ── Deny policies ──
         for item in policy.get("denyPolicyItems") or []:
-            principals = _principals(item.get("groups") or [], item.get("users") or [])
+            principals = _principals(item.get("groups") or [], item.get("users") or [], item.get("roles") or [])
             accesses = _allowed_accesses(item)
             for p in principals:
                 identities.add((p["type"], p["name"]))
@@ -496,7 +563,7 @@ def parse_ranger_policies(json_data: dict[str, Any] | list[Any]) -> dict[str, An
 
         # ── Row filters ──
         for item in policy.get("rowFilterPolicyItems") or []:
-            principals = _principals(item.get("groups") or [], item.get("users") or [])
+            principals = _principals(item.get("groups") or [], item.get("users") or [], item.get("roles") or [])
             for p in principals:
                 identities.add((p["type"], p["name"]))
             row_info = item.get("rowFilterInfo") or {}
@@ -525,7 +592,7 @@ def parse_ranger_policies(json_data: dict[str, Any] | list[Any]) -> dict[str, An
 
         # ── Data masking ──
         for item in policy.get("dataMaskPolicyItems") or []:
-            principals = _principals(item.get("groups") or [], item.get("users") or [])
+            principals = _principals(item.get("groups") or [], item.get("users") or [], item.get("roles") or [])
             for p in principals:
                 identities.add((p["type"], p["name"]))
             mask_info = item.get("dataMaskInfo") or {}
@@ -747,18 +814,58 @@ def generate_uc_sql(
             lines.append("")
             lines.append(f"ALTER TABLE {cat}.{schema}.{table}")
             lines.append(f"ALTER COLUMN {col} SET MASK {fn};")
-        else:
-            lines.append(f"-- Column Mask: Full redaction for {principal_name}")
+        elif mask_uc == "FIRST_4":
+            _body = (item.get("maskExpr") or "").strip() or "CONCAT(LEFT(val, 4), '***')"
+            lines.append(f"-- Column Mask: Show first 4 characters for {principal_name}")
             lines.append(f"CREATE OR REPLACE FUNCTION {fn}(val STRING)")
             lines.append("RETURNS STRING")
             lines.append("RETURN IF(")
             lines.append(f"  IS_ACCOUNT_GROUP_MEMBER('{principal_name}'),")
-            lines.append("  '***REDACTED***',")
+            lines.append(f"  {_body},")
             lines.append("  val")
             lines.append(");")
             lines.append("")
             lines.append(f"ALTER TABLE {cat}.{schema}.{table}")
             lines.append(f"ALTER COLUMN {col} SET MASK {fn};")
+        elif mask_uc == "DATE_YEAR":
+            _body = (item.get("maskExpr") or "").strip() or "MAKE_DATE(YEAR(val), 1, 1)"
+            lines.append(f"-- Column Mask: Date year-only masking for {principal_name}")
+            lines.append(f"CREATE OR REPLACE FUNCTION {fn}(val DATE)")
+            lines.append("RETURNS DATE")
+            lines.append("RETURN IF(")
+            lines.append(f"  IS_ACCOUNT_GROUP_MEMBER('{principal_name}'),")
+            lines.append(f"  {_body},")
+            lines.append("  val")
+            lines.append(");")
+            lines.append("")
+            lines.append(f"ALTER TABLE {cat}.{schema}.{table}")
+            lines.append(f"ALTER COLUMN {col} SET MASK {fn};")
+        else:
+            _custom = (item.get("maskExpr") or "").strip()
+            if _custom:
+                lines.append(f"-- Column Mask: Custom expression for {principal_name} (review before executing)")
+                lines.append(f"CREATE OR REPLACE FUNCTION {fn}(val STRING)")
+                lines.append("RETURNS STRING")
+                lines.append("RETURN IF(")
+                lines.append(f"  IS_ACCOUNT_GROUP_MEMBER('{principal_name}'),")
+                lines.append(f"  {_custom},")
+                lines.append("  val")
+                lines.append(");")
+                lines.append("")
+                lines.append(f"ALTER TABLE {cat}.{schema}.{table}")
+                lines.append(f"ALTER COLUMN {col} SET MASK {fn};")
+            else:
+                lines.append(f"-- Column Mask: Full redaction for {principal_name}")
+                lines.append(f"CREATE OR REPLACE FUNCTION {fn}(val STRING)")
+                lines.append("RETURNS STRING")
+                lines.append("RETURN IF(")
+                lines.append(f"  IS_ACCOUNT_GROUP_MEMBER('{principal_name}'),")
+                lines.append("  '***REDACTED***',")
+                lines.append("  val")
+                lines.append(");")
+                lines.append("")
+                lines.append(f"ALTER TABLE {cat}.{schema}.{table}")
+                lines.append(f"ALTER COLUMN {col} SET MASK {fn};")
 
     return "\n".join(lines)
 
@@ -939,6 +1046,82 @@ def generate_gap_analysis(
             "remediation": (
                 "Review generated filter functions. Test with sample queries to verify filter "
                 "behavior matches Ranger. Watch for UDF dependencies."
+            ),
+        })
+
+    warnings = parsed_data.get("warnings") or []
+
+    deny_all_warns = [w for w in warnings if w.get("category") == "deny_all_else"]
+    if deny_all_warns:
+        gaps.append({
+            "category": "isDenyAllElse Policies",
+            "severity": "critical",
+            "count": len(deny_all_warns),
+            "description": (
+                "These policies use isDenyAllElse=true in Ranger, meaning all principals not "
+                "explicitly listed are denied. Unity Catalog has no equivalent — generated grants "
+                "will not restrict unlisted principals."
+            ),
+            "items": [
+                {
+                    "resource": w.get("policyName", "—"),
+                    "principal": "—",
+                    "detail": "isDenyAllElse=true in Ranger",
+                }
+                for w in deny_all_warns
+            ],
+            "remediation": (
+                "Audit all principals with access to these resources in UC. "
+                "Only grant access to explicitly listed principals."
+            ),
+        })
+
+    sched_warns = [w for w in warnings if w.get("category") == "validity_schedule"]
+    if sched_warns:
+        gaps.append({
+            "category": "Time-Limited Policies",
+            "severity": "warning",
+            "count": len(sched_warns),
+            "description": (
+                "These policies have validity schedules (start/end times) in Ranger. "
+                "Unity Catalog grants are permanent — there is no built-in expiry mechanism."
+            ),
+            "items": [
+                {
+                    "resource": w.get("policyName", "—"),
+                    "principal": "—",
+                    "detail": w.get("message", ""),
+                }
+                for w in sched_warns
+            ],
+            "remediation": (
+                "Manage grant lifecycle manually or via automation. "
+                "Revoke grants in UC when the validity period ends."
+            ),
+        })
+
+    cond_warns = [w for w in warnings if w.get("category") == "conditions"]
+    if cond_warns:
+        gaps.append({
+            "category": "Policy Conditions (Not Translated)",
+            "severity": "warning",
+            "count": len(cond_warns),
+            "description": (
+                "These policies include conditions (e.g. ip-range, time-of-day, custom evaluators) "
+                "that restrict access in Ranger but have no UC equivalent. "
+                "Generated grants apply unconditionally."
+            ),
+            "items": [
+                {
+                    "resource": w.get("policyName", "—"),
+                    "principal": "—",
+                    "detail": w.get("message", ""),
+                }
+                for w in cond_warns
+            ],
+            "remediation": (
+                "Enforce IP-range and context-based restrictions at the network or application layer. "
+                "Review each affected policy carefully before executing the migration SQL."
             ),
         })
 

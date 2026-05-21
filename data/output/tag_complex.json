@@ -16,9 +16,9 @@
       "tagSets": 5,
       "tagGrants": 24,
       "tagPlaceholders": 0,
-      "approved": 0,
+      "approved": 29,
       "needsReview": 10,
-      "pending": 29,
+      "pending": 0,
       "rejected": 0,
       "disabled": 0,
       "schemaCount": 3,
@@ -64,7 +64,7 @@
         "name": ""
       },
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "tag_set_finance_transactions_credit_card",
@@ -88,7 +88,7 @@
         "name": ""
       },
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "tag_set_customer_360_customers_email",
@@ -110,7 +110,7 @@
         "name": ""
       },
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "tag_set_customer_360_customers_eu_email",
@@ -134,7 +134,7 @@
         "name": ""
       },
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "tag_set_hr_payroll_salary",
@@ -158,7 +158,7 @@
         "name": ""
       },
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "304-tag_grant-customer_360-customers-data_protection_officers-1",
@@ -186,7 +186,7 @@
       ],
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "304-tag_grant-customer_360-customers-privacy_team-2",
@@ -214,7 +214,7 @@
       ],
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "304-tag_grant-customer_360-customers-dpo@company.com-3",
@@ -242,7 +242,7 @@
       ],
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "304-tag_grant-customer_360-customers_eu-data_protection_officers-4",
@@ -270,7 +270,7 @@
       ],
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "304-tag_grant-customer_360-customers_eu-privacy_team-5",
@@ -298,7 +298,7 @@
       ],
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "304-tag_grant-customer_360-customers_eu-dpo@company.com-6",
@@ -326,7 +326,7 @@
       ],
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "304-tag_grant-finance-accounts-data_protection_officers-7",
@@ -354,7 +354,7 @@
       ],
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "304-tag_grant-finance-accounts-privacy_team-8",
@@ -382,7 +382,7 @@
       ],
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "304-tag_grant-finance-accounts-dpo@company.com-9",
@@ -410,7 +410,7 @@
       ],
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "304-tag_grant-hr-payroll-data_protection_officers-10",
@@ -438,7 +438,7 @@
       ],
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "304-tag_grant-hr-payroll-privacy_team-11",
@@ -466,7 +466,7 @@
       ],
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "304-tag_grant-hr-payroll-dpo@company.com-12",
@@ -494,7 +494,7 @@
       ],
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "304-tag_grant-finance-transactions-data_protection_officers-13",
@@ -522,7 +522,7 @@
       ],
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "304-tag_grant-finance-transactions-privacy_team-14",
@@ -550,7 +550,7 @@
       ],
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "304-tag_grant-finance-transactions-dpo@company.com-15",
@@ -578,7 +578,7 @@
       ],
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "304-rowfilter-tag-customers-marketing_team-16",
@@ -909,7 +909,7 @@
       ],
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "305-tag_grant-finance-accounts-compliance_team-2",
@@ -935,7 +935,7 @@
       ],
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "305-tag_grant-finance-accounts-auditor@company.com-3",
@@ -961,7 +961,7 @@
       ],
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "305-tag_grant-finance-transactions-audit_team-4",
@@ -987,7 +987,7 @@
       ],
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "305-tag_grant-finance-transactions-compliance_team-5",
@@ -1013,7 +1013,7 @@
       ],
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "305-tag_grant-finance-transactions-auditor@company.com-6",
@@ -1039,7 +1039,7 @@
       ],
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "305-tag_grant-hr-payroll-audit_team-7",
@@ -1065,7 +1065,7 @@
       ],
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "305-tag_grant-hr-payroll-compliance_team-8",
@@ -1091,7 +1091,7 @@
       ],
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "305-tag_grant-hr-payroll-auditor@company.com-9",
@@ -1117,11 +1117,11 @@
       ],
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     }
   ],
   "identity_map": {},
-  "generated_sql": "-- \u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n-- \u2551  Unity Catalog Migration Script                          \u2551\n-- \u2551  Generated by Ranger \u2192 UC Migrator                       \u2551\n-- \u2551  Source: tag_prod\n-- \u2551  Target Catalog: main\n-- \u2551  Date: 2026-05-21\n-- \u2551  Policies: 10 of 39\n-- \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: gdpr_compliance_policy (Ranger ID: 304)\n-- Type: ROW_FILTER | Principal: marketing_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Row Filter for: marketing_team\n-- Original expression: consent_given = TRUE AND data_retention_date > CURRENT_DATE()\n\nCREATE OR REPLACE FUNCTION main.customer_360.rf_customers_marketing_team()\nRETURNS BOOLEAN\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('marketing_team'),\n  consent_given = TRUE AND data_retention_date > CURRENT_DATE(),\n  TRUE  -- Allow all for non-matching groups (adjust as needed)\n);\n\nALTER TABLE main.customer_360.customers\nSET ROW FILTER main.customer_360.rf_customers_marketing_team ON ();\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: gdpr_compliance_policy (Ranger ID: 304)\n-- Type: ROW_FILTER | Principal: marketing_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Row Filter for: marketing_team\n-- Original expression: consent_given = TRUE AND data_retention_date > CURRENT_DATE()\n\nCREATE OR REPLACE FUNCTION main.customer_360.rf_customers_eu_marketing_team()\nRETURNS BOOLEAN\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('marketing_team'),\n  consent_given = TRUE AND data_retention_date > CURRENT_DATE(),\n  TRUE  -- Allow all for non-matching groups (adjust as needed)\n);\n\nALTER TABLE main.customer_360.customers_eu\nSET ROW FILTER main.customer_360.rf_customers_eu_marketing_team ON ();\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: gdpr_compliance_policy (Ranger ID: 304)\n-- Type: ROW_FILTER | Principal: marketing_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Row Filter for: marketing_team\n-- Original expression: consent_given = TRUE AND data_retention_date > CURRENT_DATE()\n\nCREATE OR REPLACE FUNCTION main.finance.rf_accounts_marketing_team()\nRETURNS BOOLEAN\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('marketing_team'),\n  consent_given = TRUE AND data_retention_date > CURRENT_DATE(),\n  TRUE  -- Allow all for non-matching groups (adjust as needed)\n);\n\nALTER TABLE main.finance.accounts\nSET ROW FILTER main.finance.rf_accounts_marketing_team ON ();\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: gdpr_compliance_policy (Ranger ID: 304)\n-- Type: ROW_FILTER | Principal: marketing_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Row Filter for: marketing_team\n-- Original expression: consent_given = TRUE AND data_retention_date > CURRENT_DATE()\n\nCREATE OR REPLACE FUNCTION main.hr.rf_payroll_marketing_team()\nRETURNS BOOLEAN\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('marketing_team'),\n  consent_given = TRUE AND data_retention_date > CURRENT_DATE(),\n  TRUE  -- Allow all for non-matching groups (adjust as needed)\n);\n\nALTER TABLE main.hr.payroll\nSET ROW FILTER main.hr.rf_payroll_marketing_team ON ();\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: gdpr_compliance_policy (Ranger ID: 304)\n-- Type: ROW_FILTER | Principal: marketing_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Row Filter for: marketing_team\n-- Original expression: consent_given = TRUE AND data_retention_date > CURRENT_DATE()\n\nCREATE OR REPLACE FUNCTION main.finance.rf_transactions_marketing_team()\nRETURNS BOOLEAN\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('marketing_team'),\n  consent_given = TRUE AND data_retention_date > CURRENT_DATE(),\n  TRUE  -- Allow all for non-matching groups (adjust as needed)\n);\n\nALTER TABLE main.finance.transactions\nSET ROW FILTER main.finance.rf_transactions_marketing_team ON ();\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: gdpr_compliance_policy (Ranger ID: 304)\n-- Type: COLUMN_MASK | Principal: analytics_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Column Mask: SHA-256 hash for analytics_team\nCREATE OR REPLACE FUNCTION main.customer_360.mask_customers_email_analytics_team(val STRING)\nRETURNS STRING\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('analytics_team'),\n  SHA2(val, 256),\n  val\n);\n\nALTER TABLE main.customer_360.customers\nALTER COLUMN email SET MASK main.customer_360.mask_customers_email_analytics_team;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: gdpr_compliance_policy (Ranger ID: 304)\n-- Type: COLUMN_MASK | Principal: analytics_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Column Mask: SHA-256 hash for analytics_team\nCREATE OR REPLACE FUNCTION main.customer_360.mask_customers_eu_email_analytics_team(val STRING)\nRETURNS STRING\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('analytics_team'),\n  SHA2(val, 256),\n  val\n);\n\nALTER TABLE main.customer_360.customers_eu\nALTER COLUMN email SET MASK main.customer_360.mask_customers_eu_email_analytics_team;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: gdpr_compliance_policy (Ranger ID: 304)\n-- Type: COLUMN_MASK | Principal: analytics_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Column Mask: SHA-256 hash for analytics_team\nCREATE OR REPLACE FUNCTION main.finance.mask_accounts_account_balance_analytics_team(val STRING)\nRETURNS STRING\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('analytics_team'),\n  SHA2(val, 256),\n  val\n);\n\nALTER TABLE main.finance.accounts\nALTER COLUMN account_balance SET MASK main.finance.mask_accounts_account_balance_analytics_team;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: gdpr_compliance_policy (Ranger ID: 304)\n-- Type: COLUMN_MASK | Principal: analytics_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Column Mask: SHA-256 hash for analytics_team\nCREATE OR REPLACE FUNCTION main.hr.mask_payroll_salary_analytics_team(val STRING)\nRETURNS STRING\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('analytics_team'),\n  SHA2(val, 256),\n  val\n);\n\nALTER TABLE main.hr.payroll\nALTER COLUMN salary SET MASK main.hr.mask_payroll_salary_analytics_team;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: gdpr_compliance_policy (Ranger ID: 304)\n-- Type: COLUMN_MASK | Principal: analytics_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Column Mask: SHA-256 hash for analytics_team\nCREATE OR REPLACE FUNCTION main.finance.mask_transactions_credit_card_analytics_team(val STRING)\nRETURNS STRING\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('analytics_team'),\n  SHA2(val, 256),\n  val\n);\n\nALTER TABLE main.finance.transactions\nALTER COLUMN credit_card SET MASK main.finance.mask_transactions_credit_card_analytics_team;\n",
+  "generated_sql": "-- \u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n-- \u2551  Unity Catalog Migration Script                          \u2551\n-- \u2551  Generated by Ranger \u2192 UC Migrator                       \u2551\n-- \u2551  Source: tag_prod\n-- \u2551  Target Catalog: main\n-- \u2551  Date: 2026-05-21\n-- \u2551  Policies: 39 of 39\n-- \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: SET TAGS \u2014 finance.accounts.account_balance (Ranger ID: None)\n-- Type: TAG_SET | Principal: \n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nALTER TABLE main.finance.accounts\n  ALTER COLUMN account_balance SET TAGS ('FINANCIAL' = 'true', 'classification' = 'confidential', 'sox_applicable' = 'true', 'SOX' = 'true', 'regulation' = 'Sarbanes-Oxley', 'audit_required' = 'true');\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: SET TAGS \u2014 finance.transactions.credit_card (Ranger ID: None)\n-- Type: TAG_SET | Principal: \n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nALTER TABLE main.finance.transactions\n  ALTER COLUMN credit_card SET TAGS ('PCI_DSS' = 'true', 'regulation' = 'Payment Card Industry', 'encryption_required' = 'true', 'SENSITIVE' = 'true', 'classification' = 'restricted');\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: SET TAGS \u2014 customer_360.customers.email (Ranger ID: None)\n-- Type: TAG_SET | Principal: \n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nALTER TABLE main.customer_360.customers\n  ALTER COLUMN email SET TAGS ('PII' = 'true', 'classification' = 'restricted', 'gdpr_applicable' = 'true');\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: SET TAGS \u2014 customer_360.customers_eu.email (Ranger ID: None)\n-- Type: TAG_SET | Principal: \n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nALTER TABLE main.customer_360.customers_eu\n  ALTER COLUMN email SET TAGS ('PII' = 'true', 'classification' = 'restricted', 'gdpr_applicable' = 'true', 'PII_EU' = 'true', 'geography' = 'EU');\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: SET TAGS \u2014 hr.payroll.salary (Ranger ID: None)\n-- Type: TAG_SET | Principal: \n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nALTER TABLE main.hr.payroll\n  ALTER COLUMN salary SET TAGS ('FINANCIAL' = 'true', 'classification' = 'restricted', 'sox_applicable' = 'true', 'SENSITIVE' = 'true', 'encryption_required' = 'true');\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: gdpr_compliance_policy (Ranger ID: 304)\n-- Type: TAG_GRANT | Principal: data_protection_officers\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: PII, PII_EU, FINANCIAL, SENSITIVE)\nGRANT SELECT ON TABLE main.customer_360.customers TO `data_protection_officers`;\nGRANT MODIFY ON TABLE main.customer_360.customers TO `data_protection_officers`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: gdpr_compliance_policy (Ranger ID: 304)\n-- Type: TAG_GRANT | Principal: privacy_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: PII, PII_EU, FINANCIAL, SENSITIVE)\nGRANT SELECT ON TABLE main.customer_360.customers TO `privacy_team`;\nGRANT MODIFY ON TABLE main.customer_360.customers TO `privacy_team`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: gdpr_compliance_policy (Ranger ID: 304)\n-- Type: TAG_GRANT | Principal: dpo@company.com\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: PII, PII_EU, FINANCIAL, SENSITIVE)\nGRANT SELECT ON TABLE main.customer_360.customers TO `dpo@company.com`;\nGRANT MODIFY ON TABLE main.customer_360.customers TO `dpo@company.com`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: gdpr_compliance_policy (Ranger ID: 304)\n-- Type: TAG_GRANT | Principal: data_protection_officers\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: PII, PII_EU, FINANCIAL, SENSITIVE)\nGRANT SELECT ON TABLE main.customer_360.customers_eu TO `data_protection_officers`;\nGRANT MODIFY ON TABLE main.customer_360.customers_eu TO `data_protection_officers`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: gdpr_compliance_policy (Ranger ID: 304)\n-- Type: TAG_GRANT | Principal: privacy_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: PII, PII_EU, FINANCIAL, SENSITIVE)\nGRANT SELECT ON TABLE main.customer_360.customers_eu TO `privacy_team`;\nGRANT MODIFY ON TABLE main.customer_360.customers_eu TO `privacy_team`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: gdpr_compliance_policy (Ranger ID: 304)\n-- Type: TAG_GRANT | Principal: dpo@company.com\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: PII, PII_EU, FINANCIAL, SENSITIVE)\nGRANT SELECT ON TABLE main.customer_360.customers_eu TO `dpo@company.com`;\nGRANT MODIFY ON TABLE main.customer_360.customers_eu TO `dpo@company.com`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: gdpr_compliance_policy (Ranger ID: 304)\n-- Type: TAG_GRANT | Principal: data_protection_officers\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: PII, PII_EU, FINANCIAL, SENSITIVE)\nGRANT SELECT ON TABLE main.finance.accounts TO `data_protection_officers`;\nGRANT MODIFY ON TABLE main.finance.accounts TO `data_protection_officers`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: gdpr_compliance_policy (Ranger ID: 304)\n-- Type: TAG_GRANT | Principal: privacy_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: PII, PII_EU, FINANCIAL, SENSITIVE)\nGRANT SELECT ON TABLE main.finance.accounts TO `privacy_team`;\nGRANT MODIFY ON TABLE main.finance.accounts TO `privacy_team`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: gdpr_compliance_policy (Ranger ID: 304)\n-- Type: TAG_GRANT | Principal: dpo@company.com\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: PII, PII_EU, FINANCIAL, SENSITIVE)\nGRANT SELECT ON TABLE main.finance.accounts TO `dpo@company.com`;\nGRANT MODIFY ON TABLE main.finance.accounts TO `dpo@company.com`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: gdpr_compliance_policy (Ranger ID: 304)\n-- Type: TAG_GRANT | Principal: data_protection_officers\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: PII, PII_EU, FINANCIAL, SENSITIVE)\nGRANT SELECT ON TABLE main.hr.payroll TO `data_protection_officers`;\nGRANT MODIFY ON TABLE main.hr.payroll TO `data_protection_officers`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: gdpr_compliance_policy (Ranger ID: 304)\n-- Type: TAG_GRANT | Principal: privacy_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: PII, PII_EU, FINANCIAL, SENSITIVE)\nGRANT SELECT ON TABLE main.hr.payroll TO `privacy_team`;\nGRANT MODIFY ON TABLE main.hr.payroll TO `privacy_team`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: gdpr_compliance_policy (Ranger ID: 304)\n-- Type: TAG_GRANT | Principal: dpo@company.com\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: PII, PII_EU, FINANCIAL, SENSITIVE)\nGRANT SELECT ON TABLE main.hr.payroll TO `dpo@company.com`;\nGRANT MODIFY ON TABLE main.hr.payroll TO `dpo@company.com`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: gdpr_compliance_policy (Ranger ID: 304)\n-- Type: TAG_GRANT | Principal: data_protection_officers\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: PII, PII_EU, FINANCIAL, SENSITIVE)\nGRANT SELECT ON TABLE main.finance.transactions TO `data_protection_officers`;\nGRANT MODIFY ON TABLE main.finance.transactions TO `data_protection_officers`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: gdpr_compliance_policy (Ranger ID: 304)\n-- Type: TAG_GRANT | Principal: privacy_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: PII, PII_EU, FINANCIAL, SENSITIVE)\nGRANT SELECT ON TABLE main.finance.transactions TO `privacy_team`;\nGRANT MODIFY ON TABLE main.finance.transactions TO `privacy_team`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: gdpr_compliance_policy (Ranger ID: 304)\n-- Type: TAG_GRANT | Principal: dpo@company.com\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: PII, PII_EU, FINANCIAL, SENSITIVE)\nGRANT SELECT ON TABLE main.finance.transactions TO `dpo@company.com`;\nGRANT MODIFY ON TABLE main.finance.transactions TO `dpo@company.com`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: gdpr_compliance_policy (Ranger ID: 304)\n-- Type: ROW_FILTER | Principal: marketing_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Row Filter for: marketing_team\n-- Original expression: consent_given = TRUE AND data_retention_date > CURRENT_DATE()\n\nCREATE OR REPLACE FUNCTION main.customer_360.rf_customers_marketing_team()\nRETURNS BOOLEAN\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('marketing_team'),\n  consent_given = TRUE AND data_retention_date > CURRENT_DATE(),\n  TRUE  -- Allow all for non-matching groups (adjust as needed)\n);\n\nALTER TABLE main.customer_360.customers\nSET ROW FILTER main.customer_360.rf_customers_marketing_team ON ();\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: gdpr_compliance_policy (Ranger ID: 304)\n-- Type: ROW_FILTER | Principal: marketing_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Row Filter for: marketing_team\n-- Original expression: consent_given = TRUE AND data_retention_date > CURRENT_DATE()\n\nCREATE OR REPLACE FUNCTION main.customer_360.rf_customers_eu_marketing_team()\nRETURNS BOOLEAN\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('marketing_team'),\n  consent_given = TRUE AND data_retention_date > CURRENT_DATE(),\n  TRUE  -- Allow all for non-matching groups (adjust as needed)\n);\n\nALTER TABLE main.customer_360.customers_eu\nSET ROW FILTER main.customer_360.rf_customers_eu_marketing_team ON ();\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: gdpr_compliance_policy (Ranger ID: 304)\n-- Type: ROW_FILTER | Principal: marketing_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Row Filter for: marketing_team\n-- Original expression: consent_given = TRUE AND data_retention_date > CURRENT_DATE()\n\nCREATE OR REPLACE FUNCTION main.finance.rf_accounts_marketing_team()\nRETURNS BOOLEAN\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('marketing_team'),\n  consent_given = TRUE AND data_retention_date > CURRENT_DATE(),\n  TRUE  -- Allow all for non-matching groups (adjust as needed)\n);\n\nALTER TABLE main.finance.accounts\nSET ROW FILTER main.finance.rf_accounts_marketing_team ON ();\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: gdpr_compliance_policy (Ranger ID: 304)\n-- Type: ROW_FILTER | Principal: marketing_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Row Filter for: marketing_team\n-- Original expression: consent_given = TRUE AND data_retention_date > CURRENT_DATE()\n\nCREATE OR REPLACE FUNCTION main.hr.rf_payroll_marketing_team()\nRETURNS BOOLEAN\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('marketing_team'),\n  consent_given = TRUE AND data_retention_date > CURRENT_DATE(),\n  TRUE  -- Allow all for non-matching groups (adjust as needed)\n);\n\nALTER TABLE main.hr.payroll\nSET ROW FILTER main.hr.rf_payroll_marketing_team ON ();\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: gdpr_compliance_policy (Ranger ID: 304)\n-- Type: ROW_FILTER | Principal: marketing_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Row Filter for: marketing_team\n-- Original expression: consent_given = TRUE AND data_retention_date > CURRENT_DATE()\n\nCREATE OR REPLACE FUNCTION main.finance.rf_transactions_marketing_team()\nRETURNS BOOLEAN\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('marketing_team'),\n  consent_given = TRUE AND data_retention_date > CURRENT_DATE(),\n  TRUE  -- Allow all for non-matching groups (adjust as needed)\n);\n\nALTER TABLE main.finance.transactions\nSET ROW FILTER main.finance.rf_transactions_marketing_team ON ();\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: gdpr_compliance_policy (Ranger ID: 304)\n-- Type: COLUMN_MASK | Principal: analytics_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Column Mask: SHA-256 hash for analytics_team\nCREATE OR REPLACE FUNCTION main.customer_360.mask_customers_email_analytics_team(val STRING)\nRETURNS STRING\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('analytics_team'),\n  SHA2(val, 256),\n  val\n);\n\nALTER TABLE main.customer_360.customers\nALTER COLUMN email SET MASK main.customer_360.mask_customers_email_analytics_team;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: gdpr_compliance_policy (Ranger ID: 304)\n-- Type: COLUMN_MASK | Principal: analytics_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Column Mask: SHA-256 hash for analytics_team\nCREATE OR REPLACE FUNCTION main.customer_360.mask_customers_eu_email_analytics_team(val STRING)\nRETURNS STRING\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('analytics_team'),\n  SHA2(val, 256),\n  val\n);\n\nALTER TABLE main.customer_360.customers_eu\nALTER COLUMN email SET MASK main.customer_360.mask_customers_eu_email_analytics_team;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: gdpr_compliance_policy (Ranger ID: 304)\n-- Type: COLUMN_MASK | Principal: analytics_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Column Mask: SHA-256 hash for analytics_team\nCREATE OR REPLACE FUNCTION main.finance.mask_accounts_account_balance_analytics_team(val STRING)\nRETURNS STRING\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('analytics_team'),\n  SHA2(val, 256),\n  val\n);\n\nALTER TABLE main.finance.accounts\nALTER COLUMN account_balance SET MASK main.finance.mask_accounts_account_balance_analytics_team;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: gdpr_compliance_policy (Ranger ID: 304)\n-- Type: COLUMN_MASK | Principal: analytics_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Column Mask: SHA-256 hash for analytics_team\nCREATE OR REPLACE FUNCTION main.hr.mask_payroll_salary_analytics_team(val STRING)\nRETURNS STRING\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('analytics_team'),\n  SHA2(val, 256),\n  val\n);\n\nALTER TABLE main.hr.payroll\nALTER COLUMN salary SET MASK main.hr.mask_payroll_salary_analytics_team;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: gdpr_compliance_policy (Ranger ID: 304)\n-- Type: COLUMN_MASK | Principal: analytics_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Column Mask: SHA-256 hash for analytics_team\nCREATE OR REPLACE FUNCTION main.finance.mask_transactions_credit_card_analytics_team(val STRING)\nRETURNS STRING\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('analytics_team'),\n  SHA2(val, 256),\n  val\n);\n\nALTER TABLE main.finance.transactions\nALTER COLUMN credit_card SET MASK main.finance.mask_transactions_credit_card_analytics_team;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: financial_regulatory_policy (Ranger ID: 305)\n-- Type: TAG_GRANT | Principal: audit_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: SOX, PCI_DSS, FINANCIAL)\nGRANT SELECT ON TABLE main.finance.accounts TO `audit_team`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: financial_regulatory_policy (Ranger ID: 305)\n-- Type: TAG_GRANT | Principal: compliance_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: SOX, PCI_DSS, FINANCIAL)\nGRANT SELECT ON TABLE main.finance.accounts TO `compliance_team`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: financial_regulatory_policy (Ranger ID: 305)\n-- Type: TAG_GRANT | Principal: auditor@company.com\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: SOX, PCI_DSS, FINANCIAL)\nGRANT SELECT ON TABLE main.finance.accounts TO `auditor@company.com`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: financial_regulatory_policy (Ranger ID: 305)\n-- Type: TAG_GRANT | Principal: audit_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: SOX, PCI_DSS, FINANCIAL)\nGRANT SELECT ON TABLE main.finance.transactions TO `audit_team`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: financial_regulatory_policy (Ranger ID: 305)\n-- Type: TAG_GRANT | Principal: compliance_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: SOX, PCI_DSS, FINANCIAL)\nGRANT SELECT ON TABLE main.finance.transactions TO `compliance_team`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: financial_regulatory_policy (Ranger ID: 305)\n-- Type: TAG_GRANT | Principal: auditor@company.com\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: SOX, PCI_DSS, FINANCIAL)\nGRANT SELECT ON TABLE main.finance.transactions TO `auditor@company.com`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: financial_regulatory_policy (Ranger ID: 305)\n-- Type: TAG_GRANT | Principal: audit_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: SOX, PCI_DSS, FINANCIAL)\nGRANT SELECT ON TABLE main.hr.payroll TO `audit_team`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: financial_regulatory_policy (Ranger ID: 305)\n-- Type: TAG_GRANT | Principal: compliance_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: SOX, PCI_DSS, FINANCIAL)\nGRANT SELECT ON TABLE main.hr.payroll TO `compliance_team`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: financial_regulatory_policy (Ranger ID: 305)\n-- Type: TAG_GRANT | Principal: auditor@company.com\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: SOX, PCI_DSS, FINANCIAL)\nGRANT SELECT ON TABLE main.hr.payroll TO `auditor@company.com`;\n",
   "gap_analysis": [
     {
       "category": "Kerberos / Service Accounts",
@@ -1216,7 +1216,7 @@
           "name": ""
         },
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "tag_set_finance_transactions_credit_card",
@@ -1240,7 +1240,7 @@
           "name": ""
         },
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "tag_set_customer_360_customers_email",
@@ -1262,7 +1262,7 @@
           "name": ""
         },
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "tag_set_customer_360_customers_eu_email",
@@ -1286,7 +1286,7 @@
           "name": ""
         },
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "tag_set_hr_payroll_salary",
@@ -1310,7 +1310,7 @@
           "name": ""
         },
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "304-tag_grant-customer_360-customers-data_protection_officers-1",
@@ -1338,7 +1338,7 @@
         ],
         "delegateAdmin": false,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "304-tag_grant-customer_360-customers-privacy_team-2",
@@ -1366,7 +1366,7 @@
         ],
         "delegateAdmin": false,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "304-tag_grant-customer_360-customers-dpo@company.com-3",
@@ -1394,7 +1394,7 @@
         ],
         "delegateAdmin": false,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "304-tag_grant-customer_360-customers_eu-data_protection_officers-4",
@@ -1422,7 +1422,7 @@
         ],
         "delegateAdmin": false,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "304-tag_grant-customer_360-customers_eu-privacy_team-5",
@@ -1450,7 +1450,7 @@
         ],
         "delegateAdmin": false,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "304-tag_grant-customer_360-customers_eu-dpo@company.com-6",
@@ -1478,7 +1478,7 @@
         ],
         "delegateAdmin": false,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "304-tag_grant-finance-accounts-data_protection_officers-7",
@@ -1506,7 +1506,7 @@
         ],
         "delegateAdmin": false,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "304-tag_grant-finance-accounts-privacy_team-8",
@@ -1534,7 +1534,7 @@
         ],
         "delegateAdmin": false,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "304-tag_grant-finance-accounts-dpo@company.com-9",
@@ -1562,7 +1562,7 @@
         ],
         "delegateAdmin": false,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "304-tag_grant-hr-payroll-data_protection_officers-10",
@@ -1590,7 +1590,7 @@
         ],
         "delegateAdmin": false,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "304-tag_grant-hr-payroll-privacy_team-11",
@@ -1618,7 +1618,7 @@
         ],
         "delegateAdmin": false,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "304-tag_grant-hr-payroll-dpo@company.com-12",
@@ -1646,7 +1646,7 @@
         ],
         "delegateAdmin": false,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "304-tag_grant-finance-transactions-data_protection_officers-13",
@@ -1674,7 +1674,7 @@
         ],
         "delegateAdmin": false,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "304-tag_grant-finance-transactions-privacy_team-14",
@@ -1702,7 +1702,7 @@
         ],
         "delegateAdmin": false,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "304-tag_grant-finance-transactions-dpo@company.com-15",
@@ -1730,7 +1730,7 @@
         ],
         "delegateAdmin": false,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "304-rowfilter-tag-customers-marketing_team-16",
@@ -2061,7 +2061,7 @@
         ],
         "delegateAdmin": false,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "305-tag_grant-finance-accounts-compliance_team-2",
@@ -2087,7 +2087,7 @@
         ],
         "delegateAdmin": false,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "305-tag_grant-finance-accounts-auditor@company.com-3",
@@ -2113,7 +2113,7 @@
         ],
         "delegateAdmin": false,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "305-tag_grant-finance-transactions-audit_team-4",
@@ -2139,7 +2139,7 @@
         ],
         "delegateAdmin": false,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "305-tag_grant-finance-transactions-compliance_team-5",
@@ -2165,7 +2165,7 @@
         ],
         "delegateAdmin": false,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "305-tag_grant-finance-transactions-auditor@company.com-6",
@@ -2191,7 +2191,7 @@
         ],
         "delegateAdmin": false,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "305-tag_grant-hr-payroll-audit_team-7",
@@ -2217,7 +2217,7 @@
         ],
         "delegateAdmin": false,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "305-tag_grant-hr-payroll-compliance_team-8",
@@ -2243,7 +2243,7 @@
         ],
         "delegateAdmin": false,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "305-tag_grant-hr-payroll-auditor@company.com-9",
@@ -2269,7 +2269,7 @@
         ],
         "delegateAdmin": false,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       }
     ],
     "warnings": [

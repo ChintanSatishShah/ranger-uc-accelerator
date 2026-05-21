@@ -16,9 +16,9 @@
       "tagSets": 0,
       "tagGrants": 0,
       "tagPlaceholders": 0,
-      "approved": 0,
+      "approved": 69,
       "needsReview": 16,
-      "pending": 69,
+      "pending": 0,
       "rejected": 0,
       "disabled": 0,
       "schemaCount": 11,
@@ -79,7 +79,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "2-grant-default-test1-group1-1",
@@ -102,7 +102,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "2-grant-default-test1-group2-2",
@@ -125,7 +125,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "2-grant-default-test1-user1-3",
@@ -148,7 +148,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "2-grant-default-test1-user2-4",
@@ -171,7 +171,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "2-grant-default-test2-group1-5",
@@ -194,7 +194,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "2-grant-default-test2-group2-6",
@@ -217,7 +217,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "2-grant-default-test2-user1-7",
@@ -240,7 +240,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "2-grant-default-test2-user2-8",
@@ -263,7 +263,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "2-grant-default-test1-cluster-admin-9",
@@ -287,7 +287,7 @@
       },
       "delegateAdmin": true,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "2-grant-default-test1-admin-10",
@@ -311,7 +311,7 @@
       },
       "delegateAdmin": true,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "2-grant-default-test2-cluster-admin-11",
@@ -335,7 +335,7 @@
       },
       "delegateAdmin": true,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "2-grant-default-test2-admin-12",
@@ -359,7 +359,7 @@
       },
       "delegateAdmin": true,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "3-grant-default-test1-group1-1",
@@ -382,7 +382,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "3-grant-default-test1-group2-2",
@@ -405,7 +405,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "3-grant-default-test1-user1-3",
@@ -428,7 +428,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "3-grant-default-test1-user2-4",
@@ -451,7 +451,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "3-grant-default-test2-group1-5",
@@ -474,7 +474,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "3-grant-default-test2-group2-6",
@@ -497,7 +497,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "3-grant-default-test2-user1-7",
@@ -520,7 +520,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "3-grant-default-test2-user2-8",
@@ -543,7 +543,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "3-grant-default-test1-cluster-admin-9",
@@ -567,7 +567,7 @@
       },
       "delegateAdmin": true,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "3-grant-default-test1-admin-10",
@@ -591,7 +591,7 @@
       },
       "delegateAdmin": true,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "3-grant-default-test2-cluster-admin-11",
@@ -615,7 +615,7 @@
       },
       "delegateAdmin": true,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "3-grant-default-test2-admin-12",
@@ -639,7 +639,7 @@
       },
       "delegateAdmin": true,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "4-grant-finance-fin_*-finance-controller-1",
@@ -660,7 +660,7 @@
       },
       "delegateAdmin": true,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "4-grant-finance-fin_*-user1-2",
@@ -681,7 +681,7 @@
       },
       "delegateAdmin": true,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "4-grant-finance-fin_*-user2-3",
@@ -702,7 +702,7 @@
       },
       "delegateAdmin": true,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "5-grant-db1-tmp-cluster-admin-1",
@@ -726,7 +726,7 @@
       },
       "delegateAdmin": true,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "5-grant-db1-tmp-finance-controller-2",
@@ -750,7 +750,7 @@
       },
       "delegateAdmin": true,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "5-grant-db1-tmp-user1-3",
@@ -774,7 +774,7 @@
       },
       "delegateAdmin": true,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "5-grant-db1-tmp-user2-4",
@@ -798,7 +798,7 @@
       },
       "delegateAdmin": true,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "6-udf-hr-udf-cluster-admin-1",
@@ -815,7 +815,7 @@
       },
       "delegateAdmin": true,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "6-udf-hr-udf-user1-2",
@@ -832,7 +832,7 @@
       },
       "delegateAdmin": true,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "6-udf-hr-udf-user2-3",
@@ -849,7 +849,7 @@
       },
       "delegateAdmin": true,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "8-udf-hr*-udf-hr-admin-1",
@@ -866,7 +866,7 @@
       },
       "delegateAdmin": true,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "8-udf-hr*-udf-user4-2",
@@ -883,7 +883,7 @@
       },
       "delegateAdmin": true,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "9-grant-default-test2-user2-1",
@@ -906,7 +906,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "9-grant-default-test2-user3-2",
@@ -929,7 +929,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "9-deny-default-test2-group3-3",
@@ -1036,7 +1036,7 @@
       },
       "delegateAdmin": true,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "10-grant-finance-fin_*-user3-2",
@@ -1059,7 +1059,7 @@
       },
       "delegateAdmin": true,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "11-grant-default-table-cluster-admin-1",
@@ -1082,7 +1082,7 @@
       },
       "delegateAdmin": true,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "11-grant-default-table-user1-2",
@@ -1105,7 +1105,7 @@
       },
       "delegateAdmin": true,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "11-grant-default-table-user2-3",
@@ -1128,7 +1128,7 @@
       },
       "delegateAdmin": true,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "11-grant-default-table-user3-4",
@@ -1151,7 +1151,7 @@
       },
       "delegateAdmin": true,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "11-grant-default-table-user4-5",
@@ -1174,7 +1174,7 @@
       },
       "delegateAdmin": true,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "11-deny-default-table-public-6",
@@ -1258,7 +1258,7 @@
       },
       "delegateAdmin": true,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "12-grant-finance-accounts-admin-2",
@@ -1282,7 +1282,7 @@
       },
       "delegateAdmin": true,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "12-grant-finance-accounts-john-3",
@@ -1306,7 +1306,7 @@
       },
       "delegateAdmin": true,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "12-grant-finance-accounts-jane-4",
@@ -1330,7 +1330,7 @@
       },
       "delegateAdmin": true,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "12-grant-finance-accounts-public-5",
@@ -1353,7 +1353,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "12-deny-finance-accounts-housekeeping-6",
@@ -1397,7 +1397,7 @@
       },
       "delegateAdmin": true,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "13-grant-finance-accounts-admin-2",
@@ -1421,7 +1421,7 @@
       },
       "delegateAdmin": true,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "13-grant-finance-accounts-john-3",
@@ -1445,7 +1445,7 @@
       },
       "delegateAdmin": true,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "13-grant-finance-accounts-jane-4",
@@ -1469,7 +1469,7 @@
       },
       "delegateAdmin": true,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "13-grant-finance-accounts-public-5",
@@ -1492,7 +1492,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "13-deny-finance-accounts-housekeeping-6",
@@ -1536,7 +1536,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "13-grant-db1-tbl1-jane-2",
@@ -1560,7 +1560,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "13-deny-db1-tbl1-adam-3",
@@ -1624,7 +1624,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "14-grant-db2-tbl2-jane-2",
@@ -1648,7 +1648,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "14-deny-db2-tbl2-adam-3",
@@ -1712,7 +1712,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "15-grant-db3-tbl3-jane-2",
@@ -1736,7 +1736,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "15-grant-db3-tbl3-tarzan-3",
@@ -1760,7 +1760,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "15-deny-db3-tbl3-adam-4",
@@ -1847,7 +1847,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "20-grant-denyAllElse-table-1-user3-2",
@@ -1874,7 +1874,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "21-grant-user_{USER }*-*-public-1",
@@ -1893,7 +1893,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "22-grant-dept_${{USER.dept}}-*-public-1",
@@ -1912,7 +1912,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "22-grant-dept_${{USER.dept}}-*-engg-2",
@@ -1931,7 +1931,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "23-grant-dept_engg-*-engg-1",
@@ -1950,11 +1950,11 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     }
   ],
   "identity_map": {},
-  "generated_sql": "-- \u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n-- \u2551  Unity Catalog Migration Script                          \u2551\n-- \u2551  Generated by Ranger \u2192 UC Migrator                       \u2551\n-- \u2551  Source: hivedev\n-- \u2551  Target Catalog: main\n-- \u2551  Date: 2026-05-21\n-- \u2551  Policies: 16 of 85\n-- \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; table=test2; column=column2 (Ranger ID: 9)\n-- Type: DENY | Principal: group3\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: SELECT, CREATE on main.default.test2 for group3\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove group3 from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; table=test2; column=column2 (Ranger ID: 9)\n-- Type: DENY | Principal: user2\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: SELECT, CREATE on main.default.test2 for user2\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove user2 from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; table=test2; column=column2 (Ranger ID: 9)\n-- Type: DENY | Principal: user3\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: SELECT, CREATE on main.default.test2 for user3\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove user3 from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; table=test2; column=column2 (Ranger ID: 9)\n-- Type: DENY | Principal: user4\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: SELECT, CREATE on main.default.test2 for user4\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove user4 from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; table=table; column=column (Ranger ID: 11)\n-- Type: DENY | Principal: public\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: SELECT on main.default.table for public\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove public from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; table=table; column=column (Ranger ID: 11)\n-- Type: DENY | Principal: user2\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: SELECT on main.default.table for user2\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove user2 from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; table=table; column=column (Ranger ID: 11)\n-- Type: DENY | Principal: user3\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: SELECT on main.default.table for user3\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove user3 from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=finance; table=accounts; column=status (Ranger ID: 12)\n-- Type: DENY | Principal: housekeeping\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: SELECT on main.finance.accounts for housekeeping\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove housekeeping from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=finance; table=accounts; column=amount (Ranger ID: 13)\n-- Type: DENY | Principal: housekeeping\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: DROP on main.finance.accounts for housekeeping\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove housekeeping from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=db1; table=tbl1; column=col1 (Ranger ID: 13)\n-- Type: DENY | Principal: adam\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: DROP on main.db1.tbl1 for adam\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove adam from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=db1; table=tbl1; column=col1 (Ranger ID: 13)\n-- Type: DENY | Principal: eve\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: DROP on main.db1.tbl1 for eve\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove eve from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=db2; table=tbl2; column=col2 (Ranger ID: 14)\n-- Type: DENY | Principal: adam\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: DROP on main.db2.tbl2 for adam\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove adam from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=db2; table=tbl2; column=col2 (Ranger ID: 14)\n-- Type: DENY | Principal: eve\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: DROP on main.db2.tbl2 for eve\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove eve from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=db3; table=tbl3; column=col3 (Ranger ID: 15)\n-- Type: DENY | Principal: adam\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: DROP on main.db3.tbl3 for adam\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove adam from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=db3; table=tbl3; column=col3 (Ranger ID: 15)\n-- Type: DENY | Principal: eve\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: DROP on main.db3.tbl3 for eve\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove eve from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=db3; table=tbl3; column=col3 (Ranger ID: 15)\n-- Type: DENY | Principal: eden\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: DROP on main.db3.tbl3 for eden\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove eden from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n",
+  "generated_sql": "-- \u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n-- \u2551  Unity Catalog Migration Script                          \u2551\n-- \u2551  Generated by Ranger \u2192 UC Migrator                       \u2551\n-- \u2551  Source: hivedev\n-- \u2551  Target Catalog: main\n-- \u2551  Date: 2026-05-21\n-- \u2551  Policies: 85 of 85\n-- \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default: audit-all-access (Ranger ID: 1)\n-- Type: GRANT | Principal: public\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT USE CATALOG ON CATALOG main TO `public`;\nGRANT USE SCHEMA ON SCHEMA main.default TO `public`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; table=test1,test2; column=column1 (Ranger ID: 2)\n-- Type: GRANT | Principal: group1\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.default.test1 TO `group1`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; table=test1,test2; column=column1 (Ranger ID: 2)\n-- Type: GRANT | Principal: group2\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.default.test1 TO `group2`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; table=test1,test2; column=column1 (Ranger ID: 2)\n-- Type: GRANT | Principal: user1\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.default.test1 TO `user1`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; table=test1,test2; column=column1 (Ranger ID: 2)\n-- Type: GRANT | Principal: user2\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.default.test1 TO `user2`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; table=test1,test2; column=column1 (Ranger ID: 2)\n-- Type: GRANT | Principal: group1\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.default.test2 TO `group1`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; table=test1,test2; column=column1 (Ranger ID: 2)\n-- Type: GRANT | Principal: group2\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.default.test2 TO `group2`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; table=test1,test2; column=column1 (Ranger ID: 2)\n-- Type: GRANT | Principal: user1\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.default.test2 TO `user1`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; table=test1,test2; column=column1 (Ranger ID: 2)\n-- Type: GRANT | Principal: user2\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.default.test2 TO `user2`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; table=test1,test2; column=column1 (Ranger ID: 2)\n-- Type: GRANT | Principal: cluster-admin\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT CREATE ON TABLE main.default.test1 TO `cluster-admin`;\nGRANT DROP ON TABLE main.default.test1 TO `cluster-admin`;\n-- Note: delegateAdmin=true in Ranger. Consider granting MANAGE on TABLE main.default.test1 if admin delegation is needed.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; table=test1,test2; column=column1 (Ranger ID: 2)\n-- Type: GRANT | Principal: admin\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT CREATE ON TABLE main.default.test1 TO `admin`;\nGRANT DROP ON TABLE main.default.test1 TO `admin`;\n-- Note: delegateAdmin=true in Ranger. Consider granting MANAGE on TABLE main.default.test1 if admin delegation is needed.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; table=test1,test2; column=column1 (Ranger ID: 2)\n-- Type: GRANT | Principal: cluster-admin\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT CREATE ON TABLE main.default.test2 TO `cluster-admin`;\nGRANT DROP ON TABLE main.default.test2 TO `cluster-admin`;\n-- Note: delegateAdmin=true in Ranger. Consider granting MANAGE on TABLE main.default.test2 if admin delegation is needed.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; table=test1,test2; column=column1 (Ranger ID: 2)\n-- Type: GRANT | Principal: admin\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT CREATE ON TABLE main.default.test2 TO `admin`;\nGRANT DROP ON TABLE main.default.test2 TO `admin`;\n-- Note: delegateAdmin=true in Ranger. Consider granting MANAGE on TABLE main.default.test2 if admin delegation is needed.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; table=test1,test2; column=column2 (Ranger ID: 3)\n-- Type: GRANT | Principal: group1\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.default.test1 TO `group1`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; table=test1,test2; column=column2 (Ranger ID: 3)\n-- Type: GRANT | Principal: group2\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.default.test1 TO `group2`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; table=test1,test2; column=column2 (Ranger ID: 3)\n-- Type: GRANT | Principal: user1\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.default.test1 TO `user1`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; table=test1,test2; column=column2 (Ranger ID: 3)\n-- Type: GRANT | Principal: user2\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.default.test1 TO `user2`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; table=test1,test2; column=column2 (Ranger ID: 3)\n-- Type: GRANT | Principal: group1\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.default.test2 TO `group1`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; table=test1,test2; column=column2 (Ranger ID: 3)\n-- Type: GRANT | Principal: group2\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.default.test2 TO `group2`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; table=test1,test2; column=column2 (Ranger ID: 3)\n-- Type: GRANT | Principal: user1\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.default.test2 TO `user1`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; table=test1,test2; column=column2 (Ranger ID: 3)\n-- Type: GRANT | Principal: user2\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.default.test2 TO `user2`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; table=test1,test2; column=column2 (Ranger ID: 3)\n-- Type: GRANT | Principal: cluster-admin\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT CREATE ON TABLE main.default.test1 TO `cluster-admin`;\nGRANT DROP ON TABLE main.default.test1 TO `cluster-admin`;\n-- Note: delegateAdmin=true in Ranger. Consider granting MANAGE on TABLE main.default.test1 if admin delegation is needed.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; table=test1,test2; column=column2 (Ranger ID: 3)\n-- Type: GRANT | Principal: admin\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT CREATE ON TABLE main.default.test1 TO `admin`;\nGRANT DROP ON TABLE main.default.test1 TO `admin`;\n-- Note: delegateAdmin=true in Ranger. Consider granting MANAGE on TABLE main.default.test1 if admin delegation is needed.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; table=test1,test2; column=column2 (Ranger ID: 3)\n-- Type: GRANT | Principal: cluster-admin\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT CREATE ON TABLE main.default.test2 TO `cluster-admin`;\nGRANT DROP ON TABLE main.default.test2 TO `cluster-admin`;\n-- Note: delegateAdmin=true in Ranger. Consider granting MANAGE on TABLE main.default.test2 if admin delegation is needed.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; table=test1,test2; column=column2 (Ranger ID: 3)\n-- Type: GRANT | Principal: admin\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT CREATE ON TABLE main.default.test2 TO `admin`;\nGRANT DROP ON TABLE main.default.test2 TO `admin`;\n-- Note: delegateAdmin=true in Ranger. Consider granting MANAGE on TABLE main.default.test2 if admin delegation is needed.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=finance; table=fin_*; column=* (Ranger ID: 4)\n-- Type: GRANT | Principal: finance-controller\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.finance.fin_* TO `finance-controller`;\n-- Note: delegateAdmin=true in Ranger. Consider granting MANAGE on TABLE main.finance.fin_* if admin delegation is needed.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=finance; table=fin_*; column=* (Ranger ID: 4)\n-- Type: GRANT | Principal: user1\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.finance.fin_* TO `user1`;\n-- Note: delegateAdmin=true in Ranger. Consider granting MANAGE on TABLE main.finance.fin_* if admin delegation is needed.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=finance; table=fin_*; column=* (Ranger ID: 4)\n-- Type: GRANT | Principal: user2\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.finance.fin_* TO `user2`;\n-- Note: delegateAdmin=true in Ranger. Consider granting MANAGE on TABLE main.finance.fin_* if admin delegation is needed.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=db1; table=tmp; column=tmp* (Ranger ID: 5)\n-- Type: GRANT | Principal: cluster-admin\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.db1.tmp TO `cluster-admin`;\nGRANT CREATE ON TABLE main.db1.tmp TO `cluster-admin`;\n-- Note: delegateAdmin=true in Ranger. Consider granting MANAGE on TABLE main.db1.tmp if admin delegation is needed.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=db1; table=tmp; column=tmp* (Ranger ID: 5)\n-- Type: GRANT | Principal: finance-controller\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.db1.tmp TO `finance-controller`;\nGRANT CREATE ON TABLE main.db1.tmp TO `finance-controller`;\n-- Note: delegateAdmin=true in Ranger. Consider granting MANAGE on TABLE main.db1.tmp if admin delegation is needed.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=db1; table=tmp; column=tmp* (Ranger ID: 5)\n-- Type: GRANT | Principal: user1\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.db1.tmp TO `user1`;\nGRANT CREATE ON TABLE main.db1.tmp TO `user1`;\n-- Note: delegateAdmin=true in Ranger. Consider granting MANAGE on TABLE main.db1.tmp if admin delegation is needed.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=db1; table=tmp; column=tmp* (Ranger ID: 5)\n-- Type: GRANT | Principal: user2\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.db1.tmp TO `user2`;\nGRANT CREATE ON TABLE main.db1.tmp TO `user2`;\n-- Note: delegateAdmin=true in Ranger. Consider granting MANAGE on TABLE main.db1.tmp if admin delegation is needed.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=hr;udf=udf (Ranger ID: 6)\n-- Type: UDF_GRANT | Principal: cluster-admin\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 Ensure function main.hr.udf is registered in UC before granting.\nGRANT EXECUTE ON FUNCTION `main`.`hr`.`udf` TO `cluster-admin`;\n-- Note: delegateAdmin=true. Consider granting MANAGE on FUNCTION main.hr.udf.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=hr;udf=udf (Ranger ID: 6)\n-- Type: UDF_GRANT | Principal: user1\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 Ensure function main.hr.udf is registered in UC before granting.\nGRANT EXECUTE ON FUNCTION `main`.`hr`.`udf` TO `user1`;\n-- Note: delegateAdmin=true. Consider granting MANAGE on FUNCTION main.hr.udf.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=hr;udf=udf (Ranger ID: 6)\n-- Type: UDF_GRANT | Principal: user2\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 Ensure function main.hr.udf is registered in UC before granting.\nGRANT EXECUTE ON FUNCTION `main`.`hr`.`udf` TO `user2`;\n-- Note: delegateAdmin=true. Consider granting MANAGE on FUNCTION main.hr.udf.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=hr*;udf=udf (Ranger ID: 8)\n-- Type: UDF_GRANT | Principal: hr-admin\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 Ensure function main.hr*.udf is registered in UC before granting.\nGRANT EXECUTE ON FUNCTION `main`.`hr*`.`udf` TO `hr-admin`;\n-- Note: delegateAdmin=true. Consider granting MANAGE on FUNCTION main.hr*.udf.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=hr*;udf=udf (Ranger ID: 8)\n-- Type: UDF_GRANT | Principal: user4\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 Ensure function main.hr*.udf is registered in UC before granting.\nGRANT EXECUTE ON FUNCTION `main`.`hr*`.`udf` TO `user4`;\n-- Note: delegateAdmin=true. Consider granting MANAGE on FUNCTION main.hr*.udf.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; table=test2; column=column2 (Ranger ID: 9)\n-- Type: GRANT | Principal: user2\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.default.test2 TO `user2`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; table=test2; column=column2 (Ranger ID: 9)\n-- Type: GRANT | Principal: user3\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.default.test2 TO `user3`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; table=test2; column=column2 (Ranger ID: 9)\n-- Type: DENY | Principal: group3\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: SELECT, CREATE on main.default.test2 for group3\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove group3 from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; table=test2; column=column2 (Ranger ID: 9)\n-- Type: DENY | Principal: user2\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: SELECT, CREATE on main.default.test2 for user2\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove user2 from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; table=test2; column=column2 (Ranger ID: 9)\n-- Type: DENY | Principal: user3\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: SELECT, CREATE on main.default.test2 for user3\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove user3 from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; table=test2; column=column2 (Ranger ID: 9)\n-- Type: DENY | Principal: user4\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: SELECT, CREATE on main.default.test2 for user4\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove user4 from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=finance; table=fin_*; column=salary (Ranger ID: 10)\n-- Type: GRANT | Principal: cluster-admin\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.finance.fin_* TO `cluster-admin`;\n-- Note: delegateAdmin=true in Ranger. Consider granting MANAGE on TABLE main.finance.fin_* if admin delegation is needed.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=finance; table=fin_*; column=salary (Ranger ID: 10)\n-- Type: GRANT | Principal: user3\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.finance.fin_* TO `user3`;\n-- Note: delegateAdmin=true in Ranger. Consider granting MANAGE on TABLE main.finance.fin_* if admin delegation is needed.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; table=table; column=column (Ranger ID: 11)\n-- Type: GRANT | Principal: cluster-admin\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.default.table TO `cluster-admin`;\n-- Note: delegateAdmin=true in Ranger. Consider granting MANAGE on TABLE main.default.table if admin delegation is needed.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; table=table; column=column (Ranger ID: 11)\n-- Type: GRANT | Principal: user1\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.default.table TO `user1`;\n-- Note: delegateAdmin=true in Ranger. Consider granting MANAGE on TABLE main.default.table if admin delegation is needed.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; table=table; column=column (Ranger ID: 11)\n-- Type: GRANT | Principal: user2\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.default.table TO `user2`;\n-- Note: delegateAdmin=true in Ranger. Consider granting MANAGE on TABLE main.default.table if admin delegation is needed.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; table=table; column=column (Ranger ID: 11)\n-- Type: GRANT | Principal: user3\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.default.table TO `user3`;\n-- Note: delegateAdmin=true in Ranger. Consider granting MANAGE on TABLE main.default.table if admin delegation is needed.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; table=table; column=column (Ranger ID: 11)\n-- Type: GRANT | Principal: user4\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.default.table TO `user4`;\n-- Note: delegateAdmin=true in Ranger. Consider granting MANAGE on TABLE main.default.table if admin delegation is needed.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; table=table; column=column (Ranger ID: 11)\n-- Type: DENY | Principal: public\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: SELECT on main.default.table for public\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove public from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; table=table; column=column (Ranger ID: 11)\n-- Type: DENY | Principal: user2\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: SELECT on main.default.table for user2\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove user2 from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; table=table; column=column (Ranger ID: 11)\n-- Type: DENY | Principal: user3\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: SELECT on main.default.table for user3\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove user3 from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=finance; table=accounts; column=status (Ranger ID: 12)\n-- Type: GRANT | Principal: accounting\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.finance.accounts TO `accounting`;\nGRANT MODIFY ON TABLE main.finance.accounts TO `accounting`;\n-- Note: delegateAdmin=true in Ranger. Consider granting MANAGE on TABLE main.finance.accounts if admin delegation is needed.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=finance; table=accounts; column=status (Ranger ID: 12)\n-- Type: GRANT | Principal: admin\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.finance.accounts TO `admin`;\nGRANT MODIFY ON TABLE main.finance.accounts TO `admin`;\n-- Note: delegateAdmin=true in Ranger. Consider granting MANAGE on TABLE main.finance.accounts if admin delegation is needed.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=finance; table=accounts; column=status (Ranger ID: 12)\n-- Type: GRANT | Principal: john\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.finance.accounts TO `john`;\nGRANT MODIFY ON TABLE main.finance.accounts TO `john`;\n-- Note: delegateAdmin=true in Ranger. Consider granting MANAGE on TABLE main.finance.accounts if admin delegation is needed.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=finance; table=accounts; column=status (Ranger ID: 12)\n-- Type: GRANT | Principal: jane\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.finance.accounts TO `jane`;\nGRANT MODIFY ON TABLE main.finance.accounts TO `jane`;\n-- Note: delegateAdmin=true in Ranger. Consider granting MANAGE on TABLE main.finance.accounts if admin delegation is needed.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=finance; table=accounts; column=status (Ranger ID: 12)\n-- Type: GRANT | Principal: public\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.finance.accounts TO `public`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=finance; table=accounts; column=status (Ranger ID: 12)\n-- Type: DENY | Principal: housekeeping\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: SELECT on main.finance.accounts for housekeeping\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove housekeeping from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=finance; table=accounts; column=amount (Ranger ID: 13)\n-- Type: GRANT | Principal: accounting\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.finance.accounts TO `accounting`;\nGRANT MODIFY ON TABLE main.finance.accounts TO `accounting`;\n-- Note: delegateAdmin=true in Ranger. Consider granting MANAGE on TABLE main.finance.accounts if admin delegation is needed.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=finance; table=accounts; column=amount (Ranger ID: 13)\n-- Type: GRANT | Principal: admin\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.finance.accounts TO `admin`;\nGRANT MODIFY ON TABLE main.finance.accounts TO `admin`;\n-- Note: delegateAdmin=true in Ranger. Consider granting MANAGE on TABLE main.finance.accounts if admin delegation is needed.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=finance; table=accounts; column=amount (Ranger ID: 13)\n-- Type: GRANT | Principal: john\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.finance.accounts TO `john`;\nGRANT MODIFY ON TABLE main.finance.accounts TO `john`;\n-- Note: delegateAdmin=true in Ranger. Consider granting MANAGE on TABLE main.finance.accounts if admin delegation is needed.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=finance; table=accounts; column=amount (Ranger ID: 13)\n-- Type: GRANT | Principal: jane\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.finance.accounts TO `jane`;\nGRANT MODIFY ON TABLE main.finance.accounts TO `jane`;\n-- Note: delegateAdmin=true in Ranger. Consider granting MANAGE on TABLE main.finance.accounts if admin delegation is needed.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=finance; table=accounts; column=amount (Ranger ID: 13)\n-- Type: GRANT | Principal: public\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.finance.accounts TO `public`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=finance; table=accounts; column=amount (Ranger ID: 13)\n-- Type: DENY | Principal: housekeeping\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: DROP on main.finance.accounts for housekeeping\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove housekeeping from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=db1; table=tbl1; column=col1 (Ranger ID: 13)\n-- Type: GRANT | Principal: john\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.db1.tbl1 TO `john`;\nGRANT MODIFY ON TABLE main.db1.tbl1 TO `john`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=db1; table=tbl1; column=col1 (Ranger ID: 13)\n-- Type: GRANT | Principal: jane\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.db1.tbl1 TO `jane`;\nGRANT MODIFY ON TABLE main.db1.tbl1 TO `jane`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=db1; table=tbl1; column=col1 (Ranger ID: 13)\n-- Type: DENY | Principal: adam\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: DROP on main.db1.tbl1 for adam\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove adam from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=db1; table=tbl1; column=col1 (Ranger ID: 13)\n-- Type: DENY | Principal: eve\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: DROP on main.db1.tbl1 for eve\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove eve from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=db2; table=tbl2; column=col2 (Ranger ID: 14)\n-- Type: GRANT | Principal: john\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.db2.tbl2 TO `john`;\nGRANT MODIFY ON TABLE main.db2.tbl2 TO `john`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=db2; table=tbl2; column=col2 (Ranger ID: 14)\n-- Type: GRANT | Principal: jane\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.db2.tbl2 TO `jane`;\nGRANT MODIFY ON TABLE main.db2.tbl2 TO `jane`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=db2; table=tbl2; column=col2 (Ranger ID: 14)\n-- Type: DENY | Principal: adam\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: DROP on main.db2.tbl2 for adam\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove adam from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=db2; table=tbl2; column=col2 (Ranger ID: 14)\n-- Type: DENY | Principal: eve\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: DROP on main.db2.tbl2 for eve\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove eve from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=db3; table=tbl3; column=col3 (Ranger ID: 15)\n-- Type: GRANT | Principal: john\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.db3.tbl3 TO `john`;\nGRANT MODIFY ON TABLE main.db3.tbl3 TO `john`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=db3; table=tbl3; column=col3 (Ranger ID: 15)\n-- Type: GRANT | Principal: jane\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.db3.tbl3 TO `jane`;\nGRANT MODIFY ON TABLE main.db3.tbl3 TO `jane`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=db3; table=tbl3; column=col3 (Ranger ID: 15)\n-- Type: GRANT | Principal: tarzan\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.db3.tbl3 TO `tarzan`;\nGRANT MODIFY ON TABLE main.db3.tbl3 TO `tarzan`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=db3; table=tbl3; column=col3 (Ranger ID: 15)\n-- Type: DENY | Principal: adam\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: DROP on main.db3.tbl3 for adam\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove adam from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=db3; table=tbl3; column=col3 (Ranger ID: 15)\n-- Type: DENY | Principal: eve\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: DROP on main.db3.tbl3 for eve\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove eve from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=db3; table=tbl3; column=col3 (Ranger ID: 15)\n-- Type: DENY | Principal: eden\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: DROP on main.db3.tbl3 for eden\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove eden from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=denyAllElse; table=table-1; column=column-1 (Ranger ID: 20)\n-- Type: GRANT | Principal: user1\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.denyAllElse.table-1 TO `user1`;\nGRANT MODIFY ON TABLE main.denyAllElse.table-1 TO `user1`;\nGRANT CREATE ON TABLE main.denyAllElse.table-1 TO `user1`;\nGRANT DROP ON TABLE main.denyAllElse.table-1 TO `user1`;\nGRANT ALTER ON TABLE main.denyAllElse.table-1 TO `user1`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=denyAllElse; table=table-1; column=column-1 (Ranger ID: 20)\n-- Type: GRANT | Principal: user3\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE main.denyAllElse.table-1 TO `user3`;\nGRANT MODIFY ON TABLE main.denyAllElse.table-1 TO `user3`;\nGRANT CREATE ON TABLE main.denyAllElse.table-1 TO `user3`;\nGRANT DROP ON TABLE main.denyAllElse.table-1 TO `user3`;\nGRANT ALTER ON TABLE main.denyAllElse.table-1 TO `user3`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=user_{USER }, table=*, column=* (Ranger ID: 21)\n-- Type: GRANT | Principal: public\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT USE CATALOG ON CATALOG main TO `public`;\nGRANT USE SCHEMA ON SCHEMA main.user_{USER }* TO `public`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=dept_${{USER.dept}}, table=*, column=* (Ranger ID: 22)\n-- Type: GRANT | Principal: public\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT USE CATALOG ON CATALOG main TO `public`;\nGRANT USE SCHEMA ON SCHEMA main.dept_${{USER.dept}} TO `public`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=dept_${{USER.dept}}, table=*, column=* (Ranger ID: 22)\n-- Type: GRANT | Principal: engg\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT USE CATALOG ON CATALOG main TO `engg`;\nGRANT USE SCHEMA ON SCHEMA main.dept_${{USER.dept}} TO `engg`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=dept_engg, table=*, column=* (Ranger ID: 23)\n-- Type: GRANT | Principal: engg\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT USE CATALOG ON CATALOG main TO `engg`;\nGRANT USE SCHEMA ON SCHEMA main.dept_engg TO `engg`;\n",
   "gap_analysis": [
     {
       "category": "Deny Policies",
@@ -2325,7 +2325,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "2-grant-default-test1-group1-1",
@@ -2348,7 +2348,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "2-grant-default-test1-group2-2",
@@ -2371,7 +2371,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "2-grant-default-test1-user1-3",
@@ -2394,7 +2394,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "2-grant-default-test1-user2-4",
@@ -2417,7 +2417,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "2-grant-default-test2-group1-5",
@@ -2440,7 +2440,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "2-grant-default-test2-group2-6",
@@ -2463,7 +2463,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "2-grant-default-test2-user1-7",
@@ -2486,7 +2486,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "2-grant-default-test2-user2-8",
@@ -2509,7 +2509,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "2-grant-default-test1-cluster-admin-9",
@@ -2533,7 +2533,7 @@
         },
         "delegateAdmin": true,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "2-grant-default-test1-admin-10",
@@ -2557,7 +2557,7 @@
         },
         "delegateAdmin": true,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "2-grant-default-test2-cluster-admin-11",
@@ -2581,7 +2581,7 @@
         },
         "delegateAdmin": true,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "2-grant-default-test2-admin-12",
@@ -2605,7 +2605,7 @@
         },
         "delegateAdmin": true,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "3-grant-default-test1-group1-1",
@@ -2628,7 +2628,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "3-grant-default-test1-group2-2",
@@ -2651,7 +2651,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "3-grant-default-test1-user1-3",
@@ -2674,7 +2674,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "3-grant-default-test1-user2-4",
@@ -2697,7 +2697,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "3-grant-default-test2-group1-5",
@@ -2720,7 +2720,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "3-grant-default-test2-group2-6",
@@ -2743,7 +2743,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "3-grant-default-test2-user1-7",
@@ -2766,7 +2766,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "3-grant-default-test2-user2-8",
@@ -2789,7 +2789,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "3-grant-default-test1-cluster-admin-9",
@@ -2813,7 +2813,7 @@
         },
         "delegateAdmin": true,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "3-grant-default-test1-admin-10",
@@ -2837,7 +2837,7 @@
         },
         "delegateAdmin": true,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "3-grant-default-test2-cluster-admin-11",
@@ -2861,7 +2861,7 @@
         },
         "delegateAdmin": true,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "3-grant-default-test2-admin-12",
@@ -2885,7 +2885,7 @@
         },
         "delegateAdmin": true,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "4-grant-finance-fin_*-finance-controller-1",
@@ -2906,7 +2906,7 @@
         },
         "delegateAdmin": true,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "4-grant-finance-fin_*-user1-2",
@@ -2927,7 +2927,7 @@
         },
         "delegateAdmin": true,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "4-grant-finance-fin_*-user2-3",
@@ -2948,7 +2948,7 @@
         },
         "delegateAdmin": true,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "5-grant-db1-tmp-cluster-admin-1",
@@ -2972,7 +2972,7 @@
         },
         "delegateAdmin": true,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "5-grant-db1-tmp-finance-controller-2",
@@ -2996,7 +2996,7 @@
         },
         "delegateAdmin": true,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "5-grant-db1-tmp-user1-3",
@@ -3020,7 +3020,7 @@
         },
         "delegateAdmin": true,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "5-grant-db1-tmp-user2-4",
@@ -3044,7 +3044,7 @@
         },
         "delegateAdmin": true,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "6-udf-hr-udf-cluster-admin-1",
@@ -3061,7 +3061,7 @@
         },
         "delegateAdmin": true,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "6-udf-hr-udf-user1-2",
@@ -3078,7 +3078,7 @@
         },
         "delegateAdmin": true,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "6-udf-hr-udf-user2-3",
@@ -3095,7 +3095,7 @@
         },
         "delegateAdmin": true,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "8-udf-hr*-udf-hr-admin-1",
@@ -3112,7 +3112,7 @@
         },
         "delegateAdmin": true,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "8-udf-hr*-udf-user4-2",
@@ -3129,7 +3129,7 @@
         },
         "delegateAdmin": true,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "9-grant-default-test2-user2-1",
@@ -3152,7 +3152,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "9-grant-default-test2-user3-2",
@@ -3175,7 +3175,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "9-deny-default-test2-group3-3",
@@ -3282,7 +3282,7 @@
         },
         "delegateAdmin": true,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "10-grant-finance-fin_*-user3-2",
@@ -3305,7 +3305,7 @@
         },
         "delegateAdmin": true,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "11-grant-default-table-cluster-admin-1",
@@ -3328,7 +3328,7 @@
         },
         "delegateAdmin": true,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "11-grant-default-table-user1-2",
@@ -3351,7 +3351,7 @@
         },
         "delegateAdmin": true,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "11-grant-default-table-user2-3",
@@ -3374,7 +3374,7 @@
         },
         "delegateAdmin": true,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "11-grant-default-table-user3-4",
@@ -3397,7 +3397,7 @@
         },
         "delegateAdmin": true,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "11-grant-default-table-user4-5",
@@ -3420,7 +3420,7 @@
         },
         "delegateAdmin": true,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "11-deny-default-table-public-6",
@@ -3504,7 +3504,7 @@
         },
         "delegateAdmin": true,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "12-grant-finance-accounts-admin-2",
@@ -3528,7 +3528,7 @@
         },
         "delegateAdmin": true,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "12-grant-finance-accounts-john-3",
@@ -3552,7 +3552,7 @@
         },
         "delegateAdmin": true,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "12-grant-finance-accounts-jane-4",
@@ -3576,7 +3576,7 @@
         },
         "delegateAdmin": true,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "12-grant-finance-accounts-public-5",
@@ -3599,7 +3599,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "12-deny-finance-accounts-housekeeping-6",
@@ -3643,7 +3643,7 @@
         },
         "delegateAdmin": true,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "13-grant-finance-accounts-admin-2",
@@ -3667,7 +3667,7 @@
         },
         "delegateAdmin": true,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "13-grant-finance-accounts-john-3",
@@ -3691,7 +3691,7 @@
         },
         "delegateAdmin": true,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "13-grant-finance-accounts-jane-4",
@@ -3715,7 +3715,7 @@
         },
         "delegateAdmin": true,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "13-grant-finance-accounts-public-5",
@@ -3738,7 +3738,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "13-deny-finance-accounts-housekeeping-6",
@@ -3782,7 +3782,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "13-grant-db1-tbl1-jane-2",
@@ -3806,7 +3806,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "13-deny-db1-tbl1-adam-3",
@@ -3870,7 +3870,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "14-grant-db2-tbl2-jane-2",
@@ -3894,7 +3894,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "14-deny-db2-tbl2-adam-3",
@@ -3958,7 +3958,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "15-grant-db3-tbl3-jane-2",
@@ -3982,7 +3982,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "15-grant-db3-tbl3-tarzan-3",
@@ -4006,7 +4006,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "15-deny-db3-tbl3-adam-4",
@@ -4093,7 +4093,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "20-grant-denyAllElse-table-1-user3-2",
@@ -4120,7 +4120,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "21-grant-user_{USER }*-*-public-1",
@@ -4139,7 +4139,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "22-grant-dept_${{USER.dept}}-*-public-1",
@@ -4158,7 +4158,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "22-grant-dept_${{USER.dept}}-*-engg-2",
@@ -4177,7 +4177,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       },
       {
         "id": "23-grant-dept_engg-*-engg-1",
@@ -4196,7 +4196,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "pending"
+        "status": "approved"
       }
     ],
     "warnings": [

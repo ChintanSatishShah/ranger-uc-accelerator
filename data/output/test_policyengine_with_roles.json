@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "timestamp": "2026-05-20T12:59:58.053486",
+    "timestamp": "2026-05-21T09:48:01.795156",
     "service_name": "hivedev",
     "cluster_name": "unknown",
     "catalog_name": "main",
@@ -26,7 +26,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "2-grant-default-*-role-group1-1",
@@ -49,7 +49,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "2-grant-default-*-user1-2",
@@ -72,7 +72,53 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
+      },
+      {
+        "id": "2-grant-default-*-fin-admin-3",
+        "rangerPolicyId": 2,
+        "rangerPolicyName": "db=default",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "default",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "CREATE",
+          "DROP",
+          "SELECT"
+        ],
+        "principal": {
+          "type": "role",
+          "name": "fin-admin"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "pending"
+      },
+      {
+        "id": "2-grant-default-*-fin-group-4",
+        "rangerPolicyId": 2,
+        "rangerPolicyName": "db=default",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "default",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "CREATE",
+          "DROP",
+          "SELECT"
+        ],
+        "principal": {
+          "type": "role",
+          "name": "fin-group"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "pending"
       },
       {
         "id": "3-grant-hr-fin-*-public-1",
@@ -91,10 +137,27 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       }
     ],
-    "warnings": [],
+    "warnings": [
+      {
+        "policyId": 3,
+        "policyName": "db=hr-fin",
+        "category": "deny_all_else",
+        "severity": "critical",
+        "message": "Policy \"db=hr-fin\" uses isDenyAllElse=true \u2014 all principals not explicitly listed are denied in Ranger; UC grants do not enforce this restriction",
+        "recommendation": "Audit all principals with access to this resource in UC. Ensure only explicitly listed principals receive grants."
+      },
+      {
+        "policyId": 3,
+        "policyName": "db=hr-fin",
+        "category": "conditions",
+        "severity": "warning",
+        "message": "Policy \"db=hr-fin\" has conditions [expression] with no UC equivalent \u2014 grants will apply unconditionally",
+        "recommendation": "IP-range, time-based, and custom conditions cannot be enforced in UC. Apply equivalent restrictions at the network or application layer."
+      }
+    ],
     "identities": [
       {
         "type": "group",
@@ -103,6 +166,14 @@
       {
         "type": "group",
         "name": "role-group1"
+      },
+      {
+        "type": "role",
+        "name": "fin-admin"
+      },
+      {
+        "type": "role",
+        "name": "fin-group"
       },
       {
         "type": "user",
@@ -133,7 +204,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "2-grant-default-*-role-group1-1",
@@ -156,7 +227,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "2-grant-default-*-user1-2",
@@ -179,7 +250,53 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
+    },
+    {
+      "id": "2-grant-default-*-fin-admin-3",
+      "rangerPolicyId": 2,
+      "rangerPolicyName": "db=default",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "CREATE",
+        "DROP",
+        "SELECT"
+      ],
+      "principal": {
+        "type": "role",
+        "name": "fin-admin"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
+    },
+    {
+      "id": "2-grant-default-*-fin-group-4",
+      "rangerPolicyId": 2,
+      "rangerPolicyName": "db=default",
+      "rangerPolicyDesc": "",
+      "type": "grant",
+      "catalog": "main",
+      "schema": "default",
+      "table": null,
+      "columns": null,
+      "privileges": [
+        "CREATE",
+        "DROP",
+        "SELECT"
+      ],
+      "principal": {
+        "type": "role",
+        "name": "fin-group"
+      },
+      "delegateAdmin": false,
+      "enabled": true,
+      "status": "pending"
     },
     {
       "id": "3-grant-hr-fin-*-public-1",
@@ -198,13 +315,15 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     }
   ],
   "identity_map": {
     "public": "public",
     "role-group1": "role-group1",
+    "fin-admin": "fin-admin",
+    "fin-group": "fin-group",
     "user1": "user1"
   },
-  "generated_sql": "-- \u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n-- \u2551  Unity Catalog Migration Script                          \u2551\n-- \u2551  Generated by Ranger \u2192 UC Migrator                       \u2551\n-- \u2551  Source: hivedev\n-- \u2551  Target Catalog: main\n-- \u2551  Date: 2026-05-20\n-- \u2551  Policies: 4 of 4\n-- \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default: audit-all-access (Ranger ID: 1)\n-- Type: GRANT | Principal: public\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT USE CATALOG ON CATALOG main TO `public`;\nGRANT USE SCHEMA ON SCHEMA main.default TO `public`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default (Ranger ID: 2)\n-- Type: GRANT | Principal: role-group1\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT USE CATALOG ON CATALOG main TO `role-group1`;\nGRANT USE SCHEMA ON SCHEMA main.default TO `role-group1`;\nGRANT CREATE ON SCHEMA main.default TO `role-group1`;\nGRANT DROP ON SCHEMA main.default TO `role-group1`;\nGRANT SELECT ON SCHEMA main.default TO `role-group1`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default (Ranger ID: 2)\n-- Type: GRANT | Principal: user1\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT USE CATALOG ON CATALOG main TO `user1`;\nGRANT USE SCHEMA ON SCHEMA main.default TO `user1`;\nGRANT CREATE ON SCHEMA main.default TO `user1`;\nGRANT DROP ON SCHEMA main.default TO `user1`;\nGRANT SELECT ON SCHEMA main.default TO `user1`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=hr-fin (Ranger ID: 3)\n-- Type: GRANT | Principal: public\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT USE CATALOG ON CATALOG main TO `public`;\nGRANT USE SCHEMA ON SCHEMA main.hr-fin TO `public`;\n"
+  "generated_sql": "-- \u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n-- \u2551  Unity Catalog Migration Script                          \u2551\n-- \u2551  Generated by Ranger \u2192 UC Migrator                       \u2551\n-- \u2551  Source: hivedev\n-- \u2551  Target Catalog: main\n-- \u2551  Date: 2026-05-21\n-- \u2551  Policies: 0 of 6\n-- \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\n\n"
 }

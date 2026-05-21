@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "timestamp": "2026-05-20T12:59:58.065167",
+    "timestamp": "2026-05-21T09:48:01.795156",
     "service_name": "cm_hbase",
     "cluster_name": "unknown",
     "catalog_name": "main",
@@ -26,7 +26,7 @@
         },
         "delegateAdmin": true,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "4-hbase-hbase-2",
@@ -45,7 +45,7 @@
         },
         "delegateAdmin": true,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "4-hbase-hive-3",
@@ -64,7 +64,7 @@
         },
         "delegateAdmin": true,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "4-hbase-pr00_xbgdta-4",
@@ -83,7 +83,7 @@
         },
         "delegateAdmin": true,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "4-hbase-hbase-5",
@@ -102,7 +102,7 @@
         },
         "delegateAdmin": true,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "4-hbase-hive-6",
@@ -121,7 +121,7 @@
         },
         "delegateAdmin": true,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "4-hbase-rangerlookup-7",
@@ -140,7 +140,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "4-hbase-rangerlookup-8",
@@ -159,7 +159,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "4-hbase-qqsens-9",
@@ -178,7 +178,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "4-hbase-fb00_xbgdta-10",
@@ -197,7 +197,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "4-hbase-qqsens-11",
@@ -216,7 +216,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "4-hbase-fb00_xbgdta-12",
@@ -235,7 +235,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "5-hbase-atlas-1",
@@ -254,7 +254,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "5-hbase-atlas-2",
@@ -273,7 +273,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "782-hbase-{USER}-1",
@@ -292,7 +292,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "821-hbase-fb00_xda017-1",
@@ -311,7 +311,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "821-hbase-xagcla-2",
@@ -330,7 +330,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "822-hbase-fb00_xda029-1",
@@ -349,7 +349,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "823-hbase-fb00_xda034-1",
@@ -368,7 +368,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "824-hbase-fb00_xda035-1",
@@ -387,7 +387,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "825-hbase-fb00_xda041-1",
@@ -406,7 +406,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "826-hbase-fb00_xda043-1",
@@ -425,7 +425,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "827-hbase-fb00_xda052-1",
@@ -444,7 +444,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "828-hbase-fb00_xda060-1",
@@ -463,7 +463,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "829-hbase-fb00_xda066-1",
@@ -482,7 +482,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "830-hbase-fb00_xda085-1",
@@ -501,7 +501,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "831-hbase-fb00_xda092-1",
@@ -520,7 +520,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "832-hbase-fb00_xda126-1",
@@ -539,7 +539,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "832-hbase-fb00_xda085-2",
@@ -558,7 +558,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "833-hbase-fb00_xds020-1",
@@ -577,7 +577,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "834-hbase-fb00_xoi022-1",
@@ -596,7 +596,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "834-hbase-fb00_braff-2",
@@ -615,7 +615,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "834-hbase-fb00_bbrut-3",
@@ -634,7 +634,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "834-hbase-fb00_xoi099-4",
@@ -653,7 +653,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "834-hbase-fb00_xoi098-5",
@@ -672,7 +672,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "834-hbase-fb00_xoi097-6",
@@ -691,7 +691,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "834-hbase-sd00_xlx001-7",
@@ -710,7 +710,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "834-hbase-fb00_xda085-8",
@@ -729,7 +729,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "834-hbase-fb00_xda126-9",
@@ -748,7 +748,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "834-hbase-fb00_xda017-10",
@@ -767,7 +767,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "834-hbase-qqsens-11",
@@ -786,7 +786,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "834-hbase-fb00_xda062-12",
@@ -805,7 +805,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "834-hbase-fb00_xpr203-13",
@@ -824,7 +824,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "834-hbase-fb00_xda144-14",
@@ -843,7 +843,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "834-hbase-fb00_xda143-15",
@@ -862,7 +862,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "834-hbase-fb00_xda108-16",
@@ -881,7 +881,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "834-hbase-fb00_xoi033-17",
@@ -900,7 +900,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "834-hbase-fb00_xda042-18",
@@ -919,7 +919,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "834-hbase-fb00_xpx091-19",
@@ -938,7 +938,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "834-hbase-fb00_xda107-20",
@@ -957,7 +957,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "835-hbase-fb00_xoi025-1",
@@ -976,7 +976,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "836-hbase-fb00_xoi033-1",
@@ -995,7 +995,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "836-hbase-fb00_xpr203-2",
@@ -1014,7 +1014,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       }
     ],
     "warnings": [],
@@ -1200,7 +1200,7 @@
       },
       "delegateAdmin": true,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "4-hbase-hbase-2",
@@ -1219,7 +1219,7 @@
       },
       "delegateAdmin": true,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "4-hbase-hive-3",
@@ -1238,7 +1238,7 @@
       },
       "delegateAdmin": true,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "4-hbase-pr00_xbgdta-4",
@@ -1257,7 +1257,7 @@
       },
       "delegateAdmin": true,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "4-hbase-hbase-5",
@@ -1276,7 +1276,7 @@
       },
       "delegateAdmin": true,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "4-hbase-hive-6",
@@ -1295,7 +1295,7 @@
       },
       "delegateAdmin": true,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "4-hbase-rangerlookup-7",
@@ -1314,7 +1314,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "4-hbase-rangerlookup-8",
@@ -1333,7 +1333,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "4-hbase-qqsens-9",
@@ -1352,7 +1352,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "4-hbase-fb00_xbgdta-10",
@@ -1371,7 +1371,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "4-hbase-qqsens-11",
@@ -1390,7 +1390,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "4-hbase-fb00_xbgdta-12",
@@ -1409,7 +1409,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "5-hbase-atlas-1",
@@ -1428,7 +1428,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "5-hbase-atlas-2",
@@ -1447,7 +1447,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "782-hbase-{USER}-1",
@@ -1466,7 +1466,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "821-hbase-fb00_xda017-1",
@@ -1485,7 +1485,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "821-hbase-xagcla-2",
@@ -1504,7 +1504,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "822-hbase-fb00_xda029-1",
@@ -1523,7 +1523,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "823-hbase-fb00_xda034-1",
@@ -1542,7 +1542,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "824-hbase-fb00_xda035-1",
@@ -1561,7 +1561,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "825-hbase-fb00_xda041-1",
@@ -1580,7 +1580,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "826-hbase-fb00_xda043-1",
@@ -1599,7 +1599,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "827-hbase-fb00_xda052-1",
@@ -1618,7 +1618,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "828-hbase-fb00_xda060-1",
@@ -1637,7 +1637,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "829-hbase-fb00_xda066-1",
@@ -1656,7 +1656,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "830-hbase-fb00_xda085-1",
@@ -1675,7 +1675,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "831-hbase-fb00_xda092-1",
@@ -1694,7 +1694,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "832-hbase-fb00_xda126-1",
@@ -1713,7 +1713,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "832-hbase-fb00_xda085-2",
@@ -1732,7 +1732,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "833-hbase-fb00_xds020-1",
@@ -1751,7 +1751,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "834-hbase-fb00_xoi022-1",
@@ -1770,7 +1770,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "834-hbase-fb00_braff-2",
@@ -1789,7 +1789,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "834-hbase-fb00_bbrut-3",
@@ -1808,7 +1808,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "834-hbase-fb00_xoi099-4",
@@ -1827,7 +1827,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "834-hbase-fb00_xoi098-5",
@@ -1846,7 +1846,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "834-hbase-fb00_xoi097-6",
@@ -1865,7 +1865,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "834-hbase-sd00_xlx001-7",
@@ -1884,7 +1884,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "834-hbase-fb00_xda085-8",
@@ -1903,7 +1903,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "834-hbase-fb00_xda126-9",
@@ -1922,7 +1922,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "834-hbase-fb00_xda017-10",
@@ -1941,7 +1941,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "834-hbase-qqsens-11",
@@ -1960,7 +1960,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "834-hbase-fb00_xda062-12",
@@ -1979,7 +1979,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "834-hbase-fb00_xpr203-13",
@@ -1998,7 +1998,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "834-hbase-fb00_xda144-14",
@@ -2017,7 +2017,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "834-hbase-fb00_xda143-15",
@@ -2036,7 +2036,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "834-hbase-fb00_xda108-16",
@@ -2055,7 +2055,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "834-hbase-fb00_xoi033-17",
@@ -2074,7 +2074,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "834-hbase-fb00_xda042-18",
@@ -2093,7 +2093,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "834-hbase-fb00_xpx091-19",
@@ -2112,7 +2112,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "834-hbase-fb00_xda107-20",
@@ -2131,7 +2131,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "835-hbase-fb00_xoi025-1",
@@ -2150,7 +2150,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "836-hbase-fb00_xoi033-1",
@@ -2169,7 +2169,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "836-hbase-fb00_xpr203-2",
@@ -2188,7 +2188,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     }
   ],
   "identity_map": {
@@ -2232,5 +2232,5 @@
     "rangerlookup": "rangerlookup",
     "{USER}": "{USER}"
   },
-  "generated_sql": "-- \u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n-- \u2551  Unity Catalog Migration Script                          \u2551\n-- \u2551  Generated by Ranger \u2192 UC Migrator                       \u2551\n-- \u2551  Source: cm_hbase\n-- \u2551  Target Catalog: main\n-- \u2551  Date: 2026-05-20\n-- \u2551  Policies: 53 of 53\n-- \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: all - table, column-family, column (Ranger ID: 4)\n-- Type: HBASE_GRANT | Principal: pr00_xbgdta\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Note: delegateAdmin=true. Consider MANAGE on TABLE main.default.prospects if admin delegation needed.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: all - table, column-family, column (Ranger ID: 4)\n-- Type: HBASE_GRANT | Principal: hbase\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Note: delegateAdmin=true. Consider MANAGE on TABLE main.default.prospects if admin delegation needed.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: all - table, column-family, column (Ranger ID: 4)\n-- Type: HBASE_GRANT | Principal: hive\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Note: delegateAdmin=true. Consider MANAGE on TABLE main.default.prospects if admin delegation needed.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: all - table, column-family, column (Ranger ID: 4)\n-- Type: HBASE_GRANT | Principal: pr00_xbgdta\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Note: delegateAdmin=true. Consider MANAGE on TABLE main.default.invoices if admin delegation needed.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: all - table, column-family, column (Ranger ID: 4)\n-- Type: HBASE_GRANT | Principal: hbase\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Note: delegateAdmin=true. Consider MANAGE on TABLE main.default.invoices if admin delegation needed.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: all - table, column-family, column (Ranger ID: 4)\n-- Type: HBASE_GRANT | Principal: hive\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Note: delegateAdmin=true. Consider MANAGE on TABLE main.default.invoices if admin delegation needed.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: all - table, column-family, column (Ranger ID: 4)\n-- Type: HBASE_GRANT | Principal: rangerlookup\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: all - table, column-family, column (Ranger ID: 4)\n-- Type: HBASE_GRANT | Principal: rangerlookup\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: all - table, column-family, column (Ranger ID: 4)\n-- Type: HBASE_GRANT | Principal: qqsens\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: all - table, column-family, column (Ranger ID: 4)\n-- Type: HBASE_GRANT | Principal: fb00_xbgdta\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: all - table, column-family, column (Ranger ID: 4)\n-- Type: HBASE_GRANT | Principal: qqsens\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: all - table, column-family, column (Ranger ID: 4)\n-- Type: HBASE_GRANT | Principal: fb00_xbgdta\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: ATLAS_HBASE_TABLES (Ranger ID: 5)\n-- Type: HBASE_GRANT | Principal: atlas\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: ATLAS_HBASE_TABLES (Ranger ID: 5)\n-- Type: HBASE_GRANT | Principal: atlas\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: SYSTEM (Ranger ID: 782)\n-- Type: HBASE_GRANT | Principal: {USER}\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT USE CATALOG ON CATALOG main TO `{USER}`;\nGRANT USE SCHEMA ON SCHEMA main.SYSTEM TO `{USER}`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: fb00_xda017 (Ranger ID: 821)\n-- Type: HBASE_GRANT | Principal: fb00_xda017\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: fb00_xda017 (Ranger ID: 821)\n-- Type: HBASE_GRANT | Principal: xagcla\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: fb00_xda029 (Ranger ID: 822)\n-- Type: HBASE_GRANT | Principal: fb00_xda029\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: fb00_xda034 (Ranger ID: 823)\n-- Type: HBASE_GRANT | Principal: fb00_xda034\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: fb00_xda035 (Ranger ID: 824)\n-- Type: HBASE_GRANT | Principal: fb00_xda035\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: fb00_xda041 (Ranger ID: 825)\n-- Type: HBASE_GRANT | Principal: fb00_xda041\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: fb00_xda043 (Ranger ID: 826)\n-- Type: HBASE_GRANT | Principal: fb00_xda043\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: fb00_xda052 (Ranger ID: 827)\n-- Type: HBASE_GRANT | Principal: fb00_xda052\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: fb00_xda060 (Ranger ID: 828)\n-- Type: HBASE_GRANT | Principal: fb00_xda060\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: fb00_xda066 (Ranger ID: 829)\n-- Type: HBASE_GRANT | Principal: fb00_xda066\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: fb00_xda085 (Ranger ID: 830)\n-- Type: HBASE_GRANT | Principal: fb00_xda085\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: fb00_xda092 (Ranger ID: 831)\n-- Type: HBASE_GRANT | Principal: fb00_xda092\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: fb00_xda126 (Ranger ID: 832)\n-- Type: HBASE_GRANT | Principal: fb00_xda126\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: fb00_xda126 (Ranger ID: 832)\n-- Type: HBASE_GRANT | Principal: fb00_xda085\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: fb00_xds020 (Ranger ID: 833)\n-- Type: HBASE_GRANT | Principal: fb00_xds020\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: fb00_xoi022 (Ranger ID: 834)\n-- Type: HBASE_GRANT | Principal: fb00_xoi022\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: fb00_xoi022 (Ranger ID: 834)\n-- Type: HBASE_GRANT | Principal: fb00_braff\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: fb00_xoi022 (Ranger ID: 834)\n-- Type: HBASE_GRANT | Principal: fb00_bbrut\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: fb00_xoi022 (Ranger ID: 834)\n-- Type: HBASE_GRANT | Principal: fb00_xoi099\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: fb00_xoi022 (Ranger ID: 834)\n-- Type: HBASE_GRANT | Principal: fb00_xoi098\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: fb00_xoi022 (Ranger ID: 834)\n-- Type: HBASE_GRANT | Principal: fb00_xoi097\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: fb00_xoi022 (Ranger ID: 834)\n-- Type: HBASE_GRANT | Principal: sd00_xlx001\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: fb00_xoi022 (Ranger ID: 834)\n-- Type: HBASE_GRANT | Principal: fb00_xda085\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: fb00_xoi022 (Ranger ID: 834)\n-- Type: HBASE_GRANT | Principal: fb00_xda126\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: fb00_xoi022 (Ranger ID: 834)\n-- Type: HBASE_GRANT | Principal: fb00_xda017\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: fb00_xoi022 (Ranger ID: 834)\n-- Type: HBASE_GRANT | Principal: qqsens\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: fb00_xoi022 (Ranger ID: 834)\n-- Type: HBASE_GRANT | Principal: fb00_xda062\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: fb00_xoi022 (Ranger ID: 834)\n-- Type: HBASE_GRANT | Principal: fb00_xpr203\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: fb00_xoi022 (Ranger ID: 834)\n-- Type: HBASE_GRANT | Principal: fb00_xda144\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: fb00_xoi022 (Ranger ID: 834)\n-- Type: HBASE_GRANT | Principal: fb00_xda143\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: fb00_xoi022 (Ranger ID: 834)\n-- Type: HBASE_GRANT | Principal: fb00_xda108\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: fb00_xoi022 (Ranger ID: 834)\n-- Type: HBASE_GRANT | Principal: fb00_xoi033\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: fb00_xoi022 (Ranger ID: 834)\n-- Type: HBASE_GRANT | Principal: fb00_xda042\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: fb00_xoi022 (Ranger ID: 834)\n-- Type: HBASE_GRANT | Principal: fb00_xpx091\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: fb00_xoi022 (Ranger ID: 834)\n-- Type: HBASE_GRANT | Principal: fb00_xda107\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: fb00_xoi025 (Ranger ID: 835)\n-- Type: HBASE_GRANT | Principal: fb00_xoi025\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: fb00_xoi033 (Ranger ID: 836)\n-- Type: HBASE_GRANT | Principal: fb00_xoi033\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: fb00_xoi033 (Ranger ID: 836)\n-- Type: HBASE_GRANT | Principal: fb00_xpr203\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\n"
+  "generated_sql": "-- \u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n-- \u2551  Unity Catalog Migration Script                          \u2551\n-- \u2551  Generated by Ranger \u2192 UC Migrator                       \u2551\n-- \u2551  Source: cm_hbase\n-- \u2551  Target Catalog: main\n-- \u2551  Date: 2026-05-21\n-- \u2551  Policies: 0 of 53\n-- \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\n\n"
 }

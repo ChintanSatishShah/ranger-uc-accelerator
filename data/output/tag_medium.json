@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "timestamp": "2026-05-20T12:59:58.044007",
+    "timestamp": "2026-05-21T09:48:01.795156",
     "service_name": "tag_prod",
     "cluster_name": "unknown",
     "catalog_name": "main",
@@ -29,7 +29,7 @@
           "name": ""
         },
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "tag_set_sales_reports_tbl",
@@ -51,7 +51,7 @@
           "name": ""
         },
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "tag_set_marketing_campaigns_tbl",
@@ -73,7 +73,7 @@
           "name": ""
         },
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "302-tag_grant-finance-transactions-data_governance-1",
@@ -100,7 +100,7 @@
         ],
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "302-tag_grant-finance-transactions-data_steward@company.com-2",
@@ -127,7 +127,7 @@
         ],
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "302-tag_grant-sales-reports-data_governance-3",
@@ -154,7 +154,7 @@
         ],
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "302-tag_grant-sales-reports-data_steward@company.com-4",
@@ -181,7 +181,7 @@
         ],
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "302-tag_grant-marketing-campaigns-data_governance-5",
@@ -208,7 +208,7 @@
         ],
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "302-tag_grant-marketing-campaigns-data_steward@company.com-6",
@@ -235,7 +235,7 @@
         ],
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "303-tag_grant-marketing-campaigns-all_employees-1",
@@ -259,7 +259,7 @@
         ],
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       }
     ],
     "warnings": [],
@@ -314,7 +314,7 @@
         "name": ""
       },
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "tag_set_sales_reports_tbl",
@@ -336,7 +336,7 @@
         "name": ""
       },
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "tag_set_marketing_campaigns_tbl",
@@ -358,7 +358,7 @@
         "name": ""
       },
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "302-tag_grant-finance-transactions-data_governance-1",
@@ -385,7 +385,7 @@
       ],
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "302-tag_grant-finance-transactions-data_steward@company.com-2",
@@ -412,7 +412,7 @@
       ],
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "302-tag_grant-sales-reports-data_governance-3",
@@ -439,7 +439,7 @@
       ],
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "302-tag_grant-sales-reports-data_steward@company.com-4",
@@ -466,7 +466,7 @@
       ],
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "302-tag_grant-marketing-campaigns-data_governance-5",
@@ -493,7 +493,7 @@
       ],
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "302-tag_grant-marketing-campaigns-data_steward@company.com-6",
@@ -520,7 +520,7 @@
       ],
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "303-tag_grant-marketing-campaigns-all_employees-1",
@@ -544,7 +544,7 @@
       ],
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     }
   ],
   "identity_map": {
@@ -552,5 +552,5 @@
     "data_governance": "data_governance",
     "data_steward@company.com": "data_steward@company.com"
   },
-  "generated_sql": "-- \u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n-- \u2551  Unity Catalog Migration Script                          \u2551\n-- \u2551  Generated by Ranger \u2192 UC Migrator                       \u2551\n-- \u2551  Source: tag_prod\n-- \u2551  Target Catalog: main\n-- \u2551  Date: 2026-05-20\n-- \u2551  Policies: 10 of 10\n-- \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: SET TAGS \u2014 finance.transactions (Ranger ID: None)\n-- Type: TAG_SET | Principal: \n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nALTER TABLE main.finance.transactions SET TAGS ('CONFIDENTIAL' = 'true', 'level' = 'high', 'retention_years' = '7');\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: SET TAGS \u2014 sales.reports (Ranger ID: None)\n-- Type: TAG_SET | Principal: \n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nALTER TABLE main.sales.reports SET TAGS ('INTERNAL' = 'true', 'level' = 'medium', 'retention_years' = '5');\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: SET TAGS \u2014 marketing.campaigns (Ranger ID: None)\n-- Type: TAG_SET | Principal: \n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nALTER TABLE main.marketing.campaigns SET TAGS ('PUBLIC' = 'true', 'level' = 'low', 'retention_years' = '3');\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: data_classification_policy (Ranger ID: 302)\n-- Type: TAG_GRANT | Principal: data_governance\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: CONFIDENTIAL, INTERNAL, PUBLIC)\nGRANT SELECT ON TABLE main.finance.transactions TO `data_governance`;\nGRANT MODIFY ON TABLE main.finance.transactions TO `data_governance`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: data_classification_policy (Ranger ID: 302)\n-- Type: TAG_GRANT | Principal: data_steward@company.com\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: CONFIDENTIAL, INTERNAL, PUBLIC)\nGRANT SELECT ON TABLE main.finance.transactions TO `data_steward@company.com`;\nGRANT MODIFY ON TABLE main.finance.transactions TO `data_steward@company.com`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: data_classification_policy (Ranger ID: 302)\n-- Type: TAG_GRANT | Principal: data_governance\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: CONFIDENTIAL, INTERNAL, PUBLIC)\nGRANT SELECT ON TABLE main.sales.reports TO `data_governance`;\nGRANT MODIFY ON TABLE main.sales.reports TO `data_governance`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: data_classification_policy (Ranger ID: 302)\n-- Type: TAG_GRANT | Principal: data_steward@company.com\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: CONFIDENTIAL, INTERNAL, PUBLIC)\nGRANT SELECT ON TABLE main.sales.reports TO `data_steward@company.com`;\nGRANT MODIFY ON TABLE main.sales.reports TO `data_steward@company.com`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: data_classification_policy (Ranger ID: 302)\n-- Type: TAG_GRANT | Principal: data_governance\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: CONFIDENTIAL, INTERNAL, PUBLIC)\nGRANT SELECT ON TABLE main.marketing.campaigns TO `data_governance`;\nGRANT MODIFY ON TABLE main.marketing.campaigns TO `data_governance`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: data_classification_policy (Ranger ID: 302)\n-- Type: TAG_GRANT | Principal: data_steward@company.com\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: CONFIDENTIAL, INTERNAL, PUBLIC)\nGRANT SELECT ON TABLE main.marketing.campaigns TO `data_steward@company.com`;\nGRANT MODIFY ON TABLE main.marketing.campaigns TO `data_steward@company.com`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: public_data_access (Ranger ID: 303)\n-- Type: TAG_GRANT | Principal: all_employees\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: PUBLIC)\nGRANT SELECT ON TABLE main.marketing.campaigns TO `all_employees`;\n"
+  "generated_sql": "-- \u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n-- \u2551  Unity Catalog Migration Script                          \u2551\n-- \u2551  Generated by Ranger \u2192 UC Migrator                       \u2551\n-- \u2551  Source: tag_prod\n-- \u2551  Target Catalog: main\n-- \u2551  Date: 2026-05-21\n-- \u2551  Policies: 0 of 10\n-- \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\n\n"
 }

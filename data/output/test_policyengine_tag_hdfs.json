@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "timestamp": "2026-05-20T12:59:58.063495",
+    "timestamp": "2026-05-21T09:48:01.795156",
     "service_name": "hdfsdev",
     "cluster_name": "unknown",
     "catalog_name": "main",
@@ -26,7 +26,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "1-hdfs-user-ra-2",
@@ -45,7 +45,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "1-hdfs-user-ra-ta-3",
@@ -64,7 +64,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "1-hdfs-user-ra-td-4",
@@ -83,7 +83,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "2-hdfs-finance-1",
@@ -102,7 +102,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "2-hdfs-user-ra-2",
@@ -121,7 +121,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "2-hdfs-user-ra-ta-3",
@@ -140,7 +140,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "2-hdfs-user-ra-td-4",
@@ -159,7 +159,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "3-hdfs-user-td-1",
@@ -178,7 +178,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "3-hdfs-user-ra-td-2",
@@ -197,7 +197,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "3-hdfs-user-rd-td-3",
@@ -216,7 +216,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       }
     ],
     "warnings": [],
@@ -270,7 +270,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "1-hdfs-user-ra-2",
@@ -289,7 +289,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "1-hdfs-user-ra-ta-3",
@@ -308,7 +308,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "1-hdfs-user-ra-td-4",
@@ -327,7 +327,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "2-hdfs-finance-1",
@@ -346,7 +346,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "2-hdfs-user-ra-2",
@@ -365,7 +365,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "2-hdfs-user-ra-ta-3",
@@ -384,7 +384,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "2-hdfs-user-ra-td-4",
@@ -403,7 +403,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "3-hdfs-user-td-1",
@@ -422,7 +422,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "3-hdfs-user-ra-td-2",
@@ -441,7 +441,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "3-hdfs-user-rd-td-3",
@@ -460,7 +460,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     }
   ],
   "identity_map": {
@@ -471,5 +471,5 @@
     "user-rd-td": "user-rd-td",
     "user-td": "user-td"
   },
-  "generated_sql": "-- \u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n-- \u2551  Unity Catalog Migration Script                          \u2551\n-- \u2551  Generated by Ranger \u2192 UC Migrator                       \u2551\n-- \u2551  Source: hdfsdev\n-- \u2551  Target Catalog: main\n-- \u2551  Date: 2026-05-20\n-- \u2551  Policies: 11 of 11\n-- \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: /resource: allow: users=user-ra, user-ra-ta, user-ra-td; deny: user=user-rd, user-rd-ta, user-rd-td (Ranger ID: 1)\n-- Type: HDFS_GRANT | Principal: finance\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- HDFS path: /resource (recursive)\n-- \u26a0 Create a UC External Location covering this path first,\n--   then replace the placeholder below with the actual location name.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: /resource: allow: users=user-ra, user-ra-ta, user-ra-td; deny: user=user-rd, user-rd-ta, user-rd-td (Ranger ID: 1)\n-- Type: HDFS_GRANT | Principal: user-ra\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- HDFS path: /resource (recursive)\n-- \u26a0 Create a UC External Location covering this path first,\n--   then replace the placeholder below with the actual location name.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: /resource: allow: users=user-ra, user-ra-ta, user-ra-td; deny: user=user-rd, user-rd-ta, user-rd-td (Ranger ID: 1)\n-- Type: HDFS_GRANT | Principal: user-ra-ta\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- HDFS path: /resource (recursive)\n-- \u26a0 Create a UC External Location covering this path first,\n--   then replace the placeholder below with the actual location name.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: /resource: allow: users=user-ra, user-ra-ta, user-ra-td; deny: user=user-rd, user-rd-ta, user-rd-td (Ranger ID: 1)\n-- Type: HDFS_GRANT | Principal: user-ra-td\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- HDFS path: /resource (recursive)\n-- \u26a0 Create a UC External Location covering this path first,\n--   then replace the placeholder below with the actual location name.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: /unaudited-resource: allow: users=user-ra, user-ra-ta, user-ra-td; deny: user=user-rd, user-rd-ta, user-rd-td (Ranger ID: 2)\n-- Type: HDFS_GRANT | Principal: finance\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- HDFS path: /unaudited-resource (recursive)\n-- \u26a0 Create a UC External Location covering this path first,\n--   then replace the placeholder below with the actual location name.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: /unaudited-resource: allow: users=user-ra, user-ra-ta, user-ra-td; deny: user=user-rd, user-rd-ta, user-rd-td (Ranger ID: 2)\n-- Type: HDFS_GRANT | Principal: user-ra\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- HDFS path: /unaudited-resource (recursive)\n-- \u26a0 Create a UC External Location covering this path first,\n--   then replace the placeholder below with the actual location name.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: /unaudited-resource: allow: users=user-ra, user-ra-ta, user-ra-td; deny: user=user-rd, user-rd-ta, user-rd-td (Ranger ID: 2)\n-- Type: HDFS_GRANT | Principal: user-ra-ta\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- HDFS path: /unaudited-resource (recursive)\n-- \u26a0 Create a UC External Location covering this path first,\n--   then replace the placeholder below with the actual location name.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: /unaudited-resource: allow: users=user-ra, user-ra-ta, user-ra-td; deny: user=user-rd, user-rd-ta, user-rd-td (Ranger ID: 2)\n-- Type: HDFS_GRANT | Principal: user-ra-td\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- HDFS path: /unaudited-resource (recursive)\n-- \u26a0 Create a UC External Location covering this path first,\n--   then replace the placeholder below with the actual location name.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: /override-resource: allow: users=user-td, user-ra-td, user-rd-td (Ranger ID: 3)\n-- Type: HDFS_GRANT | Principal: user-td\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- HDFS path: /override-resource (recursive)\n-- \u26a0 Create a UC External Location covering this path first,\n--   then replace the placeholder below with the actual location name.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: /override-resource: allow: users=user-td, user-ra-td, user-rd-td (Ranger ID: 3)\n-- Type: HDFS_GRANT | Principal: user-ra-td\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- HDFS path: /override-resource (recursive)\n-- \u26a0 Create a UC External Location covering this path first,\n--   then replace the placeholder below with the actual location name.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: /override-resource: allow: users=user-td, user-ra-td, user-rd-td (Ranger ID: 3)\n-- Type: HDFS_GRANT | Principal: user-rd-td\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- HDFS path: /override-resource (recursive)\n-- \u26a0 Create a UC External Location covering this path first,\n--   then replace the placeholder below with the actual location name.\n"
+  "generated_sql": "-- \u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n-- \u2551  Unity Catalog Migration Script                          \u2551\n-- \u2551  Generated by Ranger \u2192 UC Migrator                       \u2551\n-- \u2551  Source: hdfsdev\n-- \u2551  Target Catalog: main\n-- \u2551  Date: 2026-05-21\n-- \u2551  Policies: 0 of 11\n-- \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\n\n"
 }

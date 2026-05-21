@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "timestamp": "2026-05-20T12:59:58.056253",
+    "timestamp": "2026-05-21T09:48:01.795156",
     "service_name": "hivedev",
     "cluster_name": "unknown",
     "catalog_name": "main",
@@ -28,7 +28,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "101-grant-*-*-hive-2",
@@ -49,7 +49,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "101-grant-*-*-user1-3",
@@ -70,7 +70,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "101-grant-*-*-user2-4",
@@ -91,7 +91,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "102-grant-*-*-public-1",
@@ -112,7 +112,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "102-grant-*-*-hive-2",
@@ -133,7 +133,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "102-grant-*-*-user1-3",
@@ -154,7 +154,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "102-grant-*-*-user2-4",
@@ -175,7 +175,7 @@
         },
         "delegateAdmin": false,
         "enabled": true,
-        "status": "approved"
+        "status": "pending"
       },
       {
         "id": "103-mask-employee-personal-ssn-user1-1",
@@ -203,7 +203,7 @@
         "maskType": "NONE",
         "maskExpr": "",
         "enabled": true,
-        "status": "approved"
+        "status": "needs_review"
       },
       {
         "id": "104-mask-employee-personal-ssn-user3-1",
@@ -231,7 +231,7 @@
         "maskType": "NONE",
         "maskExpr": "",
         "enabled": true,
-        "status": "approved"
+        "status": "needs_review"
       },
       {
         "id": "105-mask-employee-personal-name-user1-1",
@@ -267,7 +267,7 @@
         "maskType": "NONE",
         "maskExpr": "",
         "enabled": true,
-        "status": "approved"
+        "status": "needs_review"
       }
     ],
     "warnings": [],
@@ -323,7 +323,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "101-grant-*-*-hive-2",
@@ -344,7 +344,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "101-grant-*-*-user1-3",
@@ -365,7 +365,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "101-grant-*-*-user2-4",
@@ -386,7 +386,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "102-grant-*-*-public-1",
@@ -407,7 +407,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "102-grant-*-*-hive-2",
@@ -428,7 +428,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "102-grant-*-*-user1-3",
@@ -449,7 +449,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "102-grant-*-*-user2-4",
@@ -470,7 +470,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "103-mask-employee-personal-ssn-user1-1",
@@ -498,7 +498,7 @@
       "maskType": "NONE",
       "maskExpr": "",
       "enabled": true,
-      "status": "approved"
+      "status": "needs_review"
     },
     {
       "id": "104-mask-employee-personal-ssn-user3-1",
@@ -526,7 +526,7 @@
       "maskType": "NONE",
       "maskExpr": "",
       "enabled": true,
-      "status": "approved"
+      "status": "needs_review"
     },
     {
       "id": "105-mask-employee-personal-name-user1-1",
@@ -562,7 +562,7 @@
       "maskType": "NONE",
       "maskExpr": "",
       "enabled": true,
-      "status": "approved"
+      "status": "needs_review"
     }
   ],
   "identity_map": {
@@ -573,5 +573,5 @@
     "user3": "user3",
     "user4": "user4"
   },
-  "generated_sql": "-- \u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n-- \u2551  Unity Catalog Migration Script                          \u2551\n-- \u2551  Generated by Ranger \u2192 UC Migrator                       \u2551\n-- \u2551  Source: hivedev\n-- \u2551  Target Catalog: main\n-- \u2551  Date: 2026-05-20\n-- \u2551  Policies: 11 of 11\n-- \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=*: audit-all-access (Ranger ID: 101)\n-- Type: GRANT | Principal: public\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT USE CATALOG ON CATALOG main TO `public`;\nGRANT USE SCHEMA ON SCHEMA main.* TO `public`;\nGRANT ALL PRIVILEGES ON SCHEMA main.* TO `public`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=*: audit-all-access (Ranger ID: 101)\n-- Type: GRANT | Principal: hive\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT USE CATALOG ON CATALOG main TO `hive`;\nGRANT USE SCHEMA ON SCHEMA main.* TO `hive`;\nGRANT ALL PRIVILEGES ON SCHEMA main.* TO `hive`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=*: audit-all-access (Ranger ID: 101)\n-- Type: GRANT | Principal: user1\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT USE CATALOG ON CATALOG main TO `user1`;\nGRANT USE SCHEMA ON SCHEMA main.* TO `user1`;\nGRANT ALL PRIVILEGES ON SCHEMA main.* TO `user1`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=*: audit-all-access (Ranger ID: 101)\n-- Type: GRANT | Principal: user2\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT USE CATALOG ON CATALOG main TO `user2`;\nGRANT USE SCHEMA ON SCHEMA main.* TO `user2`;\nGRANT ALL PRIVILEGES ON SCHEMA main.* TO `user2`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=*, udf=*: audit-all-access (Ranger ID: 102)\n-- Type: GRANT | Principal: public\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT USE CATALOG ON CATALOG main TO `public`;\nGRANT USE SCHEMA ON SCHEMA main.* TO `public`;\nGRANT ALL PRIVILEGES ON SCHEMA main.* TO `public`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=*, udf=*: audit-all-access (Ranger ID: 102)\n-- Type: GRANT | Principal: hive\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT USE CATALOG ON CATALOG main TO `hive`;\nGRANT USE SCHEMA ON SCHEMA main.* TO `hive`;\nGRANT ALL PRIVILEGES ON SCHEMA main.* TO `hive`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=*, udf=*: audit-all-access (Ranger ID: 102)\n-- Type: GRANT | Principal: user1\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT USE CATALOG ON CATALOG main TO `user1`;\nGRANT USE SCHEMA ON SCHEMA main.* TO `user1`;\nGRANT ALL PRIVILEGES ON SCHEMA main.* TO `user1`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=*, udf=*: audit-all-access (Ranger ID: 102)\n-- Type: GRANT | Principal: user2\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT USE CATALOG ON CATALOG main TO `user2`;\nGRANT USE SCHEMA ON SCHEMA main.* TO `user2`;\nGRANT ALL PRIVILEGES ON SCHEMA main.* TO `user2`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: masking: employee.personal.ssn - normal priority (Ranger ID: 103)\n-- Type: COLUMN_MASK | Principal: user1\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Column Mask: Full redaction for user1\nCREATE OR REPLACE FUNCTION main.employee.mask_personal_ssn_user1(val STRING)\nRETURNS STRING\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('user1'),\n  '***REDACTED***',\n  val\n);\n\nALTER TABLE main.employee.personal\nALTER COLUMN ssn SET MASK main.employee.mask_personal_ssn_user1;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: masking: employee.personal.ssn - override priority (Ranger ID: 104)\n-- Type: COLUMN_MASK | Principal: user3\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Column Mask: Full redaction for user3\nCREATE OR REPLACE FUNCTION main.employee.mask_personal_ssn_user3(val STRING)\nRETURNS STRING\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('user3'),\n  '***REDACTED***',\n  val\n);\n\nALTER TABLE main.employee.personal\nALTER COLUMN ssn SET MASK main.employee.mask_personal_ssn_user3;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: masking: employee.personal.name - normal priority (Ranger ID: 105)\n-- Type: COLUMN_MASK | Principal: user1\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Column Mask: Full redaction for user1\nCREATE OR REPLACE FUNCTION main.employee.mask_personal_name_user1(val STRING)\nRETURNS STRING\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('user1'),\n  '***REDACTED***',\n  val\n);\n\nALTER TABLE main.employee.personal\nALTER COLUMN name SET MASK main.employee.mask_personal_name_user1;\n"
+  "generated_sql": "-- \u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n-- \u2551  Unity Catalog Migration Script                          \u2551\n-- \u2551  Generated by Ranger \u2192 UC Migrator                       \u2551\n-- \u2551  Source: hivedev\n-- \u2551  Target Catalog: main\n-- \u2551  Date: 2026-05-21\n-- \u2551  Policies: 3 of 11\n-- \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: masking: employee.personal.ssn - normal priority (Ranger ID: 103)\n-- Type: COLUMN_MASK | Principal: user1\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Column Mask: Full redaction for user1\nCREATE OR REPLACE FUNCTION main.employee.mask_personal_ssn_user1(val STRING)\nRETURNS STRING\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('user1'),\n  '***REDACTED***',\n  val\n);\n\nALTER TABLE main.employee.personal\nALTER COLUMN ssn SET MASK main.employee.mask_personal_ssn_user1;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: masking: employee.personal.ssn - override priority (Ranger ID: 104)\n-- Type: COLUMN_MASK | Principal: user3\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Column Mask: Full redaction for user3\nCREATE OR REPLACE FUNCTION main.employee.mask_personal_ssn_user3(val STRING)\nRETURNS STRING\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('user3'),\n  '***REDACTED***',\n  val\n);\n\nALTER TABLE main.employee.personal\nALTER COLUMN ssn SET MASK main.employee.mask_personal_ssn_user3;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: masking: employee.personal.name - normal priority (Ranger ID: 105)\n-- Type: COLUMN_MASK | Principal: user1\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Column Mask: Full redaction for user1\nCREATE OR REPLACE FUNCTION main.employee.mask_personal_name_user1(val STRING)\nRETURNS STRING\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('user1'),\n  '***REDACTED***',\n  val\n);\n\nALTER TABLE main.employee.personal\nALTER COLUMN name SET MASK main.employee.mask_personal_name_user1;\n"
 }

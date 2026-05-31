@@ -12,6 +12,78 @@ import streamlit as st
 
 HISTORY_DIR = Path(__file__).parent.parent / "data" / "output"
 HISTORY_DIR.mkdir(exist_ok=True)
+SQL_DIR = Path(__file__).parent.parent / "data" / "output_sql"
+
+
+def _load_sql_for_archive(filename: str) -> str:
+    """Load pre-generated SQL from data/output_sql/ matching the archive filename."""
+    if not filename:
+        return ""
+    basename = Path(filename).stem
+    sql_path = SQL_DIR / f"{basename}.sql"
+    if sql_path.exists():
+        return sql_path.read_text()
+    return ""
+
+
+_INPUT_DIR = Path(__file__).parent.parent / "data" / "input"
+
+
+def _infer_source_file(filename: str) -> str:
+    """Return the input filename if a matching file exists in data/input/."""
+    if not filename:
+        return ""
+    basename = Path(filename).name  # e.g. masking_complex.json
+    if (_INPUT_DIR / basename).exists():
+        return basename
+    return ""
+
+
+def _normalize_archive(data: dict[str, Any], filename: str = "") -> dict[str, Any]:
+    """Normalize both old flat camelCase and new nested snake_case archive formats."""
+    if "metadata" in data and "parsed_data" in data:
+        result = dict(data)
+        if not result.get("generated_sql"):
+            result["generated_sql"] = _load_sql_for_archive(filename)
+        if not result["metadata"].get("source_file"):
+            result["metadata"] = {**result["metadata"], "source_file": _infer_source_file(filename)}
+        return result
+
+    # Old flat camelCase format
+    service_name = data.get("serviceName", "unknown")
+    catalog_name = data.get("catalogName", "main")
+    cluster_name = data.get("clusterName", "unknown")
+    policy_items = data.get("policyItems", [])
+    identity_map = data.get("identityMap", {})
+    generated_sql = data.get("generatedSQL", "") or _load_sql_for_archive(filename)
+    source_file = data.get("source_file", "") or _infer_source_file(filename)
+
+    parsed_data = {
+        "serviceName": service_name,
+        "catalogName": catalog_name,
+        "clusterName": cluster_name,
+        "totalRangerPolicies": data.get("totalRangerPolicies", len(policy_items)),
+        "results": policy_items,
+        "warnings": [],
+        "identities": [],
+        "kerberosIssues": [],
+        "stats": data.get("stats", {}),
+    }
+
+    return {
+        "metadata": {
+            "timestamp": data.get("timestamp", ""),
+            "service_name": service_name,
+            "catalog_name": catalog_name,
+            "cluster_name": cluster_name,
+            "notes": data.get("notes", ""),
+            "source_file": source_file,
+        },
+        "parsed_data": parsed_data,
+        "policy_items": policy_items,
+        "identity_map": identity_map,
+        "generated_sql": generated_sql,
+    }
 
 
 def _sanitize_filename(name: str, max_len: int = 40) -> str:
@@ -70,11 +142,11 @@ def load_session(filename: str) -> dict[str, Any]:
     filepath = HISTORY_DIR / filename
     if not filepath.exists():
         raise FileNotFoundError(f"Archive not found: {filename}")
-    
+
     with open(filepath, "r") as f:
         archive = json.load(f)
-    
-    return archive
+
+    return _normalize_archive(archive, filename)
 
 
 def list_archives() -> list[dict[str, Any]]:
@@ -84,15 +156,16 @@ def list_archives() -> list[dict[str, Any]]:
         try:
             with open(filepath, "r") as f:
                 data = json.load(f)
+            normalized = _normalize_archive(data, filepath.name)
             archives.append({
                 "filename": filepath.name,
-                "metadata": data.get("metadata", {}),
+                "metadata": normalized["metadata"],
                 "filepath": str(filepath),
                 "size_kb": filepath.stat().st_size / 1024,
-                "parsed_data": data.get("parsed_data", {}),
-                "policy_items": data.get("policy_items", []),
-                "identity_map": data.get("identity_map", {}),
-                "generated_sql": data.get("generated_sql", ""),
+                "parsed_data": normalized["parsed_data"],
+                "policy_items": normalized["policy_items"],
+                "identity_map": normalized["identity_map"],
+                "generated_sql": normalized["generated_sql"],
             })
         except (json.JSONDecodeError, OSError):
             continue

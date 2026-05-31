@@ -23,9 +23,9 @@ Compatible with Cloudera CDP 7.x, HDP 2.x/3.x, and standalone Apache Ranger 2.x.
 |------|------|-------------|
 | 0 | **Policy Import** (home) | Upload a Ranger JSON export, paste raw JSON, or load a built-in sample |
 | 1 | **Identity Mapping** | Map Ranger users/groups to Databricks principals; Kerberos principals auto-flagged |
-| 2 | **Review Policies** | Filter, approve, or reject parsed policy items with inline SQL preview |
-| 3 | **Generate SQL** | Full Unity Catalog migration script — GRANTs, row filters, column masks |
-| 4 | **Gap Analysis** | Deny policies, Kerberos issues, delegateAdmin, wildcards, readiness score |
+| 2 | **Review Policies** | Filter, approve, or reject parsed policy items with inline SQL preview; "Approve all valid" skips non-translatable items |
+| 3 | **Generate SQL** | Full Unity Catalog migration script — shows executable statements vs comment-only advisories separately |
+| 4 | **Gap Analysis** | Deny policies, Kerberos issues, delegateAdmin, wildcards; readiness score excludes non-translatable policies |
 | 5 | **Deploy** | 5-phase deployment checklist with SQL snippets and Databricks doc links |
 | 📋 | **Session Archive** | Save, preview, restore, and export past migration sessions |
 | 📖 | **Migration Mappings** | Reference: how every Ranger construct maps to Unity Catalog SQL |
@@ -69,15 +69,17 @@ curl -u admin:password \
 
 **Privilege mapping:**
 
-| Ranger | UC |
-|---|---|
-| select, read, index, lock | SELECT |
-| update, write | MODIFY |
-| create | CREATE |
-| drop | DROP |
-| alter | ALTER |
-| all | ALL PRIVILEGES |
-| execute | EXECUTE |
+| Ranger | UC (schema-level) | UC (table-level) |
+|---|---|---|
+| select, read, index, lock | SELECT | SELECT |
+| update, write | MODIFY | MODIFY |
+| create | CREATE TABLE | ⚠ No equivalent — advisory comment emitted |
+| drop | DROP | DROP |
+| alter | ALL PRIVILEGES ⚠ | ALL PRIVILEGES ⚠ |
+| all | ALL PRIVILEGES | ALL PRIVILEGES |
+| execute | EXECUTE | EXECUTE |
+
+> **ALTER note:** `ALTER` has no direct UC equivalent. The tool maps it to `ALL PRIVILEGES` (closest substitute for DDL access) with an advisory comment recommending object-ownership review instead.
 
 **Principal types:** `policyItems[].groups`, `policyItems[].users`, and `policyItems[].roles` are all extracted as policy principals. Ranger roles translate directly to backtick-quoted role names in generated SQL.
 
@@ -92,7 +94,29 @@ curl -u admin:password \
 | MASK_DATE_SHOW_YEAR | `MAKE_DATE(YEAR(val), 1, 1)` (returns DATE) |
 | MASK_NULL | `NULL` |
 | MASK_NONE | Comment only — no masking applied |
-| Custom `valueExpr` | Expression used verbatim in function body |
+| Custom `valueExpr` | Auto-adapted: `CAST('<non-numeric>' AS <type>)` → `NULL`; bare column ref matching masked column → `val`; cross-column refs emit `'***REDACTED***'` with `⛔ BRANCH OMITTED` advisory |
+
+**`SELECT`/`MODIFY` on wildcard table policies (`table: *`):**
+
+Unity Catalog does not allow `GRANT SELECT ON SCHEMA` or `GRANT MODIFY ON SCHEMA` — these are table-level privileges. When a Ranger policy targets `table: *`, the tool generates a `BEGIN...END FOR` loop over `information_schema.tables` to apply the grant to every current table in the schema:
+
+```sql
+-- ⚠ SELECT: table-level privilege — granted per-table via loop below.
+-- Requires Databricks Runtime 14.0+ or a SQL Warehouse with scripting enabled.
+BEGIN
+  FOR tbl AS (
+    SELECT table_name FROM main.information_schema.tables
+    WHERE table_schema = 'sales' AND table_type IN ('BASE TABLE', 'EXTERNAL')
+  ) DO
+    EXECUTE IMMEDIATE format(
+      'GRANT SELECT ON TABLE `main`.`sales`.`%s` TO `analyst_group`',
+      tbl.table_name
+    );
+  END FOR;
+END;
+```
+
+> **Note:** Tables added to the schema **after** this script runs will NOT inherit this grant. Re-run the relevant section or add explicit per-table grants for new tables.
 
 ### URL Resource (Hive policies)
 Hive policies with a `url` resource (e.g., S3/ADLS paths referenced directly in Hive) are translated to UC External Location grants using the same access map as HDFS:
@@ -148,12 +172,27 @@ Column families have no UC equivalent — a table-level grant is generated with 
 
 ## Known Gaps & Constraints
 
+Three policy types **cannot be automatically translated** to executable SQL. They generate advisory comment blocks only, are excluded from the "Approve all valid" bulk action, and are not counted in the Gap Analysis readiness score:
+
+| Non-translatable type | Reason | Output |
+|---|---|---|
+| Deny policies (`denyPolicyItems`) | UC has no DENY mechanism — additive model only | `⛔ DENY NOT SUPPORTED` comment block with remediation steps |
+| Tag placeholder (`tag_placeholder`) | `resourceTags` absent from export — table names cannot be resolved | Comment block with placeholder GRANT |
+| HBase wildcard `*` (all namespaces) | Cannot map to a specific UC catalog/schema | `⚠ HBase wildcard` comment block with manual instructions |
+
+All other policy types — Hive grants, row filters, column masks, HDFS, URL, HBase (non-wildcard), UDF, tag grants — produce executable SQL and are included in the readiness score.
+
 | Issue | Severity | Handling |
 |---|---|---|
-| Deny policies | 🔴 Critical | Comment block only — UC has no DENY mechanism |
+| Deny policies | 🔴 Critical | Advisory comment only — excluded from bulk approval and readiness score |
 | Kerberos principals | 🔴 Critical | Auto-detected; must map to service principals via SCIM/M2M |
 | `isDenyAllElse` flag | 🔴 Critical | Flagged in Gap Analysis — no UC equivalent; must restructure access |
+| Tag policies (no `resourceTags`) | 🔴 Critical | Advisory comment only — table names unknown; re-export with `resourceTags` |
+| HBase wildcard `*` (all namespaces) | 🔴 Critical | Advisory comment only — grant specific schemas manually |
+| ALTER privilege | 🟡 Review | Mapped to ALL PRIVILEGES (no direct UC equivalent); review ownership instead |
 | Row filter expressions | 🟡 Review | Copied verbatim — validate for Hive UDFs or request-context attributes |
+| Custom valueExpr masks | 🟡 Review | Auto-adapted where possible; cross-column references use conservative fallback |
+| SELECT/MODIFY on table=* | 🟡 Review | Applied via BEGIN…END FOR loop — tables added later won't inherit the grant |
 | HDFS / URL External Location names | 🟡 Review | Placeholder generated; replace with real names |
 | HBase column families | 🟡 Review | Falls back to table-level grant; no column-family isolation in UC |
 | UDF grants | 🟡 Review | Function must exist in UC before GRANT EXECUTE is valid |

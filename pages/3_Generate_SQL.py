@@ -5,7 +5,7 @@ from datetime import date
 
 import streamlit as st
 
-from lib.ranger_parser import generate_full_script
+from lib.ranger_parser import generate_full_script, is_not_translatable
 from lib.state import init_state, render_sidebar_summary, require_policies, stats
 
 init_state()
@@ -18,16 +18,21 @@ catalog = st.session_state.catalog_name
 identity_map = st.session_state.identity_map
 
 eligible = [p for p in items if p["status"] in ("approved", "needs_review")]
-grants = [p for p in eligible if p["type"] == "grant"]
-denies = [p for p in eligible if p["type"] == "deny"]
-filters = [p for p in eligible if p["type"] == "row_filter"]
-masks = [p for p in eligible if p["type"] == "column_mask"]
+
+executable = [p for p in eligible if not is_not_translatable(p)]
+advisories = [p for p in eligible if is_not_translatable(p)]
+grants  = [p for p in executable if p["type"] == "grant"]
+filters = [p for p in executable if p["type"] == "row_filter"]
+masks   = [p for p in executable if p["type"] == "column_mask"]
 
 # ── Header ────────────────────────────────────────────────────────────
 left, right = st.columns([3, 1])
 with left:
     st.title("💻 Generate Unity Catalog SQL")
-    st.caption(f"{len(eligible)} eligible policies will be converted to SQL statements")
+    st.caption(
+        f"{len(executable)} executable statements · {len(advisories)} comment-only advisories"
+        f" (deny / tag placeholder / HBase wildcard)"
+    )
 with right:
     if st.button("Gap Analysis →", type="primary", use_container_width=True):
         st.switch_page("pages/4_Gap_Analysis.py")
@@ -35,9 +40,9 @@ with right:
 # ── Summary cards ─────────────────────────────────────────────────────
 c1, c2, c3, c4 = st.columns(4)
 c1.metric("GRANT Statements", len(grants))
-c2.metric("DENY Advisories", len(denies))
-c3.metric("Row Filter Functions", len(filters))
-c4.metric("Column Mask Functions", len(masks))
+c2.metric("Row Filter Functions", len(filters))
+c3.metric("Column Mask Functions", len(masks))
+c4.metric("Advisories (no SQL)", len(advisories))
 
 st.divider()
 

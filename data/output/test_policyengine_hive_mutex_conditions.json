@@ -1,41 +1,11 @@
 {
-  "metadata": {
-    "service_name": "hivedev",
-    "source_file": "test_policyengine_hive_mutex_conditions.json",
-    "archived_at": "2026-05-21",
-    "total_items": 7,
-    "stats": {
-      "total": 7,
-      "grants": 5,
-      "denies": 2,
-      "rowFilters": 0,
-      "masks": 0,
-      "hdfsGrants": 0,
-      "hbaseGrants": 0,
-      "udfGrants": 0,
-      "tagSets": 0,
-      "tagGrants": 0,
-      "tagPlaceholders": 0,
-      "approved": 5,
-      "needsReview": 2,
-      "pending": 0,
-      "rejected": 0,
-      "disabled": 0,
-      "schemaCount": 1,
-      "principalCount": 3,
-      "schemas": [
-        "default"
-      ],
-      "principals": [
-        "admin",
-        "public",
-        "user2"
-      ]
-    }
-  },
-  "policy_items": [
+  "serviceName": "hivedev",
+  "catalogName": "main",
+  "clusterName": "unknown",
+  "totalRangerPolicies": 3,
+  "policyItems": [
     {
-      "id": "1-grant-default-testTable-user2-1",
+      "id": "1-grant-default-testTable-user2-2",
       "rangerPolicyId": 1,
       "rangerPolicyName": "db=default; allow select with mutual exclusion of col* only for user2, admin; deny for everyone else",
       "rangerPolicyDesc": "",
@@ -46,17 +16,19 @@
       "columns": [
         "col*"
       ],
-      "privileges": [],
+      "privileges": [
+        "SELECT"
+      ],
       "principal": {
         "type": "user",
         "name": "user2"
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
-      "id": "1-grant-default-testTable-admin-2",
+      "id": "1-grant-default-testTable-admin-3",
       "rangerPolicyId": 1,
       "rangerPolicyName": "db=default; allow select with mutual exclusion of col* only for user2, admin; deny for everyone else",
       "rangerPolicyDesc": "",
@@ -67,17 +39,19 @@
       "columns": [
         "col*"
       ],
-      "privileges": [],
+      "privileges": [
+        "SELECT"
+      ],
       "principal": {
         "type": "user",
         "name": "admin"
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
-      "id": "1-deny-default-testTable-public-3",
+      "id": "1-deny-default-testTable-public-4",
       "rangerPolicyId": 1,
       "rangerPolicyName": "db=default; allow select with mutual exclusion of col* only for user2, admin; deny for everyone else",
       "rangerPolicyDesc": "",
@@ -86,7 +60,9 @@
       "schema": "default",
       "table": "testTable",
       "columns": null,
-      "privileges": [],
+      "privileges": [
+        "SELECT"
+      ],
       "principal": {
         "type": "group",
         "name": "public"
@@ -95,7 +71,7 @@
       "status": "needs_review"
     },
     {
-      "id": "2-grant-default-testTable-admin-1",
+      "id": "2-grant-default-testTable-admin-2",
       "rangerPolicyId": 2,
       "rangerPolicyName": "db=default; deny select with mutual exclusion of col1, name for everone except admin",
       "rangerPolicyDesc": "",
@@ -106,17 +82,19 @@
       "columns": [
         "col1"
       ],
-      "privileges": [],
+      "privileges": [
+        "SELECT"
+      ],
       "principal": {
         "type": "user",
         "name": "admin"
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
-      "id": "2-deny-default-testTable-public-2",
+      "id": "2-deny-default-testTable-public-3",
       "rangerPolicyId": 2,
       "rangerPolicyName": "db=default; deny select with mutual exclusion of col1, name for everone except admin",
       "rangerPolicyDesc": "",
@@ -125,7 +103,9 @@
       "schema": "default",
       "table": "testTable",
       "columns": null,
-      "privileges": [],
+      "privileges": [
+        "SELECT"
+      ],
       "principal": {
         "type": "group",
         "name": "public"
@@ -134,7 +114,22 @@
       "status": "needs_review"
     },
     {
-      "id": "3-grant-default-testTable-public-1",
+      "id": "3-blank-1",
+      "rangerPolicyId": 3,
+      "rangerPolicyName": "db=default; table=testTable; column=*; allow access to everyone",
+      "rangerPolicyDesc": "",
+      "type": "skipped_blank_principal",
+      "catalog": "main",
+      "schema": "default",
+      "table": "testTable",
+      "blanks": [
+        "users[0] is empty"
+      ],
+      "enabled": true,
+      "status": "needs_review"
+    },
+    {
+      "id": "3-grant-default-testTable-public-2",
       "rangerPolicyId": 3,
       "rangerPolicyName": "db=default; table=testTable; column=*; allow access to everyone",
       "rangerPolicyDesc": "",
@@ -143,273 +138,47 @@
       "schema": "default",
       "table": "testTable",
       "columns": null,
-      "privileges": [],
+      "privileges": [
+        "SELECT"
+      ],
       "principal": {
         "type": "group",
         "name": "public"
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
-    },
-    {
-      "id": "3-grant-default-testTable--2",
-      "rangerPolicyId": 3,
-      "rangerPolicyName": "db=default; table=testTable; column=*; allow access to everyone",
-      "rangerPolicyDesc": "",
-      "type": "grant",
-      "catalog": "main",
-      "schema": "default",
-      "table": "testTable",
-      "columns": null,
-      "privileges": [],
-      "principal": {
-        "type": "user",
-        "name": ""
-      },
-      "delegateAdmin": false,
-      "enabled": true,
-      "status": "approved"
+      "status": "pending"
     }
   ],
-  "identity_map": {},
-  "generated_sql": "-- \u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n-- \u2551  Unity Catalog Migration Script                          \u2551\n-- \u2551  Generated by Ranger \u2192 UC Migrator                       \u2551\n-- \u2551  Source: hivedev\n-- \u2551  Target Catalog: main\n-- \u2551  Date: 2026-05-21\n-- \u2551  Policies: 7 of 7\n-- \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; allow select with mutual exclusion of col* only for user2, admin; deny for everyone else (Ranger ID: 1)\n-- Type: GRANT | Principal: user2\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; allow select with mutual exclusion of col* only for user2, admin; deny for everyone else (Ranger ID: 1)\n-- Type: GRANT | Principal: admin\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; allow select with mutual exclusion of col* only for user2, admin; deny for everyone else (Ranger ID: 1)\n-- Type: DENY | Principal: public\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny:  on main.default.testTable for public\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove public from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; deny select with mutual exclusion of col1, name for everone except admin (Ranger ID: 2)\n-- Type: GRANT | Principal: admin\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; deny select with mutual exclusion of col1, name for everone except admin (Ranger ID: 2)\n-- Type: DENY | Principal: public\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny:  on main.default.testTable for public\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove public from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; table=testTable; column=*; allow access to everyone (Ranger ID: 3)\n-- Type: GRANT | Principal: public\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; table=testTable; column=*; allow access to everyone (Ranger ID: 3)\n-- Type: GRANT | Principal: \n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\n",
-  "gap_analysis": [
-    {
-      "category": "Deny Policies",
-      "severity": "critical",
-      "count": 2,
-      "description": "Unity Catalog uses an additive (allowlist) permission model with no DENY mechanism.",
-      "items": [
-        {
-          "resource": "default.testTable",
-          "principal": "public",
-          "detail": "Denied: "
-        },
-        {
-          "resource": "default.testTable",
-          "principal": "public",
-          "detail": "Denied: "
-        }
-      ],
-      "remediation": "Restructure into separate schemas with restricted grants. Use row filters for partial access. Remove principals from over-privileged groups."
-    },
-    {
-      "category": "Policy Conditions (Not Translated)",
-      "severity": "warning",
-      "count": 2,
-      "description": "These policies include conditions (e.g. ip-range, time-of-day, custom evaluators) that restrict access in Ranger but have no UC equivalent. Generated grants apply unconditionally.",
-      "items": [
-        {
-          "resource": "db=default; allow select with mutual exclusion of col* only for user2, admin; deny for everyone else",
-          "principal": "\u2014",
-          "detail": "Policy \"db=default; allow select with mutual exclusion of col* only for user2, admin; deny for everyone else\" has conditions [accessed-together] with no UC equivalent \u2014 grants will apply unconditionally"
-        },
-        {
-          "resource": "db=default; deny select with mutual exclusion of col1, name for everone except admin",
-          "principal": "\u2014",
-          "detail": "Policy \"db=default; deny select with mutual exclusion of col1, name for everone except admin\" has conditions [accessed-together] with no UC equivalent \u2014 grants will apply unconditionally"
-        }
-      ],
-      "remediation": "Enforce IP-range and context-based restrictions at the network or application layer. Review each affected policy carefully before executing the migration SQL."
-    }
-  ],
-  "parsed_data": {
-    "results": [
-      {
-        "id": "1-grant-default-testTable-user2-1",
-        "rangerPolicyId": 1,
-        "rangerPolicyName": "db=default; allow select with mutual exclusion of col* only for user2, admin; deny for everyone else",
-        "rangerPolicyDesc": "",
-        "type": "grant",
-        "catalog": "main",
-        "schema": "default",
-        "table": "testTable",
-        "columns": [
-          "col*"
-        ],
-        "privileges": [],
-        "principal": {
-          "type": "user",
-          "name": "user2"
-        },
-        "delegateAdmin": false,
-        "enabled": true,
-        "status": "approved"
-      },
-      {
-        "id": "1-grant-default-testTable-admin-2",
-        "rangerPolicyId": 1,
-        "rangerPolicyName": "db=default; allow select with mutual exclusion of col* only for user2, admin; deny for everyone else",
-        "rangerPolicyDesc": "",
-        "type": "grant",
-        "catalog": "main",
-        "schema": "default",
-        "table": "testTable",
-        "columns": [
-          "col*"
-        ],
-        "privileges": [],
-        "principal": {
-          "type": "user",
-          "name": "admin"
-        },
-        "delegateAdmin": false,
-        "enabled": true,
-        "status": "approved"
-      },
-      {
-        "id": "1-deny-default-testTable-public-3",
-        "rangerPolicyId": 1,
-        "rangerPolicyName": "db=default; allow select with mutual exclusion of col* only for user2, admin; deny for everyone else",
-        "rangerPolicyDesc": "",
-        "type": "deny",
-        "catalog": "main",
-        "schema": "default",
-        "table": "testTable",
-        "columns": null,
-        "privileges": [],
-        "principal": {
-          "type": "group",
-          "name": "public"
-        },
-        "enabled": true,
-        "status": "needs_review"
-      },
-      {
-        "id": "2-grant-default-testTable-admin-1",
-        "rangerPolicyId": 2,
-        "rangerPolicyName": "db=default; deny select with mutual exclusion of col1, name for everone except admin",
-        "rangerPolicyDesc": "",
-        "type": "grant",
-        "catalog": "main",
-        "schema": "default",
-        "table": "testTable",
-        "columns": [
-          "col1"
-        ],
-        "privileges": [],
-        "principal": {
-          "type": "user",
-          "name": "admin"
-        },
-        "delegateAdmin": false,
-        "enabled": true,
-        "status": "approved"
-      },
-      {
-        "id": "2-deny-default-testTable-public-2",
-        "rangerPolicyId": 2,
-        "rangerPolicyName": "db=default; deny select with mutual exclusion of col1, name for everone except admin",
-        "rangerPolicyDesc": "",
-        "type": "deny",
-        "catalog": "main",
-        "schema": "default",
-        "table": "testTable",
-        "columns": null,
-        "privileges": [],
-        "principal": {
-          "type": "group",
-          "name": "public"
-        },
-        "enabled": true,
-        "status": "needs_review"
-      },
-      {
-        "id": "3-grant-default-testTable-public-1",
-        "rangerPolicyId": 3,
-        "rangerPolicyName": "db=default; table=testTable; column=*; allow access to everyone",
-        "rangerPolicyDesc": "",
-        "type": "grant",
-        "catalog": "main",
-        "schema": "default",
-        "table": "testTable",
-        "columns": null,
-        "privileges": [],
-        "principal": {
-          "type": "group",
-          "name": "public"
-        },
-        "delegateAdmin": false,
-        "enabled": true,
-        "status": "approved"
-      },
-      {
-        "id": "3-grant-default-testTable--2",
-        "rangerPolicyId": 3,
-        "rangerPolicyName": "db=default; table=testTable; column=*; allow access to everyone",
-        "rangerPolicyDesc": "",
-        "type": "grant",
-        "catalog": "main",
-        "schema": "default",
-        "table": "testTable",
-        "columns": null,
-        "privileges": [],
-        "principal": {
-          "type": "user",
-          "name": ""
-        },
-        "delegateAdmin": false,
-        "enabled": true,
-        "status": "approved"
-      }
+  "identityMap": {},
+  "generatedSQL": "GRANT SELECT ON TABLE `main`.`default`.`testTable` TO `user2@company.com`;\n\nGRANT SELECT ON TABLE `main`.`default`.`testTable` TO `admin@company.com`;\n\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: SELECT on main.default.testTable for public\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove public from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\nGRANT SELECT ON TABLE `main`.`default`.`testTable` TO `admin@company.com`;\n\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: SELECT on main.default.testTable for public\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove public from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u26a0 BLANK PRINCIPAL SKIPPED \u2014 NO GRANT GENERATED\n-- Policy: db=default; table=testTable; column=*; allow access to everyone\n-- Resource: `main`.`default`.`testTable`\n-- Blank entries found: users[0] is empty\n-- These entries were omitted because an empty user/group/role name\n-- cannot be mapped to a Databricks principal.\n-- ACTION REQUIRED: Open the Ranger policy, assign explicit principal names,\n-- re-export the policy JSON, and re-run the migration.\n\nGRANT SELECT ON TABLE `main`.`default`.`testTable` TO `public`;",
+  "stats": {
+    "total": 7,
+    "grants": 4,
+    "denies": 2,
+    "rowFilters": 0,
+    "masks": 0,
+    "hdfsGrants": 0,
+    "hbaseGrants": 0,
+    "udfGrants": 0,
+    "tagSets": 0,
+    "tagGrants": 0,
+    "tagPlaceholders": 0,
+    "approved": 0,
+    "needsReview": 3,
+    "pending": 4,
+    "rejected": 0,
+    "disabled": 0,
+    "schemaCount": 1,
+    "principalCount": 3,
+    "schemas": [
+      "default"
     ],
-    "warnings": [
-      {
-        "policyId": 1,
-        "policyName": "db=default; allow select with mutual exclusion of col* only for user2, admin; deny for everyone else",
-        "category": "conditions",
-        "severity": "warning",
-        "message": "Policy \"db=default; allow select with mutual exclusion of col* only for user2, admin; deny for everyone else\" has conditions [accessed-together] with no UC equivalent \u2014 grants will apply unconditionally",
-        "recommendation": "IP-range, time-based, and custom conditions cannot be enforced in UC. Apply equivalent restrictions at the network or application layer."
-      },
-      {
-        "policyId": 1,
-        "policyName": "db=default; allow select with mutual exclusion of col* only for user2, admin; deny for everyone else",
-        "type": "warning",
-        "severity": "critical",
-        "message": "DENY policy for public on default.testTable [] \u2014 Unity Catalog has no DENY mechanism",
-        "recommendation": "Restructure: move sensitive data into a separate schema with restricted grants, or use row filters/column masks to limit visibility instead of denying access."
-      },
-      {
-        "policyId": 2,
-        "policyName": "db=default; deny select with mutual exclusion of col1, name for everone except admin",
-        "category": "conditions",
-        "severity": "warning",
-        "message": "Policy \"db=default; deny select with mutual exclusion of col1, name for everone except admin\" has conditions [accessed-together] with no UC equivalent \u2014 grants will apply unconditionally",
-        "recommendation": "IP-range, time-based, and custom conditions cannot be enforced in UC. Apply equivalent restrictions at the network or application layer."
-      },
-      {
-        "policyId": 2,
-        "policyName": "db=default; deny select with mutual exclusion of col1, name for everone except admin",
-        "type": "warning",
-        "severity": "critical",
-        "message": "DENY policy for public on default.testTable [] \u2014 Unity Catalog has no DENY mechanism",
-        "recommendation": "Restructure: move sensitive data into a separate schema with restricted grants, or use row filters/column masks to limit visibility instead of denying access."
-      }
+    "principals": [
+      "admin",
+      "public",
+      "user2"
     ],
-    "identities": [
-      {
-        "type": "group",
-        "name": "public"
-      },
-      {
-        "type": "user",
-        "name": ""
-      },
-      {
-        "type": "user",
-        "name": "admin"
-      },
-      {
-        "type": "user",
-        "name": "user2"
-      }
-    ],
-    "kerberosIssues": [],
-    "serviceName": "hivedev",
-    "serviceType": "hive",
-    "clusterName": "unknown",
-    "totalRangerPolicies": 3
+    "notTranslatable": 2
   }
 }

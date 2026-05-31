@@ -49,19 +49,26 @@ st.dataframe(
     {
         "Ranger access type": [
             "select", "read", "update", "write",
-            "create", "drop", "alter", "all",
+            "create", "create", "drop", "alter", "all",
             "index", "lock", "execute",
+        ],
+        "Target": [
+            "TABLE / SCHEMA", "TABLE / SCHEMA", "TABLE / SCHEMA", "TABLE / SCHEMA",
+            "SCHEMA", "TABLE",
+            "TABLE / SCHEMA", "TABLE / SCHEMA", "TABLE / SCHEMA",
+            "TABLE / SCHEMA", "TABLE / SCHEMA", "FUNCTION",
         ],
         "UC privilege": [
             "SELECT", "SELECT", "MODIFY", "MODIFY",
-            "CREATE", "DROP", "ALTER", "ALL PRIVILEGES",
+            "CREATE TABLE", "⚠ No equivalent — advisory comment",
+            "DROP", "ALL PRIVILEGES ⚠", "ALL PRIVILEGES",
             "SELECT", "SELECT", "EXECUTE",
         ],
         "Notes": [
             "", "", "", "",
-            "Applies to schemas/tables",
-            "⚠ UC supports DROP — see Cautions page",
-            "", "",
+            "Ranger 'create' at schema scope = ability to create tables in that schema",
+            "No CREATE privilege on a UC TABLE — grant MODIFY or ALL PRIVILEGES instead",
+            "", "ALTER has no UC equivalent — mapped to ALL PRIVILEGES; advisory comment recommends reviewing ownership", "",
             "Treated as read-equivalent", "Treated as read-equivalent", "",
         ],
     },
@@ -89,8 +96,48 @@ st.dataframe(
     hide_index=True,
 )
 st.info(
-    "When `table = *`, the tool generates schema-level grants and prepends "
-    "`GRANT USE CATALOG` and `GRANT USE SCHEMA` automatically.",
+    "When `table = *`, the tool prepends `GRANT USE CATALOG` and `GRANT USE SCHEMA` automatically. "
+    "Schema-valid privileges (CREATE TABLE, DROP, ALL PRIVILEGES, etc.) are granted directly on the schema. "
+    "**SELECT and MODIFY** are table-level only in UC — they are applied via a `BEGIN...END FOR` loop "
+    "over all current tables in the schema (see section 3a below).",
+    icon="ℹ️",
+)
+
+# ── SELECT/MODIFY on wildcard tables ─────────────────────────────────
+st.header("3a. SELECT / MODIFY on `table = *` — BEGIN…END FOR Loop")
+st.markdown(
+    "Unity Catalog only allows `SELECT` and `MODIFY` on **TABLE** objects, not on schemas. "
+    "When a Ranger policy targets `table: *` (all tables in a database), the tool generates "
+    "a scripted loop instead of a direct schema-level grant:"
+)
+st.code(
+    """-- ⚠ SELECT: table-level privilege — granted per-table via loop below.
+-- Requires Databricks Runtime 14.0+ or a SQL Warehouse with scripting enabled.
+-- ⚠ Tables added AFTER this script runs will NOT inherit this grant.
+BEGIN
+  FOR tbl AS (
+    SELECT table_name FROM `main`.information_schema.tables
+    WHERE table_schema = 'sales'
+      AND table_type IN ('BASE TABLE', 'EXTERNAL', 'MANAGED')
+  ) DO
+    EXECUTE IMMEDIATE format(
+      'GRANT SELECT ON TABLE `main`.`sales`.`%s` TO `analyst_group`',
+      tbl.table_name
+    );
+  END FOR;
+END;""",
+    language="sql",
+)
+st.warning(
+    "The loop grants SELECT/MODIFY to all **current** tables at execution time. "
+    "Tables created afterward are NOT covered. Re-run this section after adding new tables, "
+    "or issue explicit per-table grants.",
+    icon="⚠️",
+)
+st.info(
+    "The same loop pattern is used for: (1) Hive `table=*` grants, (2) schema-wildcard grants "
+    "(e.g. `db=fin*`), and (3) HBase namespace `*` grants. Each uses the appropriate "
+    "`information_schema.tables` filter for the scope.",
     icon="ℹ️",
 )
 
@@ -115,8 +162,42 @@ with col2:
         "- All mapped names are backtick-quoted in generated SQL"
     )
 
-# ── Deny Policies ─────────────────────────────────────────────────────
-st.header("5. Deny Policies")
+# ── Non-Translatable Policies ─────────────────────────────────────────
+st.header("5. Non-Translatable Policies — Advisory Comments Only")
+st.markdown(
+    "Three policy types cannot produce any executable SQL. "
+    "They emit **advisory comment blocks** describing the gap and suggesting manual steps. "
+    "They are **excluded from 'Approve all valid'** and are **not counted in the readiness score**."
+)
+st.dataframe(
+    {
+        "Policy type": ["Deny (`denyPolicyItems`)", "Tag placeholder (no `resourceTags`)", "HBase wildcard `*`"],
+        "Why untranslatable": [
+            "UC uses an additive model — there is no DENY statement",
+            "`resourceTags` absent from export — table names cannot be resolved automatically",
+            "Wildcard spans all namespaces — cannot map to a specific UC catalog/schema",
+        ],
+        "SQL output": [
+            "⛔ DENY NOT SUPPORTED comment block with remediation steps",
+            "⚠ Tag placeholder comment with manual GRANT template",
+            "⚠ HBase wildcard comment with manual grant instructions",
+        ],
+        "Included in generated SQL?": ["Yes (advisory)", "Yes (advisory)", "Yes (advisory)"],
+        "Can be bulk-approved?": ["No", "No", "No"],
+    },
+    use_container_width=True,
+    hide_index=True,
+)
+st.info(
+    "These items remain at **Needs Review** status by default. "
+    "They appear in the generated SQL as comment blocks so you have a record of the gap. "
+    "The Gap Analysis readiness score and the 'Approved' count on the Review page "
+    "exclude all three types.",
+    icon="ℹ️",
+)
+
+st.markdown("---")
+st.subheader("5a. Deny Policies")
 st.markdown(
     "`denyPolicyItems` in Ranger have no direct equivalent in Unity Catalog. "
     "This tool emits SQL comment blocks instead of executable statements."
@@ -175,10 +256,10 @@ st.dataframe(
             "CONCAT('***-**-', RIGHT(val, 4))",
             "CONCAT(LEFT(val, 4), '***')",
             "SHA2(val, 256)",
-            "No SQL generated — comment only",
-            "MAKE_DATE(YEAR(val), 1, 1)  (val DATE → DATE)",
+            "val (MASK_NONE: no masking for this principal)",
+            "CAST(MAKE_DATE(YEAR(TRY_CAST(val AS DATE)), 1, 1) AS STRING)",
             "NULL",
-            "Expression from valueExpr used verbatim — review before executing",
+            "Auto-adapted (see 7a below)",
         ],
     },
     use_container_width=True,
@@ -198,6 +279,60 @@ RETURN IF(
 ALTER TABLE main.hr.employees
 ALTER COLUMN ssn SET MASK main.hr.mask_employees_ssn_analyst;""",
     language="sql",
+)
+
+# ── Custom valueExpr auto-adaptation ─────────────────────────────────
+st.header("7a. Custom `valueExpr` — Auto-Adaptation")
+st.markdown(
+    "When a Ranger column mask uses `MASK_TYPE = CUSTOM` with a `valueExpr`, the tool attempts "
+    "two mechanical fixes to make the expression valid in UC before using it verbatim:"
+)
+st.dataframe(
+    {
+        "Problem pattern": [
+            "CAST('<non-numeric>' AS DECIMAL/INT/DOUBLE/…)",
+            "Bare column reference matching the masked column",
+            "Bare column reference to a DIFFERENT column (cross-column)",
+        ],
+        "Auto-fix": [
+            "→ NULL  (literal cannot be cast; would fail at parse time)",
+            "→ val  (the mask function's parameter name for the current column)",
+            "No fix possible — UC mask functions cannot access other columns",
+        ],
+        "Result": [
+            "✅ Expression made valid",
+            "✅ Expression made valid",
+            "⛔ Branch replaced with '***REDACTED***' + ACTION REQUIRED advisory",
+        ],
+    },
+    use_container_width=True,
+    hide_index=True,
+)
+st.markdown("**Example — masked column IS `transaction_amount`:**")
+st.code(
+    """-- Original Ranger valueExpr:
+-- CASE WHEN transaction_amount < 1000 THEN transaction_amount ELSE CAST('XXXXX' AS DECIMAL) END
+
+-- ⚠ Auto-adapted: CAST('XXXXX' AS DECIMAL) → NULL; `transaction_amount` → `val`
+-- Original: CASE WHEN transaction_amount < 1000 THEN transaction_amount ELSE CAST('XXXXX' AS DECIMAL) END
+WHEN IS_ACCOUNT_GROUP_MEMBER('junior_analysts') THEN CASE WHEN val < 1000 THEN val ELSE NULL END""",
+    language="sql",
+)
+st.markdown("**Example — masked column is `account_number` (cross-column reference):**")
+st.code(
+    """-- ⛔ BRANCH OMITTED — custom expression has cross-column references (principal: junior_analysts)
+--   Original Ranger expression: CASE WHEN transaction_amount < 1000 THEN ...
+--   Issue: Cross-column reference(s): transaction_amount. UC mask functions can only access 'val'.
+--   ACTION REQUIRED: Replace the WHEN branch below with a valid UC expression.
+-- WHEN IS_ACCOUNT_GROUP_MEMBER('junior_analysts') THEN <rewrite this expression manually>
+WHEN IS_ACCOUNT_GROUP_MEMBER('junior_analysts') THEN '***REDACTED***'  -- conservative fallback""",
+    language="sql",
+)
+st.warning(
+    "Always review auto-adapted expressions before executing. "
+    "Branches with cross-column references use `'***REDACTED***'` as a conservative fallback — "
+    "they will mask the column for that principal until you manually rewrite the branch.",
+    icon="⚠️",
 )
 
 # ── Row Filter ────────────────────────────────────────────────────────
@@ -283,11 +418,25 @@ st.info(
 st.dataframe(
     {
         "resourceTags present?": ["Yes", "Yes (tag not in map)", "No"],
-        "policyItems output": ["tag_grant — GRANT on resolved tables", "tag_placeholder — comment only", "tag_placeholder — comment only"],
-        "resourceTags output": ["tag_set — ALTER TABLE SET TAGS per resource", "tag_set — ALTER TABLE SET TAGS per resource", "Nothing (no data)"],
+        "policyItems output": [
+            "tag_grant — GRANT on resolved tables (executable SQL)",
+            "tag_placeholder — advisory comment only (cannot bulk-approve)",
+            "tag_placeholder — advisory comment only (cannot bulk-approve)",
+        ],
+        "resourceTags output": [
+            "tag_set — ALTER TABLE SET TAGS per resource",
+            "tag_set — ALTER TABLE SET TAGS per resource",
+            "Nothing (no data)",
+        ],
     },
     use_container_width=True,
     hide_index=True,
+)
+st.warning(
+    "`tag_placeholder` items are non-translatable. They stay at **Needs Review** and "
+    "cannot be bulk-approved. Re-export the Ranger archive with `resourceTags` included "
+    "to resolve them to executable GRANT statements.",
+    icon="⚠️",
 )
 
 st.header("10. ACL Provider Test Format")
@@ -359,11 +508,18 @@ st.dataframe(
             "TABLE catalog.default.table",
             "TABLE catalog.namespace.table",
             "SCHEMA catalog.namespace",
-            "Cannot auto-translate — comment emitted",
+            "Non-translatable — advisory comment only (cannot bulk-approve)",
         ],
+        "Status": ["pending → approved", "pending → approved", "pending → approved", "needs_review (advisory)"],
     },
     use_container_width=True,
     hide_index=True,
+)
+st.warning(
+    "The HBase `*` wildcard (all namespaces) is non-translatable. "
+    "It generates a `⚠ HBase wildcard` advisory comment and stays at **Needs Review**. "
+    "Grant specific schemas manually after migration.",
+    icon="⚠️",
 )
 st.info(
     "Column families (`column-family` resource) have no UC equivalent. "

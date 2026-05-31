@@ -1,46 +1,9 @@
 {
-  "metadata": {
-    "service_name": "tag_prod",
-    "source_file": "tag_complex.json",
-    "archived_at": "2026-05-21",
-    "total_items": 39,
-    "stats": {
-      "total": 39,
-      "grants": 0,
-      "denies": 0,
-      "rowFilters": 5,
-      "masks": 5,
-      "hdfsGrants": 0,
-      "hbaseGrants": 0,
-      "udfGrants": 0,
-      "tagSets": 5,
-      "tagGrants": 24,
-      "tagPlaceholders": 0,
-      "approved": 29,
-      "needsReview": 10,
-      "pending": 0,
-      "rejected": 0,
-      "disabled": 0,
-      "schemaCount": 3,
-      "principalCount": 8,
-      "schemas": [
-        "customer_360",
-        "finance",
-        "hr"
-      ],
-      "principals": [
-        "analytics_team",
-        "audit_team",
-        "auditor@company.com",
-        "compliance_team",
-        "data_protection_officers",
-        "dpo@company.com",
-        "marketing_team",
-        "privacy_team"
-      ]
-    }
-  },
-  "policy_items": [
+  "serviceName": "tag_prod",
+  "catalogName": "main",
+  "clusterName": "unknown",
+  "totalRangerPolicies": 2,
+  "policyItems": [
     {
       "id": "tag_set_finance_accounts_account_balance",
       "rangerPolicyId": null,
@@ -64,7 +27,7 @@
         "name": ""
       },
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "tag_set_finance_transactions_credit_card",
@@ -88,7 +51,7 @@
         "name": ""
       },
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "tag_set_customer_360_customers_email",
@@ -110,7 +73,7 @@
         "name": ""
       },
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "tag_set_customer_360_customers_eu_email",
@@ -134,7 +97,7 @@
         "name": ""
       },
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "tag_set_hr_payroll_salary",
@@ -158,7 +121,7 @@
         "name": ""
       },
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "304-tag_grant-customer_360-customers-data_protection_officers-1",
@@ -186,7 +149,7 @@
       ],
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "304-tag_grant-customer_360-customers-privacy_team-2",
@@ -214,7 +177,7 @@
       ],
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "304-tag_grant-customer_360-customers-dpo@company.com-3",
@@ -242,7 +205,7 @@
       ],
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "304-tag_grant-customer_360-customers_eu-data_protection_officers-4",
@@ -270,7 +233,7 @@
       ],
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "304-tag_grant-customer_360-customers_eu-privacy_team-5",
@@ -298,7 +261,7 @@
       ],
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "304-tag_grant-customer_360-customers_eu-dpo@company.com-6",
@@ -326,7 +289,7 @@
       ],
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "304-tag_grant-finance-accounts-data_protection_officers-7",
@@ -354,7 +317,7 @@
       ],
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "304-tag_grant-finance-accounts-privacy_team-8",
@@ -382,7 +345,7 @@
       ],
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "304-tag_grant-finance-accounts-dpo@company.com-9",
@@ -410,7 +373,7 @@
       ],
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "304-tag_grant-hr-payroll-data_protection_officers-10",
@@ -438,7 +401,7 @@
       ],
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "304-tag_grant-hr-payroll-privacy_team-11",
@@ -466,7 +429,7 @@
       ],
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "304-tag_grant-hr-payroll-dpo@company.com-12",
@@ -494,7 +457,7 @@
       ],
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "304-tag_grant-finance-transactions-data_protection_officers-13",
@@ -522,7 +485,7 @@
       ],
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "304-tag_grant-finance-transactions-privacy_team-14",
@@ -550,7 +513,7 @@
       ],
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "304-tag_grant-finance-transactions-dpo@company.com-15",
@@ -578,7 +541,7 @@
       ],
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "304-rowfilter-tag-customers-marketing_team-16",
@@ -909,7 +872,7 @@
       ],
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "305-tag_grant-finance-accounts-compliance_team-2",
@@ -935,7 +898,7 @@
       ],
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "305-tag_grant-finance-accounts-auditor@company.com-3",
@@ -961,7 +924,7 @@
       ],
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "305-tag_grant-finance-transactions-audit_team-4",
@@ -987,7 +950,7 @@
       ],
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "305-tag_grant-finance-transactions-compliance_team-5",
@@ -1013,7 +976,7 @@
       ],
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "305-tag_grant-finance-transactions-auditor@company.com-6",
@@ -1039,7 +1002,7 @@
       ],
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "305-tag_grant-hr-payroll-audit_team-7",
@@ -1065,7 +1028,7 @@
       ],
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "305-tag_grant-hr-payroll-compliance_team-8",
@@ -1091,7 +1054,7 @@
       ],
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "305-tag_grant-hr-payroll-auditor@company.com-9",
@@ -1117,1236 +1080,45 @@
       ],
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     }
   ],
-  "identity_map": {},
-  "generated_sql": "-- \u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n-- \u2551  Unity Catalog Migration Script                          \u2551\n-- \u2551  Generated by Ranger \u2192 UC Migrator                       \u2551\n-- \u2551  Source: tag_prod\n-- \u2551  Target Catalog: main\n-- \u2551  Date: 2026-05-21\n-- \u2551  Policies: 39 of 39\n-- \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: SET TAGS \u2014 finance.accounts.account_balance (Ranger ID: None)\n-- Type: TAG_SET | Principal: \n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nALTER TABLE main.finance.accounts\n  ALTER COLUMN account_balance SET TAGS ('FINANCIAL' = 'true', 'classification' = 'confidential', 'sox_applicable' = 'true', 'SOX' = 'true', 'regulation' = 'Sarbanes-Oxley', 'audit_required' = 'true');\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: SET TAGS \u2014 finance.transactions.credit_card (Ranger ID: None)\n-- Type: TAG_SET | Principal: \n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nALTER TABLE main.finance.transactions\n  ALTER COLUMN credit_card SET TAGS ('PCI_DSS' = 'true', 'regulation' = 'Payment Card Industry', 'encryption_required' = 'true', 'SENSITIVE' = 'true', 'classification' = 'restricted');\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: SET TAGS \u2014 customer_360.customers.email (Ranger ID: None)\n-- Type: TAG_SET | Principal: \n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nALTER TABLE main.customer_360.customers\n  ALTER COLUMN email SET TAGS ('PII' = 'true', 'classification' = 'restricted', 'gdpr_applicable' = 'true');\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: SET TAGS \u2014 customer_360.customers_eu.email (Ranger ID: None)\n-- Type: TAG_SET | Principal: \n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nALTER TABLE main.customer_360.customers_eu\n  ALTER COLUMN email SET TAGS ('PII' = 'true', 'classification' = 'restricted', 'gdpr_applicable' = 'true', 'PII_EU' = 'true', 'geography' = 'EU');\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: SET TAGS \u2014 hr.payroll.salary (Ranger ID: None)\n-- Type: TAG_SET | Principal: \n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nALTER TABLE main.hr.payroll\n  ALTER COLUMN salary SET TAGS ('FINANCIAL' = 'true', 'classification' = 'restricted', 'sox_applicable' = 'true', 'SENSITIVE' = 'true', 'encryption_required' = 'true');\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: gdpr_compliance_policy (Ranger ID: 304)\n-- Type: TAG_GRANT | Principal: data_protection_officers\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: PII, PII_EU, FINANCIAL, SENSITIVE)\nGRANT SELECT ON TABLE main.customer_360.customers TO `data_protection_officers`;\nGRANT MODIFY ON TABLE main.customer_360.customers TO `data_protection_officers`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: gdpr_compliance_policy (Ranger ID: 304)\n-- Type: TAG_GRANT | Principal: privacy_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: PII, PII_EU, FINANCIAL, SENSITIVE)\nGRANT SELECT ON TABLE main.customer_360.customers TO `privacy_team`;\nGRANT MODIFY ON TABLE main.customer_360.customers TO `privacy_team`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: gdpr_compliance_policy (Ranger ID: 304)\n-- Type: TAG_GRANT | Principal: dpo@company.com\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: PII, PII_EU, FINANCIAL, SENSITIVE)\nGRANT SELECT ON TABLE main.customer_360.customers TO `dpo@company.com`;\nGRANT MODIFY ON TABLE main.customer_360.customers TO `dpo@company.com`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: gdpr_compliance_policy (Ranger ID: 304)\n-- Type: TAG_GRANT | Principal: data_protection_officers\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: PII, PII_EU, FINANCIAL, SENSITIVE)\nGRANT SELECT ON TABLE main.customer_360.customers_eu TO `data_protection_officers`;\nGRANT MODIFY ON TABLE main.customer_360.customers_eu TO `data_protection_officers`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: gdpr_compliance_policy (Ranger ID: 304)\n-- Type: TAG_GRANT | Principal: privacy_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: PII, PII_EU, FINANCIAL, SENSITIVE)\nGRANT SELECT ON TABLE main.customer_360.customers_eu TO `privacy_team`;\nGRANT MODIFY ON TABLE main.customer_360.customers_eu TO `privacy_team`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: gdpr_compliance_policy (Ranger ID: 304)\n-- Type: TAG_GRANT | Principal: dpo@company.com\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: PII, PII_EU, FINANCIAL, SENSITIVE)\nGRANT SELECT ON TABLE main.customer_360.customers_eu TO `dpo@company.com`;\nGRANT MODIFY ON TABLE main.customer_360.customers_eu TO `dpo@company.com`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: gdpr_compliance_policy (Ranger ID: 304)\n-- Type: TAG_GRANT | Principal: data_protection_officers\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: PII, PII_EU, FINANCIAL, SENSITIVE)\nGRANT SELECT ON TABLE main.finance.accounts TO `data_protection_officers`;\nGRANT MODIFY ON TABLE main.finance.accounts TO `data_protection_officers`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: gdpr_compliance_policy (Ranger ID: 304)\n-- Type: TAG_GRANT | Principal: privacy_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: PII, PII_EU, FINANCIAL, SENSITIVE)\nGRANT SELECT ON TABLE main.finance.accounts TO `privacy_team`;\nGRANT MODIFY ON TABLE main.finance.accounts TO `privacy_team`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: gdpr_compliance_policy (Ranger ID: 304)\n-- Type: TAG_GRANT | Principal: dpo@company.com\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: PII, PII_EU, FINANCIAL, SENSITIVE)\nGRANT SELECT ON TABLE main.finance.accounts TO `dpo@company.com`;\nGRANT MODIFY ON TABLE main.finance.accounts TO `dpo@company.com`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: gdpr_compliance_policy (Ranger ID: 304)\n-- Type: TAG_GRANT | Principal: data_protection_officers\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: PII, PII_EU, FINANCIAL, SENSITIVE)\nGRANT SELECT ON TABLE main.hr.payroll TO `data_protection_officers`;\nGRANT MODIFY ON TABLE main.hr.payroll TO `data_protection_officers`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: gdpr_compliance_policy (Ranger ID: 304)\n-- Type: TAG_GRANT | Principal: privacy_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: PII, PII_EU, FINANCIAL, SENSITIVE)\nGRANT SELECT ON TABLE main.hr.payroll TO `privacy_team`;\nGRANT MODIFY ON TABLE main.hr.payroll TO `privacy_team`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: gdpr_compliance_policy (Ranger ID: 304)\n-- Type: TAG_GRANT | Principal: dpo@company.com\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: PII, PII_EU, FINANCIAL, SENSITIVE)\nGRANT SELECT ON TABLE main.hr.payroll TO `dpo@company.com`;\nGRANT MODIFY ON TABLE main.hr.payroll TO `dpo@company.com`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: gdpr_compliance_policy (Ranger ID: 304)\n-- Type: TAG_GRANT | Principal: data_protection_officers\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: PII, PII_EU, FINANCIAL, SENSITIVE)\nGRANT SELECT ON TABLE main.finance.transactions TO `data_protection_officers`;\nGRANT MODIFY ON TABLE main.finance.transactions TO `data_protection_officers`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: gdpr_compliance_policy (Ranger ID: 304)\n-- Type: TAG_GRANT | Principal: privacy_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: PII, PII_EU, FINANCIAL, SENSITIVE)\nGRANT SELECT ON TABLE main.finance.transactions TO `privacy_team`;\nGRANT MODIFY ON TABLE main.finance.transactions TO `privacy_team`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: gdpr_compliance_policy (Ranger ID: 304)\n-- Type: TAG_GRANT | Principal: dpo@company.com\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: PII, PII_EU, FINANCIAL, SENSITIVE)\nGRANT SELECT ON TABLE main.finance.transactions TO `dpo@company.com`;\nGRANT MODIFY ON TABLE main.finance.transactions TO `dpo@company.com`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: gdpr_compliance_policy (Ranger ID: 304)\n-- Type: ROW_FILTER | Principal: marketing_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Row Filter for: marketing_team\n-- Original expression: consent_given = TRUE AND data_retention_date > CURRENT_DATE()\n\nCREATE OR REPLACE FUNCTION main.customer_360.rf_customers_marketing_team()\nRETURNS BOOLEAN\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('marketing_team'),\n  consent_given = TRUE AND data_retention_date > CURRENT_DATE(),\n  TRUE  -- Allow all for non-matching groups (adjust as needed)\n);\n\nALTER TABLE main.customer_360.customers\nSET ROW FILTER main.customer_360.rf_customers_marketing_team ON ();\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: gdpr_compliance_policy (Ranger ID: 304)\n-- Type: ROW_FILTER | Principal: marketing_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Row Filter for: marketing_team\n-- Original expression: consent_given = TRUE AND data_retention_date > CURRENT_DATE()\n\nCREATE OR REPLACE FUNCTION main.customer_360.rf_customers_eu_marketing_team()\nRETURNS BOOLEAN\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('marketing_team'),\n  consent_given = TRUE AND data_retention_date > CURRENT_DATE(),\n  TRUE  -- Allow all for non-matching groups (adjust as needed)\n);\n\nALTER TABLE main.customer_360.customers_eu\nSET ROW FILTER main.customer_360.rf_customers_eu_marketing_team ON ();\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: gdpr_compliance_policy (Ranger ID: 304)\n-- Type: ROW_FILTER | Principal: marketing_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Row Filter for: marketing_team\n-- Original expression: consent_given = TRUE AND data_retention_date > CURRENT_DATE()\n\nCREATE OR REPLACE FUNCTION main.finance.rf_accounts_marketing_team()\nRETURNS BOOLEAN\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('marketing_team'),\n  consent_given = TRUE AND data_retention_date > CURRENT_DATE(),\n  TRUE  -- Allow all for non-matching groups (adjust as needed)\n);\n\nALTER TABLE main.finance.accounts\nSET ROW FILTER main.finance.rf_accounts_marketing_team ON ();\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: gdpr_compliance_policy (Ranger ID: 304)\n-- Type: ROW_FILTER | Principal: marketing_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Row Filter for: marketing_team\n-- Original expression: consent_given = TRUE AND data_retention_date > CURRENT_DATE()\n\nCREATE OR REPLACE FUNCTION main.hr.rf_payroll_marketing_team()\nRETURNS BOOLEAN\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('marketing_team'),\n  consent_given = TRUE AND data_retention_date > CURRENT_DATE(),\n  TRUE  -- Allow all for non-matching groups (adjust as needed)\n);\n\nALTER TABLE main.hr.payroll\nSET ROW FILTER main.hr.rf_payroll_marketing_team ON ();\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: gdpr_compliance_policy (Ranger ID: 304)\n-- Type: ROW_FILTER | Principal: marketing_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Row Filter for: marketing_team\n-- Original expression: consent_given = TRUE AND data_retention_date > CURRENT_DATE()\n\nCREATE OR REPLACE FUNCTION main.finance.rf_transactions_marketing_team()\nRETURNS BOOLEAN\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('marketing_team'),\n  consent_given = TRUE AND data_retention_date > CURRENT_DATE(),\n  TRUE  -- Allow all for non-matching groups (adjust as needed)\n);\n\nALTER TABLE main.finance.transactions\nSET ROW FILTER main.finance.rf_transactions_marketing_team ON ();\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: gdpr_compliance_policy (Ranger ID: 304)\n-- Type: COLUMN_MASK | Principal: analytics_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Column Mask: SHA-256 hash for analytics_team\nCREATE OR REPLACE FUNCTION main.customer_360.mask_customers_email_analytics_team(val STRING)\nRETURNS STRING\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('analytics_team'),\n  SHA2(val, 256),\n  val\n);\n\nALTER TABLE main.customer_360.customers\nALTER COLUMN email SET MASK main.customer_360.mask_customers_email_analytics_team;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: gdpr_compliance_policy (Ranger ID: 304)\n-- Type: COLUMN_MASK | Principal: analytics_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Column Mask: SHA-256 hash for analytics_team\nCREATE OR REPLACE FUNCTION main.customer_360.mask_customers_eu_email_analytics_team(val STRING)\nRETURNS STRING\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('analytics_team'),\n  SHA2(val, 256),\n  val\n);\n\nALTER TABLE main.customer_360.customers_eu\nALTER COLUMN email SET MASK main.customer_360.mask_customers_eu_email_analytics_team;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: gdpr_compliance_policy (Ranger ID: 304)\n-- Type: COLUMN_MASK | Principal: analytics_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Column Mask: SHA-256 hash for analytics_team\nCREATE OR REPLACE FUNCTION main.finance.mask_accounts_account_balance_analytics_team(val STRING)\nRETURNS STRING\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('analytics_team'),\n  SHA2(val, 256),\n  val\n);\n\nALTER TABLE main.finance.accounts\nALTER COLUMN account_balance SET MASK main.finance.mask_accounts_account_balance_analytics_team;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: gdpr_compliance_policy (Ranger ID: 304)\n-- Type: COLUMN_MASK | Principal: analytics_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Column Mask: SHA-256 hash for analytics_team\nCREATE OR REPLACE FUNCTION main.hr.mask_payroll_salary_analytics_team(val STRING)\nRETURNS STRING\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('analytics_team'),\n  SHA2(val, 256),\n  val\n);\n\nALTER TABLE main.hr.payroll\nALTER COLUMN salary SET MASK main.hr.mask_payroll_salary_analytics_team;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: gdpr_compliance_policy (Ranger ID: 304)\n-- Type: COLUMN_MASK | Principal: analytics_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Column Mask: SHA-256 hash for analytics_team\nCREATE OR REPLACE FUNCTION main.finance.mask_transactions_credit_card_analytics_team(val STRING)\nRETURNS STRING\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('analytics_team'),\n  SHA2(val, 256),\n  val\n);\n\nALTER TABLE main.finance.transactions\nALTER COLUMN credit_card SET MASK main.finance.mask_transactions_credit_card_analytics_team;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: financial_regulatory_policy (Ranger ID: 305)\n-- Type: TAG_GRANT | Principal: audit_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: SOX, PCI_DSS, FINANCIAL)\nGRANT SELECT ON TABLE main.finance.accounts TO `audit_team`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: financial_regulatory_policy (Ranger ID: 305)\n-- Type: TAG_GRANT | Principal: compliance_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: SOX, PCI_DSS, FINANCIAL)\nGRANT SELECT ON TABLE main.finance.accounts TO `compliance_team`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: financial_regulatory_policy (Ranger ID: 305)\n-- Type: TAG_GRANT | Principal: auditor@company.com\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: SOX, PCI_DSS, FINANCIAL)\nGRANT SELECT ON TABLE main.finance.accounts TO `auditor@company.com`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: financial_regulatory_policy (Ranger ID: 305)\n-- Type: TAG_GRANT | Principal: audit_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: SOX, PCI_DSS, FINANCIAL)\nGRANT SELECT ON TABLE main.finance.transactions TO `audit_team`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: financial_regulatory_policy (Ranger ID: 305)\n-- Type: TAG_GRANT | Principal: compliance_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: SOX, PCI_DSS, FINANCIAL)\nGRANT SELECT ON TABLE main.finance.transactions TO `compliance_team`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: financial_regulatory_policy (Ranger ID: 305)\n-- Type: TAG_GRANT | Principal: auditor@company.com\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: SOX, PCI_DSS, FINANCIAL)\nGRANT SELECT ON TABLE main.finance.transactions TO `auditor@company.com`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: financial_regulatory_policy (Ranger ID: 305)\n-- Type: TAG_GRANT | Principal: audit_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: SOX, PCI_DSS, FINANCIAL)\nGRANT SELECT ON TABLE main.hr.payroll TO `audit_team`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: financial_regulatory_policy (Ranger ID: 305)\n-- Type: TAG_GRANT | Principal: compliance_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: SOX, PCI_DSS, FINANCIAL)\nGRANT SELECT ON TABLE main.hr.payroll TO `compliance_team`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: financial_regulatory_policy (Ranger ID: 305)\n-- Type: TAG_GRANT | Principal: auditor@company.com\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Tag-based grant (tags: SOX, PCI_DSS, FINANCIAL)\nGRANT SELECT ON TABLE main.hr.payroll TO `auditor@company.com`;\n",
-  "gap_analysis": [
-    {
-      "category": "Kerberos / Service Accounts",
-      "severity": "critical",
-      "count": 2,
-      "description": "Kerberos principals and service accounts need to be mapped to Databricks service principals or cloud managed identities.",
-      "items": [
-        {
-          "resource": "gdpr_compliance_policy",
-          "principal": "dpo@company.com",
-          "detail": "Kerberos realm principal"
-        },
-        {
-          "resource": "financial_regulatory_policy",
-          "principal": "auditor@company.com",
-          "detail": "Kerberos realm principal"
-        }
-      ],
-      "remediation": "Create Databricks service principals for each service account. Configure OAuth M2M authentication. Sync user principals via SCIM from your IdP."
-    },
-    {
-      "category": "Row Filter Translation",
-      "severity": "warning",
-      "count": 5,
-      "description": "Ranger row filters translate to UC SQL functions. Complex expressions may need manual adjustment.",
-      "items": [
-        {
-          "resource": "customer_360.customers",
-          "principal": "marketing_team",
-          "detail": "Filter: consent_given = TRUE AND data_retention_date > CURRENT_DATE()"
-        },
-        {
-          "resource": "customer_360.customers_eu",
-          "principal": "marketing_team",
-          "detail": "Filter: consent_given = TRUE AND data_retention_date > CURRENT_DATE()"
-        },
-        {
-          "resource": "finance.accounts",
-          "principal": "marketing_team",
-          "detail": "Filter: consent_given = TRUE AND data_retention_date > CURRENT_DATE()"
-        },
-        {
-          "resource": "hr.payroll",
-          "principal": "marketing_team",
-          "detail": "Filter: consent_given = TRUE AND data_retention_date > CURRENT_DATE()"
-        },
-        {
-          "resource": "finance.transactions",
-          "principal": "marketing_team",
-          "detail": "Filter: consent_given = TRUE AND data_retention_date > CURRENT_DATE()"
-        }
-      ],
-      "remediation": "Review generated filter functions. Test with sample queries to verify filter behavior matches Ranger. Watch for UDF dependencies."
-    },
-    {
-      "category": "Policy Conditions (Not Translated)",
-      "severity": "warning",
-      "count": 1,
-      "description": "These policies include conditions (e.g. ip-range, time-of-day, custom evaluators) that restrict access in Ranger but have no UC equivalent. Generated grants apply unconditionally.",
-      "items": [
-        {
-          "resource": "gdpr_compliance_policy",
-          "principal": "\u2014",
-          "detail": "Policy \"gdpr_compliance_policy\" has conditions [ip-range] with no UC equivalent \u2014 grants will apply unconditionally"
-        }
-      ],
-      "remediation": "Enforce IP-range and context-based restrictions at the network or application layer. Review each affected policy carefully before executing the migration SQL."
-    }
-  ],
-  "parsed_data": {
-    "results": [
-      {
-        "id": "tag_set_finance_accounts_account_balance",
-        "rangerPolicyId": null,
-        "rangerPolicyName": "SET TAGS \u2014 finance.accounts.account_balance",
-        "rangerPolicyDesc": "",
-        "type": "tag_set",
-        "catalog": "main",
-        "schema": "finance",
-        "table": "accounts",
-        "column": "account_balance",
-        "tag_attrs": {
-          "FINANCIAL": "true",
-          "classification": "confidential",
-          "sox_applicable": "true",
-          "SOX": "true",
-          "regulation": "Sarbanes-Oxley",
-          "audit_required": "true"
-        },
-        "principal": {
-          "type": "system",
-          "name": ""
-        },
-        "enabled": true,
-        "status": "approved"
-      },
-      {
-        "id": "tag_set_finance_transactions_credit_card",
-        "rangerPolicyId": null,
-        "rangerPolicyName": "SET TAGS \u2014 finance.transactions.credit_card",
-        "rangerPolicyDesc": "",
-        "type": "tag_set",
-        "catalog": "main",
-        "schema": "finance",
-        "table": "transactions",
-        "column": "credit_card",
-        "tag_attrs": {
-          "PCI_DSS": "true",
-          "regulation": "Payment Card Industry",
-          "encryption_required": "true",
-          "SENSITIVE": "true",
-          "classification": "restricted"
-        },
-        "principal": {
-          "type": "system",
-          "name": ""
-        },
-        "enabled": true,
-        "status": "approved"
-      },
-      {
-        "id": "tag_set_customer_360_customers_email",
-        "rangerPolicyId": null,
-        "rangerPolicyName": "SET TAGS \u2014 customer_360.customers.email",
-        "rangerPolicyDesc": "",
-        "type": "tag_set",
-        "catalog": "main",
-        "schema": "customer_360",
-        "table": "customers",
-        "column": "email",
-        "tag_attrs": {
-          "PII": "true",
-          "classification": "restricted",
-          "gdpr_applicable": "true"
-        },
-        "principal": {
-          "type": "system",
-          "name": ""
-        },
-        "enabled": true,
-        "status": "approved"
-      },
-      {
-        "id": "tag_set_customer_360_customers_eu_email",
-        "rangerPolicyId": null,
-        "rangerPolicyName": "SET TAGS \u2014 customer_360.customers_eu.email",
-        "rangerPolicyDesc": "",
-        "type": "tag_set",
-        "catalog": "main",
-        "schema": "customer_360",
-        "table": "customers_eu",
-        "column": "email",
-        "tag_attrs": {
-          "PII": "true",
-          "classification": "restricted",
-          "gdpr_applicable": "true",
-          "PII_EU": "true",
-          "geography": "EU"
-        },
-        "principal": {
-          "type": "system",
-          "name": ""
-        },
-        "enabled": true,
-        "status": "approved"
-      },
-      {
-        "id": "tag_set_hr_payroll_salary",
-        "rangerPolicyId": null,
-        "rangerPolicyName": "SET TAGS \u2014 hr.payroll.salary",
-        "rangerPolicyDesc": "",
-        "type": "tag_set",
-        "catalog": "main",
-        "schema": "hr",
-        "table": "payroll",
-        "column": "salary",
-        "tag_attrs": {
-          "FINANCIAL": "true",
-          "classification": "restricted",
-          "sox_applicable": "true",
-          "SENSITIVE": "true",
-          "encryption_required": "true"
-        },
-        "principal": {
-          "type": "system",
-          "name": ""
-        },
-        "enabled": true,
-        "status": "approved"
-      },
-      {
-        "id": "304-tag_grant-customer_360-customers-data_protection_officers-1",
-        "rangerPolicyId": 304,
-        "rangerPolicyName": "gdpr_compliance_policy",
-        "rangerPolicyDesc": "Complex tag policy - GDPR with geography and expiry",
-        "type": "tag_grant",
-        "catalog": "main",
-        "schema": "customer_360",
-        "table": "customers",
-        "columns": null,
-        "privileges": [
-          "SELECT",
-          "MODIFY"
-        ],
-        "principal": {
-          "type": "group",
-          "name": "data_protection_officers"
-        },
-        "tag_names": [
-          "PII",
-          "PII_EU",
-          "FINANCIAL",
-          "SENSITIVE"
-        ],
-        "delegateAdmin": false,
-        "enabled": true,
-        "status": "approved"
-      },
-      {
-        "id": "304-tag_grant-customer_360-customers-privacy_team-2",
-        "rangerPolicyId": 304,
-        "rangerPolicyName": "gdpr_compliance_policy",
-        "rangerPolicyDesc": "Complex tag policy - GDPR with geography and expiry",
-        "type": "tag_grant",
-        "catalog": "main",
-        "schema": "customer_360",
-        "table": "customers",
-        "columns": null,
-        "privileges": [
-          "SELECT",
-          "MODIFY"
-        ],
-        "principal": {
-          "type": "group",
-          "name": "privacy_team"
-        },
-        "tag_names": [
-          "PII",
-          "PII_EU",
-          "FINANCIAL",
-          "SENSITIVE"
-        ],
-        "delegateAdmin": false,
-        "enabled": true,
-        "status": "approved"
-      },
-      {
-        "id": "304-tag_grant-customer_360-customers-dpo@company.com-3",
-        "rangerPolicyId": 304,
-        "rangerPolicyName": "gdpr_compliance_policy",
-        "rangerPolicyDesc": "Complex tag policy - GDPR with geography and expiry",
-        "type": "tag_grant",
-        "catalog": "main",
-        "schema": "customer_360",
-        "table": "customers",
-        "columns": null,
-        "privileges": [
-          "SELECT",
-          "MODIFY"
-        ],
-        "principal": {
-          "type": "user",
-          "name": "dpo@company.com"
-        },
-        "tag_names": [
-          "PII",
-          "PII_EU",
-          "FINANCIAL",
-          "SENSITIVE"
-        ],
-        "delegateAdmin": false,
-        "enabled": true,
-        "status": "approved"
-      },
-      {
-        "id": "304-tag_grant-customer_360-customers_eu-data_protection_officers-4",
-        "rangerPolicyId": 304,
-        "rangerPolicyName": "gdpr_compliance_policy",
-        "rangerPolicyDesc": "Complex tag policy - GDPR with geography and expiry",
-        "type": "tag_grant",
-        "catalog": "main",
-        "schema": "customer_360",
-        "table": "customers_eu",
-        "columns": null,
-        "privileges": [
-          "SELECT",
-          "MODIFY"
-        ],
-        "principal": {
-          "type": "group",
-          "name": "data_protection_officers"
-        },
-        "tag_names": [
-          "PII",
-          "PII_EU",
-          "FINANCIAL",
-          "SENSITIVE"
-        ],
-        "delegateAdmin": false,
-        "enabled": true,
-        "status": "approved"
-      },
-      {
-        "id": "304-tag_grant-customer_360-customers_eu-privacy_team-5",
-        "rangerPolicyId": 304,
-        "rangerPolicyName": "gdpr_compliance_policy",
-        "rangerPolicyDesc": "Complex tag policy - GDPR with geography and expiry",
-        "type": "tag_grant",
-        "catalog": "main",
-        "schema": "customer_360",
-        "table": "customers_eu",
-        "columns": null,
-        "privileges": [
-          "SELECT",
-          "MODIFY"
-        ],
-        "principal": {
-          "type": "group",
-          "name": "privacy_team"
-        },
-        "tag_names": [
-          "PII",
-          "PII_EU",
-          "FINANCIAL",
-          "SENSITIVE"
-        ],
-        "delegateAdmin": false,
-        "enabled": true,
-        "status": "approved"
-      },
-      {
-        "id": "304-tag_grant-customer_360-customers_eu-dpo@company.com-6",
-        "rangerPolicyId": 304,
-        "rangerPolicyName": "gdpr_compliance_policy",
-        "rangerPolicyDesc": "Complex tag policy - GDPR with geography and expiry",
-        "type": "tag_grant",
-        "catalog": "main",
-        "schema": "customer_360",
-        "table": "customers_eu",
-        "columns": null,
-        "privileges": [
-          "SELECT",
-          "MODIFY"
-        ],
-        "principal": {
-          "type": "user",
-          "name": "dpo@company.com"
-        },
-        "tag_names": [
-          "PII",
-          "PII_EU",
-          "FINANCIAL",
-          "SENSITIVE"
-        ],
-        "delegateAdmin": false,
-        "enabled": true,
-        "status": "approved"
-      },
-      {
-        "id": "304-tag_grant-finance-accounts-data_protection_officers-7",
-        "rangerPolicyId": 304,
-        "rangerPolicyName": "gdpr_compliance_policy",
-        "rangerPolicyDesc": "Complex tag policy - GDPR with geography and expiry",
-        "type": "tag_grant",
-        "catalog": "main",
-        "schema": "finance",
-        "table": "accounts",
-        "columns": null,
-        "privileges": [
-          "SELECT",
-          "MODIFY"
-        ],
-        "principal": {
-          "type": "group",
-          "name": "data_protection_officers"
-        },
-        "tag_names": [
-          "PII",
-          "PII_EU",
-          "FINANCIAL",
-          "SENSITIVE"
-        ],
-        "delegateAdmin": false,
-        "enabled": true,
-        "status": "approved"
-      },
-      {
-        "id": "304-tag_grant-finance-accounts-privacy_team-8",
-        "rangerPolicyId": 304,
-        "rangerPolicyName": "gdpr_compliance_policy",
-        "rangerPolicyDesc": "Complex tag policy - GDPR with geography and expiry",
-        "type": "tag_grant",
-        "catalog": "main",
-        "schema": "finance",
-        "table": "accounts",
-        "columns": null,
-        "privileges": [
-          "SELECT",
-          "MODIFY"
-        ],
-        "principal": {
-          "type": "group",
-          "name": "privacy_team"
-        },
-        "tag_names": [
-          "PII",
-          "PII_EU",
-          "FINANCIAL",
-          "SENSITIVE"
-        ],
-        "delegateAdmin": false,
-        "enabled": true,
-        "status": "approved"
-      },
-      {
-        "id": "304-tag_grant-finance-accounts-dpo@company.com-9",
-        "rangerPolicyId": 304,
-        "rangerPolicyName": "gdpr_compliance_policy",
-        "rangerPolicyDesc": "Complex tag policy - GDPR with geography and expiry",
-        "type": "tag_grant",
-        "catalog": "main",
-        "schema": "finance",
-        "table": "accounts",
-        "columns": null,
-        "privileges": [
-          "SELECT",
-          "MODIFY"
-        ],
-        "principal": {
-          "type": "user",
-          "name": "dpo@company.com"
-        },
-        "tag_names": [
-          "PII",
-          "PII_EU",
-          "FINANCIAL",
-          "SENSITIVE"
-        ],
-        "delegateAdmin": false,
-        "enabled": true,
-        "status": "approved"
-      },
-      {
-        "id": "304-tag_grant-hr-payroll-data_protection_officers-10",
-        "rangerPolicyId": 304,
-        "rangerPolicyName": "gdpr_compliance_policy",
-        "rangerPolicyDesc": "Complex tag policy - GDPR with geography and expiry",
-        "type": "tag_grant",
-        "catalog": "main",
-        "schema": "hr",
-        "table": "payroll",
-        "columns": null,
-        "privileges": [
-          "SELECT",
-          "MODIFY"
-        ],
-        "principal": {
-          "type": "group",
-          "name": "data_protection_officers"
-        },
-        "tag_names": [
-          "PII",
-          "PII_EU",
-          "FINANCIAL",
-          "SENSITIVE"
-        ],
-        "delegateAdmin": false,
-        "enabled": true,
-        "status": "approved"
-      },
-      {
-        "id": "304-tag_grant-hr-payroll-privacy_team-11",
-        "rangerPolicyId": 304,
-        "rangerPolicyName": "gdpr_compliance_policy",
-        "rangerPolicyDesc": "Complex tag policy - GDPR with geography and expiry",
-        "type": "tag_grant",
-        "catalog": "main",
-        "schema": "hr",
-        "table": "payroll",
-        "columns": null,
-        "privileges": [
-          "SELECT",
-          "MODIFY"
-        ],
-        "principal": {
-          "type": "group",
-          "name": "privacy_team"
-        },
-        "tag_names": [
-          "PII",
-          "PII_EU",
-          "FINANCIAL",
-          "SENSITIVE"
-        ],
-        "delegateAdmin": false,
-        "enabled": true,
-        "status": "approved"
-      },
-      {
-        "id": "304-tag_grant-hr-payroll-dpo@company.com-12",
-        "rangerPolicyId": 304,
-        "rangerPolicyName": "gdpr_compliance_policy",
-        "rangerPolicyDesc": "Complex tag policy - GDPR with geography and expiry",
-        "type": "tag_grant",
-        "catalog": "main",
-        "schema": "hr",
-        "table": "payroll",
-        "columns": null,
-        "privileges": [
-          "SELECT",
-          "MODIFY"
-        ],
-        "principal": {
-          "type": "user",
-          "name": "dpo@company.com"
-        },
-        "tag_names": [
-          "PII",
-          "PII_EU",
-          "FINANCIAL",
-          "SENSITIVE"
-        ],
-        "delegateAdmin": false,
-        "enabled": true,
-        "status": "approved"
-      },
-      {
-        "id": "304-tag_grant-finance-transactions-data_protection_officers-13",
-        "rangerPolicyId": 304,
-        "rangerPolicyName": "gdpr_compliance_policy",
-        "rangerPolicyDesc": "Complex tag policy - GDPR with geography and expiry",
-        "type": "tag_grant",
-        "catalog": "main",
-        "schema": "finance",
-        "table": "transactions",
-        "columns": null,
-        "privileges": [
-          "SELECT",
-          "MODIFY"
-        ],
-        "principal": {
-          "type": "group",
-          "name": "data_protection_officers"
-        },
-        "tag_names": [
-          "PII",
-          "PII_EU",
-          "FINANCIAL",
-          "SENSITIVE"
-        ],
-        "delegateAdmin": false,
-        "enabled": true,
-        "status": "approved"
-      },
-      {
-        "id": "304-tag_grant-finance-transactions-privacy_team-14",
-        "rangerPolicyId": 304,
-        "rangerPolicyName": "gdpr_compliance_policy",
-        "rangerPolicyDesc": "Complex tag policy - GDPR with geography and expiry",
-        "type": "tag_grant",
-        "catalog": "main",
-        "schema": "finance",
-        "table": "transactions",
-        "columns": null,
-        "privileges": [
-          "SELECT",
-          "MODIFY"
-        ],
-        "principal": {
-          "type": "group",
-          "name": "privacy_team"
-        },
-        "tag_names": [
-          "PII",
-          "PII_EU",
-          "FINANCIAL",
-          "SENSITIVE"
-        ],
-        "delegateAdmin": false,
-        "enabled": true,
-        "status": "approved"
-      },
-      {
-        "id": "304-tag_grant-finance-transactions-dpo@company.com-15",
-        "rangerPolicyId": 304,
-        "rangerPolicyName": "gdpr_compliance_policy",
-        "rangerPolicyDesc": "Complex tag policy - GDPR with geography and expiry",
-        "type": "tag_grant",
-        "catalog": "main",
-        "schema": "finance",
-        "table": "transactions",
-        "columns": null,
-        "privileges": [
-          "SELECT",
-          "MODIFY"
-        ],
-        "principal": {
-          "type": "user",
-          "name": "dpo@company.com"
-        },
-        "tag_names": [
-          "PII",
-          "PII_EU",
-          "FINANCIAL",
-          "SENSITIVE"
-        ],
-        "delegateAdmin": false,
-        "enabled": true,
-        "status": "approved"
-      },
-      {
-        "id": "304-rowfilter-tag-customers-marketing_team-16",
-        "rangerPolicyId": 304,
-        "rangerPolicyName": "gdpr_compliance_policy",
-        "rangerPolicyDesc": "Complex tag policy - GDPR with geography and expiry",
-        "type": "row_filter",
-        "catalog": "main",
-        "schema": "customer_360",
-        "table": "customers",
-        "columns": null,
-        "privileges": [],
-        "principal": {
-          "type": "group",
-          "name": "marketing_team"
-        },
-        "allPrincipals": [
-          {
-            "type": "group",
-            "name": "marketing_team"
-          },
-          {
-            "type": "group",
-            "name": "sales_team"
-          }
-        ],
-        "filterExpr": "consent_given = TRUE AND data_retention_date > CURRENT_DATE()",
-        "enabled": true,
-        "status": "needs_review"
-      },
-      {
-        "id": "304-rowfilter-tag-customers_eu-marketing_team-17",
-        "rangerPolicyId": 304,
-        "rangerPolicyName": "gdpr_compliance_policy",
-        "rangerPolicyDesc": "Complex tag policy - GDPR with geography and expiry",
-        "type": "row_filter",
-        "catalog": "main",
-        "schema": "customer_360",
-        "table": "customers_eu",
-        "columns": null,
-        "privileges": [],
-        "principal": {
-          "type": "group",
-          "name": "marketing_team"
-        },
-        "allPrincipals": [
-          {
-            "type": "group",
-            "name": "marketing_team"
-          },
-          {
-            "type": "group",
-            "name": "sales_team"
-          }
-        ],
-        "filterExpr": "consent_given = TRUE AND data_retention_date > CURRENT_DATE()",
-        "enabled": true,
-        "status": "needs_review"
-      },
-      {
-        "id": "304-rowfilter-tag-accounts-marketing_team-18",
-        "rangerPolicyId": 304,
-        "rangerPolicyName": "gdpr_compliance_policy",
-        "rangerPolicyDesc": "Complex tag policy - GDPR with geography and expiry",
-        "type": "row_filter",
-        "catalog": "main",
-        "schema": "finance",
-        "table": "accounts",
-        "columns": null,
-        "privileges": [],
-        "principal": {
-          "type": "group",
-          "name": "marketing_team"
-        },
-        "allPrincipals": [
-          {
-            "type": "group",
-            "name": "marketing_team"
-          },
-          {
-            "type": "group",
-            "name": "sales_team"
-          }
-        ],
-        "filterExpr": "consent_given = TRUE AND data_retention_date > CURRENT_DATE()",
-        "enabled": true,
-        "status": "needs_review"
-      },
-      {
-        "id": "304-rowfilter-tag-payroll-marketing_team-19",
-        "rangerPolicyId": 304,
-        "rangerPolicyName": "gdpr_compliance_policy",
-        "rangerPolicyDesc": "Complex tag policy - GDPR with geography and expiry",
-        "type": "row_filter",
-        "catalog": "main",
-        "schema": "hr",
-        "table": "payroll",
-        "columns": null,
-        "privileges": [],
-        "principal": {
-          "type": "group",
-          "name": "marketing_team"
-        },
-        "allPrincipals": [
-          {
-            "type": "group",
-            "name": "marketing_team"
-          },
-          {
-            "type": "group",
-            "name": "sales_team"
-          }
-        ],
-        "filterExpr": "consent_given = TRUE AND data_retention_date > CURRENT_DATE()",
-        "enabled": true,
-        "status": "needs_review"
-      },
-      {
-        "id": "304-rowfilter-tag-transactions-marketing_team-20",
-        "rangerPolicyId": 304,
-        "rangerPolicyName": "gdpr_compliance_policy",
-        "rangerPolicyDesc": "Complex tag policy - GDPR with geography and expiry",
-        "type": "row_filter",
-        "catalog": "main",
-        "schema": "finance",
-        "table": "transactions",
-        "columns": null,
-        "privileges": [],
-        "principal": {
-          "type": "group",
-          "name": "marketing_team"
-        },
-        "allPrincipals": [
-          {
-            "type": "group",
-            "name": "marketing_team"
-          },
-          {
-            "type": "group",
-            "name": "sales_team"
-          }
-        ],
-        "filterExpr": "consent_given = TRUE AND data_retention_date > CURRENT_DATE()",
-        "enabled": true,
-        "status": "needs_review"
-      },
-      {
-        "id": "304-mask-tag-customers-email-analytics_team-21",
-        "rangerPolicyId": 304,
-        "rangerPolicyName": "gdpr_compliance_policy",
-        "rangerPolicyDesc": "Complex tag policy - GDPR with geography and expiry",
-        "type": "column_mask",
-        "catalog": "main",
-        "schema": "customer_360",
-        "table": "customers",
-        "columns": [
-          "email"
-        ],
-        "privileges": [],
-        "principal": {
-          "type": "group",
-          "name": "analytics_team"
-        },
-        "allPrincipals": [
-          {
-            "type": "group",
-            "name": "analytics_team"
-          },
-          {
-            "type": "group",
-            "name": "data_science"
-          }
-        ],
-        "maskType": "MASK_HASH",
-        "maskExpr": "",
-        "enabled": true,
-        "status": "needs_review"
-      },
-      {
-        "id": "304-mask-tag-customers_eu-email-analytics_team-22",
-        "rangerPolicyId": 304,
-        "rangerPolicyName": "gdpr_compliance_policy",
-        "rangerPolicyDesc": "Complex tag policy - GDPR with geography and expiry",
-        "type": "column_mask",
-        "catalog": "main",
-        "schema": "customer_360",
-        "table": "customers_eu",
-        "columns": [
-          "email"
-        ],
-        "privileges": [],
-        "principal": {
-          "type": "group",
-          "name": "analytics_team"
-        },
-        "allPrincipals": [
-          {
-            "type": "group",
-            "name": "analytics_team"
-          },
-          {
-            "type": "group",
-            "name": "data_science"
-          }
-        ],
-        "maskType": "MASK_HASH",
-        "maskExpr": "",
-        "enabled": true,
-        "status": "needs_review"
-      },
-      {
-        "id": "304-mask-tag-accounts-account_balance-analytics_team-23",
-        "rangerPolicyId": 304,
-        "rangerPolicyName": "gdpr_compliance_policy",
-        "rangerPolicyDesc": "Complex tag policy - GDPR with geography and expiry",
-        "type": "column_mask",
-        "catalog": "main",
-        "schema": "finance",
-        "table": "accounts",
-        "columns": [
-          "account_balance"
-        ],
-        "privileges": [],
-        "principal": {
-          "type": "group",
-          "name": "analytics_team"
-        },
-        "allPrincipals": [
-          {
-            "type": "group",
-            "name": "analytics_team"
-          },
-          {
-            "type": "group",
-            "name": "data_science"
-          }
-        ],
-        "maskType": "MASK_HASH",
-        "maskExpr": "",
-        "enabled": true,
-        "status": "needs_review"
-      },
-      {
-        "id": "304-mask-tag-payroll-salary-analytics_team-24",
-        "rangerPolicyId": 304,
-        "rangerPolicyName": "gdpr_compliance_policy",
-        "rangerPolicyDesc": "Complex tag policy - GDPR with geography and expiry",
-        "type": "column_mask",
-        "catalog": "main",
-        "schema": "hr",
-        "table": "payroll",
-        "columns": [
-          "salary"
-        ],
-        "privileges": [],
-        "principal": {
-          "type": "group",
-          "name": "analytics_team"
-        },
-        "allPrincipals": [
-          {
-            "type": "group",
-            "name": "analytics_team"
-          },
-          {
-            "type": "group",
-            "name": "data_science"
-          }
-        ],
-        "maskType": "MASK_HASH",
-        "maskExpr": "",
-        "enabled": true,
-        "status": "needs_review"
-      },
-      {
-        "id": "304-mask-tag-transactions-credit_card-analytics_team-25",
-        "rangerPolicyId": 304,
-        "rangerPolicyName": "gdpr_compliance_policy",
-        "rangerPolicyDesc": "Complex tag policy - GDPR with geography and expiry",
-        "type": "column_mask",
-        "catalog": "main",
-        "schema": "finance",
-        "table": "transactions",
-        "columns": [
-          "credit_card"
-        ],
-        "privileges": [],
-        "principal": {
-          "type": "group",
-          "name": "analytics_team"
-        },
-        "allPrincipals": [
-          {
-            "type": "group",
-            "name": "analytics_team"
-          },
-          {
-            "type": "group",
-            "name": "data_science"
-          }
-        ],
-        "maskType": "MASK_HASH",
-        "maskExpr": "",
-        "enabled": true,
-        "status": "needs_review"
-      },
-      {
-        "id": "305-tag_grant-finance-accounts-audit_team-1",
-        "rangerPolicyId": 305,
-        "rangerPolicyName": "financial_regulatory_policy",
-        "rangerPolicyDesc": "SOX/PCI compliance for financial tags",
-        "type": "tag_grant",
-        "catalog": "main",
-        "schema": "finance",
-        "table": "accounts",
-        "columns": null,
-        "privileges": [
-          "SELECT"
-        ],
-        "principal": {
-          "type": "group",
-          "name": "audit_team"
-        },
-        "tag_names": [
-          "SOX",
-          "PCI_DSS",
-          "FINANCIAL"
-        ],
-        "delegateAdmin": false,
-        "enabled": true,
-        "status": "approved"
-      },
-      {
-        "id": "305-tag_grant-finance-accounts-compliance_team-2",
-        "rangerPolicyId": 305,
-        "rangerPolicyName": "financial_regulatory_policy",
-        "rangerPolicyDesc": "SOX/PCI compliance for financial tags",
-        "type": "tag_grant",
-        "catalog": "main",
-        "schema": "finance",
-        "table": "accounts",
-        "columns": null,
-        "privileges": [
-          "SELECT"
-        ],
-        "principal": {
-          "type": "group",
-          "name": "compliance_team"
-        },
-        "tag_names": [
-          "SOX",
-          "PCI_DSS",
-          "FINANCIAL"
-        ],
-        "delegateAdmin": false,
-        "enabled": true,
-        "status": "approved"
-      },
-      {
-        "id": "305-tag_grant-finance-accounts-auditor@company.com-3",
-        "rangerPolicyId": 305,
-        "rangerPolicyName": "financial_regulatory_policy",
-        "rangerPolicyDesc": "SOX/PCI compliance for financial tags",
-        "type": "tag_grant",
-        "catalog": "main",
-        "schema": "finance",
-        "table": "accounts",
-        "columns": null,
-        "privileges": [
-          "SELECT"
-        ],
-        "principal": {
-          "type": "user",
-          "name": "auditor@company.com"
-        },
-        "tag_names": [
-          "SOX",
-          "PCI_DSS",
-          "FINANCIAL"
-        ],
-        "delegateAdmin": false,
-        "enabled": true,
-        "status": "approved"
-      },
-      {
-        "id": "305-tag_grant-finance-transactions-audit_team-4",
-        "rangerPolicyId": 305,
-        "rangerPolicyName": "financial_regulatory_policy",
-        "rangerPolicyDesc": "SOX/PCI compliance for financial tags",
-        "type": "tag_grant",
-        "catalog": "main",
-        "schema": "finance",
-        "table": "transactions",
-        "columns": null,
-        "privileges": [
-          "SELECT"
-        ],
-        "principal": {
-          "type": "group",
-          "name": "audit_team"
-        },
-        "tag_names": [
-          "SOX",
-          "PCI_DSS",
-          "FINANCIAL"
-        ],
-        "delegateAdmin": false,
-        "enabled": true,
-        "status": "approved"
-      },
-      {
-        "id": "305-tag_grant-finance-transactions-compliance_team-5",
-        "rangerPolicyId": 305,
-        "rangerPolicyName": "financial_regulatory_policy",
-        "rangerPolicyDesc": "SOX/PCI compliance for financial tags",
-        "type": "tag_grant",
-        "catalog": "main",
-        "schema": "finance",
-        "table": "transactions",
-        "columns": null,
-        "privileges": [
-          "SELECT"
-        ],
-        "principal": {
-          "type": "group",
-          "name": "compliance_team"
-        },
-        "tag_names": [
-          "SOX",
-          "PCI_DSS",
-          "FINANCIAL"
-        ],
-        "delegateAdmin": false,
-        "enabled": true,
-        "status": "approved"
-      },
-      {
-        "id": "305-tag_grant-finance-transactions-auditor@company.com-6",
-        "rangerPolicyId": 305,
-        "rangerPolicyName": "financial_regulatory_policy",
-        "rangerPolicyDesc": "SOX/PCI compliance for financial tags",
-        "type": "tag_grant",
-        "catalog": "main",
-        "schema": "finance",
-        "table": "transactions",
-        "columns": null,
-        "privileges": [
-          "SELECT"
-        ],
-        "principal": {
-          "type": "user",
-          "name": "auditor@company.com"
-        },
-        "tag_names": [
-          "SOX",
-          "PCI_DSS",
-          "FINANCIAL"
-        ],
-        "delegateAdmin": false,
-        "enabled": true,
-        "status": "approved"
-      },
-      {
-        "id": "305-tag_grant-hr-payroll-audit_team-7",
-        "rangerPolicyId": 305,
-        "rangerPolicyName": "financial_regulatory_policy",
-        "rangerPolicyDesc": "SOX/PCI compliance for financial tags",
-        "type": "tag_grant",
-        "catalog": "main",
-        "schema": "hr",
-        "table": "payroll",
-        "columns": null,
-        "privileges": [
-          "SELECT"
-        ],
-        "principal": {
-          "type": "group",
-          "name": "audit_team"
-        },
-        "tag_names": [
-          "SOX",
-          "PCI_DSS",
-          "FINANCIAL"
-        ],
-        "delegateAdmin": false,
-        "enabled": true,
-        "status": "approved"
-      },
-      {
-        "id": "305-tag_grant-hr-payroll-compliance_team-8",
-        "rangerPolicyId": 305,
-        "rangerPolicyName": "financial_regulatory_policy",
-        "rangerPolicyDesc": "SOX/PCI compliance for financial tags",
-        "type": "tag_grant",
-        "catalog": "main",
-        "schema": "hr",
-        "table": "payroll",
-        "columns": null,
-        "privileges": [
-          "SELECT"
-        ],
-        "principal": {
-          "type": "group",
-          "name": "compliance_team"
-        },
-        "tag_names": [
-          "SOX",
-          "PCI_DSS",
-          "FINANCIAL"
-        ],
-        "delegateAdmin": false,
-        "enabled": true,
-        "status": "approved"
-      },
-      {
-        "id": "305-tag_grant-hr-payroll-auditor@company.com-9",
-        "rangerPolicyId": 305,
-        "rangerPolicyName": "financial_regulatory_policy",
-        "rangerPolicyDesc": "SOX/PCI compliance for financial tags",
-        "type": "tag_grant",
-        "catalog": "main",
-        "schema": "hr",
-        "table": "payroll",
-        "columns": null,
-        "privileges": [
-          "SELECT"
-        ],
-        "principal": {
-          "type": "user",
-          "name": "auditor@company.com"
-        },
-        "tag_names": [
-          "SOX",
-          "PCI_DSS",
-          "FINANCIAL"
-        ],
-        "delegateAdmin": false,
-        "enabled": true,
-        "status": "approved"
-      }
+  "identityMap": {},
+  "generatedSQL": "ALTER TABLE `main`.`finance`.`accounts`\n  ALTER COLUMN `account_balance` SET TAGS ('FINANCIAL' = 'true', 'classification' = 'confidential', 'sox_applicable' = 'true', 'SOX' = 'true', 'regulation' = 'Sarbanes-Oxley', 'audit_required' = 'true');\n\nALTER TABLE `main`.`finance`.`transactions`\n  ALTER COLUMN `credit_card` SET TAGS ('PCI_DSS' = 'true', 'regulation' = 'Payment Card Industry', 'encryption_required' = 'true', 'SENSITIVE' = 'true', 'classification' = 'restricted');\n\nALTER TABLE `main`.`customer_360`.`customers`\n  ALTER COLUMN `email` SET TAGS ('PII' = 'true', 'classification' = 'restricted', 'gdpr_applicable' = 'true');\n\nALTER TABLE `main`.`customer_360`.`customers_eu`\n  ALTER COLUMN `email` SET TAGS ('PII' = 'true', 'classification' = 'restricted', 'gdpr_applicable' = 'true', 'PII_EU' = 'true', 'geography' = 'EU');\n\nALTER TABLE `main`.`hr`.`payroll`\n  ALTER COLUMN `salary` SET TAGS ('FINANCIAL' = 'true', 'classification' = 'restricted', 'sox_applicable' = 'true', 'SENSITIVE' = 'true', 'encryption_required' = 'true');\n\n-- Tag-based grant (tags: PII, PII_EU, FINANCIAL, SENSITIVE)\nGRANT SELECT ON TABLE `main`.`customer_360`.`customers` TO `data_protection_officers`;\nGRANT MODIFY ON TABLE `main`.`customer_360`.`customers` TO `data_protection_officers`;\n\n-- Tag-based grant (tags: PII, PII_EU, FINANCIAL, SENSITIVE)\nGRANT SELECT ON TABLE `main`.`customer_360`.`customers` TO `privacy_team`;\nGRANT MODIFY ON TABLE `main`.`customer_360`.`customers` TO `privacy_team`;\n\n-- Tag-based grant (tags: PII, PII_EU, FINANCIAL, SENSITIVE)\nGRANT SELECT ON TABLE `main`.`customer_360`.`customers` TO `dpo@company.com`;\nGRANT MODIFY ON TABLE `main`.`customer_360`.`customers` TO `dpo@company.com`;\n\n-- Tag-based grant (tags: PII, PII_EU, FINANCIAL, SENSITIVE)\nGRANT SELECT ON TABLE `main`.`customer_360`.`customers_eu` TO `data_protection_officers`;\nGRANT MODIFY ON TABLE `main`.`customer_360`.`customers_eu` TO `data_protection_officers`;\n\n-- Tag-based grant (tags: PII, PII_EU, FINANCIAL, SENSITIVE)\nGRANT SELECT ON TABLE `main`.`customer_360`.`customers_eu` TO `privacy_team`;\nGRANT MODIFY ON TABLE `main`.`customer_360`.`customers_eu` TO `privacy_team`;\n\n-- Tag-based grant (tags: PII, PII_EU, FINANCIAL, SENSITIVE)\nGRANT SELECT ON TABLE `main`.`customer_360`.`customers_eu` TO `dpo@company.com`;\nGRANT MODIFY ON TABLE `main`.`customer_360`.`customers_eu` TO `dpo@company.com`;\n\n-- Tag-based grant (tags: PII, PII_EU, FINANCIAL, SENSITIVE)\nGRANT SELECT ON TABLE `main`.`finance`.`accounts` TO `data_protection_officers`;\nGRANT MODIFY ON TABLE `main`.`finance`.`accounts` TO `data_protection_officers`;\n\n-- Tag-based grant (tags: PII, PII_EU, FINANCIAL, SENSITIVE)\nGRANT SELECT ON TABLE `main`.`finance`.`accounts` TO `privacy_team`;\nGRANT MODIFY ON TABLE `main`.`finance`.`accounts` TO `privacy_team`;\n\n-- Tag-based grant (tags: PII, PII_EU, FINANCIAL, SENSITIVE)\nGRANT SELECT ON TABLE `main`.`finance`.`accounts` TO `dpo@company.com`;\nGRANT MODIFY ON TABLE `main`.`finance`.`accounts` TO `dpo@company.com`;\n\n-- Tag-based grant (tags: PII, PII_EU, FINANCIAL, SENSITIVE)\nGRANT SELECT ON TABLE `main`.`hr`.`payroll` TO `data_protection_officers`;\nGRANT MODIFY ON TABLE `main`.`hr`.`payroll` TO `data_protection_officers`;\n\n-- Tag-based grant (tags: PII, PII_EU, FINANCIAL, SENSITIVE)\nGRANT SELECT ON TABLE `main`.`hr`.`payroll` TO `privacy_team`;\nGRANT MODIFY ON TABLE `main`.`hr`.`payroll` TO `privacy_team`;\n\n-- Tag-based grant (tags: PII, PII_EU, FINANCIAL, SENSITIVE)\nGRANT SELECT ON TABLE `main`.`hr`.`payroll` TO `dpo@company.com`;\nGRANT MODIFY ON TABLE `main`.`hr`.`payroll` TO `dpo@company.com`;\n\n-- Tag-based grant (tags: PII, PII_EU, FINANCIAL, SENSITIVE)\nGRANT SELECT ON TABLE `main`.`finance`.`transactions` TO `data_protection_officers`;\nGRANT MODIFY ON TABLE `main`.`finance`.`transactions` TO `data_protection_officers`;\n\n-- Tag-based grant (tags: PII, PII_EU, FINANCIAL, SENSITIVE)\nGRANT SELECT ON TABLE `main`.`finance`.`transactions` TO `privacy_team`;\nGRANT MODIFY ON TABLE `main`.`finance`.`transactions` TO `privacy_team`;\n\n-- Tag-based grant (tags: PII, PII_EU, FINANCIAL, SENSITIVE)\nGRANT SELECT ON TABLE `main`.`finance`.`transactions` TO `dpo@company.com`;\nGRANT MODIFY ON TABLE `main`.`finance`.`transactions` TO `dpo@company.com`;\n\n-- Row Filter for: marketing_team\n-- Original expression: consent_given = TRUE AND data_retention_date > CURRENT_DATE()\n\nCREATE OR REPLACE FUNCTION `main`.`customer_360`.rf_customers_marketing_team(consent_given STRING, data_retention_date STRING)\nRETURNS BOOLEAN\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('marketing_team'),\n  consent_given = TRUE AND data_retention_date > CURRENT_DATE(),\n  TRUE  -- Allow access for principals not matching the condition\n);\n\nALTER TABLE `main`.`customer_360`.`customers`\nSET ROW FILTER `main`.`customer_360`.rf_customers_marketing_team ON (consent_given, data_retention_date);\n\n-- Row Filter for: marketing_team\n-- Original expression: consent_given = TRUE AND data_retention_date > CURRENT_DATE()\n\nCREATE OR REPLACE FUNCTION `main`.`customer_360`.rf_customers_eu_marketing_team(consent_given STRING, data_retention_date STRING)\nRETURNS BOOLEAN\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('marketing_team'),\n  consent_given = TRUE AND data_retention_date > CURRENT_DATE(),\n  TRUE  -- Allow access for principals not matching the condition\n);\n\nALTER TABLE `main`.`customer_360`.`customers_eu`\nSET ROW FILTER `main`.`customer_360`.rf_customers_eu_marketing_team ON (consent_given, data_retention_date);\n\n-- Row Filter for: marketing_team\n-- Original expression: consent_given = TRUE AND data_retention_date > CURRENT_DATE()\n\nCREATE OR REPLACE FUNCTION `main`.`finance`.rf_accounts_marketing_team(consent_given STRING, data_retention_date STRING)\nRETURNS BOOLEAN\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('marketing_team'),\n  consent_given = TRUE AND data_retention_date > CURRENT_DATE(),\n  TRUE  -- Allow access for principals not matching the condition\n);\n\nALTER TABLE `main`.`finance`.`accounts`\nSET ROW FILTER `main`.`finance`.rf_accounts_marketing_team ON (consent_given, data_retention_date);\n\n-- Row Filter for: marketing_team\n-- Original expression: consent_given = TRUE AND data_retention_date > CURRENT_DATE()\n\nCREATE OR REPLACE FUNCTION `main`.`hr`.rf_payroll_marketing_team(consent_given STRING, data_retention_date STRING)\nRETURNS BOOLEAN\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('marketing_team'),\n  consent_given = TRUE AND data_retention_date > CURRENT_DATE(),\n  TRUE  -- Allow access for principals not matching the condition\n);\n\nALTER TABLE `main`.`hr`.`payroll`\nSET ROW FILTER `main`.`hr`.rf_payroll_marketing_team ON (consent_given, data_retention_date);\n\n-- Row Filter for: marketing_team\n-- Original expression: consent_given = TRUE AND data_retention_date > CURRENT_DATE()\n\nCREATE OR REPLACE FUNCTION `main`.`finance`.rf_transactions_marketing_team(consent_given STRING, data_retention_date STRING)\nRETURNS BOOLEAN\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('marketing_team'),\n  consent_given = TRUE AND data_retention_date > CURRENT_DATE(),\n  TRUE  -- Allow access for principals not matching the condition\n);\n\nALTER TABLE `main`.`finance`.`transactions`\nSET ROW FILTER `main`.`finance`.rf_transactions_marketing_team ON (consent_given, data_retention_date);\n\n-- Column Mask: SHA-256 hash for analytics_team\nCREATE OR REPLACE FUNCTION `main`.`customer_360`.mask_customers_email_analytics_team(val STRING)\nRETURNS STRING\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('analytics_team'),\n  SHA2(val, 256),\n  val\n);\n\nALTER TABLE `main`.`customer_360`.`customers`\nALTER COLUMN email SET MASK `main`.`customer_360`.mask_customers_email_analytics_team;\n\n-- Column Mask: SHA-256 hash for analytics_team\nCREATE OR REPLACE FUNCTION `main`.`customer_360`.mask_customers_eu_email_analytics_team(val STRING)\nRETURNS STRING\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('analytics_team'),\n  SHA2(val, 256),\n  val\n);\n\nALTER TABLE `main`.`customer_360`.`customers_eu`\nALTER COLUMN email SET MASK `main`.`customer_360`.mask_customers_eu_email_analytics_team;\n\n-- Column Mask: SHA-256 hash for analytics_team\nCREATE OR REPLACE FUNCTION `main`.`finance`.mask_accounts_account_balance_analytics_team(val STRING)\nRETURNS STRING\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('analytics_team'),\n  SHA2(val, 256),\n  val\n);\n\nALTER TABLE `main`.`finance`.`accounts`\nALTER COLUMN account_balance SET MASK `main`.`finance`.mask_accounts_account_balance_analytics_team;\n\n-- Column Mask: SHA-256 hash for analytics_team\nCREATE OR REPLACE FUNCTION `main`.`hr`.mask_payroll_salary_analytics_team(val STRING)\nRETURNS STRING\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('analytics_team'),\n  SHA2(val, 256),\n  val\n);\n\nALTER TABLE `main`.`hr`.`payroll`\nALTER COLUMN salary SET MASK `main`.`hr`.mask_payroll_salary_analytics_team;\n\n-- Column Mask: SHA-256 hash for analytics_team\nCREATE OR REPLACE FUNCTION `main`.`finance`.mask_transactions_credit_card_analytics_team(val STRING)\nRETURNS STRING\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('analytics_team'),\n  SHA2(val, 256),\n  val\n);\n\nALTER TABLE `main`.`finance`.`transactions`\nALTER COLUMN credit_card SET MASK `main`.`finance`.mask_transactions_credit_card_analytics_team;\n\n-- Tag-based grant (tags: SOX, PCI_DSS, FINANCIAL)\nGRANT SELECT ON TABLE `main`.`finance`.`accounts` TO `audit_team`;\n\n-- Tag-based grant (tags: SOX, PCI_DSS, FINANCIAL)\nGRANT SELECT ON TABLE `main`.`finance`.`accounts` TO `compliance_team`;\n\n-- Tag-based grant (tags: SOX, PCI_DSS, FINANCIAL)\nGRANT SELECT ON TABLE `main`.`finance`.`accounts` TO `auditor@company.com`;\n\n-- Tag-based grant (tags: SOX, PCI_DSS, FINANCIAL)\nGRANT SELECT ON TABLE `main`.`finance`.`transactions` TO `audit_team`;\n\n-- Tag-based grant (tags: SOX, PCI_DSS, FINANCIAL)\nGRANT SELECT ON TABLE `main`.`finance`.`transactions` TO `compliance_team`;\n\n-- Tag-based grant (tags: SOX, PCI_DSS, FINANCIAL)\nGRANT SELECT ON TABLE `main`.`finance`.`transactions` TO `auditor@company.com`;\n\n-- Tag-based grant (tags: SOX, PCI_DSS, FINANCIAL)\nGRANT SELECT ON TABLE `main`.`hr`.`payroll` TO `audit_team`;\n\n-- Tag-based grant (tags: SOX, PCI_DSS, FINANCIAL)\nGRANT SELECT ON TABLE `main`.`hr`.`payroll` TO `compliance_team`;\n\n-- Tag-based grant (tags: SOX, PCI_DSS, FINANCIAL)\nGRANT SELECT ON TABLE `main`.`hr`.`payroll` TO `auditor@company.com`;",
+  "stats": {
+    "total": 39,
+    "grants": 0,
+    "denies": 0,
+    "rowFilters": 5,
+    "masks": 5,
+    "hdfsGrants": 0,
+    "hbaseGrants": 0,
+    "udfGrants": 0,
+    "tagSets": 5,
+    "tagGrants": 24,
+    "tagPlaceholders": 0,
+    "approved": 0,
+    "needsReview": 10,
+    "pending": 29,
+    "rejected": 0,
+    "disabled": 0,
+    "schemaCount": 3,
+    "principalCount": 8,
+    "schemas": [
+      "customer_360",
+      "finance",
+      "hr"
     ],
-    "warnings": [
-      {
-        "policyId": 304,
-        "policyName": "gdpr_compliance_policy",
-        "category": "conditions",
-        "severity": "warning",
-        "message": "Policy \"gdpr_compliance_policy\" has conditions [ip-range] with no UC equivalent \u2014 grants will apply unconditionally",
-        "recommendation": "IP-range, time-based, and custom conditions cannot be enforced in UC. Apply equivalent restrictions at the network or application layer."
-      }
+    "principals": [
+      "analytics_team",
+      "audit_team",
+      "auditor@company.com",
+      "compliance_team",
+      "data_protection_officers",
+      "dpo@company.com",
+      "marketing_team",
+      "privacy_team"
     ],
-    "identities": [
-      {
-        "type": "group",
-        "name": "analytics_team"
-      },
-      {
-        "type": "group",
-        "name": "audit_team"
-      },
-      {
-        "type": "group",
-        "name": "compliance_team"
-      },
-      {
-        "type": "group",
-        "name": "data_protection_officers"
-      },
-      {
-        "type": "group",
-        "name": "data_science"
-      },
-      {
-        "type": "group",
-        "name": "marketing_team"
-      },
-      {
-        "type": "group",
-        "name": "privacy_team"
-      },
-      {
-        "type": "group",
-        "name": "sales_team"
-      },
-      {
-        "type": "user",
-        "name": "auditor@company.com"
-      },
-      {
-        "type": "user",
-        "name": "dpo@company.com"
-      }
-    ],
-    "kerberosIssues": [
-      {
-        "policyId": 304,
-        "policyName": "gdpr_compliance_policy",
-        "principal": "dpo@company.com",
-        "type": "kerberos_principal",
-        "severity": "warning",
-        "message": "\"dpo@company.com\" looks like a Kerberos principal \u2014 needs mapping to Databricks service principal or managed identity",
-        "recommendation": "Map to a Databricks user via SCIM/IdP integration. Remove the Kerberos realm suffix."
-      },
-      {
-        "policyId": 305,
-        "policyName": "financial_regulatory_policy",
-        "principal": "auditor@company.com",
-        "type": "kerberos_principal",
-        "severity": "warning",
-        "message": "\"auditor@company.com\" looks like a Kerberos principal \u2014 needs mapping to Databricks service principal or managed identity",
-        "recommendation": "Map to a Databricks user via SCIM/IdP integration. Remove the Kerberos realm suffix."
-      }
-    ],
-    "serviceName": "tag_prod",
-    "serviceType": "hive",
-    "clusterName": "unknown",
-    "totalRangerPolicies": 2
+    "notTranslatable": 0
   }
 }

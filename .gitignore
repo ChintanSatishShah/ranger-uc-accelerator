@@ -41,6 +41,7 @@ htmlcov/
 # Project I/O — sample files are tracked; user-generated files (user_ prefix) are ignored
 data/input/user_*
 data/output/user_*
+data/output_sql/user_*
 
 # IDEs and editors
 .vscode/
@@ -61,6 +62,9 @@ local_settings.py
 # Logs
 *.log
 logs/
+
+# Development / debugging scripts
+check_sql.py
 
 # Misc
 __pycache__/

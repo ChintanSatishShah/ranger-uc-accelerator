@@ -3,7 +3,7 @@ from __future__ import annotations
 
 import streamlit as st
 
-from lib.ranger_parser import generate_uc_sql
+from lib.ranger_parser import generate_uc_sql, is_not_translatable
 from lib.state import (
     bulk_set_status,
     init_state,
@@ -48,10 +48,11 @@ with left:
 with right:
     btn_cols = st.columns(2)
     if btn_cols[0].button("✅ Approve all valid", use_container_width=True):
-        bulk_set_status(
-            lambda p: p["type"] != "deny" and p.get("enabled", True) and p.get("status") != "rejected",
-            "approved",
-        )
+        def _is_approvable(p: dict) -> bool:
+            return (not is_not_translatable(p)
+                    and p.get("enabled", True)
+                    and p.get("status") != "rejected")
+        bulk_set_status(_is_approvable, "approved")
         st.rerun()
     if btn_cols[1].button("Generate SQL →", type="primary", use_container_width=True):
         st.switch_page("pages/3_Generate_SQL.py")

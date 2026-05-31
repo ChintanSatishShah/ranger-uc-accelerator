@@ -45,12 +45,21 @@ st.dataframe(
 # ── Critical gaps ─────────────────────────────────────────────────────
 st.header("Critical Gaps")
 
+st.info(
+    "**Non-translatable policies** — Deny policies, tag policies without `resourceTags`, and HBase `*` wildcard "
+    "grants cannot produce executable SQL. They generate advisory comment blocks only, "
+    "are excluded from the **Approve all valid** bulk action, and are not counted in the "
+    "**Migration Readiness** score on the Gap Analysis page.",
+    icon="ℹ️",
+)
+
 with st.expander("🔴 Deny Policies — No equivalent in Unity Catalog", expanded=True):
     st.markdown(
         """
 Unity Catalog uses an **additive (allowlist) model**. There is no `DENY` statement.
 
-**What this tool does:** emits comment-only blocks explaining the deny; does not generate executable SQL.
+**What this tool does:** emits advisory comment blocks explaining the deny; does not generate executable SQL.
+Deny items cannot be bulk-approved and do not count toward the readiness score.
 
 **What you must do manually:**
 - Restructure data into separate schemas where the principal should not have access
@@ -104,7 +113,7 @@ This works when:
 with st.expander("🟡 Column Mask Types — full coverage with review required"):
     st.markdown(
         """
-All Ranger mask types are now translated. The current mapping:
+All Ranger mask types are translated. The current mapping:
 
 | Ranger type | Status | UC function body |
 |---|---|---|
@@ -113,13 +122,21 @@ All Ranger mask types are now translated. The current mapping:
 | MASK_SHOW_FIRST_4 | ✅ Supported | `CONCAT(LEFT(val, 4), '***')` |
 | MASK_HASH | ✅ Supported | `SHA2(val, 256)` |
 | MASK_NULL | ✅ Supported | Returns `NULL` |
-| MASK_NONE | ✅ Supported | Comment only — no masking applied |
-| MASK_DATE_SHOW_YEAR | ✅ Supported | `MAKE_DATE(YEAR(val), 1, 1)` — column must be DATE type |
-| Custom `valueExpr` | ✅ Supported | Expression used verbatim — **review before executing** |
+| MASK_NONE | ✅ Supported | `val` — no masking for that principal |
+| MASK_DATE_SHOW_YEAR | ✅ Supported | `CAST(MAKE_DATE(YEAR(TRY_CAST(val AS DATE)), 1, 1) AS STRING)` |
+| Custom `valueExpr` | ✅ Auto-adapted — **review before executing** | See below |
+
+**Custom `valueExpr` auto-adaptation:**
+The tool attempts two automatic fixes before using the expression:
+1. `CAST('<non-numeric-literal>' AS DECIMAL/INT/…)` → `NULL` (invalid literal would fail at parse time)
+2. Bare column reference matching the masked column → `val` (the function parameter)
+
+If the expression references **other columns** (cross-column references), UC mask functions cannot resolve
+them (each function only receives `val` — the current column's value). Those branches are replaced with
+`'***REDACTED***'` and marked `⛔ BRANCH OMITTED` with an ACTION REQUIRED advisory. Rewrite them
+manually using UC-native expressions (`IS_ACCOUNT_GROUP_MEMBER()`, `current_user()`, etc.).
 
 **Action required:** test every generated mask function against sample data before applying to production.
-Custom `valueExpr` expressions may reference Hive UDFs or Ranger request-context attributes that do not
-exist in Databricks — validate each one.
         """
     )
 
@@ -138,16 +155,62 @@ Unity Catalog does not have a delegated-admin concept at the policy level.
         """
     )
 
-with st.expander("🟡 Wildcard Table Policies — scope expansion"):
+with st.expander("🟡 Wildcard Table Policies — SELECT/MODIFY via scripted loop"):
     st.markdown(
         """
-Ranger policies targeting `table: *` (all tables in a database) translate to **schema-level grants**
-in Unity Catalog. This means:
-- The grant applies to **all current and future tables** in the schema, not just tables that existed at migration time
-- Ranger wildcard grants were historically scoped to existing tables; UC schema grants are forward-looking
+Ranger policies targeting `table: *` (all tables in a database) must be handled carefully in UC:
+
+- **Schema-level privileges** (CREATE TABLE, DROP, ALL PRIVILEGES, USE SCHEMA, etc.) are granted directly on the schema ✅
+- **`SELECT` and `MODIFY`** cannot be granted at schema level in UC — they are table-level only.
+  The tool generates a `BEGIN...END FOR` loop over `information_schema.tables`:
+
+```sql
+BEGIN
+  FOR tbl AS (
+    SELECT table_name FROM `main`.information_schema.tables
+    WHERE table_schema = 'sales'
+      AND table_type IN ('BASE TABLE', 'EXTERNAL', 'MANAGED')
+  ) DO
+    EXECUTE IMMEDIATE format(
+      'GRANT SELECT ON TABLE `main`.`sales`.`%s` TO `analyst_group`',
+      tbl.table_name
+    );
+  END FOR;
+END;
+```
+
+**Requirements:**
+- Databricks Runtime **14.0+** or a SQL Warehouse with scripting enabled
+- The principal executing this script must have USAGE on the catalog and schema
+
+**Important limitation:**
+Tables created **after** this script runs are NOT automatically covered.
+Re-run the loop section or add explicit per-table grants for new tables.
 
 **Action required:** review wildcard grants in the Review Policies page and consider replacing with
-explicit per-table grants for sensitive schemas.
+explicit per-table grants for sensitive schemas where forward-scope expansion is a concern.
+        """
+    )
+
+with st.expander("🟡 ALTER Privilege — mapped to ALL PRIVILEGES"):
+    st.markdown(
+        """
+Ranger's `alter` access type (used for DDL operations: ADD COLUMN, RENAME, etc.) has **no direct
+equivalent in Unity Catalog**. UC structural changes require **object ownership**, not a specific
+GRANT statement.
+
+**What this tool does:** maps `alter` → `ALL PRIVILEGES` with an advisory comment:
+```sql
+-- ⚠ ALTER privilege has no direct equivalent in Unity Catalog.
+-- Converted to ALL PRIVILEGES (closest available substitute for DDL access).
+-- In UC, table/schema structural changes (ADD COLUMN, RENAME, etc.) require ownership.
+-- Review: consider assigning object ownership instead of granting ALL PRIVILEGES.
+GRANT ALL PRIVILEGES ON TABLE `main`.`hr`.`employees` TO `schema_admin_group`;
+```
+
+**Action required:** for each generated `ALL PRIVILEGES` grant that originated from an `alter` mapping,
+evaluate whether granting ownership (`ALTER TABLE ... SET OWNER TO …`) is more appropriate than
+granting `ALL PRIVILEGES` to a group.
         """
     )
 
@@ -274,8 +337,12 @@ HBase table policies are translated to UC table or schema grants, assuming HBase
 (or will be) migrated to Delta tables:
 - HBase namespace (`namespace:table`) → UC `catalog.namespace.table`
 - Wildcard (`namespace:*`) → schema-level grant on `catalog.namespace`
-- Full wildcard (`*`) → cannot be translated automatically (emits a comment)
+- Full wildcard (`*`) → **non-translatable** — advisory comment only; stays at Needs Review, cannot be bulk-approved, excluded from readiness score
 - `read` → `SELECT`, `write` → `MODIFY`, `create` → `CREATE`, `admin` → `ALL PRIVILEGES`
+
+**What you must do manually for `*` wildcards:**
+- Identify all namespaces/schemas that the principal needs access to
+- Grant each schema explicitly in UC after migration
 
 **Limitation:** HBase **column families** have no direct UC equivalent. The tool notes them in a
 SQL comment and falls back to a table-level grant. If column-family isolation is critical,
@@ -325,11 +392,12 @@ Tag-based policies are translated in two parts:
 
 **Part 2 — GRANT statements** (tag access policies):
 - When `resourceTags` is present: grants are resolved to the specific tagged tables/columns ✅
-- When `resourceTags` is absent: placeholder comment emitted — table names unknown ⚠️
+- When `resourceTags` is absent: `tag_placeholder` items are emitted — advisory comment only ⚠️
 
 **Row filters and column masks on tag policies** are resolved using the same `resourceTags` mapping.
 
 **Limitations:**
+- `tag_placeholder` items (no `resourceTags`) are **non-translatable** — they stay at Needs Review, cannot be bulk-approved, and are excluded from the readiness score. Re-export with `resourceTags` to resolve them.
 - `allowExceptions` on tag policies are not translated
 - Request-context conditions (`ip-range`, `user-zone`) in tag policy `conditions[]` are noted in a comment but not translated — UC has no equivalent condition matching
 - Atlas-native tag inheritance (child resources inheriting parent tags) is not resolved — only explicit `resourceTags` entries are used
@@ -344,11 +412,14 @@ st.markdown(
 1. **Schemas and catalogs must exist** — the generated script does not create them.
 2. **Test row filters and masks** against sample queries before applying to production tables.
 3. **Verify principal names** exist in your Databricks account (SCIM sync complete, service principals created).
-4. **Review deny comment blocks** — these require architectural decisions before the gap can be closed.
+4. **Review advisory comment blocks** — deny policies, tag placeholders, and HBase `*` wildcards generate comment-only advisories that require manual remediation before the gap can be closed.
 5. **Register UDFs in UC** before executing `GRANT EXECUTE ON FUNCTION` statements — the grant will fail if the function does not exist.
 6. **Replace External Location placeholders** (`<ext_loc_...>`) in HDFS and URL grants with real location names.
 7. **Check for UDF dependencies** in row filter expressions — migrate any Hive UDFs to Databricks first.
 8. **Review Gap Analysis warnings** for `isDenyAllElse`, `validitySchedules`, and `conditions` — these require manual remediation.
-9. **Apply in a dev/staging environment** first; the Deploy page provides an execution checklist.
+9. **`BEGIN...END FOR` loop sections** require Databricks Runtime 14.0+ or a SQL Warehouse with scripting enabled. These sections appear when Ranger had `table: *` (all-tables wildcard) and `SELECT` or `MODIFY` were among the privileges. Run them from a Databricks notebook or SQL Warehouse — the Databricks CLI's `sql execute` command also works.
+10. **Re-run wildcard table loops** after adding new tables to a schema — the loop only grants to tables present at execution time.
+11. **Review `⛔ BRANCH OMITTED` advisories** in custom column mask functions — these mark cross-column expressions that could not be auto-adapted. The branch uses `'***REDACTED***'` as a conservative fallback until you rewrite it.
+12. **Apply in a dev/staging environment** first; the Deploy page provides an execution checklist.
 """
 )

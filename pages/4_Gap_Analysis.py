@@ -6,6 +6,7 @@ from datetime import datetime
 import pandas as pd
 import streamlit as st
 
+from lib.ranger_parser import is_not_translatable
 from lib.state import gaps, init_state, render_sidebar_summary, require_policies, stats
 
 init_state()
@@ -26,11 +27,19 @@ warning_count = sum(1 for g in all_gaps if g["severity"] == "warning")
 info_count = sum(1 for g in all_gaps if g["severity"] == "info")
 total_issues = sum(g["count"] for g in all_gaps)
 
-# Readiness score
+# Readiness score — exclude items that cannot produce executable SQL
 total = s["total"]
-denies = s["denies"]
-readiness_base = ((total - denies) / total * 100) if total > 0 else 0
-readiness = max(0, round(readiness_base - critical_count * 10 - warning_count * 3))
+not_translatable = s.get("notTranslatable", s["denies"])
+translatable     = total - not_translatable
+readiness_base   = (translatable / total * 100) if total > 0 else 0
+critical_penalty = critical_count * 10
+warning_penalty  = warning_count * 3
+readiness        = max(0, round(readiness_base - critical_penalty - warning_penalty))
+
+# Per-type breakdown of non-translatable items
+nt_deny  = sum(1 for p in items if p.get("type") == "deny")
+nt_tag   = sum(1 for p in items if p.get("type") == "tag_placeholder")
+nt_hbase = sum(1 for p in items if is_not_translatable(p) and p.get("type") == "hbase_grant")
 
 # ── Header ────────────────────────────────────────────────────────────
 left, right = st.columns([3, 2])
@@ -55,6 +64,44 @@ c4.metric("ℹ️ Info", info_count,
 
 st.progress(readiness / 100)
 
+# ── Readiness score breakdown ─────────────────────────────────────────
+if total > 0:
+    rows = []
+    rows.append({
+        "Factor": f"✅ Auto-translatable items ({translatable} of {total})",
+        "Impact": f"+{round(readiness_base)}%",
+        "Detail": "Grants, row filters, masks, HDFS, HBase (non-wildcard), UDF, tag grants",
+    })
+    if not_translatable:
+        parts = []
+        if nt_deny:  parts.append(f"deny ×{nt_deny}")
+        if nt_tag:   parts.append(f"tag placeholder ×{nt_tag}")
+        if nt_hbase: parts.append(f"HBase wildcard ×{nt_hbase}")
+        rows.append({
+            "Factor": f"⛔ Non-translatable items ({not_translatable} of {total})",
+            "Impact": f"−{round(not_translatable / total * 100)}%",
+            "Detail": ", ".join(parts) + " — advisory comment only; no executable SQL",
+        })
+    if critical_penalty:
+        rows.append({
+            "Factor": f"🛑 Critical gap penalty ({critical_count} issue{'s' if critical_count != 1 else ''})",
+            "Impact": f"−{critical_penalty} pts",
+            "Detail": f"{critical_count} × 10 pts — review critical gaps below",
+        })
+    if warning_penalty:
+        rows.append({
+            "Factor": f"⚠️ Warning penalty ({warning_count} warning{'s' if warning_count != 1 else ''})",
+            "Impact": f"−{warning_penalty} pts",
+            "Detail": f"{warning_count} × 3 pts — review warnings below",
+        })
+    rows.append({
+        "Factor": "📊 Final Migration Readiness",
+        "Impact": f"{readiness}%",
+        "Detail": "Resolve non-translatable items and gaps above to improve this score",
+    })
+    with st.expander("📊 How is this score calculated?", expanded=(not_translatable > 0 or critical_count > 0)):
+        st.dataframe(pd.DataFrame(rows), use_container_width=True, hide_index=True)
+
 # ── Export report ─────────────────────────────────────────────────────
 def _build_report() -> str:
     lines: list[str] = []
@@ -67,11 +114,17 @@ def _build_report() -> str:
     lines.append("")
     lines.append("═══ EXECUTIVE SUMMARY ═══════════════════════════════════════════")
     lines.append("")
-    lines.append(f"Total Ranger Policies: {parsed['totalRangerPolicies']}")
-    lines.append(f"Parsed Policy Items:   {s['total']}")
-    lines.append(f"Migration Readiness:   {readiness}%")
-    lines.append(f"Critical Issues:       {critical_count}")
-    lines.append(f"Warnings:              {warning_count}")
+    lines.append(f"Total Ranger Policies:      {parsed['totalRangerPolicies']}")
+    lines.append(f"Parsed Policy Items:        {s['total']}")
+    lines.append(f"  Auto-translatable:        {translatable}")
+    lines.append(f"  Non-translatable:         {not_translatable}"
+                 + (f"  (deny={nt_deny}, tag_placeholder={nt_tag}, hbase_wildcard={nt_hbase})" if not_translatable else ""))
+    lines.append(f"Migration Readiness:        {readiness}%")
+    lines.append(f"  Base (translatable only): {round(readiness_base)}%")
+    if critical_penalty: lines.append(f"  Critical gap penalty:     -{critical_penalty} pts ({critical_count} issues × 10)")
+    if warning_penalty:  lines.append(f"  Warning penalty:          -{warning_penalty} pts ({warning_count} warnings × 3)")
+    lines.append(f"Critical Issues:            {critical_count}")
+    lines.append(f"Warnings:                   {warning_count}")
     lines.append(f"Total Items Requiring Attention: {total_issues}")
     lines.append("")
     for g in all_gaps:

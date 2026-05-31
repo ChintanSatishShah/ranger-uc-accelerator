@@ -1,46 +1,9 @@
 {
-  "metadata": {
-    "service_name": "hdfsdev",
-    "source_file": "test_policyengine_hdfs.json",
-    "archived_at": "2026-05-21",
-    "total_items": 18,
-    "stats": {
-      "total": 18,
-      "grants": 0,
-      "denies": 0,
-      "rowFilters": 0,
-      "masks": 0,
-      "hdfsGrants": 18,
-      "hbaseGrants": 0,
-      "udfGrants": 0,
-      "tagSets": 0,
-      "tagGrants": 0,
-      "tagPlaceholders": 0,
-      "approved": 18,
-      "needsReview": 0,
-      "pending": 0,
-      "rejected": 0,
-      "disabled": 0,
-      "schemaCount": 0,
-      "principalCount": 12,
-      "schemas": [],
-      "principals": [
-        "finance",
-        "non-user1",
-        "non-user2",
-        "non-user3",
-        "non-user5",
-        "non-user6",
-        "non-user7",
-        "non-user8",
-        "public",
-        "user1",
-        "user2",
-        "user3"
-      ]
-    }
-  },
-  "policy_items": [
+  "serviceName": "hdfsdev",
+  "catalogName": "main",
+  "clusterName": "unknown",
+  "totalRangerPolicies": 9,
+  "policyItems": [
     {
       "id": "10-hdfs-user1-1",
       "rangerPolicyId": 10,
@@ -60,7 +23,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "10-hdfs-user2-2",
@@ -81,7 +44,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "10-hdfs-user3-3",
@@ -102,7 +65,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "11-hdfs-public-1",
@@ -123,7 +86,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "20-hdfs-public-1",
@@ -145,7 +108,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "20-hdfs-user2-2",
@@ -167,7 +130,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "20-hdfs-non-user1-3",
@@ -189,7 +152,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "20-hdfs-non-user2-4",
@@ -211,7 +174,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "20-hdfs-non-user3-5",
@@ -233,7 +196,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "30-hdfs-public-1",
@@ -254,7 +217,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "30-hdfs-non-user5-2",
@@ -275,7 +238,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "30-hdfs-non-user6-3",
@@ -296,7 +259,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "30-hdfs-non-user7-4",
@@ -317,7 +280,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "30-hdfs-non-user8-5",
@@ -338,7 +301,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "1-hdfs-public-1",
@@ -357,7 +320,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "2-hdfs-public-1",
@@ -378,7 +341,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "3-hdfs-finance-1",
@@ -399,7 +362,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     },
     {
       "id": "4-hdfs-public-1",
@@ -420,523 +383,45 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "approved"
+      "status": "pending"
     }
   ],
-  "identity_map": {},
-  "generated_sql": "-- \u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n-- \u2551  Unity Catalog Migration Script                          \u2551\n-- \u2551  Generated by Ranger \u2192 UC Migrator                       \u2551\n-- \u2551  Source: hdfsdev\n-- \u2551  Target Catalog: main\n-- \u2551  Date: 2026-05-21\n-- \u2551  Policies: 18 of 18\n-- \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: allow-read-to-user1,user3 /test/restricted/ (Ranger ID: 10)\n-- Type: HDFS_GRANT | Principal: user1\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- HDFS path: /test/restricted/ (recursive)\n-- \u26a0 Create a UC External Location covering this path first,\n--   then replace the placeholder below with the actual location name.\nGRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_test_restricted>` TO `user1`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: allow-read-to-user1,user3 /test/restricted/ (Ranger ID: 10)\n-- Type: HDFS_GRANT | Principal: user2\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- HDFS path: /test/restricted/ (recursive)\n-- \u26a0 Create a UC External Location covering this path first,\n--   then replace the placeholder below with the actual location name.\nGRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_test_restricted>` TO `user2`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: allow-read-to-user1,user3 /test/restricted/ (Ranger ID: 10)\n-- Type: HDFS_GRANT | Principal: user3\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- HDFS path: /test/restricted/ (recursive)\n-- \u26a0 Create a UC External Location covering this path first,\n--   then replace the placeholder below with the actual location name.\nGRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_test_restricted>` TO `user3`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: allow-read-to-public /test/forbidden/ (Ranger ID: 11)\n-- Type: HDFS_GRANT | Principal: public\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- HDFS path: /test/forbidden/ (recursive)\n-- \u26a0 Create a UC External Location covering this path first,\n--   then replace the placeholder below with the actual location name.\nGRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_test_forbidden>` TO `public`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: allow-read-to-user2 /test/restricted/ (Ranger ID: 20)\n-- Type: HDFS_GRANT | Principal: public\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- HDFS path: /test/restricted/ (recursive)\n-- \u26a0 Create a UC External Location covering this path first,\n--   then replace the placeholder below with the actual location name.\nGRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_test_restricted>` TO `public`;\nGRANT WRITE FILES ON EXTERNAL LOCATION `<ext_loc_test_restricted>` TO `public`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: allow-read-to-user2 /test/restricted/ (Ranger ID: 20)\n-- Type: HDFS_GRANT | Principal: user2\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- HDFS path: /test/restricted/ (recursive)\n-- \u26a0 Create a UC External Location covering this path first,\n--   then replace the placeholder below with the actual location name.\nGRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_test_restricted>` TO `user2`;\nGRANT WRITE FILES ON EXTERNAL LOCATION `<ext_loc_test_restricted>` TO `user2`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: allow-read-to-user2 /test/restricted/ (Ranger ID: 20)\n-- Type: HDFS_GRANT | Principal: non-user1\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- HDFS path: /test/restricted/ (recursive)\n-- \u26a0 Create a UC External Location covering this path first,\n--   then replace the placeholder below with the actual location name.\nGRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_test_restricted>` TO `non-user1`;\nGRANT WRITE FILES ON EXTERNAL LOCATION `<ext_loc_test_restricted>` TO `non-user1`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: allow-read-to-user2 /test/restricted/ (Ranger ID: 20)\n-- Type: HDFS_GRANT | Principal: non-user2\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- HDFS path: /test/restricted/ (recursive)\n-- \u26a0 Create a UC External Location covering this path first,\n--   then replace the placeholder below with the actual location name.\nGRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_test_restricted>` TO `non-user2`;\nGRANT WRITE FILES ON EXTERNAL LOCATION `<ext_loc_test_restricted>` TO `non-user2`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: allow-read-to-user2 /test/restricted/ (Ranger ID: 20)\n-- Type: HDFS_GRANT | Principal: non-user3\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- HDFS path: /test/restricted/ (recursive)\n-- \u26a0 Create a UC External Location covering this path first,\n--   then replace the placeholder below with the actual location name.\nGRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_test_restricted>` TO `non-user3`;\nGRANT WRITE FILES ON EXTERNAL LOCATION `<ext_loc_test_restricted>` TO `non-user3`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: deny-read-to-user3 /test/restricted/ (Ranger ID: 30)\n-- Type: HDFS_GRANT | Principal: public\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- HDFS path: /test/restricted/ (recursive)\n-- \u26a0 Create a UC External Location covering this path first,\n--   then replace the placeholder below with the actual location name.\nGRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_test_restricted>` TO `public`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: deny-read-to-user3 /test/restricted/ (Ranger ID: 30)\n-- Type: HDFS_GRANT | Principal: non-user5\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- HDFS path: /test/restricted/ (recursive)\n-- \u26a0 Create a UC External Location covering this path first,\n--   then replace the placeholder below with the actual location name.\nGRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_test_restricted>` TO `non-user5`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: deny-read-to-user3 /test/restricted/ (Ranger ID: 30)\n-- Type: HDFS_GRANT | Principal: non-user6\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- HDFS path: /test/restricted/ (recursive)\n-- \u26a0 Create a UC External Location covering this path first,\n--   then replace the placeholder below with the actual location name.\nGRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_test_restricted>` TO `non-user6`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: deny-read-to-user3 /test/restricted/ (Ranger ID: 30)\n-- Type: HDFS_GRANT | Principal: non-user7\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- HDFS path: /test/restricted/ (recursive)\n-- \u26a0 Create a UC External Location covering this path first,\n--   then replace the placeholder below with the actual location name.\nGRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_test_restricted>` TO `non-user7`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: deny-read-to-user3 /test/restricted/ (Ranger ID: 30)\n-- Type: HDFS_GRANT | Principal: non-user8\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- HDFS path: /test/restricted/ (recursive)\n-- \u26a0 Create a UC External Location covering this path first,\n--   then replace the placeholder below with the actual location name.\nGRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_test_restricted>` TO `non-user8`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: audit-all-access under /finance/restricted/ (Ranger ID: 1)\n-- Type: HDFS_GRANT | Principal: public\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- HDFS path: /finance/restricted/ (recursive)\n-- \u26a0 Create a UC External Location covering this path first,\n--   then replace the placeholder below with the actual location name.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: allow-read-to-all under /public/ (Ranger ID: 2)\n-- Type: HDFS_GRANT | Principal: public\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- HDFS path: /public/* (recursive)\n-- \u26a0 Create a UC External Location covering this path first,\n--   then replace the placeholder below with the actual location name.\nGRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_public__>` TO `public`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: allow-read-to-finance under /finance/restricted (Ranger ID: 3)\n-- Type: HDFS_GRANT | Principal: finance\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- HDFS path: /finance/restricted (recursive)\n-- \u26a0 Create a UC External Location covering this path first,\n--   then replace the placeholder below with the actual location name.\nGRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_finance_restricted>` TO `finance`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: invalid policy with a single backslash (Ranger ID: 4)\n-- Type: HDFS_GRANT | Principal: public\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- HDFS path: \\ (recursive)\n-- \u26a0 Create a UC External Location covering this path first,\n--   then replace the placeholder below with the actual location name.\nGRANT READ FILES ON EXTERNAL LOCATION `<ext_loc__>` TO `public`;\n",
-  "gap_analysis": [
-    {
-      "category": "isDenyAllElse Policies",
-      "severity": "critical",
-      "count": 2,
-      "description": "These policies use isDenyAllElse=true in Ranger, meaning all principals not explicitly listed are denied. Unity Catalog has no equivalent \u2014 generated grants will not restrict unlisted principals.",
-      "items": [
-        {
-          "resource": "allow-read-to-user1,user3 /test/restricted/",
-          "principal": "\u2014",
-          "detail": "isDenyAllElse=true in Ranger"
-        },
-        {
-          "resource": "deny-any-to-everybody /test/forbidden/",
-          "principal": "\u2014",
-          "detail": "isDenyAllElse=true in Ranger"
-        }
-      ],
-      "remediation": "Audit all principals with access to these resources in UC. Only grant access to explicitly listed principals."
-    },
-    {
-      "category": "Policy Conditions (Not Translated)",
-      "severity": "warning",
-      "count": 2,
-      "description": "These policies include conditions (e.g. ip-range, time-of-day, custom evaluators) that restrict access in Ranger but have no UC equivalent. Generated grants apply unconditionally.",
-      "items": [
-        {
-          "resource": "deny-read-to-user3 /test/restricted/",
-          "principal": "\u2014",
-          "detail": "Policy \"deny-read-to-user3 /test/restricted/\" has conditions [ScriptConditionEvaluator] with no UC equivalent \u2014 grants will apply unconditionally"
-        },
-        {
-          "resource": "allow-read-to-finance under /finance/restricted",
-          "principal": "\u2014",
-          "detail": "Policy \"allow-read-to-finance under /finance/restricted\" has conditions [ScriptConditionEvaluator] with no UC equivalent \u2014 grants will apply unconditionally"
-        }
-      ],
-      "remediation": "Enforce IP-range and context-based restrictions at the network or application layer. Review each affected policy carefully before executing the migration SQL."
-    }
-  ],
-  "parsed_data": {
-    "results": [
-      {
-        "id": "10-hdfs-user1-1",
-        "rangerPolicyId": 10,
-        "rangerPolicyName": "allow-read-to-user1,user3 /test/restricted/",
-        "rangerPolicyDesc": "",
-        "type": "hdfs_grant",
-        "path": "/test/restricted/",
-        "isRecursive": true,
-        "schema": null,
-        "table": null,
-        "privileges": [
-          "READ FILES"
-        ],
-        "principal": {
-          "type": "user",
-          "name": "user1"
-        },
-        "delegateAdmin": false,
-        "enabled": true,
-        "status": "approved"
-      },
-      {
-        "id": "10-hdfs-user2-2",
-        "rangerPolicyId": 10,
-        "rangerPolicyName": "allow-read-to-user1,user3 /test/restricted/",
-        "rangerPolicyDesc": "",
-        "type": "hdfs_grant",
-        "path": "/test/restricted/",
-        "isRecursive": true,
-        "schema": null,
-        "table": null,
-        "privileges": [
-          "READ FILES"
-        ],
-        "principal": {
-          "type": "user",
-          "name": "user2"
-        },
-        "delegateAdmin": false,
-        "enabled": true,
-        "status": "approved"
-      },
-      {
-        "id": "10-hdfs-user3-3",
-        "rangerPolicyId": 10,
-        "rangerPolicyName": "allow-read-to-user1,user3 /test/restricted/",
-        "rangerPolicyDesc": "",
-        "type": "hdfs_grant",
-        "path": "/test/restricted/",
-        "isRecursive": true,
-        "schema": null,
-        "table": null,
-        "privileges": [
-          "READ FILES"
-        ],
-        "principal": {
-          "type": "user",
-          "name": "user3"
-        },
-        "delegateAdmin": false,
-        "enabled": true,
-        "status": "approved"
-      },
-      {
-        "id": "11-hdfs-public-1",
-        "rangerPolicyId": 11,
-        "rangerPolicyName": "allow-read-to-public /test/forbidden/",
-        "rangerPolicyDesc": "",
-        "type": "hdfs_grant",
-        "path": "/test/forbidden/",
-        "isRecursive": true,
-        "schema": null,
-        "table": null,
-        "privileges": [
-          "READ FILES"
-        ],
-        "principal": {
-          "type": "group",
-          "name": "public"
-        },
-        "delegateAdmin": false,
-        "enabled": true,
-        "status": "approved"
-      },
-      {
-        "id": "20-hdfs-public-1",
-        "rangerPolicyId": 20,
-        "rangerPolicyName": "allow-read-to-user2 /test/restricted/",
-        "rangerPolicyDesc": "",
-        "type": "hdfs_grant",
-        "path": "/test/restricted/",
-        "isRecursive": true,
-        "schema": null,
-        "table": null,
-        "privileges": [
-          "READ FILES",
-          "WRITE FILES"
-        ],
-        "principal": {
-          "type": "group",
-          "name": "public"
-        },
-        "delegateAdmin": false,
-        "enabled": true,
-        "status": "approved"
-      },
-      {
-        "id": "20-hdfs-user2-2",
-        "rangerPolicyId": 20,
-        "rangerPolicyName": "allow-read-to-user2 /test/restricted/",
-        "rangerPolicyDesc": "",
-        "type": "hdfs_grant",
-        "path": "/test/restricted/",
-        "isRecursive": true,
-        "schema": null,
-        "table": null,
-        "privileges": [
-          "READ FILES",
-          "WRITE FILES"
-        ],
-        "principal": {
-          "type": "user",
-          "name": "user2"
-        },
-        "delegateAdmin": false,
-        "enabled": true,
-        "status": "approved"
-      },
-      {
-        "id": "20-hdfs-non-user1-3",
-        "rangerPolicyId": 20,
-        "rangerPolicyName": "allow-read-to-user2 /test/restricted/",
-        "rangerPolicyDesc": "",
-        "type": "hdfs_grant",
-        "path": "/test/restricted/",
-        "isRecursive": true,
-        "schema": null,
-        "table": null,
-        "privileges": [
-          "READ FILES",
-          "WRITE FILES"
-        ],
-        "principal": {
-          "type": "user",
-          "name": "non-user1"
-        },
-        "delegateAdmin": false,
-        "enabled": true,
-        "status": "approved"
-      },
-      {
-        "id": "20-hdfs-non-user2-4",
-        "rangerPolicyId": 20,
-        "rangerPolicyName": "allow-read-to-user2 /test/restricted/",
-        "rangerPolicyDesc": "",
-        "type": "hdfs_grant",
-        "path": "/test/restricted/",
-        "isRecursive": true,
-        "schema": null,
-        "table": null,
-        "privileges": [
-          "READ FILES",
-          "WRITE FILES"
-        ],
-        "principal": {
-          "type": "user",
-          "name": "non-user2"
-        },
-        "delegateAdmin": false,
-        "enabled": true,
-        "status": "approved"
-      },
-      {
-        "id": "20-hdfs-non-user3-5",
-        "rangerPolicyId": 20,
-        "rangerPolicyName": "allow-read-to-user2 /test/restricted/",
-        "rangerPolicyDesc": "",
-        "type": "hdfs_grant",
-        "path": "/test/restricted/",
-        "isRecursive": true,
-        "schema": null,
-        "table": null,
-        "privileges": [
-          "READ FILES",
-          "WRITE FILES"
-        ],
-        "principal": {
-          "type": "user",
-          "name": "non-user3"
-        },
-        "delegateAdmin": false,
-        "enabled": true,
-        "status": "approved"
-      },
-      {
-        "id": "30-hdfs-public-1",
-        "rangerPolicyId": 30,
-        "rangerPolicyName": "deny-read-to-user3 /test/restricted/",
-        "rangerPolicyDesc": "",
-        "type": "hdfs_grant",
-        "path": "/test/restricted/",
-        "isRecursive": true,
-        "schema": null,
-        "table": null,
-        "privileges": [
-          "READ FILES"
-        ],
-        "principal": {
-          "type": "group",
-          "name": "public"
-        },
-        "delegateAdmin": false,
-        "enabled": true,
-        "status": "approved"
-      },
-      {
-        "id": "30-hdfs-non-user5-2",
-        "rangerPolicyId": 30,
-        "rangerPolicyName": "deny-read-to-user3 /test/restricted/",
-        "rangerPolicyDesc": "",
-        "type": "hdfs_grant",
-        "path": "/test/restricted/",
-        "isRecursive": true,
-        "schema": null,
-        "table": null,
-        "privileges": [
-          "READ FILES"
-        ],
-        "principal": {
-          "type": "user",
-          "name": "non-user5"
-        },
-        "delegateAdmin": false,
-        "enabled": true,
-        "status": "approved"
-      },
-      {
-        "id": "30-hdfs-non-user6-3",
-        "rangerPolicyId": 30,
-        "rangerPolicyName": "deny-read-to-user3 /test/restricted/",
-        "rangerPolicyDesc": "",
-        "type": "hdfs_grant",
-        "path": "/test/restricted/",
-        "isRecursive": true,
-        "schema": null,
-        "table": null,
-        "privileges": [
-          "READ FILES"
-        ],
-        "principal": {
-          "type": "user",
-          "name": "non-user6"
-        },
-        "delegateAdmin": false,
-        "enabled": true,
-        "status": "approved"
-      },
-      {
-        "id": "30-hdfs-non-user7-4",
-        "rangerPolicyId": 30,
-        "rangerPolicyName": "deny-read-to-user3 /test/restricted/",
-        "rangerPolicyDesc": "",
-        "type": "hdfs_grant",
-        "path": "/test/restricted/",
-        "isRecursive": true,
-        "schema": null,
-        "table": null,
-        "privileges": [
-          "READ FILES"
-        ],
-        "principal": {
-          "type": "user",
-          "name": "non-user7"
-        },
-        "delegateAdmin": false,
-        "enabled": true,
-        "status": "approved"
-      },
-      {
-        "id": "30-hdfs-non-user8-5",
-        "rangerPolicyId": 30,
-        "rangerPolicyName": "deny-read-to-user3 /test/restricted/",
-        "rangerPolicyDesc": "",
-        "type": "hdfs_grant",
-        "path": "/test/restricted/",
-        "isRecursive": true,
-        "schema": null,
-        "table": null,
-        "privileges": [
-          "READ FILES"
-        ],
-        "principal": {
-          "type": "user",
-          "name": "non-user8"
-        },
-        "delegateAdmin": false,
-        "enabled": true,
-        "status": "approved"
-      },
-      {
-        "id": "1-hdfs-public-1",
-        "rangerPolicyId": 1,
-        "rangerPolicyName": "audit-all-access under /finance/restricted/",
-        "rangerPolicyDesc": "",
-        "type": "hdfs_grant",
-        "path": "/finance/restricted/",
-        "isRecursive": true,
-        "schema": null,
-        "table": null,
-        "privileges": [],
-        "principal": {
-          "type": "group",
-          "name": "public"
-        },
-        "delegateAdmin": false,
-        "enabled": true,
-        "status": "approved"
-      },
-      {
-        "id": "2-hdfs-public-1",
-        "rangerPolicyId": 2,
-        "rangerPolicyName": "allow-read-to-all under /public/",
-        "rangerPolicyDesc": "",
-        "type": "hdfs_grant",
-        "path": "/public/*",
-        "isRecursive": true,
-        "schema": null,
-        "table": null,
-        "privileges": [
-          "READ FILES"
-        ],
-        "principal": {
-          "type": "group",
-          "name": "public"
-        },
-        "delegateAdmin": false,
-        "enabled": true,
-        "status": "approved"
-      },
-      {
-        "id": "3-hdfs-finance-1",
-        "rangerPolicyId": 3,
-        "rangerPolicyName": "allow-read-to-finance under /finance/restricted",
-        "rangerPolicyDesc": "",
-        "type": "hdfs_grant",
-        "path": "/finance/restricted",
-        "isRecursive": true,
-        "schema": null,
-        "table": null,
-        "privileges": [
-          "READ FILES"
-        ],
-        "principal": {
-          "type": "group",
-          "name": "finance"
-        },
-        "delegateAdmin": false,
-        "enabled": true,
-        "status": "approved"
-      },
-      {
-        "id": "4-hdfs-public-1",
-        "rangerPolicyId": 4,
-        "rangerPolicyName": "invalid policy with a single backslash",
-        "rangerPolicyDesc": "",
-        "type": "hdfs_grant",
-        "path": "\\",
-        "isRecursive": true,
-        "schema": null,
-        "table": null,
-        "privileges": [
-          "READ FILES"
-        ],
-        "principal": {
-          "type": "group",
-          "name": "public"
-        },
-        "delegateAdmin": false,
-        "enabled": true,
-        "status": "approved"
-      }
+  "identityMap": {},
+  "generatedSQL": "-- HDFS path: /test/restricted/ (recursive)\n-- \u26a0 Create a UC External Location covering this path first,\n--   then replace the placeholder below with the actual location name.\nGRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_test_restricted>` TO `user1@company.com`;\n\n-- HDFS path: /test/restricted/ (recursive)\n-- \u26a0 Create a UC External Location covering this path first,\n--   then replace the placeholder below with the actual location name.\nGRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_test_restricted>` TO `user2@company.com`;\n\n-- HDFS path: /test/restricted/ (recursive)\n-- \u26a0 Create a UC External Location covering this path first,\n--   then replace the placeholder below with the actual location name.\nGRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_test_restricted>` TO `user3@company.com`;\n\n-- HDFS path: /test/forbidden/ (recursive)\n-- \u26a0 Create a UC External Location covering this path first,\n--   then replace the placeholder below with the actual location name.\nGRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_test_forbidden>` TO `public`;\n\n-- HDFS path: /test/restricted/ (recursive)\n-- \u26a0 Create a UC External Location covering this path first,\n--   then replace the placeholder below with the actual location name.\nGRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_test_restricted>` TO `public`;\nGRANT WRITE FILES ON EXTERNAL LOCATION `<ext_loc_test_restricted>` TO `public`;\n\n-- HDFS path: /test/restricted/ (recursive)\n-- \u26a0 Create a UC External Location covering this path first,\n--   then replace the placeholder below with the actual location name.\nGRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_test_restricted>` TO `user2@company.com`;\nGRANT WRITE FILES ON EXTERNAL LOCATION `<ext_loc_test_restricted>` TO `user2@company.com`;\n\n-- HDFS path: /test/restricted/ (recursive)\n-- \u26a0 Create a UC External Location covering this path first,\n--   then replace the placeholder below with the actual location name.\nGRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_test_restricted>` TO `non-user1@company.com`;\nGRANT WRITE FILES ON EXTERNAL LOCATION `<ext_loc_test_restricted>` TO `non-user1@company.com`;\n\n-- HDFS path: /test/restricted/ (recursive)\n-- \u26a0 Create a UC External Location covering this path first,\n--   then replace the placeholder below with the actual location name.\nGRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_test_restricted>` TO `non-user2@company.com`;\nGRANT WRITE FILES ON EXTERNAL LOCATION `<ext_loc_test_restricted>` TO `non-user2@company.com`;\n\n-- HDFS path: /test/restricted/ (recursive)\n-- \u26a0 Create a UC External Location covering this path first,\n--   then replace the placeholder below with the actual location name.\nGRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_test_restricted>` TO `non-user3@company.com`;\nGRANT WRITE FILES ON EXTERNAL LOCATION `<ext_loc_test_restricted>` TO `non-user3@company.com`;\n\n-- HDFS path: /test/restricted/ (recursive)\n-- \u26a0 Create a UC External Location covering this path first,\n--   then replace the placeholder below with the actual location name.\nGRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_test_restricted>` TO `public`;\n\n-- HDFS path: /test/restricted/ (recursive)\n-- \u26a0 Create a UC External Location covering this path first,\n--   then replace the placeholder below with the actual location name.\nGRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_test_restricted>` TO `non-user5@company.com`;\n\n-- HDFS path: /test/restricted/ (recursive)\n-- \u26a0 Create a UC External Location covering this path first,\n--   then replace the placeholder below with the actual location name.\nGRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_test_restricted>` TO `non-user6@company.com`;\n\n-- HDFS path: /test/restricted/ (recursive)\n-- \u26a0 Create a UC External Location covering this path first,\n--   then replace the placeholder below with the actual location name.\nGRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_test_restricted>` TO `non-user7@company.com`;\n\n-- HDFS path: /test/restricted/ (recursive)\n-- \u26a0 Create a UC External Location covering this path first,\n--   then replace the placeholder below with the actual location name.\nGRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_test_restricted>` TO `non-user8@company.com`;\n\n-- HDFS path: /finance/restricted/ (recursive)\n-- \u26a0 Create a UC External Location covering this path first,\n--   then replace the placeholder below with the actual location name.\n\n-- HDFS path: /public/* (recursive)\n-- \u26a0 Create a UC External Location covering this path first,\n--   then replace the placeholder below with the actual location name.\nGRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_public__>` TO `public`;\n\n-- HDFS path: /finance/restricted (recursive)\n-- \u26a0 Create a UC External Location covering this path first,\n--   then replace the placeholder below with the actual location name.\nGRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_finance_restricted>` TO `finance`;\n\n-- HDFS path: \\ (recursive)\n-- \u26a0 Create a UC External Location covering this path first,\n--   then replace the placeholder below with the actual location name.\nGRANT READ FILES ON EXTERNAL LOCATION `<ext_loc__>` TO `public`;",
+  "stats": {
+    "total": 18,
+    "grants": 0,
+    "denies": 0,
+    "rowFilters": 0,
+    "masks": 0,
+    "hdfsGrants": 18,
+    "hbaseGrants": 0,
+    "udfGrants": 0,
+    "tagSets": 0,
+    "tagGrants": 0,
+    "tagPlaceholders": 0,
+    "approved": 0,
+    "needsReview": 0,
+    "pending": 18,
+    "rejected": 0,
+    "disabled": 0,
+    "schemaCount": 0,
+    "principalCount": 12,
+    "schemas": [],
+    "principals": [
+      "finance",
+      "non-user1",
+      "non-user2",
+      "non-user3",
+      "non-user5",
+      "non-user6",
+      "non-user7",
+      "non-user8",
+      "public",
+      "user1",
+      "user2",
+      "user3"
     ],
-    "warnings": [
-      {
-        "policyId": 10,
-        "policyName": "allow-read-to-user1,user3 /test/restricted/",
-        "category": "deny_all_else",
-        "severity": "critical",
-        "message": "Policy \"allow-read-to-user1,user3 /test/restricted/\" uses isDenyAllElse=true \u2014 all principals not explicitly listed are denied in Ranger; UC grants do not enforce this restriction",
-        "recommendation": "Audit all principals with access to this resource in UC. Ensure only explicitly listed principals receive grants."
-      },
-      {
-        "policyId": 12,
-        "policyName": "deny-any-to-everybody /test/forbidden/",
-        "category": "deny_all_else",
-        "severity": "critical",
-        "message": "Policy \"deny-any-to-everybody /test/forbidden/\" uses isDenyAllElse=true \u2014 all principals not explicitly listed are denied in Ranger; UC grants do not enforce this restriction",
-        "recommendation": "Audit all principals with access to this resource in UC. Ensure only explicitly listed principals receive grants."
-      },
-      {
-        "policyId": 30,
-        "policyName": "deny-read-to-user3 /test/restricted/",
-        "category": "conditions",
-        "severity": "warning",
-        "message": "Policy \"deny-read-to-user3 /test/restricted/\" has conditions [ScriptConditionEvaluator] with no UC equivalent \u2014 grants will apply unconditionally",
-        "recommendation": "IP-range, time-based, and custom conditions cannot be enforced in UC. Apply equivalent restrictions at the network or application layer."
-      },
-      {
-        "policyId": 3,
-        "policyName": "allow-read-to-finance under /finance/restricted",
-        "category": "conditions",
-        "severity": "warning",
-        "message": "Policy \"allow-read-to-finance under /finance/restricted\" has conditions [ScriptConditionEvaluator] with no UC equivalent \u2014 grants will apply unconditionally",
-        "recommendation": "IP-range, time-based, and custom conditions cannot be enforced in UC. Apply equivalent restrictions at the network or application layer."
-      }
-    ],
-    "identities": [
-      {
-        "type": "group",
-        "name": "finance"
-      },
-      {
-        "type": "group",
-        "name": "public"
-      },
-      {
-        "type": "user",
-        "name": "non-user1"
-      },
-      {
-        "type": "user",
-        "name": "non-user2"
-      },
-      {
-        "type": "user",
-        "name": "non-user3"
-      },
-      {
-        "type": "user",
-        "name": "non-user5"
-      },
-      {
-        "type": "user",
-        "name": "non-user6"
-      },
-      {
-        "type": "user",
-        "name": "non-user7"
-      },
-      {
-        "type": "user",
-        "name": "non-user8"
-      },
-      {
-        "type": "user",
-        "name": "user1"
-      },
-      {
-        "type": "user",
-        "name": "user2"
-      },
-      {
-        "type": "user",
-        "name": "user3"
-      }
-    ],
-    "kerberosIssues": [],
-    "serviceName": "hdfsdev",
-    "serviceType": "hdfs",
-    "clusterName": "unknown",
-    "totalRangerPolicies": 9
+    "notTranslatable": 0
   }
 }

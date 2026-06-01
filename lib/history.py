@@ -62,6 +62,7 @@ def _normalize_archive(data: dict[str, Any], filename: str = "") -> dict[str, An
         "serviceName": service_name,
         "catalogName": catalog_name,
         "clusterName": cluster_name,
+        "serviceType": data.get("serviceType", "hive"),
         "totalRangerPolicies": data.get("totalRangerPolicies", len(policy_items)),
         "results": policy_items,
         "warnings": [],

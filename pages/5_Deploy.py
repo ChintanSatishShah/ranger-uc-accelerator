@@ -212,7 +212,7 @@ with st.container(border=True):
 
 # ── Migration context ────────────────────────────────────────────────
 ctx = st.columns(4)
-ctx[0].metric("Source", parsed["serviceName"], parsed["serviceType"])
+ctx[0].metric("Source", parsed.get("serviceName", "unknown"), parsed.get("serviceType", "hive"))
 ctx[1].metric("Target", catalog, "Unity Catalog")
 ctx[2].metric("Policies", s["total"], f"{s['approved']} approved")
 ctx[3].metric("Schemas", s["schemaCount"], f"{s['principalCount']} principals")

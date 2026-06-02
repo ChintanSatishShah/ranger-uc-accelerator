@@ -1,9 +1,1082 @@
 {
-  "serviceName": "hive_prod",
-  "catalogName": "main",
-  "clusterName": "unknown",
-  "totalRangerPolicies": 1,
-  "policyItems": [
+  "metadata": {
+    "timestamp": "2026-06-02T03:42:54.774304",
+    "service_name": "hive_prod",
+    "cluster_name": "unknown",
+    "catalog_name": "main",
+    "source_file": "masking_complex.json",
+    "notes": ""
+  },
+  "parsed_data": {
+    "results": [
+      {
+        "id": "203-mask-finance-transactions-account_number-junior_analysts-1",
+        "rangerPolicyId": 203,
+        "rangerPolicyName": "financial_data_masking",
+        "rangerPolicyDesc": "Complex masking - Conditional masks with custom expressions",
+        "type": "column_mask",
+        "catalog": "main",
+        "schema": "finance",
+        "table": "transactions",
+        "columns": [
+          "account_number"
+        ],
+        "privileges": [],
+        "principal": {
+          "type": "group",
+          "name": "junior_analysts"
+        },
+        "allPrincipals": [
+          {
+            "type": "group",
+            "name": "junior_analysts"
+          }
+        ],
+        "maskType": "CUSTOM",
+        "maskExpr": "CASE WHEN transaction_amount < 1000 THEN transaction_amount ELSE CAST('XXXXX' AS DECIMAL) END",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "203-mask-finance-transactions-transaction_amount-junior_analysts-2",
+        "rangerPolicyId": 203,
+        "rangerPolicyName": "financial_data_masking",
+        "rangerPolicyDesc": "Complex masking - Conditional masks with custom expressions",
+        "type": "column_mask",
+        "catalog": "main",
+        "schema": "finance",
+        "table": "transactions",
+        "columns": [
+          "transaction_amount"
+        ],
+        "privileges": [],
+        "principal": {
+          "type": "group",
+          "name": "junior_analysts"
+        },
+        "allPrincipals": [
+          {
+            "type": "group",
+            "name": "junior_analysts"
+          }
+        ],
+        "maskType": "CUSTOM",
+        "maskExpr": "CASE WHEN transaction_amount < 1000 THEN transaction_amount ELSE CAST('XXXXX' AS DECIMAL) END",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "203-mask-finance-transactions-customer_id-junior_analysts-3",
+        "rangerPolicyId": 203,
+        "rangerPolicyName": "financial_data_masking",
+        "rangerPolicyDesc": "Complex masking - Conditional masks with custom expressions",
+        "type": "column_mask",
+        "catalog": "main",
+        "schema": "finance",
+        "table": "transactions",
+        "columns": [
+          "customer_id"
+        ],
+        "privileges": [],
+        "principal": {
+          "type": "group",
+          "name": "junior_analysts"
+        },
+        "allPrincipals": [
+          {
+            "type": "group",
+            "name": "junior_analysts"
+          }
+        ],
+        "maskType": "CUSTOM",
+        "maskExpr": "CASE WHEN transaction_amount < 1000 THEN transaction_amount ELSE CAST('XXXXX' AS DECIMAL) END",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "203-mask-finance-transactions-birth_date-junior_analysts-4",
+        "rangerPolicyId": 203,
+        "rangerPolicyName": "financial_data_masking",
+        "rangerPolicyDesc": "Complex masking - Conditional masks with custom expressions",
+        "type": "column_mask",
+        "catalog": "main",
+        "schema": "finance",
+        "table": "transactions",
+        "columns": [
+          "birth_date"
+        ],
+        "privileges": [],
+        "principal": {
+          "type": "group",
+          "name": "junior_analysts"
+        },
+        "allPrincipals": [
+          {
+            "type": "group",
+            "name": "junior_analysts"
+          }
+        ],
+        "maskType": "CUSTOM",
+        "maskExpr": "CASE WHEN transaction_amount < 1000 THEN transaction_amount ELSE CAST('XXXXX' AS DECIMAL) END",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "203-mask-finance-accounts-account_number-junior_analysts-5",
+        "rangerPolicyId": 203,
+        "rangerPolicyName": "financial_data_masking",
+        "rangerPolicyDesc": "Complex masking - Conditional masks with custom expressions",
+        "type": "column_mask",
+        "catalog": "main",
+        "schema": "finance",
+        "table": "accounts",
+        "columns": [
+          "account_number"
+        ],
+        "privileges": [],
+        "principal": {
+          "type": "group",
+          "name": "junior_analysts"
+        },
+        "allPrincipals": [
+          {
+            "type": "group",
+            "name": "junior_analysts"
+          }
+        ],
+        "maskType": "CUSTOM",
+        "maskExpr": "CASE WHEN transaction_amount < 1000 THEN transaction_amount ELSE CAST('XXXXX' AS DECIMAL) END",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "203-mask-finance-accounts-transaction_amount-junior_analysts-6",
+        "rangerPolicyId": 203,
+        "rangerPolicyName": "financial_data_masking",
+        "rangerPolicyDesc": "Complex masking - Conditional masks with custom expressions",
+        "type": "column_mask",
+        "catalog": "main",
+        "schema": "finance",
+        "table": "accounts",
+        "columns": [
+          "transaction_amount"
+        ],
+        "privileges": [],
+        "principal": {
+          "type": "group",
+          "name": "junior_analysts"
+        },
+        "allPrincipals": [
+          {
+            "type": "group",
+            "name": "junior_analysts"
+          }
+        ],
+        "maskType": "CUSTOM",
+        "maskExpr": "CASE WHEN transaction_amount < 1000 THEN transaction_amount ELSE CAST('XXXXX' AS DECIMAL) END",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "203-mask-finance-accounts-customer_id-junior_analysts-7",
+        "rangerPolicyId": 203,
+        "rangerPolicyName": "financial_data_masking",
+        "rangerPolicyDesc": "Complex masking - Conditional masks with custom expressions",
+        "type": "column_mask",
+        "catalog": "main",
+        "schema": "finance",
+        "table": "accounts",
+        "columns": [
+          "customer_id"
+        ],
+        "privileges": [],
+        "principal": {
+          "type": "group",
+          "name": "junior_analysts"
+        },
+        "allPrincipals": [
+          {
+            "type": "group",
+            "name": "junior_analysts"
+          }
+        ],
+        "maskType": "CUSTOM",
+        "maskExpr": "CASE WHEN transaction_amount < 1000 THEN transaction_amount ELSE CAST('XXXXX' AS DECIMAL) END",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "203-mask-finance-accounts-birth_date-junior_analysts-8",
+        "rangerPolicyId": 203,
+        "rangerPolicyName": "financial_data_masking",
+        "rangerPolicyDesc": "Complex masking - Conditional masks with custom expressions",
+        "type": "column_mask",
+        "catalog": "main",
+        "schema": "finance",
+        "table": "accounts",
+        "columns": [
+          "birth_date"
+        ],
+        "privileges": [],
+        "principal": {
+          "type": "group",
+          "name": "junior_analysts"
+        },
+        "allPrincipals": [
+          {
+            "type": "group",
+            "name": "junior_analysts"
+          }
+        ],
+        "maskType": "CUSTOM",
+        "maskExpr": "CASE WHEN transaction_amount < 1000 THEN transaction_amount ELSE CAST('XXXXX' AS DECIMAL) END",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "203-mask-finance-transactions-account_number-marketing_team-9",
+        "rangerPolicyId": 203,
+        "rangerPolicyName": "financial_data_masking",
+        "rangerPolicyDesc": "Complex masking - Conditional masks with custom expressions",
+        "type": "column_mask",
+        "catalog": "main",
+        "schema": "finance",
+        "table": "transactions",
+        "columns": [
+          "account_number"
+        ],
+        "privileges": [],
+        "principal": {
+          "type": "group",
+          "name": "marketing_team"
+        },
+        "allPrincipals": [
+          {
+            "type": "group",
+            "name": "marketing_team"
+          }
+        ],
+        "maskType": "MASK_DATE_SHOW_YEAR",
+        "maskExpr": "",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "203-mask-finance-transactions-transaction_amount-marketing_team-10",
+        "rangerPolicyId": 203,
+        "rangerPolicyName": "financial_data_masking",
+        "rangerPolicyDesc": "Complex masking - Conditional masks with custom expressions",
+        "type": "column_mask",
+        "catalog": "main",
+        "schema": "finance",
+        "table": "transactions",
+        "columns": [
+          "transaction_amount"
+        ],
+        "privileges": [],
+        "principal": {
+          "type": "group",
+          "name": "marketing_team"
+        },
+        "allPrincipals": [
+          {
+            "type": "group",
+            "name": "marketing_team"
+          }
+        ],
+        "maskType": "MASK_DATE_SHOW_YEAR",
+        "maskExpr": "",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "203-mask-finance-transactions-customer_id-marketing_team-11",
+        "rangerPolicyId": 203,
+        "rangerPolicyName": "financial_data_masking",
+        "rangerPolicyDesc": "Complex masking - Conditional masks with custom expressions",
+        "type": "column_mask",
+        "catalog": "main",
+        "schema": "finance",
+        "table": "transactions",
+        "columns": [
+          "customer_id"
+        ],
+        "privileges": [],
+        "principal": {
+          "type": "group",
+          "name": "marketing_team"
+        },
+        "allPrincipals": [
+          {
+            "type": "group",
+            "name": "marketing_team"
+          }
+        ],
+        "maskType": "MASK_DATE_SHOW_YEAR",
+        "maskExpr": "",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "203-mask-finance-transactions-birth_date-marketing_team-12",
+        "rangerPolicyId": 203,
+        "rangerPolicyName": "financial_data_masking",
+        "rangerPolicyDesc": "Complex masking - Conditional masks with custom expressions",
+        "type": "column_mask",
+        "catalog": "main",
+        "schema": "finance",
+        "table": "transactions",
+        "columns": [
+          "birth_date"
+        ],
+        "privileges": [],
+        "principal": {
+          "type": "group",
+          "name": "marketing_team"
+        },
+        "allPrincipals": [
+          {
+            "type": "group",
+            "name": "marketing_team"
+          }
+        ],
+        "maskType": "MASK_DATE_SHOW_YEAR",
+        "maskExpr": "",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "203-mask-finance-accounts-account_number-marketing_team-13",
+        "rangerPolicyId": 203,
+        "rangerPolicyName": "financial_data_masking",
+        "rangerPolicyDesc": "Complex masking - Conditional masks with custom expressions",
+        "type": "column_mask",
+        "catalog": "main",
+        "schema": "finance",
+        "table": "accounts",
+        "columns": [
+          "account_number"
+        ],
+        "privileges": [],
+        "principal": {
+          "type": "group",
+          "name": "marketing_team"
+        },
+        "allPrincipals": [
+          {
+            "type": "group",
+            "name": "marketing_team"
+          }
+        ],
+        "maskType": "MASK_DATE_SHOW_YEAR",
+        "maskExpr": "",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "203-mask-finance-accounts-transaction_amount-marketing_team-14",
+        "rangerPolicyId": 203,
+        "rangerPolicyName": "financial_data_masking",
+        "rangerPolicyDesc": "Complex masking - Conditional masks with custom expressions",
+        "type": "column_mask",
+        "catalog": "main",
+        "schema": "finance",
+        "table": "accounts",
+        "columns": [
+          "transaction_amount"
+        ],
+        "privileges": [],
+        "principal": {
+          "type": "group",
+          "name": "marketing_team"
+        },
+        "allPrincipals": [
+          {
+            "type": "group",
+            "name": "marketing_team"
+          }
+        ],
+        "maskType": "MASK_DATE_SHOW_YEAR",
+        "maskExpr": "",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "203-mask-finance-accounts-customer_id-marketing_team-15",
+        "rangerPolicyId": 203,
+        "rangerPolicyName": "financial_data_masking",
+        "rangerPolicyDesc": "Complex masking - Conditional masks with custom expressions",
+        "type": "column_mask",
+        "catalog": "main",
+        "schema": "finance",
+        "table": "accounts",
+        "columns": [
+          "customer_id"
+        ],
+        "privileges": [],
+        "principal": {
+          "type": "group",
+          "name": "marketing_team"
+        },
+        "allPrincipals": [
+          {
+            "type": "group",
+            "name": "marketing_team"
+          }
+        ],
+        "maskType": "MASK_DATE_SHOW_YEAR",
+        "maskExpr": "",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "203-mask-finance-accounts-birth_date-marketing_team-16",
+        "rangerPolicyId": 203,
+        "rangerPolicyName": "financial_data_masking",
+        "rangerPolicyDesc": "Complex masking - Conditional masks with custom expressions",
+        "type": "column_mask",
+        "catalog": "main",
+        "schema": "finance",
+        "table": "accounts",
+        "columns": [
+          "birth_date"
+        ],
+        "privileges": [],
+        "principal": {
+          "type": "group",
+          "name": "marketing_team"
+        },
+        "allPrincipals": [
+          {
+            "type": "group",
+            "name": "marketing_team"
+          }
+        ],
+        "maskType": "MASK_DATE_SHOW_YEAR",
+        "maskExpr": "",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "203-mask-finance-transactions-account_number-audit_team-17",
+        "rangerPolicyId": 203,
+        "rangerPolicyName": "financial_data_masking",
+        "rangerPolicyDesc": "Complex masking - Conditional masks with custom expressions",
+        "type": "column_mask",
+        "catalog": "main",
+        "schema": "finance",
+        "table": "transactions",
+        "columns": [
+          "account_number"
+        ],
+        "privileges": [],
+        "principal": {
+          "type": "group",
+          "name": "audit_team"
+        },
+        "allPrincipals": [
+          {
+            "type": "group",
+            "name": "audit_team"
+          },
+          {
+            "type": "user",
+            "name": "compliance_officer@company.com"
+          }
+        ],
+        "maskType": "MASK_SHOW_LAST_4",
+        "maskExpr": "",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "203-mask-finance-transactions-transaction_amount-audit_team-18",
+        "rangerPolicyId": 203,
+        "rangerPolicyName": "financial_data_masking",
+        "rangerPolicyDesc": "Complex masking - Conditional masks with custom expressions",
+        "type": "column_mask",
+        "catalog": "main",
+        "schema": "finance",
+        "table": "transactions",
+        "columns": [
+          "transaction_amount"
+        ],
+        "privileges": [],
+        "principal": {
+          "type": "group",
+          "name": "audit_team"
+        },
+        "allPrincipals": [
+          {
+            "type": "group",
+            "name": "audit_team"
+          },
+          {
+            "type": "user",
+            "name": "compliance_officer@company.com"
+          }
+        ],
+        "maskType": "MASK_SHOW_LAST_4",
+        "maskExpr": "",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "203-mask-finance-transactions-customer_id-audit_team-19",
+        "rangerPolicyId": 203,
+        "rangerPolicyName": "financial_data_masking",
+        "rangerPolicyDesc": "Complex masking - Conditional masks with custom expressions",
+        "type": "column_mask",
+        "catalog": "main",
+        "schema": "finance",
+        "table": "transactions",
+        "columns": [
+          "customer_id"
+        ],
+        "privileges": [],
+        "principal": {
+          "type": "group",
+          "name": "audit_team"
+        },
+        "allPrincipals": [
+          {
+            "type": "group",
+            "name": "audit_team"
+          },
+          {
+            "type": "user",
+            "name": "compliance_officer@company.com"
+          }
+        ],
+        "maskType": "MASK_SHOW_LAST_4",
+        "maskExpr": "",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "203-mask-finance-transactions-birth_date-audit_team-20",
+        "rangerPolicyId": 203,
+        "rangerPolicyName": "financial_data_masking",
+        "rangerPolicyDesc": "Complex masking - Conditional masks with custom expressions",
+        "type": "column_mask",
+        "catalog": "main",
+        "schema": "finance",
+        "table": "transactions",
+        "columns": [
+          "birth_date"
+        ],
+        "privileges": [],
+        "principal": {
+          "type": "group",
+          "name": "audit_team"
+        },
+        "allPrincipals": [
+          {
+            "type": "group",
+            "name": "audit_team"
+          },
+          {
+            "type": "user",
+            "name": "compliance_officer@company.com"
+          }
+        ],
+        "maskType": "MASK_SHOW_LAST_4",
+        "maskExpr": "",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "203-mask-finance-accounts-account_number-audit_team-21",
+        "rangerPolicyId": 203,
+        "rangerPolicyName": "financial_data_masking",
+        "rangerPolicyDesc": "Complex masking - Conditional masks with custom expressions",
+        "type": "column_mask",
+        "catalog": "main",
+        "schema": "finance",
+        "table": "accounts",
+        "columns": [
+          "account_number"
+        ],
+        "privileges": [],
+        "principal": {
+          "type": "group",
+          "name": "audit_team"
+        },
+        "allPrincipals": [
+          {
+            "type": "group",
+            "name": "audit_team"
+          },
+          {
+            "type": "user",
+            "name": "compliance_officer@company.com"
+          }
+        ],
+        "maskType": "MASK_SHOW_LAST_4",
+        "maskExpr": "",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "203-mask-finance-accounts-transaction_amount-audit_team-22",
+        "rangerPolicyId": 203,
+        "rangerPolicyName": "financial_data_masking",
+        "rangerPolicyDesc": "Complex masking - Conditional masks with custom expressions",
+        "type": "column_mask",
+        "catalog": "main",
+        "schema": "finance",
+        "table": "accounts",
+        "columns": [
+          "transaction_amount"
+        ],
+        "privileges": [],
+        "principal": {
+          "type": "group",
+          "name": "audit_team"
+        },
+        "allPrincipals": [
+          {
+            "type": "group",
+            "name": "audit_team"
+          },
+          {
+            "type": "user",
+            "name": "compliance_officer@company.com"
+          }
+        ],
+        "maskType": "MASK_SHOW_LAST_4",
+        "maskExpr": "",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "203-mask-finance-accounts-customer_id-audit_team-23",
+        "rangerPolicyId": 203,
+        "rangerPolicyName": "financial_data_masking",
+        "rangerPolicyDesc": "Complex masking - Conditional masks with custom expressions",
+        "type": "column_mask",
+        "catalog": "main",
+        "schema": "finance",
+        "table": "accounts",
+        "columns": [
+          "customer_id"
+        ],
+        "privileges": [],
+        "principal": {
+          "type": "group",
+          "name": "audit_team"
+        },
+        "allPrincipals": [
+          {
+            "type": "group",
+            "name": "audit_team"
+          },
+          {
+            "type": "user",
+            "name": "compliance_officer@company.com"
+          }
+        ],
+        "maskType": "MASK_SHOW_LAST_4",
+        "maskExpr": "",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "203-mask-finance-accounts-birth_date-audit_team-24",
+        "rangerPolicyId": 203,
+        "rangerPolicyName": "financial_data_masking",
+        "rangerPolicyDesc": "Complex masking - Conditional masks with custom expressions",
+        "type": "column_mask",
+        "catalog": "main",
+        "schema": "finance",
+        "table": "accounts",
+        "columns": [
+          "birth_date"
+        ],
+        "privileges": [],
+        "principal": {
+          "type": "group",
+          "name": "audit_team"
+        },
+        "allPrincipals": [
+          {
+            "type": "group",
+            "name": "audit_team"
+          },
+          {
+            "type": "user",
+            "name": "compliance_officer@company.com"
+          }
+        ],
+        "maskType": "MASK_SHOW_LAST_4",
+        "maskExpr": "",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "203-mask-finance-transactions-account_number-finance_leadership-25",
+        "rangerPolicyId": 203,
+        "rangerPolicyName": "financial_data_masking",
+        "rangerPolicyDesc": "Complex masking - Conditional masks with custom expressions",
+        "type": "column_mask",
+        "catalog": "main",
+        "schema": "finance",
+        "table": "transactions",
+        "columns": [
+          "account_number"
+        ],
+        "privileges": [],
+        "principal": {
+          "type": "group",
+          "name": "finance_leadership"
+        },
+        "allPrincipals": [
+          {
+            "type": "group",
+            "name": "finance_leadership"
+          },
+          {
+            "type": "user",
+            "name": "cfo@company.com"
+          },
+          {
+            "type": "user",
+            "name": "controller@company.com"
+          }
+        ],
+        "maskType": "MASK_NONE",
+        "maskExpr": "",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "203-mask-finance-transactions-transaction_amount-finance_leadership-26",
+        "rangerPolicyId": 203,
+        "rangerPolicyName": "financial_data_masking",
+        "rangerPolicyDesc": "Complex masking - Conditional masks with custom expressions",
+        "type": "column_mask",
+        "catalog": "main",
+        "schema": "finance",
+        "table": "transactions",
+        "columns": [
+          "transaction_amount"
+        ],
+        "privileges": [],
+        "principal": {
+          "type": "group",
+          "name": "finance_leadership"
+        },
+        "allPrincipals": [
+          {
+            "type": "group",
+            "name": "finance_leadership"
+          },
+          {
+            "type": "user",
+            "name": "cfo@company.com"
+          },
+          {
+            "type": "user",
+            "name": "controller@company.com"
+          }
+        ],
+        "maskType": "MASK_NONE",
+        "maskExpr": "",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "203-mask-finance-transactions-customer_id-finance_leadership-27",
+        "rangerPolicyId": 203,
+        "rangerPolicyName": "financial_data_masking",
+        "rangerPolicyDesc": "Complex masking - Conditional masks with custom expressions",
+        "type": "column_mask",
+        "catalog": "main",
+        "schema": "finance",
+        "table": "transactions",
+        "columns": [
+          "customer_id"
+        ],
+        "privileges": [],
+        "principal": {
+          "type": "group",
+          "name": "finance_leadership"
+        },
+        "allPrincipals": [
+          {
+            "type": "group",
+            "name": "finance_leadership"
+          },
+          {
+            "type": "user",
+            "name": "cfo@company.com"
+          },
+          {
+            "type": "user",
+            "name": "controller@company.com"
+          }
+        ],
+        "maskType": "MASK_NONE",
+        "maskExpr": "",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "203-mask-finance-transactions-birth_date-finance_leadership-28",
+        "rangerPolicyId": 203,
+        "rangerPolicyName": "financial_data_masking",
+        "rangerPolicyDesc": "Complex masking - Conditional masks with custom expressions",
+        "type": "column_mask",
+        "catalog": "main",
+        "schema": "finance",
+        "table": "transactions",
+        "columns": [
+          "birth_date"
+        ],
+        "privileges": [],
+        "principal": {
+          "type": "group",
+          "name": "finance_leadership"
+        },
+        "allPrincipals": [
+          {
+            "type": "group",
+            "name": "finance_leadership"
+          },
+          {
+            "type": "user",
+            "name": "cfo@company.com"
+          },
+          {
+            "type": "user",
+            "name": "controller@company.com"
+          }
+        ],
+        "maskType": "MASK_NONE",
+        "maskExpr": "",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "203-mask-finance-accounts-account_number-finance_leadership-29",
+        "rangerPolicyId": 203,
+        "rangerPolicyName": "financial_data_masking",
+        "rangerPolicyDesc": "Complex masking - Conditional masks with custom expressions",
+        "type": "column_mask",
+        "catalog": "main",
+        "schema": "finance",
+        "table": "accounts",
+        "columns": [
+          "account_number"
+        ],
+        "privileges": [],
+        "principal": {
+          "type": "group",
+          "name": "finance_leadership"
+        },
+        "allPrincipals": [
+          {
+            "type": "group",
+            "name": "finance_leadership"
+          },
+          {
+            "type": "user",
+            "name": "cfo@company.com"
+          },
+          {
+            "type": "user",
+            "name": "controller@company.com"
+          }
+        ],
+        "maskType": "MASK_NONE",
+        "maskExpr": "",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "203-mask-finance-accounts-transaction_amount-finance_leadership-30",
+        "rangerPolicyId": 203,
+        "rangerPolicyName": "financial_data_masking",
+        "rangerPolicyDesc": "Complex masking - Conditional masks with custom expressions",
+        "type": "column_mask",
+        "catalog": "main",
+        "schema": "finance",
+        "table": "accounts",
+        "columns": [
+          "transaction_amount"
+        ],
+        "privileges": [],
+        "principal": {
+          "type": "group",
+          "name": "finance_leadership"
+        },
+        "allPrincipals": [
+          {
+            "type": "group",
+            "name": "finance_leadership"
+          },
+          {
+            "type": "user",
+            "name": "cfo@company.com"
+          },
+          {
+            "type": "user",
+            "name": "controller@company.com"
+          }
+        ],
+        "maskType": "MASK_NONE",
+        "maskExpr": "",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "203-mask-finance-accounts-customer_id-finance_leadership-31",
+        "rangerPolicyId": 203,
+        "rangerPolicyName": "financial_data_masking",
+        "rangerPolicyDesc": "Complex masking - Conditional masks with custom expressions",
+        "type": "column_mask",
+        "catalog": "main",
+        "schema": "finance",
+        "table": "accounts",
+        "columns": [
+          "customer_id"
+        ],
+        "privileges": [],
+        "principal": {
+          "type": "group",
+          "name": "finance_leadership"
+        },
+        "allPrincipals": [
+          {
+            "type": "group",
+            "name": "finance_leadership"
+          },
+          {
+            "type": "user",
+            "name": "cfo@company.com"
+          },
+          {
+            "type": "user",
+            "name": "controller@company.com"
+          }
+        ],
+        "maskType": "MASK_NONE",
+        "maskExpr": "",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "203-mask-finance-accounts-birth_date-finance_leadership-32",
+        "rangerPolicyId": 203,
+        "rangerPolicyName": "financial_data_masking",
+        "rangerPolicyDesc": "Complex masking - Conditional masks with custom expressions",
+        "type": "column_mask",
+        "catalog": "main",
+        "schema": "finance",
+        "table": "accounts",
+        "columns": [
+          "birth_date"
+        ],
+        "privileges": [],
+        "principal": {
+          "type": "group",
+          "name": "finance_leadership"
+        },
+        "allPrincipals": [
+          {
+            "type": "group",
+            "name": "finance_leadership"
+          },
+          {
+            "type": "user",
+            "name": "cfo@company.com"
+          },
+          {
+            "type": "user",
+            "name": "controller@company.com"
+          }
+        ],
+        "maskType": "MASK_NONE",
+        "maskExpr": "",
+        "enabled": true,
+        "status": "approved"
+      }
+    ],
+    "warnings": [
+      {
+        "policyId": 203,
+        "policyName": "financial_data_masking",
+        "category": "conditions",
+        "severity": "warning",
+        "message": "Policy \"financial_data_masking\" has conditions [accessed-after-expiry] with no UC equivalent \u2014 grants will apply unconditionally",
+        "recommendation": "IP-range, time-based, and custom conditions cannot be enforced in UC. Apply equivalent restrictions at the network or application layer."
+      }
+    ],
+    "identities": [
+      {
+        "type": "group",
+        "name": "audit_team"
+      },
+      {
+        "type": "group",
+        "name": "finance_leadership"
+      },
+      {
+        "type": "group",
+        "name": "junior_analysts"
+      },
+      {
+        "type": "group",
+        "name": "marketing_team"
+      },
+      {
+        "type": "user",
+        "name": "cfo@company.com"
+      },
+      {
+        "type": "user",
+        "name": "compliance_officer@company.com"
+      },
+      {
+        "type": "user",
+        "name": "controller@company.com"
+      }
+    ],
+    "kerberosIssues": [
+      {
+        "policyId": 203,
+        "policyName": "financial_data_masking",
+        "principal": "compliance_officer@company.com",
+        "type": "kerberos_principal",
+        "severity": "warning",
+        "message": "\"compliance_officer@company.com\" looks like a Kerberos principal \u2014 needs mapping to Databricks service principal or managed identity",
+        "recommendation": "Map to a Databricks user via SCIM/IdP integration. Remove the Kerberos realm suffix."
+      },
+      {
+        "policyId": 203,
+        "policyName": "financial_data_masking",
+        "principal": "cfo@company.com",
+        "type": "kerberos_principal",
+        "severity": "warning",
+        "message": "\"cfo@company.com\" looks like a Kerberos principal \u2014 needs mapping to Databricks service principal or managed identity",
+        "recommendation": "Map to a Databricks user via SCIM/IdP integration. Remove the Kerberos realm suffix."
+      },
+      {
+        "policyId": 203,
+        "policyName": "financial_data_masking",
+        "principal": "controller@company.com",
+        "type": "kerberos_principal",
+        "severity": "warning",
+        "message": "\"controller@company.com\" looks like a Kerberos principal \u2014 needs mapping to Databricks service principal or managed identity",
+        "recommendation": "Map to a Databricks user via SCIM/IdP integration. Remove the Kerberos realm suffix."
+      }
+    ],
+    "serviceName": "hive_prod",
+    "serviceType": "hive",
+    "clusterName": "unknown",
+    "totalRangerPolicies": 1
+  },
+  "policy_items": [
     {
       "id": "203-mask-finance-transactions-account_number-junior_analysts-1",
       "rangerPolicyId": 203,
@@ -30,7 +1103,7 @@
       "maskType": "CUSTOM",
       "maskExpr": "CASE WHEN transaction_amount < 1000 THEN transaction_amount ELSE CAST('XXXXX' AS DECIMAL) END",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "203-mask-finance-transactions-transaction_amount-junior_analysts-2",
@@ -58,7 +1131,7 @@
       "maskType": "CUSTOM",
       "maskExpr": "CASE WHEN transaction_amount < 1000 THEN transaction_amount ELSE CAST('XXXXX' AS DECIMAL) END",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "203-mask-finance-transactions-customer_id-junior_analysts-3",
@@ -86,7 +1159,7 @@
       "maskType": "CUSTOM",
       "maskExpr": "CASE WHEN transaction_amount < 1000 THEN transaction_amount ELSE CAST('XXXXX' AS DECIMAL) END",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "203-mask-finance-transactions-birth_date-junior_analysts-4",
@@ -114,7 +1187,7 @@
       "maskType": "CUSTOM",
       "maskExpr": "CASE WHEN transaction_amount < 1000 THEN transaction_amount ELSE CAST('XXXXX' AS DECIMAL) END",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "203-mask-finance-accounts-account_number-junior_analysts-5",
@@ -142,7 +1215,7 @@
       "maskType": "CUSTOM",
       "maskExpr": "CASE WHEN transaction_amount < 1000 THEN transaction_amount ELSE CAST('XXXXX' AS DECIMAL) END",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "203-mask-finance-accounts-transaction_amount-junior_analysts-6",
@@ -170,7 +1243,7 @@
       "maskType": "CUSTOM",
       "maskExpr": "CASE WHEN transaction_amount < 1000 THEN transaction_amount ELSE CAST('XXXXX' AS DECIMAL) END",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "203-mask-finance-accounts-customer_id-junior_analysts-7",
@@ -198,7 +1271,7 @@
       "maskType": "CUSTOM",
       "maskExpr": "CASE WHEN transaction_amount < 1000 THEN transaction_amount ELSE CAST('XXXXX' AS DECIMAL) END",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "203-mask-finance-accounts-birth_date-junior_analysts-8",
@@ -226,7 +1299,7 @@
       "maskType": "CUSTOM",
       "maskExpr": "CASE WHEN transaction_amount < 1000 THEN transaction_amount ELSE CAST('XXXXX' AS DECIMAL) END",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "203-mask-finance-transactions-account_number-marketing_team-9",
@@ -254,7 +1327,7 @@
       "maskType": "MASK_DATE_SHOW_YEAR",
       "maskExpr": "",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "203-mask-finance-transactions-transaction_amount-marketing_team-10",
@@ -282,7 +1355,7 @@
       "maskType": "MASK_DATE_SHOW_YEAR",
       "maskExpr": "",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "203-mask-finance-transactions-customer_id-marketing_team-11",
@@ -310,7 +1383,7 @@
       "maskType": "MASK_DATE_SHOW_YEAR",
       "maskExpr": "",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "203-mask-finance-transactions-birth_date-marketing_team-12",
@@ -338,7 +1411,7 @@
       "maskType": "MASK_DATE_SHOW_YEAR",
       "maskExpr": "",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "203-mask-finance-accounts-account_number-marketing_team-13",
@@ -366,7 +1439,7 @@
       "maskType": "MASK_DATE_SHOW_YEAR",
       "maskExpr": "",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "203-mask-finance-accounts-transaction_amount-marketing_team-14",
@@ -394,7 +1467,7 @@
       "maskType": "MASK_DATE_SHOW_YEAR",
       "maskExpr": "",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "203-mask-finance-accounts-customer_id-marketing_team-15",
@@ -422,7 +1495,7 @@
       "maskType": "MASK_DATE_SHOW_YEAR",
       "maskExpr": "",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "203-mask-finance-accounts-birth_date-marketing_team-16",
@@ -450,7 +1523,7 @@
       "maskType": "MASK_DATE_SHOW_YEAR",
       "maskExpr": "",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "203-mask-finance-transactions-account_number-audit_team-17",
@@ -482,7 +1555,7 @@
       "maskType": "MASK_SHOW_LAST_4",
       "maskExpr": "",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "203-mask-finance-transactions-transaction_amount-audit_team-18",
@@ -514,7 +1587,7 @@
       "maskType": "MASK_SHOW_LAST_4",
       "maskExpr": "",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "203-mask-finance-transactions-customer_id-audit_team-19",
@@ -546,7 +1619,7 @@
       "maskType": "MASK_SHOW_LAST_4",
       "maskExpr": "",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "203-mask-finance-transactions-birth_date-audit_team-20",
@@ -578,7 +1651,7 @@
       "maskType": "MASK_SHOW_LAST_4",
       "maskExpr": "",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "203-mask-finance-accounts-account_number-audit_team-21",
@@ -610,7 +1683,7 @@
       "maskType": "MASK_SHOW_LAST_4",
       "maskExpr": "",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "203-mask-finance-accounts-transaction_amount-audit_team-22",
@@ -642,7 +1715,7 @@
       "maskType": "MASK_SHOW_LAST_4",
       "maskExpr": "",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "203-mask-finance-accounts-customer_id-audit_team-23",
@@ -674,7 +1747,7 @@
       "maskType": "MASK_SHOW_LAST_4",
       "maskExpr": "",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "203-mask-finance-accounts-birth_date-audit_team-24",
@@ -706,7 +1779,7 @@
       "maskType": "MASK_SHOW_LAST_4",
       "maskExpr": "",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "203-mask-finance-transactions-account_number-finance_leadership-25",
@@ -742,7 +1815,7 @@
       "maskType": "MASK_NONE",
       "maskExpr": "",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "203-mask-finance-transactions-transaction_amount-finance_leadership-26",
@@ -778,7 +1851,7 @@
       "maskType": "MASK_NONE",
       "maskExpr": "",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "203-mask-finance-transactions-customer_id-finance_leadership-27",
@@ -814,7 +1887,7 @@
       "maskType": "MASK_NONE",
       "maskExpr": "",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "203-mask-finance-transactions-birth_date-finance_leadership-28",
@@ -850,7 +1923,7 @@
       "maskType": "MASK_NONE",
       "maskExpr": "",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "203-mask-finance-accounts-account_number-finance_leadership-29",
@@ -886,7 +1959,7 @@
       "maskType": "MASK_NONE",
       "maskExpr": "",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "203-mask-finance-accounts-transaction_amount-finance_leadership-30",
@@ -922,7 +1995,7 @@
       "maskType": "MASK_NONE",
       "maskExpr": "",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "203-mask-finance-accounts-customer_id-finance_leadership-31",
@@ -958,7 +2031,7 @@
       "maskType": "MASK_NONE",
       "maskExpr": "",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "203-mask-finance-accounts-birth_date-finance_leadership-32",
@@ -994,39 +2067,9 @@
       "maskType": "MASK_NONE",
       "maskExpr": "",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     }
   ],
-  "identityMap": {},
-  "generatedSQL": "-- Column Mask: Custom expression for junior_analysts (review before executing)\nCREATE OR REPLACE FUNCTION `main`.`finance`.mask_transactions_account_number_junior_analysts(val STRING)\nRETURNS STRING\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('junior_analysts'),\n  CASE WHEN transaction_amount < 1000 THEN transaction_amount ELSE CAST('XXXXX' AS DECIMAL) END,\n  val\n);\n\nALTER TABLE `main`.`finance`.`transactions`\nALTER COLUMN account_number SET MASK `main`.`finance`.mask_transactions_account_number_junior_analysts;\n\n-- Column Mask: Custom expression for junior_analysts (review before executing)\nCREATE OR REPLACE FUNCTION `main`.`finance`.mask_transactions_transaction_amount_junior_analysts(val STRING)\nRETURNS STRING\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('junior_analysts'),\n  CASE WHEN transaction_amount < 1000 THEN transaction_amount ELSE CAST('XXXXX' AS DECIMAL) END,\n  val\n);\n\nALTER TABLE `main`.`finance`.`transactions`\nALTER COLUMN transaction_amount SET MASK `main`.`finance`.mask_transactions_transaction_amount_junior_analysts;\n\n-- Column Mask: Custom expression for junior_analysts (review before executing)\nCREATE OR REPLACE FUNCTION `main`.`finance`.mask_transactions_customer_id_junior_analysts(val STRING)\nRETURNS STRING\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('junior_analysts'),\n  CASE WHEN transaction_amount < 1000 THEN transaction_amount ELSE CAST('XXXXX' AS DECIMAL) END,\n  val\n);\n\nALTER TABLE `main`.`finance`.`transactions`\nALTER COLUMN customer_id SET MASK `main`.`finance`.mask_transactions_customer_id_junior_analysts;\n\n-- Column Mask: Custom expression for junior_analysts (review before executing)\nCREATE OR REPLACE FUNCTION `main`.`finance`.mask_transactions_birth_date_junior_analysts(val STRING)\nRETURNS STRING\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('junior_analysts'),\n  CASE WHEN transaction_amount < 1000 THEN transaction_amount ELSE CAST('XXXXX' AS DECIMAL) END,\n  val\n);\n\nALTER TABLE `main`.`finance`.`transactions`\nALTER COLUMN birth_date SET MASK `main`.`finance`.mask_transactions_birth_date_junior_analysts;\n\n-- Column Mask: Custom expression for junior_analysts (review before executing)\nCREATE OR REPLACE FUNCTION `main`.`finance`.mask_accounts_account_number_junior_analysts(val STRING)\nRETURNS STRING\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('junior_analysts'),\n  CASE WHEN transaction_amount < 1000 THEN transaction_amount ELSE CAST('XXXXX' AS DECIMAL) END,\n  val\n);\n\nALTER TABLE `main`.`finance`.`accounts`\nALTER COLUMN account_number SET MASK `main`.`finance`.mask_accounts_account_number_junior_analysts;\n\n-- Column Mask: Custom expression for junior_analysts (review before executing)\nCREATE OR REPLACE FUNCTION `main`.`finance`.mask_accounts_transaction_amount_junior_analysts(val STRING)\nRETURNS STRING\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('junior_analysts'),\n  CASE WHEN transaction_amount < 1000 THEN transaction_amount ELSE CAST('XXXXX' AS DECIMAL) END,\n  val\n);\n\nALTER TABLE `main`.`finance`.`accounts`\nALTER COLUMN transaction_amount SET MASK `main`.`finance`.mask_accounts_transaction_amount_junior_analysts;\n\n-- Column Mask: Custom expression for junior_analysts (review before executing)\nCREATE OR REPLACE FUNCTION `main`.`finance`.mask_accounts_customer_id_junior_analysts(val STRING)\nRETURNS STRING\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('junior_analysts'),\n  CASE WHEN transaction_amount < 1000 THEN transaction_amount ELSE CAST('XXXXX' AS DECIMAL) END,\n  val\n);\n\nALTER TABLE `main`.`finance`.`accounts`\nALTER COLUMN customer_id SET MASK `main`.`finance`.mask_accounts_customer_id_junior_analysts;\n\n-- Column Mask: Custom expression for junior_analysts (review before executing)\nCREATE OR REPLACE FUNCTION `main`.`finance`.mask_accounts_birth_date_junior_analysts(val STRING)\nRETURNS STRING\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('junior_analysts'),\n  CASE WHEN transaction_amount < 1000 THEN transaction_amount ELSE CAST('XXXXX' AS DECIMAL) END,\n  val\n);\n\nALTER TABLE `main`.`finance`.`accounts`\nALTER COLUMN birth_date SET MASK `main`.`finance`.mask_accounts_birth_date_junior_analysts;\n\n-- Column Mask: Date year-only masking for marketing_team\nCREATE OR REPLACE FUNCTION `main`.`finance`.mask_transactions_account_number_marketing_team(val DATE)\nRETURNS DATE\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('marketing_team'),\n  MAKE_DATE(YEAR(val), 1, 1),\n  val\n);\n\nALTER TABLE `main`.`finance`.`transactions`\nALTER COLUMN account_number SET MASK `main`.`finance`.mask_transactions_account_number_marketing_team;\n\n-- Column Mask: Date year-only masking for marketing_team\nCREATE OR REPLACE FUNCTION `main`.`finance`.mask_transactions_transaction_amount_marketing_team(val DATE)\nRETURNS DATE\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('marketing_team'),\n  MAKE_DATE(YEAR(val), 1, 1),\n  val\n);\n\nALTER TABLE `main`.`finance`.`transactions`\nALTER COLUMN transaction_amount SET MASK `main`.`finance`.mask_transactions_transaction_amount_marketing_team;\n\n-- Column Mask: Date year-only masking for marketing_team\nCREATE OR REPLACE FUNCTION `main`.`finance`.mask_transactions_customer_id_marketing_team(val DATE)\nRETURNS DATE\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('marketing_team'),\n  MAKE_DATE(YEAR(val), 1, 1),\n  val\n);\n\nALTER TABLE `main`.`finance`.`transactions`\nALTER COLUMN customer_id SET MASK `main`.`finance`.mask_transactions_customer_id_marketing_team;\n\n-- Column Mask: Date year-only masking for marketing_team\nCREATE OR REPLACE FUNCTION `main`.`finance`.mask_transactions_birth_date_marketing_team(val DATE)\nRETURNS DATE\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('marketing_team'),\n  MAKE_DATE(YEAR(val), 1, 1),\n  val\n);\n\nALTER TABLE `main`.`finance`.`transactions`\nALTER COLUMN birth_date SET MASK `main`.`finance`.mask_transactions_birth_date_marketing_team;\n\n-- Column Mask: Date year-only masking for marketing_team\nCREATE OR REPLACE FUNCTION `main`.`finance`.mask_accounts_account_number_marketing_team(val DATE)\nRETURNS DATE\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('marketing_team'),\n  MAKE_DATE(YEAR(val), 1, 1),\n  val\n);\n\nALTER TABLE `main`.`finance`.`accounts`\nALTER COLUMN account_number SET MASK `main`.`finance`.mask_accounts_account_number_marketing_team;\n\n-- Column Mask: Date year-only masking for marketing_team\nCREATE OR REPLACE FUNCTION `main`.`finance`.mask_accounts_transaction_amount_marketing_team(val DATE)\nRETURNS DATE\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('marketing_team'),\n  MAKE_DATE(YEAR(val), 1, 1),\n  val\n);\n\nALTER TABLE `main`.`finance`.`accounts`\nALTER COLUMN transaction_amount SET MASK `main`.`finance`.mask_accounts_transaction_amount_marketing_team;\n\n-- Column Mask: Date year-only masking for marketing_team\nCREATE OR REPLACE FUNCTION `main`.`finance`.mask_accounts_customer_id_marketing_team(val DATE)\nRETURNS DATE\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('marketing_team'),\n  MAKE_DATE(YEAR(val), 1, 1),\n  val\n);\n\nALTER TABLE `main`.`finance`.`accounts`\nALTER COLUMN customer_id SET MASK `main`.`finance`.mask_accounts_customer_id_marketing_team;\n\n-- Column Mask: Date year-only masking for marketing_team\nCREATE OR REPLACE FUNCTION `main`.`finance`.mask_accounts_birth_date_marketing_team(val DATE)\nRETURNS DATE\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('marketing_team'),\n  MAKE_DATE(YEAR(val), 1, 1),\n  val\n);\n\nALTER TABLE `main`.`finance`.`accounts`\nALTER COLUMN birth_date SET MASK `main`.`finance`.mask_accounts_birth_date_marketing_team;\n\n-- Column Mask: Show last 4 characters for audit_team\nCREATE OR REPLACE FUNCTION `main`.`finance`.mask_transactions_account_number_audit_team(val STRING)\nRETURNS STRING\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('audit_team'),\n  CONCAT('***-**-', RIGHT(val, 4)),\n  val\n);\n\nALTER TABLE `main`.`finance`.`transactions`\nALTER COLUMN account_number SET MASK `main`.`finance`.mask_transactions_account_number_audit_team;\n\n-- Column Mask: Show last 4 characters for audit_team\nCREATE OR REPLACE FUNCTION `main`.`finance`.mask_transactions_transaction_amount_audit_team(val STRING)\nRETURNS STRING\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('audit_team'),\n  CONCAT('***-**-', RIGHT(val, 4)),\n  val\n);\n\nALTER TABLE `main`.`finance`.`transactions`\nALTER COLUMN transaction_amount SET MASK `main`.`finance`.mask_transactions_transaction_amount_audit_team;\n\n-- Column Mask: Show last 4 characters for audit_team\nCREATE OR REPLACE FUNCTION `main`.`finance`.mask_transactions_customer_id_audit_team(val STRING)\nRETURNS STRING\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('audit_team'),\n  CONCAT('***-**-', RIGHT(val, 4)),\n  val\n);\n\nALTER TABLE `main`.`finance`.`transactions`\nALTER COLUMN customer_id SET MASK `main`.`finance`.mask_transactions_customer_id_audit_team;\n\n-- Column Mask: Show last 4 characters for audit_team\nCREATE OR REPLACE FUNCTION `main`.`finance`.mask_transactions_birth_date_audit_team(val STRING)\nRETURNS STRING\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('audit_team'),\n  CONCAT('***-**-', RIGHT(val, 4)),\n  val\n);\n\nALTER TABLE `main`.`finance`.`transactions`\nALTER COLUMN birth_date SET MASK `main`.`finance`.mask_transactions_birth_date_audit_team;\n\n-- Column Mask: Show last 4 characters for audit_team\nCREATE OR REPLACE FUNCTION `main`.`finance`.mask_accounts_account_number_audit_team(val STRING)\nRETURNS STRING\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('audit_team'),\n  CONCAT('***-**-', RIGHT(val, 4)),\n  val\n);\n\nALTER TABLE `main`.`finance`.`accounts`\nALTER COLUMN account_number SET MASK `main`.`finance`.mask_accounts_account_number_audit_team;\n\n-- Column Mask: Show last 4 characters for audit_team\nCREATE OR REPLACE FUNCTION `main`.`finance`.mask_accounts_transaction_amount_audit_team(val STRING)\nRETURNS STRING\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('audit_team'),\n  CONCAT('***-**-', RIGHT(val, 4)),\n  val\n);\n\nALTER TABLE `main`.`finance`.`accounts`\nALTER COLUMN transaction_amount SET MASK `main`.`finance`.mask_accounts_transaction_amount_audit_team;\n\n-- Column Mask: Show last 4 characters for audit_team\nCREATE OR REPLACE FUNCTION `main`.`finance`.mask_accounts_customer_id_audit_team(val STRING)\nRETURNS STRING\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('audit_team'),\n  CONCAT('***-**-', RIGHT(val, 4)),\n  val\n);\n\nALTER TABLE `main`.`finance`.`accounts`\nALTER COLUMN customer_id SET MASK `main`.`finance`.mask_accounts_customer_id_audit_team;\n\n-- Column Mask: Show last 4 characters for audit_team\nCREATE OR REPLACE FUNCTION `main`.`finance`.mask_accounts_birth_date_audit_team(val STRING)\nRETURNS STRING\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('audit_team'),\n  CONCAT('***-**-', RIGHT(val, 4)),\n  val\n);\n\nALTER TABLE `main`.`finance`.`accounts`\nALTER COLUMN birth_date SET MASK `main`.`finance`.mask_accounts_birth_date_audit_team;\n\n-- \u2705 No masking for finance_leadership on account_number (full access granted)\n-- No SQL needed \u2014 this principal sees unmasked data\n\n-- \u2705 No masking for finance_leadership on transaction_amount (full access granted)\n-- No SQL needed \u2014 this principal sees unmasked data\n\n-- \u2705 No masking for finance_leadership on customer_id (full access granted)\n-- No SQL needed \u2014 this principal sees unmasked data\n\n-- \u2705 No masking for finance_leadership on birth_date (full access granted)\n-- No SQL needed \u2014 this principal sees unmasked data\n\n-- \u2705 No masking for finance_leadership on account_number (full access granted)\n-- No SQL needed \u2014 this principal sees unmasked data\n\n-- \u2705 No masking for finance_leadership on transaction_amount (full access granted)\n-- No SQL needed \u2014 this principal sees unmasked data\n\n-- \u2705 No masking for finance_leadership on customer_id (full access granted)\n-- No SQL needed \u2014 this principal sees unmasked data\n\n-- \u2705 No masking for finance_leadership on birth_date (full access granted)\n-- No SQL needed \u2014 this principal sees unmasked data",
-  "stats": {
-    "total": 32,
-    "grants": 0,
-    "denies": 0,
-    "rowFilters": 0,
-    "masks": 32,
-    "hdfsGrants": 0,
-    "hbaseGrants": 0,
-    "udfGrants": 0,
-    "tagSets": 0,
-    "tagGrants": 0,
-    "tagPlaceholders": 0,
-    "approved": 0,
-    "needsReview": 32,
-    "pending": 0,
-    "rejected": 0,
-    "disabled": 0,
-    "schemaCount": 1,
-    "principalCount": 4,
-    "schemas": [
-      "finance"
-    ],
-    "principals": [
-      "audit_team",
-      "finance_leadership",
-      "junior_analysts",
-      "marketing_team"
-    ],
-    "notTranslatable": 0
-  }
+  "identity_map": {},
+  "generated_sql": "-- \u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n-- \u2551  Unity Catalog Migration Script                          \u2551\n-- \u2551  Generated by Ranger \u2192 UC Migrator                       \u2551\n-- \u2551  Source: hive_prod\n-- \u2551  Target Catalog: main\n-- \u2551  Date: 2026-06-02\n-- \u2551  Policies: 32 of 32\n-- \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\n\n-- \u26a0 CONFLICT NOTICE: 8 row-filter/column-mask conflict(s) detected.\n-- Unity Catalog supports only ONE row filter per table and ONE mask per column.\n-- Conflicting items have been automatically MERGED into combined CASE functions below.\n-- Review each merged function carefully before executing.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 MERGED COLUMN MASK \u2014 Unity Catalog supports only ONE mask per column.\n-- Multiple Ranger principals for `finance`.`transactions`.account_number have been combined.\n-- Principals merged (4): junior_analysts, marketing_team, audit_team, finance_leadership\n-- Function parameter is STRING. If the actual column type differs, adjust the signature.\n-- DATE_YEAR branches use TRY_CAST(val AS DATE) \u2014 verify the column holds date strings.\n-- \u26a0 Custom Ranger valueExpr detected. Auto-adaptation is attempted:\n--   \u2022 CAST('<non-numeric>' AS <type>) \u2192 NULL\n--   \u2022 Bare column references matching the masked column \u2192 val\n--   Branches with cross-column references (other columns) cannot be adapted \u2014\n--   they use a '***REDACTED***' fallback and must be rewritten manually.\n\nCREATE OR REPLACE FUNCTION `main`.`finance`.mask_transactions_account_number(val STRING)\nRETURNS STRING\nRETURN\n  CASE\n    -- \u26d4 BRANCH OMITTED \u2014 custom expression has cross-column references (principal: junior_analysts)\n    --   Original Ranger expression: CASE WHEN transaction_amount < 1000 THEN transaction_amount ELSE CAST('XXXXX' AS DECIMAL) END\n    --   Issue: Cross-column reference(s): transaction_amount. UC mask functions can only access 'val' (the current column value) \u2014 other column references cannot be resolved at mask-evaluation time. Rewrite this branch manually.\n    --   Partial fixes applied: CAST('XXXXX' AS DECIMAL) \u2192 NULL ('XXXXX' is not a valid DECIMAL \u2014 would fail at parse time)\n    --   Partially adapted (still not valid): CASE WHEN transaction_amount < 1000 THEN transaction_amount ELSE NULL END\n    --   ACTION REQUIRED: Replace the WHEN branch below with a valid UC expression.\n    -- WHEN IS_ACCOUNT_GROUP_MEMBER('junior_analysts') THEN <rewrite this expression manually>\n    WHEN IS_ACCOUNT_GROUP_MEMBER('junior_analysts') THEN '***REDACTED***'  -- conservative fallback, rewrite before executing\n    WHEN IS_ACCOUNT_GROUP_MEMBER('marketing_team') THEN CAST(MAKE_DATE(YEAR(TRY_CAST(val AS DATE)), 1, 1) AS STRING)\n    WHEN IS_ACCOUNT_GROUP_MEMBER('audit_team') THEN CONCAT('***-**-', RIGHT(val, 4))\n    WHEN IS_ACCOUNT_GROUP_MEMBER('finance_leadership') THEN val  -- MASK_NONE: no masking for this principal\n    ELSE val  -- no masking for other principals\n  END;\n\nALTER TABLE `main`.`finance`.`transactions`\nALTER COLUMN account_number SET MASK `main`.`finance`.mask_transactions_account_number;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 MERGED COLUMN MASK \u2014 Unity Catalog supports only ONE mask per column.\n-- Multiple Ranger principals for `finance`.`transactions`.transaction_amount have been combined.\n-- Principals merged (4): junior_analysts, marketing_team, audit_team, finance_leadership\n-- Function parameter is STRING. If the actual column type differs, adjust the signature.\n-- DATE_YEAR branches use TRY_CAST(val AS DATE) \u2014 verify the column holds date strings.\n-- \u26a0 Custom Ranger valueExpr detected. Auto-adaptation is attempted:\n--   \u2022 CAST('<non-numeric>' AS <type>) \u2192 NULL\n--   \u2022 Bare column references matching the masked column \u2192 val\n--   Branches with cross-column references (other columns) cannot be adapted \u2014\n--   they use a '***REDACTED***' fallback and must be rewritten manually.\n\nCREATE OR REPLACE FUNCTION `main`.`finance`.mask_transactions_transaction_amount(val STRING)\nRETURNS STRING\nRETURN\n  CASE\n    -- \u26a0 Auto-adapted: CAST('XXXXX' AS DECIMAL) \u2192 NULL ('XXXXX' is not a valid DECIMAL \u2014 would fail at parse time); Column reference `transaction_amount` \u2192 `val` (the mask function parameter)\n    -- Original: CASE WHEN transaction_amount < 1000 THEN transaction_amount ELSE CAST('XXXXX' AS DECIMAL) END\n    WHEN IS_ACCOUNT_GROUP_MEMBER('junior_analysts') THEN CASE WHEN val < 1000 THEN val ELSE NULL END\n    WHEN IS_ACCOUNT_GROUP_MEMBER('marketing_team') THEN CAST(MAKE_DATE(YEAR(TRY_CAST(val AS DATE)), 1, 1) AS STRING)\n    WHEN IS_ACCOUNT_GROUP_MEMBER('audit_team') THEN CONCAT('***-**-', RIGHT(val, 4))\n    WHEN IS_ACCOUNT_GROUP_MEMBER('finance_leadership') THEN val  -- MASK_NONE: no masking for this principal\n    ELSE val  -- no masking for other principals\n  END;\n\nALTER TABLE `main`.`finance`.`transactions`\nALTER COLUMN transaction_amount SET MASK `main`.`finance`.mask_transactions_transaction_amount;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 MERGED COLUMN MASK \u2014 Unity Catalog supports only ONE mask per column.\n-- Multiple Ranger principals for `finance`.`transactions`.customer_id have been combined.\n-- Principals merged (4): junior_analysts, marketing_team, audit_team, finance_leadership\n-- Function parameter is STRING. If the actual column type differs, adjust the signature.\n-- DATE_YEAR branches use TRY_CAST(val AS DATE) \u2014 verify the column holds date strings.\n-- \u26a0 Custom Ranger valueExpr detected. Auto-adaptation is attempted:\n--   \u2022 CAST('<non-numeric>' AS <type>) \u2192 NULL\n--   \u2022 Bare column references matching the masked column \u2192 val\n--   Branches with cross-column references (other columns) cannot be adapted \u2014\n--   they use a '***REDACTED***' fallback and must be rewritten manually.\n\nCREATE OR REPLACE FUNCTION `main`.`finance`.mask_transactions_customer_id(val STRING)\nRETURNS STRING\nRETURN\n  CASE\n    -- \u26d4 BRANCH OMITTED \u2014 custom expression has cross-column references (principal: junior_analysts)\n    --   Original Ranger expression: CASE WHEN transaction_amount < 1000 THEN transaction_amount ELSE CAST('XXXXX' AS DECIMAL) END\n    --   Issue: Cross-column reference(s): transaction_amount. UC mask functions can only access 'val' (the current column value) \u2014 other column references cannot be resolved at mask-evaluation time. Rewrite this branch manually.\n    --   Partial fixes applied: CAST('XXXXX' AS DECIMAL) \u2192 NULL ('XXXXX' is not a valid DECIMAL \u2014 would fail at parse time)\n    --   Partially adapted (still not valid): CASE WHEN transaction_amount < 1000 THEN transaction_amount ELSE NULL END\n    --   ACTION REQUIRED: Replace the WHEN branch below with a valid UC expression.\n    -- WHEN IS_ACCOUNT_GROUP_MEMBER('junior_analysts') THEN <rewrite this expression manually>\n    WHEN IS_ACCOUNT_GROUP_MEMBER('junior_analysts') THEN '***REDACTED***'  -- conservative fallback, rewrite before executing\n    WHEN IS_ACCOUNT_GROUP_MEMBER('marketing_team') THEN CAST(MAKE_DATE(YEAR(TRY_CAST(val AS DATE)), 1, 1) AS STRING)\n    WHEN IS_ACCOUNT_GROUP_MEMBER('audit_team') THEN CONCAT('***-**-', RIGHT(val, 4))\n    WHEN IS_ACCOUNT_GROUP_MEMBER('finance_leadership') THEN val  -- MASK_NONE: no masking for this principal\n    ELSE val  -- no masking for other principals\n  END;\n\nALTER TABLE `main`.`finance`.`transactions`\nALTER COLUMN customer_id SET MASK `main`.`finance`.mask_transactions_customer_id;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 MERGED COLUMN MASK \u2014 Unity Catalog supports only ONE mask per column.\n-- Multiple Ranger principals for `finance`.`transactions`.birth_date have been combined.\n-- Principals merged (4): junior_analysts, marketing_team, audit_team, finance_leadership\n-- Function parameter is STRING. If the actual column type differs, adjust the signature.\n-- DATE_YEAR branches use TRY_CAST(val AS DATE) \u2014 verify the column holds date strings.\n-- \u26a0 Custom Ranger valueExpr detected. Auto-adaptation is attempted:\n--   \u2022 CAST('<non-numeric>' AS <type>) \u2192 NULL\n--   \u2022 Bare column references matching the masked column \u2192 val\n--   Branches with cross-column references (other columns) cannot be adapted \u2014\n--   they use a '***REDACTED***' fallback and must be rewritten manually.\n\nCREATE OR REPLACE FUNCTION `main`.`finance`.mask_transactions_birth_date(val STRING)\nRETURNS STRING\nRETURN\n  CASE\n    -- \u26d4 BRANCH OMITTED \u2014 custom expression has cross-column references (principal: junior_analysts)\n    --   Original Ranger expression: CASE WHEN transaction_amount < 1000 THEN transaction_amount ELSE CAST('XXXXX' AS DECIMAL) END\n    --   Issue: Cross-column reference(s): transaction_amount. UC mask functions can only access 'val' (the current column value) \u2014 other column references cannot be resolved at mask-evaluation time. Rewrite this branch manually.\n    --   Partial fixes applied: CAST('XXXXX' AS DECIMAL) \u2192 NULL ('XXXXX' is not a valid DECIMAL \u2014 would fail at parse time)\n    --   Partially adapted (still not valid): CASE WHEN transaction_amount < 1000 THEN transaction_amount ELSE NULL END\n    --   ACTION REQUIRED: Replace the WHEN branch below with a valid UC expression.\n    -- WHEN IS_ACCOUNT_GROUP_MEMBER('junior_analysts') THEN <rewrite this expression manually>\n    WHEN IS_ACCOUNT_GROUP_MEMBER('junior_analysts') THEN '***REDACTED***'  -- conservative fallback, rewrite before executing\n    WHEN IS_ACCOUNT_GROUP_MEMBER('marketing_team') THEN CAST(MAKE_DATE(YEAR(TRY_CAST(val AS DATE)), 1, 1) AS STRING)\n    WHEN IS_ACCOUNT_GROUP_MEMBER('audit_team') THEN CONCAT('***-**-', RIGHT(val, 4))\n    WHEN IS_ACCOUNT_GROUP_MEMBER('finance_leadership') THEN val  -- MASK_NONE: no masking for this principal\n    ELSE val  -- no masking for other principals\n  END;\n\nALTER TABLE `main`.`finance`.`transactions`\nALTER COLUMN birth_date SET MASK `main`.`finance`.mask_transactions_birth_date;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 MERGED COLUMN MASK \u2014 Unity Catalog supports only ONE mask per column.\n-- Multiple Ranger principals for `finance`.`accounts`.account_number have been combined.\n-- Principals merged (4): junior_analysts, marketing_team, audit_team, finance_leadership\n-- Function parameter is STRING. If the actual column type differs, adjust the signature.\n-- DATE_YEAR branches use TRY_CAST(val AS DATE) \u2014 verify the column holds date strings.\n-- \u26a0 Custom Ranger valueExpr detected. Auto-adaptation is attempted:\n--   \u2022 CAST('<non-numeric>' AS <type>) \u2192 NULL\n--   \u2022 Bare column references matching the masked column \u2192 val\n--   Branches with cross-column references (other columns) cannot be adapted \u2014\n--   they use a '***REDACTED***' fallback and must be rewritten manually.\n\nCREATE OR REPLACE FUNCTION `main`.`finance`.mask_accounts_account_number(val STRING)\nRETURNS STRING\nRETURN\n  CASE\n    -- \u26d4 BRANCH OMITTED \u2014 custom expression has cross-column references (principal: junior_analysts)\n    --   Original Ranger expression: CASE WHEN transaction_amount < 1000 THEN transaction_amount ELSE CAST('XXXXX' AS DECIMAL) END\n    --   Issue: Cross-column reference(s): transaction_amount. UC mask functions can only access 'val' (the current column value) \u2014 other column references cannot be resolved at mask-evaluation time. Rewrite this branch manually.\n    --   Partial fixes applied: CAST('XXXXX' AS DECIMAL) \u2192 NULL ('XXXXX' is not a valid DECIMAL \u2014 would fail at parse time)\n    --   Partially adapted (still not valid): CASE WHEN transaction_amount < 1000 THEN transaction_amount ELSE NULL END\n    --   ACTION REQUIRED: Replace the WHEN branch below with a valid UC expression.\n    -- WHEN IS_ACCOUNT_GROUP_MEMBER('junior_analysts') THEN <rewrite this expression manually>\n    WHEN IS_ACCOUNT_GROUP_MEMBER('junior_analysts') THEN '***REDACTED***'  -- conservative fallback, rewrite before executing\n    WHEN IS_ACCOUNT_GROUP_MEMBER('marketing_team') THEN CAST(MAKE_DATE(YEAR(TRY_CAST(val AS DATE)), 1, 1) AS STRING)\n    WHEN IS_ACCOUNT_GROUP_MEMBER('audit_team') THEN CONCAT('***-**-', RIGHT(val, 4))\n    WHEN IS_ACCOUNT_GROUP_MEMBER('finance_leadership') THEN val  -- MASK_NONE: no masking for this principal\n    ELSE val  -- no masking for other principals\n  END;\n\nALTER TABLE `main`.`finance`.`accounts`\nALTER COLUMN account_number SET MASK `main`.`finance`.mask_accounts_account_number;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 MERGED COLUMN MASK \u2014 Unity Catalog supports only ONE mask per column.\n-- Multiple Ranger principals for `finance`.`accounts`.transaction_amount have been combined.\n-- Principals merged (4): junior_analysts, marketing_team, audit_team, finance_leadership\n-- Function parameter is STRING. If the actual column type differs, adjust the signature.\n-- DATE_YEAR branches use TRY_CAST(val AS DATE) \u2014 verify the column holds date strings.\n-- \u26a0 Custom Ranger valueExpr detected. Auto-adaptation is attempted:\n--   \u2022 CAST('<non-numeric>' AS <type>) \u2192 NULL\n--   \u2022 Bare column references matching the masked column \u2192 val\n--   Branches with cross-column references (other columns) cannot be adapted \u2014\n--   they use a '***REDACTED***' fallback and must be rewritten manually.\n\nCREATE OR REPLACE FUNCTION `main`.`finance`.mask_accounts_transaction_amount(val STRING)\nRETURNS STRING\nRETURN\n  CASE\n    -- \u26a0 Auto-adapted: CAST('XXXXX' AS DECIMAL) \u2192 NULL ('XXXXX' is not a valid DECIMAL \u2014 would fail at parse time); Column reference `transaction_amount` \u2192 `val` (the mask function parameter)\n    -- Original: CASE WHEN transaction_amount < 1000 THEN transaction_amount ELSE CAST('XXXXX' AS DECIMAL) END\n    WHEN IS_ACCOUNT_GROUP_MEMBER('junior_analysts') THEN CASE WHEN val < 1000 THEN val ELSE NULL END\n    WHEN IS_ACCOUNT_GROUP_MEMBER('marketing_team') THEN CAST(MAKE_DATE(YEAR(TRY_CAST(val AS DATE)), 1, 1) AS STRING)\n    WHEN IS_ACCOUNT_GROUP_MEMBER('audit_team') THEN CONCAT('***-**-', RIGHT(val, 4))\n    WHEN IS_ACCOUNT_GROUP_MEMBER('finance_leadership') THEN val  -- MASK_NONE: no masking for this principal\n    ELSE val  -- no masking for other principals\n  END;\n\nALTER TABLE `main`.`finance`.`accounts`\nALTER COLUMN transaction_amount SET MASK `main`.`finance`.mask_accounts_transaction_amount;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 MERGED COLUMN MASK \u2014 Unity Catalog supports only ONE mask per column.\n-- Multiple Ranger principals for `finance`.`accounts`.customer_id have been combined.\n-- Principals merged (4): junior_analysts, marketing_team, audit_team, finance_leadership\n-- Function parameter is STRING. If the actual column type differs, adjust the signature.\n-- DATE_YEAR branches use TRY_CAST(val AS DATE) \u2014 verify the column holds date strings.\n-- \u26a0 Custom Ranger valueExpr detected. Auto-adaptation is attempted:\n--   \u2022 CAST('<non-numeric>' AS <type>) \u2192 NULL\n--   \u2022 Bare column references matching the masked column \u2192 val\n--   Branches with cross-column references (other columns) cannot be adapted \u2014\n--   they use a '***REDACTED***' fallback and must be rewritten manually.\n\nCREATE OR REPLACE FUNCTION `main`.`finance`.mask_accounts_customer_id(val STRING)\nRETURNS STRING\nRETURN\n  CASE\n    -- \u26d4 BRANCH OMITTED \u2014 custom expression has cross-column references (principal: junior_analysts)\n    --   Original Ranger expression: CASE WHEN transaction_amount < 1000 THEN transaction_amount ELSE CAST('XXXXX' AS DECIMAL) END\n    --   Issue: Cross-column reference(s): transaction_amount. UC mask functions can only access 'val' (the current column value) \u2014 other column references cannot be resolved at mask-evaluation time. Rewrite this branch manually.\n    --   Partial fixes applied: CAST('XXXXX' AS DECIMAL) \u2192 NULL ('XXXXX' is not a valid DECIMAL \u2014 would fail at parse time)\n    --   Partially adapted (still not valid): CASE WHEN transaction_amount < 1000 THEN transaction_amount ELSE NULL END\n    --   ACTION REQUIRED: Replace the WHEN branch below with a valid UC expression.\n    -- WHEN IS_ACCOUNT_GROUP_MEMBER('junior_analysts') THEN <rewrite this expression manually>\n    WHEN IS_ACCOUNT_GROUP_MEMBER('junior_analysts') THEN '***REDACTED***'  -- conservative fallback, rewrite before executing\n    WHEN IS_ACCOUNT_GROUP_MEMBER('marketing_team') THEN CAST(MAKE_DATE(YEAR(TRY_CAST(val AS DATE)), 1, 1) AS STRING)\n    WHEN IS_ACCOUNT_GROUP_MEMBER('audit_team') THEN CONCAT('***-**-', RIGHT(val, 4))\n    WHEN IS_ACCOUNT_GROUP_MEMBER('finance_leadership') THEN val  -- MASK_NONE: no masking for this principal\n    ELSE val  -- no masking for other principals\n  END;\n\nALTER TABLE `main`.`finance`.`accounts`\nALTER COLUMN customer_id SET MASK `main`.`finance`.mask_accounts_customer_id;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 MERGED COLUMN MASK \u2014 Unity Catalog supports only ONE mask per column.\n-- Multiple Ranger principals for `finance`.`accounts`.birth_date have been combined.\n-- Principals merged (4): junior_analysts, marketing_team, audit_team, finance_leadership\n-- Function parameter is STRING. If the actual column type differs, adjust the signature.\n-- DATE_YEAR branches use TRY_CAST(val AS DATE) \u2014 verify the column holds date strings.\n-- \u26a0 Custom Ranger valueExpr detected. Auto-adaptation is attempted:\n--   \u2022 CAST('<non-numeric>' AS <type>) \u2192 NULL\n--   \u2022 Bare column references matching the masked column \u2192 val\n--   Branches with cross-column references (other columns) cannot be adapted \u2014\n--   they use a '***REDACTED***' fallback and must be rewritten manually.\n\nCREATE OR REPLACE FUNCTION `main`.`finance`.mask_accounts_birth_date(val STRING)\nRETURNS STRING\nRETURN\n  CASE\n    -- \u26d4 BRANCH OMITTED \u2014 custom expression has cross-column references (principal: junior_analysts)\n    --   Original Ranger expression: CASE WHEN transaction_amount < 1000 THEN transaction_amount ELSE CAST('XXXXX' AS DECIMAL) END\n    --   Issue: Cross-column reference(s): transaction_amount. UC mask functions can only access 'val' (the current column value) \u2014 other column references cannot be resolved at mask-evaluation time. Rewrite this branch manually.\n    --   Partial fixes applied: CAST('XXXXX' AS DECIMAL) \u2192 NULL ('XXXXX' is not a valid DECIMAL \u2014 would fail at parse time)\n    --   Partially adapted (still not valid): CASE WHEN transaction_amount < 1000 THEN transaction_amount ELSE NULL END\n    --   ACTION REQUIRED: Replace the WHEN branch below with a valid UC expression.\n    -- WHEN IS_ACCOUNT_GROUP_MEMBER('junior_analysts') THEN <rewrite this expression manually>\n    WHEN IS_ACCOUNT_GROUP_MEMBER('junior_analysts') THEN '***REDACTED***'  -- conservative fallback, rewrite before executing\n    WHEN IS_ACCOUNT_GROUP_MEMBER('marketing_team') THEN CAST(MAKE_DATE(YEAR(TRY_CAST(val AS DATE)), 1, 1) AS STRING)\n    WHEN IS_ACCOUNT_GROUP_MEMBER('audit_team') THEN CONCAT('***-**-', RIGHT(val, 4))\n    WHEN IS_ACCOUNT_GROUP_MEMBER('finance_leadership') THEN val  -- MASK_NONE: no masking for this principal\n    ELSE val  -- no masking for other principals\n  END;\n\nALTER TABLE `main`.`finance`.`accounts`\nALTER COLUMN birth_date SET MASK `main`.`finance`.mask_accounts_birth_date;\n"
 }

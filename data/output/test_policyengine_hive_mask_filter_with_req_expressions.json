@@ -1,9 +1,178 @@
 {
-  "serviceName": "hivedev",
-  "catalogName": "main",
-  "clusterName": "unknown",
-  "totalRangerPolicies": 3,
-  "policyItems": [
+  "metadata": {
+    "timestamp": "2026-06-02T03:42:54.803494",
+    "service_name": "hivedev",
+    "cluster_name": "unknown",
+    "catalog_name": "main",
+    "source_file": "test_policyengine_hive_mask_filter_with_req_expressions.json",
+    "notes": ""
+  },
+  "parsed_data": {
+    "results": [
+      {
+        "id": "1-grant-*-*-public-2",
+        "rangerPolicyId": 1,
+        "rangerPolicyName": "db=*: audit-all-access",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "*",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "ALL PRIVILEGES"
+        ],
+        "principal": {
+          "type": "group",
+          "name": "public"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "1-grant-*-*-hive-3",
+        "rangerPolicyId": 1,
+        "rangerPolicyName": "db=*: audit-all-access",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "*",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "ALL PRIVILEGES"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "hive"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "1-grant-*-*-user1-4",
+        "rangerPolicyId": 1,
+        "rangerPolicyName": "db=*: audit-all-access",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "*",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "ALL PRIVILEGES"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "user1"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "1-grant-*-*-user2-5",
+        "rangerPolicyId": 1,
+        "rangerPolicyName": "db=*: audit-all-access",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "*",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "ALL PRIVILEGES"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "user2"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "101-mask-employee-personal-ssn-public-1",
+        "rangerPolicyId": 101,
+        "rangerPolicyName": "db=employee, table=personal, column=ssn: mask ssn column",
+        "rangerPolicyDesc": "",
+        "type": "column_mask",
+        "catalog": "main",
+        "schema": "employee",
+        "table": "personal",
+        "columns": [
+          "ssn"
+        ],
+        "privileges": [],
+        "principal": {
+          "type": "group",
+          "name": "public"
+        },
+        "allPrincipals": [
+          {
+            "type": "group",
+            "name": "public"
+          }
+        ],
+        "maskType": "CUSTOM",
+        "maskExpr": "CASE WHEN dept = '${{USER.dept}}' THEN {col} ELSE mask_show_last_n({col}, 4, 'x', 'x', 'x', -1, '1') END",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "201-rowfilter-employee-personal-public-1",
+        "rangerPolicyId": 201,
+        "rangerPolicyName": "db=employee, table=personal",
+        "rangerPolicyDesc": "",
+        "type": "row_filter",
+        "catalog": "main",
+        "schema": "employee",
+        "table": "personal",
+        "columns": null,
+        "privileges": [],
+        "principal": {
+          "type": "group",
+          "name": "public"
+        },
+        "allPrincipals": [
+          {
+            "type": "group",
+            "name": "public"
+          }
+        ],
+        "filterExpr": "dept='${{USER.dept}}'",
+        "enabled": true,
+        "status": "approved"
+      }
+    ],
+    "warnings": [],
+    "identities": [
+      {
+        "type": "group",
+        "name": "public"
+      },
+      {
+        "type": "user",
+        "name": "hive"
+      },
+      {
+        "type": "user",
+        "name": "user1"
+      },
+      {
+        "type": "user",
+        "name": "user2"
+      }
+    ],
+    "kerberosIssues": [],
+    "serviceName": "hivedev",
+    "serviceType": "hive",
+    "clusterName": "unknown",
+    "totalRangerPolicies": 3
+  },
+  "policy_items": [
     {
       "id": "1-grant-*-*-public-2",
       "rangerPolicyId": 1,
@@ -23,7 +192,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "1-grant-*-*-hive-3",
@@ -44,7 +213,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "1-grant-*-*-user1-4",
@@ -65,7 +234,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "1-grant-*-*-user2-5",
@@ -86,7 +255,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "101-mask-employee-personal-ssn-public-1",
@@ -114,7 +283,7 @@
       "maskType": "CUSTOM",
       "maskExpr": "CASE WHEN dept = '${{USER.dept}}' THEN {col} ELSE mask_show_last_n({col}, 4, 'x', 'x', 'x', -1, '1') END",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "201-rowfilter-employee-personal-public-1",
@@ -139,40 +308,9 @@
       ],
       "filterExpr": "dept='${{USER.dept}}'",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     }
   ],
-  "identityMap": {},
-  "generatedSQL": "-- \u26a0 Ranger policy targets database=* (all schemas in the cluster).\n-- UC equivalent is a catalog-level grant on `main`.\n-- Only USE CATALOG, CREATE SCHEMA, and ALL PRIVILEGES are valid at catalog level.\n-- Other privileges (SELECT, MODIFY, etc.) must be granted per-schema or per-table.\nGRANT USE CATALOG ON CATALOG `main` TO `public`;\nGRANT ALL PRIVILEGES ON CATALOG `main` TO `public`;\n\n-- \u26a0 Ranger policy targets database=* (all schemas in the cluster).\n-- UC equivalent is a catalog-level grant on `main`.\n-- Only USE CATALOG, CREATE SCHEMA, and ALL PRIVILEGES are valid at catalog level.\n-- Other privileges (SELECT, MODIFY, etc.) must be granted per-schema or per-table.\nGRANT USE CATALOG ON CATALOG `main` TO `hive@company.com`;\nGRANT ALL PRIVILEGES ON CATALOG `main` TO `hive@company.com`;\n\n-- \u26a0 Ranger policy targets database=* (all schemas in the cluster).\n-- UC equivalent is a catalog-level grant on `main`.\n-- Only USE CATALOG, CREATE SCHEMA, and ALL PRIVILEGES are valid at catalog level.\n-- Other privileges (SELECT, MODIFY, etc.) must be granted per-schema or per-table.\nGRANT USE CATALOG ON CATALOG `main` TO `user1@company.com`;\nGRANT ALL PRIVILEGES ON CATALOG `main` TO `user1@company.com`;\n\n-- \u26a0 Ranger policy targets database=* (all schemas in the cluster).\n-- UC equivalent is a catalog-level grant on `main`.\n-- Only USE CATALOG, CREATE SCHEMA, and ALL PRIVILEGES are valid at catalog level.\n-- Other privileges (SELECT, MODIFY, etc.) must be granted per-schema or per-table.\nGRANT USE CATALOG ON CATALOG `main` TO `user2@company.com`;\nGRANT ALL PRIVILEGES ON CATALOG `main` TO `user2@company.com`;\n\n-- Column Mask: Custom expression for public (review before executing)\nCREATE OR REPLACE FUNCTION `main`.`employee`.mask_personal_ssn_public(val STRING)\nRETURNS STRING\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('public'),\n  CASE WHEN dept = '${{USER.dept}}' THEN {col} ELSE mask_show_last_n({col}, 4, 'x', 'x', 'x', -1, '1') END,\n  val\n);\n\nALTER TABLE `main`.`employee`.`personal`\nALTER COLUMN ssn SET MASK `main`.`employee`.mask_personal_ssn_public;\n\n-- Row Filter for: public\n-- Original expression: dept='${{USER.dept}}'\n\nCREATE OR REPLACE FUNCTION `main`.`employee`.rf_personal_public(dept STRING)\nRETURNS BOOLEAN\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('public'),\n  dept='${{USER.dept}}',\n  TRUE  -- Allow access for principals not matching the condition\n);\n\nALTER TABLE `main`.`employee`.`personal`\nSET ROW FILTER `main`.`employee`.rf_personal_public ON (dept);",
-  "stats": {
-    "total": 6,
-    "grants": 4,
-    "denies": 0,
-    "rowFilters": 1,
-    "masks": 1,
-    "hdfsGrants": 0,
-    "hbaseGrants": 0,
-    "udfGrants": 0,
-    "tagSets": 0,
-    "tagGrants": 0,
-    "tagPlaceholders": 0,
-    "approved": 0,
-    "needsReview": 2,
-    "pending": 4,
-    "rejected": 0,
-    "disabled": 0,
-    "schemaCount": 2,
-    "principalCount": 4,
-    "schemas": [
-      "*",
-      "employee"
-    ],
-    "principals": [
-      "hive",
-      "public",
-      "user1",
-      "user2"
-    ],
-    "notTranslatable": 0
-  }
+  "identity_map": {},
+  "generated_sql": "-- \u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n-- \u2551  Unity Catalog Migration Script                          \u2551\n-- \u2551  Generated by Ranger \u2192 UC Migrator                       \u2551\n-- \u2551  Source: hivedev\n-- \u2551  Target Catalog: main\n-- \u2551  Date: 2026-06-02\n-- \u2551  Policies: 6 of 6\n-- \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=*: audit-all-access (Ranger ID: 1)\n-- Type: GRANT | Principal: public\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 Ranger policy targets database=* (all schemas in the cluster).\n-- UC equivalent is a catalog-level grant on `main`.\n-- Only USE CATALOG, CREATE SCHEMA, and ALL PRIVILEGES are valid at catalog level.\n-- Other privileges (SELECT, MODIFY, etc.) must be granted per-schema or per-table.\nGRANT USE CATALOG ON CATALOG `main` TO `public`;\nGRANT ALL PRIVILEGES ON CATALOG `main` TO `public`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=*: audit-all-access (Ranger ID: 1)\n-- Type: GRANT | Principal: hive\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 Ranger policy targets database=* (all schemas in the cluster).\n-- UC equivalent is a catalog-level grant on `main`.\n-- Only USE CATALOG, CREATE SCHEMA, and ALL PRIVILEGES are valid at catalog level.\n-- Other privileges (SELECT, MODIFY, etc.) must be granted per-schema or per-table.\nGRANT USE CATALOG ON CATALOG `main` TO `hive@company.com`;\nGRANT ALL PRIVILEGES ON CATALOG `main` TO `hive@company.com`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=*: audit-all-access (Ranger ID: 1)\n-- Type: GRANT | Principal: user1\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 Ranger policy targets database=* (all schemas in the cluster).\n-- UC equivalent is a catalog-level grant on `main`.\n-- Only USE CATALOG, CREATE SCHEMA, and ALL PRIVILEGES are valid at catalog level.\n-- Other privileges (SELECT, MODIFY, etc.) must be granted per-schema or per-table.\nGRANT USE CATALOG ON CATALOG `main` TO `user1@company.com`;\nGRANT ALL PRIVILEGES ON CATALOG `main` TO `user1@company.com`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=*: audit-all-access (Ranger ID: 1)\n-- Type: GRANT | Principal: user2\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 Ranger policy targets database=* (all schemas in the cluster).\n-- UC equivalent is a catalog-level grant on `main`.\n-- Only USE CATALOG, CREATE SCHEMA, and ALL PRIVILEGES are valid at catalog level.\n-- Other privileges (SELECT, MODIFY, etc.) must be granted per-schema or per-table.\nGRANT USE CATALOG ON CATALOG `main` TO `user2@company.com`;\nGRANT ALL PRIVILEGES ON CATALOG `main` TO `user2@company.com`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=employee, table=personal, column=ssn: mask ssn column (Ranger ID: 101)\n-- Type: COLUMN_MASK | Principal: public\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 COLUMN MASK NOT TRANSLATED \u2014 Ranger-specific constructs detected\n-- Policy:    db=employee, table=personal, column=ssn: mask ssn column\n-- Column:    ssn\n-- Principal: public\n-- Original expression: CASE WHEN dept = '${{USER.dept}}' THEN {col} ELSE mask_show_last_n({col}, 4, 'x', 'x', 'x', -1, '1') END\n--\n-- The expression contains constructs that have no Unity Catalog equivalent:\n--   \u2022 Request-context attribute(s) ${{USER.dept}}: Ranger substitutes these at query time from the user's identity attributes.\n--   \u2022 Unity Catalog has no equivalent mechanism.\n--   \u2022 Replace with IS_ACCOUNT_GROUP_MEMBER() checks or a lookup table join..\n--   \u2022 {col}: Ranger column placeholder \u2014 not valid SQL.\n--   \u2022 Replace with 'val' (the UC mask function parameter) or the literal column name..\n--   \u2022 Ranger/Hive built-in mask function(s): mask_show_last_n().\n--   \u2022 These are Hive UDFs not registered in Unity Catalog.\n--   \u2022 Rewrite using UC-native expressions (CONCAT, LEFT, RIGHT, SHA2, etc.)..\n--\n-- ACTION REQUIRED: Rewrite this mask expression manually using UC-native expressions.\n-- Common patterns:\n--   \u2022 {col} \u2192 replace with 'val' (the UC mask function parameter).\n--   \u2022 ${{USER.attr}} \u2192 use IS_ACCOUNT_GROUP_MEMBER() or a lookup table on current_user().\n--   \u2022 Ranger mask UDFs \u2192 replace with CONCAT, LEFT, RIGHT, SHA2, etc.\n-- Target function: `main`.`employee`.mask_personal_ssn_public\n--\n-- \u2705 SUGGESTED SAFE-FALLBACK SQL (conservative \u2014 applies masking to all users):\n-- The WHEN condition requiring request-context (${{USER.attr}}) has been dropped.\n-- This is MORE restrictive than the original: no user receives the unmasked value\n-- via the exemption condition. Verify this is acceptable before deploying.\n-- Ranger UDF calls are approximated with UC-native string functions.\n--\nCREATE OR REPLACE FUNCTION `main`.`employee`.mask_personal_ssn_public(val STRING)\nRETURNS STRING\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('public'),\n  CONCAT(REPEAT('x', GREATEST(0, LENGTH(val) - 4)), RIGHT(val, 4)),\n  val\n);\n\nALTER TABLE `main`.`employee`.`personal`\nALTER COLUMN ssn SET MASK `main`.`employee`.mask_personal_ssn_public;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=employee, table=personal (Ranger ID: 201)\n-- Type: ROW_FILTER | Principal: public\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 ROW FILTER NOT TRANSLATED \u2014 Ranger-specific constructs detected\n-- Policy:    db=employee, table=personal\n-- Principal: public\n-- Original expression: dept='${{USER.dept}}'\n--\n-- The expression contains constructs that have no Unity Catalog equivalent:\n--   \u2022 Request-context attribute(s) ${{USER.dept}}: Ranger substitutes these at query time from the user's identity attributes.\n--   \u2022 Unity Catalog has no equivalent mechanism.\n--   \u2022 Replace with IS_ACCOUNT_GROUP_MEMBER() checks or a lookup table join..\n--\n-- ACTION REQUIRED: Rewrite this row filter manually using UC-native expressions.\n-- Common patterns:\n--   \u2022 Attribute-based: use IS_ACCOUNT_GROUP_MEMBER() for group membership,\n--     or join an attribute lookup table on current_user().\n--   \u2022 {col} \u2192 replace with the column name or the 'val' parameter.\n--   \u2022 Ranger mask UDFs \u2192 replace with CONCAT, LEFT, RIGHT, SHA2, etc.\n-- Target function: `main`.`employee`.rf_personal_public\n"
 }

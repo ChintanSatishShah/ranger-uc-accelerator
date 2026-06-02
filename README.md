@@ -108,10 +108,7 @@ BEGIN
     SELECT table_name FROM main.information_schema.tables
     WHERE table_schema = 'sales' AND table_type IN ('BASE TABLE', 'EXTERNAL')
   ) DO
-    EXECUTE IMMEDIATE format(
-      'GRANT SELECT ON TABLE `main`.`sales`.`%s` TO `analyst_group`',
-      tbl.table_name
-    );
+    EXECUTE IMMEDIATE 'GRANT SELECT ON TABLE `main`.`sales`.`' || tbl.table_name || '` TO `analyst_group`';
   END FOR;
 END;
 ```

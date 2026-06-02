@@ -1,9 +1,102 @@
 {
-  "serviceName": "hbasedev",
-  "catalogName": "main",
-  "clusterName": "unknown",
-  "totalRangerPolicies": 2,
-  "policyItems": [
+  "metadata": {
+    "timestamp": "2026-06-02T03:42:54.790546",
+    "service_name": "hbasedev",
+    "cluster_name": "unknown",
+    "catalog_name": "main",
+    "source_file": "test_policyengine_hbase_namespace.json",
+    "notes": ""
+  },
+  "parsed_data": {
+    "results": [
+      {
+        "id": "1-hbase-user1-1",
+        "rangerPolicyId": 1,
+        "rangerPolicyName": "table=*; column-family=*; column=*: audit-all-access",
+        "rangerPolicyDesc": "",
+        "type": "hbase_grant",
+        "catalog": "main",
+        "schema": "_all_namespaces",
+        "table": null,
+        "col_families": [],
+        "privileges": [
+          "SELECT",
+          "MODIFY",
+          "CREATE",
+          "ALL PRIVILEGES"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "user1"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "2-hbase-user1-1",
+        "rangerPolicyId": 2,
+        "rangerPolicyName": "table=namespace_1:*; column-family=*; column=*: audit-all-access",
+        "rangerPolicyDesc": "",
+        "type": "hbase_grant",
+        "catalog": "main",
+        "schema": "namespace_1",
+        "table": null,
+        "col_families": [],
+        "privileges": [
+          "SELECT",
+          "MODIFY",
+          "CREATE",
+          "ALL PRIVILEGES"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "user1"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "2-hbase-hrt_qa-2",
+        "rangerPolicyId": 2,
+        "rangerPolicyName": "table=namespace_1:*; column-family=*; column=*: audit-all-access",
+        "rangerPolicyDesc": "",
+        "type": "hbase_grant",
+        "catalog": "main",
+        "schema": "namespace_1",
+        "table": null,
+        "col_families": [],
+        "privileges": [
+          "ALL PRIVILEGES"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "hrt_qa"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      }
+    ],
+    "warnings": [],
+    "identities": [
+      {
+        "type": "user",
+        "name": "hrt_qa"
+      },
+      {
+        "type": "user",
+        "name": "user1"
+      }
+    ],
+    "kerberosIssues": [],
+    "serviceName": "hbasedev",
+    "serviceType": "hbase",
+    "clusterName": "unknown",
+    "totalRangerPolicies": 2
+  },
+  "policy_items": [
     {
       "id": "1-hbase-user1-1",
       "rangerPolicyId": 1,
@@ -26,7 +119,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "2-hbase-user1-1",
@@ -50,7 +143,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "2-hbase-hrt_qa-2",
@@ -71,38 +164,9 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     }
   ],
-  "identityMap": {},
-  "generatedSQL": "-- \u26a0 HBase wildcard (*) spans all namespaces \u2014 cannot be automatically translated.\n-- Grant on specific schemas under catalog main manually.\n\n-- \u26a0 HBase wildcard namespace:* \u2014 grant on schema `namespace_1` covers all current AND future tables, broader than the original HBase namespace policy.\nGRANT USE CATALOG ON CATALOG `main` TO `user1@company.com`;\nGRANT USE SCHEMA ON SCHEMA `main`.`namespace_1` TO `user1@company.com`;\nGRANT SELECT ON SCHEMA `main`.`namespace_1` TO `user1@company.com`;\nGRANT MODIFY ON SCHEMA `main`.`namespace_1` TO `user1@company.com`;\nGRANT CREATE TABLE ON SCHEMA `main`.`namespace_1` TO `user1@company.com`;\nGRANT ALL PRIVILEGES ON SCHEMA `main`.`namespace_1` TO `user1@company.com`;\n\n-- \u26a0 HBase wildcard namespace:* \u2014 grant on schema `namespace_1` covers all current AND future tables, broader than the original HBase namespace policy.\nGRANT USE CATALOG ON CATALOG `main` TO `hrt_qa@company.com`;\nGRANT USE SCHEMA ON SCHEMA `main`.`namespace_1` TO `hrt_qa@company.com`;\nGRANT ALL PRIVILEGES ON SCHEMA `main`.`namespace_1` TO `hrt_qa@company.com`;",
-  "stats": {
-    "total": 3,
-    "grants": 0,
-    "denies": 0,
-    "rowFilters": 0,
-    "masks": 0,
-    "hdfsGrants": 0,
-    "hbaseGrants": 3,
-    "udfGrants": 0,
-    "tagSets": 0,
-    "tagGrants": 0,
-    "tagPlaceholders": 0,
-    "approved": 0,
-    "needsReview": 1,
-    "pending": 2,
-    "rejected": 0,
-    "disabled": 0,
-    "schemaCount": 2,
-    "principalCount": 2,
-    "schemas": [
-      "_all_namespaces",
-      "namespace_1"
-    ],
-    "principals": [
-      "hrt_qa",
-      "user1"
-    ],
-    "notTranslatable": 1
-  }
+  "identity_map": {},
+  "generated_sql": "-- \u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n-- \u2551  Unity Catalog Migration Script                          \u2551\n-- \u2551  Generated by Ranger \u2192 UC Migrator                       \u2551\n-- \u2551  Source: hbasedev\n-- \u2551  Target Catalog: main\n-- \u2551  Date: 2026-06-02\n-- \u2551  Policies: 3 of 3\n-- \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: table=*; column-family=*; column=*: audit-all-access (Ranger ID: 1)\n-- Type: HBASE_GRANT | Principal: user1\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 HBase wildcard (*) spans all namespaces \u2014 cannot be automatically translated.\n-- Grant on specific schemas under catalog main manually.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: table=namespace_1:*; column-family=*; column=*: audit-all-access (Ranger ID: 2)\n-- Type: HBASE_GRANT | Principal: user1\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 HBase wildcard namespace:* \u2014 grant on schema `namespace_1` covers all current AND future tables, broader than the original HBase namespace policy.\n-- SELECT and MODIFY are table-level privileges in UC \u2014 applied via loop below.\nGRANT USE CATALOG ON CATALOG `main` TO `user1@company.com`;\nGRANT USE SCHEMA ON SCHEMA `main`.`namespace_1` TO `user1@company.com`;\nGRANT CREATE TABLE ON SCHEMA `main`.`namespace_1` TO `user1@company.com`;\nGRANT ALL PRIVILEGES ON SCHEMA `main`.`namespace_1` TO `user1@company.com`;\n-- \u26a0 SELECT: table-level privilege \u2014 granted per-table via loop below.\n-- \u26a0 Tables added to `namespace_1` AFTER this script runs will NOT inherit this grant.\n-- \u26a0 Ranger wildcard table pattern: *  \u2192  SQL LIKE: '%'\n-- UC does not support wildcards in GRANT statements.\n-- The block below loops through all matching tables at runtime and applies the grant.\n-- Requires Databricks Runtime 14.0+ or a SQL Warehouse with scripting enabled.\nBEGIN\n  FOR tbl AS (\n    SELECT table_name\n    FROM `main`.information_schema.tables\n    WHERE table_catalog = 'main'\n      AND table_schema   = 'namespace_1'\n      AND table_name LIKE '%'\n  ) DO\n    EXECUTE IMMEDIATE 'GRANT SELECT ON TABLE `main`.`namespace_1`.`' || tbl.table_name || '` TO `user1@company.com`';\n  END FOR;\nEND;\n-- \u26a0 MODIFY: table-level privilege \u2014 granted per-table via loop below.\n-- \u26a0 Tables added to `namespace_1` AFTER this script runs will NOT inherit this grant.\n-- \u26a0 Ranger wildcard table pattern: *  \u2192  SQL LIKE: '%'\n-- UC does not support wildcards in GRANT statements.\n-- The block below loops through all matching tables at runtime and applies the grant.\n-- Requires Databricks Runtime 14.0+ or a SQL Warehouse with scripting enabled.\nBEGIN\n  FOR tbl AS (\n    SELECT table_name\n    FROM `main`.information_schema.tables\n    WHERE table_catalog = 'main'\n      AND table_schema   = 'namespace_1'\n      AND table_name LIKE '%'\n  ) DO\n    EXECUTE IMMEDIATE 'GRANT MODIFY ON TABLE `main`.`namespace_1`.`' || tbl.table_name || '` TO `user1@company.com`';\n  END FOR;\nEND;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: table=namespace_1:*; column-family=*; column=*: audit-all-access (Ranger ID: 2)\n-- Type: HBASE_GRANT | Principal: hrt_qa\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 HBase wildcard namespace:* \u2014 grant on schema `namespace_1` covers all current AND future tables, broader than the original HBase namespace policy.\n-- SELECT and MODIFY are table-level privileges in UC \u2014 applied via loop below.\nGRANT USE CATALOG ON CATALOG `main` TO `hrt_qa@company.com`;\nGRANT USE SCHEMA ON SCHEMA `main`.`namespace_1` TO `hrt_qa@company.com`;\nGRANT ALL PRIVILEGES ON SCHEMA `main`.`namespace_1` TO `hrt_qa@company.com`;\n"
 }

@@ -1,9 +1,150 @@
 {
-  "serviceName": "atlasdev",
-  "catalogName": "main",
-  "clusterName": "unknown",
-  "totalRangerPolicies": 5,
-  "policyItems": [
+  "metadata": {
+    "timestamp": "2026-06-02T03:42:54.787352",
+    "service_name": "atlasdev",
+    "cluster_name": "unknown",
+    "catalog_name": "main",
+    "source_file": "test_policyengine_atlas.json",
+    "notes": ""
+  },
+  "parsed_data": {
+    "results": [
+      {
+        "id": "1-grant-default-*-data-stewards-2",
+        "rangerPolicyId": 1,
+        "rangerPolicyName": "policy for DataSets",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "default",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "ENTITY-READ"
+        ],
+        "principal": {
+          "type": "group",
+          "name": "data-stewards"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "2-grant-default-*-hive-admins-2",
+        "rangerPolicyId": 2,
+        "rangerPolicyName": "policy for hive_table",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "default",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "ENTITY-READ"
+        ],
+        "principal": {
+          "type": "group",
+          "name": "hive-admins"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "10-grant-default-*-privacy-officers-2",
+        "rangerPolicyId": 10,
+        "rangerPolicyName": "policy for PII classification",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "default",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "ENTITY-READ"
+        ],
+        "principal": {
+          "type": "group",
+          "name": "privacy-officers"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "20-grant-default-*-email-admins-2",
+        "rangerPolicyId": 20,
+        "rangerPolicyName": "policy for EMAIL_PII classification",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "default",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "ENTITY-READ"
+        ],
+        "principal": {
+          "type": "group",
+          "name": "email-admins"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "3-grant-default-*-group1-2",
+        "rangerPolicyId": 3,
+        "rangerPolicyName": "policy for atlas resource matching",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "default",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "ENTITY-READ"
+        ],
+        "principal": {
+          "type": "group",
+          "name": "group1"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      }
+    ],
+    "warnings": [],
+    "identities": [
+      {
+        "type": "group",
+        "name": "data-stewards"
+      },
+      {
+        "type": "group",
+        "name": "email-admins"
+      },
+      {
+        "type": "group",
+        "name": "group1"
+      },
+      {
+        "type": "group",
+        "name": "hive-admins"
+      },
+      {
+        "type": "group",
+        "name": "privacy-officers"
+      }
+    ],
+    "kerberosIssues": [],
+    "serviceName": "atlasdev",
+    "serviceType": "hive",
+    "clusterName": "unknown",
+    "totalRangerPolicies": 5
+  },
+  "policy_items": [
     {
       "id": "1-grant-default-*-data-stewards-2",
       "rangerPolicyId": 1,
@@ -23,7 +164,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "2-grant-default-*-hive-admins-2",
@@ -44,7 +185,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "10-grant-default-*-privacy-officers-2",
@@ -65,7 +206,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "20-grant-default-*-email-admins-2",
@@ -86,7 +227,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "3-grant-default-*-group1-2",
@@ -107,40 +248,9 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     }
   ],
-  "identityMap": {},
-  "generatedSQL": "-- \u26a0 Ranger policy targeted table=* (all tables in `default`).\n-- UC schema-level grant applies to all current AND future tables in this schema \u2014 broader scope than the original Ranger policy.\n-- Review: consider explicit per-table grants for sensitive schemas.\nGRANT USE CATALOG ON CATALOG `main` TO `data-stewards`;\nGRANT USE SCHEMA ON SCHEMA `main`.`default` TO `data-stewards`;\nGRANT ENTITY-READ ON SCHEMA `main`.`default` TO `data-stewards`;\n\n-- \u26a0 Ranger policy targeted table=* (all tables in `default`).\n-- UC schema-level grant applies to all current AND future tables in this schema \u2014 broader scope than the original Ranger policy.\n-- Review: consider explicit per-table grants for sensitive schemas.\nGRANT USE CATALOG ON CATALOG `main` TO `hive-admins`;\nGRANT USE SCHEMA ON SCHEMA `main`.`default` TO `hive-admins`;\nGRANT ENTITY-READ ON SCHEMA `main`.`default` TO `hive-admins`;\n\n-- \u26a0 Ranger policy targeted table=* (all tables in `default`).\n-- UC schema-level grant applies to all current AND future tables in this schema \u2014 broader scope than the original Ranger policy.\n-- Review: consider explicit per-table grants for sensitive schemas.\nGRANT USE CATALOG ON CATALOG `main` TO `privacy-officers`;\nGRANT USE SCHEMA ON SCHEMA `main`.`default` TO `privacy-officers`;\nGRANT ENTITY-READ ON SCHEMA `main`.`default` TO `privacy-officers`;\n\n-- \u26a0 Ranger policy targeted table=* (all tables in `default`).\n-- UC schema-level grant applies to all current AND future tables in this schema \u2014 broader scope than the original Ranger policy.\n-- Review: consider explicit per-table grants for sensitive schemas.\nGRANT USE CATALOG ON CATALOG `main` TO `email-admins`;\nGRANT USE SCHEMA ON SCHEMA `main`.`default` TO `email-admins`;\nGRANT ENTITY-READ ON SCHEMA `main`.`default` TO `email-admins`;\n\n-- \u26a0 Ranger policy targeted table=* (all tables in `default`).\n-- UC schema-level grant applies to all current AND future tables in this schema \u2014 broader scope than the original Ranger policy.\n-- Review: consider explicit per-table grants for sensitive schemas.\nGRANT USE CATALOG ON CATALOG `main` TO `group1`;\nGRANT USE SCHEMA ON SCHEMA `main`.`default` TO `group1`;\nGRANT ENTITY-READ ON SCHEMA `main`.`default` TO `group1`;",
-  "stats": {
-    "total": 5,
-    "grants": 5,
-    "denies": 0,
-    "rowFilters": 0,
-    "masks": 0,
-    "hdfsGrants": 0,
-    "hbaseGrants": 0,
-    "udfGrants": 0,
-    "tagSets": 0,
-    "tagGrants": 0,
-    "tagPlaceholders": 0,
-    "approved": 0,
-    "needsReview": 0,
-    "pending": 5,
-    "rejected": 0,
-    "disabled": 0,
-    "schemaCount": 1,
-    "principalCount": 5,
-    "schemas": [
-      "default"
-    ],
-    "principals": [
-      "data-stewards",
-      "email-admins",
-      "group1",
-      "hive-admins",
-      "privacy-officers"
-    ],
-    "notTranslatable": 0
-  }
+  "identity_map": {},
+  "generated_sql": "-- \u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n-- \u2551  Unity Catalog Migration Script                          \u2551\n-- \u2551  Generated by Ranger \u2192 UC Migrator                       \u2551\n-- \u2551  Source: atlasdev\n-- \u2551  Target Catalog: main\n-- \u2551  Date: 2026-06-02\n-- \u2551  Policies: 5 of 5\n-- \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: policy for DataSets (Ranger ID: 1)\n-- Type: GRANT | Principal: data-stewards\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 Ranger policy targeted table=* (all tables in `default`).\n-- SELECT and MODIFY are table-level privileges in UC \u2014 they cannot be granted on SCHEMA.\n-- They are applied via a BEGIN...END FOR loop over all tables in the schema.\n-- Other privileges (ENTITY-READ) are granted directly on the schema.\nGRANT USE CATALOG ON CATALOG `main` TO `data-stewards`;\nGRANT USE SCHEMA ON SCHEMA `main`.`default` TO `data-stewards`;\n-- \u26a0 'ENTITY-READ' is a Ranger/service-specific privilege with no Unity Catalog equivalent. No GRANT is emitted. Review manually.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: policy for hive_table (Ranger ID: 2)\n-- Type: GRANT | Principal: hive-admins\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 Ranger policy targeted table=* (all tables in `default`).\n-- SELECT and MODIFY are table-level privileges in UC \u2014 they cannot be granted on SCHEMA.\n-- They are applied via a BEGIN...END FOR loop over all tables in the schema.\n-- Other privileges (ENTITY-READ) are granted directly on the schema.\nGRANT USE CATALOG ON CATALOG `main` TO `hive-admins`;\nGRANT USE SCHEMA ON SCHEMA `main`.`default` TO `hive-admins`;\n-- \u26a0 'ENTITY-READ' is a Ranger/service-specific privilege with no Unity Catalog equivalent. No GRANT is emitted. Review manually.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: policy for PII classification (Ranger ID: 10)\n-- Type: GRANT | Principal: privacy-officers\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 Ranger policy targeted table=* (all tables in `default`).\n-- SELECT and MODIFY are table-level privileges in UC \u2014 they cannot be granted on SCHEMA.\n-- They are applied via a BEGIN...END FOR loop over all tables in the schema.\n-- Other privileges (ENTITY-READ) are granted directly on the schema.\nGRANT USE CATALOG ON CATALOG `main` TO `privacy-officers`;\nGRANT USE SCHEMA ON SCHEMA `main`.`default` TO `privacy-officers`;\n-- \u26a0 'ENTITY-READ' is a Ranger/service-specific privilege with no Unity Catalog equivalent. No GRANT is emitted. Review manually.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: policy for EMAIL_PII classification (Ranger ID: 20)\n-- Type: GRANT | Principal: email-admins\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 Ranger policy targeted table=* (all tables in `default`).\n-- SELECT and MODIFY are table-level privileges in UC \u2014 they cannot be granted on SCHEMA.\n-- They are applied via a BEGIN...END FOR loop over all tables in the schema.\n-- Other privileges (ENTITY-READ) are granted directly on the schema.\nGRANT USE CATALOG ON CATALOG `main` TO `email-admins`;\nGRANT USE SCHEMA ON SCHEMA `main`.`default` TO `email-admins`;\n-- \u26a0 'ENTITY-READ' is a Ranger/service-specific privilege with no Unity Catalog equivalent. No GRANT is emitted. Review manually.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: policy for atlas resource matching (Ranger ID: 3)\n-- Type: GRANT | Principal: group1\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 Ranger policy targeted table=* (all tables in `default`).\n-- SELECT and MODIFY are table-level privileges in UC \u2014 they cannot be granted on SCHEMA.\n-- They are applied via a BEGIN...END FOR loop over all tables in the schema.\n-- Other privileges (ENTITY-READ) are granted directly on the schema.\nGRANT USE CATALOG ON CATALOG `main` TO `group1`;\nGRANT USE SCHEMA ON SCHEMA `main`.`default` TO `group1`;\n-- \u26a0 'ENTITY-READ' is a Ranger/service-specific privilege with no Unity Catalog equivalent. No GRANT is emitted. Review manually.\n"
 }

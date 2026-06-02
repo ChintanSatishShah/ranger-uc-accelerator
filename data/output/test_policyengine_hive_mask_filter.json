@@ -1,9 +1,337 @@
 {
-  "serviceName": "hivedev",
-  "catalogName": "main",
-  "clusterName": "unknown",
-  "totalRangerPolicies": 5,
-  "policyItems": [
+  "metadata": {
+    "timestamp": "2026-06-02T03:42:54.802555",
+    "service_name": "hivedev",
+    "cluster_name": "unknown",
+    "catalog_name": "main",
+    "source_file": "test_policyengine_hive_mask_filter.json",
+    "notes": ""
+  },
+  "parsed_data": {
+    "results": [
+      {
+        "id": "1-grant-*-*-public-2",
+        "rangerPolicyId": 1,
+        "rangerPolicyName": "db=*: audit-all-access",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "*",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "ALL PRIVILEGES"
+        ],
+        "principal": {
+          "type": "group",
+          "name": "public"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "1-grant-*-*-hive-3",
+        "rangerPolicyId": 1,
+        "rangerPolicyName": "db=*: audit-all-access",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "*",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "ALL PRIVILEGES"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "hive"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "1-grant-*-*-user1-4",
+        "rangerPolicyId": 1,
+        "rangerPolicyName": "db=*: audit-all-access",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "*",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "ALL PRIVILEGES"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "user1"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "1-grant-*-*-user2-5",
+        "rangerPolicyId": 1,
+        "rangerPolicyName": "db=*: audit-all-access",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "*",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "ALL PRIVILEGES"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "user2"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "101-mask-employee-personal-ssn-user1-1",
+        "rangerPolicyId": 101,
+        "rangerPolicyName": "db=employee, table=personal, column=ssn: mask ssn column",
+        "rangerPolicyDesc": "",
+        "type": "column_mask",
+        "catalog": "main",
+        "schema": "employee",
+        "table": "personal",
+        "columns": [
+          "ssn"
+        ],
+        "privileges": [],
+        "principal": {
+          "type": "user",
+          "name": "user1"
+        },
+        "allPrincipals": [
+          {
+            "type": "user",
+            "name": "user1"
+          }
+        ],
+        "maskType": "MASK",
+        "maskExpr": "",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "101-mask-employee-personal-ssn-user2-2",
+        "rangerPolicyId": 101,
+        "rangerPolicyName": "db=employee, table=personal, column=ssn: mask ssn column",
+        "rangerPolicyDesc": "",
+        "type": "column_mask",
+        "catalog": "main",
+        "schema": "employee",
+        "table": "personal",
+        "columns": [
+          "ssn"
+        ],
+        "privileges": [],
+        "principal": {
+          "type": "user",
+          "name": "user2"
+        },
+        "allPrincipals": [
+          {
+            "type": "user",
+            "name": "user2"
+          }
+        ],
+        "maskType": "SHUFFLE",
+        "maskExpr": "",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "102-mask-hr-employee-date_of_birth-user1-1",
+        "rangerPolicyId": 102,
+        "rangerPolicyName": "db=hr, table=employee, column=date_of_birth: mask date_of_birth column",
+        "rangerPolicyDesc": "",
+        "type": "column_mask",
+        "catalog": "main",
+        "schema": "hr",
+        "table": "employee",
+        "columns": [
+          "date_of_birth"
+        ],
+        "privileges": [],
+        "principal": {
+          "type": "user",
+          "name": "user1"
+        },
+        "allPrincipals": [
+          {
+            "type": "user",
+            "name": "user1"
+          }
+        ],
+        "maskType": "MASK",
+        "maskExpr": "",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "102-mask-hr-employee-date_of_birth-user2-2",
+        "rangerPolicyId": 102,
+        "rangerPolicyName": "db=hr, table=employee, column=date_of_birth: mask date_of_birth column",
+        "rangerPolicyDesc": "",
+        "type": "column_mask",
+        "catalog": "main",
+        "schema": "hr",
+        "table": "employee",
+        "columns": [
+          "date_of_birth"
+        ],
+        "privileges": [],
+        "principal": {
+          "type": "user",
+          "name": "user2"
+        },
+        "allPrincipals": [
+          {
+            "type": "user",
+            "name": "user2"
+          }
+        ],
+        "maskType": "SHUFFLE",
+        "maskExpr": "",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "201-rowfilter-employee-personal-user1-1",
+        "rangerPolicyId": 201,
+        "rangerPolicyName": "db=employee, table=personal",
+        "rangerPolicyDesc": "",
+        "type": "row_filter",
+        "catalog": "main",
+        "schema": "employee",
+        "table": "personal",
+        "columns": null,
+        "privileges": [],
+        "principal": {
+          "type": "user",
+          "name": "user1"
+        },
+        "allPrincipals": [
+          {
+            "type": "user",
+            "name": "user1"
+          }
+        ],
+        "filterExpr": "location='US'",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "201-rowfilter-employee-personal-user2-2",
+        "rangerPolicyId": 201,
+        "rangerPolicyName": "db=employee, table=personal",
+        "rangerPolicyDesc": "",
+        "type": "row_filter",
+        "catalog": "main",
+        "schema": "employee",
+        "table": "personal",
+        "columns": null,
+        "privileges": [],
+        "principal": {
+          "type": "user",
+          "name": "user2"
+        },
+        "allPrincipals": [
+          {
+            "type": "user",
+            "name": "user2"
+          }
+        ],
+        "filterExpr": "location='CA'",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "202-rowfilter-hr-employee-user1-1",
+        "rangerPolicyId": 202,
+        "rangerPolicyName": "db=hr, table=employee",
+        "rangerPolicyDesc": "",
+        "type": "row_filter",
+        "catalog": "main",
+        "schema": "hr",
+        "table": "employee",
+        "columns": null,
+        "privileges": [],
+        "principal": {
+          "type": "user",
+          "name": "user1"
+        },
+        "allPrincipals": [
+          {
+            "type": "user",
+            "name": "user1"
+          }
+        ],
+        "filterExpr": "dept='production'",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "202-rowfilter-hr-employee-user2-2",
+        "rangerPolicyId": 202,
+        "rangerPolicyName": "db=hr, table=employee",
+        "rangerPolicyDesc": "",
+        "type": "row_filter",
+        "catalog": "main",
+        "schema": "hr",
+        "table": "employee",
+        "columns": null,
+        "privileges": [],
+        "principal": {
+          "type": "user",
+          "name": "user2"
+        },
+        "allPrincipals": [
+          {
+            "type": "user",
+            "name": "user2"
+          }
+        ],
+        "filterExpr": "dept='purchase'",
+        "enabled": true,
+        "status": "approved"
+      }
+    ],
+    "warnings": [],
+    "identities": [
+      {
+        "type": "group",
+        "name": "public"
+      },
+      {
+        "type": "user",
+        "name": "hive"
+      },
+      {
+        "type": "user",
+        "name": "user1"
+      },
+      {
+        "type": "user",
+        "name": "user2"
+      }
+    ],
+    "kerberosIssues": [],
+    "serviceName": "hivedev",
+    "serviceType": "hive",
+    "clusterName": "unknown",
+    "totalRangerPolicies": 5
+  },
+  "policy_items": [
     {
       "id": "1-grant-*-*-public-2",
       "rangerPolicyId": 1,
@@ -23,7 +351,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "1-grant-*-*-hive-3",
@@ -44,7 +372,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "1-grant-*-*-user1-4",
@@ -65,7 +393,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "1-grant-*-*-user2-5",
@@ -86,7 +414,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "101-mask-employee-personal-ssn-user1-1",
@@ -114,7 +442,7 @@
       "maskType": "MASK",
       "maskExpr": "",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "101-mask-employee-personal-ssn-user2-2",
@@ -142,7 +470,7 @@
       "maskType": "SHUFFLE",
       "maskExpr": "",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "102-mask-hr-employee-date_of_birth-user1-1",
@@ -170,7 +498,7 @@
       "maskType": "MASK",
       "maskExpr": "",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "102-mask-hr-employee-date_of_birth-user2-2",
@@ -198,7 +526,7 @@
       "maskType": "SHUFFLE",
       "maskExpr": "",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "201-rowfilter-employee-personal-user1-1",
@@ -223,7 +551,7 @@
       ],
       "filterExpr": "location='US'",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "201-rowfilter-employee-personal-user2-2",
@@ -248,7 +576,7 @@
       ],
       "filterExpr": "location='CA'",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "202-rowfilter-hr-employee-user1-1",
@@ -273,7 +601,7 @@
       ],
       "filterExpr": "dept='production'",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "202-rowfilter-hr-employee-user2-2",
@@ -298,41 +626,9 @@
       ],
       "filterExpr": "dept='purchase'",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     }
   ],
-  "identityMap": {},
-  "generatedSQL": "-- \u26a0 Ranger policy targets database=* (all schemas in the cluster).\n-- UC equivalent is a catalog-level grant on `main`.\n-- Only USE CATALOG, CREATE SCHEMA, and ALL PRIVILEGES are valid at catalog level.\n-- Other privileges (SELECT, MODIFY, etc.) must be granted per-schema or per-table.\nGRANT USE CATALOG ON CATALOG `main` TO `public`;\nGRANT ALL PRIVILEGES ON CATALOG `main` TO `public`;\n\n-- \u26a0 Ranger policy targets database=* (all schemas in the cluster).\n-- UC equivalent is a catalog-level grant on `main`.\n-- Only USE CATALOG, CREATE SCHEMA, and ALL PRIVILEGES are valid at catalog level.\n-- Other privileges (SELECT, MODIFY, etc.) must be granted per-schema or per-table.\nGRANT USE CATALOG ON CATALOG `main` TO `hive@company.com`;\nGRANT ALL PRIVILEGES ON CATALOG `main` TO `hive@company.com`;\n\n-- \u26a0 Ranger policy targets database=* (all schemas in the cluster).\n-- UC equivalent is a catalog-level grant on `main`.\n-- Only USE CATALOG, CREATE SCHEMA, and ALL PRIVILEGES are valid at catalog level.\n-- Other privileges (SELECT, MODIFY, etc.) must be granted per-schema or per-table.\nGRANT USE CATALOG ON CATALOG `main` TO `user1@company.com`;\nGRANT ALL PRIVILEGES ON CATALOG `main` TO `user1@company.com`;\n\n-- \u26a0 Ranger policy targets database=* (all schemas in the cluster).\n-- UC equivalent is a catalog-level grant on `main`.\n-- Only USE CATALOG, CREATE SCHEMA, and ALL PRIVILEGES are valid at catalog level.\n-- Other privileges (SELECT, MODIFY, etc.) must be granted per-schema or per-table.\nGRANT USE CATALOG ON CATALOG `main` TO `user2@company.com`;\nGRANT ALL PRIVILEGES ON CATALOG `main` TO `user2@company.com`;\n\n-- Column Mask: Full redaction for user1@company.com\nCREATE OR REPLACE FUNCTION `main`.`employee`.mask_personal_ssn_user1_company_com(val STRING)\nRETURNS STRING\nRETURN IF(\n  current_user() = 'user1@company.com',\n  '***REDACTED***',\n  val\n);\n\nALTER TABLE `main`.`employee`.`personal`\nALTER COLUMN ssn SET MASK `main`.`employee`.mask_personal_ssn_user1_company_com;\n\n-- Column Mask: Full redaction for user2@company.com\nCREATE OR REPLACE FUNCTION `main`.`employee`.mask_personal_ssn_user2_company_com(val STRING)\nRETURNS STRING\nRETURN IF(\n  current_user() = 'user2@company.com',\n  '***REDACTED***',\n  val\n);\n\nALTER TABLE `main`.`employee`.`personal`\nALTER COLUMN ssn SET MASK `main`.`employee`.mask_personal_ssn_user2_company_com;\n\n-- Column Mask: Full redaction for user1@company.com\nCREATE OR REPLACE FUNCTION `main`.`hr`.mask_employee_date_of_birth_user1_company_com(val STRING)\nRETURNS STRING\nRETURN IF(\n  current_user() = 'user1@company.com',\n  '***REDACTED***',\n  val\n);\n\nALTER TABLE `main`.`hr`.`employee`\nALTER COLUMN date_of_birth SET MASK `main`.`hr`.mask_employee_date_of_birth_user1_company_com;\n\n-- Column Mask: Full redaction for user2@company.com\nCREATE OR REPLACE FUNCTION `main`.`hr`.mask_employee_date_of_birth_user2_company_com(val STRING)\nRETURNS STRING\nRETURN IF(\n  current_user() = 'user2@company.com',\n  '***REDACTED***',\n  val\n);\n\nALTER TABLE `main`.`hr`.`employee`\nALTER COLUMN date_of_birth SET MASK `main`.`hr`.mask_employee_date_of_birth_user2_company_com;\n\n-- Row Filter for: user1@company.com\n-- Original expression: location='US'\n\nCREATE OR REPLACE FUNCTION `main`.`employee`.rf_personal_user1_company_com(location STRING)\nRETURNS BOOLEAN\nRETURN IF(\n  current_user() = 'user1@company.com',\n  location='US',\n  TRUE  -- Allow access for principals not matching the condition\n);\n\nALTER TABLE `main`.`employee`.`personal`\nSET ROW FILTER `main`.`employee`.rf_personal_user1_company_com ON (location);\n\n-- Row Filter for: user2@company.com\n-- Original expression: location='CA'\n\nCREATE OR REPLACE FUNCTION `main`.`employee`.rf_personal_user2_company_com(location STRING)\nRETURNS BOOLEAN\nRETURN IF(\n  current_user() = 'user2@company.com',\n  location='CA',\n  TRUE  -- Allow access for principals not matching the condition\n);\n\nALTER TABLE `main`.`employee`.`personal`\nSET ROW FILTER `main`.`employee`.rf_personal_user2_company_com ON (location);\n\n-- Row Filter for: user1@company.com\n-- Original expression: dept='production'\n\nCREATE OR REPLACE FUNCTION `main`.`hr`.rf_employee_user1_company_com(dept STRING)\nRETURNS BOOLEAN\nRETURN IF(\n  current_user() = 'user1@company.com',\n  dept='production',\n  TRUE  -- Allow access for principals not matching the condition\n);\n\nALTER TABLE `main`.`hr`.`employee`\nSET ROW FILTER `main`.`hr`.rf_employee_user1_company_com ON (dept);\n\n-- Row Filter for: user2@company.com\n-- Original expression: dept='purchase'\n\nCREATE OR REPLACE FUNCTION `main`.`hr`.rf_employee_user2_company_com(dept STRING)\nRETURNS BOOLEAN\nRETURN IF(\n  current_user() = 'user2@company.com',\n  dept='purchase',\n  TRUE  -- Allow access for principals not matching the condition\n);\n\nALTER TABLE `main`.`hr`.`employee`\nSET ROW FILTER `main`.`hr`.rf_employee_user2_company_com ON (dept);",
-  "stats": {
-    "total": 12,
-    "grants": 4,
-    "denies": 0,
-    "rowFilters": 4,
-    "masks": 4,
-    "hdfsGrants": 0,
-    "hbaseGrants": 0,
-    "udfGrants": 0,
-    "tagSets": 0,
-    "tagGrants": 0,
-    "tagPlaceholders": 0,
-    "approved": 0,
-    "needsReview": 8,
-    "pending": 4,
-    "rejected": 0,
-    "disabled": 0,
-    "schemaCount": 3,
-    "principalCount": 4,
-    "schemas": [
-      "*",
-      "employee",
-      "hr"
-    ],
-    "principals": [
-      "hive",
-      "public",
-      "user1",
-      "user2"
-    ],
-    "notTranslatable": 0
-  }
+  "identity_map": {},
+  "generated_sql": "-- \u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n-- \u2551  Unity Catalog Migration Script                          \u2551\n-- \u2551  Generated by Ranger \u2192 UC Migrator                       \u2551\n-- \u2551  Source: hivedev\n-- \u2551  Target Catalog: main\n-- \u2551  Date: 2026-06-02\n-- \u2551  Policies: 12 of 12\n-- \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\n\n-- \u26a0 CONFLICT NOTICE: 4 row-filter/column-mask conflict(s) detected.\n-- Unity Catalog supports only ONE row filter per table and ONE mask per column.\n-- Conflicting items have been automatically MERGED into combined CASE functions below.\n-- Review each merged function carefully before executing.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 MERGED ROW FILTER \u2014 Unity Catalog supports only ONE row filter per table.\n-- Multiple Ranger principals for `employee`.`personal` have been combined into one function.\n-- Principals merged (2): user1@company.com, user2@company.com\n-- Each WHEN clause applies the original Ranger filter for that principal.\n\nCREATE OR REPLACE FUNCTION `main`.`employee`.rf_personal(location STRING)\nRETURNS BOOLEAN\nRETURN\n  CASE\n    WHEN current_user() = 'user1@company.com' THEN location='US'\n    WHEN current_user() = 'user2@company.com' THEN location='CA'\n    ELSE TRUE  -- allow access for all other principals\n  END;\n\nALTER TABLE `main`.`employee`.`personal`\nSET ROW FILTER `main`.`employee`.rf_personal ON (location);\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 MERGED ROW FILTER \u2014 Unity Catalog supports only ONE row filter per table.\n-- Multiple Ranger principals for `hr`.`employee` have been combined into one function.\n-- Principals merged (2): user1@company.com, user2@company.com\n-- Each WHEN clause applies the original Ranger filter for that principal.\n\nCREATE OR REPLACE FUNCTION `main`.`hr`.rf_employee(dept STRING)\nRETURNS BOOLEAN\nRETURN\n  CASE\n    WHEN current_user() = 'user1@company.com' THEN dept='production'\n    WHEN current_user() = 'user2@company.com' THEN dept='purchase'\n    ELSE TRUE  -- allow access for all other principals\n  END;\n\nALTER TABLE `main`.`hr`.`employee`\nSET ROW FILTER `main`.`hr`.rf_employee ON (dept);\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 MERGED COLUMN MASK \u2014 Unity Catalog supports only ONE mask per column.\n-- Multiple Ranger principals for `employee`.`personal`.ssn have been combined.\n-- Principals merged (2): user1@company.com, user2@company.com\n-- Function parameter is STRING. If the actual column type differs, adjust the signature.\n\nCREATE OR REPLACE FUNCTION `main`.`employee`.mask_personal_ssn(val STRING)\nRETURNS STRING\nRETURN\n  CASE\n    WHEN current_user() = 'user1@company.com' THEN '***REDACTED***'\n    WHEN current_user() = 'user2@company.com' THEN '***REDACTED***'\n    ELSE val  -- no masking for other principals\n  END;\n\nALTER TABLE `main`.`employee`.`personal`\nALTER COLUMN ssn SET MASK `main`.`employee`.mask_personal_ssn;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 MERGED COLUMN MASK \u2014 Unity Catalog supports only ONE mask per column.\n-- Multiple Ranger principals for `hr`.`employee`.date_of_birth have been combined.\n-- Principals merged (2): user1@company.com, user2@company.com\n-- Function parameter is STRING. If the actual column type differs, adjust the signature.\n\nCREATE OR REPLACE FUNCTION `main`.`hr`.mask_employee_date_of_birth(val STRING)\nRETURNS STRING\nRETURN\n  CASE\n    WHEN current_user() = 'user1@company.com' THEN '***REDACTED***'\n    WHEN current_user() = 'user2@company.com' THEN '***REDACTED***'\n    ELSE val  -- no masking for other principals\n  END;\n\nALTER TABLE `main`.`hr`.`employee`\nALTER COLUMN date_of_birth SET MASK `main`.`hr`.mask_employee_date_of_birth;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=*: audit-all-access (Ranger ID: 1)\n-- Type: GRANT | Principal: public\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 Ranger policy targets database=* (all schemas in the cluster).\n-- UC equivalent is a catalog-level grant on `main`.\n-- Only USE CATALOG, CREATE SCHEMA, and ALL PRIVILEGES are valid at catalog level.\n-- Other privileges (SELECT, MODIFY, etc.) must be granted per-schema or per-table.\nGRANT USE CATALOG ON CATALOG `main` TO `public`;\nGRANT ALL PRIVILEGES ON CATALOG `main` TO `public`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=*: audit-all-access (Ranger ID: 1)\n-- Type: GRANT | Principal: hive\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 Ranger policy targets database=* (all schemas in the cluster).\n-- UC equivalent is a catalog-level grant on `main`.\n-- Only USE CATALOG, CREATE SCHEMA, and ALL PRIVILEGES are valid at catalog level.\n-- Other privileges (SELECT, MODIFY, etc.) must be granted per-schema or per-table.\nGRANT USE CATALOG ON CATALOG `main` TO `hive@company.com`;\nGRANT ALL PRIVILEGES ON CATALOG `main` TO `hive@company.com`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=*: audit-all-access (Ranger ID: 1)\n-- Type: GRANT | Principal: user1\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 Ranger policy targets database=* (all schemas in the cluster).\n-- UC equivalent is a catalog-level grant on `main`.\n-- Only USE CATALOG, CREATE SCHEMA, and ALL PRIVILEGES are valid at catalog level.\n-- Other privileges (SELECT, MODIFY, etc.) must be granted per-schema or per-table.\nGRANT USE CATALOG ON CATALOG `main` TO `user1@company.com`;\nGRANT ALL PRIVILEGES ON CATALOG `main` TO `user1@company.com`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=*: audit-all-access (Ranger ID: 1)\n-- Type: GRANT | Principal: user2\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 Ranger policy targets database=* (all schemas in the cluster).\n-- UC equivalent is a catalog-level grant on `main`.\n-- Only USE CATALOG, CREATE SCHEMA, and ALL PRIVILEGES are valid at catalog level.\n-- Other privileges (SELECT, MODIFY, etc.) must be granted per-schema or per-table.\nGRANT USE CATALOG ON CATALOG `main` TO `user2@company.com`;\nGRANT ALL PRIVILEGES ON CATALOG `main` TO `user2@company.com`;\n"
 }

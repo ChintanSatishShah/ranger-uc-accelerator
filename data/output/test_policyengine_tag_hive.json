@@ -1,9 +1,253 @@
 {
-  "serviceName": "hivedev",
-  "catalogName": "main",
-  "clusterName": "unknown",
-  "totalRangerPolicies": 4,
-  "policyItems": [
+  "metadata": {
+    "timestamp": "2026-06-02T03:42:54.807704",
+    "service_name": "hivedev",
+    "cluster_name": "unknown",
+    "catalog_name": "main",
+    "source_file": "test_policyengine_tag_hive.json",
+    "notes": ""
+  },
+  "parsed_data": {
+    "results": [
+      {
+        "id": "101-grant-*-*-public-2",
+        "rangerPolicyId": 101,
+        "rangerPolicyName": "db=*: audit-all-access",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "*",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "ALL PRIVILEGES"
+        ],
+        "principal": {
+          "type": "group",
+          "name": "public"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "101-grant-*-*-hive-3",
+        "rangerPolicyId": 101,
+        "rangerPolicyName": "db=*: audit-all-access",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "*",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "ALL PRIVILEGES"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "hive"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "101-grant-*-*-user1-4",
+        "rangerPolicyId": 101,
+        "rangerPolicyName": "db=*: audit-all-access",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "*",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "ALL PRIVILEGES"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "user1"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "101-grant-*-*-user2-5",
+        "rangerPolicyId": 101,
+        "rangerPolicyName": "db=*: audit-all-access",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "*",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "ALL PRIVILEGES"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "user2"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "102-udf-*-*-public-1",
+        "rangerPolicyId": 102,
+        "rangerPolicyName": "db=*, udf=*: audit-all-access",
+        "rangerPolicyDesc": "",
+        "type": "udf_grant",
+        "catalog": "main",
+        "schema": "*",
+        "udf_name": "*",
+        "principal": {
+          "type": "group",
+          "name": "public"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "102-udf-*-*-hive-2",
+        "rangerPolicyId": 102,
+        "rangerPolicyName": "db=*, udf=*: audit-all-access",
+        "rangerPolicyDesc": "",
+        "type": "udf_grant",
+        "catalog": "main",
+        "schema": "*",
+        "udf_name": "*",
+        "principal": {
+          "type": "user",
+          "name": "hive"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "102-udf-*-*-user1-3",
+        "rangerPolicyId": 102,
+        "rangerPolicyName": "db=*, udf=*: audit-all-access",
+        "rangerPolicyDesc": "",
+        "type": "udf_grant",
+        "catalog": "main",
+        "schema": "*",
+        "udf_name": "*",
+        "principal": {
+          "type": "user",
+          "name": "user1"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "102-udf-*-*-user2-4",
+        "rangerPolicyId": 102,
+        "rangerPolicyName": "db=*, udf=*: audit-all-access",
+        "rangerPolicyDesc": "",
+        "type": "udf_grant",
+        "catalog": "main",
+        "schema": "*",
+        "udf_name": "*",
+        "principal": {
+          "type": "user",
+          "name": "user2"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "103-deny-default-table2-denieduser-1",
+        "rangerPolicyId": 103,
+        "rangerPolicyName": "db=default, table=table2: audit-all-access",
+        "rangerPolicyDesc": "",
+        "type": "deny",
+        "catalog": "main",
+        "schema": "default",
+        "table": "table2",
+        "columns": null,
+        "privileges": [
+          "SELECT"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "denieduser"
+        },
+        "conditions": [],
+        "denyExceptions": [],
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "104-grant-default-table-override-user-override-2",
+        "rangerPolicyId": 104,
+        "rangerPolicyName": "db=default, table=table-override: audit-all-access",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "default",
+        "table": "table-override",
+        "columns": null,
+        "privileges": [
+          "SELECT"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "user-override"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      }
+    ],
+    "warnings": [
+      {
+        "policyId": 103,
+        "policyName": "db=default, table=table2: audit-all-access",
+        "type": "warning",
+        "severity": "critical",
+        "message": "DENY policy for denieduser on default.table2 [SELECT] \u2014 Unity Catalog has no DENY mechanism",
+        "recommendation": "Restructure: move sensitive data into a separate schema with restricted grants, or use row filters/column masks to limit visibility instead of denying access."
+      }
+    ],
+    "identities": [
+      {
+        "type": "group",
+        "name": "public"
+      },
+      {
+        "type": "user",
+        "name": "denieduser"
+      },
+      {
+        "type": "user",
+        "name": "hive"
+      },
+      {
+        "type": "user",
+        "name": "user-override"
+      },
+      {
+        "type": "user",
+        "name": "user1"
+      },
+      {
+        "type": "user",
+        "name": "user2"
+      }
+    ],
+    "kerberosIssues": [],
+    "serviceName": "hivedev",
+    "serviceType": "hive",
+    "clusterName": "unknown",
+    "totalRangerPolicies": 4
+  },
+  "policy_items": [
     {
       "id": "101-grant-*-*-public-2",
       "rangerPolicyId": 101,
@@ -23,7 +267,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "101-grant-*-*-hive-3",
@@ -44,7 +288,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "101-grant-*-*-user1-4",
@@ -65,7 +309,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "101-grant-*-*-user2-5",
@@ -86,7 +330,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "102-udf-*-*-public-1",
@@ -103,7 +347,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "102-udf-*-*-hive-2",
@@ -120,7 +364,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "102-udf-*-*-user1-3",
@@ -137,7 +381,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "102-udf-*-*-user2-4",
@@ -154,7 +398,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "103-deny-default-table2-denieduser-1",
@@ -173,8 +417,10 @@
         "type": "user",
         "name": "denieduser"
       },
+      "conditions": [],
+      "denyExceptions": [],
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "104-grant-default-table-override-user-override-2",
@@ -195,42 +441,9 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     }
   ],
-  "identityMap": {},
-  "generatedSQL": "-- \u26a0 Ranger policy targets database=* (all schemas in the cluster).\n-- UC equivalent is a catalog-level grant on `main`.\n-- Only USE CATALOG, CREATE SCHEMA, and ALL PRIVILEGES are valid at catalog level.\n-- Other privileges (SELECT, MODIFY, etc.) must be granted per-schema or per-table.\nGRANT USE CATALOG ON CATALOG `main` TO `public`;\nGRANT ALL PRIVILEGES ON CATALOG `main` TO `public`;\n\n-- \u26a0 Ranger policy targets database=* (all schemas in the cluster).\n-- UC equivalent is a catalog-level grant on `main`.\n-- Only USE CATALOG, CREATE SCHEMA, and ALL PRIVILEGES are valid at catalog level.\n-- Other privileges (SELECT, MODIFY, etc.) must be granted per-schema or per-table.\nGRANT USE CATALOG ON CATALOG `main` TO `hive@company.com`;\nGRANT ALL PRIVILEGES ON CATALOG `main` TO `hive@company.com`;\n\n-- \u26a0 Ranger policy targets database=* (all schemas in the cluster).\n-- UC equivalent is a catalog-level grant on `main`.\n-- Only USE CATALOG, CREATE SCHEMA, and ALL PRIVILEGES are valid at catalog level.\n-- Other privileges (SELECT, MODIFY, etc.) must be granted per-schema or per-table.\nGRANT USE CATALOG ON CATALOG `main` TO `user1@company.com`;\nGRANT ALL PRIVILEGES ON CATALOG `main` TO `user1@company.com`;\n\n-- \u26a0 Ranger policy targets database=* (all schemas in the cluster).\n-- UC equivalent is a catalog-level grant on `main`.\n-- Only USE CATALOG, CREATE SCHEMA, and ALL PRIVILEGES are valid at catalog level.\n-- Other privileges (SELECT, MODIFY, etc.) must be granted per-schema or per-table.\nGRANT USE CATALOG ON CATALOG `main` TO `user2@company.com`;\nGRANT ALL PRIVILEGES ON CATALOG `main` TO `user2@company.com`;\n\n-- \u26a0 Ensure function main.*.* is registered in UC before granting.\nGRANT EXECUTE ON FUNCTION `main`.`*`.`*` TO `public`;\n\n-- \u26a0 Ensure function main.*.* is registered in UC before granting.\nGRANT EXECUTE ON FUNCTION `main`.`*`.`*` TO `hive@company.com`;\n\n-- \u26a0 Ensure function main.*.* is registered in UC before granting.\nGRANT EXECUTE ON FUNCTION `main`.`*`.`*` TO `user1@company.com`;\n\n-- \u26a0 Ensure function main.*.* is registered in UC before granting.\nGRANT EXECUTE ON FUNCTION `main`.`*`.`*` TO `user2@company.com`;\n\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: SELECT on main.default.table2 for denieduser@company.com\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove denieduser@company.com from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\nGRANT SELECT ON TABLE `main`.`default`.`table-override` TO `user-override@company.com`;",
-  "stats": {
-    "total": 10,
-    "grants": 5,
-    "denies": 1,
-    "rowFilters": 0,
-    "masks": 0,
-    "hdfsGrants": 0,
-    "hbaseGrants": 0,
-    "udfGrants": 4,
-    "tagSets": 0,
-    "tagGrants": 0,
-    "tagPlaceholders": 0,
-    "approved": 0,
-    "needsReview": 1,
-    "pending": 9,
-    "rejected": 0,
-    "disabled": 0,
-    "schemaCount": 2,
-    "principalCount": 6,
-    "schemas": [
-      "*",
-      "default"
-    ],
-    "principals": [
-      "denieduser",
-      "hive",
-      "public",
-      "user-override",
-      "user1",
-      "user2"
-    ],
-    "notTranslatable": 1
-  }
+  "identity_map": {},
+  "generated_sql": "-- \u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n-- \u2551  Unity Catalog Migration Script                          \u2551\n-- \u2551  Generated by Ranger \u2192 UC Migrator                       \u2551\n-- \u2551  Source: hivedev\n-- \u2551  Target Catalog: main\n-- \u2551  Date: 2026-06-02\n-- \u2551  Policies: 10 of 10\n-- \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=*: audit-all-access (Ranger ID: 101)\n-- Type: GRANT | Principal: public\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 Ranger policy targets database=* (all schemas in the cluster).\n-- UC equivalent is a catalog-level grant on `main`.\n-- Only USE CATALOG, CREATE SCHEMA, and ALL PRIVILEGES are valid at catalog level.\n-- Other privileges (SELECT, MODIFY, etc.) must be granted per-schema or per-table.\nGRANT USE CATALOG ON CATALOG `main` TO `public`;\nGRANT ALL PRIVILEGES ON CATALOG `main` TO `public`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=*: audit-all-access (Ranger ID: 101)\n-- Type: GRANT | Principal: hive\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 Ranger policy targets database=* (all schemas in the cluster).\n-- UC equivalent is a catalog-level grant on `main`.\n-- Only USE CATALOG, CREATE SCHEMA, and ALL PRIVILEGES are valid at catalog level.\n-- Other privileges (SELECT, MODIFY, etc.) must be granted per-schema or per-table.\nGRANT USE CATALOG ON CATALOG `main` TO `hive@company.com`;\nGRANT ALL PRIVILEGES ON CATALOG `main` TO `hive@company.com`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=*: audit-all-access (Ranger ID: 101)\n-- Type: GRANT | Principal: user1\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 Ranger policy targets database=* (all schemas in the cluster).\n-- UC equivalent is a catalog-level grant on `main`.\n-- Only USE CATALOG, CREATE SCHEMA, and ALL PRIVILEGES are valid at catalog level.\n-- Other privileges (SELECT, MODIFY, etc.) must be granted per-schema or per-table.\nGRANT USE CATALOG ON CATALOG `main` TO `user1@company.com`;\nGRANT ALL PRIVILEGES ON CATALOG `main` TO `user1@company.com`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=*: audit-all-access (Ranger ID: 101)\n-- Type: GRANT | Principal: user2\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 Ranger policy targets database=* (all schemas in the cluster).\n-- UC equivalent is a catalog-level grant on `main`.\n-- Only USE CATALOG, CREATE SCHEMA, and ALL PRIVILEGES are valid at catalog level.\n-- Other privileges (SELECT, MODIFY, etc.) must be granted per-schema or per-table.\nGRANT USE CATALOG ON CATALOG `main` TO `user2@company.com`;\nGRANT ALL PRIVILEGES ON CATALOG `main` TO `user2@company.com`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=*, udf=*: audit-all-access (Ranger ID: 102)\n-- Type: UDF_GRANT | Principal: public\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 Ensure function main.*.* is registered in UC before granting.\nGRANT EXECUTE ON FUNCTION `main`.`*`.`*` TO `public`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=*, udf=*: audit-all-access (Ranger ID: 102)\n-- Type: UDF_GRANT | Principal: hive\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 Ensure function main.*.* is registered in UC before granting.\nGRANT EXECUTE ON FUNCTION `main`.`*`.`*` TO `hive@company.com`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=*, udf=*: audit-all-access (Ranger ID: 102)\n-- Type: UDF_GRANT | Principal: user1\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 Ensure function main.*.* is registered in UC before granting.\nGRANT EXECUTE ON FUNCTION `main`.`*`.`*` TO `user1@company.com`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=*, udf=*: audit-all-access (Ranger ID: 102)\n-- Type: UDF_GRANT | Principal: user2\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 Ensure function main.*.* is registered in UC before granting.\nGRANT EXECUTE ON FUNCTION `main`.`*`.`*` TO `user2@company.com`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default, table=table2: audit-all-access (Ranger ID: 103)\n-- Type: DENY | Principal: denieduser\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: SELECT on main.default.table2 for denieduser@company.com\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove denieduser@company.com from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default, table=table-override: audit-all-access (Ranger ID: 104)\n-- Type: GRANT | Principal: user-override\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE `main`.`default`.`table-override` TO `user-override@company.com`;\n"
 }

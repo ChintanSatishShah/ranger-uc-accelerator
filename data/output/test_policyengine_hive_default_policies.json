@@ -1,9 +1,136 @@
 {
-  "serviceName": "hivedev",
-  "catalogName": "main",
-  "clusterName": "unknown",
-  "totalRangerPolicies": 4,
-  "policyItems": [
+  "metadata": {
+    "timestamp": "2026-06-02T03:42:54.799017",
+    "service_name": "hivedev",
+    "cluster_name": "unknown",
+    "catalog_name": "main",
+    "source_file": "test_policyengine_hive_default_policies.json",
+    "notes": ""
+  },
+  "parsed_data": {
+    "results": [
+      {
+        "id": "1-grant-*-*-public-2",
+        "rangerPolicyId": 1,
+        "rangerPolicyName": "database=*,table=*,column=* - audit-all-access",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "*",
+        "table": null,
+        "columns": null,
+        "privileges": [],
+        "principal": {
+          "type": "group",
+          "name": "public"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "2-grant-*-*-public-2",
+        "rangerPolicyId": 2,
+        "rangerPolicyName": "database=* - allow anyone to create database; grant owner all access ",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "*",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "CREATE"
+        ],
+        "principal": {
+          "type": "group",
+          "name": "public"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "2-grant-*-*-{OWNER}-4",
+        "rangerPolicyId": 2,
+        "rangerPolicyName": "database=* - allow anyone to create database; grant owner all access ",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "*",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "ALL PRIVILEGES"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "{OWNER}"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "3-grant-*-*-{OWNER}-2",
+        "rangerPolicyId": 3,
+        "rangerPolicyName": "database=*,table=* - allow owner all access to table",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "*",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "ALL PRIVILEGES"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "{OWNER}"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "4-grant-*-*-{OWNER}-2",
+        "rangerPolicyId": 4,
+        "rangerPolicyName": "database=*;table=*;column=* - allow owner all access to column",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "*",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "ALL PRIVILEGES"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "{OWNER}"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      }
+    ],
+    "warnings": [],
+    "identities": [
+      {
+        "type": "group",
+        "name": "public"
+      },
+      {
+        "type": "user",
+        "name": "{OWNER}"
+      }
+    ],
+    "kerberosIssues": [],
+    "serviceName": "hivedev",
+    "serviceType": "hive",
+    "clusterName": "unknown",
+    "totalRangerPolicies": 4
+  },
+  "policy_items": [
     {
       "id": "1-grant-*-*-public-2",
       "rangerPolicyId": 1,
@@ -21,7 +148,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "2-grant-*-*-public-2",
@@ -42,7 +169,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "2-grant-*-*-{OWNER}-4",
@@ -63,7 +190,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "3-grant-*-*-{OWNER}-2",
@@ -84,7 +211,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "4-grant-*-*-{OWNER}-2",
@@ -105,37 +232,9 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     }
   ],
-  "identityMap": {},
-  "generatedSQL": "-- \u26a0 Ranger policy targets database=* (all schemas in the cluster).\n-- UC equivalent is a catalog-level grant on `main`.\n-- Only USE CATALOG, CREATE SCHEMA, and ALL PRIVILEGES are valid at catalog level.\n-- Other privileges (SELECT, MODIFY, etc.) must be granted per-schema or per-table.\nGRANT USE CATALOG ON CATALOG `main` TO `public`;\n\n-- \u26a0 Ranger policy targets database=* (all schemas in the cluster).\n-- UC equivalent is a catalog-level grant on `main`.\n-- Only USE CATALOG, CREATE SCHEMA, and ALL PRIVILEGES are valid at catalog level.\n-- Other privileges (SELECT, MODIFY, etc.) must be granted per-schema or per-table.\nGRANT USE CATALOG ON CATALOG `main` TO `public`;\n-- GRANT CREATE ON CATALOG \u2014 not valid in UC; grant on individual schemas or tables instead.\n\n-- \u26a0 Ranger policy targets database=* (all schemas in the cluster).\n-- UC equivalent is a catalog-level grant on `main`.\n-- Only USE CATALOG, CREATE SCHEMA, and ALL PRIVILEGES are valid at catalog level.\n-- Other privileges (SELECT, MODIFY, etc.) must be granted per-schema or per-table.\nGRANT USE CATALOG ON CATALOG `main` TO `{OWNER}@company.com`;\nGRANT ALL PRIVILEGES ON CATALOG `main` TO `{OWNER}@company.com`;\n\n-- \u26a0 Ranger policy targets database=* (all schemas in the cluster).\n-- UC equivalent is a catalog-level grant on `main`.\n-- Only USE CATALOG, CREATE SCHEMA, and ALL PRIVILEGES are valid at catalog level.\n-- Other privileges (SELECT, MODIFY, etc.) must be granted per-schema or per-table.\nGRANT USE CATALOG ON CATALOG `main` TO `{OWNER}@company.com`;\nGRANT ALL PRIVILEGES ON CATALOG `main` TO `{OWNER}@company.com`;\n\n-- \u26a0 Ranger policy targets database=* (all schemas in the cluster).\n-- UC equivalent is a catalog-level grant on `main`.\n-- Only USE CATALOG, CREATE SCHEMA, and ALL PRIVILEGES are valid at catalog level.\n-- Other privileges (SELECT, MODIFY, etc.) must be granted per-schema or per-table.\nGRANT USE CATALOG ON CATALOG `main` TO `{OWNER}@company.com`;\nGRANT ALL PRIVILEGES ON CATALOG `main` TO `{OWNER}@company.com`;",
-  "stats": {
-    "total": 5,
-    "grants": 5,
-    "denies": 0,
-    "rowFilters": 0,
-    "masks": 0,
-    "hdfsGrants": 0,
-    "hbaseGrants": 0,
-    "udfGrants": 0,
-    "tagSets": 0,
-    "tagGrants": 0,
-    "tagPlaceholders": 0,
-    "approved": 0,
-    "needsReview": 0,
-    "pending": 5,
-    "rejected": 0,
-    "disabled": 0,
-    "schemaCount": 1,
-    "principalCount": 2,
-    "schemas": [
-      "*"
-    ],
-    "principals": [
-      "public",
-      "{OWNER}"
-    ],
-    "notTranslatable": 0
-  }
+  "identity_map": {},
+  "generated_sql": "-- \u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n-- \u2551  Unity Catalog Migration Script                          \u2551\n-- \u2551  Generated by Ranger \u2192 UC Migrator                       \u2551\n-- \u2551  Source: hivedev\n-- \u2551  Target Catalog: main\n-- \u2551  Date: 2026-06-02\n-- \u2551  Policies: 5 of 5\n-- \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: database=*,table=*,column=* - audit-all-access (Ranger ID: 1)\n-- Type: GRANT | Principal: public\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 Ranger policy targets database=* (all schemas in the cluster).\n-- UC equivalent is a catalog-level grant on `main`.\n-- Only USE CATALOG, CREATE SCHEMA, and ALL PRIVILEGES are valid at catalog level.\n-- Other privileges (SELECT, MODIFY, etc.) must be granted per-schema or per-table.\nGRANT USE CATALOG ON CATALOG `main` TO `public`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: database=* - allow anyone to create database; grant owner all access  (Ranger ID: 2)\n-- Type: GRANT | Principal: public\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 Ranger policy targets database=* (all schemas in the cluster).\n-- UC equivalent is a catalog-level grant on `main`.\n-- Only USE CATALOG, CREATE SCHEMA, and ALL PRIVILEGES are valid at catalog level.\n-- Other privileges (SELECT, MODIFY, etc.) must be granted per-schema or per-table.\nGRANT USE CATALOG ON CATALOG `main` TO `public`;\n-- GRANT CREATE ON CATALOG \u2014 not valid in UC; grant on individual schemas or tables instead.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: database=* - allow anyone to create database; grant owner all access  (Ranger ID: 2)\n-- Type: GRANT | Principal: {OWNER}\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 Ranger policy targets database=* (all schemas in the cluster).\n-- UC equivalent is a catalog-level grant on `main`.\n-- Only USE CATALOG, CREATE SCHEMA, and ALL PRIVILEGES are valid at catalog level.\n-- Other privileges (SELECT, MODIFY, etc.) must be granted per-schema or per-table.\nGRANT USE CATALOG ON CATALOG `main` TO `{OWNER}@company.com`;\nGRANT ALL PRIVILEGES ON CATALOG `main` TO `{OWNER}@company.com`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: database=*,table=* - allow owner all access to table (Ranger ID: 3)\n-- Type: GRANT | Principal: {OWNER}\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u2139 DUPLICATE GRANT SKIPPED \u2014 identical GRANT for {OWNER} on *.None was already emitted above.\n-- Original column scope: * (widened to table-level in UC).\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: database=*;table=*;column=* - allow owner all access to column (Ranger ID: 4)\n-- Type: GRANT | Principal: {OWNER}\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u2139 DUPLICATE GRANT SKIPPED \u2014 identical GRANT for {OWNER} on *.None was already emitted above.\n-- Original column scope: * (widened to table-level in UC).\n"
 }

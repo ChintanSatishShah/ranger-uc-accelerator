@@ -1,9 +1,103 @@
 {
-  "serviceName": "cl1_hadoop",
-  "catalogName": "main",
-  "clusterName": "unknown",
-  "totalRangerPolicies": 3,
-  "policyItems": [
+  "metadata": {
+    "timestamp": "2026-06-02T03:42:54.795285",
+    "service_name": "cl1_hadoop",
+    "cluster_name": "unknown",
+    "catalog_name": "main",
+    "source_file": "test_policyengine_hdfs_zones.json",
+    "notes": ""
+  },
+  "parsed_data": {
+    "results": [
+      {
+        "id": "1-hdfs-hadoop-1",
+        "rangerPolicyId": 1,
+        "rangerPolicyName": "all - path",
+        "rangerPolicyDesc": "Policy for all - path",
+        "type": "hdfs_grant",
+        "path": "/*",
+        "isRecursive": true,
+        "schema": null,
+        "table": null,
+        "privileges": [
+          "READ FILES",
+          "WRITE FILES"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "hadoop"
+        },
+        "delegateAdmin": true,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "2-hdfs-keyadmin-1",
+        "rangerPolicyId": 2,
+        "rangerPolicyName": "kms-audit-path",
+        "rangerPolicyDesc": "Policy for kms-audit-path",
+        "type": "hdfs_grant",
+        "path": "/ranger/audit/kms",
+        "isRecursive": true,
+        "schema": null,
+        "table": null,
+        "privileges": [
+          "READ FILES",
+          "WRITE FILES"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "keyadmin"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "40-hdfs-sales-admin-1",
+        "rangerPolicyId": 40,
+        "rangerPolicyName": "Finance for default zone",
+        "rangerPolicyDesc": "",
+        "type": "hdfs_grant",
+        "path": "/finance",
+        "isRecursive": true,
+        "schema": null,
+        "table": null,
+        "privileges": [
+          "READ FILES",
+          "WRITE FILES"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "sales-admin"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      }
+    ],
+    "warnings": [],
+    "identities": [
+      {
+        "type": "user",
+        "name": "hadoop"
+      },
+      {
+        "type": "user",
+        "name": "keyadmin"
+      },
+      {
+        "type": "user",
+        "name": "sales-admin"
+      }
+    ],
+    "kerberosIssues": [],
+    "serviceName": "cl1_hadoop",
+    "serviceType": "hdfs",
+    "clusterName": "unknown",
+    "totalRangerPolicies": 3
+  },
+  "policy_items": [
     {
       "id": "1-hdfs-hadoop-1",
       "rangerPolicyId": 1,
@@ -24,7 +118,7 @@
       },
       "delegateAdmin": true,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "2-hdfs-keyadmin-1",
@@ -46,7 +140,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "40-hdfs-sales-admin-1",
@@ -68,36 +162,9 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     }
   ],
-  "identityMap": {},
-  "generatedSQL": "-- HDFS path: /* (recursive)\n-- \u26a0 Create a UC External Location covering this path first,\n--   then replace the placeholder below with the actual location name.\nGRANT READ FILES ON EXTERNAL LOCATION `<ext_loc__>` TO `hadoop@company.com`;\nGRANT WRITE FILES ON EXTERNAL LOCATION `<ext_loc__>` TO `hadoop@company.com`;\n-- Note: delegateAdmin=true. Consider granting MANAGE on the External Location.\n\n-- HDFS path: /ranger/audit/kms (recursive)\n-- \u26a0 Create a UC External Location covering this path first,\n--   then replace the placeholder below with the actual location name.\nGRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_ranger_audit_kms>` TO `keyadmin@company.com`;\nGRANT WRITE FILES ON EXTERNAL LOCATION `<ext_loc_ranger_audit_kms>` TO `keyadmin@company.com`;\n\n-- HDFS path: /finance (recursive)\n-- \u26a0 Create a UC External Location covering this path first,\n--   then replace the placeholder below with the actual location name.\nGRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_finance>` TO `sales-admin@company.com`;\nGRANT WRITE FILES ON EXTERNAL LOCATION `<ext_loc_finance>` TO `sales-admin@company.com`;",
-  "stats": {
-    "total": 3,
-    "grants": 0,
-    "denies": 0,
-    "rowFilters": 0,
-    "masks": 0,
-    "hdfsGrants": 3,
-    "hbaseGrants": 0,
-    "udfGrants": 0,
-    "tagSets": 0,
-    "tagGrants": 0,
-    "tagPlaceholders": 0,
-    "approved": 0,
-    "needsReview": 0,
-    "pending": 3,
-    "rejected": 0,
-    "disabled": 0,
-    "schemaCount": 0,
-    "principalCount": 3,
-    "schemas": [],
-    "principals": [
-      "hadoop",
-      "keyadmin",
-      "sales-admin"
-    ],
-    "notTranslatable": 0
-  }
+  "identity_map": {},
+  "generated_sql": "-- \u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n-- \u2551  Unity Catalog Migration Script                          \u2551\n-- \u2551  Generated by Ranger \u2192 UC Migrator                       \u2551\n-- \u2551  Source: cl1_hadoop\n-- \u2551  Target Catalog: main\n-- \u2551  Date: 2026-06-02\n-- \u2551  Policies: 3 of 3\n-- \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: all - path (Ranger ID: 1)\n-- Type: HDFS_GRANT | Principal: hadoop\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- HDFS path: /* (recursive)\n-- \u26a0 Create a UC External Location covering this path first,\n--   then replace the placeholder below with the actual location name.\nGRANT READ FILES ON EXTERNAL LOCATION `<ext_loc__>` TO `hadoop@company.com`;\nGRANT WRITE FILES ON EXTERNAL LOCATION `<ext_loc__>` TO `hadoop@company.com`;\n-- Note: delegateAdmin=true. Consider granting MANAGE on the External Location.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: kms-audit-path (Ranger ID: 2)\n-- Type: HDFS_GRANT | Principal: keyadmin\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- HDFS path: /ranger/audit/kms (recursive)\n-- \u26a0 Create a UC External Location covering this path first,\n--   then replace the placeholder below with the actual location name.\nGRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_ranger_audit_kms>` TO `keyadmin@company.com`;\nGRANT WRITE FILES ON EXTERNAL LOCATION `<ext_loc_ranger_audit_kms>` TO `keyadmin@company.com`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: Finance for default zone (Ranger ID: 40)\n-- Type: HDFS_GRANT | Principal: sales-admin\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- HDFS path: /finance (recursive)\n-- \u26a0 Create a UC External Location covering this path first,\n--   then replace the placeholder below with the actual location name.\nGRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_finance>` TO `sales-admin@company.com`;\nGRANT WRITE FILES ON EXTERNAL LOCATION `<ext_loc_finance>` TO `sales-admin@company.com`;\n"
 }

@@ -1,9 +1,147 @@
 {
-  "serviceName": "hive_prod",
-  "catalogName": "main",
-  "clusterName": "unknown",
-  "totalRangerPolicies": 1,
-  "policyItems": [
+  "metadata": {
+    "timestamp": "2026-06-02T03:42:54.777273",
+    "service_name": "hive_prod",
+    "cluster_name": "unknown",
+    "catalog_name": "main",
+    "source_file": "rowfilter_medium.json",
+    "notes": ""
+  },
+  "parsed_data": {
+    "results": [
+      {
+        "id": "102-rowfilter-sales-transactions-regional_managers-1",
+        "rangerPolicyId": 102,
+        "rangerPolicyName": "sales_data_filters",
+        "rangerPolicyDesc": "Medium row filter - Different filters for different groups",
+        "type": "row_filter",
+        "catalog": "main",
+        "schema": "sales",
+        "table": "transactions",
+        "columns": null,
+        "privileges": [],
+        "principal": {
+          "type": "group",
+          "name": "regional_managers"
+        },
+        "allPrincipals": [
+          {
+            "type": "group",
+            "name": "regional_managers"
+          }
+        ],
+        "filterExpr": "region IN ('WEST', 'CENTRAL') AND order_date >= '2024-01-01'",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "102-rowfilter-sales-transactions-sales_analysts-2",
+        "rangerPolicyId": 102,
+        "rangerPolicyName": "sales_data_filters",
+        "rangerPolicyDesc": "Medium row filter - Different filters for different groups",
+        "type": "row_filter",
+        "catalog": "main",
+        "schema": "sales",
+        "table": "transactions",
+        "columns": null,
+        "privileges": [],
+        "principal": {
+          "type": "group",
+          "name": "sales_analysts"
+        },
+        "allPrincipals": [
+          {
+            "type": "group",
+            "name": "sales_analysts"
+          },
+          {
+            "type": "user",
+            "name": "sales_analyst@company.com"
+          }
+        ],
+        "filterExpr": "department = 'SALES' AND status = 'ACTIVE'",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "102-rowfilter-sales-transactions-executives-3",
+        "rangerPolicyId": 102,
+        "rangerPolicyName": "sales_data_filters",
+        "rangerPolicyDesc": "Medium row filter - Different filters for different groups",
+        "type": "row_filter",
+        "catalog": "main",
+        "schema": "sales",
+        "table": "transactions",
+        "columns": null,
+        "privileges": [],
+        "principal": {
+          "type": "group",
+          "name": "executives"
+        },
+        "allPrincipals": [
+          {
+            "type": "group",
+            "name": "executives"
+          },
+          {
+            "type": "user",
+            "name": "cfo@company.com"
+          }
+        ],
+        "filterExpr": "TRUE",
+        "enabled": true,
+        "status": "approved"
+      }
+    ],
+    "warnings": [],
+    "identities": [
+      {
+        "type": "group",
+        "name": "executives"
+      },
+      {
+        "type": "group",
+        "name": "regional_managers"
+      },
+      {
+        "type": "group",
+        "name": "sales_analysts"
+      },
+      {
+        "type": "user",
+        "name": "cfo@company.com"
+      },
+      {
+        "type": "user",
+        "name": "sales_analyst@company.com"
+      }
+    ],
+    "kerberosIssues": [
+      {
+        "policyId": 102,
+        "policyName": "sales_data_filters",
+        "principal": "sales_analyst@company.com",
+        "type": "kerberos_principal",
+        "severity": "warning",
+        "message": "\"sales_analyst@company.com\" looks like a Kerberos principal \u2014 needs mapping to Databricks service principal or managed identity",
+        "recommendation": "Map to a Databricks user via SCIM/IdP integration. Remove the Kerberos realm suffix."
+      },
+      {
+        "policyId": 102,
+        "policyName": "sales_data_filters",
+        "principal": "cfo@company.com",
+        "type": "kerberos_principal",
+        "severity": "warning",
+        "message": "\"cfo@company.com\" looks like a Kerberos principal \u2014 needs mapping to Databricks service principal or managed identity",
+        "recommendation": "Map to a Databricks user via SCIM/IdP integration. Remove the Kerberos realm suffix."
+      }
+    ],
+    "serviceName": "hive_prod",
+    "serviceType": "hive",
+    "clusterName": "unknown",
+    "totalRangerPolicies": 1
+  },
+  "policy_items": [
     {
       "id": "102-rowfilter-sales-transactions-regional_managers-1",
       "rangerPolicyId": 102,
@@ -27,7 +165,7 @@
       ],
       "filterExpr": "region IN ('WEST', 'CENTRAL') AND order_date >= '2024-01-01'",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "102-rowfilter-sales-transactions-sales_analysts-2",
@@ -56,7 +194,7 @@
       ],
       "filterExpr": "department = 'SALES' AND status = 'ACTIVE'",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "102-rowfilter-sales-transactions-executives-3",
@@ -85,38 +223,9 @@
       ],
       "filterExpr": "TRUE",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     }
   ],
-  "identityMap": {},
-  "generatedSQL": "-- Row Filter for: regional_managers\n-- Original expression: region IN ('WEST', 'CENTRAL') AND order_date >= '2024-01-01'\n\nCREATE OR REPLACE FUNCTION `main`.`sales`.rf_transactions_regional_managers(region STRING, order_date STRING)\nRETURNS BOOLEAN\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('regional_managers'),\n  region IN ('WEST', 'CENTRAL') AND order_date >= '2024-01-01',\n  TRUE  -- Allow access for principals not matching the condition\n);\n\nALTER TABLE `main`.`sales`.`transactions`\nSET ROW FILTER `main`.`sales`.rf_transactions_regional_managers ON (region, order_date);\n\n-- Row Filter for: sales_analysts\n-- Original expression: department = 'SALES' AND status = 'ACTIVE'\n\nCREATE OR REPLACE FUNCTION `main`.`sales`.rf_transactions_sales_analysts(department STRING, status STRING)\nRETURNS BOOLEAN\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('sales_analysts'),\n  department = 'SALES' AND status = 'ACTIVE',\n  TRUE  -- Allow access for principals not matching the condition\n);\n\nALTER TABLE `main`.`sales`.`transactions`\nSET ROW FILTER `main`.`sales`.rf_transactions_sales_analysts ON (department, status);\n\n-- Row Filter for: executives\n-- Original expression: TRUE\n-- \u26a0 No column references detected in filter expression \u2014 review manually.\n\nCREATE OR REPLACE FUNCTION `main`.`sales`.rf_transactions_executives()\nRETURNS BOOLEAN\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('executives'),\n  TRUE,\n  TRUE  -- Allow access for principals not matching the condition\n);\n\nALTER TABLE `main`.`sales`.`transactions`\nSET ROW FILTER `main`.`sales`.rf_transactions_executives ON ();",
-  "stats": {
-    "total": 3,
-    "grants": 0,
-    "denies": 0,
-    "rowFilters": 3,
-    "masks": 0,
-    "hdfsGrants": 0,
-    "hbaseGrants": 0,
-    "udfGrants": 0,
-    "tagSets": 0,
-    "tagGrants": 0,
-    "tagPlaceholders": 0,
-    "approved": 0,
-    "needsReview": 3,
-    "pending": 0,
-    "rejected": 0,
-    "disabled": 0,
-    "schemaCount": 1,
-    "principalCount": 3,
-    "schemas": [
-      "sales"
-    ],
-    "principals": [
-      "executives",
-      "regional_managers",
-      "sales_analysts"
-    ],
-    "notTranslatable": 0
-  }
+  "identity_map": {},
+  "generated_sql": "-- \u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n-- \u2551  Unity Catalog Migration Script                          \u2551\n-- \u2551  Generated by Ranger \u2192 UC Migrator                       \u2551\n-- \u2551  Source: hive_prod\n-- \u2551  Target Catalog: main\n-- \u2551  Date: 2026-06-02\n-- \u2551  Policies: 3 of 3\n-- \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\n\n-- \u26a0 CONFLICT NOTICE: 1 row-filter/column-mask conflict(s) detected.\n-- Unity Catalog supports only ONE row filter per table and ONE mask per column.\n-- Conflicting items have been automatically MERGED into combined CASE functions below.\n-- Review each merged function carefully before executing.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 MERGED ROW FILTER \u2014 Unity Catalog supports only ONE row filter per table.\n-- Multiple Ranger principals for `sales`.`transactions` have been combined into one function.\n-- Principals merged (3): regional_managers, sales_analysts, executives\n-- Each WHEN clause applies the original Ranger filter for that principal.\n\nCREATE OR REPLACE FUNCTION `main`.`sales`.rf_transactions(region STRING, order_date STRING, department STRING, status STRING)\nRETURNS BOOLEAN\nRETURN\n  CASE\n    WHEN IS_ACCOUNT_GROUP_MEMBER('regional_managers') THEN region IN ('WEST', 'CENTRAL') AND order_date >= '2024-01-01'\n    WHEN IS_ACCOUNT_GROUP_MEMBER('sales_analysts') THEN department = 'SALES' AND status = 'ACTIVE'\n    WHEN IS_ACCOUNT_GROUP_MEMBER('executives') THEN TRUE\n    ELSE TRUE  -- allow access for all other principals\n  END;\n\nALTER TABLE `main`.`sales`.`transactions`\nSET ROW FILTER `main`.`sales`.rf_transactions ON (region, order_date, department, status);\n"
 }

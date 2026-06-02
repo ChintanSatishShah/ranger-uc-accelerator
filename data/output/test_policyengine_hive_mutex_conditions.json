@@ -1,9 +1,264 @@
 {
-  "serviceName": "hivedev",
-  "catalogName": "main",
-  "clusterName": "unknown",
-  "totalRangerPolicies": 3,
-  "policyItems": [
+  "metadata": {
+    "timestamp": "2026-06-02T03:42:54.804273",
+    "service_name": "hivedev",
+    "cluster_name": "unknown",
+    "catalog_name": "main",
+    "source_file": "test_policyengine_hive_mutex_conditions.json",
+    "notes": ""
+  },
+  "parsed_data": {
+    "results": [
+      {
+        "id": "1-grant-default-testTable-user2-2",
+        "rangerPolicyId": 1,
+        "rangerPolicyName": "db=default; allow select with mutual exclusion of col* only for user2, admin; deny for everyone else",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "default",
+        "table": "testTable",
+        "columns": [
+          "col*"
+        ],
+        "privileges": [
+          "SELECT"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "user2"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "1-grant-default-testTable-admin-3",
+        "rangerPolicyId": 1,
+        "rangerPolicyName": "db=default; allow select with mutual exclusion of col* only for user2, admin; deny for everyone else",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "default",
+        "table": "testTable",
+        "columns": [
+          "col*"
+        ],
+        "privileges": [
+          "SELECT"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "admin"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "1-deny-default-testTable-public-4",
+        "rangerPolicyId": 1,
+        "rangerPolicyName": "db=default; allow select with mutual exclusion of col* only for user2, admin; deny for everyone else",
+        "rangerPolicyDesc": "",
+        "type": "deny",
+        "catalog": "main",
+        "schema": "default",
+        "table": "testTable",
+        "columns": [
+          "col*"
+        ],
+        "privileges": [
+          "SELECT"
+        ],
+        "principal": {
+          "type": "group",
+          "name": "public"
+        },
+        "conditions": [
+          {
+            "type": "accessed-together",
+            "values": [
+              "default.testTable.col*"
+            ]
+          }
+        ],
+        "denyExceptions": [
+          {
+            "type": "group",
+            "name": "admin"
+          },
+          {
+            "type": "user",
+            "name": "user2"
+          },
+          {
+            "type": "user",
+            "name": "admin"
+          }
+        ],
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "2-grant-default-testTable-admin-2",
+        "rangerPolicyId": 2,
+        "rangerPolicyName": "db=default; deny select with mutual exclusion of col1, name for everone except admin",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "default",
+        "table": "testTable",
+        "columns": [
+          "col1"
+        ],
+        "privileges": [
+          "SELECT"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "admin"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "2-deny-default-testTable-public-3",
+        "rangerPolicyId": 2,
+        "rangerPolicyName": "db=default; deny select with mutual exclusion of col1, name for everone except admin",
+        "rangerPolicyDesc": "",
+        "type": "deny",
+        "catalog": "main",
+        "schema": "default",
+        "table": "testTable",
+        "columns": [
+          "col1"
+        ],
+        "privileges": [
+          "SELECT"
+        ],
+        "principal": {
+          "type": "group",
+          "name": "public"
+        },
+        "conditions": [
+          {
+            "type": "accessed-together",
+            "values": [
+              "default.testTable.col1",
+              "default.testTable.name"
+            ]
+          }
+        ],
+        "denyExceptions": [
+          {
+            "type": "user",
+            "name": "admin"
+          }
+        ],
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "3-blank-1",
+        "rangerPolicyId": 3,
+        "rangerPolicyName": "db=default; table=testTable; column=*; allow access to everyone",
+        "rangerPolicyDesc": "",
+        "type": "skipped_blank_principal",
+        "catalog": "main",
+        "schema": "default",
+        "table": "testTable",
+        "blanks": [
+          "users[0] is empty"
+        ],
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "3-grant-default-testTable-public-2",
+        "rangerPolicyId": 3,
+        "rangerPolicyName": "db=default; table=testTable; column=*; allow access to everyone",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "default",
+        "table": "testTable",
+        "columns": null,
+        "privileges": [
+          "SELECT"
+        ],
+        "principal": {
+          "type": "group",
+          "name": "public"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      }
+    ],
+    "warnings": [
+      {
+        "policyId": 1,
+        "policyName": "db=default; allow select with mutual exclusion of col* only for user2, admin; deny for everyone else",
+        "category": "conditions",
+        "severity": "warning",
+        "message": "Policy \"db=default; allow select with mutual exclusion of col* only for user2, admin; deny for everyone else\" has conditions [accessed-together] with no UC equivalent \u2014 grants will apply unconditionally",
+        "recommendation": "IP-range, time-based, and custom conditions cannot be enforced in UC. Apply equivalent restrictions at the network or application layer."
+      },
+      {
+        "policyId": 1,
+        "policyName": "db=default; allow select with mutual exclusion of col* only for user2, admin; deny for everyone else",
+        "type": "warning",
+        "severity": "critical",
+        "message": "DENY policy for public on default.testTable [SELECT] \u2014 Unity Catalog has no DENY mechanism",
+        "recommendation": "Restructure: move sensitive data into a separate schema with restricted grants, or use row filters/column masks to limit visibility instead of denying access."
+      },
+      {
+        "policyId": 2,
+        "policyName": "db=default; deny select with mutual exclusion of col1, name for everone except admin",
+        "category": "conditions",
+        "severity": "warning",
+        "message": "Policy \"db=default; deny select with mutual exclusion of col1, name for everone except admin\" has conditions [accessed-together] with no UC equivalent \u2014 grants will apply unconditionally",
+        "recommendation": "IP-range, time-based, and custom conditions cannot be enforced in UC. Apply equivalent restrictions at the network or application layer."
+      },
+      {
+        "policyId": 2,
+        "policyName": "db=default; deny select with mutual exclusion of col1, name for everone except admin",
+        "type": "warning",
+        "severity": "critical",
+        "message": "DENY policy for public on default.testTable [SELECT] \u2014 Unity Catalog has no DENY mechanism",
+        "recommendation": "Restructure: move sensitive data into a separate schema with restricted grants, or use row filters/column masks to limit visibility instead of denying access."
+      },
+      {
+        "policyId": 3,
+        "policyName": "db=default; table=testTable; column=*; allow access to everyone",
+        "category": "blank_principal",
+        "severity": "warning",
+        "message": "Policy \"db=default; table=testTable; column=*; allow access to everyone\" contains blank principal entries (users[0] is empty) \u2014 skipped, no SQL generated for these entries",
+        "recommendation": "Review the Ranger policy and assign explicit user, group, or role names. Blank principal entries are ignored during migration."
+      }
+    ],
+    "identities": [
+      {
+        "type": "group",
+        "name": "public"
+      },
+      {
+        "type": "user",
+        "name": "admin"
+      },
+      {
+        "type": "user",
+        "name": "user2"
+      }
+    ],
+    "kerberosIssues": [],
+    "serviceName": "hivedev",
+    "serviceType": "hive",
+    "clusterName": "unknown",
+    "totalRangerPolicies": 3
+  },
+  "policy_items": [
     {
       "id": "1-grant-default-testTable-user2-2",
       "rangerPolicyId": 1,
@@ -25,7 +280,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "1-grant-default-testTable-admin-3",
@@ -48,7 +303,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "1-deny-default-testTable-public-4",
@@ -59,7 +314,9 @@
       "catalog": "main",
       "schema": "default",
       "table": "testTable",
-      "columns": null,
+      "columns": [
+        "col*"
+      ],
       "privileges": [
         "SELECT"
       ],
@@ -67,8 +324,30 @@
         "type": "group",
         "name": "public"
       },
+      "conditions": [
+        {
+          "type": "accessed-together",
+          "values": [
+            "default.testTable.col*"
+          ]
+        }
+      ],
+      "denyExceptions": [
+        {
+          "type": "group",
+          "name": "admin"
+        },
+        {
+          "type": "user",
+          "name": "user2"
+        },
+        {
+          "type": "user",
+          "name": "admin"
+        }
+      ],
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "2-grant-default-testTable-admin-2",
@@ -91,7 +370,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "2-deny-default-testTable-public-3",
@@ -102,7 +381,9 @@
       "catalog": "main",
       "schema": "default",
       "table": "testTable",
-      "columns": null,
+      "columns": [
+        "col1"
+      ],
       "privileges": [
         "SELECT"
       ],
@@ -110,8 +391,23 @@
         "type": "group",
         "name": "public"
       },
+      "conditions": [
+        {
+          "type": "accessed-together",
+          "values": [
+            "default.testTable.col1",
+            "default.testTable.name"
+          ]
+        }
+      ],
+      "denyExceptions": [
+        {
+          "type": "user",
+          "name": "admin"
+        }
+      ],
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "3-blank-1",
@@ -126,7 +422,7 @@
         "users[0] is empty"
       ],
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "3-grant-default-testTable-public-2",
@@ -147,38 +443,9 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     }
   ],
-  "identityMap": {},
-  "generatedSQL": "GRANT SELECT ON TABLE `main`.`default`.`testTable` TO `user2@company.com`;\n\nGRANT SELECT ON TABLE `main`.`default`.`testTable` TO `admin@company.com`;\n\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: SELECT on main.default.testTable for public\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove public from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\nGRANT SELECT ON TABLE `main`.`default`.`testTable` TO `admin@company.com`;\n\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: SELECT on main.default.testTable for public\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove public from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u26a0 BLANK PRINCIPAL SKIPPED \u2014 NO GRANT GENERATED\n-- Policy: db=default; table=testTable; column=*; allow access to everyone\n-- Resource: `main`.`default`.`testTable`\n-- Blank entries found: users[0] is empty\n-- These entries were omitted because an empty user/group/role name\n-- cannot be mapped to a Databricks principal.\n-- ACTION REQUIRED: Open the Ranger policy, assign explicit principal names,\n-- re-export the policy JSON, and re-run the migration.\n\nGRANT SELECT ON TABLE `main`.`default`.`testTable` TO `public`;",
-  "stats": {
-    "total": 7,
-    "grants": 4,
-    "denies": 2,
-    "rowFilters": 0,
-    "masks": 0,
-    "hdfsGrants": 0,
-    "hbaseGrants": 0,
-    "udfGrants": 0,
-    "tagSets": 0,
-    "tagGrants": 0,
-    "tagPlaceholders": 0,
-    "approved": 0,
-    "needsReview": 3,
-    "pending": 4,
-    "rejected": 0,
-    "disabled": 0,
-    "schemaCount": 1,
-    "principalCount": 3,
-    "schemas": [
-      "default"
-    ],
-    "principals": [
-      "admin",
-      "public",
-      "user2"
-    ],
-    "notTranslatable": 2
-  }
+  "identity_map": {},
+  "generated_sql": "-- \u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n-- \u2551  Unity Catalog Migration Script                          \u2551\n-- \u2551  Generated by Ranger \u2192 UC Migrator                       \u2551\n-- \u2551  Source: hivedev\n-- \u2551  Target Catalog: main\n-- \u2551  Date: 2026-06-02\n-- \u2551  Policies: 7 of 7\n-- \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\n\n-- \u26a0 GRANT/DENY CONFLICT: 1 principal(s) have both a GRANT\n-- and a DENY on the same table. In UC (additive model), GRANTs are permanent \u2014\n-- there is no DENY mechanism. The deny advisory below has NO effect unless either:\n--   (a) the GRANT is revoked, or\n--   (b) column masks are applied to restrict what the principal can see.\n--   Affected: public on default.testTable\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; allow select with mutual exclusion of col* only for user2, admin; deny for everyone else (Ranger ID: 1)\n-- Type: GRANT (WILDCARD COLUMN 'col*') | Principals: user2, admin\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 COLUMN-SCOPED GRANT \u2014 pattern 'col*' \u2192 SQL LIKE 'col%'\n-- Permitted principals: user2@company.com, admin@company.com\n-- UC has no column-level GRANT. Strategy: mask matching columns to NULL for non-permitted principals.\n-- Requires Databricks Runtime 14.0+ or a SQL Warehouse with scripting enabled.\nBEGIN\n  FOR col AS (\n    SELECT column_name\n    FROM `main`.information_schema.columns\n    WHERE table_catalog = 'main'\n      AND table_schema   = 'default'\n      AND table_name     = 'testTable'\n      AND column_name LIKE 'col%'\n  ) DO\n    EXECUTE IMMEDIATE 'CREATE OR REPLACE FUNCTION `main`.`default`.mask_testTable_col_restrict_' || col.column_name || '(val STRING) RETURNS STRING RETURN IF(NOT ((current_user() = ''user2@company.com'') OR (current_user() = ''admin@company.com'')), NULL, val)';\n    EXECUTE IMMEDIATE 'ALTER TABLE `main`.`default`.`testTable` ALTER COLUMN `' || col.column_name || '` SET MASK `main`.`default`.mask_testTable_col_restrict_' || col.column_name;\n  END FOR;\nEND;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; allow select with mutual exclusion of col* only for user2, admin; deny for everyone else (Ranger ID: 1)\n-- Type: DENY | Principal: public\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: SELECT on main.default.testTable for public\n-- Column scope of deny: col*\n--\n-- \u26a0 MUTUAL EXCLUSION (accessed-together) CONDITION DETECTED\n-- This deny only triggers when ALL of the following columns are queried\n-- SIMULTANEOUSLY in a single query (column co-access prevention):\n--   \u2022 default.testTable.col*\n-- Unity Catalog has NO equivalent for query-level column co-access prevention.\n-- Ranger uses this to stop correlation attacks (e.g. joining quasi-identifiers).\n-- UC ALTERNATIVE: Apply a column mask on each sensitive column so that\n-- non-exempt principals always see a masked/null value regardless of\n-- which other columns are queried at the same time.\n--\n-- DENY EXCEPTIONS (these principals are exempt from this deny):\n--   \u2022 group: admin\n--   \u2022 user: user2\n--   \u2022 user: admin\n-- These principals retain access even though the deny applies to the group above.\n-- In UC (additive model), simply grant them explicitly and do not grant the\n-- denied group (public) at all \u2014 or apply column masks only for that group.\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove public from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n--\n-- \u2705 SUGGESTED DENY APPROXIMATION \u2014 column pattern 'col*' \u2192 SQL LIKE 'col%'\n-- Denied principal: public (except: admin, user2, admin)\n-- Strategy: mask columns matching the pattern to NULL for the denied principal.\n-- \u26a0 UC has no DENY \u2014 this is an additive mask approximation. Do NOT grant the\n-- denied principal (public) SELECT on this table.\n-- Requires Databricks Runtime 14.0+ or a SQL Warehouse with scripting enabled.\nBEGIN\n  FOR col AS (\n    SELECT column_name\n    FROM `main`.information_schema.columns\n    WHERE table_catalog = 'main'\n      AND table_schema   = 'default'\n      AND table_name     = 'testTable'\n      AND column_name LIKE 'col%'\n  ) DO\n    EXECUTE IMMEDIATE 'CREATE OR REPLACE FUNCTION `main`.`default`.mask_testTable_deny_public_' || col.column_name || '(val STRING) RETURNS STRING RETURN IF((IS_ACCOUNT_GROUP_MEMBER(''public'') AND NOT ((IS_ACCOUNT_GROUP_MEMBER(''admin'')) OR (current_user() = ''user2@company.com'') OR (current_user() = ''admin@company.com''))), NULL, val)';\n    EXECUTE IMMEDIATE 'ALTER TABLE `main`.`default`.`testTable` ALTER COLUMN `' || col.column_name || '` SET MASK `main`.`default`.mask_testTable_deny_public_' || col.column_name;\n  END FOR;\nEND;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; deny select with mutual exclusion of col1, name for everone except admin (Ranger ID: 2)\n-- Type: GRANT | Principal: admin\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 COLUMN-SCOPED GRANT WIDENED TO TABLE LEVEL\n-- Original Ranger grant was limited to column(s): col1\n-- Unity Catalog has no column-level GRANT \u2014 privileges apply to the whole table.\n-- If column-level restriction is required, apply column masks on the\n-- other columns to return NULL/redacted values for non-permitted principals.\nGRANT SELECT ON TABLE `main`.`default`.`testTable` TO `admin@company.com`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; deny select with mutual exclusion of col1, name for everone except admin (Ranger ID: 2)\n-- Type: DENY | Principal: public\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: SELECT on main.default.testTable for public\n-- Column scope of deny: col1\n--\n-- \u26a0 MUTUAL EXCLUSION (accessed-together) CONDITION DETECTED\n-- This deny only triggers when ALL of the following columns are queried\n-- SIMULTANEOUSLY in a single query (column co-access prevention):\n--   \u2022 default.testTable.col1\n--   \u2022 default.testTable.name\n-- Unity Catalog has NO equivalent for query-level column co-access prevention.\n-- Ranger uses this to stop correlation attacks (e.g. joining quasi-identifiers).\n-- UC ALTERNATIVE: Apply a column mask on each sensitive column so that\n-- non-exempt principals always see a masked/null value regardless of\n-- which other columns are queried at the same time.\n--\n-- DENY EXCEPTIONS (these principals are exempt from this deny):\n--   \u2022 user: admin\n-- These principals retain access even though the deny applies to the group above.\n-- In UC (additive model), simply grant them explicitly and do not grant the\n-- denied group (public) at all \u2014 or apply column masks only for that group.\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove public from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n--\n-- \u2705 SUGGESTED COLUMN MASKS \u2014 UC approximation of the accessed-together deny:\n-- Applies NULL masking on each affected column for 'public',\n-- while exempting the denyException principals listed above.\n-- \u26a0 BEHAVIOR DIFFERENCE: In Ranger the deny fires only when ALL listed columns\n-- are accessed SIMULTANEOUSLY. These masks restrict EACH column independently,\n-- which is MORE restrictive. Verify this is acceptable before deploying.\n-- Columns masked: col1, name\n\nCREATE OR REPLACE FUNCTION `main`.`default`.mask_testTable_col1_deny_public(val STRING)\nRETURNS STRING\nRETURN IF((IS_ACCOUNT_GROUP_MEMBER('public') AND NOT (current_user() = 'admin@company.com')), NULL, val);\n\nALTER TABLE `main`.`default`.`testTable`\nALTER COLUMN col1 SET MASK `main`.`default`.mask_testTable_col1_deny_public;\n\nCREATE OR REPLACE FUNCTION `main`.`default`.mask_testTable_name_deny_public(val STRING)\nRETURNS STRING\nRETURN IF((IS_ACCOUNT_GROUP_MEMBER('public') AND NOT (current_user() = 'admin@company.com')), NULL, val);\n\nALTER TABLE `main`.`default`.`testTable`\nALTER COLUMN name SET MASK `main`.`default`.mask_testTable_name_deny_public;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; table=testTable; column=*; allow access to everyone (Ranger ID: 3)\n-- Type: SKIPPED_BLANK_PRINCIPAL | Principal: None\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 BLANK PRINCIPAL SKIPPED \u2014 NO GRANT GENERATED\n-- Policy: db=default; table=testTable; column=*; allow access to everyone\n-- Resource: `main`.`default`.`testTable`\n-- Blank entries found: users[0] is empty\n-- These entries were omitted because an empty user/group/role name\n-- cannot be mapped to a Databricks principal.\n-- ACTION REQUIRED: Open the Ranger policy, assign explicit principal names,\n-- re-export the policy JSON, and re-run the migration.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=default; table=testTable; column=*; allow access to everyone (Ranger ID: 3)\n-- Type: GRANT | Principal: public\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE `main`.`default`.`testTable` TO `public`;\n"
 }

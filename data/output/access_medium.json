@@ -1,9 +1,345 @@
 {
-  "serviceName": "hive_prod",
-  "catalogName": "main",
-  "clusterName": "unknown",
-  "totalRangerPolicies": 1,
-  "policyItems": [
+  "metadata": {
+    "timestamp": "2026-06-02T03:42:54.763740",
+    "service_name": "hive_prod",
+    "cluster_name": "unknown",
+    "catalog_name": "main",
+    "source_file": "access_medium.json",
+    "notes": ""
+  },
+  "parsed_data": {
+    "results": [
+      {
+        "id": "2-grant-sales-customers-sales_team-2",
+        "rangerPolicyId": 2,
+        "rangerPolicyName": "sales_schema_full_access",
+        "rangerPolicyDesc": "Medium policy - Sales team full access to sales schema tables",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "sales",
+        "table": "customers",
+        "columns": null,
+        "privileges": [
+          "SELECT",
+          "MODIFY",
+          "CREATE"
+        ],
+        "principal": {
+          "type": "group",
+          "name": "sales_team"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "2-grant-sales-customers-data_analysts-3",
+        "rangerPolicyId": 2,
+        "rangerPolicyName": "sales_schema_full_access",
+        "rangerPolicyDesc": "Medium policy - Sales team full access to sales schema tables",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "sales",
+        "table": "customers",
+        "columns": null,
+        "privileges": [
+          "SELECT",
+          "MODIFY",
+          "CREATE"
+        ],
+        "principal": {
+          "type": "group",
+          "name": "data_analysts"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "2-grant-sales-customers-sales_manager@company.com-4",
+        "rangerPolicyId": 2,
+        "rangerPolicyName": "sales_schema_full_access",
+        "rangerPolicyDesc": "Medium policy - Sales team full access to sales schema tables",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "sales",
+        "table": "customers",
+        "columns": null,
+        "privileges": [
+          "SELECT",
+          "MODIFY",
+          "CREATE"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "sales_manager@company.com"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "2-grant-sales-orders-sales_team-6",
+        "rangerPolicyId": 2,
+        "rangerPolicyName": "sales_schema_full_access",
+        "rangerPolicyDesc": "Medium policy - Sales team full access to sales schema tables",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "sales",
+        "table": "orders",
+        "columns": null,
+        "privileges": [
+          "SELECT",
+          "MODIFY",
+          "CREATE"
+        ],
+        "principal": {
+          "type": "group",
+          "name": "sales_team"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "2-grant-sales-orders-data_analysts-7",
+        "rangerPolicyId": 2,
+        "rangerPolicyName": "sales_schema_full_access",
+        "rangerPolicyDesc": "Medium policy - Sales team full access to sales schema tables",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "sales",
+        "table": "orders",
+        "columns": null,
+        "privileges": [
+          "SELECT",
+          "MODIFY",
+          "CREATE"
+        ],
+        "principal": {
+          "type": "group",
+          "name": "data_analysts"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "2-grant-sales-orders-sales_manager@company.com-8",
+        "rangerPolicyId": 2,
+        "rangerPolicyName": "sales_schema_full_access",
+        "rangerPolicyDesc": "Medium policy - Sales team full access to sales schema tables",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "sales",
+        "table": "orders",
+        "columns": null,
+        "privileges": [
+          "SELECT",
+          "MODIFY",
+          "CREATE"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "sales_manager@company.com"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "2-grant-sales-products-sales_team-10",
+        "rangerPolicyId": 2,
+        "rangerPolicyName": "sales_schema_full_access",
+        "rangerPolicyDesc": "Medium policy - Sales team full access to sales schema tables",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "sales",
+        "table": "products",
+        "columns": null,
+        "privileges": [
+          "SELECT",
+          "MODIFY",
+          "CREATE"
+        ],
+        "principal": {
+          "type": "group",
+          "name": "sales_team"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "2-grant-sales-products-data_analysts-11",
+        "rangerPolicyId": 2,
+        "rangerPolicyName": "sales_schema_full_access",
+        "rangerPolicyDesc": "Medium policy - Sales team full access to sales schema tables",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "sales",
+        "table": "products",
+        "columns": null,
+        "privileges": [
+          "SELECT",
+          "MODIFY",
+          "CREATE"
+        ],
+        "principal": {
+          "type": "group",
+          "name": "data_analysts"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "2-grant-sales-products-sales_manager@company.com-12",
+        "rangerPolicyId": 2,
+        "rangerPolicyName": "sales_schema_full_access",
+        "rangerPolicyDesc": "Medium policy - Sales team full access to sales schema tables",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "sales",
+        "table": "products",
+        "columns": null,
+        "privileges": [
+          "SELECT",
+          "MODIFY",
+          "CREATE"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "sales_manager@company.com"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "2-deny-sales-customers-sales_team-13",
+        "rangerPolicyId": 2,
+        "rangerPolicyName": "sales_schema_full_access",
+        "rangerPolicyDesc": "Medium policy - Sales team full access to sales schema tables",
+        "type": "deny",
+        "catalog": "main",
+        "schema": "sales",
+        "table": "customers",
+        "columns": null,
+        "privileges": [
+          "DROP"
+        ],
+        "principal": {
+          "type": "group",
+          "name": "sales_team"
+        },
+        "conditions": [],
+        "denyExceptions": [],
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "2-deny-sales-orders-sales_team-14",
+        "rangerPolicyId": 2,
+        "rangerPolicyName": "sales_schema_full_access",
+        "rangerPolicyDesc": "Medium policy - Sales team full access to sales schema tables",
+        "type": "deny",
+        "catalog": "main",
+        "schema": "sales",
+        "table": "orders",
+        "columns": null,
+        "privileges": [
+          "DROP"
+        ],
+        "principal": {
+          "type": "group",
+          "name": "sales_team"
+        },
+        "conditions": [],
+        "denyExceptions": [],
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "2-deny-sales-products-sales_team-15",
+        "rangerPolicyId": 2,
+        "rangerPolicyName": "sales_schema_full_access",
+        "rangerPolicyDesc": "Medium policy - Sales team full access to sales schema tables",
+        "type": "deny",
+        "catalog": "main",
+        "schema": "sales",
+        "table": "products",
+        "columns": null,
+        "privileges": [
+          "DROP"
+        ],
+        "principal": {
+          "type": "group",
+          "name": "sales_team"
+        },
+        "conditions": [],
+        "denyExceptions": [],
+        "enabled": true,
+        "status": "approved"
+      }
+    ],
+    "warnings": [
+      {
+        "policyId": 2,
+        "policyName": "sales_schema_full_access",
+        "type": "warning",
+        "severity": "critical",
+        "message": "DENY policy for sales_team on sales.customers [DROP] \u2014 Unity Catalog has no DENY mechanism",
+        "recommendation": "Restructure: move sensitive data into a separate schema with restricted grants, or use row filters/column masks to limit visibility instead of denying access."
+      },
+      {
+        "policyId": 2,
+        "policyName": "sales_schema_full_access",
+        "type": "warning",
+        "severity": "critical",
+        "message": "DENY policy for sales_team on sales.orders [DROP] \u2014 Unity Catalog has no DENY mechanism",
+        "recommendation": "Restructure: move sensitive data into a separate schema with restricted grants, or use row filters/column masks to limit visibility instead of denying access."
+      },
+      {
+        "policyId": 2,
+        "policyName": "sales_schema_full_access",
+        "type": "warning",
+        "severity": "critical",
+        "message": "DENY policy for sales_team on sales.products [DROP] \u2014 Unity Catalog has no DENY mechanism",
+        "recommendation": "Restructure: move sensitive data into a separate schema with restricted grants, or use row filters/column masks to limit visibility instead of denying access."
+      }
+    ],
+    "identities": [
+      {
+        "type": "group",
+        "name": "data_analysts"
+      },
+      {
+        "type": "group",
+        "name": "sales_team"
+      },
+      {
+        "type": "user",
+        "name": "sales_manager@company.com"
+      }
+    ],
+    "kerberosIssues": [
+      {
+        "policyId": 2,
+        "policyName": "sales_schema_full_access",
+        "principal": "sales_manager@company.com",
+        "type": "kerberos_principal",
+        "severity": "warning",
+        "message": "\"sales_manager@company.com\" looks like a Kerberos principal \u2014 needs mapping to Databricks service principal or managed identity",
+        "recommendation": "Map to a Databricks user via SCIM/IdP integration. Remove the Kerberos realm suffix."
+      }
+    ],
+    "serviceName": "hive_prod",
+    "serviceType": "hive",
+    "clusterName": "unknown",
+    "totalRangerPolicies": 1
+  },
+  "policy_items": [
     {
       "id": "2-grant-sales-customers-sales_team-2",
       "rangerPolicyId": 2,
@@ -25,7 +361,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "2-grant-sales-customers-data_analysts-3",
@@ -48,7 +384,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "2-grant-sales-customers-sales_manager@company.com-4",
@@ -71,7 +407,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "2-grant-sales-orders-sales_team-6",
@@ -94,7 +430,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "2-grant-sales-orders-data_analysts-7",
@@ -117,7 +453,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "2-grant-sales-orders-sales_manager@company.com-8",
@@ -140,7 +476,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "2-grant-sales-products-sales_team-10",
@@ -163,7 +499,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "2-grant-sales-products-data_analysts-11",
@@ -186,7 +522,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "2-grant-sales-products-sales_manager@company.com-12",
@@ -209,7 +545,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "2-deny-sales-customers-sales_team-13",
@@ -228,8 +564,10 @@
         "type": "group",
         "name": "sales_team"
       },
+      "conditions": [],
+      "denyExceptions": [],
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "2-deny-sales-orders-sales_team-14",
@@ -248,8 +586,10 @@
         "type": "group",
         "name": "sales_team"
       },
+      "conditions": [],
+      "denyExceptions": [],
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "2-deny-sales-products-sales_team-15",
@@ -268,39 +608,12 @@
         "type": "group",
         "name": "sales_team"
       },
+      "conditions": [],
+      "denyExceptions": [],
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     }
   ],
-  "identityMap": {},
-  "generatedSQL": "GRANT SELECT ON TABLE `main`.`sales`.`customers` TO `sales_team`;\nGRANT MODIFY ON TABLE `main`.`sales`.`customers` TO `sales_team`;\n-- \u26a0 CREATE privilege has no direct equivalent on a UC TABLE (Ranger 'create' at table scope). Grant MODIFY for write access, or ALL PRIVILEGES for full control.\n\nGRANT SELECT ON TABLE `main`.`sales`.`customers` TO `data_analysts`;\nGRANT MODIFY ON TABLE `main`.`sales`.`customers` TO `data_analysts`;\n-- \u26a0 CREATE privilege has no direct equivalent on a UC TABLE (Ranger 'create' at table scope). Grant MODIFY for write access, or ALL PRIVILEGES for full control.\n\nGRANT SELECT ON TABLE `main`.`sales`.`customers` TO `sales_manager@company.com`;\nGRANT MODIFY ON TABLE `main`.`sales`.`customers` TO `sales_manager@company.com`;\n-- \u26a0 CREATE privilege has no direct equivalent on a UC TABLE (Ranger 'create' at table scope). Grant MODIFY for write access, or ALL PRIVILEGES for full control.\n\nGRANT SELECT ON TABLE `main`.`sales`.`orders` TO `sales_team`;\nGRANT MODIFY ON TABLE `main`.`sales`.`orders` TO `sales_team`;\n-- \u26a0 CREATE privilege has no direct equivalent on a UC TABLE (Ranger 'create' at table scope). Grant MODIFY for write access, or ALL PRIVILEGES for full control.\n\nGRANT SELECT ON TABLE `main`.`sales`.`orders` TO `data_analysts`;\nGRANT MODIFY ON TABLE `main`.`sales`.`orders` TO `data_analysts`;\n-- \u26a0 CREATE privilege has no direct equivalent on a UC TABLE (Ranger 'create' at table scope). Grant MODIFY for write access, or ALL PRIVILEGES for full control.\n\nGRANT SELECT ON TABLE `main`.`sales`.`orders` TO `sales_manager@company.com`;\nGRANT MODIFY ON TABLE `main`.`sales`.`orders` TO `sales_manager@company.com`;\n-- \u26a0 CREATE privilege has no direct equivalent on a UC TABLE (Ranger 'create' at table scope). Grant MODIFY for write access, or ALL PRIVILEGES for full control.\n\nGRANT SELECT ON TABLE `main`.`sales`.`products` TO `sales_team`;\nGRANT MODIFY ON TABLE `main`.`sales`.`products` TO `sales_team`;\n-- \u26a0 CREATE privilege has no direct equivalent on a UC TABLE (Ranger 'create' at table scope). Grant MODIFY for write access, or ALL PRIVILEGES for full control.\n\nGRANT SELECT ON TABLE `main`.`sales`.`products` TO `data_analysts`;\nGRANT MODIFY ON TABLE `main`.`sales`.`products` TO `data_analysts`;\n-- \u26a0 CREATE privilege has no direct equivalent on a UC TABLE (Ranger 'create' at table scope). Grant MODIFY for write access, or ALL PRIVILEGES for full control.\n\nGRANT SELECT ON TABLE `main`.`sales`.`products` TO `sales_manager@company.com`;\nGRANT MODIFY ON TABLE `main`.`sales`.`products` TO `sales_manager@company.com`;\n-- \u26a0 CREATE privilege has no direct equivalent on a UC TABLE (Ranger 'create' at table scope). Grant MODIFY for write access, or ALL PRIVILEGES for full control.\n\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: DROP on main.sales.customers for sales_team\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove sales_team from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: DROP on main.sales.orders for sales_team\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove sales_team from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: DROP on main.sales.products for sales_team\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove sales_team from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place",
-  "stats": {
-    "total": 12,
-    "grants": 9,
-    "denies": 3,
-    "rowFilters": 0,
-    "masks": 0,
-    "hdfsGrants": 0,
-    "hbaseGrants": 0,
-    "udfGrants": 0,
-    "tagSets": 0,
-    "tagGrants": 0,
-    "tagPlaceholders": 0,
-    "approved": 0,
-    "needsReview": 3,
-    "pending": 9,
-    "rejected": 0,
-    "disabled": 0,
-    "schemaCount": 1,
-    "principalCount": 3,
-    "schemas": [
-      "sales"
-    ],
-    "principals": [
-      "data_analysts",
-      "sales_manager@company.com",
-      "sales_team"
-    ],
-    "notTranslatable": 3
-  }
+  "identity_map": {},
+  "generated_sql": "-- \u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n-- \u2551  Unity Catalog Migration Script                          \u2551\n-- \u2551  Generated by Ranger \u2192 UC Migrator                       \u2551\n-- \u2551  Source: hive_prod\n-- \u2551  Target Catalog: main\n-- \u2551  Date: 2026-06-02\n-- \u2551  Policies: 12 of 12\n-- \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\n\n-- \u26a0 GRANT/DENY CONFLICT: 3 principal(s) have both a GRANT\n-- and a DENY on the same table. In UC (additive model), GRANTs are permanent \u2014\n-- there is no DENY mechanism. The deny advisory below has NO effect unless either:\n--   (a) the GRANT is revoked, or\n--   (b) column masks are applied to restrict what the principal can see.\n--   Affected: sales_team on sales.customers\n--   Affected: sales_team on sales.orders\n--   Affected: sales_team on sales.products\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: sales_schema_full_access (Ranger ID: 2)\n-- Type: GRANT | Principal: sales_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE `main`.`sales`.`customers` TO `sales_team`;\nGRANT MODIFY ON TABLE `main`.`sales`.`customers` TO `sales_team`;\n-- \u26a0 CREATE privilege has no direct equivalent on a UC TABLE (Ranger 'create' at table scope). Grant MODIFY for write access, or ALL PRIVILEGES for full control.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: sales_schema_full_access (Ranger ID: 2)\n-- Type: GRANT | Principal: data_analysts\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE `main`.`sales`.`customers` TO `data_analysts`;\nGRANT MODIFY ON TABLE `main`.`sales`.`customers` TO `data_analysts`;\n-- \u26a0 CREATE privilege has no direct equivalent on a UC TABLE (Ranger 'create' at table scope). Grant MODIFY for write access, or ALL PRIVILEGES for full control.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: sales_schema_full_access (Ranger ID: 2)\n-- Type: GRANT | Principal: sales_manager@company.com\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE `main`.`sales`.`customers` TO `sales_manager@company.com`;\nGRANT MODIFY ON TABLE `main`.`sales`.`customers` TO `sales_manager@company.com`;\n-- \u26a0 CREATE privilege has no direct equivalent on a UC TABLE (Ranger 'create' at table scope). Grant MODIFY for write access, or ALL PRIVILEGES for full control.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: sales_schema_full_access (Ranger ID: 2)\n-- Type: GRANT | Principal: sales_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE `main`.`sales`.`orders` TO `sales_team`;\nGRANT MODIFY ON TABLE `main`.`sales`.`orders` TO `sales_team`;\n-- \u26a0 CREATE privilege has no direct equivalent on a UC TABLE (Ranger 'create' at table scope). Grant MODIFY for write access, or ALL PRIVILEGES for full control.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: sales_schema_full_access (Ranger ID: 2)\n-- Type: GRANT | Principal: data_analysts\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE `main`.`sales`.`orders` TO `data_analysts`;\nGRANT MODIFY ON TABLE `main`.`sales`.`orders` TO `data_analysts`;\n-- \u26a0 CREATE privilege has no direct equivalent on a UC TABLE (Ranger 'create' at table scope). Grant MODIFY for write access, or ALL PRIVILEGES for full control.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: sales_schema_full_access (Ranger ID: 2)\n-- Type: GRANT | Principal: sales_manager@company.com\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE `main`.`sales`.`orders` TO `sales_manager@company.com`;\nGRANT MODIFY ON TABLE `main`.`sales`.`orders` TO `sales_manager@company.com`;\n-- \u26a0 CREATE privilege has no direct equivalent on a UC TABLE (Ranger 'create' at table scope). Grant MODIFY for write access, or ALL PRIVILEGES for full control.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: sales_schema_full_access (Ranger ID: 2)\n-- Type: GRANT | Principal: sales_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE `main`.`sales`.`products` TO `sales_team`;\nGRANT MODIFY ON TABLE `main`.`sales`.`products` TO `sales_team`;\n-- \u26a0 CREATE privilege has no direct equivalent on a UC TABLE (Ranger 'create' at table scope). Grant MODIFY for write access, or ALL PRIVILEGES for full control.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: sales_schema_full_access (Ranger ID: 2)\n-- Type: GRANT | Principal: data_analysts\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE `main`.`sales`.`products` TO `data_analysts`;\nGRANT MODIFY ON TABLE `main`.`sales`.`products` TO `data_analysts`;\n-- \u26a0 CREATE privilege has no direct equivalent on a UC TABLE (Ranger 'create' at table scope). Grant MODIFY for write access, or ALL PRIVILEGES for full control.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: sales_schema_full_access (Ranger ID: 2)\n-- Type: GRANT | Principal: sales_manager@company.com\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nGRANT SELECT ON TABLE `main`.`sales`.`products` TO `sales_manager@company.com`;\nGRANT MODIFY ON TABLE `main`.`sales`.`products` TO `sales_manager@company.com`;\n-- \u26a0 CREATE privilege has no direct equivalent on a UC TABLE (Ranger 'create' at table scope). Grant MODIFY for write access, or ALL PRIVILEGES for full control.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: sales_schema_full_access (Ranger ID: 2)\n-- Type: DENY | Principal: sales_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: DROP on main.sales.customers for sales_team\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove sales_team from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: sales_schema_full_access (Ranger ID: 2)\n-- Type: DENY | Principal: sales_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: DROP on main.sales.orders for sales_team\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove sales_team from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: sales_schema_full_access (Ranger ID: 2)\n-- Type: DENY | Principal: sales_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: DROP on main.sales.products for sales_team\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove sales_team from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n"
 }

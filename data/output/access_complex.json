@@ -1,9 +1,528 @@
 {
-  "serviceName": "hive_prod",
-  "catalogName": "main",
-  "clusterName": "unknown",
-  "totalRangerPolicies": 1,
-  "policyItems": [
+  "metadata": {
+    "timestamp": "2026-06-02T03:42:54.762520",
+    "service_name": "hive_prod",
+    "cluster_name": "unknown",
+    "catalog_name": "main",
+    "source_file": "access_complex.json",
+    "notes": ""
+  },
+  "parsed_data": {
+    "results": [
+      {
+        "id": "3-grant-sales-*-all_employees-2",
+        "rangerPolicyId": 3,
+        "rangerPolicyName": "enterprise_data_governance",
+        "rangerPolicyDesc": "Complex policy - Tiered access across multiple schemas with exclusions and delegation",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "sales",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "SELECT"
+        ],
+        "principal": {
+          "type": "group",
+          "name": "all_employees"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "3-grant-marketing-*-all_employees-4",
+        "rangerPolicyId": 3,
+        "rangerPolicyName": "enterprise_data_governance",
+        "rangerPolicyDesc": "Complex policy - Tiered access across multiple schemas with exclusions and delegation",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "marketing",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "SELECT"
+        ],
+        "principal": {
+          "type": "group",
+          "name": "all_employees"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "3-grant-finance-*-all_employees-6",
+        "rangerPolicyId": 3,
+        "rangerPolicyName": "enterprise_data_governance",
+        "rangerPolicyDesc": "Complex policy - Tiered access across multiple schemas with exclusions and delegation",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "finance",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "SELECT"
+        ],
+        "principal": {
+          "type": "group",
+          "name": "all_employees"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "3-grant-sales-*-data_engineering-8",
+        "rangerPolicyId": 3,
+        "rangerPolicyName": "enterprise_data_governance",
+        "rangerPolicyDesc": "Complex policy - Tiered access across multiple schemas with exclusions and delegation",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "sales",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "SELECT",
+          "MODIFY",
+          "CREATE",
+          "ALTER"
+        ],
+        "principal": {
+          "type": "group",
+          "name": "data_engineering"
+        },
+        "delegateAdmin": true,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "3-grant-sales-*-platform_team-9",
+        "rangerPolicyId": 3,
+        "rangerPolicyName": "enterprise_data_governance",
+        "rangerPolicyDesc": "Complex policy - Tiered access across multiple schemas with exclusions and delegation",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "sales",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "SELECT",
+          "MODIFY",
+          "CREATE",
+          "ALTER"
+        ],
+        "principal": {
+          "type": "group",
+          "name": "platform_team"
+        },
+        "delegateAdmin": true,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "3-grant-sales-*-data_admin@company.com-10",
+        "rangerPolicyId": 3,
+        "rangerPolicyName": "enterprise_data_governance",
+        "rangerPolicyDesc": "Complex policy - Tiered access across multiple schemas with exclusions and delegation",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "sales",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "SELECT",
+          "MODIFY",
+          "CREATE",
+          "ALTER"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "data_admin@company.com"
+        },
+        "delegateAdmin": true,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "3-grant-marketing-*-data_engineering-12",
+        "rangerPolicyId": 3,
+        "rangerPolicyName": "enterprise_data_governance",
+        "rangerPolicyDesc": "Complex policy - Tiered access across multiple schemas with exclusions and delegation",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "marketing",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "SELECT",
+          "MODIFY",
+          "CREATE",
+          "ALTER"
+        ],
+        "principal": {
+          "type": "group",
+          "name": "data_engineering"
+        },
+        "delegateAdmin": true,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "3-grant-marketing-*-platform_team-13",
+        "rangerPolicyId": 3,
+        "rangerPolicyName": "enterprise_data_governance",
+        "rangerPolicyDesc": "Complex policy - Tiered access across multiple schemas with exclusions and delegation",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "marketing",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "SELECT",
+          "MODIFY",
+          "CREATE",
+          "ALTER"
+        ],
+        "principal": {
+          "type": "group",
+          "name": "platform_team"
+        },
+        "delegateAdmin": true,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "3-grant-marketing-*-data_admin@company.com-14",
+        "rangerPolicyId": 3,
+        "rangerPolicyName": "enterprise_data_governance",
+        "rangerPolicyDesc": "Complex policy - Tiered access across multiple schemas with exclusions and delegation",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "marketing",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "SELECT",
+          "MODIFY",
+          "CREATE",
+          "ALTER"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "data_admin@company.com"
+        },
+        "delegateAdmin": true,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "3-grant-finance-*-data_engineering-16",
+        "rangerPolicyId": 3,
+        "rangerPolicyName": "enterprise_data_governance",
+        "rangerPolicyDesc": "Complex policy - Tiered access across multiple schemas with exclusions and delegation",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "finance",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "SELECT",
+          "MODIFY",
+          "CREATE",
+          "ALTER"
+        ],
+        "principal": {
+          "type": "group",
+          "name": "data_engineering"
+        },
+        "delegateAdmin": true,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "3-grant-finance-*-platform_team-17",
+        "rangerPolicyId": 3,
+        "rangerPolicyName": "enterprise_data_governance",
+        "rangerPolicyDesc": "Complex policy - Tiered access across multiple schemas with exclusions and delegation",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "finance",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "SELECT",
+          "MODIFY",
+          "CREATE",
+          "ALTER"
+        ],
+        "principal": {
+          "type": "group",
+          "name": "platform_team"
+        },
+        "delegateAdmin": true,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "3-grant-finance-*-data_admin@company.com-18",
+        "rangerPolicyId": 3,
+        "rangerPolicyName": "enterprise_data_governance",
+        "rangerPolicyDesc": "Complex policy - Tiered access across multiple schemas with exclusions and delegation",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "finance",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "SELECT",
+          "MODIFY",
+          "CREATE",
+          "ALTER"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "data_admin@company.com"
+        },
+        "delegateAdmin": true,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "3-deny-sales-*-external_vendors-19",
+        "rangerPolicyId": 3,
+        "rangerPolicyName": "enterprise_data_governance",
+        "rangerPolicyDesc": "Complex policy - Tiered access across multiple schemas with exclusions and delegation",
+        "type": "deny",
+        "catalog": "main",
+        "schema": "sales",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "SELECT"
+        ],
+        "principal": {
+          "type": "group",
+          "name": "external_vendors"
+        },
+        "conditions": [],
+        "denyExceptions": [],
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "3-deny-sales-*-contractor1@company.com-20",
+        "rangerPolicyId": 3,
+        "rangerPolicyName": "enterprise_data_governance",
+        "rangerPolicyDesc": "Complex policy - Tiered access across multiple schemas with exclusions and delegation",
+        "type": "deny",
+        "catalog": "main",
+        "schema": "sales",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "SELECT"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "contractor1@company.com"
+        },
+        "conditions": [],
+        "denyExceptions": [],
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "3-deny-marketing-*-external_vendors-21",
+        "rangerPolicyId": 3,
+        "rangerPolicyName": "enterprise_data_governance",
+        "rangerPolicyDesc": "Complex policy - Tiered access across multiple schemas with exclusions and delegation",
+        "type": "deny",
+        "catalog": "main",
+        "schema": "marketing",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "SELECT"
+        ],
+        "principal": {
+          "type": "group",
+          "name": "external_vendors"
+        },
+        "conditions": [],
+        "denyExceptions": [],
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "3-deny-marketing-*-contractor1@company.com-22",
+        "rangerPolicyId": 3,
+        "rangerPolicyName": "enterprise_data_governance",
+        "rangerPolicyDesc": "Complex policy - Tiered access across multiple schemas with exclusions and delegation",
+        "type": "deny",
+        "catalog": "main",
+        "schema": "marketing",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "SELECT"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "contractor1@company.com"
+        },
+        "conditions": [],
+        "denyExceptions": [],
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "3-deny-finance-*-external_vendors-23",
+        "rangerPolicyId": 3,
+        "rangerPolicyName": "enterprise_data_governance",
+        "rangerPolicyDesc": "Complex policy - Tiered access across multiple schemas with exclusions and delegation",
+        "type": "deny",
+        "catalog": "main",
+        "schema": "finance",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "SELECT"
+        ],
+        "principal": {
+          "type": "group",
+          "name": "external_vendors"
+        },
+        "conditions": [],
+        "denyExceptions": [],
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "3-deny-finance-*-contractor1@company.com-24",
+        "rangerPolicyId": 3,
+        "rangerPolicyName": "enterprise_data_governance",
+        "rangerPolicyDesc": "Complex policy - Tiered access across multiple schemas with exclusions and delegation",
+        "type": "deny",
+        "catalog": "main",
+        "schema": "finance",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "SELECT"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "contractor1@company.com"
+        },
+        "conditions": [],
+        "denyExceptions": [],
+        "enabled": true,
+        "status": "approved"
+      }
+    ],
+    "warnings": [
+      {
+        "policyId": 3,
+        "policyName": "enterprise_data_governance",
+        "type": "warning",
+        "severity": "critical",
+        "message": "DENY policy for external_vendors on sales.* [SELECT] \u2014 Unity Catalog has no DENY mechanism",
+        "recommendation": "Restructure: move sensitive data into a separate schema with restricted grants, or use row filters/column masks to limit visibility instead of denying access."
+      },
+      {
+        "policyId": 3,
+        "policyName": "enterprise_data_governance",
+        "type": "warning",
+        "severity": "critical",
+        "message": "DENY policy for contractor1@company.com on sales.* [SELECT] \u2014 Unity Catalog has no DENY mechanism",
+        "recommendation": "Restructure: move sensitive data into a separate schema with restricted grants, or use row filters/column masks to limit visibility instead of denying access."
+      },
+      {
+        "policyId": 3,
+        "policyName": "enterprise_data_governance",
+        "type": "warning",
+        "severity": "critical",
+        "message": "DENY policy for external_vendors on marketing.* [SELECT] \u2014 Unity Catalog has no DENY mechanism",
+        "recommendation": "Restructure: move sensitive data into a separate schema with restricted grants, or use row filters/column masks to limit visibility instead of denying access."
+      },
+      {
+        "policyId": 3,
+        "policyName": "enterprise_data_governance",
+        "type": "warning",
+        "severity": "critical",
+        "message": "DENY policy for contractor1@company.com on marketing.* [SELECT] \u2014 Unity Catalog has no DENY mechanism",
+        "recommendation": "Restructure: move sensitive data into a separate schema with restricted grants, or use row filters/column masks to limit visibility instead of denying access."
+      },
+      {
+        "policyId": 3,
+        "policyName": "enterprise_data_governance",
+        "type": "warning",
+        "severity": "critical",
+        "message": "DENY policy for external_vendors on finance.* [SELECT] \u2014 Unity Catalog has no DENY mechanism",
+        "recommendation": "Restructure: move sensitive data into a separate schema with restricted grants, or use row filters/column masks to limit visibility instead of denying access."
+      },
+      {
+        "policyId": 3,
+        "policyName": "enterprise_data_governance",
+        "type": "warning",
+        "severity": "critical",
+        "message": "DENY policy for contractor1@company.com on finance.* [SELECT] \u2014 Unity Catalog has no DENY mechanism",
+        "recommendation": "Restructure: move sensitive data into a separate schema with restricted grants, or use row filters/column masks to limit visibility instead of denying access."
+      }
+    ],
+    "identities": [
+      {
+        "type": "group",
+        "name": "all_employees"
+      },
+      {
+        "type": "group",
+        "name": "data_engineering"
+      },
+      {
+        "type": "group",
+        "name": "external_vendors"
+      },
+      {
+        "type": "group",
+        "name": "platform_team"
+      },
+      {
+        "type": "user",
+        "name": "contractor1@company.com"
+      },
+      {
+        "type": "user",
+        "name": "data_admin@company.com"
+      }
+    ],
+    "kerberosIssues": [
+      {
+        "policyId": 3,
+        "policyName": "enterprise_data_governance",
+        "principal": "data_admin@company.com",
+        "type": "kerberos_principal",
+        "severity": "warning",
+        "message": "\"data_admin@company.com\" looks like a Kerberos principal \u2014 needs mapping to Databricks service principal or managed identity",
+        "recommendation": "Map to a Databricks user via SCIM/IdP integration. Remove the Kerberos realm suffix."
+      },
+      {
+        "policyId": 3,
+        "policyName": "enterprise_data_governance",
+        "principal": "contractor1@company.com",
+        "type": "kerberos_principal",
+        "severity": "warning",
+        "message": "\"contractor1@company.com\" looks like a Kerberos principal \u2014 needs mapping to Databricks service principal or managed identity",
+        "recommendation": "Map to a Databricks user via SCIM/IdP integration. Remove the Kerberos realm suffix."
+      }
+    ],
+    "serviceName": "hive_prod",
+    "serviceType": "hive",
+    "clusterName": "unknown",
+    "totalRangerPolicies": 1
+  },
+  "policy_items": [
     {
       "id": "3-grant-sales-*-all_employees-2",
       "rangerPolicyId": 3,
@@ -23,7 +542,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "3-grant-marketing-*-all_employees-4",
@@ -44,7 +563,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "3-grant-finance-*-all_employees-6",
@@ -65,7 +584,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "3-grant-sales-*-data_engineering-8",
@@ -89,7 +608,7 @@
       },
       "delegateAdmin": true,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "3-grant-sales-*-platform_team-9",
@@ -113,7 +632,7 @@
       },
       "delegateAdmin": true,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "3-grant-sales-*-data_admin@company.com-10",
@@ -137,7 +656,7 @@
       },
       "delegateAdmin": true,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "3-grant-marketing-*-data_engineering-12",
@@ -161,7 +680,7 @@
       },
       "delegateAdmin": true,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "3-grant-marketing-*-platform_team-13",
@@ -185,7 +704,7 @@
       },
       "delegateAdmin": true,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "3-grant-marketing-*-data_admin@company.com-14",
@@ -209,7 +728,7 @@
       },
       "delegateAdmin": true,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "3-grant-finance-*-data_engineering-16",
@@ -233,7 +752,7 @@
       },
       "delegateAdmin": true,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "3-grant-finance-*-platform_team-17",
@@ -257,7 +776,7 @@
       },
       "delegateAdmin": true,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "3-grant-finance-*-data_admin@company.com-18",
@@ -281,7 +800,7 @@
       },
       "delegateAdmin": true,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "3-deny-sales-*-external_vendors-19",
@@ -300,8 +819,10 @@
         "type": "group",
         "name": "external_vendors"
       },
+      "conditions": [],
+      "denyExceptions": [],
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "3-deny-sales-*-contractor1@company.com-20",
@@ -320,8 +841,10 @@
         "type": "user",
         "name": "contractor1@company.com"
       },
+      "conditions": [],
+      "denyExceptions": [],
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "3-deny-marketing-*-external_vendors-21",
@@ -340,8 +863,10 @@
         "type": "group",
         "name": "external_vendors"
       },
+      "conditions": [],
+      "denyExceptions": [],
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "3-deny-marketing-*-contractor1@company.com-22",
@@ -360,8 +885,10 @@
         "type": "user",
         "name": "contractor1@company.com"
       },
+      "conditions": [],
+      "denyExceptions": [],
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "3-deny-finance-*-external_vendors-23",
@@ -380,8 +907,10 @@
         "type": "group",
         "name": "external_vendors"
       },
+      "conditions": [],
+      "denyExceptions": [],
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "3-deny-finance-*-contractor1@company.com-24",
@@ -400,44 +929,12 @@
         "type": "user",
         "name": "contractor1@company.com"
       },
+      "conditions": [],
+      "denyExceptions": [],
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     }
   ],
-  "identityMap": {},
-  "generatedSQL": "-- \u26a0 Ranger policy targeted table=* (all tables in `sales`).\n-- UC schema-level grant applies to all current AND future tables in this schema \u2014 broader scope than the original Ranger policy.\n-- Review: consider explicit per-table grants for sensitive schemas.\nGRANT USE CATALOG ON CATALOG `main` TO `all_employees`;\nGRANT USE SCHEMA ON SCHEMA `main`.`sales` TO `all_employees`;\nGRANT SELECT ON SCHEMA `main`.`sales` TO `all_employees`;\n\n-- \u26a0 Ranger policy targeted table=* (all tables in `marketing`).\n-- UC schema-level grant applies to all current AND future tables in this schema \u2014 broader scope than the original Ranger policy.\n-- Review: consider explicit per-table grants for sensitive schemas.\nGRANT USE CATALOG ON CATALOG `main` TO `all_employees`;\nGRANT USE SCHEMA ON SCHEMA `main`.`marketing` TO `all_employees`;\nGRANT SELECT ON SCHEMA `main`.`marketing` TO `all_employees`;\n\n-- \u26a0 Ranger policy targeted table=* (all tables in `finance`).\n-- UC schema-level grant applies to all current AND future tables in this schema \u2014 broader scope than the original Ranger policy.\n-- Review: consider explicit per-table grants for sensitive schemas.\nGRANT USE CATALOG ON CATALOG `main` TO `all_employees`;\nGRANT USE SCHEMA ON SCHEMA `main`.`finance` TO `all_employees`;\nGRANT SELECT ON SCHEMA `main`.`finance` TO `all_employees`;\n\n-- \u26a0 Ranger policy targeted table=* (all tables in `sales`).\n-- UC schema-level grant applies to all current AND future tables in this schema \u2014 broader scope than the original Ranger policy.\n-- Review: consider explicit per-table grants for sensitive schemas.\nGRANT USE CATALOG ON CATALOG `main` TO `data_engineering`;\nGRANT USE SCHEMA ON SCHEMA `main`.`sales` TO `data_engineering`;\nGRANT SELECT ON SCHEMA `main`.`sales` TO `data_engineering`;\nGRANT MODIFY ON SCHEMA `main`.`sales` TO `data_engineering`;\nGRANT CREATE TABLE ON SCHEMA `main`.`sales` TO `data_engineering`;\nGRANT ALTER ON SCHEMA `main`.`sales` TO `data_engineering`;\n-- Note: delegateAdmin=true in Ranger. Consider granting MANAGE on SCHEMA `main`.`sales` if admin delegation is needed.\n\n-- \u26a0 Ranger policy targeted table=* (all tables in `sales`).\n-- UC schema-level grant applies to all current AND future tables in this schema \u2014 broader scope than the original Ranger policy.\n-- Review: consider explicit per-table grants for sensitive schemas.\nGRANT USE CATALOG ON CATALOG `main` TO `platform_team`;\nGRANT USE SCHEMA ON SCHEMA `main`.`sales` TO `platform_team`;\nGRANT SELECT ON SCHEMA `main`.`sales` TO `platform_team`;\nGRANT MODIFY ON SCHEMA `main`.`sales` TO `platform_team`;\nGRANT CREATE TABLE ON SCHEMA `main`.`sales` TO `platform_team`;\nGRANT ALTER ON SCHEMA `main`.`sales` TO `platform_team`;\n-- Note: delegateAdmin=true in Ranger. Consider granting MANAGE on SCHEMA `main`.`sales` if admin delegation is needed.\n\n-- \u26a0 Ranger policy targeted table=* (all tables in `sales`).\n-- UC schema-level grant applies to all current AND future tables in this schema \u2014 broader scope than the original Ranger policy.\n-- Review: consider explicit per-table grants for sensitive schemas.\nGRANT USE CATALOG ON CATALOG `main` TO `data_admin@company.com`;\nGRANT USE SCHEMA ON SCHEMA `main`.`sales` TO `data_admin@company.com`;\nGRANT SELECT ON SCHEMA `main`.`sales` TO `data_admin@company.com`;\nGRANT MODIFY ON SCHEMA `main`.`sales` TO `data_admin@company.com`;\nGRANT CREATE TABLE ON SCHEMA `main`.`sales` TO `data_admin@company.com`;\nGRANT ALTER ON SCHEMA `main`.`sales` TO `data_admin@company.com`;\n-- Note: delegateAdmin=true in Ranger. Consider granting MANAGE on SCHEMA `main`.`sales` if admin delegation is needed.\n\n-- \u26a0 Ranger policy targeted table=* (all tables in `marketing`).\n-- UC schema-level grant applies to all current AND future tables in this schema \u2014 broader scope than the original Ranger policy.\n-- Review: consider explicit per-table grants for sensitive schemas.\nGRANT USE CATALOG ON CATALOG `main` TO `data_engineering`;\nGRANT USE SCHEMA ON SCHEMA `main`.`marketing` TO `data_engineering`;\nGRANT SELECT ON SCHEMA `main`.`marketing` TO `data_engineering`;\nGRANT MODIFY ON SCHEMA `main`.`marketing` TO `data_engineering`;\nGRANT CREATE TABLE ON SCHEMA `main`.`marketing` TO `data_engineering`;\nGRANT ALTER ON SCHEMA `main`.`marketing` TO `data_engineering`;\n-- Note: delegateAdmin=true in Ranger. Consider granting MANAGE on SCHEMA `main`.`marketing` if admin delegation is needed.\n\n-- \u26a0 Ranger policy targeted table=* (all tables in `marketing`).\n-- UC schema-level grant applies to all current AND future tables in this schema \u2014 broader scope than the original Ranger policy.\n-- Review: consider explicit per-table grants for sensitive schemas.\nGRANT USE CATALOG ON CATALOG `main` TO `platform_team`;\nGRANT USE SCHEMA ON SCHEMA `main`.`marketing` TO `platform_team`;\nGRANT SELECT ON SCHEMA `main`.`marketing` TO `platform_team`;\nGRANT MODIFY ON SCHEMA `main`.`marketing` TO `platform_team`;\nGRANT CREATE TABLE ON SCHEMA `main`.`marketing` TO `platform_team`;\nGRANT ALTER ON SCHEMA `main`.`marketing` TO `platform_team`;\n-- Note: delegateAdmin=true in Ranger. Consider granting MANAGE on SCHEMA `main`.`marketing` if admin delegation is needed.\n\n-- \u26a0 Ranger policy targeted table=* (all tables in `marketing`).\n-- UC schema-level grant applies to all current AND future tables in this schema \u2014 broader scope than the original Ranger policy.\n-- Review: consider explicit per-table grants for sensitive schemas.\nGRANT USE CATALOG ON CATALOG `main` TO `data_admin@company.com`;\nGRANT USE SCHEMA ON SCHEMA `main`.`marketing` TO `data_admin@company.com`;\nGRANT SELECT ON SCHEMA `main`.`marketing` TO `data_admin@company.com`;\nGRANT MODIFY ON SCHEMA `main`.`marketing` TO `data_admin@company.com`;\nGRANT CREATE TABLE ON SCHEMA `main`.`marketing` TO `data_admin@company.com`;\nGRANT ALTER ON SCHEMA `main`.`marketing` TO `data_admin@company.com`;\n-- Note: delegateAdmin=true in Ranger. Consider granting MANAGE on SCHEMA `main`.`marketing` if admin delegation is needed.\n\n-- \u26a0 Ranger policy targeted table=* (all tables in `finance`).\n-- UC schema-level grant applies to all current AND future tables in this schema \u2014 broader scope than the original Ranger policy.\n-- Review: consider explicit per-table grants for sensitive schemas.\nGRANT USE CATALOG ON CATALOG `main` TO `data_engineering`;\nGRANT USE SCHEMA ON SCHEMA `main`.`finance` TO `data_engineering`;\nGRANT SELECT ON SCHEMA `main`.`finance` TO `data_engineering`;\nGRANT MODIFY ON SCHEMA `main`.`finance` TO `data_engineering`;\nGRANT CREATE TABLE ON SCHEMA `main`.`finance` TO `data_engineering`;\nGRANT ALTER ON SCHEMA `main`.`finance` TO `data_engineering`;\n-- Note: delegateAdmin=true in Ranger. Consider granting MANAGE on SCHEMA `main`.`finance` if admin delegation is needed.\n\n-- \u26a0 Ranger policy targeted table=* (all tables in `finance`).\n-- UC schema-level grant applies to all current AND future tables in this schema \u2014 broader scope than the original Ranger policy.\n-- Review: consider explicit per-table grants for sensitive schemas.\nGRANT USE CATALOG ON CATALOG `main` TO `platform_team`;\nGRANT USE SCHEMA ON SCHEMA `main`.`finance` TO `platform_team`;\nGRANT SELECT ON SCHEMA `main`.`finance` TO `platform_team`;\nGRANT MODIFY ON SCHEMA `main`.`finance` TO `platform_team`;\nGRANT CREATE TABLE ON SCHEMA `main`.`finance` TO `platform_team`;\nGRANT ALTER ON SCHEMA `main`.`finance` TO `platform_team`;\n-- Note: delegateAdmin=true in Ranger. Consider granting MANAGE on SCHEMA `main`.`finance` if admin delegation is needed.\n\n-- \u26a0 Ranger policy targeted table=* (all tables in `finance`).\n-- UC schema-level grant applies to all current AND future tables in this schema \u2014 broader scope than the original Ranger policy.\n-- Review: consider explicit per-table grants for sensitive schemas.\nGRANT USE CATALOG ON CATALOG `main` TO `data_admin@company.com`;\nGRANT USE SCHEMA ON SCHEMA `main`.`finance` TO `data_admin@company.com`;\nGRANT SELECT ON SCHEMA `main`.`finance` TO `data_admin@company.com`;\nGRANT MODIFY ON SCHEMA `main`.`finance` TO `data_admin@company.com`;\nGRANT CREATE TABLE ON SCHEMA `main`.`finance` TO `data_admin@company.com`;\nGRANT ALTER ON SCHEMA `main`.`finance` TO `data_admin@company.com`;\n-- Note: delegateAdmin=true in Ranger. Consider granting MANAGE on SCHEMA `main`.`finance` if admin delegation is needed.\n\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: SELECT on main.sales.* for external_vendors\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove external_vendors from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: SELECT on main.sales.* for contractor1@company.com\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove contractor1@company.com from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: SELECT on main.marketing.* for external_vendors\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove external_vendors from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: SELECT on main.marketing.* for contractor1@company.com\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove contractor1@company.com from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: SELECT on main.finance.* for external_vendors\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove external_vendors from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: SELECT on main.finance.* for contractor1@company.com\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove contractor1@company.com from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place",
-  "stats": {
-    "total": 18,
-    "grants": 12,
-    "denies": 6,
-    "rowFilters": 0,
-    "masks": 0,
-    "hdfsGrants": 0,
-    "hbaseGrants": 0,
-    "udfGrants": 0,
-    "tagSets": 0,
-    "tagGrants": 0,
-    "tagPlaceholders": 0,
-    "approved": 0,
-    "needsReview": 6,
-    "pending": 12,
-    "rejected": 0,
-    "disabled": 0,
-    "schemaCount": 3,
-    "principalCount": 6,
-    "schemas": [
-      "finance",
-      "marketing",
-      "sales"
-    ],
-    "principals": [
-      "all_employees",
-      "contractor1@company.com",
-      "data_admin@company.com",
-      "data_engineering",
-      "external_vendors",
-      "platform_team"
-    ],
-    "notTranslatable": 6
-  }
+  "identity_map": {},
+  "generated_sql": "-- \u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n-- \u2551  Unity Catalog Migration Script                          \u2551\n-- \u2551  Generated by Ranger \u2192 UC Migrator                       \u2551\n-- \u2551  Source: hive_prod\n-- \u2551  Target Catalog: main\n-- \u2551  Date: 2026-06-02\n-- \u2551  Policies: 18 of 18\n-- \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: enterprise_data_governance (Ranger ID: 3)\n-- Type: GRANT | Principal: all_employees\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 Ranger policy targeted table=* (all tables in `sales`).\n-- SELECT and MODIFY are table-level privileges in UC \u2014 they cannot be granted on SCHEMA.\n-- They are applied via a BEGIN...END FOR loop over all tables in the schema.\nGRANT USE CATALOG ON CATALOG `main` TO `all_employees`;\nGRANT USE SCHEMA ON SCHEMA `main`.`sales` TO `all_employees`;\n-- \u26a0 SELECT: table-level privilege \u2014 granted per-table via loop below.\n-- Requires Databricks Runtime 14.0+ or a SQL Warehouse with scripting enabled.\n-- \u26a0 Tables added to `sales` AFTER this script runs will NOT inherit this grant.\n-- Re-run the relevant GRANT or add explicit per-table grants for new tables.\n-- \u26a0 Ranger wildcard table pattern: *  \u2192  SQL LIKE: '%'\n-- UC does not support wildcards in GRANT statements.\n-- The block below loops through all matching tables at runtime and applies the grant.\n-- Requires Databricks Runtime 14.0+ or a SQL Warehouse with scripting enabled.\nBEGIN\n  FOR tbl AS (\n    SELECT table_name\n    FROM `main`.information_schema.tables\n    WHERE table_catalog = 'main'\n      AND table_schema   = 'sales'\n      AND table_name LIKE '%'\n  ) DO\n    EXECUTE IMMEDIATE 'GRANT SELECT ON TABLE `main`.`sales`.`' || tbl.table_name || '` TO `all_employees`';\n  END FOR;\nEND;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: enterprise_data_governance (Ranger ID: 3)\n-- Type: GRANT | Principal: all_employees\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 Ranger policy targeted table=* (all tables in `marketing`).\n-- SELECT and MODIFY are table-level privileges in UC \u2014 they cannot be granted on SCHEMA.\n-- They are applied via a BEGIN...END FOR loop over all tables in the schema.\nGRANT USE CATALOG ON CATALOG `main` TO `all_employees`;\nGRANT USE SCHEMA ON SCHEMA `main`.`marketing` TO `all_employees`;\n-- \u26a0 SELECT: table-level privilege \u2014 granted per-table via loop below.\n-- Requires Databricks Runtime 14.0+ or a SQL Warehouse with scripting enabled.\n-- \u26a0 Tables added to `marketing` AFTER this script runs will NOT inherit this grant.\n-- Re-run the relevant GRANT or add explicit per-table grants for new tables.\n-- \u26a0 Ranger wildcard table pattern: *  \u2192  SQL LIKE: '%'\n-- UC does not support wildcards in GRANT statements.\n-- The block below loops through all matching tables at runtime and applies the grant.\n-- Requires Databricks Runtime 14.0+ or a SQL Warehouse with scripting enabled.\nBEGIN\n  FOR tbl AS (\n    SELECT table_name\n    FROM `main`.information_schema.tables\n    WHERE table_catalog = 'main'\n      AND table_schema   = 'marketing'\n      AND table_name LIKE '%'\n  ) DO\n    EXECUTE IMMEDIATE 'GRANT SELECT ON TABLE `main`.`marketing`.`' || tbl.table_name || '` TO `all_employees`';\n  END FOR;\nEND;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: enterprise_data_governance (Ranger ID: 3)\n-- Type: GRANT | Principal: all_employees\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 Ranger policy targeted table=* (all tables in `finance`).\n-- SELECT and MODIFY are table-level privileges in UC \u2014 they cannot be granted on SCHEMA.\n-- They are applied via a BEGIN...END FOR loop over all tables in the schema.\nGRANT USE CATALOG ON CATALOG `main` TO `all_employees`;\nGRANT USE SCHEMA ON SCHEMA `main`.`finance` TO `all_employees`;\n-- \u26a0 SELECT: table-level privilege \u2014 granted per-table via loop below.\n-- Requires Databricks Runtime 14.0+ or a SQL Warehouse with scripting enabled.\n-- \u26a0 Tables added to `finance` AFTER this script runs will NOT inherit this grant.\n-- Re-run the relevant GRANT or add explicit per-table grants for new tables.\n-- \u26a0 Ranger wildcard table pattern: *  \u2192  SQL LIKE: '%'\n-- UC does not support wildcards in GRANT statements.\n-- The block below loops through all matching tables at runtime and applies the grant.\n-- Requires Databricks Runtime 14.0+ or a SQL Warehouse with scripting enabled.\nBEGIN\n  FOR tbl AS (\n    SELECT table_name\n    FROM `main`.information_schema.tables\n    WHERE table_catalog = 'main'\n      AND table_schema   = 'finance'\n      AND table_name LIKE '%'\n  ) DO\n    EXECUTE IMMEDIATE 'GRANT SELECT ON TABLE `main`.`finance`.`' || tbl.table_name || '` TO `all_employees`';\n  END FOR;\nEND;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: enterprise_data_governance (Ranger ID: 3)\n-- Type: GRANT | Principal: data_engineering\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 Ranger policy targeted table=* (all tables in `sales`).\n-- SELECT and MODIFY are table-level privileges in UC \u2014 they cannot be granted on SCHEMA.\n-- They are applied via a BEGIN...END FOR loop over all tables in the schema.\n-- Other privileges (CREATE, ALTER) are granted directly on the schema.\nGRANT USE CATALOG ON CATALOG `main` TO `data_engineering`;\nGRANT USE SCHEMA ON SCHEMA `main`.`sales` TO `data_engineering`;\nGRANT CREATE TABLE ON SCHEMA `main`.`sales` TO `data_engineering`;\n-- \u26a0 ALTER privilege has no direct equivalent in Unity Catalog. Converted to ALL PRIVILEGES (closest available substitute for DDL access). In UC, table/schema structural changes (ADD COLUMN, RENAME, etc.) require ownership. Review: consider assigning object ownership instead of granting ALL PRIVILEGES.\nGRANT ALL PRIVILEGES ON SCHEMA `main`.`sales` TO `data_engineering`;\n-- \u26a0 SELECT: table-level privilege \u2014 granted per-table via loop below.\n-- Requires Databricks Runtime 14.0+ or a SQL Warehouse with scripting enabled.\n-- \u26a0 Tables added to `sales` AFTER this script runs will NOT inherit this grant.\n-- Re-run the relevant GRANT or add explicit per-table grants for new tables.\n-- \u26a0 Ranger wildcard table pattern: *  \u2192  SQL LIKE: '%'\n-- UC does not support wildcards in GRANT statements.\n-- The block below loops through all matching tables at runtime and applies the grant.\n-- Requires Databricks Runtime 14.0+ or a SQL Warehouse with scripting enabled.\nBEGIN\n  FOR tbl AS (\n    SELECT table_name\n    FROM `main`.information_schema.tables\n    WHERE table_catalog = 'main'\n      AND table_schema   = 'sales'\n      AND table_name LIKE '%'\n  ) DO\n    EXECUTE IMMEDIATE 'GRANT SELECT ON TABLE `main`.`sales`.`' || tbl.table_name || '` TO `data_engineering`';\n  END FOR;\nEND;\n-- \u26a0 MODIFY: table-level privilege \u2014 granted per-table via loop below.\n-- Requires Databricks Runtime 14.0+ or a SQL Warehouse with scripting enabled.\n-- \u26a0 Tables added to `sales` AFTER this script runs will NOT inherit this grant.\n-- Re-run the relevant GRANT or add explicit per-table grants for new tables.\n-- \u26a0 Ranger wildcard table pattern: *  \u2192  SQL LIKE: '%'\n-- UC does not support wildcards in GRANT statements.\n-- The block below loops through all matching tables at runtime and applies the grant.\n-- Requires Databricks Runtime 14.0+ or a SQL Warehouse with scripting enabled.\nBEGIN\n  FOR tbl AS (\n    SELECT table_name\n    FROM `main`.information_schema.tables\n    WHERE table_catalog = 'main'\n      AND table_schema   = 'sales'\n      AND table_name LIKE '%'\n  ) DO\n    EXECUTE IMMEDIATE 'GRANT MODIFY ON TABLE `main`.`sales`.`' || tbl.table_name || '` TO `data_engineering`';\n  END FOR;\nEND;\n-- Note: delegateAdmin=true in Ranger. Consider granting MANAGE on SCHEMA `main`.`sales` if admin delegation is needed.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: enterprise_data_governance (Ranger ID: 3)\n-- Type: GRANT | Principal: platform_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 Ranger policy targeted table=* (all tables in `sales`).\n-- SELECT and MODIFY are table-level privileges in UC \u2014 they cannot be granted on SCHEMA.\n-- They are applied via a BEGIN...END FOR loop over all tables in the schema.\n-- Other privileges (CREATE, ALTER) are granted directly on the schema.\nGRANT USE CATALOG ON CATALOG `main` TO `platform_team`;\nGRANT USE SCHEMA ON SCHEMA `main`.`sales` TO `platform_team`;\nGRANT CREATE TABLE ON SCHEMA `main`.`sales` TO `platform_team`;\n-- \u26a0 ALTER privilege has no direct equivalent in Unity Catalog. Converted to ALL PRIVILEGES (closest available substitute for DDL access). In UC, table/schema structural changes (ADD COLUMN, RENAME, etc.) require ownership. Review: consider assigning object ownership instead of granting ALL PRIVILEGES.\nGRANT ALL PRIVILEGES ON SCHEMA `main`.`sales` TO `platform_team`;\n-- \u26a0 SELECT: table-level privilege \u2014 granted per-table via loop below.\n-- Requires Databricks Runtime 14.0+ or a SQL Warehouse with scripting enabled.\n-- \u26a0 Tables added to `sales` AFTER this script runs will NOT inherit this grant.\n-- Re-run the relevant GRANT or add explicit per-table grants for new tables.\n-- \u26a0 Ranger wildcard table pattern: *  \u2192  SQL LIKE: '%'\n-- UC does not support wildcards in GRANT statements.\n-- The block below loops through all matching tables at runtime and applies the grant.\n-- Requires Databricks Runtime 14.0+ or a SQL Warehouse with scripting enabled.\nBEGIN\n  FOR tbl AS (\n    SELECT table_name\n    FROM `main`.information_schema.tables\n    WHERE table_catalog = 'main'\n      AND table_schema   = 'sales'\n      AND table_name LIKE '%'\n  ) DO\n    EXECUTE IMMEDIATE 'GRANT SELECT ON TABLE `main`.`sales`.`' || tbl.table_name || '` TO `platform_team`';\n  END FOR;\nEND;\n-- \u26a0 MODIFY: table-level privilege \u2014 granted per-table via loop below.\n-- Requires Databricks Runtime 14.0+ or a SQL Warehouse with scripting enabled.\n-- \u26a0 Tables added to `sales` AFTER this script runs will NOT inherit this grant.\n-- Re-run the relevant GRANT or add explicit per-table grants for new tables.\n-- \u26a0 Ranger wildcard table pattern: *  \u2192  SQL LIKE: '%'\n-- UC does not support wildcards in GRANT statements.\n-- The block below loops through all matching tables at runtime and applies the grant.\n-- Requires Databricks Runtime 14.0+ or a SQL Warehouse with scripting enabled.\nBEGIN\n  FOR tbl AS (\n    SELECT table_name\n    FROM `main`.information_schema.tables\n    WHERE table_catalog = 'main'\n      AND table_schema   = 'sales'\n      AND table_name LIKE '%'\n  ) DO\n    EXECUTE IMMEDIATE 'GRANT MODIFY ON TABLE `main`.`sales`.`' || tbl.table_name || '` TO `platform_team`';\n  END FOR;\nEND;\n-- Note: delegateAdmin=true in Ranger. Consider granting MANAGE on SCHEMA `main`.`sales` if admin delegation is needed.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: enterprise_data_governance (Ranger ID: 3)\n-- Type: GRANT | Principal: data_admin@company.com\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 Ranger policy targeted table=* (all tables in `sales`).\n-- SELECT and MODIFY are table-level privileges in UC \u2014 they cannot be granted on SCHEMA.\n-- They are applied via a BEGIN...END FOR loop over all tables in the schema.\n-- Other privileges (CREATE, ALTER) are granted directly on the schema.\nGRANT USE CATALOG ON CATALOG `main` TO `data_admin@company.com`;\nGRANT USE SCHEMA ON SCHEMA `main`.`sales` TO `data_admin@company.com`;\nGRANT CREATE TABLE ON SCHEMA `main`.`sales` TO `data_admin@company.com`;\n-- \u26a0 ALTER privilege has no direct equivalent in Unity Catalog. Converted to ALL PRIVILEGES (closest available substitute for DDL access). In UC, table/schema structural changes (ADD COLUMN, RENAME, etc.) require ownership. Review: consider assigning object ownership instead of granting ALL PRIVILEGES.\nGRANT ALL PRIVILEGES ON SCHEMA `main`.`sales` TO `data_admin@company.com`;\n-- \u26a0 SELECT: table-level privilege \u2014 granted per-table via loop below.\n-- Requires Databricks Runtime 14.0+ or a SQL Warehouse with scripting enabled.\n-- \u26a0 Tables added to `sales` AFTER this script runs will NOT inherit this grant.\n-- Re-run the relevant GRANT or add explicit per-table grants for new tables.\n-- \u26a0 Ranger wildcard table pattern: *  \u2192  SQL LIKE: '%'\n-- UC does not support wildcards in GRANT statements.\n-- The block below loops through all matching tables at runtime and applies the grant.\n-- Requires Databricks Runtime 14.0+ or a SQL Warehouse with scripting enabled.\nBEGIN\n  FOR tbl AS (\n    SELECT table_name\n    FROM `main`.information_schema.tables\n    WHERE table_catalog = 'main'\n      AND table_schema   = 'sales'\n      AND table_name LIKE '%'\n  ) DO\n    EXECUTE IMMEDIATE 'GRANT SELECT ON TABLE `main`.`sales`.`' || tbl.table_name || '` TO `data_admin@company.com`';\n  END FOR;\nEND;\n-- \u26a0 MODIFY: table-level privilege \u2014 granted per-table via loop below.\n-- Requires Databricks Runtime 14.0+ or a SQL Warehouse with scripting enabled.\n-- \u26a0 Tables added to `sales` AFTER this script runs will NOT inherit this grant.\n-- Re-run the relevant GRANT or add explicit per-table grants for new tables.\n-- \u26a0 Ranger wildcard table pattern: *  \u2192  SQL LIKE: '%'\n-- UC does not support wildcards in GRANT statements.\n-- The block below loops through all matching tables at runtime and applies the grant.\n-- Requires Databricks Runtime 14.0+ or a SQL Warehouse with scripting enabled.\nBEGIN\n  FOR tbl AS (\n    SELECT table_name\n    FROM `main`.information_schema.tables\n    WHERE table_catalog = 'main'\n      AND table_schema   = 'sales'\n      AND table_name LIKE '%'\n  ) DO\n    EXECUTE IMMEDIATE 'GRANT MODIFY ON TABLE `main`.`sales`.`' || tbl.table_name || '` TO `data_admin@company.com`';\n  END FOR;\nEND;\n-- Note: delegateAdmin=true in Ranger. Consider granting MANAGE on SCHEMA `main`.`sales` if admin delegation is needed.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: enterprise_data_governance (Ranger ID: 3)\n-- Type: GRANT | Principal: data_engineering\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 Ranger policy targeted table=* (all tables in `marketing`).\n-- SELECT and MODIFY are table-level privileges in UC \u2014 they cannot be granted on SCHEMA.\n-- They are applied via a BEGIN...END FOR loop over all tables in the schema.\n-- Other privileges (CREATE, ALTER) are granted directly on the schema.\nGRANT USE CATALOG ON CATALOG `main` TO `data_engineering`;\nGRANT USE SCHEMA ON SCHEMA `main`.`marketing` TO `data_engineering`;\nGRANT CREATE TABLE ON SCHEMA `main`.`marketing` TO `data_engineering`;\n-- \u26a0 ALTER privilege has no direct equivalent in Unity Catalog. Converted to ALL PRIVILEGES (closest available substitute for DDL access). In UC, table/schema structural changes (ADD COLUMN, RENAME, etc.) require ownership. Review: consider assigning object ownership instead of granting ALL PRIVILEGES.\nGRANT ALL PRIVILEGES ON SCHEMA `main`.`marketing` TO `data_engineering`;\n-- \u26a0 SELECT: table-level privilege \u2014 granted per-table via loop below.\n-- Requires Databricks Runtime 14.0+ or a SQL Warehouse with scripting enabled.\n-- \u26a0 Tables added to `marketing` AFTER this script runs will NOT inherit this grant.\n-- Re-run the relevant GRANT or add explicit per-table grants for new tables.\n-- \u26a0 Ranger wildcard table pattern: *  \u2192  SQL LIKE: '%'\n-- UC does not support wildcards in GRANT statements.\n-- The block below loops through all matching tables at runtime and applies the grant.\n-- Requires Databricks Runtime 14.0+ or a SQL Warehouse with scripting enabled.\nBEGIN\n  FOR tbl AS (\n    SELECT table_name\n    FROM `main`.information_schema.tables\n    WHERE table_catalog = 'main'\n      AND table_schema   = 'marketing'\n      AND table_name LIKE '%'\n  ) DO\n    EXECUTE IMMEDIATE 'GRANT SELECT ON TABLE `main`.`marketing`.`' || tbl.table_name || '` TO `data_engineering`';\n  END FOR;\nEND;\n-- \u26a0 MODIFY: table-level privilege \u2014 granted per-table via loop below.\n-- Requires Databricks Runtime 14.0+ or a SQL Warehouse with scripting enabled.\n-- \u26a0 Tables added to `marketing` AFTER this script runs will NOT inherit this grant.\n-- Re-run the relevant GRANT or add explicit per-table grants for new tables.\n-- \u26a0 Ranger wildcard table pattern: *  \u2192  SQL LIKE: '%'\n-- UC does not support wildcards in GRANT statements.\n-- The block below loops through all matching tables at runtime and applies the grant.\n-- Requires Databricks Runtime 14.0+ or a SQL Warehouse with scripting enabled.\nBEGIN\n  FOR tbl AS (\n    SELECT table_name\n    FROM `main`.information_schema.tables\n    WHERE table_catalog = 'main'\n      AND table_schema   = 'marketing'\n      AND table_name LIKE '%'\n  ) DO\n    EXECUTE IMMEDIATE 'GRANT MODIFY ON TABLE `main`.`marketing`.`' || tbl.table_name || '` TO `data_engineering`';\n  END FOR;\nEND;\n-- Note: delegateAdmin=true in Ranger. Consider granting MANAGE on SCHEMA `main`.`marketing` if admin delegation is needed.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: enterprise_data_governance (Ranger ID: 3)\n-- Type: GRANT | Principal: platform_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 Ranger policy targeted table=* (all tables in `marketing`).\n-- SELECT and MODIFY are table-level privileges in UC \u2014 they cannot be granted on SCHEMA.\n-- They are applied via a BEGIN...END FOR loop over all tables in the schema.\n-- Other privileges (CREATE, ALTER) are granted directly on the schema.\nGRANT USE CATALOG ON CATALOG `main` TO `platform_team`;\nGRANT USE SCHEMA ON SCHEMA `main`.`marketing` TO `platform_team`;\nGRANT CREATE TABLE ON SCHEMA `main`.`marketing` TO `platform_team`;\n-- \u26a0 ALTER privilege has no direct equivalent in Unity Catalog. Converted to ALL PRIVILEGES (closest available substitute for DDL access). In UC, table/schema structural changes (ADD COLUMN, RENAME, etc.) require ownership. Review: consider assigning object ownership instead of granting ALL PRIVILEGES.\nGRANT ALL PRIVILEGES ON SCHEMA `main`.`marketing` TO `platform_team`;\n-- \u26a0 SELECT: table-level privilege \u2014 granted per-table via loop below.\n-- Requires Databricks Runtime 14.0+ or a SQL Warehouse with scripting enabled.\n-- \u26a0 Tables added to `marketing` AFTER this script runs will NOT inherit this grant.\n-- Re-run the relevant GRANT or add explicit per-table grants for new tables.\n-- \u26a0 Ranger wildcard table pattern: *  \u2192  SQL LIKE: '%'\n-- UC does not support wildcards in GRANT statements.\n-- The block below loops through all matching tables at runtime and applies the grant.\n-- Requires Databricks Runtime 14.0+ or a SQL Warehouse with scripting enabled.\nBEGIN\n  FOR tbl AS (\n    SELECT table_name\n    FROM `main`.information_schema.tables\n    WHERE table_catalog = 'main'\n      AND table_schema   = 'marketing'\n      AND table_name LIKE '%'\n  ) DO\n    EXECUTE IMMEDIATE 'GRANT SELECT ON TABLE `main`.`marketing`.`' || tbl.table_name || '` TO `platform_team`';\n  END FOR;\nEND;\n-- \u26a0 MODIFY: table-level privilege \u2014 granted per-table via loop below.\n-- Requires Databricks Runtime 14.0+ or a SQL Warehouse with scripting enabled.\n-- \u26a0 Tables added to `marketing` AFTER this script runs will NOT inherit this grant.\n-- Re-run the relevant GRANT or add explicit per-table grants for new tables.\n-- \u26a0 Ranger wildcard table pattern: *  \u2192  SQL LIKE: '%'\n-- UC does not support wildcards in GRANT statements.\n-- The block below loops through all matching tables at runtime and applies the grant.\n-- Requires Databricks Runtime 14.0+ or a SQL Warehouse with scripting enabled.\nBEGIN\n  FOR tbl AS (\n    SELECT table_name\n    FROM `main`.information_schema.tables\n    WHERE table_catalog = 'main'\n      AND table_schema   = 'marketing'\n      AND table_name LIKE '%'\n  ) DO\n    EXECUTE IMMEDIATE 'GRANT MODIFY ON TABLE `main`.`marketing`.`' || tbl.table_name || '` TO `platform_team`';\n  END FOR;\nEND;\n-- Note: delegateAdmin=true in Ranger. Consider granting MANAGE on SCHEMA `main`.`marketing` if admin delegation is needed.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: enterprise_data_governance (Ranger ID: 3)\n-- Type: GRANT | Principal: data_admin@company.com\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 Ranger policy targeted table=* (all tables in `marketing`).\n-- SELECT and MODIFY are table-level privileges in UC \u2014 they cannot be granted on SCHEMA.\n-- They are applied via a BEGIN...END FOR loop over all tables in the schema.\n-- Other privileges (CREATE, ALTER) are granted directly on the schema.\nGRANT USE CATALOG ON CATALOG `main` TO `data_admin@company.com`;\nGRANT USE SCHEMA ON SCHEMA `main`.`marketing` TO `data_admin@company.com`;\nGRANT CREATE TABLE ON SCHEMA `main`.`marketing` TO `data_admin@company.com`;\n-- \u26a0 ALTER privilege has no direct equivalent in Unity Catalog. Converted to ALL PRIVILEGES (closest available substitute for DDL access). In UC, table/schema structural changes (ADD COLUMN, RENAME, etc.) require ownership. Review: consider assigning object ownership instead of granting ALL PRIVILEGES.\nGRANT ALL PRIVILEGES ON SCHEMA `main`.`marketing` TO `data_admin@company.com`;\n-- \u26a0 SELECT: table-level privilege \u2014 granted per-table via loop below.\n-- Requires Databricks Runtime 14.0+ or a SQL Warehouse with scripting enabled.\n-- \u26a0 Tables added to `marketing` AFTER this script runs will NOT inherit this grant.\n-- Re-run the relevant GRANT or add explicit per-table grants for new tables.\n-- \u26a0 Ranger wildcard table pattern: *  \u2192  SQL LIKE: '%'\n-- UC does not support wildcards in GRANT statements.\n-- The block below loops through all matching tables at runtime and applies the grant.\n-- Requires Databricks Runtime 14.0+ or a SQL Warehouse with scripting enabled.\nBEGIN\n  FOR tbl AS (\n    SELECT table_name\n    FROM `main`.information_schema.tables\n    WHERE table_catalog = 'main'\n      AND table_schema   = 'marketing'\n      AND table_name LIKE '%'\n  ) DO\n    EXECUTE IMMEDIATE 'GRANT SELECT ON TABLE `main`.`marketing`.`' || tbl.table_name || '` TO `data_admin@company.com`';\n  END FOR;\nEND;\n-- \u26a0 MODIFY: table-level privilege \u2014 granted per-table via loop below.\n-- Requires Databricks Runtime 14.0+ or a SQL Warehouse with scripting enabled.\n-- \u26a0 Tables added to `marketing` AFTER this script runs will NOT inherit this grant.\n-- Re-run the relevant GRANT or add explicit per-table grants for new tables.\n-- \u26a0 Ranger wildcard table pattern: *  \u2192  SQL LIKE: '%'\n-- UC does not support wildcards in GRANT statements.\n-- The block below loops through all matching tables at runtime and applies the grant.\n-- Requires Databricks Runtime 14.0+ or a SQL Warehouse with scripting enabled.\nBEGIN\n  FOR tbl AS (\n    SELECT table_name\n    FROM `main`.information_schema.tables\n    WHERE table_catalog = 'main'\n      AND table_schema   = 'marketing'\n      AND table_name LIKE '%'\n  ) DO\n    EXECUTE IMMEDIATE 'GRANT MODIFY ON TABLE `main`.`marketing`.`' || tbl.table_name || '` TO `data_admin@company.com`';\n  END FOR;\nEND;\n-- Note: delegateAdmin=true in Ranger. Consider granting MANAGE on SCHEMA `main`.`marketing` if admin delegation is needed.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: enterprise_data_governance (Ranger ID: 3)\n-- Type: GRANT | Principal: data_engineering\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 Ranger policy targeted table=* (all tables in `finance`).\n-- SELECT and MODIFY are table-level privileges in UC \u2014 they cannot be granted on SCHEMA.\n-- They are applied via a BEGIN...END FOR loop over all tables in the schema.\n-- Other privileges (CREATE, ALTER) are granted directly on the schema.\nGRANT USE CATALOG ON CATALOG `main` TO `data_engineering`;\nGRANT USE SCHEMA ON SCHEMA `main`.`finance` TO `data_engineering`;\nGRANT CREATE TABLE ON SCHEMA `main`.`finance` TO `data_engineering`;\n-- \u26a0 ALTER privilege has no direct equivalent in Unity Catalog. Converted to ALL PRIVILEGES (closest available substitute for DDL access). In UC, table/schema structural changes (ADD COLUMN, RENAME, etc.) require ownership. Review: consider assigning object ownership instead of granting ALL PRIVILEGES.\nGRANT ALL PRIVILEGES ON SCHEMA `main`.`finance` TO `data_engineering`;\n-- \u26a0 SELECT: table-level privilege \u2014 granted per-table via loop below.\n-- Requires Databricks Runtime 14.0+ or a SQL Warehouse with scripting enabled.\n-- \u26a0 Tables added to `finance` AFTER this script runs will NOT inherit this grant.\n-- Re-run the relevant GRANT or add explicit per-table grants for new tables.\n-- \u26a0 Ranger wildcard table pattern: *  \u2192  SQL LIKE: '%'\n-- UC does not support wildcards in GRANT statements.\n-- The block below loops through all matching tables at runtime and applies the grant.\n-- Requires Databricks Runtime 14.0+ or a SQL Warehouse with scripting enabled.\nBEGIN\n  FOR tbl AS (\n    SELECT table_name\n    FROM `main`.information_schema.tables\n    WHERE table_catalog = 'main'\n      AND table_schema   = 'finance'\n      AND table_name LIKE '%'\n  ) DO\n    EXECUTE IMMEDIATE 'GRANT SELECT ON TABLE `main`.`finance`.`' || tbl.table_name || '` TO `data_engineering`';\n  END FOR;\nEND;\n-- \u26a0 MODIFY: table-level privilege \u2014 granted per-table via loop below.\n-- Requires Databricks Runtime 14.0+ or a SQL Warehouse with scripting enabled.\n-- \u26a0 Tables added to `finance` AFTER this script runs will NOT inherit this grant.\n-- Re-run the relevant GRANT or add explicit per-table grants for new tables.\n-- \u26a0 Ranger wildcard table pattern: *  \u2192  SQL LIKE: '%'\n-- UC does not support wildcards in GRANT statements.\n-- The block below loops through all matching tables at runtime and applies the grant.\n-- Requires Databricks Runtime 14.0+ or a SQL Warehouse with scripting enabled.\nBEGIN\n  FOR tbl AS (\n    SELECT table_name\n    FROM `main`.information_schema.tables\n    WHERE table_catalog = 'main'\n      AND table_schema   = 'finance'\n      AND table_name LIKE '%'\n  ) DO\n    EXECUTE IMMEDIATE 'GRANT MODIFY ON TABLE `main`.`finance`.`' || tbl.table_name || '` TO `data_engineering`';\n  END FOR;\nEND;\n-- Note: delegateAdmin=true in Ranger. Consider granting MANAGE on SCHEMA `main`.`finance` if admin delegation is needed.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: enterprise_data_governance (Ranger ID: 3)\n-- Type: GRANT | Principal: platform_team\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 Ranger policy targeted table=* (all tables in `finance`).\n-- SELECT and MODIFY are table-level privileges in UC \u2014 they cannot be granted on SCHEMA.\n-- They are applied via a BEGIN...END FOR loop over all tables in the schema.\n-- Other privileges (CREATE, ALTER) are granted directly on the schema.\nGRANT USE CATALOG ON CATALOG `main` TO `platform_team`;\nGRANT USE SCHEMA ON SCHEMA `main`.`finance` TO `platform_team`;\nGRANT CREATE TABLE ON SCHEMA `main`.`finance` TO `platform_team`;\n-- \u26a0 ALTER privilege has no direct equivalent in Unity Catalog. Converted to ALL PRIVILEGES (closest available substitute for DDL access). In UC, table/schema structural changes (ADD COLUMN, RENAME, etc.) require ownership. Review: consider assigning object ownership instead of granting ALL PRIVILEGES.\nGRANT ALL PRIVILEGES ON SCHEMA `main`.`finance` TO `platform_team`;\n-- \u26a0 SELECT: table-level privilege \u2014 granted per-table via loop below.\n-- Requires Databricks Runtime 14.0+ or a SQL Warehouse with scripting enabled.\n-- \u26a0 Tables added to `finance` AFTER this script runs will NOT inherit this grant.\n-- Re-run the relevant GRANT or add explicit per-table grants for new tables.\n-- \u26a0 Ranger wildcard table pattern: *  \u2192  SQL LIKE: '%'\n-- UC does not support wildcards in GRANT statements.\n-- The block below loops through all matching tables at runtime and applies the grant.\n-- Requires Databricks Runtime 14.0+ or a SQL Warehouse with scripting enabled.\nBEGIN\n  FOR tbl AS (\n    SELECT table_name\n    FROM `main`.information_schema.tables\n    WHERE table_catalog = 'main'\n      AND table_schema   = 'finance'\n      AND table_name LIKE '%'\n  ) DO\n    EXECUTE IMMEDIATE 'GRANT SELECT ON TABLE `main`.`finance`.`' || tbl.table_name || '` TO `platform_team`';\n  END FOR;\nEND;\n-- \u26a0 MODIFY: table-level privilege \u2014 granted per-table via loop below.\n-- Requires Databricks Runtime 14.0+ or a SQL Warehouse with scripting enabled.\n-- \u26a0 Tables added to `finance` AFTER this script runs will NOT inherit this grant.\n-- Re-run the relevant GRANT or add explicit per-table grants for new tables.\n-- \u26a0 Ranger wildcard table pattern: *  \u2192  SQL LIKE: '%'\n-- UC does not support wildcards in GRANT statements.\n-- The block below loops through all matching tables at runtime and applies the grant.\n-- Requires Databricks Runtime 14.0+ or a SQL Warehouse with scripting enabled.\nBEGIN\n  FOR tbl AS (\n    SELECT table_name\n    FROM `main`.information_schema.tables\n    WHERE table_catalog = 'main'\n      AND table_schema   = 'finance'\n      AND table_name LIKE '%'\n  ) DO\n    EXECUTE IMMEDIATE 'GRANT MODIFY ON TABLE `main`.`finance`.`' || tbl.table_name || '` TO `platform_team`';\n  END FOR;\nEND;\n-- Note: delegateAdmin=true in Ranger. Consider granting MANAGE on SCHEMA `main`.`finance` if admin delegation is needed.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: enterprise_data_governance (Ranger ID: 3)\n-- Type: GRANT | Principal: data_admin@company.com\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 Ranger policy targeted table=* (all tables in `finance`).\n-- SELECT and MODIFY are table-level privileges in UC \u2014 they cannot be granted on SCHEMA.\n-- They are applied via a BEGIN...END FOR loop over all tables in the schema.\n-- Other privileges (CREATE, ALTER) are granted directly on the schema.\nGRANT USE CATALOG ON CATALOG `main` TO `data_admin@company.com`;\nGRANT USE SCHEMA ON SCHEMA `main`.`finance` TO `data_admin@company.com`;\nGRANT CREATE TABLE ON SCHEMA `main`.`finance` TO `data_admin@company.com`;\n-- \u26a0 ALTER privilege has no direct equivalent in Unity Catalog. Converted to ALL PRIVILEGES (closest available substitute for DDL access). In UC, table/schema structural changes (ADD COLUMN, RENAME, etc.) require ownership. Review: consider assigning object ownership instead of granting ALL PRIVILEGES.\nGRANT ALL PRIVILEGES ON SCHEMA `main`.`finance` TO `data_admin@company.com`;\n-- \u26a0 SELECT: table-level privilege \u2014 granted per-table via loop below.\n-- Requires Databricks Runtime 14.0+ or a SQL Warehouse with scripting enabled.\n-- \u26a0 Tables added to `finance` AFTER this script runs will NOT inherit this grant.\n-- Re-run the relevant GRANT or add explicit per-table grants for new tables.\n-- \u26a0 Ranger wildcard table pattern: *  \u2192  SQL LIKE: '%'\n-- UC does not support wildcards in GRANT statements.\n-- The block below loops through all matching tables at runtime and applies the grant.\n-- Requires Databricks Runtime 14.0+ or a SQL Warehouse with scripting enabled.\nBEGIN\n  FOR tbl AS (\n    SELECT table_name\n    FROM `main`.information_schema.tables\n    WHERE table_catalog = 'main'\n      AND table_schema   = 'finance'\n      AND table_name LIKE '%'\n  ) DO\n    EXECUTE IMMEDIATE 'GRANT SELECT ON TABLE `main`.`finance`.`' || tbl.table_name || '` TO `data_admin@company.com`';\n  END FOR;\nEND;\n-- \u26a0 MODIFY: table-level privilege \u2014 granted per-table via loop below.\n-- Requires Databricks Runtime 14.0+ or a SQL Warehouse with scripting enabled.\n-- \u26a0 Tables added to `finance` AFTER this script runs will NOT inherit this grant.\n-- Re-run the relevant GRANT or add explicit per-table grants for new tables.\n-- \u26a0 Ranger wildcard table pattern: *  \u2192  SQL LIKE: '%'\n-- UC does not support wildcards in GRANT statements.\n-- The block below loops through all matching tables at runtime and applies the grant.\n-- Requires Databricks Runtime 14.0+ or a SQL Warehouse with scripting enabled.\nBEGIN\n  FOR tbl AS (\n    SELECT table_name\n    FROM `main`.information_schema.tables\n    WHERE table_catalog = 'main'\n      AND table_schema   = 'finance'\n      AND table_name LIKE '%'\n  ) DO\n    EXECUTE IMMEDIATE 'GRANT MODIFY ON TABLE `main`.`finance`.`' || tbl.table_name || '` TO `data_admin@company.com`';\n  END FOR;\nEND;\n-- Note: delegateAdmin=true in Ranger. Consider granting MANAGE on SCHEMA `main`.`finance` if admin delegation is needed.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: enterprise_data_governance (Ranger ID: 3)\n-- Type: DENY | Principal: external_vendors\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: SELECT on main.sales.* for external_vendors\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove external_vendors from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: enterprise_data_governance (Ranger ID: 3)\n-- Type: DENY | Principal: contractor1@company.com\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: SELECT on main.sales.* for contractor1@company.com\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove contractor1@company.com from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: enterprise_data_governance (Ranger ID: 3)\n-- Type: DENY | Principal: external_vendors\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: SELECT on main.marketing.* for external_vendors\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove external_vendors from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: enterprise_data_governance (Ranger ID: 3)\n-- Type: DENY | Principal: contractor1@company.com\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: SELECT on main.marketing.* for contractor1@company.com\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove contractor1@company.com from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: enterprise_data_governance (Ranger ID: 3)\n-- Type: DENY | Principal: external_vendors\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: SELECT on main.finance.* for external_vendors\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove external_vendors from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: enterprise_data_governance (Ranger ID: 3)\n-- Type: DENY | Principal: contractor1@company.com\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 DENY NOT SUPPORTED IN UNITY CATALOG\n-- Original Ranger deny: SELECT on main.finance.* for contractor1@company.com\n--\n-- RECOMMENDED ACTIONS:\n-- 1. Remove contractor1@company.com from the group that grants broad access\n-- 2. Create a restricted schema and grant only specific tables\n-- 3. Use row filters / column masks for fine-grained control\n-- 4. If this was a safety-net deny, the UC additive model makes it unnecessary\n--    as long as you don't grant the denied privileges in the first place\n"
 }

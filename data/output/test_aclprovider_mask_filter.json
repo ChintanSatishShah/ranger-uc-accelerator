@@ -1,9 +1,667 @@
 {
-  "serviceName": "hivedev",
-  "catalogName": "main",
-  "clusterName": "unknown",
-  "totalRangerPolicies": 11,
-  "policyItems": [
+  "metadata": {
+    "timestamp": "2026-06-02T03:42:54.785763",
+    "service_name": "hivedev",
+    "cluster_name": "unknown",
+    "catalog_name": "main",
+    "source_file": "test_aclprovider_mask_filter.json",
+    "notes": ""
+  },
+  "parsed_data": {
+    "results": [
+      {
+        "id": "101-mask-employee-personal-ssn-user1-1",
+        "rangerPolicyId": 101,
+        "rangerPolicyName": "01: db=employee, table=personal, column=ssn: mask",
+        "rangerPolicyDesc": "",
+        "type": "column_mask",
+        "catalog": "main",
+        "schema": "employee",
+        "table": "personal",
+        "columns": [
+          "ssn"
+        ],
+        "privileges": [],
+        "principal": {
+          "type": "user",
+          "name": "user1"
+        },
+        "allPrincipals": [
+          {
+            "type": "user",
+            "name": "user1"
+          }
+        ],
+        "maskType": "MASK",
+        "maskExpr": "",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "101-mask-employee-personal-ssn-user2-2",
+        "rangerPolicyId": 101,
+        "rangerPolicyName": "01: db=employee, table=personal, column=ssn: mask",
+        "rangerPolicyDesc": "",
+        "type": "column_mask",
+        "catalog": "main",
+        "schema": "employee",
+        "table": "personal",
+        "columns": [
+          "ssn"
+        ],
+        "privileges": [],
+        "principal": {
+          "type": "user",
+          "name": "user2"
+        },
+        "allPrincipals": [
+          {
+            "type": "user",
+            "name": "user2"
+          }
+        ],
+        "maskType": "SHUFFLE",
+        "maskExpr": "",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "1011-mask-employee-personal-ssn-user1-1",
+        "rangerPolicyId": 1011,
+        "rangerPolicyName": "02: db=employee, table=personal, column=ssn,dummy: mask",
+        "rangerPolicyDesc": "",
+        "type": "column_mask",
+        "catalog": "main",
+        "schema": "employee",
+        "table": "personal",
+        "columns": [
+          "ssn"
+        ],
+        "privileges": [],
+        "principal": {
+          "type": "user",
+          "name": "user1"
+        },
+        "allPrincipals": [
+          {
+            "type": "user",
+            "name": "user1"
+          }
+        ],
+        "maskType": "HASH",
+        "maskExpr": "",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "1011-mask-employee-personal-dummy-user1-2",
+        "rangerPolicyId": 1011,
+        "rangerPolicyName": "02: db=employee, table=personal, column=ssn,dummy: mask",
+        "rangerPolicyDesc": "",
+        "type": "column_mask",
+        "catalog": "main",
+        "schema": "employee",
+        "table": "personal",
+        "columns": [
+          "dummy"
+        ],
+        "privileges": [],
+        "principal": {
+          "type": "user",
+          "name": "user1"
+        },
+        "allPrincipals": [
+          {
+            "type": "user",
+            "name": "user1"
+          }
+        ],
+        "maskType": "HASH",
+        "maskExpr": "",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "1011-mask-employee-personal-ssn-user2-3",
+        "rangerPolicyId": 1011,
+        "rangerPolicyName": "02: db=employee, table=personal, column=ssn,dummy: mask",
+        "rangerPolicyDesc": "",
+        "type": "column_mask",
+        "catalog": "main",
+        "schema": "employee",
+        "table": "personal",
+        "columns": [
+          "ssn"
+        ],
+        "privileges": [],
+        "principal": {
+          "type": "user",
+          "name": "user2"
+        },
+        "allPrincipals": [
+          {
+            "type": "user",
+            "name": "user2"
+          }
+        ],
+        "maskType": "MASK",
+        "maskExpr": "",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "1011-mask-employee-personal-dummy-user2-4",
+        "rangerPolicyId": 1011,
+        "rangerPolicyName": "02: db=employee, table=personal, column=ssn,dummy: mask",
+        "rangerPolicyDesc": "",
+        "type": "column_mask",
+        "catalog": "main",
+        "schema": "employee",
+        "table": "personal",
+        "columns": [
+          "dummy"
+        ],
+        "privileges": [],
+        "principal": {
+          "type": "user",
+          "name": "user2"
+        },
+        "allPrincipals": [
+          {
+            "type": "user",
+            "name": "user2"
+          }
+        ],
+        "maskType": "MASK",
+        "maskExpr": "",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "102-mask-hr-employee-date_of_birth-user1-1",
+        "rangerPolicyId": 102,
+        "rangerPolicyName": "db=hr, table=employee, column=date_of_birth: mask",
+        "rangerPolicyDesc": "",
+        "type": "column_mask",
+        "catalog": "main",
+        "schema": "hr",
+        "table": "employee",
+        "columns": [
+          "date_of_birth"
+        ],
+        "privileges": [],
+        "principal": {
+          "type": "user",
+          "name": "user1"
+        },
+        "allPrincipals": [
+          {
+            "type": "user",
+            "name": "user1"
+          }
+        ],
+        "maskType": "MASK",
+        "maskExpr": "",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "102-mask-hr-employee-date_of_birth-user2-2",
+        "rangerPolicyId": 102,
+        "rangerPolicyName": "db=hr, table=employee, column=date_of_birth: mask",
+        "rangerPolicyDesc": "",
+        "type": "column_mask",
+        "catalog": "main",
+        "schema": "hr",
+        "table": "employee",
+        "columns": [
+          "date_of_birth"
+        ],
+        "privileges": [],
+        "principal": {
+          "type": "user",
+          "name": "user2"
+        },
+        "allPrincipals": [
+          {
+            "type": "user",
+            "name": "user2"
+          }
+        ],
+        "maskType": "SHUFFLE",
+        "maskExpr": "",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "102-mask-hr-employee-date_of_birth-user3-3",
+        "rangerPolicyId": 102,
+        "rangerPolicyName": "db=hr, table=employee, column=date_of_birth: mask",
+        "rangerPolicyDesc": "",
+        "type": "column_mask",
+        "catalog": "main",
+        "schema": "hr",
+        "table": "employee",
+        "columns": [
+          "date_of_birth"
+        ],
+        "privileges": [],
+        "principal": {
+          "type": "user",
+          "name": "user3"
+        },
+        "allPrincipals": [
+          {
+            "type": "user",
+            "name": "user3"
+          }
+        ],
+        "maskType": "LAST_4",
+        "maskExpr": "",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "103-mask-hr-employee-project-user1-1",
+        "rangerPolicyId": 103,
+        "rangerPolicyName": "db=hr, table=employee, column=project: conditional-mask: validity-schedule",
+        "rangerPolicyDesc": "",
+        "type": "column_mask",
+        "catalog": "main",
+        "schema": "hr",
+        "table": "employee",
+        "columns": [
+          "project"
+        ],
+        "privileges": [],
+        "principal": {
+          "type": "user",
+          "name": "user1"
+        },
+        "allPrincipals": [
+          {
+            "type": "user",
+            "name": "user1"
+          }
+        ],
+        "maskType": "MASK",
+        "maskExpr": "",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "103-mask-hr-employee-project-user2-2",
+        "rangerPolicyId": 103,
+        "rangerPolicyName": "db=hr, table=employee, column=project: conditional-mask: validity-schedule",
+        "rangerPolicyDesc": "",
+        "type": "column_mask",
+        "catalog": "main",
+        "schema": "hr",
+        "table": "employee",
+        "columns": [
+          "project"
+        ],
+        "privileges": [],
+        "principal": {
+          "type": "user",
+          "name": "user2"
+        },
+        "allPrincipals": [
+          {
+            "type": "user",
+            "name": "user2"
+          }
+        ],
+        "maskType": "HASH",
+        "maskExpr": "",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "104-mask-test_db-dept_${{USER.dept}}-col1-{USER}-1",
+        "rangerPolicyId": 104,
+        "rangerPolicyName": "db=test_db, table=dept_${{USER.dept}}, column=col1: unmasked for users in the department",
+        "rangerPolicyDesc": "",
+        "type": "column_mask",
+        "catalog": "main",
+        "schema": "test_db",
+        "table": "dept_${{USER.dept}}",
+        "columns": [
+          "col1"
+        ],
+        "privileges": [],
+        "principal": {
+          "type": "user",
+          "name": "{USER}"
+        },
+        "allPrincipals": [
+          {
+            "type": "user",
+            "name": "{USER}"
+          }
+        ],
+        "maskType": "MASK_NONE",
+        "maskExpr": "",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "105-mask-test_db-dept_hr-col1-public-1",
+        "rangerPolicyId": 105,
+        "rangerPolicyName": "db=test_db, table=dept_hr, column=col1: mask hash for all users",
+        "rangerPolicyDesc": "",
+        "type": "column_mask",
+        "catalog": "main",
+        "schema": "test_db",
+        "table": "dept_hr",
+        "columns": [
+          "col1"
+        ],
+        "privileges": [],
+        "principal": {
+          "type": "group",
+          "name": "public"
+        },
+        "allPrincipals": [
+          {
+            "type": "group",
+            "name": "public"
+          }
+        ],
+        "maskType": "MASK_HASH",
+        "maskExpr": "",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "201-rowfilter-employee-personal-user1-1",
+        "rangerPolicyId": 201,
+        "rangerPolicyName": "db=employee, table=personal: row-filter",
+        "rangerPolicyDesc": "",
+        "type": "row_filter",
+        "catalog": "main",
+        "schema": "employee",
+        "table": "personal",
+        "columns": null,
+        "privileges": [],
+        "principal": {
+          "type": "user",
+          "name": "user1"
+        },
+        "allPrincipals": [
+          {
+            "type": "user",
+            "name": "user1"
+          }
+        ],
+        "filterExpr": "location='US'",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "201-rowfilter-employee-personal-user2-2",
+        "rangerPolicyId": 201,
+        "rangerPolicyName": "db=employee, table=personal: row-filter",
+        "rangerPolicyDesc": "",
+        "type": "row_filter",
+        "catalog": "main",
+        "schema": "employee",
+        "table": "personal",
+        "columns": null,
+        "privileges": [],
+        "principal": {
+          "type": "user",
+          "name": "user2"
+        },
+        "allPrincipals": [
+          {
+            "type": "user",
+            "name": "user2"
+          }
+        ],
+        "filterExpr": "location='CA'",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "202-rowfilter-hr-employee-user1-1",
+        "rangerPolicyId": 202,
+        "rangerPolicyName": "db=hr, table=employee: row-filter",
+        "rangerPolicyDesc": "",
+        "type": "row_filter",
+        "catalog": "main",
+        "schema": "hr",
+        "table": "employee",
+        "columns": null,
+        "privileges": [],
+        "principal": {
+          "type": "user",
+          "name": "user1"
+        },
+        "allPrincipals": [
+          {
+            "type": "user",
+            "name": "user1"
+          }
+        ],
+        "filterExpr": "dept='production'",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "202-rowfilter-hr-employee-user2-2",
+        "rangerPolicyId": 202,
+        "rangerPolicyName": "db=hr, table=employee: row-filter",
+        "rangerPolicyDesc": "",
+        "type": "row_filter",
+        "catalog": "main",
+        "schema": "hr",
+        "table": "employee",
+        "columns": null,
+        "privileges": [],
+        "principal": {
+          "type": "user",
+          "name": "user2"
+        },
+        "allPrincipals": [
+          {
+            "type": "user",
+            "name": "user2"
+          }
+        ],
+        "filterExpr": "dept='purchase'",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "202-rowfilter-hr-employee-user3-3",
+        "rangerPolicyId": 202,
+        "rangerPolicyName": "db=hr, table=employee: row-filter",
+        "rangerPolicyDesc": "",
+        "type": "row_filter",
+        "catalog": "main",
+        "schema": "hr",
+        "table": "employee",
+        "columns": null,
+        "privileges": [],
+        "principal": {
+          "type": "user",
+          "name": "user3"
+        },
+        "allPrincipals": [
+          {
+            "type": "user",
+            "name": "user3"
+          }
+        ],
+        "filterExpr": "location='GR'",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "203-rowfilter-hr-employee2-user1-1",
+        "rangerPolicyId": 203,
+        "rangerPolicyName": "db=hr, table=employee2: conditional-row-filter: validity-schedule",
+        "rangerPolicyDesc": "",
+        "type": "row_filter",
+        "catalog": "main",
+        "schema": "hr",
+        "table": "employee2",
+        "columns": null,
+        "privileges": [],
+        "principal": {
+          "type": "user",
+          "name": "user1"
+        },
+        "allPrincipals": [
+          {
+            "type": "user",
+            "name": "user1"
+          }
+        ],
+        "filterExpr": "dept='production'",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "203-rowfilter-hr-employee2-user2-2",
+        "rangerPolicyId": 203,
+        "rangerPolicyName": "db=hr, table=employee2: conditional-row-filter: validity-schedule",
+        "rangerPolicyDesc": "",
+        "type": "row_filter",
+        "catalog": "main",
+        "schema": "hr",
+        "table": "employee2",
+        "columns": null,
+        "privileges": [],
+        "principal": {
+          "type": "user",
+          "name": "user2"
+        },
+        "allPrincipals": [
+          {
+            "type": "user",
+            "name": "user2"
+          }
+        ],
+        "filterExpr": "dept='purchase'",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "204-rowfilter-test_db-dept_${{USER.dept}}-{USER}-1",
+        "rangerPolicyId": 204,
+        "rangerPolicyName": "db=test_db, table=dept_${{USER.dept}}: no filter for users in the department",
+        "rangerPolicyDesc": "",
+        "type": "row_filter",
+        "catalog": "main",
+        "schema": "test_db",
+        "table": "dept_${{USER.dept}}",
+        "columns": null,
+        "privileges": [],
+        "principal": {
+          "type": "user",
+          "name": "{USER}"
+        },
+        "allPrincipals": [
+          {
+            "type": "user",
+            "name": "{USER}"
+          }
+        ],
+        "filterExpr": "1 = 1",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "205-rowfilter-test_db-dept_hr-public-1",
+        "rangerPolicyId": 205,
+        "rangerPolicyName": "db=test_db, table=dept_hr: row-filter",
+        "rangerPolicyDesc": "",
+        "type": "row_filter",
+        "catalog": "main",
+        "schema": "test_db",
+        "table": "dept_hr",
+        "columns": null,
+        "privileges": [],
+        "principal": {
+          "type": "group",
+          "name": "public"
+        },
+        "allPrincipals": [
+          {
+            "type": "group",
+            "name": "public"
+          }
+        ],
+        "filterExpr": "dept != 'hr'",
+        "enabled": true,
+        "status": "approved"
+      }
+    ],
+    "warnings": [
+      {
+        "policyId": 102,
+        "policyName": "db=hr, table=employee, column=date_of_birth: mask",
+        "category": "conditions",
+        "severity": "warning",
+        "message": "Policy \"db=hr, table=employee, column=date_of_birth: mask\" has conditions [expression] with no UC equivalent \u2014 grants will apply unconditionally",
+        "recommendation": "IP-range, time-based, and custom conditions cannot be enforced in UC. Apply equivalent restrictions at the network or application layer."
+      },
+      {
+        "policyId": 103,
+        "policyName": "db=hr, table=employee, column=project: conditional-mask: validity-schedule",
+        "category": "validity_schedule",
+        "severity": "warning",
+        "message": "Policy \"db=hr, table=employee, column=project: conditional-mask: validity-schedule\" is time-limited in Ranger (2018/01/12 14:32:00 \u2192 2020/01/12 14:32:00) \u2014 UC grants are permanent",
+        "recommendation": "Manage the grant lifecycle manually or via automation. Revoke the grant in UC when the validity period ends."
+      },
+      {
+        "policyId": 202,
+        "policyName": "db=hr, table=employee: row-filter",
+        "category": "conditions",
+        "severity": "warning",
+        "message": "Policy \"db=hr, table=employee: row-filter\" has conditions [expression] with no UC equivalent \u2014 grants will apply unconditionally",
+        "recommendation": "IP-range, time-based, and custom conditions cannot be enforced in UC. Apply equivalent restrictions at the network or application layer."
+      },
+      {
+        "policyId": 203,
+        "policyName": "db=hr, table=employee2: conditional-row-filter: validity-schedule",
+        "category": "validity_schedule",
+        "severity": "warning",
+        "message": "Policy \"db=hr, table=employee2: conditional-row-filter: validity-schedule\" is time-limited in Ranger (2018/01/12 14:32:00 \u2192 2020/01/12 14:32:00) \u2014 UC grants are permanent",
+        "recommendation": "Manage the grant lifecycle manually or via automation. Revoke the grant in UC when the validity period ends."
+      }
+    ],
+    "identities": [
+      {
+        "type": "group",
+        "name": "public"
+      },
+      {
+        "type": "user",
+        "name": "user1"
+      },
+      {
+        "type": "user",
+        "name": "user2"
+      },
+      {
+        "type": "user",
+        "name": "user3"
+      },
+      {
+        "type": "user",
+        "name": "{USER}"
+      }
+    ],
+    "kerberosIssues": [],
+    "serviceName": "hivedev",
+    "serviceType": "hive",
+    "clusterName": "unknown",
+    "totalRangerPolicies": 11
+  },
+  "policy_items": [
     {
       "id": "101-mask-employee-personal-ssn-user1-1",
       "rangerPolicyId": 101,
@@ -30,7 +688,7 @@
       "maskType": "MASK",
       "maskExpr": "",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "101-mask-employee-personal-ssn-user2-2",
@@ -58,7 +716,7 @@
       "maskType": "SHUFFLE",
       "maskExpr": "",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "1011-mask-employee-personal-ssn-user1-1",
@@ -86,7 +744,7 @@
       "maskType": "HASH",
       "maskExpr": "",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "1011-mask-employee-personal-dummy-user1-2",
@@ -114,7 +772,7 @@
       "maskType": "HASH",
       "maskExpr": "",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "1011-mask-employee-personal-ssn-user2-3",
@@ -142,7 +800,7 @@
       "maskType": "MASK",
       "maskExpr": "",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "1011-mask-employee-personal-dummy-user2-4",
@@ -170,7 +828,7 @@
       "maskType": "MASK",
       "maskExpr": "",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "102-mask-hr-employee-date_of_birth-user1-1",
@@ -198,7 +856,7 @@
       "maskType": "MASK",
       "maskExpr": "",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "102-mask-hr-employee-date_of_birth-user2-2",
@@ -226,7 +884,7 @@
       "maskType": "SHUFFLE",
       "maskExpr": "",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "102-mask-hr-employee-date_of_birth-user3-3",
@@ -254,7 +912,7 @@
       "maskType": "LAST_4",
       "maskExpr": "",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "103-mask-hr-employee-project-user1-1",
@@ -282,7 +940,7 @@
       "maskType": "MASK",
       "maskExpr": "",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "103-mask-hr-employee-project-user2-2",
@@ -310,7 +968,7 @@
       "maskType": "HASH",
       "maskExpr": "",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "104-mask-test_db-dept_${{USER.dept}}-col1-{USER}-1",
@@ -338,7 +996,7 @@
       "maskType": "MASK_NONE",
       "maskExpr": "",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "105-mask-test_db-dept_hr-col1-public-1",
@@ -366,7 +1024,7 @@
       "maskType": "MASK_HASH",
       "maskExpr": "",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "201-rowfilter-employee-personal-user1-1",
@@ -391,7 +1049,7 @@
       ],
       "filterExpr": "location='US'",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "201-rowfilter-employee-personal-user2-2",
@@ -416,7 +1074,7 @@
       ],
       "filterExpr": "location='CA'",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "202-rowfilter-hr-employee-user1-1",
@@ -441,7 +1099,7 @@
       ],
       "filterExpr": "dept='production'",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "202-rowfilter-hr-employee-user2-2",
@@ -466,7 +1124,7 @@
       ],
       "filterExpr": "dept='purchase'",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "202-rowfilter-hr-employee-user3-3",
@@ -491,7 +1149,7 @@
       ],
       "filterExpr": "location='GR'",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "203-rowfilter-hr-employee2-user1-1",
@@ -516,7 +1174,7 @@
       ],
       "filterExpr": "dept='production'",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "203-rowfilter-hr-employee2-user2-2",
@@ -541,7 +1199,7 @@
       ],
       "filterExpr": "dept='purchase'",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "204-rowfilter-test_db-dept_${{USER.dept}}-{USER}-1",
@@ -566,7 +1224,7 @@
       ],
       "filterExpr": "1 = 1",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "205-rowfilter-test_db-dept_hr-public-1",
@@ -591,42 +1249,9 @@
       ],
       "filterExpr": "dept != 'hr'",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     }
   ],
-  "identityMap": {},
-  "generatedSQL": "-- Column Mask: Full redaction for user1@company.com\nCREATE OR REPLACE FUNCTION `main`.`employee`.mask_personal_ssn_user1_company_com(val STRING)\nRETURNS STRING\nRETURN IF(\n  current_user() = 'user1@company.com',\n  '***REDACTED***',\n  val\n);\n\nALTER TABLE `main`.`employee`.`personal`\nALTER COLUMN ssn SET MASK `main`.`employee`.mask_personal_ssn_user1_company_com;\n\n-- Column Mask: Full redaction for user2@company.com\nCREATE OR REPLACE FUNCTION `main`.`employee`.mask_personal_ssn_user2_company_com(val STRING)\nRETURNS STRING\nRETURN IF(\n  current_user() = 'user2@company.com',\n  '***REDACTED***',\n  val\n);\n\nALTER TABLE `main`.`employee`.`personal`\nALTER COLUMN ssn SET MASK `main`.`employee`.mask_personal_ssn_user2_company_com;\n\n-- Column Mask: Full redaction for user1@company.com\nCREATE OR REPLACE FUNCTION `main`.`employee`.mask_personal_ssn_user1_company_com(val STRING)\nRETURNS STRING\nRETURN IF(\n  current_user() = 'user1@company.com',\n  '***REDACTED***',\n  val\n);\n\nALTER TABLE `main`.`employee`.`personal`\nALTER COLUMN ssn SET MASK `main`.`employee`.mask_personal_ssn_user1_company_com;\n\n-- Column Mask: Full redaction for user1@company.com\nCREATE OR REPLACE FUNCTION `main`.`employee`.mask_personal_dummy_user1_company_com(val STRING)\nRETURNS STRING\nRETURN IF(\n  current_user() = 'user1@company.com',\n  '***REDACTED***',\n  val\n);\n\nALTER TABLE `main`.`employee`.`personal`\nALTER COLUMN dummy SET MASK `main`.`employee`.mask_personal_dummy_user1_company_com;\n\n-- Column Mask: Full redaction for user2@company.com\nCREATE OR REPLACE FUNCTION `main`.`employee`.mask_personal_ssn_user2_company_com(val STRING)\nRETURNS STRING\nRETURN IF(\n  current_user() = 'user2@company.com',\n  '***REDACTED***',\n  val\n);\n\nALTER TABLE `main`.`employee`.`personal`\nALTER COLUMN ssn SET MASK `main`.`employee`.mask_personal_ssn_user2_company_com;\n\n-- Column Mask: Full redaction for user2@company.com\nCREATE OR REPLACE FUNCTION `main`.`employee`.mask_personal_dummy_user2_company_com(val STRING)\nRETURNS STRING\nRETURN IF(\n  current_user() = 'user2@company.com',\n  '***REDACTED***',\n  val\n);\n\nALTER TABLE `main`.`employee`.`personal`\nALTER COLUMN dummy SET MASK `main`.`employee`.mask_personal_dummy_user2_company_com;\n\n-- Column Mask: Full redaction for user1@company.com\nCREATE OR REPLACE FUNCTION `main`.`hr`.mask_employee_date_of_birth_user1_company_com(val STRING)\nRETURNS STRING\nRETURN IF(\n  current_user() = 'user1@company.com',\n  '***REDACTED***',\n  val\n);\n\nALTER TABLE `main`.`hr`.`employee`\nALTER COLUMN date_of_birth SET MASK `main`.`hr`.mask_employee_date_of_birth_user1_company_com;\n\n-- Column Mask: Full redaction for user2@company.com\nCREATE OR REPLACE FUNCTION `main`.`hr`.mask_employee_date_of_birth_user2_company_com(val STRING)\nRETURNS STRING\nRETURN IF(\n  current_user() = 'user2@company.com',\n  '***REDACTED***',\n  val\n);\n\nALTER TABLE `main`.`hr`.`employee`\nALTER COLUMN date_of_birth SET MASK `main`.`hr`.mask_employee_date_of_birth_user2_company_com;\n\n-- Column Mask: Full redaction for user3@company.com\nCREATE OR REPLACE FUNCTION `main`.`hr`.mask_employee_date_of_birth_user3_company_com(val STRING)\nRETURNS STRING\nRETURN IF(\n  current_user() = 'user3@company.com',\n  '***REDACTED***',\n  val\n);\n\nALTER TABLE `main`.`hr`.`employee`\nALTER COLUMN date_of_birth SET MASK `main`.`hr`.mask_employee_date_of_birth_user3_company_com;\n\n-- Column Mask: Full redaction for user1@company.com\nCREATE OR REPLACE FUNCTION `main`.`hr`.mask_employee_project_user1_company_com(val STRING)\nRETURNS STRING\nRETURN IF(\n  current_user() = 'user1@company.com',\n  '***REDACTED***',\n  val\n);\n\nALTER TABLE `main`.`hr`.`employee`\nALTER COLUMN project SET MASK `main`.`hr`.mask_employee_project_user1_company_com;\n\n-- Column Mask: Full redaction for user2@company.com\nCREATE OR REPLACE FUNCTION `main`.`hr`.mask_employee_project_user2_company_com(val STRING)\nRETURNS STRING\nRETURN IF(\n  current_user() = 'user2@company.com',\n  '***REDACTED***',\n  val\n);\n\nALTER TABLE `main`.`hr`.`employee`\nALTER COLUMN project SET MASK `main`.`hr`.mask_employee_project_user2_company_com;\n\n-- \u2705 No masking for {USER}@company.com on col1 (full access granted)\n-- No SQL needed \u2014 this principal sees unmasked data\n\n-- Column Mask: SHA-256 hash for public\nCREATE OR REPLACE FUNCTION `main`.`test_db`.mask_dept_hr_col1_public(val STRING)\nRETURNS STRING\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('public'),\n  SHA2(val, 256),\n  val\n);\n\nALTER TABLE `main`.`test_db`.`dept_hr`\nALTER COLUMN col1 SET MASK `main`.`test_db`.mask_dept_hr_col1_public;\n\n-- Row Filter for: user1@company.com\n-- Original expression: location='US'\n\nCREATE OR REPLACE FUNCTION `main`.`employee`.rf_personal_user1_company_com(location STRING)\nRETURNS BOOLEAN\nRETURN IF(\n  current_user() = 'user1@company.com',\n  location='US',\n  TRUE  -- Allow access for principals not matching the condition\n);\n\nALTER TABLE `main`.`employee`.`personal`\nSET ROW FILTER `main`.`employee`.rf_personal_user1_company_com ON (location);\n\n-- Row Filter for: user2@company.com\n-- Original expression: location='CA'\n\nCREATE OR REPLACE FUNCTION `main`.`employee`.rf_personal_user2_company_com(location STRING)\nRETURNS BOOLEAN\nRETURN IF(\n  current_user() = 'user2@company.com',\n  location='CA',\n  TRUE  -- Allow access for principals not matching the condition\n);\n\nALTER TABLE `main`.`employee`.`personal`\nSET ROW FILTER `main`.`employee`.rf_personal_user2_company_com ON (location);\n\n-- Row Filter for: user1@company.com\n-- Original expression: dept='production'\n\nCREATE OR REPLACE FUNCTION `main`.`hr`.rf_employee_user1_company_com(dept STRING)\nRETURNS BOOLEAN\nRETURN IF(\n  current_user() = 'user1@company.com',\n  dept='production',\n  TRUE  -- Allow access for principals not matching the condition\n);\n\nALTER TABLE `main`.`hr`.`employee`\nSET ROW FILTER `main`.`hr`.rf_employee_user1_company_com ON (dept);\n\n-- Row Filter for: user2@company.com\n-- Original expression: dept='purchase'\n\nCREATE OR REPLACE FUNCTION `main`.`hr`.rf_employee_user2_company_com(dept STRING)\nRETURNS BOOLEAN\nRETURN IF(\n  current_user() = 'user2@company.com',\n  dept='purchase',\n  TRUE  -- Allow access for principals not matching the condition\n);\n\nALTER TABLE `main`.`hr`.`employee`\nSET ROW FILTER `main`.`hr`.rf_employee_user2_company_com ON (dept);\n\n-- Row Filter for: user3@company.com\n-- Original expression: location='GR'\n\nCREATE OR REPLACE FUNCTION `main`.`hr`.rf_employee_user3_company_com(location STRING)\nRETURNS BOOLEAN\nRETURN IF(\n  current_user() = 'user3@company.com',\n  location='GR',\n  TRUE  -- Allow access for principals not matching the condition\n);\n\nALTER TABLE `main`.`hr`.`employee`\nSET ROW FILTER `main`.`hr`.rf_employee_user3_company_com ON (location);\n\n-- Row Filter for: user1@company.com\n-- Original expression: dept='production'\n\nCREATE OR REPLACE FUNCTION `main`.`hr`.rf_employee2_user1_company_com(dept STRING)\nRETURNS BOOLEAN\nRETURN IF(\n  current_user() = 'user1@company.com',\n  dept='production',\n  TRUE  -- Allow access for principals not matching the condition\n);\n\nALTER TABLE `main`.`hr`.`employee2`\nSET ROW FILTER `main`.`hr`.rf_employee2_user1_company_com ON (dept);\n\n-- Row Filter for: user2@company.com\n-- Original expression: dept='purchase'\n\nCREATE OR REPLACE FUNCTION `main`.`hr`.rf_employee2_user2_company_com(dept STRING)\nRETURNS BOOLEAN\nRETURN IF(\n  current_user() = 'user2@company.com',\n  dept='purchase',\n  TRUE  -- Allow access for principals not matching the condition\n);\n\nALTER TABLE `main`.`hr`.`employee2`\nSET ROW FILTER `main`.`hr`.rf_employee2_user2_company_com ON (dept);\n\n-- Row Filter for: {USER}@company.com\n-- Original expression: 1 = 1\n-- \u26a0 No column references detected in filter expression \u2014 review manually.\n\nCREATE OR REPLACE FUNCTION `main`.`test_db`.rf_dept_${{USER.dept}}__USER__company_com()\nRETURNS BOOLEAN\nRETURN IF(\n  current_user() = '{USER}@company.com',\n  1 = 1,\n  TRUE  -- Allow access for principals not matching the condition\n);\n\nALTER TABLE `main`.`test_db`.`dept_${{USER.dept}}`\nSET ROW FILTER `main`.`test_db`.rf_dept_${{USER.dept}}__USER__company_com ON ();\n\n-- Row Filter for: public\n-- Original expression: dept != 'hr'\n\nCREATE OR REPLACE FUNCTION `main`.`test_db`.rf_dept_hr_public(dept STRING)\nRETURNS BOOLEAN\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('public'),\n  dept != 'hr',\n  TRUE  -- Allow access for principals not matching the condition\n);\n\nALTER TABLE `main`.`test_db`.`dept_hr`\nSET ROW FILTER `main`.`test_db`.rf_dept_hr_public ON (dept);",
-  "stats": {
-    "total": 22,
-    "grants": 0,
-    "denies": 0,
-    "rowFilters": 9,
-    "masks": 13,
-    "hdfsGrants": 0,
-    "hbaseGrants": 0,
-    "udfGrants": 0,
-    "tagSets": 0,
-    "tagGrants": 0,
-    "tagPlaceholders": 0,
-    "approved": 0,
-    "needsReview": 22,
-    "pending": 0,
-    "rejected": 0,
-    "disabled": 0,
-    "schemaCount": 3,
-    "principalCount": 5,
-    "schemas": [
-      "employee",
-      "hr",
-      "test_db"
-    ],
-    "principals": [
-      "public",
-      "user1",
-      "user2",
-      "user3",
-      "{USER}"
-    ],
-    "notTranslatable": 0
-  }
+  "identity_map": {},
+  "generated_sql": "-- \u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n-- \u2551  Unity Catalog Migration Script                          \u2551\n-- \u2551  Generated by Ranger \u2192 UC Migrator                       \u2551\n-- \u2551  Source: hivedev\n-- \u2551  Target Catalog: main\n-- \u2551  Date: 2026-06-02\n-- \u2551  Policies: 22 of 22\n-- \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\n\n-- \u26a0 CONFLICT NOTICE: 7 row-filter/column-mask conflict(s) detected.\n-- Unity Catalog supports only ONE row filter per table and ONE mask per column.\n-- Conflicting items have been automatically MERGED into combined CASE functions below.\n-- Review each merged function carefully before executing.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 MERGED ROW FILTER \u2014 Unity Catalog supports only ONE row filter per table.\n-- Multiple Ranger principals for `employee`.`personal` have been combined into one function.\n-- Principals merged (2): user1@company.com, user2@company.com\n-- Each WHEN clause applies the original Ranger filter for that principal.\n\nCREATE OR REPLACE FUNCTION `main`.`employee`.rf_personal(location STRING)\nRETURNS BOOLEAN\nRETURN\n  CASE\n    WHEN current_user() = 'user1@company.com' THEN location='US'\n    WHEN current_user() = 'user2@company.com' THEN location='CA'\n    ELSE TRUE  -- allow access for all other principals\n  END;\n\nALTER TABLE `main`.`employee`.`personal`\nSET ROW FILTER `main`.`employee`.rf_personal ON (location);\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 MERGED ROW FILTER \u2014 Unity Catalog supports only ONE row filter per table.\n-- Multiple Ranger principals for `hr`.`employee` have been combined into one function.\n-- Principals merged (3): user1@company.com, user2@company.com, user3@company.com\n-- Each WHEN clause applies the original Ranger filter for that principal.\n\nCREATE OR REPLACE FUNCTION `main`.`hr`.rf_employee(dept STRING, location STRING)\nRETURNS BOOLEAN\nRETURN\n  CASE\n    WHEN current_user() = 'user1@company.com' THEN dept='production'\n    WHEN current_user() = 'user2@company.com' THEN dept='purchase'\n    WHEN current_user() = 'user3@company.com' THEN location='GR'\n    ELSE TRUE  -- allow access for all other principals\n  END;\n\nALTER TABLE `main`.`hr`.`employee`\nSET ROW FILTER `main`.`hr`.rf_employee ON (dept, location);\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 MERGED ROW FILTER \u2014 Unity Catalog supports only ONE row filter per table.\n-- Multiple Ranger principals for `hr`.`employee2` have been combined into one function.\n-- Principals merged (2): user1@company.com, user2@company.com\n-- Each WHEN clause applies the original Ranger filter for that principal.\n\nCREATE OR REPLACE FUNCTION `main`.`hr`.rf_employee2(dept STRING)\nRETURNS BOOLEAN\nRETURN\n  CASE\n    WHEN current_user() = 'user1@company.com' THEN dept='production'\n    WHEN current_user() = 'user2@company.com' THEN dept='purchase'\n    ELSE TRUE  -- allow access for all other principals\n  END;\n\nALTER TABLE `main`.`hr`.`employee2`\nSET ROW FILTER `main`.`hr`.rf_employee2 ON (dept);\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 MERGED COLUMN MASK \u2014 Unity Catalog supports only ONE mask per column.\n-- Multiple Ranger principals for `employee`.`personal`.ssn have been combined.\n-- Principals merged (4): user1@company.com, user2@company.com, user1@company.com, user2@company.com\n-- Function parameter is STRING. If the actual column type differs, adjust the signature.\n\nCREATE OR REPLACE FUNCTION `main`.`employee`.mask_personal_ssn(val STRING)\nRETURNS STRING\nRETURN\n  CASE\n    WHEN current_user() = 'user1@company.com' THEN '***REDACTED***'\n    WHEN current_user() = 'user2@company.com' THEN '***REDACTED***'\n    WHEN current_user() = 'user1@company.com' THEN '***REDACTED***'\n    WHEN current_user() = 'user2@company.com' THEN '***REDACTED***'\n    ELSE val  -- no masking for other principals\n  END;\n\nALTER TABLE `main`.`employee`.`personal`\nALTER COLUMN ssn SET MASK `main`.`employee`.mask_personal_ssn;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 MERGED COLUMN MASK \u2014 Unity Catalog supports only ONE mask per column.\n-- Multiple Ranger principals for `employee`.`personal`.dummy have been combined.\n-- Principals merged (2): user1@company.com, user2@company.com\n-- Function parameter is STRING. If the actual column type differs, adjust the signature.\n\nCREATE OR REPLACE FUNCTION `main`.`employee`.mask_personal_dummy(val STRING)\nRETURNS STRING\nRETURN\n  CASE\n    WHEN current_user() = 'user1@company.com' THEN '***REDACTED***'\n    WHEN current_user() = 'user2@company.com' THEN '***REDACTED***'\n    ELSE val  -- no masking for other principals\n  END;\n\nALTER TABLE `main`.`employee`.`personal`\nALTER COLUMN dummy SET MASK `main`.`employee`.mask_personal_dummy;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 MERGED COLUMN MASK \u2014 Unity Catalog supports only ONE mask per column.\n-- Multiple Ranger principals for `hr`.`employee`.date_of_birth have been combined.\n-- Principals merged (3): user1@company.com, user2@company.com, user3@company.com\n-- Function parameter is STRING. If the actual column type differs, adjust the signature.\n\nCREATE OR REPLACE FUNCTION `main`.`hr`.mask_employee_date_of_birth(val STRING)\nRETURNS STRING\nRETURN\n  CASE\n    WHEN current_user() = 'user1@company.com' THEN '***REDACTED***'\n    WHEN current_user() = 'user2@company.com' THEN '***REDACTED***'\n    WHEN current_user() = 'user3@company.com' THEN '***REDACTED***'\n    ELSE val  -- no masking for other principals\n  END;\n\nALTER TABLE `main`.`hr`.`employee`\nALTER COLUMN date_of_birth SET MASK `main`.`hr`.mask_employee_date_of_birth;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 MERGED COLUMN MASK \u2014 Unity Catalog supports only ONE mask per column.\n-- Multiple Ranger principals for `hr`.`employee`.project have been combined.\n-- Principals merged (2): user1@company.com, user2@company.com\n-- Function parameter is STRING. If the actual column type differs, adjust the signature.\n\nCREATE OR REPLACE FUNCTION `main`.`hr`.mask_employee_project(val STRING)\nRETURNS STRING\nRETURN\n  CASE\n    WHEN current_user() = 'user1@company.com' THEN '***REDACTED***'\n    WHEN current_user() = 'user2@company.com' THEN '***REDACTED***'\n    ELSE val  -- no masking for other principals\n  END;\n\nALTER TABLE `main`.`hr`.`employee`\nALTER COLUMN project SET MASK `main`.`hr`.mask_employee_project;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=test_db, table=dept_${{USER.dept}}, column=col1: unmasked for users in the department (Ranger ID: 104)\n-- Type: COLUMN_MASK | Principal: {USER}\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 RESOURCE NOT TRANSLATED \u2014 Ranger request-context attribute in resource name\n-- Policy: db=test_db, table=dept_${{USER.dept}}, column=col1: unmasked for users in the department\n-- Affected resource component(s): `dept_${{USER.dept}}`\n-- Principal: {USER}@company.com\n--\n-- Ranger supports dynamic resource names like dept_${{USER.dept}} where the\n-- table name is resolved per-user at query time. Unity Catalog requires\n-- fixed, pre-known resource names \u2014 dynamic resource names are not supported.\n--\n-- ACTION REQUIRED: Identify all concrete table names this policy covers,\n-- then create one GRANT statement per table for each applicable principal.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=test_db, table=dept_hr, column=col1: mask hash for all users (Ranger ID: 105)\n-- Type: COLUMN_MASK | Principal: public\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Column Mask: SHA-256 hash for public\nCREATE OR REPLACE FUNCTION `main`.`test_db`.mask_dept_hr_col1_public(val STRING)\nRETURNS STRING\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('public'),\n  SHA2(val, 256),\n  val\n);\n\nALTER TABLE `main`.`test_db`.`dept_hr`\nALTER COLUMN col1 SET MASK `main`.`test_db`.mask_dept_hr_col1_public;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=test_db, table=dept_${{USER.dept}}: no filter for users in the department (Ranger ID: 204)\n-- Type: ROW_FILTER | Principal: {USER}\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26d4 RESOURCE NOT TRANSLATED \u2014 Ranger request-context attribute in resource name\n-- Policy: db=test_db, table=dept_${{USER.dept}}: no filter for users in the department\n-- Affected resource component(s): `dept_${{USER.dept}}`\n-- Principal: {USER}@company.com\n--\n-- Ranger supports dynamic resource names like dept_${{USER.dept}} where the\n-- table name is resolved per-user at query time. Unity Catalog requires\n-- fixed, pre-known resource names \u2014 dynamic resource names are not supported.\n--\n-- ACTION REQUIRED: Identify all concrete table names this policy covers,\n-- then create one GRANT statement per table for each applicable principal.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: db=test_db, table=dept_hr: row-filter (Ranger ID: 205)\n-- Type: ROW_FILTER | Principal: public\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Row Filter for: public\n-- Original expression: dept != 'hr'\n\nCREATE OR REPLACE FUNCTION `main`.`test_db`.rf_dept_hr_public(dept STRING)\nRETURNS BOOLEAN\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('public'),\n  dept != 'hr',\n  TRUE  -- Allow access for principals not matching the condition\n);\n\nALTER TABLE `main`.`test_db`.`dept_hr`\nSET ROW FILTER `main`.`test_db`.rf_dept_hr_public ON (dept);\n"
 }

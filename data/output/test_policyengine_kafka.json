@@ -1,9 +1,376 @@
 {
-  "serviceName": "kafkadev",
-  "catalogName": "main",
-  "clusterName": "unknown",
-  "totalRangerPolicies": 14,
-  "policyItems": [
+  "metadata": {
+    "timestamp": "2026-06-02T03:42:54.805724",
+    "service_name": "kafkadev",
+    "cluster_name": "unknown",
+    "catalog_name": "main",
+    "source_file": "test_policyengine_kafka.json",
+    "notes": ""
+  },
+  "parsed_data": {
+    "results": [
+      {
+        "id": "10-grant-default-*-user1-2",
+        "rangerPolicyId": 10,
+        "rangerPolicyName": "10: test-topic publish/consume allowed",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "default",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "PUBLISH",
+          "CONSUME"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "user1"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "101-grant-default-*-user2-2",
+        "rangerPolicyId": 101,
+        "rangerPolicyName": "101: test-topic publish/consume allowed",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "default",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "PUBLISH",
+          "CONSUME"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "user2"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "102-grant-default-*-user3-2",
+        "rangerPolicyId": 102,
+        "rangerPolicyName": "102: test-topic publish/consume allowed",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "default",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "CONSUME"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "user3"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "103-grant-default-*-user4-2",
+        "rangerPolicyId": 103,
+        "rangerPolicyName": "103: test-topic publish/consume allowed",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "default",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "CONSUME"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "user4"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "103-grant-default-*-user5-3",
+        "rangerPolicyId": 103,
+        "rangerPolicyName": "103: test-topic publish/consume allowed",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "default",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "CONSUME"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "user5"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "104-grant-default-*-user6-2",
+        "rangerPolicyId": 104,
+        "rangerPolicyName": "104: test-topic publish/consume allowed",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "default",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "PUBLISH",
+          "CONSUME"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "user6"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "20-grant-default-*-user1-2",
+        "rangerPolicyId": 20,
+        "rangerPolicyName": "02: transation id",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "default",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "PUBLISH"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "user1"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "30-grant-default-*-user1-2",
+        "rangerPolicyId": 30,
+        "rangerPolicyName": "create/alter access for user1 on cluster-1",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "default",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "CREATE",
+          "ALTER"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "user1"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "301-grant-default-*-user31-2",
+        "rangerPolicyId": 301,
+        "rangerPolicyName": "Alter access for user31 on cluster-2",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "default",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "ALTER"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "user31"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "302-grant-default-*-user32-2",
+        "rangerPolicyId": 302,
+        "rangerPolicyName": "Alter access for user32 on cluster-1",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "default",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "ALTER"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "user32"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "40-grant-default-*-user1-2",
+        "rangerPolicyId": 40,
+        "rangerPolicyName": "delegationtoken",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "default",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "DESCRIBE"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "user1"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "50-grant-default-*-user1-2",
+        "rangerPolicyId": 50,
+        "rangerPolicyName": "consumergroup-1 access",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "default",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "CONSUME"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "user1"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "52-grant-default-*-user4-2",
+        "rangerPolicyId": 52,
+        "rangerPolicyName": "consumergroup-2 access for user4",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "default",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "CONSUME"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "user4"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "110-grant-default-*-user2-2",
+        "rangerPolicyId": 110,
+        "rangerPolicyName": "110: test-topic-1/2 consume allowed for user2",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "default",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "CONSUME"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "user2"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "111-grant-default-*-user2-2",
+        "rangerPolicyId": 111,
+        "rangerPolicyName": "110: new-topic-1/2 allowed for user2",
+        "rangerPolicyDesc": "",
+        "type": "grant",
+        "catalog": "main",
+        "schema": "default",
+        "table": null,
+        "columns": null,
+        "privileges": [
+          "CONSUME"
+        ],
+        "principal": {
+          "type": "user",
+          "name": "user2"
+        },
+        "delegateAdmin": false,
+        "enabled": true,
+        "status": "approved"
+      }
+    ],
+    "warnings": [],
+    "identities": [
+      {
+        "type": "user",
+        "name": "user1"
+      },
+      {
+        "type": "user",
+        "name": "user2"
+      },
+      {
+        "type": "user",
+        "name": "user3"
+      },
+      {
+        "type": "user",
+        "name": "user31"
+      },
+      {
+        "type": "user",
+        "name": "user32"
+      },
+      {
+        "type": "user",
+        "name": "user4"
+      },
+      {
+        "type": "user",
+        "name": "user5"
+      },
+      {
+        "type": "user",
+        "name": "user6"
+      }
+    ],
+    "kerberosIssues": [],
+    "serviceName": "kafkadev",
+    "serviceType": "hive",
+    "clusterName": "unknown",
+    "totalRangerPolicies": 14
+  },
+  "policy_items": [
     {
       "id": "10-grant-default-*-user1-2",
       "rangerPolicyId": 10,
@@ -24,7 +391,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "101-grant-default-*-user2-2",
@@ -46,7 +413,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "102-grant-default-*-user3-2",
@@ -67,7 +434,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "103-grant-default-*-user4-2",
@@ -88,7 +455,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "103-grant-default-*-user5-3",
@@ -109,7 +476,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "104-grant-default-*-user6-2",
@@ -131,7 +498,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "20-grant-default-*-user1-2",
@@ -152,7 +519,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "30-grant-default-*-user1-2",
@@ -174,7 +541,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "301-grant-default-*-user31-2",
@@ -195,7 +562,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "302-grant-default-*-user32-2",
@@ -216,7 +583,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "40-grant-default-*-user1-2",
@@ -237,7 +604,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "50-grant-default-*-user1-2",
@@ -258,7 +625,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "52-grant-default-*-user4-2",
@@ -279,7 +646,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "110-grant-default-*-user2-2",
@@ -300,7 +667,7 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "111-grant-default-*-user2-2",
@@ -321,43 +688,9 @@
       },
       "delegateAdmin": false,
       "enabled": true,
-      "status": "pending"
+      "status": "approved"
     }
   ],
-  "identityMap": {},
-  "generatedSQL": "-- \u26a0 Ranger policy targeted table=* (all tables in `default`).\n-- UC schema-level grant applies to all current AND future tables in this schema \u2014 broader scope than the original Ranger policy.\n-- Review: consider explicit per-table grants for sensitive schemas.\nGRANT USE CATALOG ON CATALOG `main` TO `user1@company.com`;\nGRANT USE SCHEMA ON SCHEMA `main`.`default` TO `user1@company.com`;\n-- \u26a0 'PUBLISH' is a Ranger/service-specific privilege with no Unity Catalog equivalent. No GRANT is emitted. Review manually.\n-- \u26a0 'CONSUME' is a Ranger/service-specific privilege with no Unity Catalog equivalent. No GRANT is emitted. Review manually.\n\n-- \u26a0 Ranger policy targeted table=* (all tables in `default`).\n-- UC schema-level grant applies to all current AND future tables in this schema \u2014 broader scope than the original Ranger policy.\n-- Review: consider explicit per-table grants for sensitive schemas.\nGRANT USE CATALOG ON CATALOG `main` TO `user2@company.com`;\nGRANT USE SCHEMA ON SCHEMA `main`.`default` TO `user2@company.com`;\n-- \u26a0 'PUBLISH' is a Ranger/service-specific privilege with no Unity Catalog equivalent. No GRANT is emitted. Review manually.\n-- \u26a0 'CONSUME' is a Ranger/service-specific privilege with no Unity Catalog equivalent. No GRANT is emitted. Review manually.\n\n-- \u26a0 Ranger policy targeted table=* (all tables in `default`).\n-- UC schema-level grant applies to all current AND future tables in this schema \u2014 broader scope than the original Ranger policy.\n-- Review: consider explicit per-table grants for sensitive schemas.\nGRANT USE CATALOG ON CATALOG `main` TO `user3@company.com`;\nGRANT USE SCHEMA ON SCHEMA `main`.`default` TO `user3@company.com`;\n-- \u26a0 'CONSUME' is a Ranger/service-specific privilege with no Unity Catalog equivalent. No GRANT is emitted. Review manually.\n\n-- \u26a0 Ranger policy targeted table=* (all tables in `default`).\n-- UC schema-level grant applies to all current AND future tables in this schema \u2014 broader scope than the original Ranger policy.\n-- Review: consider explicit per-table grants for sensitive schemas.\nGRANT USE CATALOG ON CATALOG `main` TO `user4@company.com`;\nGRANT USE SCHEMA ON SCHEMA `main`.`default` TO `user4@company.com`;\n-- \u26a0 'CONSUME' is a Ranger/service-specific privilege with no Unity Catalog equivalent. No GRANT is emitted. Review manually.\n\n-- \u26a0 Ranger policy targeted table=* (all tables in `default`).\n-- UC schema-level grant applies to all current AND future tables in this schema \u2014 broader scope than the original Ranger policy.\n-- Review: consider explicit per-table grants for sensitive schemas.\nGRANT USE CATALOG ON CATALOG `main` TO `user5@company.com`;\nGRANT USE SCHEMA ON SCHEMA `main`.`default` TO `user5@company.com`;\n-- \u26a0 'CONSUME' is a Ranger/service-specific privilege with no Unity Catalog equivalent. No GRANT is emitted. Review manually.\n\n-- \u26a0 Ranger policy targeted table=* (all tables in `default`).\n-- UC schema-level grant applies to all current AND future tables in this schema \u2014 broader scope than the original Ranger policy.\n-- Review: consider explicit per-table grants for sensitive schemas.\nGRANT USE CATALOG ON CATALOG `main` TO `user6@company.com`;\nGRANT USE SCHEMA ON SCHEMA `main`.`default` TO `user6@company.com`;\n-- \u26a0 'PUBLISH' is a Ranger/service-specific privilege with no Unity Catalog equivalent. No GRANT is emitted. Review manually.\n-- \u26a0 'CONSUME' is a Ranger/service-specific privilege with no Unity Catalog equivalent. No GRANT is emitted. Review manually.\n\n-- \u26a0 Ranger policy targeted table=* (all tables in `default`).\n-- UC schema-level grant applies to all current AND future tables in this schema \u2014 broader scope than the original Ranger policy.\n-- Review: consider explicit per-table grants for sensitive schemas.\nGRANT USE CATALOG ON CATALOG `main` TO `user1@company.com`;\nGRANT USE SCHEMA ON SCHEMA `main`.`default` TO `user1@company.com`;\n-- \u26a0 'PUBLISH' is a Ranger/service-specific privilege with no Unity Catalog equivalent. No GRANT is emitted. Review manually.\n\n-- \u26a0 Ranger policy targeted table=* (all tables in `default`).\n-- UC schema-level grant applies to all current AND future tables in this schema \u2014 broader scope than the original Ranger policy.\n-- Review: consider explicit per-table grants for sensitive schemas.\nGRANT USE CATALOG ON CATALOG `main` TO `user1@company.com`;\nGRANT USE SCHEMA ON SCHEMA `main`.`default` TO `user1@company.com`;\nGRANT CREATE TABLE ON SCHEMA `main`.`default` TO `user1@company.com`;\nGRANT ALTER ON SCHEMA `main`.`default` TO `user1@company.com`;\n\n-- \u26a0 Ranger policy targeted table=* (all tables in `default`).\n-- UC schema-level grant applies to all current AND future tables in this schema \u2014 broader scope than the original Ranger policy.\n-- Review: consider explicit per-table grants for sensitive schemas.\nGRANT USE CATALOG ON CATALOG `main` TO `user31@company.com`;\nGRANT USE SCHEMA ON SCHEMA `main`.`default` TO `user31@company.com`;\nGRANT ALTER ON SCHEMA `main`.`default` TO `user31@company.com`;\n\n-- \u26a0 Ranger policy targeted table=* (all tables in `default`).\n-- UC schema-level grant applies to all current AND future tables in this schema \u2014 broader scope than the original Ranger policy.\n-- Review: consider explicit per-table grants for sensitive schemas.\nGRANT USE CATALOG ON CATALOG `main` TO `user32@company.com`;\nGRANT USE SCHEMA ON SCHEMA `main`.`default` TO `user32@company.com`;\nGRANT ALTER ON SCHEMA `main`.`default` TO `user32@company.com`;\n\n-- \u26a0 Ranger policy targeted table=* (all tables in `default`).\n-- UC schema-level grant applies to all current AND future tables in this schema \u2014 broader scope than the original Ranger policy.\n-- Review: consider explicit per-table grants for sensitive schemas.\nGRANT USE CATALOG ON CATALOG `main` TO `user1@company.com`;\nGRANT USE SCHEMA ON SCHEMA `main`.`default` TO `user1@company.com`;\n-- \u26a0 'DESCRIBE' is a Ranger/service-specific privilege with no Unity Catalog equivalent. No GRANT is emitted. Review manually.\n\n-- \u26a0 Ranger policy targeted table=* (all tables in `default`).\n-- UC schema-level grant applies to all current AND future tables in this schema \u2014 broader scope than the original Ranger policy.\n-- Review: consider explicit per-table grants for sensitive schemas.\nGRANT USE CATALOG ON CATALOG `main` TO `user1@company.com`;\nGRANT USE SCHEMA ON SCHEMA `main`.`default` TO `user1@company.com`;\n-- \u26a0 'CONSUME' is a Ranger/service-specific privilege with no Unity Catalog equivalent. No GRANT is emitted. Review manually.\n\n-- \u26a0 Ranger policy targeted table=* (all tables in `default`).\n-- UC schema-level grant applies to all current AND future tables in this schema \u2014 broader scope than the original Ranger policy.\n-- Review: consider explicit per-table grants for sensitive schemas.\nGRANT USE CATALOG ON CATALOG `main` TO `user4@company.com`;\nGRANT USE SCHEMA ON SCHEMA `main`.`default` TO `user4@company.com`;\n-- \u26a0 'CONSUME' is a Ranger/service-specific privilege with no Unity Catalog equivalent. No GRANT is emitted. Review manually.\n\n-- \u26a0 Ranger policy targeted table=* (all tables in `default`).\n-- UC schema-level grant applies to all current AND future tables in this schema \u2014 broader scope than the original Ranger policy.\n-- Review: consider explicit per-table grants for sensitive schemas.\nGRANT USE CATALOG ON CATALOG `main` TO `user2@company.com`;\nGRANT USE SCHEMA ON SCHEMA `main`.`default` TO `user2@company.com`;\n-- \u26a0 'CONSUME' is a Ranger/service-specific privilege with no Unity Catalog equivalent. No GRANT is emitted. Review manually.\n\n-- \u26a0 Ranger policy targeted table=* (all tables in `default`).\n-- UC schema-level grant applies to all current AND future tables in this schema \u2014 broader scope than the original Ranger policy.\n-- Review: consider explicit per-table grants for sensitive schemas.\nGRANT USE CATALOG ON CATALOG `main` TO `user2@company.com`;\nGRANT USE SCHEMA ON SCHEMA `main`.`default` TO `user2@company.com`;\n-- \u26a0 'CONSUME' is a Ranger/service-specific privilege with no Unity Catalog equivalent. No GRANT is emitted. Review manually.",
-  "stats": {
-    "total": 15,
-    "grants": 15,
-    "denies": 0,
-    "rowFilters": 0,
-    "masks": 0,
-    "hdfsGrants": 0,
-    "hbaseGrants": 0,
-    "udfGrants": 0,
-    "tagSets": 0,
-    "tagGrants": 0,
-    "tagPlaceholders": 0,
-    "approved": 0,
-    "needsReview": 0,
-    "pending": 15,
-    "rejected": 0,
-    "disabled": 0,
-    "schemaCount": 1,
-    "principalCount": 8,
-    "schemas": [
-      "default"
-    ],
-    "principals": [
-      "user1",
-      "user2",
-      "user3",
-      "user31",
-      "user32",
-      "user4",
-      "user5",
-      "user6"
-    ],
-    "notTranslatable": 0
-  }
+  "identity_map": {},
+  "generated_sql": "-- \u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n-- \u2551  Unity Catalog Migration Script                          \u2551\n-- \u2551  Generated by Ranger \u2192 UC Migrator                       \u2551\n-- \u2551  Source: kafkadev\n-- \u2551  Target Catalog: main\n-- \u2551  Date: 2026-06-02\n-- \u2551  Policies: 15 of 15\n-- \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: 10: test-topic publish/consume allowed (Ranger ID: 10)\n-- Type: GRANT | Principal: user1\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 Ranger policy targeted table=* (all tables in `default`).\n-- SELECT and MODIFY are table-level privileges in UC \u2014 they cannot be granted on SCHEMA.\n-- They are applied via a BEGIN...END FOR loop over all tables in the schema.\n-- Other privileges (PUBLISH, CONSUME) are granted directly on the schema.\nGRANT USE CATALOG ON CATALOG `main` TO `user1@company.com`;\nGRANT USE SCHEMA ON SCHEMA `main`.`default` TO `user1@company.com`;\n-- \u26a0 'PUBLISH' is a Ranger/service-specific privilege with no Unity Catalog equivalent. No GRANT is emitted. Review manually.\n-- \u26a0 'CONSUME' is a Ranger/service-specific privilege with no Unity Catalog equivalent. No GRANT is emitted. Review manually.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: 101: test-topic publish/consume allowed (Ranger ID: 101)\n-- Type: GRANT | Principal: user2\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 Ranger policy targeted table=* (all tables in `default`).\n-- SELECT and MODIFY are table-level privileges in UC \u2014 they cannot be granted on SCHEMA.\n-- They are applied via a BEGIN...END FOR loop over all tables in the schema.\n-- Other privileges (PUBLISH, CONSUME) are granted directly on the schema.\nGRANT USE CATALOG ON CATALOG `main` TO `user2@company.com`;\nGRANT USE SCHEMA ON SCHEMA `main`.`default` TO `user2@company.com`;\n-- \u26a0 'PUBLISH' is a Ranger/service-specific privilege with no Unity Catalog equivalent. No GRANT is emitted. Review manually.\n-- \u26a0 'CONSUME' is a Ranger/service-specific privilege with no Unity Catalog equivalent. No GRANT is emitted. Review manually.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: 102: test-topic publish/consume allowed (Ranger ID: 102)\n-- Type: GRANT | Principal: user3\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 Ranger policy targeted table=* (all tables in `default`).\n-- SELECT and MODIFY are table-level privileges in UC \u2014 they cannot be granted on SCHEMA.\n-- They are applied via a BEGIN...END FOR loop over all tables in the schema.\n-- Other privileges (CONSUME) are granted directly on the schema.\nGRANT USE CATALOG ON CATALOG `main` TO `user3@company.com`;\nGRANT USE SCHEMA ON SCHEMA `main`.`default` TO `user3@company.com`;\n-- \u26a0 'CONSUME' is a Ranger/service-specific privilege with no Unity Catalog equivalent. No GRANT is emitted. Review manually.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: 103: test-topic publish/consume allowed (Ranger ID: 103)\n-- Type: GRANT | Principal: user4\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 Ranger policy targeted table=* (all tables in `default`).\n-- SELECT and MODIFY are table-level privileges in UC \u2014 they cannot be granted on SCHEMA.\n-- They are applied via a BEGIN...END FOR loop over all tables in the schema.\n-- Other privileges (CONSUME) are granted directly on the schema.\nGRANT USE CATALOG ON CATALOG `main` TO `user4@company.com`;\nGRANT USE SCHEMA ON SCHEMA `main`.`default` TO `user4@company.com`;\n-- \u26a0 'CONSUME' is a Ranger/service-specific privilege with no Unity Catalog equivalent. No GRANT is emitted. Review manually.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: 103: test-topic publish/consume allowed (Ranger ID: 103)\n-- Type: GRANT | Principal: user5\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 Ranger policy targeted table=* (all tables in `default`).\n-- SELECT and MODIFY are table-level privileges in UC \u2014 they cannot be granted on SCHEMA.\n-- They are applied via a BEGIN...END FOR loop over all tables in the schema.\n-- Other privileges (CONSUME) are granted directly on the schema.\nGRANT USE CATALOG ON CATALOG `main` TO `user5@company.com`;\nGRANT USE SCHEMA ON SCHEMA `main`.`default` TO `user5@company.com`;\n-- \u26a0 'CONSUME' is a Ranger/service-specific privilege with no Unity Catalog equivalent. No GRANT is emitted. Review manually.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: 104: test-topic publish/consume allowed (Ranger ID: 104)\n-- Type: GRANT | Principal: user6\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 Ranger policy targeted table=* (all tables in `default`).\n-- SELECT and MODIFY are table-level privileges in UC \u2014 they cannot be granted on SCHEMA.\n-- They are applied via a BEGIN...END FOR loop over all tables in the schema.\n-- Other privileges (PUBLISH, CONSUME) are granted directly on the schema.\nGRANT USE CATALOG ON CATALOG `main` TO `user6@company.com`;\nGRANT USE SCHEMA ON SCHEMA `main`.`default` TO `user6@company.com`;\n-- \u26a0 'PUBLISH' is a Ranger/service-specific privilege with no Unity Catalog equivalent. No GRANT is emitted. Review manually.\n-- \u26a0 'CONSUME' is a Ranger/service-specific privilege with no Unity Catalog equivalent. No GRANT is emitted. Review manually.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: 02: transation id (Ranger ID: 20)\n-- Type: GRANT | Principal: user1\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 Ranger policy targeted table=* (all tables in `default`).\n-- SELECT and MODIFY are table-level privileges in UC \u2014 they cannot be granted on SCHEMA.\n-- They are applied via a BEGIN...END FOR loop over all tables in the schema.\n-- Other privileges (PUBLISH) are granted directly on the schema.\nGRANT USE CATALOG ON CATALOG `main` TO `user1@company.com`;\nGRANT USE SCHEMA ON SCHEMA `main`.`default` TO `user1@company.com`;\n-- \u26a0 'PUBLISH' is a Ranger/service-specific privilege with no Unity Catalog equivalent. No GRANT is emitted. Review manually.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: create/alter access for user1 on cluster-1 (Ranger ID: 30)\n-- Type: GRANT | Principal: user1\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 Ranger policy targeted table=* (all tables in `default`).\n-- SELECT and MODIFY are table-level privileges in UC \u2014 they cannot be granted on SCHEMA.\n-- They are applied via a BEGIN...END FOR loop over all tables in the schema.\n-- Other privileges (CREATE, ALTER) are granted directly on the schema.\nGRANT USE CATALOG ON CATALOG `main` TO `user1@company.com`;\nGRANT USE SCHEMA ON SCHEMA `main`.`default` TO `user1@company.com`;\nGRANT CREATE TABLE ON SCHEMA `main`.`default` TO `user1@company.com`;\n-- \u26a0 ALTER privilege has no direct equivalent in Unity Catalog. Converted to ALL PRIVILEGES (closest available substitute for DDL access). In UC, table/schema structural changes (ADD COLUMN, RENAME, etc.) require ownership. Review: consider assigning object ownership instead of granting ALL PRIVILEGES.\nGRANT ALL PRIVILEGES ON SCHEMA `main`.`default` TO `user1@company.com`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: Alter access for user31 on cluster-2 (Ranger ID: 301)\n-- Type: GRANT | Principal: user31\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 Ranger policy targeted table=* (all tables in `default`).\n-- SELECT and MODIFY are table-level privileges in UC \u2014 they cannot be granted on SCHEMA.\n-- They are applied via a BEGIN...END FOR loop over all tables in the schema.\n-- Other privileges (ALTER) are granted directly on the schema.\nGRANT USE CATALOG ON CATALOG `main` TO `user31@company.com`;\nGRANT USE SCHEMA ON SCHEMA `main`.`default` TO `user31@company.com`;\n-- \u26a0 ALTER privilege has no direct equivalent in Unity Catalog. Converted to ALL PRIVILEGES (closest available substitute for DDL access). In UC, table/schema structural changes (ADD COLUMN, RENAME, etc.) require ownership. Review: consider assigning object ownership instead of granting ALL PRIVILEGES.\nGRANT ALL PRIVILEGES ON SCHEMA `main`.`default` TO `user31@company.com`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: Alter access for user32 on cluster-1 (Ranger ID: 302)\n-- Type: GRANT | Principal: user32\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 Ranger policy targeted table=* (all tables in `default`).\n-- SELECT and MODIFY are table-level privileges in UC \u2014 they cannot be granted on SCHEMA.\n-- They are applied via a BEGIN...END FOR loop over all tables in the schema.\n-- Other privileges (ALTER) are granted directly on the schema.\nGRANT USE CATALOG ON CATALOG `main` TO `user32@company.com`;\nGRANT USE SCHEMA ON SCHEMA `main`.`default` TO `user32@company.com`;\n-- \u26a0 ALTER privilege has no direct equivalent in Unity Catalog. Converted to ALL PRIVILEGES (closest available substitute for DDL access). In UC, table/schema structural changes (ADD COLUMN, RENAME, etc.) require ownership. Review: consider assigning object ownership instead of granting ALL PRIVILEGES.\nGRANT ALL PRIVILEGES ON SCHEMA `main`.`default` TO `user32@company.com`;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: delegationtoken (Ranger ID: 40)\n-- Type: GRANT | Principal: user1\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 Ranger policy targeted table=* (all tables in `default`).\n-- SELECT and MODIFY are table-level privileges in UC \u2014 they cannot be granted on SCHEMA.\n-- They are applied via a BEGIN...END FOR loop over all tables in the schema.\n-- Other privileges (DESCRIBE) are granted directly on the schema.\nGRANT USE CATALOG ON CATALOG `main` TO `user1@company.com`;\nGRANT USE SCHEMA ON SCHEMA `main`.`default` TO `user1@company.com`;\n-- \u26a0 'DESCRIBE' is a Ranger/service-specific privilege with no Unity Catalog equivalent. No GRANT is emitted. Review manually.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: consumergroup-1 access (Ranger ID: 50)\n-- Type: GRANT | Principal: user1\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 Ranger policy targeted table=* (all tables in `default`).\n-- SELECT and MODIFY are table-level privileges in UC \u2014 they cannot be granted on SCHEMA.\n-- They are applied via a BEGIN...END FOR loop over all tables in the schema.\n-- Other privileges (CONSUME) are granted directly on the schema.\nGRANT USE CATALOG ON CATALOG `main` TO `user1@company.com`;\nGRANT USE SCHEMA ON SCHEMA `main`.`default` TO `user1@company.com`;\n-- \u26a0 'CONSUME' is a Ranger/service-specific privilege with no Unity Catalog equivalent. No GRANT is emitted. Review manually.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: consumergroup-2 access for user4 (Ranger ID: 52)\n-- Type: GRANT | Principal: user4\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u2139 DUPLICATE GRANT SKIPPED \u2014 identical GRANT for user4 on default.None was already emitted above.\n-- Original column scope: * (widened to table-level in UC).\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: 110: test-topic-1/2 consume allowed for user2 (Ranger ID: 110)\n-- Type: GRANT | Principal: user2\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 Ranger policy targeted table=* (all tables in `default`).\n-- SELECT and MODIFY are table-level privileges in UC \u2014 they cannot be granted on SCHEMA.\n-- They are applied via a BEGIN...END FOR loop over all tables in the schema.\n-- Other privileges (CONSUME) are granted directly on the schema.\nGRANT USE CATALOG ON CATALOG `main` TO `user2@company.com`;\nGRANT USE SCHEMA ON SCHEMA `main`.`default` TO `user2@company.com`;\n-- \u26a0 'CONSUME' is a Ranger/service-specific privilege with no Unity Catalog equivalent. No GRANT is emitted. Review manually.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- Policy: 110: new-topic-1/2 allowed for user2 (Ranger ID: 111)\n-- Type: GRANT | Principal: user2\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u2139 DUPLICATE GRANT SKIPPED \u2014 identical GRANT for user2 on default.None was already emitted above.\n-- Original column scope: * (widened to table-level in UC).\n"
 }

@@ -1,9 +1,347 @@
 {
-  "serviceName": "hive_prod",
-  "catalogName": "main",
-  "clusterName": "unknown",
-  "totalRangerPolicies": 1,
-  "policyItems": [
+  "metadata": {
+    "timestamp": "2026-06-02T03:42:54.775986",
+    "service_name": "hive_prod",
+    "cluster_name": "unknown",
+    "catalog_name": "main",
+    "source_file": "masking_medium.json",
+    "notes": ""
+  },
+  "parsed_data": {
+    "results": [
+      {
+        "id": "202-mask-customer_360-customers-email-support_team-1",
+        "rangerPolicyId": 202,
+        "rangerPolicyName": "customer_pii_masking",
+        "rangerPolicyDesc": "Medium masking - Multiple columns with different mask types",
+        "type": "column_mask",
+        "catalog": "main",
+        "schema": "customer_360",
+        "table": "customers",
+        "columns": [
+          "email"
+        ],
+        "privileges": [],
+        "principal": {
+          "type": "group",
+          "name": "support_team"
+        },
+        "allPrincipals": [
+          {
+            "type": "group",
+            "name": "support_team"
+          },
+          {
+            "type": "group",
+            "name": "customer_service"
+          }
+        ],
+        "maskType": "MASK_SHOW_FIRST_4",
+        "maskExpr": "",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "202-mask-customer_360-customers-phone-support_team-2",
+        "rangerPolicyId": 202,
+        "rangerPolicyName": "customer_pii_masking",
+        "rangerPolicyDesc": "Medium masking - Multiple columns with different mask types",
+        "type": "column_mask",
+        "catalog": "main",
+        "schema": "customer_360",
+        "table": "customers",
+        "columns": [
+          "phone"
+        ],
+        "privileges": [],
+        "principal": {
+          "type": "group",
+          "name": "support_team"
+        },
+        "allPrincipals": [
+          {
+            "type": "group",
+            "name": "support_team"
+          },
+          {
+            "type": "group",
+            "name": "customer_service"
+          }
+        ],
+        "maskType": "MASK_SHOW_FIRST_4",
+        "maskExpr": "",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "202-mask-customer_360-customers-credit_card-support_team-3",
+        "rangerPolicyId": 202,
+        "rangerPolicyName": "customer_pii_masking",
+        "rangerPolicyDesc": "Medium masking - Multiple columns with different mask types",
+        "type": "column_mask",
+        "catalog": "main",
+        "schema": "customer_360",
+        "table": "customers",
+        "columns": [
+          "credit_card"
+        ],
+        "privileges": [],
+        "principal": {
+          "type": "group",
+          "name": "support_team"
+        },
+        "allPrincipals": [
+          {
+            "type": "group",
+            "name": "support_team"
+          },
+          {
+            "type": "group",
+            "name": "customer_service"
+          }
+        ],
+        "maskType": "MASK_SHOW_FIRST_4",
+        "maskExpr": "",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "202-mask-customer_360-customers-email-analytics_team-4",
+        "rangerPolicyId": 202,
+        "rangerPolicyName": "customer_pii_masking",
+        "rangerPolicyDesc": "Medium masking - Multiple columns with different mask types",
+        "type": "column_mask",
+        "catalog": "main",
+        "schema": "customer_360",
+        "table": "customers",
+        "columns": [
+          "email"
+        ],
+        "privileges": [],
+        "principal": {
+          "type": "group",
+          "name": "analytics_team"
+        },
+        "allPrincipals": [
+          {
+            "type": "group",
+            "name": "analytics_team"
+          },
+          {
+            "type": "user",
+            "name": "data_scientist@company.com"
+          }
+        ],
+        "maskType": "MASK_HASH",
+        "maskExpr": "",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "202-mask-customer_360-customers-phone-analytics_team-5",
+        "rangerPolicyId": 202,
+        "rangerPolicyName": "customer_pii_masking",
+        "rangerPolicyDesc": "Medium masking - Multiple columns with different mask types",
+        "type": "column_mask",
+        "catalog": "main",
+        "schema": "customer_360",
+        "table": "customers",
+        "columns": [
+          "phone"
+        ],
+        "privileges": [],
+        "principal": {
+          "type": "group",
+          "name": "analytics_team"
+        },
+        "allPrincipals": [
+          {
+            "type": "group",
+            "name": "analytics_team"
+          },
+          {
+            "type": "user",
+            "name": "data_scientist@company.com"
+          }
+        ],
+        "maskType": "MASK_HASH",
+        "maskExpr": "",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "202-mask-customer_360-customers-credit_card-analytics_team-6",
+        "rangerPolicyId": 202,
+        "rangerPolicyName": "customer_pii_masking",
+        "rangerPolicyDesc": "Medium masking - Multiple columns with different mask types",
+        "type": "column_mask",
+        "catalog": "main",
+        "schema": "customer_360",
+        "table": "customers",
+        "columns": [
+          "credit_card"
+        ],
+        "privileges": [],
+        "principal": {
+          "type": "group",
+          "name": "analytics_team"
+        },
+        "allPrincipals": [
+          {
+            "type": "group",
+            "name": "analytics_team"
+          },
+          {
+            "type": "user",
+            "name": "data_scientist@company.com"
+          }
+        ],
+        "maskType": "MASK_HASH",
+        "maskExpr": "",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "202-mask-customer_360-customers-email-contractors-7",
+        "rangerPolicyId": 202,
+        "rangerPolicyName": "customer_pii_masking",
+        "rangerPolicyDesc": "Medium masking - Multiple columns with different mask types",
+        "type": "column_mask",
+        "catalog": "main",
+        "schema": "customer_360",
+        "table": "customers",
+        "columns": [
+          "email"
+        ],
+        "privileges": [],
+        "principal": {
+          "type": "group",
+          "name": "contractors"
+        },
+        "allPrincipals": [
+          {
+            "type": "group",
+            "name": "contractors"
+          },
+          {
+            "type": "group",
+            "name": "external_vendors"
+          }
+        ],
+        "maskType": "MASK_NULL",
+        "maskExpr": "",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "202-mask-customer_360-customers-phone-contractors-8",
+        "rangerPolicyId": 202,
+        "rangerPolicyName": "customer_pii_masking",
+        "rangerPolicyDesc": "Medium masking - Multiple columns with different mask types",
+        "type": "column_mask",
+        "catalog": "main",
+        "schema": "customer_360",
+        "table": "customers",
+        "columns": [
+          "phone"
+        ],
+        "privileges": [],
+        "principal": {
+          "type": "group",
+          "name": "contractors"
+        },
+        "allPrincipals": [
+          {
+            "type": "group",
+            "name": "contractors"
+          },
+          {
+            "type": "group",
+            "name": "external_vendors"
+          }
+        ],
+        "maskType": "MASK_NULL",
+        "maskExpr": "",
+        "enabled": true,
+        "status": "approved"
+      },
+      {
+        "id": "202-mask-customer_360-customers-credit_card-contractors-9",
+        "rangerPolicyId": 202,
+        "rangerPolicyName": "customer_pii_masking",
+        "rangerPolicyDesc": "Medium masking - Multiple columns with different mask types",
+        "type": "column_mask",
+        "catalog": "main",
+        "schema": "customer_360",
+        "table": "customers",
+        "columns": [
+          "credit_card"
+        ],
+        "privileges": [],
+        "principal": {
+          "type": "group",
+          "name": "contractors"
+        },
+        "allPrincipals": [
+          {
+            "type": "group",
+            "name": "contractors"
+          },
+          {
+            "type": "group",
+            "name": "external_vendors"
+          }
+        ],
+        "maskType": "MASK_NULL",
+        "maskExpr": "",
+        "enabled": true,
+        "status": "approved"
+      }
+    ],
+    "warnings": [],
+    "identities": [
+      {
+        "type": "group",
+        "name": "analytics_team"
+      },
+      {
+        "type": "group",
+        "name": "contractors"
+      },
+      {
+        "type": "group",
+        "name": "customer_service"
+      },
+      {
+        "type": "group",
+        "name": "external_vendors"
+      },
+      {
+        "type": "group",
+        "name": "support_team"
+      },
+      {
+        "type": "user",
+        "name": "data_scientist@company.com"
+      }
+    ],
+    "kerberosIssues": [
+      {
+        "policyId": 202,
+        "policyName": "customer_pii_masking",
+        "principal": "data_scientist@company.com",
+        "type": "kerberos_principal",
+        "severity": "warning",
+        "message": "\"data_scientist@company.com\" looks like a Kerberos principal \u2014 needs mapping to Databricks service principal or managed identity",
+        "recommendation": "Map to a Databricks user via SCIM/IdP integration. Remove the Kerberos realm suffix."
+      }
+    ],
+    "serviceName": "hive_prod",
+    "serviceType": "hive",
+    "clusterName": "unknown",
+    "totalRangerPolicies": 1
+  },
+  "policy_items": [
     {
       "id": "202-mask-customer_360-customers-email-support_team-1",
       "rangerPolicyId": 202,
@@ -34,7 +372,7 @@
       "maskType": "MASK_SHOW_FIRST_4",
       "maskExpr": "",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "202-mask-customer_360-customers-phone-support_team-2",
@@ -66,7 +404,7 @@
       "maskType": "MASK_SHOW_FIRST_4",
       "maskExpr": "",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "202-mask-customer_360-customers-credit_card-support_team-3",
@@ -98,7 +436,7 @@
       "maskType": "MASK_SHOW_FIRST_4",
       "maskExpr": "",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "202-mask-customer_360-customers-email-analytics_team-4",
@@ -130,7 +468,7 @@
       "maskType": "MASK_HASH",
       "maskExpr": "",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "202-mask-customer_360-customers-phone-analytics_team-5",
@@ -162,7 +500,7 @@
       "maskType": "MASK_HASH",
       "maskExpr": "",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "202-mask-customer_360-customers-credit_card-analytics_team-6",
@@ -194,7 +532,7 @@
       "maskType": "MASK_HASH",
       "maskExpr": "",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "202-mask-customer_360-customers-email-contractors-7",
@@ -226,7 +564,7 @@
       "maskType": "MASK_NULL",
       "maskExpr": "",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "202-mask-customer_360-customers-phone-contractors-8",
@@ -258,7 +596,7 @@
       "maskType": "MASK_NULL",
       "maskExpr": "",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     },
     {
       "id": "202-mask-customer_360-customers-credit_card-contractors-9",
@@ -290,38 +628,9 @@
       "maskType": "MASK_NULL",
       "maskExpr": "",
       "enabled": true,
-      "status": "needs_review"
+      "status": "approved"
     }
   ],
-  "identityMap": {},
-  "generatedSQL": "-- Column Mask: Show first 4 characters for support_team\nCREATE OR REPLACE FUNCTION `main`.`customer_360`.mask_customers_email_support_team(val STRING)\nRETURNS STRING\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('support_team'),\n  CONCAT(LEFT(val, 4), '***'),\n  val\n);\n\nALTER TABLE `main`.`customer_360`.`customers`\nALTER COLUMN email SET MASK `main`.`customer_360`.mask_customers_email_support_team;\n\n-- Column Mask: Show first 4 characters for support_team\nCREATE OR REPLACE FUNCTION `main`.`customer_360`.mask_customers_phone_support_team(val STRING)\nRETURNS STRING\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('support_team'),\n  CONCAT(LEFT(val, 4), '***'),\n  val\n);\n\nALTER TABLE `main`.`customer_360`.`customers`\nALTER COLUMN phone SET MASK `main`.`customer_360`.mask_customers_phone_support_team;\n\n-- Column Mask: Show first 4 characters for support_team\nCREATE OR REPLACE FUNCTION `main`.`customer_360`.mask_customers_credit_card_support_team(val STRING)\nRETURNS STRING\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('support_team'),\n  CONCAT(LEFT(val, 4), '***'),\n  val\n);\n\nALTER TABLE `main`.`customer_360`.`customers`\nALTER COLUMN credit_card SET MASK `main`.`customer_360`.mask_customers_credit_card_support_team;\n\n-- Column Mask: SHA-256 hash for analytics_team\nCREATE OR REPLACE FUNCTION `main`.`customer_360`.mask_customers_email_analytics_team(val STRING)\nRETURNS STRING\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('analytics_team'),\n  SHA2(val, 256),\n  val\n);\n\nALTER TABLE `main`.`customer_360`.`customers`\nALTER COLUMN email SET MASK `main`.`customer_360`.mask_customers_email_analytics_team;\n\n-- Column Mask: SHA-256 hash for analytics_team\nCREATE OR REPLACE FUNCTION `main`.`customer_360`.mask_customers_phone_analytics_team(val STRING)\nRETURNS STRING\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('analytics_team'),\n  SHA2(val, 256),\n  val\n);\n\nALTER TABLE `main`.`customer_360`.`customers`\nALTER COLUMN phone SET MASK `main`.`customer_360`.mask_customers_phone_analytics_team;\n\n-- Column Mask: SHA-256 hash for analytics_team\nCREATE OR REPLACE FUNCTION `main`.`customer_360`.mask_customers_credit_card_analytics_team(val STRING)\nRETURNS STRING\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('analytics_team'),\n  SHA2(val, 256),\n  val\n);\n\nALTER TABLE `main`.`customer_360`.`customers`\nALTER COLUMN credit_card SET MASK `main`.`customer_360`.mask_customers_credit_card_analytics_team;\n\n-- Column Mask: NULL value for contractors\nCREATE OR REPLACE FUNCTION `main`.`customer_360`.mask_customers_email_contractors(val STRING)\nRETURNS STRING\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('contractors'),\n  NULL,\n  val\n);\n\nALTER TABLE `main`.`customer_360`.`customers`\nALTER COLUMN email SET MASK `main`.`customer_360`.mask_customers_email_contractors;\n\n-- Column Mask: NULL value for contractors\nCREATE OR REPLACE FUNCTION `main`.`customer_360`.mask_customers_phone_contractors(val STRING)\nRETURNS STRING\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('contractors'),\n  NULL,\n  val\n);\n\nALTER TABLE `main`.`customer_360`.`customers`\nALTER COLUMN phone SET MASK `main`.`customer_360`.mask_customers_phone_contractors;\n\n-- Column Mask: NULL value for contractors\nCREATE OR REPLACE FUNCTION `main`.`customer_360`.mask_customers_credit_card_contractors(val STRING)\nRETURNS STRING\nRETURN IF(\n  IS_ACCOUNT_GROUP_MEMBER('contractors'),\n  NULL,\n  val\n);\n\nALTER TABLE `main`.`customer_360`.`customers`\nALTER COLUMN credit_card SET MASK `main`.`customer_360`.mask_customers_credit_card_contractors;",
-  "stats": {
-    "total": 9,
-    "grants": 0,
-    "denies": 0,
-    "rowFilters": 0,
-    "masks": 9,
-    "hdfsGrants": 0,
-    "hbaseGrants": 0,
-    "udfGrants": 0,
-    "tagSets": 0,
-    "tagGrants": 0,
-    "tagPlaceholders": 0,
-    "approved": 0,
-    "needsReview": 9,
-    "pending": 0,
-    "rejected": 0,
-    "disabled": 0,
-    "schemaCount": 1,
-    "principalCount": 3,
-    "schemas": [
-      "customer_360"
-    ],
-    "principals": [
-      "analytics_team",
-      "contractors",
-      "support_team"
-    ],
-    "notTranslatable": 0
-  }
+  "identity_map": {},
+  "generated_sql": "-- \u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n-- \u2551  Unity Catalog Migration Script                          \u2551\n-- \u2551  Generated by Ranger \u2192 UC Migrator                       \u2551\n-- \u2551  Source: hive_prod\n-- \u2551  Target Catalog: main\n-- \u2551  Date: 2026-06-02\n-- \u2551  Policies: 9 of 9\n-- \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\n\n-- \u26a0 CONFLICT NOTICE: 3 row-filter/column-mask conflict(s) detected.\n-- Unity Catalog supports only ONE row filter per table and ONE mask per column.\n-- Conflicting items have been automatically MERGED into combined CASE functions below.\n-- Review each merged function carefully before executing.\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 MERGED COLUMN MASK \u2014 Unity Catalog supports only ONE mask per column.\n-- Multiple Ranger principals for `customer_360`.`customers`.email have been combined.\n-- Principals merged (3): support_team, analytics_team, contractors\n-- Function parameter is STRING. If the actual column type differs, adjust the signature.\n\nCREATE OR REPLACE FUNCTION `main`.`customer_360`.mask_customers_email(val STRING)\nRETURNS STRING\nRETURN\n  CASE\n    WHEN IS_ACCOUNT_GROUP_MEMBER('support_team') THEN CONCAT(LEFT(val, 4), '***')\n    WHEN IS_ACCOUNT_GROUP_MEMBER('analytics_team') THEN SHA2(val, 256)\n    WHEN IS_ACCOUNT_GROUP_MEMBER('contractors') THEN NULL\n    ELSE val  -- no masking for other principals\n  END;\n\nALTER TABLE `main`.`customer_360`.`customers`\nALTER COLUMN email SET MASK `main`.`customer_360`.mask_customers_email;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 MERGED COLUMN MASK \u2014 Unity Catalog supports only ONE mask per column.\n-- Multiple Ranger principals for `customer_360`.`customers`.phone have been combined.\n-- Principals merged (3): support_team, analytics_team, contractors\n-- Function parameter is STRING. If the actual column type differs, adjust the signature.\n\nCREATE OR REPLACE FUNCTION `main`.`customer_360`.mask_customers_phone(val STRING)\nRETURNS STRING\nRETURN\n  CASE\n    WHEN IS_ACCOUNT_GROUP_MEMBER('support_team') THEN CONCAT(LEFT(val, 4), '***')\n    WHEN IS_ACCOUNT_GROUP_MEMBER('analytics_team') THEN SHA2(val, 256)\n    WHEN IS_ACCOUNT_GROUP_MEMBER('contractors') THEN NULL\n    ELSE val  -- no masking for other principals\n  END;\n\nALTER TABLE `main`.`customer_360`.`customers`\nALTER COLUMN phone SET MASK `main`.`customer_360`.mask_customers_phone;\n\n-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n-- \u26a0 MERGED COLUMN MASK \u2014 Unity Catalog supports only ONE mask per column.\n-- Multiple Ranger principals for `customer_360`.`customers`.credit_card have been combined.\n-- Principals merged (3): support_team, analytics_team, contractors\n-- Function parameter is STRING. If the actual column type differs, adjust the signature.\n\nCREATE OR REPLACE FUNCTION `main`.`customer_360`.mask_customers_credit_card(val STRING)\nRETURNS STRING\nRETURN\n  CASE\n    WHEN IS_ACCOUNT_GROUP_MEMBER('support_team') THEN CONCAT(LEFT(val, 4), '***')\n    WHEN IS_ACCOUNT_GROUP_MEMBER('analytics_team') THEN SHA2(val, 256)\n    WHEN IS_ACCOUNT_GROUP_MEMBER('contractors') THEN NULL\n    ELSE val  -- no masking for other principals\n  END;\n\nALTER TABLE `main`.`customer_360`.`customers`\nALTER COLUMN credit_card SET MASK `main`.`customer_360`.mask_customers_credit_card;\n"
 }

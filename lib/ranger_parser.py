@@ -962,8 +962,8 @@ def _wildcard_grant_loop(
             lines.append(f"    {note}")
         if uc_p:
             lines.append(
-                f"    EXECUTE IMMEDIATE format("
-                f"'GRANT {uc_p} ON TABLE {_q(cat)}.{_q(schema)}.`%s` TO {principal}', tbl.table_name);"
+                f"    EXECUTE IMMEDIATE 'GRANT {uc_p} ON TABLE {_q(cat)}.{_q(schema)}.`'"
+                f" || tbl.table_name || '` TO {principal}';"
             )
     lines.append("  END FOR;")
     lines.append("END;")
@@ -1027,16 +1027,11 @@ def _wildcard_column_grant_loop(
         f"      AND table_name     = '{table}'",
         f"      AND column_name LIKE '{like}'",
         "  ) DO",
-        "    EXECUTE IMMEDIATE format(",
-        f"      'CREATE OR REPLACE FUNCTION {fn_full_prefix}_%s(val STRING) RETURNS STRING"
-        f" RETURN IF({not_permitted_esc}, NULL, val)',",
-        "      col.column_name",
-        "    );",
-        "    EXECUTE IMMEDIATE format(",
-        f"      'ALTER TABLE {_q(cat)}.{_q(schema)}.{_q(table)}"
-        f" ALTER COLUMN `%s` SET MASK {fn_full_prefix}_%s',",
-        "      col.column_name, col.column_name",
-        "    );",
+        f"    EXECUTE IMMEDIATE 'CREATE OR REPLACE FUNCTION {fn_full_prefix}_'"
+        f" || col.column_name || '(val STRING) RETURNS STRING"
+        f" RETURN IF({not_permitted_esc}, NULL, val)';",
+        f"    EXECUTE IMMEDIATE 'ALTER TABLE {_q(cat)}.{_q(schema)}.{_q(table)}"
+        f" ALTER COLUMN `' || col.column_name || '` SET MASK {fn_full_prefix}_' || col.column_name;",
         "  END FOR;",
         "END;",
     ]
@@ -1106,16 +1101,11 @@ def _wildcard_column_deny_loop(
         f"      AND table_name     = '{table}'",
         f"      AND column_name LIKE '{like}'",
         "  ) DO",
-        "    EXECUTE IMMEDIATE format(",
-        f"      'CREATE OR REPLACE FUNCTION {fn_full_prefix}_%s(val STRING) RETURNS STRING"
-        f" RETURN IF({deny_condition}, NULL, val)',",
-        "      col.column_name",
-        "    );",
-        "    EXECUTE IMMEDIATE format(",
-        f"      'ALTER TABLE {_q(cat)}.{_q(schema)}.{_q(table)}"
-        f" ALTER COLUMN `%s` SET MASK {fn_full_prefix}_%s',",
-        "      col.column_name, col.column_name",
-        "    );",
+        f"    EXECUTE IMMEDIATE 'CREATE OR REPLACE FUNCTION {fn_full_prefix}_'"
+        f" || col.column_name || '(val STRING) RETURNS STRING"
+        f" RETURN IF({deny_condition}, NULL, val)';",
+        f"    EXECUTE IMMEDIATE 'ALTER TABLE {_q(cat)}.{_q(schema)}.{_q(table)}"
+        f" ALTER COLUMN `' || col.column_name || '` SET MASK {fn_full_prefix}_' || col.column_name;",
         "  END FOR;",
         "END;",
     ]
@@ -1309,9 +1299,9 @@ def generate_uc_sql(
             lines.append(f"    WHERE catalog_name = '{cat}'")
             lines.append(f"      AND schema_name LIKE '{like}'")
             lines.append("  ) DO")
-            lines.append(f"    EXECUTE IMMEDIATE format('GRANT USE CATALOG ON CATALOG {_q(cat)} TO {principal}');")
+            lines.append(f"    EXECUTE IMMEDIATE 'GRANT USE CATALOG ON CATALOG {_q(cat)} TO {principal}';")
             lines.append(
-                f"    EXECUTE IMMEDIATE format('GRANT USE SCHEMA ON SCHEMA {_q(cat)}.`%s` TO {principal}', sch.schema_name);"
+                f"    EXECUTE IMMEDIATE 'GRANT USE SCHEMA ON SCHEMA {_q(cat)}.`' || sch.schema_name || '` TO {principal}';"
             )
             for priv in _schema_privs:
                 uc_p, note = _uc_priv(priv, on_table=False)
@@ -1319,8 +1309,7 @@ def generate_uc_sql(
                     lines.append(f"    {note}")
                 if uc_p:
                     lines.append(
-                        f"    EXECUTE IMMEDIATE format("
-                        f"'GRANT {uc_p} ON SCHEMA {_q(cat)}.`%s` TO {principal}', sch.schema_name);"
+                        f"    EXECUTE IMMEDIATE 'GRANT {uc_p} ON SCHEMA {_q(cat)}.`' || sch.schema_name || '` TO {principal}';"
                     )
             lines.append("  END FOR;")
             lines.append("END;")
@@ -1338,8 +1327,8 @@ def generate_uc_sql(
                 lines.append("  ) DO")
                 uc_p, _ = _uc_priv(priv, on_table=True)
                 lines.append(
-                    f"    EXECUTE IMMEDIATE format("
-                    f"'GRANT {uc_p} ON TABLE {_q(cat)}.`%s`.`%s` TO {principal}', tbl.table_schema, tbl.table_name);"
+                    f"    EXECUTE IMMEDIATE 'GRANT {uc_p} ON TABLE {_q(cat)}.`'"
+                    f" || tbl.table_schema || '`.`' || tbl.table_name || '` TO {principal}';"
                 )
                 lines.append("  END FOR;")
                 lines.append("END;")

@@ -870,6 +870,15 @@ def _ranger_expr_issues(expr: str) -> list[str]:
             "These are Hive UDFs not registered in Unity Catalog. "
             "Rewrite using UC-native expressions (CONCAT, LEFT, RIGHT, SHA2, etc.)."
         )
+    # Strip string literals before checking for subquery keywords so that a
+    # value like 'SELECT' inside an IN list doesn't trigger a false positive.
+    _expr_no_literals = re.sub(r"'[^']*'", " ", expr)
+    if re.search(r"\bSELECT\b", _expr_no_literals, re.IGNORECASE):
+        issues.append(
+            "Subquery detected (SELECT inside expression): Unity Catalog row filter "
+            "functions do not support subqueries. Rewrite using a lookup table, "
+            "IS_ACCOUNT_GROUP_MEMBER() checks, or a pre-computed membership column."
+        )
     return issues
 
 

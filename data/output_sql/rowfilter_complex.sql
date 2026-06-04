@@ -16,16 +16,21 @@
 -- ⚠ MERGED ROW FILTER — Unity Catalog supports only ONE row filter per table.
 -- Multiple Ranger principals for `customer_360`.`customer_details` have been combined into one function.
 -- Principals merged (2): customer_success, account_managers
+-- ⛔ 1 branch(es) contain Ranger-specific constructs and CANNOT be auto-translated:
+--   Affected principals: account_managers
+--   These branches are commented out below — rewrite them manually before executing.
 -- Each WHEN clause applies the original Ranger filter for that principal.
 
-CREATE OR REPLACE FUNCTION `main`.`customer_360`.rf_customer_details(country STRING, customer_tier STRING, consent_given STRING, assigned_to STRING, team_id STRING, user_teams STRING, user_name STRING)
+CREATE OR REPLACE FUNCTION `main`.`customer_360`.rf_customer_details(country STRING, customer_tier STRING, consent_given STRING)
 RETURNS BOOLEAN
 RETURN
   CASE
     WHEN IS_ACCOUNT_GROUP_MEMBER('customer_success') THEN country IN ('USA', 'CAN') AND customer_tier IN ('GOLD', 'PLATINUM') AND consent_given = TRUE
-    WHEN IS_ACCOUNT_GROUP_MEMBER('account_managers') THEN (assigned_to = CURRENT_USER() OR team_id IN (SELECT team_id FROM user_teams WHERE user_name = CURRENT_USER()))
+    -- ⛔ BRANCH OMITTED — principal: account_managers — original expression: (assigned_to = CURRENT_USER() OR team_id IN (SELECT team_id FROM user_teams WHERE user_name = CURRENT_USER()))
+    --   Subquery detected (SELECT inside expression): Unity Catalog row filter functions do not support subqueries. Rewrite using a lookup table, IS_ACCOUNT_GROUP_MEMBER() checks, or a pre-computed membership column.
+    -- WHEN IS_ACCOUNT_GROUP_MEMBER('account_managers') THEN <rewrite expression here>
     ELSE TRUE  -- allow access for all other principals
   END;
 
 ALTER TABLE `main`.`customer_360`.`customer_details`
-SET ROW FILTER `main`.`customer_360`.rf_customer_details ON (country, customer_tier, consent_given, assigned_to, team_id, user_teams, user_name);
+SET ROW FILTER `main`.`customer_360`.rf_customer_details ON (country, customer_tier, consent_given);

@@ -477,16 +477,6 @@ SAMPLE_FILES: list[dict] = [
         "category": "ACL Provider Tests",
         "tags": ["column_mask", "row_filter", "tag"],
     },
-    {
-        "filename": "test_aclprovider_resource_hierarchy_tags.json",
-        "display_name": "ACL Provider – Resource Hierarchy Tags (9 tag policies)",
-        "description": "ACL provider test focused on tag-based policies with resource hierarchy resolution.",
-        "service": "hivedev",
-        "service_type": "hive",
-        "policy_count": 9,
-        "category": "ACL Provider Tests",
-        "tags": ["tag"],
-    },
     # ── Other services ────────────────────────────────────────────────
     {
         "filename": "test_policyengine_kafka.json",

@@ -236,7 +236,7 @@ The Session Archive page shows each archive with:
 | Hive engine | Full policy engine test samples: mask+filter, mutex, roles, incremental, partial resources |
 | HDFS | 11 samples (allaudit, noaudit, incremental, zones, resourcespec, multiple accesses, tag-based, AWS) |
 | HBase | 5 samples (basic, namespace, multiple matching, tag-based) |
-| ACL Provider Tests | 4 samples from the Ranger `agents-common` test suite (default Hive, HDFS, mask+filter, resource hierarchy tags) |
+| ACL Provider Tests | 3 samples from the Ranger `agents-common` test suite (default Hive, HDFS, mask+filter) |
 | Other services | Kafka, Atlas |
 
 ---

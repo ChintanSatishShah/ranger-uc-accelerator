@@ -984,6 +984,18 @@ def _sql_escape(s: str) -> str:
     return s.replace("'", "''")
 
 
+def _norm_hdfs_path(path: str) -> str:
+    """Normalise an HDFS/URL path for prefix-nesting comparison.
+
+    Strips trailing slashes and wildcard suffixes so that
+    '/data/*' and '/data/' both compare as '/data'.
+    """
+    p = path.rstrip("/")
+    if p.endswith("*"):
+        p = p[:-1].rstrip("/")
+    return p or "/"
+
+
 def _wildcard_column_grant_loop(
     cat: str,
     schema: str,
@@ -2201,6 +2213,36 @@ def generate_full_script(
         )
         for s, tbl, pname in gd_conflict_keys:
             conflict_note += f"--   Affected: {pname} on {s}.{tbl}\n"
+        conflict_note += "\n"
+
+    # ── Detect nested HDFS/URL paths ─────────────────────────────────────────────────
+    # UC External Locations cannot overlap. If two Ranger paths have a parent→child
+    # relationship (e.g. /data/ and /data/restricted/) only one External Location can
+    # cover the parent; the child should become an External Volume instead.
+    hdfs_paths = list(dict.fromkeys(
+        item.get("path") or "/"
+        for item in eligible
+        if item.get("type") == "hdfs_grant"
+    ))
+    nested_pairs: list[tuple[str, str]] = []
+    norm_list = [(p, _norm_hdfs_path(p)) for p in hdfs_paths]
+    for i, (orig_a, norm_a) in enumerate(norm_list):
+        for orig_b, norm_b in norm_list[i + 1:]:
+            if norm_b.startswith(norm_a + "/"):
+                nested_pairs.append((orig_a, orig_b))
+            elif norm_a.startswith(norm_b + "/"):
+                nested_pairs.append((orig_b, orig_a))
+    if nested_pairs:
+        conflict_note += (
+            f"-- ⚠ NESTED PATH NOTICE: {len(nested_pairs)} HDFS/URL path pair(s) have a "
+            "parent→child relationship.\n"
+            "-- Unity Catalog External Locations cannot have overlapping paths.\n"
+            "-- Recommended fix: create ONE External Location at the parent path and use\n"
+            "-- External Volumes (inside a catalog schema) for the child sub-paths,\n"
+            "-- then grant READ VOLUME / WRITE VOLUME instead of READ FILES / WRITE FILES.\n"
+        )
+        for parent, child in nested_pairs:
+            conflict_note += f"--   Parent: {parent}  →  Child (use External Volume): {child}\n"
         conflict_note += "\n"
 
     # ── Deduplicate grants: skip identical (principal, table, privileges) seen before ──

@@ -12,138 +12,138 @@
 -- Type: HDFS_GRANT | Principal: user1
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /test/restricted/ (recursive)
--- ⚠ Ensure External Location `ext_loc_test_restricted` exists before executing
+-- ⚠ Ensure External Volume `main`.`ranger_hdfs_volumes`.`ext_loc_test_restricted` exists before executing
 --   (see _bootstrap_prerequisites.sql — STEP 5).
-GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_test_restricted` TO `user1@company.com`;
+GRANT READ VOLUME ON VOLUME `main`.`ranger_hdfs_volumes`.`ext_loc_test_restricted` TO `user1@company.com`;
 
 -- ═══════════════════════════════════════════════════════
 -- Policy: allow-read-to-user1,user3 /test/restricted/ (Ranger ID: 10)
 -- Type: HDFS_GRANT | Principal: user2
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /test/restricted/ (recursive)
--- ⚠ Ensure External Location `ext_loc_test_restricted` exists before executing
+-- ⚠ Ensure External Volume `main`.`ranger_hdfs_volumes`.`ext_loc_test_restricted` exists before executing
 --   (see _bootstrap_prerequisites.sql — STEP 5).
-GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_test_restricted` TO `user2@company.com`;
+GRANT READ VOLUME ON VOLUME `main`.`ranger_hdfs_volumes`.`ext_loc_test_restricted` TO `user2@company.com`;
 
 -- ═══════════════════════════════════════════════════════
 -- Policy: allow-read-to-user1,user3 /test/restricted/ (Ranger ID: 10)
 -- Type: HDFS_GRANT | Principal: user3
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /test/restricted/ (recursive)
--- ⚠ Ensure External Location `ext_loc_test_restricted` exists before executing
+-- ⚠ Ensure External Volume `main`.`ranger_hdfs_volumes`.`ext_loc_test_restricted` exists before executing
 --   (see _bootstrap_prerequisites.sql — STEP 5).
-GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_test_restricted` TO `user3@company.com`;
+GRANT READ VOLUME ON VOLUME `main`.`ranger_hdfs_volumes`.`ext_loc_test_restricted` TO `user3@company.com`;
 
 -- ═══════════════════════════════════════════════════════
 -- Policy: allow-read-to-public /test/forbidden/ (Ranger ID: 11)
 -- Type: HDFS_GRANT | Principal: public
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /test/forbidden/ (recursive)
--- ⚠ Ensure External Location `ext_loc_test_forbidden` exists before executing
+-- ⚠ Ensure External Volume `main`.`ranger_hdfs_volumes`.`ext_loc_test_forbidden` exists before executing
 --   (see _bootstrap_prerequisites.sql — STEP 5).
-GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_test_forbidden` TO `public`;
+GRANT READ VOLUME ON VOLUME `main`.`ranger_hdfs_volumes`.`ext_loc_test_forbidden` TO `public`;
 
 -- ═══════════════════════════════════════════════════════
 -- Policy: allow-read-to-user2 /test/restricted/ (Ranger ID: 20)
 -- Type: HDFS_GRANT | Principal: public
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /test/restricted/ (recursive)
--- ⚠ Ensure External Location `ext_loc_test_restricted` exists before executing
+-- ⚠ Ensure External Volume `main`.`ranger_hdfs_volumes`.`ext_loc_test_restricted` exists before executing
 --   (see _bootstrap_prerequisites.sql — STEP 5).
-GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_test_restricted` TO `public`;
-GRANT WRITE FILES ON EXTERNAL LOCATION `ext_loc_test_restricted` TO `public`;
+GRANT READ VOLUME ON VOLUME `main`.`ranger_hdfs_volumes`.`ext_loc_test_restricted` TO `public`;
+GRANT WRITE VOLUME ON VOLUME `main`.`ranger_hdfs_volumes`.`ext_loc_test_restricted` TO `public`;
 
 -- ═══════════════════════════════════════════════════════
 -- Policy: allow-read-to-user2 /test/restricted/ (Ranger ID: 20)
 -- Type: HDFS_GRANT | Principal: user2
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /test/restricted/ (recursive)
--- ⚠ Ensure External Location `ext_loc_test_restricted` exists before executing
+-- ⚠ Ensure External Volume `main`.`ranger_hdfs_volumes`.`ext_loc_test_restricted` exists before executing
 --   (see _bootstrap_prerequisites.sql — STEP 5).
-GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_test_restricted` TO `user2@company.com`;
-GRANT WRITE FILES ON EXTERNAL LOCATION `ext_loc_test_restricted` TO `user2@company.com`;
+GRANT READ VOLUME ON VOLUME `main`.`ranger_hdfs_volumes`.`ext_loc_test_restricted` TO `user2@company.com`;
+GRANT WRITE VOLUME ON VOLUME `main`.`ranger_hdfs_volumes`.`ext_loc_test_restricted` TO `user2@company.com`;
 
 -- ═══════════════════════════════════════════════════════
 -- Policy: allow-read-to-user2 /test/restricted/ (Ranger ID: 20)
 -- Type: HDFS_GRANT | Principal: non-user1
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /test/restricted/ (recursive)
--- ⚠ Ensure External Location `ext_loc_test_restricted` exists before executing
+-- ⚠ Ensure External Volume `main`.`ranger_hdfs_volumes`.`ext_loc_test_restricted` exists before executing
 --   (see _bootstrap_prerequisites.sql — STEP 5).
-GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_test_restricted` TO `non-user1@company.com`;
-GRANT WRITE FILES ON EXTERNAL LOCATION `ext_loc_test_restricted` TO `non-user1@company.com`;
+GRANT READ VOLUME ON VOLUME `main`.`ranger_hdfs_volumes`.`ext_loc_test_restricted` TO `non-user1@company.com`;
+GRANT WRITE VOLUME ON VOLUME `main`.`ranger_hdfs_volumes`.`ext_loc_test_restricted` TO `non-user1@company.com`;
 
 -- ═══════════════════════════════════════════════════════
 -- Policy: allow-read-to-user2 /test/restricted/ (Ranger ID: 20)
 -- Type: HDFS_GRANT | Principal: non-user2
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /test/restricted/ (recursive)
--- ⚠ Ensure External Location `ext_loc_test_restricted` exists before executing
+-- ⚠ Ensure External Volume `main`.`ranger_hdfs_volumes`.`ext_loc_test_restricted` exists before executing
 --   (see _bootstrap_prerequisites.sql — STEP 5).
-GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_test_restricted` TO `non-user2@company.com`;
-GRANT WRITE FILES ON EXTERNAL LOCATION `ext_loc_test_restricted` TO `non-user2@company.com`;
+GRANT READ VOLUME ON VOLUME `main`.`ranger_hdfs_volumes`.`ext_loc_test_restricted` TO `non-user2@company.com`;
+GRANT WRITE VOLUME ON VOLUME `main`.`ranger_hdfs_volumes`.`ext_loc_test_restricted` TO `non-user2@company.com`;
 
 -- ═══════════════════════════════════════════════════════
 -- Policy: allow-read-to-user2 /test/restricted/ (Ranger ID: 20)
 -- Type: HDFS_GRANT | Principal: non-user3
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /test/restricted/ (recursive)
--- ⚠ Ensure External Location `ext_loc_test_restricted` exists before executing
+-- ⚠ Ensure External Volume `main`.`ranger_hdfs_volumes`.`ext_loc_test_restricted` exists before executing
 --   (see _bootstrap_prerequisites.sql — STEP 5).
-GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_test_restricted` TO `non-user3@company.com`;
-GRANT WRITE FILES ON EXTERNAL LOCATION `ext_loc_test_restricted` TO `non-user3@company.com`;
+GRANT READ VOLUME ON VOLUME `main`.`ranger_hdfs_volumes`.`ext_loc_test_restricted` TO `non-user3@company.com`;
+GRANT WRITE VOLUME ON VOLUME `main`.`ranger_hdfs_volumes`.`ext_loc_test_restricted` TO `non-user3@company.com`;
 
 -- ═══════════════════════════════════════════════════════
 -- Policy: deny-read-to-user3 /test/restricted/ (Ranger ID: 30)
 -- Type: HDFS_GRANT | Principal: public
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /test/restricted/ (recursive)
--- ⚠ Ensure External Location `ext_loc_test_restricted` exists before executing
+-- ⚠ Ensure External Volume `main`.`ranger_hdfs_volumes`.`ext_loc_test_restricted` exists before executing
 --   (see _bootstrap_prerequisites.sql — STEP 5).
-GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_test_restricted` TO `public`;
+GRANT READ VOLUME ON VOLUME `main`.`ranger_hdfs_volumes`.`ext_loc_test_restricted` TO `public`;
 
 -- ═══════════════════════════════════════════════════════
 -- Policy: deny-read-to-user3 /test/restricted/ (Ranger ID: 30)
 -- Type: HDFS_GRANT | Principal: non-user5
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /test/restricted/ (recursive)
--- ⚠ Ensure External Location `ext_loc_test_restricted` exists before executing
+-- ⚠ Ensure External Volume `main`.`ranger_hdfs_volumes`.`ext_loc_test_restricted` exists before executing
 --   (see _bootstrap_prerequisites.sql — STEP 5).
-GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_test_restricted` TO `non-user5@company.com`;
+GRANT READ VOLUME ON VOLUME `main`.`ranger_hdfs_volumes`.`ext_loc_test_restricted` TO `non-user5@company.com`;
 
 -- ═══════════════════════════════════════════════════════
 -- Policy: deny-read-to-user3 /test/restricted/ (Ranger ID: 30)
 -- Type: HDFS_GRANT | Principal: non-user6
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /test/restricted/ (recursive)
--- ⚠ Ensure External Location `ext_loc_test_restricted` exists before executing
+-- ⚠ Ensure External Volume `main`.`ranger_hdfs_volumes`.`ext_loc_test_restricted` exists before executing
 --   (see _bootstrap_prerequisites.sql — STEP 5).
-GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_test_restricted` TO `non-user6@company.com`;
+GRANT READ VOLUME ON VOLUME `main`.`ranger_hdfs_volumes`.`ext_loc_test_restricted` TO `non-user6@company.com`;
 
 -- ═══════════════════════════════════════════════════════
 -- Policy: deny-read-to-user3 /test/restricted/ (Ranger ID: 30)
 -- Type: HDFS_GRANT | Principal: non-user7
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /test/restricted/ (recursive)
--- ⚠ Ensure External Location `ext_loc_test_restricted` exists before executing
+-- ⚠ Ensure External Volume `main`.`ranger_hdfs_volumes`.`ext_loc_test_restricted` exists before executing
 --   (see _bootstrap_prerequisites.sql — STEP 5).
-GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_test_restricted` TO `non-user7@company.com`;
+GRANT READ VOLUME ON VOLUME `main`.`ranger_hdfs_volumes`.`ext_loc_test_restricted` TO `non-user7@company.com`;
 
 -- ═══════════════════════════════════════════════════════
 -- Policy: deny-read-to-user3 /test/restricted/ (Ranger ID: 30)
 -- Type: HDFS_GRANT | Principal: non-user8
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /test/restricted/ (recursive)
--- ⚠ Ensure External Location `ext_loc_test_restricted` exists before executing
+-- ⚠ Ensure External Volume `main`.`ranger_hdfs_volumes`.`ext_loc_test_restricted` exists before executing
 --   (see _bootstrap_prerequisites.sql — STEP 5).
-GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_test_restricted` TO `non-user8@company.com`;
+GRANT READ VOLUME ON VOLUME `main`.`ranger_hdfs_volumes`.`ext_loc_test_restricted` TO `non-user8@company.com`;
 
 -- ═══════════════════════════════════════════════════════
 -- Policy: audit-all-access under /finance/restricted/ (Ranger ID: 1)
 -- Type: HDFS_GRANT | Principal: public
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /finance/restricted/ (recursive)
--- ⚠ Ensure External Location `ext_loc_finance_restricted` exists before executing
+-- ⚠ Ensure External Volume `main`.`ranger_hdfs_volumes`.`ext_loc_finance_restricted` exists before executing
 --   (see _bootstrap_prerequisites.sql — STEP 5).
 
 -- ═══════════════════════════════════════════════════════
@@ -151,24 +151,24 @@ GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_test_restricted` TO `non-user8@co
 -- Type: HDFS_GRANT | Principal: public
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /public/* (recursive)
--- ⚠ Ensure External Location `ext_loc_public__` exists before executing
+-- ⚠ Ensure External Volume `main`.`ranger_hdfs_volumes`.`ext_loc_public__` exists before executing
 --   (see _bootstrap_prerequisites.sql — STEP 5).
-GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_public__` TO `public`;
+GRANT READ VOLUME ON VOLUME `main`.`ranger_hdfs_volumes`.`ext_loc_public__` TO `public`;
 
 -- ═══════════════════════════════════════════════════════
 -- Policy: allow-read-to-finance under /finance/restricted (Ranger ID: 3)
 -- Type: HDFS_GRANT | Principal: finance
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /finance/restricted (recursive)
--- ⚠ Ensure External Location `ext_loc_finance_restricted` exists before executing
+-- ⚠ Ensure External Volume `main`.`ranger_hdfs_volumes`.`ext_loc_finance_restricted` exists before executing
 --   (see _bootstrap_prerequisites.sql — STEP 5).
-GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_finance_restricted` TO `finance`;
+GRANT READ VOLUME ON VOLUME `main`.`ranger_hdfs_volumes`.`ext_loc_finance_restricted` TO `finance`;
 
 -- ═══════════════════════════════════════════════════════
 -- Policy: invalid policy with a single backslash (Ranger ID: 4)
 -- Type: HDFS_GRANT | Principal: public
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: \ (recursive)
--- ⚠ Ensure External Location `ext_loc__` exists before executing
+-- ⚠ Ensure External Volume `main`.`ranger_hdfs_volumes`.`ext_loc__` exists before executing
 --   (see _bootstrap_prerequisites.sql — STEP 5).
-GRANT READ FILES ON EXTERNAL LOCATION `ext_loc__` TO `public`;
+GRANT READ VOLUME ON VOLUME `main`.`ranger_hdfs_volumes`.`ext_loc__` TO `public`;

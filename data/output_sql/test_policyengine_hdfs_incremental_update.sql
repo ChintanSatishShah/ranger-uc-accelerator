@@ -12,17 +12,17 @@
 -- Type: HDFS_GRANT | Principal: user1
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /a/b*
--- ⚠ Ensure External Location `ext_loc_a_b_` exists before executing
+-- ⚠ Ensure External Volume `main`.`ranger_hdfs_volumes`.`ext_loc_a_b_` exists before executing
 --   (see _bootstrap_prerequisites.sql — STEP 5).
-GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_a_b_` TO `user1@company.com`;
-GRANT WRITE FILES ON EXTERNAL LOCATION `ext_loc_a_b_` TO `user1@company.com`;
+GRANT READ VOLUME ON VOLUME `main`.`ranger_hdfs_volumes`.`ext_loc_a_b_` TO `user1@company.com`;
+GRANT WRITE VOLUME ON VOLUME `main`.`ranger_hdfs_volumes`.`ext_loc_a_b_` TO `user1@company.com`;
 
 -- ═══════════════════════════════════════════════════════
 -- Policy: allow-read-to-user1 /a/bc* (Ranger ID: 20)
 -- Type: HDFS_GRANT | Principal: user1
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /a/bc*
--- ⚠ Ensure External Location `ext_loc_a_bc_` exists before executing
+-- ⚠ Ensure External Volume `main`.`ranger_hdfs_volumes`.`ext_loc_a_bc_` exists before executing
 --   (see _bootstrap_prerequisites.sql — STEP 5).
-GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_a_bc_` TO `user1@company.com`;
-GRANT WRITE FILES ON EXTERNAL LOCATION `ext_loc_a_bc_` TO `user1@company.com`;
+GRANT READ VOLUME ON VOLUME `main`.`ranger_hdfs_volumes`.`ext_loc_a_bc_` TO `user1@company.com`;
+GRANT WRITE VOLUME ON VOLUME `main`.`ranger_hdfs_volumes`.`ext_loc_a_bc_` TO `user1@company.com`;

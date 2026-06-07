@@ -50,11 +50,14 @@ _SQL_BUILTINS: frozenset[str] = frozenset({
 })
 
 HDFS_ACCESS_MAP: dict[str, str] = {
-    "read": "READ FILES",
-    "write": "WRITE FILES",
-    "execute": "READ FILES",
-    "all": "ALL PRIVILEGES",
+    "read": "READ VOLUME",
+    "write": "WRITE VOLUME",
+    "execute": "READ VOLUME",
+    "all": "READ VOLUME",
 }
+
+# Schema that holds all HDFS/URL External Volumes in the target catalog.
+HDFS_VOLUMES_SCHEMA = "ranger_hdfs_volumes"
 
 HBASE_ACCESS_MAP: dict[str, str] = {
     "read": "SELECT",
@@ -1414,15 +1417,16 @@ def generate_uc_sql(
         path = item.get("path") or "/"
         is_recursive = item.get("isRecursive", False)
         safe_loc = _safe(path.strip("/")) or "root"
-        loc_name = f"ext_loc_{safe_loc}"
+        vol_name = f"ext_loc_{safe_loc}"
+        vol_ref = f"{_q(cat)}.`{HDFS_VOLUMES_SCHEMA}`.`{vol_name}`"
         recursive_note = " (recursive)" if is_recursive else ""
         lines.append(f"-- HDFS path: {path}{recursive_note}")
-        lines.append(f"-- ⚠ Ensure External Location `{loc_name}` exists before executing")
+        lines.append(f"-- ⚠ Ensure External Volume {vol_ref} exists before executing")
         lines.append(f"--   (see _bootstrap_prerequisites.sql — STEP 5).")
         for priv in item.get("privileges") or []:
-            lines.append(f"GRANT {priv} ON EXTERNAL LOCATION `{loc_name}` TO {principal};")
+            lines.append(f"GRANT {priv} ON VOLUME {vol_ref} TO {principal};")
         if item.get("delegateAdmin"):
-            lines.append("-- Note: delegateAdmin=true. Consider granting MANAGE on the External Location.")
+            lines.append("-- Note: delegateAdmin=true. Consider granting MANAGE on the Volume.")
 
     elif t == "hbase_grant":
         schema = item.get("schema") or "default"
@@ -2237,13 +2241,12 @@ def generate_full_script(
         conflict_note += (
             f"-- ⚠ NESTED PATH NOTICE: {len(nested_pairs)} HDFS/URL path pair(s) have a "
             "parent→child relationship.\n"
-            "-- Unity Catalog External Locations cannot have overlapping paths.\n"
-            "-- Recommended fix: create ONE External Location at the parent path and use\n"
-            "-- External Volumes (inside a catalog schema) for the child sub-paths,\n"
-            "-- then grant READ VOLUME / WRITE VOLUME instead of READ FILES / WRITE FILES.\n"
+            "-- All HDFS paths are mapped to External Volumes under a single parent\n"
+            f"-- External Location. Volumes are in `{catalog_name}`.`{HDFS_VOLUMES_SCHEMA}`.\n"
+            "-- Sub-path volumes are GRANT-able independently — no overlapping location conflict.\n"
         )
         for parent, child in nested_pairs:
-            conflict_note += f"--   Parent: {parent}  →  Child (use External Volume): {child}\n"
+            conflict_note += f"--   Parent path: {parent}  →  Child volume: {child}\n"
         conflict_note += "\n"
 
     # ── Deduplicate grants: skip identical (principal, table, privileges) seen before ──

@@ -12,7 +12,7 @@
 -- Type: HDFS_GRANT | Principal: hrt_21
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /test?
--- ⚠ Ensure External Location `ext_loc_test_` exists before executing
+-- ⚠ Ensure External Volume `main`.`ranger_hdfs_volumes`.`ext_loc_test_` exists before executing
 --   (see _bootstrap_prerequisites.sql — STEP 5).
-GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_test_` TO `hrt_21@company.com`;
-GRANT WRITE FILES ON EXTERNAL LOCATION `ext_loc_test_` TO `hrt_21@company.com`;
+GRANT READ VOLUME ON VOLUME `main`.`ranger_hdfs_volumes`.`ext_loc_test_` TO `hrt_21@company.com`;
+GRANT WRITE VOLUME ON VOLUME `main`.`ranger_hdfs_volumes`.`ext_loc_test_` TO `hrt_21@company.com`;

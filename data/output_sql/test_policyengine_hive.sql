@@ -12,20 +12,20 @@
 -- Type: HDFS_GRANT | Principal: public
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: s3a://qe-s3-bucket-mst/test_abcd/abcd (recursive)
--- ⚠ Ensure External Location `ext_loc_s3a___qe_s3_bucket_mst_test_abcd_abcd` exists before executing
+-- ⚠ Ensure External Volume `main`.`ranger_hdfs_volumes`.`ext_loc_s3a___qe_s3_bucket_mst_test_abcd_abcd` exists before executing
 --   (see _bootstrap_prerequisites.sql — STEP 5).
-GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_s3a___qe_s3_bucket_mst_test_abcd_abcd` TO `public`;
-GRANT WRITE FILES ON EXTERNAL LOCATION `ext_loc_s3a___qe_s3_bucket_mst_test_abcd_abcd` TO `public`;
+GRANT READ VOLUME ON VOLUME `main`.`ranger_hdfs_volumes`.`ext_loc_s3a___qe_s3_bucket_mst_test_abcd_abcd` TO `public`;
+GRANT WRITE VOLUME ON VOLUME `main`.`ranger_hdfs_volumes`.`ext_loc_s3a___qe_s3_bucket_mst_test_abcd_abcd` TO `public`;
 
 -- ═══════════════════════════════════════════════════════
 -- Policy: url=s3a://qe-s3-bucket-mst/test_abcd/abcd; s3a://qe-s3-bucket-mst/demo/*: URL-access-policy (Ranger ID: 200)
 -- Type: HDFS_GRANT | Principal: public
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: s3a://qe-s3-bucket-mst/demo (recursive)
--- ⚠ Ensure External Location `ext_loc_s3a___qe_s3_bucket_mst_demo` exists before executing
+-- ⚠ Ensure External Volume `main`.`ranger_hdfs_volumes`.`ext_loc_s3a___qe_s3_bucket_mst_demo` exists before executing
 --   (see _bootstrap_prerequisites.sql — STEP 5).
-GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_s3a___qe_s3_bucket_mst_demo` TO `public`;
-GRANT WRITE FILES ON EXTERNAL LOCATION `ext_loc_s3a___qe_s3_bucket_mst_demo` TO `public`;
+GRANT READ VOLUME ON VOLUME `main`.`ranger_hdfs_volumes`.`ext_loc_s3a___qe_s3_bucket_mst_demo` TO `public`;
+GRANT WRITE VOLUME ON VOLUME `main`.`ranger_hdfs_volumes`.`ext_loc_s3a___qe_s3_bucket_mst_demo` TO `public`;
 
 -- ═══════════════════════════════════════════════════════
 -- Policy: db=default: audit-all-access (Ranger ID: 1)
@@ -757,10 +757,10 @@ END;
 -- Type: HDFS_GRANT | Principal: user1
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: http://qe-s3-bucket-mst/test_abcd/abcd/ (recursive)
--- ⚠ Ensure External Location `ext_loc_http___qe_s3_bucket_mst_test_abcd_abcd` exists before executing
+-- ⚠ Ensure External Volume `main`.`ranger_hdfs_volumes`.`ext_loc_http___qe_s3_bucket_mst_test_abcd_abcd` exists before executing
 --   (see _bootstrap_prerequisites.sql — STEP 5).
-GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_http___qe_s3_bucket_mst_test_abcd_abcd` TO `user1@company.com`;
-GRANT WRITE FILES ON EXTERNAL LOCATION `ext_loc_http___qe_s3_bucket_mst_test_abcd_abcd` TO `user1@company.com`;
+GRANT READ VOLUME ON VOLUME `main`.`ranger_hdfs_volumes`.`ext_loc_http___qe_s3_bucket_mst_test_abcd_abcd` TO `user1@company.com`;
+GRANT WRITE VOLUME ON VOLUME `main`.`ranger_hdfs_volumes`.`ext_loc_http___qe_s3_bucket_mst_test_abcd_abcd` TO `user1@company.com`;
 
 -- ═══════════════════════════════════════════════════════
 -- Policy: db=org; table=employee; column=* (Ranger ID: 1001)

@@ -14,7 +14,7 @@
 -- ╚══════════════════════════════════════════════════════════════════════╝
 
 -- Summary: 1 catalog · 37 schemas · 57 tables
---          29 external locations (7 sub-path advisories) · 4 UDF references
+--          1 external location · 36 external volumes
 --          58 human users · 8 service accounts
 --          0 Kerberos principals · 107 groups · 4 roles
 
@@ -295,216 +295,166 @@ CREATE SCHEMA IF NOT EXISTS `main`.`user_`;
 CREATE SCHEMA IF NOT EXISTS `main`.`vendor_integration_db`;
 
 -- ════════════════════════════════════════════════════════════════════
--- STEP 5 — EXTERNAL LOCATIONS  (29 creatable · 7 sub-path advisories)
+-- STEP 5 — EXTERNAL LOCATION + VOLUMES  (1 location · 36 volumes)
 --    Requires: account admin + Storage Credential from Step 2.
---    Bucket: ranger-uc-demo (demo). Replace with your actual bucket.
---
---    ⚠ 7 Ranger path(s) are sub-paths of another location.
---    UC does not allow overlapping External Locations — these are
---    commented out below. Use an External Volume inside the parent
---    location for fine-grained access control on sub-paths.
+--    One parent External Location covers all HDFS paths.
+--    Each Ranger HDFS path becomes an External Volume — sub-paths
+--    are independently grantable with READ VOLUME / WRITE VOLUME.
+--    Replace bucket/credential with your actual values.
 -- ════════════════════════════════════════════════════════════════════
 
--- Ranger path: \
-CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc__`
-  URL 's3://ranger-uc-demo/ext_loc__/'
+-- ── Parent External Location (covers all volumes) ──────────────────
+CREATE EXTERNAL LOCATION IF NOT EXISTS `ranger_uc_root`
+  URL 's3://ranger-uc-demo/'
   WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
+
+-- ── Schema for volumes ──────────────────────────────────────────────
+CREATE SCHEMA IF NOT EXISTS `main`.`ranger_hdfs_volumes`;
+
+-- ── External Volumes (36 total) ───────────────────────────────────
+-- Ranger path: \
+CREATE EXTERNAL VOLUME IF NOT EXISTS `main`.`ranger_hdfs_volumes`.`ext_loc__`
+  LOCATION 's3://ranger-uc-demo/ext_loc__/';
 
 -- Ranger path: /a/b*
-CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_a_b_`
-  URL 's3://ranger-uc-demo/ext_loc_a_b_/'
-  WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
+CREATE EXTERNAL VOLUME IF NOT EXISTS `main`.`ranger_hdfs_volumes`.`ext_loc_a_b_`
+  LOCATION 's3://ranger-uc-demo/ext_loc_a_b_/';
 
 -- Ranger path: /a/bc*
-CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_a_bc_`
-  URL 's3://ranger-uc-demo/ext_loc_a_bc_/'
-  WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
+CREATE EXTERNAL VOLUME IF NOT EXISTS `main`.`ranger_hdfs_volumes`.`ext_loc_a_bc_`
+  LOCATION 's3://ranger-uc-demo/ext_loc_a_bc_/';
 
 -- Ranger path: /finance
-CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_finance`
-  URL 's3://ranger-uc-demo/ext_loc_finance/'
-  WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
+CREATE EXTERNAL VOLUME IF NOT EXISTS `main`.`ranger_hdfs_volumes`.`ext_loc_finance`
+  LOCATION 's3://ranger-uc-demo/ext_loc_finance/';
 
--- ⛔ SKIPPED — Ranger path: /finance/limited
---    `ext_loc_finance_limited` is a sub-path of `ext_loc_finance`.
---    UC External Locations cannot overlap. Use an External Volume
---    under `ext_loc_finance` for access control on this sub-path.
--- CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_finance_limited`
---   URL 's3://ranger-uc-demo/ext_loc_finance_limited/'
---   WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
+-- Ranger path: /finance/limited
+CREATE EXTERNAL VOLUME IF NOT EXISTS `main`.`ranger_hdfs_volumes`.`ext_loc_finance_limited`
+  LOCATION 's3://ranger-uc-demo/ext_loc_finance_limited/';
 
--- ⛔ SKIPPED — Ranger path: /finance/rest*ricted/
---    `ext_loc_finance_rest_ricted` is a sub-path of `ext_loc_finance`.
---    UC External Locations cannot overlap. Use an External Volume
---    under `ext_loc_finance` for access control on this sub-path.
--- CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_finance_rest_ricted`
---   URL 's3://ranger-uc-demo/ext_loc_finance_rest_ricted/'
---   WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
+-- Ranger path: /finance/rest*ricted/
+CREATE EXTERNAL VOLUME IF NOT EXISTS `main`.`ranger_hdfs_volumes`.`ext_loc_finance_rest_ricted`
+  LOCATION 's3://ranger-uc-demo/ext_loc_finance_rest_ricted/';
 
--- ⛔ SKIPPED — Ranger path: /finance/restricted/
---    `ext_loc_finance_restricted` is a sub-path of `ext_loc_finance`.
---    UC External Locations cannot overlap. Use an External Volume
---    under `ext_loc_finance` for access control on this sub-path.
--- CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_finance_restricted`
---   URL 's3://ranger-uc-demo/ext_loc_finance_restricted/'
---   WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
+-- Ranger path: /finance/restricted/
+CREATE EXTERNAL VOLUME IF NOT EXISTS `main`.`ranger_hdfs_volumes`.`ext_loc_finance_restricted`
+  LOCATION 's3://ranger-uc-demo/ext_loc_finance_restricted/';
 
 -- Ranger path: /home/
-CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_home`
-  URL 's3://ranger-uc-demo/ext_loc_home/'
-  WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
+CREATE EXTERNAL VOLUME IF NOT EXISTS `main`.`ranger_hdfs_volumes`.`ext_loc_home`
+  LOCATION 's3://ranger-uc-demo/ext_loc_home/';
 
--- ⛔ SKIPPED — Ranger path: /home/{USER}/
---    `ext_loc_home__USER_` is a sub-path of `ext_loc_home`.
---    UC External Locations cannot overlap. Use an External Volume
---    under `ext_loc_home` for access control on this sub-path.
--- CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_home__USER_`
---   URL 's3://ranger-uc-demo/ext_loc_home__USER_/'
---   WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
+-- Ranger path: /home/{USER}/
+CREATE EXTERNAL VOLUME IF NOT EXISTS `main`.`ranger_hdfs_volumes`.`ext_loc_home__USER_`
+  LOCATION 's3://ranger-uc-demo/ext_loc_home__USER_/';
 
 -- Ranger path: http://qe-s3-bucket-mst/test_abcd/abcd/
-CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_http___qe_s3_bucket_mst_test_abcd_abcd`
-  URL 's3://ranger-uc-demo/ext_loc_http___qe_s3_bucket_mst_test_abcd_abcd/'
-  WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
+CREATE EXTERNAL VOLUME IF NOT EXISTS `main`.`ranger_hdfs_volumes`.`ext_loc_http___qe_s3_bucket_mst_test_abcd_abcd`
+  LOCATION 's3://ranger-uc-demo/ext_loc_http___qe_s3_bucket_mst_test_abcd_abcd/';
 
 -- Ranger path: /mybu/admin
-CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_mybu_admin`
-  URL 's3://ranger-uc-demo/ext_loc_mybu_admin/'
-  WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
+CREATE EXTERNAL VOLUME IF NOT EXISTS `main`.`ranger_hdfs_volumes`.`ext_loc_mybu_admin`
+  LOCATION 's3://ranger-uc-demo/ext_loc_mybu_admin/';
 
 -- Ranger path: /mybu/analyst
-CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_mybu_analyst`
-  URL 's3://ranger-uc-demo/ext_loc_mybu_analyst/'
-  WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
+CREATE EXTERNAL VOLUME IF NOT EXISTS `main`.`ranger_hdfs_volumes`.`ext_loc_mybu_analyst`
+  LOCATION 's3://ranger-uc-demo/ext_loc_mybu_analyst/';
 
 -- Ranger path: /override-resource
-CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_override_resource`
-  URL 's3://ranger-uc-demo/ext_loc_override_resource/'
-  WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
+CREATE EXTERNAL VOLUME IF NOT EXISTS `main`.`ranger_hdfs_volumes`.`ext_loc_override_resource`
+  LOCATION 's3://ranger-uc-demo/ext_loc_override_resource/';
 
 -- Ranger path: /public
-CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_public`
-  URL 's3://ranger-uc-demo/ext_loc_public/'
-  WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
+CREATE EXTERNAL VOLUME IF NOT EXISTS `main`.`ranger_hdfs_volumes`.`ext_loc_public`
+  LOCATION 's3://ranger-uc-demo/ext_loc_public/';
 
 -- Ranger path: /public/*
-CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_public__`
-  URL 's3://ranger-uc-demo/ext_loc_public__/'
-  WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
+CREATE EXTERNAL VOLUME IF NOT EXISTS `main`.`ranger_hdfs_volumes`.`ext_loc_public__`
+  LOCATION 's3://ranger-uc-demo/ext_loc_public__/';
 
--- ⛔ SKIPPED — Ranger path: /public/finance
---    `ext_loc_public_finance` is a sub-path of `ext_loc_public`.
---    UC External Locations cannot overlap. Use an External Volume
---    under `ext_loc_public` for access control on this sub-path.
--- CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_public_finance`
---   URL 's3://ranger-uc-demo/ext_loc_public_finance/'
---   WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
+-- Ranger path: /public/finance
+CREATE EXTERNAL VOLUME IF NOT EXISTS `main`.`ranger_hdfs_volumes`.`ext_loc_public_finance`
+  LOCATION 's3://ranger-uc-demo/ext_loc_public_finance/';
 
 -- Ranger path: /ranger/audit/kms
-CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_ranger_audit_kms`
-  URL 's3://ranger-uc-demo/ext_loc_ranger_audit_kms/'
-  WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
+CREATE EXTERNAL VOLUME IF NOT EXISTS `main`.`ranger_hdfs_volumes`.`ext_loc_ranger_audit_kms`
+  LOCATION 's3://ranger-uc-demo/ext_loc_ranger_audit_kms/';
 
 -- Ranger path: /resource
-CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_resource`
-  URL 's3://ranger-uc-demo/ext_loc_resource/'
-  WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
+CREATE EXTERNAL VOLUME IF NOT EXISTS `main`.`ranger_hdfs_volumes`.`ext_loc_resource`
+  LOCATION 's3://ranger-uc-demo/ext_loc_resource/';
 
 -- Ranger path: /
-CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_root`
-  URL 's3://ranger-uc-demo/ext_loc_root/'
-  WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
+CREATE EXTERNAL VOLUME IF NOT EXISTS `main`.`ranger_hdfs_volumes`.`ext_loc_root`
+  LOCATION 's3://ranger-uc-demo/ext_loc_root/';
 
 -- Ranger path: s3a://qe-s3-bucket-mst/demo
-CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_s3a___qe_s3_bucket_mst_demo`
-  URL 's3://ranger-uc-demo/ext_loc_s3a___qe_s3_bucket_mst_demo/'
-  WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
+CREATE EXTERNAL VOLUME IF NOT EXISTS `main`.`ranger_hdfs_volumes`.`ext_loc_s3a___qe_s3_bucket_mst_demo`
+  LOCATION 's3://ranger-uc-demo/ext_loc_s3a___qe_s3_bucket_mst_demo/';
 
 -- Ranger path: s3a://qe-s3-bucket-mst/test_abcd/abcd
-CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_s3a___qe_s3_bucket_mst_test_abcd_abcd`
-  URL 's3://ranger-uc-demo/ext_loc_s3a___qe_s3_bucket_mst_test_abcd_abcd/'
-  WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
+CREATE EXTERNAL VOLUME IF NOT EXISTS `main`.`ranger_hdfs_volumes`.`ext_loc_s3a___qe_s3_bucket_mst_test_abcd_abcd`
+  LOCATION 's3://ranger-uc-demo/ext_loc_s3a___qe_s3_bucket_mst_test_abcd_abcd/';
 
 -- Ranger path: /test?
-CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_test_`
-  URL 's3://ranger-uc-demo/ext_loc_test_/'
-  WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
+CREATE EXTERNAL VOLUME IF NOT EXISTS `main`.`ranger_hdfs_volumes`.`ext_loc_test_`
+  LOCATION 's3://ranger-uc-demo/ext_loc_test_/';
 
 -- Ranger path: /test/forbidden/
-CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_test_forbidden`
-  URL 's3://ranger-uc-demo/ext_loc_test_forbidden/'
-  WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
+CREATE EXTERNAL VOLUME IF NOT EXISTS `main`.`ranger_hdfs_volumes`.`ext_loc_test_forbidden`
+  LOCATION 's3://ranger-uc-demo/ext_loc_test_forbidden/';
 
 -- Ranger path: /test/restricted/
-CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_test_restricted`
-  URL 's3://ranger-uc-demo/ext_loc_test_restricted/'
-  WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
+CREATE EXTERNAL VOLUME IF NOT EXISTS `main`.`ranger_hdfs_volumes`.`ext_loc_test_restricted`
+  LOCATION 's3://ranger-uc-demo/ext_loc_test_restricted/';
 
 -- Ranger path: /tmp/{USER}
-CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_tmp__USER_`
-  URL 's3://ranger-uc-demo/ext_loc_tmp__USER_/'
-  WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
+CREATE EXTERNAL VOLUME IF NOT EXISTS `main`.`ranger_hdfs_volumes`.`ext_loc_tmp__USER_`
+  LOCATION 's3://ranger-uc-demo/ext_loc_tmp__USER_/';
 
--- ⛔ SKIPPED — Ranger path: /tmp/{USER}/subdir
---    `ext_loc_tmp__USER__subdir` is a sub-path of `ext_loc_tmp__USER_`.
---    UC External Locations cannot overlap. Use an External Volume
---    under `ext_loc_tmp__USER_` for access control on this sub-path.
--- CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_tmp__USER__subdir`
---   URL 's3://ranger-uc-demo/ext_loc_tmp__USER__subdir/'
---   WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
+-- Ranger path: /tmp/{USER}/subdir
+CREATE EXTERNAL VOLUME IF NOT EXISTS `main`.`ranger_hdfs_volumes`.`ext_loc_tmp__USER__subdir`
+  LOCATION 's3://ranger-uc-demo/ext_loc_tmp__USER__subdir/';
 
 -- Ranger path: /tmp/a/b
-CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_tmp_a_b`
-  URL 's3://ranger-uc-demo/ext_loc_tmp_a_b/'
-  WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
+CREATE EXTERNAL VOLUME IF NOT EXISTS `main`.`ranger_hdfs_volumes`.`ext_loc_tmp_a_b`
+  LOCATION 's3://ranger-uc-demo/ext_loc_tmp_a_b/';
 
 -- Ranger path: /tmp/ab
-CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_tmp_ab`
-  URL 's3://ranger-uc-demo/ext_loc_tmp_ab/'
-  WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
+CREATE EXTERNAL VOLUME IF NOT EXISTS `main`.`ranger_hdfs_volumes`.`ext_loc_tmp_ab`
+  LOCATION 's3://ranger-uc-demo/ext_loc_tmp_ab/';
 
 -- Ranger path: /tmp/ac/d/e/f
-CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_tmp_ac_d_e_f`
-  URL 's3://ranger-uc-demo/ext_loc_tmp_ac_d_e_f/'
-  WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
+CREATE EXTERNAL VOLUME IF NOT EXISTS `main`.`ranger_hdfs_volumes`.`ext_loc_tmp_ac_d_e_f`
+  LOCATION 's3://ranger-uc-demo/ext_loc_tmp_ac_d_e_f/';
 
 -- Ranger path: /tmp.txt
-CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_tmp_txt`
-  URL 's3://ranger-uc-demo/ext_loc_tmp_txt/'
-  WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
+CREATE EXTERNAL VOLUME IF NOT EXISTS `main`.`ranger_hdfs_volumes`.`ext_loc_tmp_txt`
+  LOCATION 's3://ranger-uc-demo/ext_loc_tmp_txt/';
 
 -- Ranger path: /tmpa/b
-CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_tmpa_b`
-  URL 's3://ranger-uc-demo/ext_loc_tmpa_b/'
-  WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
+CREATE EXTERNAL VOLUME IF NOT EXISTS `main`.`ranger_hdfs_volumes`.`ext_loc_tmpa_b`
+  LOCATION 's3://ranger-uc-demo/ext_loc_tmpa_b/';
 
 -- Ranger path: /tmpfile
-CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_tmpfile`
-  URL 's3://ranger-uc-demo/ext_loc_tmpfile/'
-  WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
+CREATE EXTERNAL VOLUME IF NOT EXISTS `main`.`ranger_hdfs_volumes`.`ext_loc_tmpfile`
+  LOCATION 's3://ranger-uc-demo/ext_loc_tmpfile/';
 
 -- Ranger path: /unaudited-resource
-CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_unaudited_resource`
-  URL 's3://ranger-uc-demo/ext_loc_unaudited_resource/'
-  WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
+CREATE EXTERNAL VOLUME IF NOT EXISTS `main`.`ranger_hdfs_volumes`.`ext_loc_unaudited_resource`
+  LOCATION 's3://ranger-uc-demo/ext_loc_unaudited_resource/';
 
 -- Ranger path: /user/{USER}/*
-CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_user__USER___`
-  URL 's3://ranger-uc-demo/ext_loc_user__USER___/'
-  WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
+CREATE EXTERNAL VOLUME IF NOT EXISTS `main`.`ranger_hdfs_volumes`.`ext_loc_user__USER___`
+  LOCATION 's3://ranger-uc-demo/ext_loc_user__USER___/';
 
 -- Ranger path: /user/dir
-CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_user_dir`
-  URL 's3://ranger-uc-demo/ext_loc_user_dir/'
-  WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
+CREATE EXTERNAL VOLUME IF NOT EXISTS `main`.`ranger_hdfs_volumes`.`ext_loc_user_dir`
+  LOCATION 's3://ranger-uc-demo/ext_loc_user_dir/';
 
--- ⛔ SKIPPED — Ranger path: /user/dir/subdir
---    `ext_loc_user_dir_subdir` is a sub-path of `ext_loc_user_dir`.
---    UC External Locations cannot overlap. Use an External Volume
---    under `ext_loc_user_dir` for access control on this sub-path.
--- CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_user_dir_subdir`
---   URL 's3://ranger-uc-demo/ext_loc_user_dir_subdir/'
---   WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
+-- Ranger path: /user/dir/subdir
+CREATE EXTERNAL VOLUME IF NOT EXISTS `main`.`ranger_hdfs_volumes`.`ext_loc_user_dir_subdir`
+  LOCATION 's3://ranger-uc-demo/ext_loc_user_dir_subdir/';
 
 -- ════════════════════════════════════════════════════════════════════
 -- STEP 6 — TABLES  (57 total)

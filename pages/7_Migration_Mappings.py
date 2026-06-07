@@ -88,7 +88,7 @@ st.dataframe(
             "TABLE `catalog.schema.table`",
             "SCHEMA `catalog.schema` — with USE CATALOG + USE SCHEMA prepended",
             "N/A — columns appear only in mask policies",
-            "EXTERNAL LOCATION `ext_loc_<path>` — derived from Ranger path; matches bootstrap",
+            "VOLUME `main`.`ranger_hdfs_volumes`.`ext_loc_<path>` — derived from Ranger path",
             "FUNCTION `catalog.schema.udf_name`",
         ],
     },
@@ -481,9 +481,9 @@ st.dataframe(
 st.markdown("**Example output:**")
 st.code(
     """-- HDFS path: /data/finance/ (recursive)
--- ⚠ Ensure External Location `ext_loc_data_finance` exists before executing
+-- ⚠ Ensure External Volume `main`.`ranger_hdfs_volumes`.`ext_loc_data_finance` exists before executing
 --   (see _bootstrap_prerequisites.sql — STEP 5).
-GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_data_finance` TO `analyst_group`;""",
+GRANT READ VOLUME ON VOLUME `main`.`ranger_hdfs_volumes`.`ext_loc_data_finance` TO `analyst_group`;""",
     language="sql",
 )
 
@@ -568,14 +568,14 @@ st.dataframe(
 st.markdown("**Example output:**")
 st.code(
     """-- HDFS path: s3a://my-bucket/data/finance/ (recursive)
--- ⚠ Ensure External Location `ext_loc_s3a___my_bucket_data_finance` exists before executing
+-- ⚠ Ensure External Volume `main`.`ranger_hdfs_volumes`.`ext_loc_s3a___my_bucket_data_finance` exists before executing
 --   (see _bootstrap_prerequisites.sql — STEP 5).
-GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_s3a___my_bucket_data_finance` TO `analyst_group`;""",
+GRANT READ VOLUME ON VOLUME `main`.`ranger_hdfs_volumes`.`ext_loc_s3a___my_bucket_data_finance` TO `analyst_group`;""",
     language="sql",
 )
 st.info(
     "URL policies reuse the `hdfs_grant` internal type and produce identical SQL to HDFS path policies. "
-    "Location names are derived from the Ranger path and match the bootstrap prerequisites exactly.",
+    "Volume names are derived from the Ranger path and match the bootstrap prerequisites exactly.",
     icon="ℹ️",
 )
 

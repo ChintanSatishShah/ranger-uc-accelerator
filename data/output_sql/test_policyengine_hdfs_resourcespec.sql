@@ -12,9 +12,9 @@
 -- Type: HDFS_GRANT | Principal: finance
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /finance/rest*ricted/ (recursive)
--- ⚠ Ensure External Location `ext_loc_finance_rest_ricted` exists before executing
+-- ⚠ Ensure External Volume `main`.`ranger_hdfs_volumes`.`ext_loc_finance_rest_ricted` exists before executing
 --   (see _bootstrap_prerequisites.sql — STEP 5).
-GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_finance_rest_ricted` TO `finance`;
+GRANT READ VOLUME ON VOLUME `main`.`ranger_hdfs_volumes`.`ext_loc_finance_rest_ricted` TO `finance`;
 
 -- ═══════════════════════════════════════════════════════
 -- Policy: allow-read-to-{USER} under /home/{USER}/ (Ranger ID: 2)

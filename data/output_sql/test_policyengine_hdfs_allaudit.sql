@@ -12,7 +12,7 @@
 -- Type: HDFS_GRANT | Principal: public
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /finance/restricted/ (recursive)
--- ⚠ Ensure External Location `ext_loc_finance_restricted` exists before executing
+-- ⚠ Ensure External Volume `main`.`ranger_hdfs_volumes`.`ext_loc_finance_restricted` exists before executing
 --   (see _bootstrap_prerequisites.sql — STEP 5).
 
 -- ═══════════════════════════════════════════════════════
@@ -20,15 +20,15 @@
 -- Type: HDFS_GRANT | Principal: public
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /public/* (recursive)
--- ⚠ Ensure External Location `ext_loc_public__` exists before executing
+-- ⚠ Ensure External Volume `main`.`ranger_hdfs_volumes`.`ext_loc_public__` exists before executing
 --   (see _bootstrap_prerequisites.sql — STEP 5).
-GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_public__` TO `public`;
+GRANT READ VOLUME ON VOLUME `main`.`ranger_hdfs_volumes`.`ext_loc_public__` TO `public`;
 
 -- ═══════════════════════════════════════════════════════
 -- Policy: allow-read-to-finance under /finance/restricted (Ranger ID: 3)
 -- Type: HDFS_GRANT | Principal: finance
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /finance/restricted (recursive)
--- ⚠ Ensure External Location `ext_loc_finance_restricted` exists before executing
+-- ⚠ Ensure External Volume `main`.`ranger_hdfs_volumes`.`ext_loc_finance_restricted` exists before executing
 --   (see _bootstrap_prerequisites.sql — STEP 5).
-GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_finance_restricted` TO `finance`;
+GRANT READ VOLUME ON VOLUME `main`.`ranger_hdfs_volumes`.`ext_loc_finance_restricted` TO `finance`;

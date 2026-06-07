@@ -12,28 +12,28 @@
 -- Type: HDFS_GRANT | Principal: hadoop
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /* (recursive)
--- ⚠ Ensure External Location `ext_loc__` exists before executing
+-- ⚠ Ensure External Volume `main`.`ranger_hdfs_volumes`.`ext_loc__` exists before executing
 --   (see _bootstrap_prerequisites.sql — STEP 5).
-GRANT READ FILES ON EXTERNAL LOCATION `ext_loc__` TO `hadoop@company.com`;
-GRANT WRITE FILES ON EXTERNAL LOCATION `ext_loc__` TO `hadoop@company.com`;
--- Note: delegateAdmin=true. Consider granting MANAGE on the External Location.
+GRANT READ VOLUME ON VOLUME `main`.`ranger_hdfs_volumes`.`ext_loc__` TO `hadoop@company.com`;
+GRANT WRITE VOLUME ON VOLUME `main`.`ranger_hdfs_volumes`.`ext_loc__` TO `hadoop@company.com`;
+-- Note: delegateAdmin=true. Consider granting MANAGE on the Volume.
 
 -- ═══════════════════════════════════════════════════════
 -- Policy: kms-audit-path (Ranger ID: 2)
 -- Type: HDFS_GRANT | Principal: keyadmin
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /ranger/audit/kms (recursive)
--- ⚠ Ensure External Location `ext_loc_ranger_audit_kms` exists before executing
+-- ⚠ Ensure External Volume `main`.`ranger_hdfs_volumes`.`ext_loc_ranger_audit_kms` exists before executing
 --   (see _bootstrap_prerequisites.sql — STEP 5).
-GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_ranger_audit_kms` TO `keyadmin@company.com`;
-GRANT WRITE FILES ON EXTERNAL LOCATION `ext_loc_ranger_audit_kms` TO `keyadmin@company.com`;
+GRANT READ VOLUME ON VOLUME `main`.`ranger_hdfs_volumes`.`ext_loc_ranger_audit_kms` TO `keyadmin@company.com`;
+GRANT WRITE VOLUME ON VOLUME `main`.`ranger_hdfs_volumes`.`ext_loc_ranger_audit_kms` TO `keyadmin@company.com`;
 
 -- ═══════════════════════════════════════════════════════
 -- Policy: Finance for default zone (Ranger ID: 40)
 -- Type: HDFS_GRANT | Principal: sales-admin
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /finance (recursive)
--- ⚠ Ensure External Location `ext_loc_finance` exists before executing
+-- ⚠ Ensure External Volume `main`.`ranger_hdfs_volumes`.`ext_loc_finance` exists before executing
 --   (see _bootstrap_prerequisites.sql — STEP 5).
-GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_finance` TO `sales-admin@company.com`;
-GRANT WRITE FILES ON EXTERNAL LOCATION `ext_loc_finance` TO `sales-admin@company.com`;
+GRANT READ VOLUME ON VOLUME `main`.`ranger_hdfs_volumes`.`ext_loc_finance` TO `sales-admin@company.com`;
+GRANT WRITE VOLUME ON VOLUME `main`.`ranger_hdfs_volumes`.`ext_loc_finance` TO `sales-admin@company.com`;

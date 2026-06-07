@@ -281,16 +281,17 @@ with st.expander("🟡 HDFS Policies → UC External Location grants", expanded=
     st.markdown(
         """
 HDFS path policies (`resources.path`) are translated to UC **External Location** grants:
-- `read` → `GRANT READ FILES ON EXTERNAL LOCATION ...`
-- `write` → `GRANT WRITE FILES ON EXTERNAL LOCATION ...`
-- `execute` → treated as `READ FILES` (closest equivalent)
+- `read` → `GRANT READ VOLUME ON VOLUME ...`
+- `write` → `GRANT WRITE VOLUME ON VOLUME ...`
+- `execute` → treated as `READ VOLUME` (closest equivalent)
 
-**External Location naming:** The tool derives the location name directly from the Ranger HDFS path
-(e.g. `/data/finance` → `ext_loc_data_finance`). The same name is used in both the GRANT statements
-and in `_bootstrap_prerequisites.sql` STEP 5, so no manual substitution is needed.
+**Volume naming:** Each Ranger HDFS path maps to an External Volume in `main.ranger_hdfs_volumes`
+(e.g. `/data/finance` → `` `main`.`ranger_hdfs_volumes`.`ext_loc_data_finance` ``).
+A single parent External Location (`ranger_uc_root`) covers all paths — sub-paths are independently
+grantable as separate volumes with no overlapping location conflict.
 
 **Before executing:**
-1. Create External Locations in UC Admin Console using the names and URL hints in `_bootstrap_prerequisites.sql` STEP 5
+1. Run `_bootstrap_prerequisites.sql` STEP 5 to create the parent External Location, the `ranger_hdfs_volumes` schema, and all External Volumes
 2. `isDenyAllElse` and `allowExceptions` in HDFS policies are not translated — review manually
         """
     )
@@ -305,9 +306,9 @@ policies) are translated to UC **External Location** grants using the same acces
 - `write` → `GRANT WRITE FILES ON EXTERNAL LOCATION ...`
 - `execute` → treated as `READ FILES`
 
-**External Location naming:** Same convention as HDFS — location names are derived from the URL path
-(e.g. `s3a://my-bucket/data/finance` → `ext_loc_s3a___my_bucket_data_finance`). Names are consistent
-between the GRANT statements and `_bootstrap_prerequisites.sql` STEP 5.
+**Same as HDFS** — URL paths become External Volumes in `main.ranger_hdfs_volumes`
+(e.g. `s3a://my-bucket/data/finance` → `` `main`.`ranger_hdfs_volumes`.`ext_loc_s3a___my_bucket_data_finance` ``).
+Grants use `READ VOLUME` / `WRITE VOLUME` and the volume name matches the bootstrap exactly.
         """
     )
 
@@ -412,7 +413,7 @@ st.markdown(
 3. **Verify principal names** exist in your Databricks account (SCIM sync complete, service principals created).
 4. **Review advisory comment blocks** — deny policies, tag placeholders, and HBase `*` wildcards generate comment-only advisories that require manual remediation before the gap can be closed.
 5. **Register UDFs in UC** before executing `GRANT EXECUTE ON FUNCTION` statements — the grant will fail if the function does not exist.
-6. **Create External Locations** listed in `_bootstrap_prerequisites.sql` STEP 5 — names are pre-derived from Ranger paths and match the GRANT statements exactly.
+6. **Run STEP 5 of `_bootstrap_prerequisites.sql`** — creates the parent External Location (`ranger_uc_root`), the `ranger_hdfs_volumes` schema, and all External Volumes. Volume names match the `GRANT READ/WRITE VOLUME` statements exactly.
 7. **Check for UDF dependencies** in row filter expressions — migrate any Hive UDFs to Databricks first.
 8. **Review Gap Analysis warnings** for `isDenyAllElse`, `validitySchedules`, and `conditions` — these require manual remediation.
 9. **`BEGIN...END FOR` loop sections** require Databricks Runtime 14.0+ or a SQL Warehouse with scripting enabled. These sections appear when Ranger had `table: *` (all-tables wildcard) and `SELECT` or `MODIFY` were among the privileges. Run them from a Databricks notebook or SQL Warehouse — the Databricks CLI's `sql execute` command also works.

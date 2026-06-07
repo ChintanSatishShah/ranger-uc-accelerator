@@ -12,9 +12,9 @@
 -- Type: HDFS_GRANT | Principal: finance
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /finance/rest*ricted/ (recursive)
--- ⚠ Create a UC External Location covering this path first,
---   then replace the placeholder below with the actual location name.
-GRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_finance_rest_ricted>` TO `finance`;
+-- ⚠ Ensure External Location `ext_loc_finance_rest_ricted` exists before executing
+--   (see _bootstrap_prerequisites.sql — STEP 5).
+GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_finance_rest_ricted` TO `finance`;
 
 -- ═══════════════════════════════════════════════════════
 -- Policy: allow-read-to-{USER} under /home/{USER}/ (Ranger ID: 2)

@@ -7,85 +7,93 @@
 -- ║  Policies: 13 of 13
 -- ╚═══════════════════════════════════════════════════════════╝
 
+-- ⚠ NESTED PATH NOTICE: 2 HDFS/URL path pair(s) have a parent→child relationship.
+-- Unity Catalog External Locations cannot have overlapping paths.
+-- Recommended fix: create ONE External Location at the parent path and use
+-- External Volumes (inside a catalog schema) for the child sub-paths,
+-- then grant READ VOLUME / WRITE VOLUME instead of READ FILES / WRITE FILES.
+--   Parent: /tmp/{USER}  →  Child (use External Volume): /tmp/{USER}/subdir
+--   Parent: /user/dir  →  Child (use External Volume): /user/dir/subdir
+
 -- ═══════════════════════════════════════════════════════
 -- Policy: allow-all-to-user1 / (Ranger ID: 10)
 -- Type: HDFS_GRANT | Principal: user1
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /
--- ⚠ Create a UC External Location covering this path first,
---   then replace the placeholder below with the actual location name.
-GRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_root>` TO `user1@company.com`;
-GRANT WRITE FILES ON EXTERNAL LOCATION `<ext_loc_root>` TO `user1@company.com`;
+-- ⚠ Ensure External Location `ext_loc_root` exists before executing
+--   (see _bootstrap_prerequisites.sql — STEP 5).
+GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_root` TO `user1@company.com`;
+GRANT WRITE FILES ON EXTERNAL LOCATION `ext_loc_root` TO `user1@company.com`;
 
 -- ═══════════════════════════════════════════════════════
 -- Policy: allow-all-to-user1 /home/ (Ranger ID: 20)
 -- Type: HDFS_GRANT | Principal: user1
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /home/
--- ⚠ Create a UC External Location covering this path first,
---   then replace the placeholder below with the actual location name.
-GRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_home>` TO `user1@company.com`;
-GRANT WRITE FILES ON EXTERNAL LOCATION `<ext_loc_home>` TO `user1@company.com`;
+-- ⚠ Ensure External Location `ext_loc_home` exists before executing
+--   (see _bootstrap_prerequisites.sql — STEP 5).
+GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_home` TO `user1@company.com`;
+GRANT WRITE FILES ON EXTERNAL LOCATION `ext_loc_home` TO `user1@company.com`;
 
 -- ═══════════════════════════════════════════════════════
 -- Policy: allow-all-to-user1 /tmpa/b (Ranger ID: 30)
 -- Type: HDFS_GRANT | Principal: user1
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /tmpa/b
--- ⚠ Create a UC External Location covering this path first,
---   then replace the placeholder below with the actual location name.
-GRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_tmpa_b>` TO `user1@company.com`;
-GRANT WRITE FILES ON EXTERNAL LOCATION `<ext_loc_tmpa_b>` TO `user1@company.com`;
+-- ⚠ Ensure External Location `ext_loc_tmpa_b` exists before executing
+--   (see _bootstrap_prerequisites.sql — STEP 5).
+GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_tmpa_b` TO `user1@company.com`;
+GRANT WRITE FILES ON EXTERNAL LOCATION `ext_loc_tmpa_b` TO `user1@company.com`;
 
 -- ═══════════════════════════════════════════════════════
 -- Policy: allow-all-to-user1 /tmp/ab (Ranger ID: 40)
 -- Type: HDFS_GRANT | Principal: user1
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /tmp/ab
--- ⚠ Create a UC External Location covering this path first,
---   then replace the placeholder below with the actual location name.
-GRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_tmp_ab>` TO `user1@company.com`;
-GRANT WRITE FILES ON EXTERNAL LOCATION `<ext_loc_tmp_ab>` TO `user1@company.com`;
+-- ⚠ Ensure External Location `ext_loc_tmp_ab` exists before executing
+--   (see _bootstrap_prerequisites.sql — STEP 5).
+GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_tmp_ab` TO `user1@company.com`;
+GRANT WRITE FILES ON EXTERNAL LOCATION `ext_loc_tmp_ab` TO `user1@company.com`;
 
 -- ═══════════════════════════════════════════════════════
 -- Policy: allow-all-to-user1 /tmp/a/b (Ranger ID: 50)
 -- Type: HDFS_GRANT | Principal: user1
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /tmp/a/b
--- ⚠ Create a UC External Location covering this path first,
---   then replace the placeholder below with the actual location name.
-GRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_tmp_a_b>` TO `user1@company.com`;
-GRANT WRITE FILES ON EXTERNAL LOCATION `<ext_loc_tmp_a_b>` TO `user1@company.com`;
+-- ⚠ Ensure External Location `ext_loc_tmp_a_b` exists before executing
+--   (see _bootstrap_prerequisites.sql — STEP 5).
+GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_tmp_a_b` TO `user1@company.com`;
+GRANT WRITE FILES ON EXTERNAL LOCATION `ext_loc_tmp_a_b` TO `user1@company.com`;
 
 -- ═══════════════════════════════════════════════════════
 -- Policy: allow-all-to-user1 /tmp/ac/d/e/f (Ranger ID: 60)
 -- Type: HDFS_GRANT | Principal: user1
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /tmp/ac/d/e/f
--- ⚠ Create a UC External Location covering this path first,
---   then replace the placeholder below with the actual location name.
-GRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_tmp_ac_d_e_f>` TO `user1@company.com`;
-GRANT WRITE FILES ON EXTERNAL LOCATION `<ext_loc_tmp_ac_d_e_f>` TO `user1@company.com`;
+-- ⚠ Ensure External Location `ext_loc_tmp_ac_d_e_f` exists before executing
+--   (see _bootstrap_prerequisites.sql — STEP 5).
+GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_tmp_ac_d_e_f` TO `user1@company.com`;
+GRANT WRITE FILES ON EXTERNAL LOCATION `ext_loc_tmp_ac_d_e_f` TO `user1@company.com`;
 
 -- ═══════════════════════════════════════════════════════
 -- Policy: allow-all-to-user1 /tmpfile (Ranger ID: 70)
 -- Type: HDFS_GRANT | Principal: user1
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /tmpfile
--- ⚠ Create a UC External Location covering this path first,
---   then replace the placeholder below with the actual location name.
-GRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_tmpfile>` TO `user1@company.com`;
-GRANT WRITE FILES ON EXTERNAL LOCATION `<ext_loc_tmpfile>` TO `user1@company.com`;
+-- ⚠ Ensure External Location `ext_loc_tmpfile` exists before executing
+--   (see _bootstrap_prerequisites.sql — STEP 5).
+GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_tmpfile` TO `user1@company.com`;
+GRANT WRITE FILES ON EXTERNAL LOCATION `ext_loc_tmpfile` TO `user1@company.com`;
 
 -- ═══════════════════════════════════════════════════════
 -- Policy: allow-all-to-user1 /tmp.txt (Ranger ID: 80)
 -- Type: HDFS_GRANT | Principal: user1
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /tmp.txt
--- ⚠ Create a UC External Location covering this path first,
---   then replace the placeholder below with the actual location name.
-GRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_tmp_txt>` TO `user1@company.com`;
-GRANT WRITE FILES ON EXTERNAL LOCATION `<ext_loc_tmp_txt>` TO `user1@company.com`;
+-- ⚠ Ensure External Location `ext_loc_tmp_txt` exists before executing
+--   (see _bootstrap_prerequisites.sql — STEP 5).
+GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_tmp_txt` TO `user1@company.com`;
+GRANT WRITE FILES ON EXTERNAL LOCATION `ext_loc_tmp_txt` TO `user1@company.com`;
 
 -- ═══════════════════════════════════════════════════════
 -- Policy: allow-read-to-/tmp/{USER}} (Ranger ID: 100)
@@ -124,19 +132,19 @@ GRANT WRITE FILES ON EXTERNAL LOCATION `<ext_loc_tmp_txt>` TO `user1@company.com
 -- Type: HDFS_GRANT | Principal: scott
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /user/dir (recursive)
--- ⚠ Create a UC External Location covering this path first,
---   then replace the placeholder below with the actual location name.
-GRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_user_dir>` TO `scott@company.com`;
+-- ⚠ Ensure External Location `ext_loc_user_dir` exists before executing
+--   (see _bootstrap_prerequisites.sql — STEP 5).
+GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_user_dir` TO `scott@company.com`;
 
 -- ═══════════════════════════════════════════════════════
 -- Policy: allow-all-to-/user/dir/subdir} (Ranger ID: 400)
 -- Type: HDFS_GRANT | Principal: scott
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /user/dir/subdir (recursive)
--- ⚠ Create a UC External Location covering this path first,
---   then replace the placeholder below with the actual location name.
-GRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_user_dir_subdir>` TO `scott@company.com`;
-GRANT WRITE FILES ON EXTERNAL LOCATION `<ext_loc_user_dir_subdir>` TO `scott@company.com`;
+-- ⚠ Ensure External Location `ext_loc_user_dir_subdir` exists before executing
+--   (see _bootstrap_prerequisites.sql — STEP 5).
+GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_user_dir_subdir` TO `scott@company.com`;
+GRANT WRITE FILES ON EXTERNAL LOCATION `ext_loc_user_dir_subdir` TO `scott@company.com`;
 
 -- ═══════════════════════════════════════════════════════
 -- Policy: allow-read-to-/user/{USER}/a*} (Ranger ID: 500)

@@ -12,26 +12,26 @@
 -- Type: HDFS_GRANT | Principal: superman
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /mybu/analyst (recursive)
--- ⚠ Create a UC External Location covering this path first,
---   then replace the placeholder below with the actual location name.
-GRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_mybu_analyst>` TO `superman@company.com`;
+-- ⚠ Ensure External Location `ext_loc_mybu_analyst` exists before executing
+--   (see _bootstrap_prerequisites.sql — STEP 5).
+GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_mybu_analyst` TO `superman@company.com`;
 
 -- ═══════════════════════════════════════════════════════
 -- Policy: write to mybu-admin (Ranger ID: 163)
 -- Type: HDFS_GRANT | Principal: superman
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /mybu/analyst (recursive)
--- ⚠ Create a UC External Location covering this path first,
---   then replace the placeholder below with the actual location name.
-GRANT WRITE FILES ON EXTERNAL LOCATION `<ext_loc_mybu_analyst>` TO `superman@company.com`;
-GRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_mybu_analyst>` TO `superman@company.com`;
+-- ⚠ Ensure External Location `ext_loc_mybu_analyst` exists before executing
+--   (see _bootstrap_prerequisites.sql — STEP 5).
+GRANT WRITE FILES ON EXTERNAL LOCATION `ext_loc_mybu_analyst` TO `superman@company.com`;
+GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_mybu_analyst` TO `superman@company.com`;
 
 -- ═══════════════════════════════════════════════════════
 -- Policy: write to mybu-admin (Ranger ID: 163)
 -- Type: HDFS_GRANT | Principal: superman
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /mybu/admin (recursive)
--- ⚠ Create a UC External Location covering this path first,
---   then replace the placeholder below with the actual location name.
-GRANT WRITE FILES ON EXTERNAL LOCATION `<ext_loc_mybu_admin>` TO `superman@company.com`;
-GRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_mybu_admin>` TO `superman@company.com`;
+-- ⚠ Ensure External Location `ext_loc_mybu_admin` exists before executing
+--   (see _bootstrap_prerequisites.sql — STEP 5).
+GRANT WRITE FILES ON EXTERNAL LOCATION `ext_loc_mybu_admin` TO `superman@company.com`;
+GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_mybu_admin` TO `superman@company.com`;

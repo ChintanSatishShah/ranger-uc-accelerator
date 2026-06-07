@@ -285,13 +285,13 @@ HDFS path policies (`resources.path`) are translated to UC **External Location**
 - `write` → `GRANT WRITE FILES ON EXTERNAL LOCATION ...`
 - `execute` → treated as `READ FILES` (closest equivalent)
 
-**Limitation:** The tool does not know your External Location names — it generates a placeholder
-`<ext_loc_<path>>` that you must replace with the actual name.
+**External Location naming:** The tool derives the location name directly from the Ranger HDFS path
+(e.g. `/data/finance` → `ext_loc_data_finance`). The same name is used in both the GRANT statements
+and in `_bootstrap_prerequisites.sql` STEP 5, so no manual substitution is needed.
 
 **Before executing:**
-1. Create External Locations in UC Admin Console for all HDFS paths in the export
-2. Replace each `<ext_loc_...>` placeholder in the generated SQL with the real location name
-3. `isDenyAllElse` and `allowExceptions` in HDFS policies are not translated — review manually
+1. Create External Locations in UC Admin Console using the names and URL hints in `_bootstrap_prerequisites.sql` STEP 5
+2. `isDenyAllElse` and `allowExceptions` in HDFS policies are not translated — review manually
         """
     )
 
@@ -305,8 +305,9 @@ policies) are translated to UC **External Location** grants using the same acces
 - `write` → `GRANT WRITE FILES ON EXTERNAL LOCATION ...`
 - `execute` → treated as `READ FILES`
 
-**Limitation:** Same as HDFS — External Location names are not known. Each `<ext_loc_...>` placeholder
-must be replaced with the actual name after creating the External Location in UC Admin Console.
+**External Location naming:** Same convention as HDFS — location names are derived from the URL path
+(e.g. `s3a://my-bucket/data/finance` → `ext_loc_s3a___my_bucket_data_finance`). Names are consistent
+between the GRANT statements and `_bootstrap_prerequisites.sql` STEP 5.
         """
     )
 
@@ -411,7 +412,7 @@ st.markdown(
 3. **Verify principal names** exist in your Databricks account (SCIM sync complete, service principals created).
 4. **Review advisory comment blocks** — deny policies, tag placeholders, and HBase `*` wildcards generate comment-only advisories that require manual remediation before the gap can be closed.
 5. **Register UDFs in UC** before executing `GRANT EXECUTE ON FUNCTION` statements — the grant will fail if the function does not exist.
-6. **Replace External Location placeholders** (`<ext_loc_...>`) in HDFS and URL grants with real location names.
+6. **Create External Locations** listed in `_bootstrap_prerequisites.sql` STEP 5 — names are pre-derived from Ranger paths and match the GRANT statements exactly.
 7. **Check for UDF dependencies** in row filter expressions — migrate any Hive UDFs to Databricks first.
 8. **Review Gap Analysis warnings** for `isDenyAllElse`, `validitySchedules`, and `conditions` — these require manual remediation.
 9. **`BEGIN...END FOR` loop sections** require Databricks Runtime 14.0+ or a SQL Warehouse with scripting enabled. These sections appear when Ranger had `table: *` (all-tables wildcard) and `SELECT` or `MODIFY` were among the privileges. Run them from a Databricks notebook or SQL Warehouse — the Databricks CLI's `sql execute` command also works.

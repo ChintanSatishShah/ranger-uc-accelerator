@@ -12,107 +12,107 @@
 -- Type: HDFS_GRANT | Principal: finance
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /resource (recursive)
--- ⚠ Create a UC External Location covering this path first,
---   then replace the placeholder below with the actual location name.
-GRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_resource>` TO `finance`;
-GRANT WRITE FILES ON EXTERNAL LOCATION `<ext_loc_resource>` TO `finance`;
+-- ⚠ Ensure External Location `ext_loc_resource` exists before executing
+--   (see _bootstrap_prerequisites.sql — STEP 5).
+GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_resource` TO `finance`;
+GRANT WRITE FILES ON EXTERNAL LOCATION `ext_loc_resource` TO `finance`;
 
 -- ═══════════════════════════════════════════════════════
 -- Policy: /resource: allow: users=user-ra, user-ra-ta, user-ra-td; deny: user=user-rd, user-rd-ta, user-rd-td (Ranger ID: 1)
 -- Type: HDFS_GRANT | Principal: user-ra
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /resource (recursive)
--- ⚠ Create a UC External Location covering this path first,
---   then replace the placeholder below with the actual location name.
-GRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_resource>` TO `user-ra@company.com`;
-GRANT WRITE FILES ON EXTERNAL LOCATION `<ext_loc_resource>` TO `user-ra@company.com`;
+-- ⚠ Ensure External Location `ext_loc_resource` exists before executing
+--   (see _bootstrap_prerequisites.sql — STEP 5).
+GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_resource` TO `user-ra@company.com`;
+GRANT WRITE FILES ON EXTERNAL LOCATION `ext_loc_resource` TO `user-ra@company.com`;
 
 -- ═══════════════════════════════════════════════════════
 -- Policy: /resource: allow: users=user-ra, user-ra-ta, user-ra-td; deny: user=user-rd, user-rd-ta, user-rd-td (Ranger ID: 1)
 -- Type: HDFS_GRANT | Principal: user-ra-ta
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /resource (recursive)
--- ⚠ Create a UC External Location covering this path first,
---   then replace the placeholder below with the actual location name.
-GRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_resource>` TO `user-ra-ta@company.com`;
-GRANT WRITE FILES ON EXTERNAL LOCATION `<ext_loc_resource>` TO `user-ra-ta@company.com`;
+-- ⚠ Ensure External Location `ext_loc_resource` exists before executing
+--   (see _bootstrap_prerequisites.sql — STEP 5).
+GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_resource` TO `user-ra-ta@company.com`;
+GRANT WRITE FILES ON EXTERNAL LOCATION `ext_loc_resource` TO `user-ra-ta@company.com`;
 
 -- ═══════════════════════════════════════════════════════
 -- Policy: /resource: allow: users=user-ra, user-ra-ta, user-ra-td; deny: user=user-rd, user-rd-ta, user-rd-td (Ranger ID: 1)
 -- Type: HDFS_GRANT | Principal: user-ra-td
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /resource (recursive)
--- ⚠ Create a UC External Location covering this path first,
---   then replace the placeholder below with the actual location name.
-GRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_resource>` TO `user-ra-td@company.com`;
-GRANT WRITE FILES ON EXTERNAL LOCATION `<ext_loc_resource>` TO `user-ra-td@company.com`;
+-- ⚠ Ensure External Location `ext_loc_resource` exists before executing
+--   (see _bootstrap_prerequisites.sql — STEP 5).
+GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_resource` TO `user-ra-td@company.com`;
+GRANT WRITE FILES ON EXTERNAL LOCATION `ext_loc_resource` TO `user-ra-td@company.com`;
 
 -- ═══════════════════════════════════════════════════════
 -- Policy: /unaudited-resource: allow: users=user-ra, user-ra-ta, user-ra-td; deny: user=user-rd, user-rd-ta, user-rd-td (Ranger ID: 2)
 -- Type: HDFS_GRANT | Principal: finance
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /unaudited-resource (recursive)
--- ⚠ Create a UC External Location covering this path first,
---   then replace the placeholder below with the actual location name.
-GRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_unaudited_resource>` TO `finance`;
-GRANT WRITE FILES ON EXTERNAL LOCATION `<ext_loc_unaudited_resource>` TO `finance`;
+-- ⚠ Ensure External Location `ext_loc_unaudited_resource` exists before executing
+--   (see _bootstrap_prerequisites.sql — STEP 5).
+GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_unaudited_resource` TO `finance`;
+GRANT WRITE FILES ON EXTERNAL LOCATION `ext_loc_unaudited_resource` TO `finance`;
 
 -- ═══════════════════════════════════════════════════════
 -- Policy: /unaudited-resource: allow: users=user-ra, user-ra-ta, user-ra-td; deny: user=user-rd, user-rd-ta, user-rd-td (Ranger ID: 2)
 -- Type: HDFS_GRANT | Principal: user-ra
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /unaudited-resource (recursive)
--- ⚠ Create a UC External Location covering this path first,
---   then replace the placeholder below with the actual location name.
-GRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_unaudited_resource>` TO `user-ra@company.com`;
-GRANT WRITE FILES ON EXTERNAL LOCATION `<ext_loc_unaudited_resource>` TO `user-ra@company.com`;
+-- ⚠ Ensure External Location `ext_loc_unaudited_resource` exists before executing
+--   (see _bootstrap_prerequisites.sql — STEP 5).
+GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_unaudited_resource` TO `user-ra@company.com`;
+GRANT WRITE FILES ON EXTERNAL LOCATION `ext_loc_unaudited_resource` TO `user-ra@company.com`;
 
 -- ═══════════════════════════════════════════════════════
 -- Policy: /unaudited-resource: allow: users=user-ra, user-ra-ta, user-ra-td; deny: user=user-rd, user-rd-ta, user-rd-td (Ranger ID: 2)
 -- Type: HDFS_GRANT | Principal: user-ra-ta
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /unaudited-resource (recursive)
--- ⚠ Create a UC External Location covering this path first,
---   then replace the placeholder below with the actual location name.
-GRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_unaudited_resource>` TO `user-ra-ta@company.com`;
-GRANT WRITE FILES ON EXTERNAL LOCATION `<ext_loc_unaudited_resource>` TO `user-ra-ta@company.com`;
+-- ⚠ Ensure External Location `ext_loc_unaudited_resource` exists before executing
+--   (see _bootstrap_prerequisites.sql — STEP 5).
+GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_unaudited_resource` TO `user-ra-ta@company.com`;
+GRANT WRITE FILES ON EXTERNAL LOCATION `ext_loc_unaudited_resource` TO `user-ra-ta@company.com`;
 
 -- ═══════════════════════════════════════════════════════
 -- Policy: /unaudited-resource: allow: users=user-ra, user-ra-ta, user-ra-td; deny: user=user-rd, user-rd-ta, user-rd-td (Ranger ID: 2)
 -- Type: HDFS_GRANT | Principal: user-ra-td
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /unaudited-resource (recursive)
--- ⚠ Create a UC External Location covering this path first,
---   then replace the placeholder below with the actual location name.
-GRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_unaudited_resource>` TO `user-ra-td@company.com`;
-GRANT WRITE FILES ON EXTERNAL LOCATION `<ext_loc_unaudited_resource>` TO `user-ra-td@company.com`;
+-- ⚠ Ensure External Location `ext_loc_unaudited_resource` exists before executing
+--   (see _bootstrap_prerequisites.sql — STEP 5).
+GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_unaudited_resource` TO `user-ra-td@company.com`;
+GRANT WRITE FILES ON EXTERNAL LOCATION `ext_loc_unaudited_resource` TO `user-ra-td@company.com`;
 
 -- ═══════════════════════════════════════════════════════
 -- Policy: /override-resource: allow: users=user-td, user-ra-td, user-rd-td (Ranger ID: 3)
 -- Type: HDFS_GRANT | Principal: user-td
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /override-resource (recursive)
--- ⚠ Create a UC External Location covering this path first,
---   then replace the placeholder below with the actual location name.
-GRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_override_resource>` TO `user-td@company.com`;
-GRANT WRITE FILES ON EXTERNAL LOCATION `<ext_loc_override_resource>` TO `user-td@company.com`;
+-- ⚠ Ensure External Location `ext_loc_override_resource` exists before executing
+--   (see _bootstrap_prerequisites.sql — STEP 5).
+GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_override_resource` TO `user-td@company.com`;
+GRANT WRITE FILES ON EXTERNAL LOCATION `ext_loc_override_resource` TO `user-td@company.com`;
 
 -- ═══════════════════════════════════════════════════════
 -- Policy: /override-resource: allow: users=user-td, user-ra-td, user-rd-td (Ranger ID: 3)
 -- Type: HDFS_GRANT | Principal: user-ra-td
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /override-resource (recursive)
--- ⚠ Create a UC External Location covering this path first,
---   then replace the placeholder below with the actual location name.
-GRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_override_resource>` TO `user-ra-td@company.com`;
-GRANT WRITE FILES ON EXTERNAL LOCATION `<ext_loc_override_resource>` TO `user-ra-td@company.com`;
+-- ⚠ Ensure External Location `ext_loc_override_resource` exists before executing
+--   (see _bootstrap_prerequisites.sql — STEP 5).
+GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_override_resource` TO `user-ra-td@company.com`;
+GRANT WRITE FILES ON EXTERNAL LOCATION `ext_loc_override_resource` TO `user-ra-td@company.com`;
 
 -- ═══════════════════════════════════════════════════════
 -- Policy: /override-resource: allow: users=user-td, user-ra-td, user-rd-td (Ranger ID: 3)
 -- Type: HDFS_GRANT | Principal: user-rd-td
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /override-resource (recursive)
--- ⚠ Create a UC External Location covering this path first,
---   then replace the placeholder below with the actual location name.
-GRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_override_resource>` TO `user-rd-td@company.com`;
-GRANT WRITE FILES ON EXTERNAL LOCATION `<ext_loc_override_resource>` TO `user-rd-td@company.com`;
+-- ⚠ Ensure External Location `ext_loc_override_resource` exists before executing
+--   (see _bootstrap_prerequisites.sql — STEP 5).
+GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_override_resource` TO `user-rd-td@company.com`;
+GRANT WRITE FILES ON EXTERNAL LOCATION `ext_loc_override_resource` TO `user-rd-td@company.com`;

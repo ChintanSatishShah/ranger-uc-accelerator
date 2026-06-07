@@ -12,10 +12,10 @@
 -- Type: HDFS_GRANT | Principal: hadoop
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /* (recursive)
--- ⚠ Create a UC External Location covering this path first,
---   then replace the placeholder below with the actual location name.
-GRANT READ FILES ON EXTERNAL LOCATION `<ext_loc__>` TO `hadoop@company.com`;
-GRANT WRITE FILES ON EXTERNAL LOCATION `<ext_loc__>` TO `hadoop@company.com`;
+-- ⚠ Ensure External Location `ext_loc__` exists before executing
+--   (see _bootstrap_prerequisites.sql — STEP 5).
+GRANT READ FILES ON EXTERNAL LOCATION `ext_loc__` TO `hadoop@company.com`;
+GRANT WRITE FILES ON EXTERNAL LOCATION `ext_loc__` TO `hadoop@company.com`;
 -- Note: delegateAdmin=true. Consider granting MANAGE on the External Location.
 
 -- ═══════════════════════════════════════════════════════
@@ -23,17 +23,17 @@ GRANT WRITE FILES ON EXTERNAL LOCATION `<ext_loc__>` TO `hadoop@company.com`;
 -- Type: HDFS_GRANT | Principal: keyadmin
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /ranger/audit/kms (recursive)
--- ⚠ Create a UC External Location covering this path first,
---   then replace the placeholder below with the actual location name.
-GRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_ranger_audit_kms>` TO `keyadmin@company.com`;
-GRANT WRITE FILES ON EXTERNAL LOCATION `<ext_loc_ranger_audit_kms>` TO `keyadmin@company.com`;
+-- ⚠ Ensure External Location `ext_loc_ranger_audit_kms` exists before executing
+--   (see _bootstrap_prerequisites.sql — STEP 5).
+GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_ranger_audit_kms` TO `keyadmin@company.com`;
+GRANT WRITE FILES ON EXTERNAL LOCATION `ext_loc_ranger_audit_kms` TO `keyadmin@company.com`;
 
 -- ═══════════════════════════════════════════════════════
 -- Policy: Finance for default zone (Ranger ID: 40)
 -- Type: HDFS_GRANT | Principal: sales-admin
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /finance (recursive)
--- ⚠ Create a UC External Location covering this path first,
---   then replace the placeholder below with the actual location name.
-GRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_finance>` TO `sales-admin@company.com`;
-GRANT WRITE FILES ON EXTERNAL LOCATION `<ext_loc_finance>` TO `sales-admin@company.com`;
+-- ⚠ Ensure External Location `ext_loc_finance` exists before executing
+--   (see _bootstrap_prerequisites.sql — STEP 5).
+GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_finance` TO `sales-admin@company.com`;
+GRANT WRITE FILES ON EXTERNAL LOCATION `ext_loc_finance` TO `sales-admin@company.com`;

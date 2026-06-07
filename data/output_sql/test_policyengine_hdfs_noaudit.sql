@@ -12,23 +12,23 @@
 -- Type: HDFS_GRANT | Principal: public
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /finance/restricted/ (recursive)
--- ⚠ Create a UC External Location covering this path first,
---   then replace the placeholder below with the actual location name.
+-- ⚠ Ensure External Location `ext_loc_finance_restricted` exists before executing
+--   (see _bootstrap_prerequisites.sql — STEP 5).
 
 -- ═══════════════════════════════════════════════════════
 -- Policy: allow-read-to-all under /public/ (Ranger ID: 2)
 -- Type: HDFS_GRANT | Principal: public
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /public/* (recursive)
--- ⚠ Create a UC External Location covering this path first,
---   then replace the placeholder below with the actual location name.
-GRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_public__>` TO `public`;
+-- ⚠ Ensure External Location `ext_loc_public__` exists before executing
+--   (see _bootstrap_prerequisites.sql — STEP 5).
+GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_public__` TO `public`;
 
 -- ═══════════════════════════════════════════════════════
 -- Policy: allow-read-to-finance under /finance/restricted (Ranger ID: 3)
 -- Type: HDFS_GRANT | Principal: finance
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /finance/restricted (recursive)
--- ⚠ Create a UC External Location covering this path first,
---   then replace the placeholder below with the actual location name.
-GRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_finance_restricted>` TO `finance`;
+-- ⚠ Ensure External Location `ext_loc_finance_restricted` exists before executing
+--   (see _bootstrap_prerequisites.sql — STEP 5).
+GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_finance_restricted` TO `finance`;

@@ -12,7 +12,7 @@
 -- Type: HDFS_GRANT | Principal: hrt_21
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /test?
--- ⚠ Create a UC External Location covering this path first,
---   then replace the placeholder below with the actual location name.
-GRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_test_>` TO `hrt_21@company.com`;
-GRANT WRITE FILES ON EXTERNAL LOCATION `<ext_loc_test_>` TO `hrt_21@company.com`;
+-- ⚠ Ensure External Location `ext_loc_test_` exists before executing
+--   (see _bootstrap_prerequisites.sql — STEP 5).
+GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_test_` TO `hrt_21@company.com`;
+GRANT WRITE FILES ON EXTERNAL LOCATION `ext_loc_test_` TO `hrt_21@company.com`;

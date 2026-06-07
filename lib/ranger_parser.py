@@ -1414,12 +1414,13 @@ def generate_uc_sql(
         path = item.get("path") or "/"
         is_recursive = item.get("isRecursive", False)
         safe_loc = _safe(path.strip("/")) or "root"
+        loc_name = f"ext_loc_{safe_loc}"
         recursive_note = " (recursive)" if is_recursive else ""
         lines.append(f"-- HDFS path: {path}{recursive_note}")
-        lines.append("-- ⚠ Create a UC External Location covering this path first,")
-        lines.append("--   then replace the placeholder below with the actual location name.")
+        lines.append(f"-- ⚠ Ensure External Location `{loc_name}` exists before executing")
+        lines.append(f"--   (see _bootstrap_prerequisites.sql — STEP 5).")
         for priv in item.get("privileges") or []:
-            lines.append(f"GRANT {priv} ON EXTERNAL LOCATION `<ext_loc_{safe_loc}>` TO {principal};")
+            lines.append(f"GRANT {priv} ON EXTERNAL LOCATION `{loc_name}` TO {principal};")
         if item.get("delegateAdmin"):
             lines.append("-- Note: delegateAdmin=true. Consider granting MANAGE on the External Location.")
 

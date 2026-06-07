@@ -7,46 +7,54 @@
 -- ║  Policies: 5 of 5
 -- ╚═══════════════════════════════════════════════════════════╝
 
+-- ⚠ NESTED PATH NOTICE: 2 HDFS/URL path pair(s) have a parent→child relationship.
+-- Unity Catalog External Locations cannot have overlapping paths.
+-- Recommended fix: create ONE External Location at the parent path and use
+-- External Volumes (inside a catalog schema) for the child sub-paths,
+-- then grant READ VOLUME / WRITE VOLUME instead of READ FILES / WRITE FILES.
+--   Parent: /public  →  Child (use External Volume): /public/finance
+--   Parent: /public/*  →  Child (use External Volume): /public/finance
+
 -- ═══════════════════════════════════════════════════════
 -- Policy: audit-all-access under /public (Ranger ID: 1)
 -- Type: HDFS_GRANT | Principal: public
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /public (recursive)
--- ⚠ Create a UC External Location covering this path first,
---   then replace the placeholder below with the actual location name.
+-- ⚠ Ensure External Location `ext_loc_public` exists before executing
+--   (see _bootstrap_prerequisites.sql — STEP 5).
 
 -- ═══════════════════════════════════════════════════════
 -- Policy: allow-execute-to-all under /public/ (Ranger ID: 2)
 -- Type: HDFS_GRANT | Principal: public
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /public/* (recursive)
--- ⚠ Create a UC External Location covering this path first,
---   then replace the placeholder below with the actual location name.
-GRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_public__>` TO `public`;
+-- ⚠ Ensure External Location `ext_loc_public__` exists before executing
+--   (see _bootstrap_prerequisites.sql — STEP 5).
+GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_public__` TO `public`;
 
 -- ═══════════════════════════════════════════════════════
 -- Policy: allow-read-to-finance under /public/finance (Ranger ID: 3)
 -- Type: HDFS_GRANT | Principal: finance
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /public/finance (recursive)
--- ⚠ Create a UC External Location covering this path first,
---   then replace the placeholder below with the actual location name.
-GRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_public_finance>` TO `finance@company.com`;
+-- ⚠ Ensure External Location `ext_loc_public_finance` exists before executing
+--   (see _bootstrap_prerequisites.sql — STEP 5).
+GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_public_finance` TO `finance@company.com`;
 
 -- ═══════════════════════════════════════════════════════
 -- Policy: allow-read-to-finance under /public/finance to user guest (Ranger ID: 5)
 -- Type: HDFS_GRANT | Principal: guest
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /public/finance (recursive)
--- ⚠ Create a UC External Location covering this path first,
---   then replace the placeholder below with the actual location name.
-GRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_public_finance>` TO `guest@company.com`;
+-- ⚠ Ensure External Location `ext_loc_public_finance` exists before executing
+--   (see _bootstrap_prerequisites.sql — STEP 5).
+GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_public_finance` TO `guest@company.com`;
 
 -- ═══════════════════════════════════════════════════════
 -- Policy: allow-execute-to-finance under /public/finance to user guest (Ranger ID: 6)
 -- Type: HDFS_GRANT | Principal: guest
 -- ═══════════════════════════════════════════════════════
 -- HDFS path: /public/finance (recursive)
--- ⚠ Create a UC External Location covering this path first,
---   then replace the placeholder below with the actual location name.
-GRANT READ FILES ON EXTERNAL LOCATION `<ext_loc_public_finance>` TO `guest@company.com`;
+-- ⚠ Ensure External Location `ext_loc_public_finance` exists before executing
+--   (see _bootstrap_prerequisites.sql — STEP 5).
+GRANT READ FILES ON EXTERNAL LOCATION `ext_loc_public_finance` TO `guest@company.com`;

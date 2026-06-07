@@ -14,7 +14,7 @@
 -- ╚══════════════════════════════════════════════════════════════════════╝
 
 -- Summary: 1 catalog · 37 schemas · 57 tables
---          36 external locations · 4 UDF references
+--          29 external locations (7 sub-path advisories) · 4 UDF references
 --          58 human users · 8 service accounts
 --          0 Kerberos principals · 107 groups · 4 roles
 
@@ -295,9 +295,14 @@ CREATE SCHEMA IF NOT EXISTS `main`.`user_`;
 CREATE SCHEMA IF NOT EXISTS `main`.`vendor_integration_db`;
 
 -- ════════════════════════════════════════════════════════════════════
--- STEP 5 — EXTERNAL LOCATIONS  (36 total)
+-- STEP 5 — EXTERNAL LOCATIONS  (29 creatable · 7 sub-path advisories)
 --    Requires: account admin + Storage Credential from Step 2.
 --    Bucket: ranger-uc-demo (demo). Replace with your actual bucket.
+--
+--    ⚠ 7 Ranger path(s) are sub-paths of another location.
+--    UC does not allow overlapping External Locations — these are
+--    commented out below. Use an External Volume inside the parent
+--    location for fine-grained access control on sub-paths.
 -- ════════════════════════════════════════════════════════════════════
 
 -- Ranger path: \
@@ -320,30 +325,42 @@ CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_finance`
   URL 's3://ranger-uc-demo/ext_loc_finance/'
   WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
 
--- Ranger path: /finance/limited
-CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_finance_limited`
-  URL 's3://ranger-uc-demo/ext_loc_finance_limited/'
-  WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
+-- ⛔ SKIPPED — Ranger path: /finance/limited
+--    `ext_loc_finance_limited` is a sub-path of `ext_loc_finance`.
+--    UC External Locations cannot overlap. Use an External Volume
+--    under `ext_loc_finance` for access control on this sub-path.
+-- CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_finance_limited`
+--   URL 's3://ranger-uc-demo/ext_loc_finance_limited/'
+--   WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
 
--- Ranger path: /finance/rest*ricted/
-CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_finance_rest_ricted`
-  URL 's3://ranger-uc-demo/ext_loc_finance_rest_ricted/'
-  WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
+-- ⛔ SKIPPED — Ranger path: /finance/rest*ricted/
+--    `ext_loc_finance_rest_ricted` is a sub-path of `ext_loc_finance`.
+--    UC External Locations cannot overlap. Use an External Volume
+--    under `ext_loc_finance` for access control on this sub-path.
+-- CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_finance_rest_ricted`
+--   URL 's3://ranger-uc-demo/ext_loc_finance_rest_ricted/'
+--   WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
 
--- Ranger path: /finance/restricted/
-CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_finance_restricted`
-  URL 's3://ranger-uc-demo/ext_loc_finance_restricted/'
-  WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
+-- ⛔ SKIPPED — Ranger path: /finance/restricted/
+--    `ext_loc_finance_restricted` is a sub-path of `ext_loc_finance`.
+--    UC External Locations cannot overlap. Use an External Volume
+--    under `ext_loc_finance` for access control on this sub-path.
+-- CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_finance_restricted`
+--   URL 's3://ranger-uc-demo/ext_loc_finance_restricted/'
+--   WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
 
 -- Ranger path: /home/
 CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_home`
   URL 's3://ranger-uc-demo/ext_loc_home/'
   WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
 
--- Ranger path: /home/{USER}/
-CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_home__USER_`
-  URL 's3://ranger-uc-demo/ext_loc_home__USER_/'
-  WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
+-- ⛔ SKIPPED — Ranger path: /home/{USER}/
+--    `ext_loc_home__USER_` is a sub-path of `ext_loc_home`.
+--    UC External Locations cannot overlap. Use an External Volume
+--    under `ext_loc_home` for access control on this sub-path.
+-- CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_home__USER_`
+--   URL 's3://ranger-uc-demo/ext_loc_home__USER_/'
+--   WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
 
 -- Ranger path: http://qe-s3-bucket-mst/test_abcd/abcd/
 CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_http___qe_s3_bucket_mst_test_abcd_abcd`
@@ -375,10 +392,13 @@ CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_public__`
   URL 's3://ranger-uc-demo/ext_loc_public__/'
   WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
 
--- Ranger path: /public/finance
-CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_public_finance`
-  URL 's3://ranger-uc-demo/ext_loc_public_finance/'
-  WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
+-- ⛔ SKIPPED — Ranger path: /public/finance
+--    `ext_loc_public_finance` is a sub-path of `ext_loc_public`.
+--    UC External Locations cannot overlap. Use an External Volume
+--    under `ext_loc_public` for access control on this sub-path.
+-- CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_public_finance`
+--   URL 's3://ranger-uc-demo/ext_loc_public_finance/'
+--   WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
 
 -- Ranger path: /ranger/audit/kms
 CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_ranger_audit_kms`
@@ -425,10 +445,13 @@ CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_tmp__USER_`
   URL 's3://ranger-uc-demo/ext_loc_tmp__USER_/'
   WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
 
--- Ranger path: /tmp/{USER}/subdir
-CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_tmp__USER__subdir`
-  URL 's3://ranger-uc-demo/ext_loc_tmp__USER__subdir/'
-  WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
+-- ⛔ SKIPPED — Ranger path: /tmp/{USER}/subdir
+--    `ext_loc_tmp__USER__subdir` is a sub-path of `ext_loc_tmp__USER_`.
+--    UC External Locations cannot overlap. Use an External Volume
+--    under `ext_loc_tmp__USER_` for access control on this sub-path.
+-- CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_tmp__USER__subdir`
+--   URL 's3://ranger-uc-demo/ext_loc_tmp__USER__subdir/'
+--   WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
 
 -- Ranger path: /tmp/a/b
 CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_tmp_a_b`
@@ -475,10 +498,13 @@ CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_user_dir`
   URL 's3://ranger-uc-demo/ext_loc_user_dir/'
   WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
 
--- Ranger path: /user/dir/subdir
-CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_user_dir_subdir`
-  URL 's3://ranger-uc-demo/ext_loc_user_dir_subdir/'
-  WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
+-- ⛔ SKIPPED — Ranger path: /user/dir/subdir
+--    `ext_loc_user_dir_subdir` is a sub-path of `ext_loc_user_dir`.
+--    UC External Locations cannot overlap. Use an External Volume
+--    under `ext_loc_user_dir` for access control on this sub-path.
+-- CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_user_dir_subdir`
+--   URL 's3://ranger-uc-demo/ext_loc_user_dir_subdir/'
+--   WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
 
 -- ════════════════════════════════════════════════════════════════════
 -- STEP 6 — TABLES  (57 total)

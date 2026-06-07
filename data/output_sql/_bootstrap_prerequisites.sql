@@ -297,187 +297,187 @@ CREATE SCHEMA IF NOT EXISTS `main`.`vendor_integration_db`;
 -- ════════════════════════════════════════════════════════════════════
 -- STEP 5 — EXTERNAL LOCATIONS  (36 total)
 --    Requires: account admin + Storage Credential from Step 2.
---    Replace the URL with the actual cloud path and credential name.
+--    Update the URL to point to your actual cloud storage path.
 -- ════════════════════════════════════════════════════════════════════
 
 -- Ranger path: \
 CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc__`
-  URL 's3a://<bucket>/\/'  -- replace: s3a://, abfss://, or gs://
+  URL 's3://ranger-demo-ext_loc__/'
   WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
 
 -- Ranger path: /a/b*
 CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_a_b_`
-  URL 's3a://<bucket>/a/b/'  -- replace: s3a://, abfss://, or gs://
+  URL 's3://ranger-demo-ext_loc_a_b_/'
   WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
 
 -- Ranger path: /a/bc*
 CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_a_bc_`
-  URL 's3a://<bucket>/a/bc/'  -- replace: s3a://, abfss://, or gs://
+  URL 's3://ranger-demo-ext_loc_a_bc_/'
   WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
 
 -- Ranger path: /finance
 CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_finance`
-  URL 's3a://<bucket>/finance/'  -- replace: s3a://, abfss://, or gs://
+  URL 's3://ranger-demo-ext_loc_finance/'
   WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
 
 -- Ranger path: /finance/limited
 CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_finance_limited`
-  URL 's3a://<bucket>/finance/limited/'  -- replace: s3a://, abfss://, or gs://
+  URL 's3://ranger-demo-ext_loc_finance_limited/'
   WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
 
 -- Ranger path: /finance/rest*ricted/
 CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_finance_rest_ricted`
-  URL 's3a://<bucket>/finance/rest*ricted/'  -- replace: s3a://, abfss://, or gs://
+  URL 's3://ranger-demo-ext_loc_finance_rest_ricted/'
   WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
 
 -- Ranger path: /finance/restricted/
 CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_finance_restricted`
-  URL 's3a://<bucket>/finance/restricted/'  -- replace: s3a://, abfss://, or gs://
+  URL 's3://ranger-demo-ext_loc_finance_restricted/'
   WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
 
 -- Ranger path: /home/
 CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_home`
-  URL 's3a://<bucket>/home/'  -- replace: s3a://, abfss://, or gs://
+  URL 's3://ranger-demo-ext_loc_home/'
   WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
 
 -- Ranger path: /home/{USER}/
 CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_home__USER_`
-  URL 's3a://<bucket>/home/{USER}/'  -- replace: s3a://, abfss://, or gs://
+  URL 's3://ranger-demo-ext_loc_home__USER_/'
   WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
 
 -- Ranger path: http://qe-s3-bucket-mst/test_abcd/abcd/
 CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_http___qe_s3_bucket_mst_test_abcd_abcd`
-  URL 'http://qe-s3-bucket-mst/test_abcd/abcd/'  -- replace: s3a://, abfss://, or gs://
+  URL 's3://ranger-demo-ext_loc_http___qe_s3_bucket_mst_test_abcd_abcd/'
   WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
 
 -- Ranger path: /mybu/admin
 CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_mybu_admin`
-  URL 's3a://<bucket>/mybu/admin/'  -- replace: s3a://, abfss://, or gs://
+  URL 's3://ranger-demo-ext_loc_mybu_admin/'
   WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
 
 -- Ranger path: /mybu/analyst
 CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_mybu_analyst`
-  URL 's3a://<bucket>/mybu/analyst/'  -- replace: s3a://, abfss://, or gs://
+  URL 's3://ranger-demo-ext_loc_mybu_analyst/'
   WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
 
 -- Ranger path: /override-resource
 CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_override_resource`
-  URL 's3a://<bucket>/override-resource/'  -- replace: s3a://, abfss://, or gs://
+  URL 's3://ranger-demo-ext_loc_override_resource/'
   WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
 
 -- Ranger path: /public
 CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_public`
-  URL 's3a://<bucket>/public/'  -- replace: s3a://, abfss://, or gs://
+  URL 's3://ranger-demo-ext_loc_public/'
   WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
 
 -- Ranger path: /public/*
 CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_public__`
-  URL 's3a://<bucket>/public/'  -- replace: s3a://, abfss://, or gs://
+  URL 's3://ranger-demo-ext_loc_public__/'
   WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
 
 -- Ranger path: /public/finance
 CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_public_finance`
-  URL 's3a://<bucket>/public/finance/'  -- replace: s3a://, abfss://, or gs://
+  URL 's3://ranger-demo-ext_loc_public_finance/'
   WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
 
 -- Ranger path: /ranger/audit/kms
 CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_ranger_audit_kms`
-  URL 's3a://<bucket>/ranger/audit/kms/'  -- replace: s3a://, abfss://, or gs://
+  URL 's3://ranger-demo-ext_loc_ranger_audit_kms/'
   WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
 
 -- Ranger path: /resource
 CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_resource`
-  URL 's3a://<bucket>/resource/'  -- replace: s3a://, abfss://, or gs://
+  URL 's3://ranger-demo-ext_loc_resource/'
   WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
 
 -- Ranger path: /
 CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_root`
-  URL 's3a://<bucket>/'  -- replace: s3a://, abfss://, or gs://
+  URL 's3://ranger-demo-ext_loc_root/'
   WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
 
 -- Ranger path: s3a://qe-s3-bucket-mst/demo
 CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_s3a___qe_s3_bucket_mst_demo`
-  URL 's3a://qe-s3-bucket-mst/demo/'  -- replace: s3a://, abfss://, or gs://
+  URL 's3://ranger-demo-ext_loc_s3a___qe_s3_bucket_mst_demo/'
   WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
 
 -- Ranger path: s3a://qe-s3-bucket-mst/test_abcd/abcd
 CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_s3a___qe_s3_bucket_mst_test_abcd_abcd`
-  URL 's3a://qe-s3-bucket-mst/test_abcd/abcd/'  -- replace: s3a://, abfss://, or gs://
+  URL 's3://ranger-demo-ext_loc_s3a___qe_s3_bucket_mst_test_abcd_abcd/'
   WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
 
 -- Ranger path: /test?
 CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_test_`
-  URL 's3a://<bucket>/test?/'  -- replace: s3a://, abfss://, or gs://
+  URL 's3://ranger-demo-ext_loc_test_/'
   WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
 
 -- Ranger path: /test/forbidden/
 CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_test_forbidden`
-  URL 's3a://<bucket>/test/forbidden/'  -- replace: s3a://, abfss://, or gs://
+  URL 's3://ranger-demo-ext_loc_test_forbidden/'
   WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
 
 -- Ranger path: /test/restricted/
 CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_test_restricted`
-  URL 's3a://<bucket>/test/restricted/'  -- replace: s3a://, abfss://, or gs://
+  URL 's3://ranger-demo-ext_loc_test_restricted/'
   WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
 
 -- Ranger path: /tmp/{USER}
 CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_tmp__USER_`
-  URL 's3a://<bucket>/tmp/{USER}/'  -- replace: s3a://, abfss://, or gs://
+  URL 's3://ranger-demo-ext_loc_tmp__USER_/'
   WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
 
 -- Ranger path: /tmp/{USER}/subdir
 CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_tmp__USER__subdir`
-  URL 's3a://<bucket>/tmp/{USER}/subdir/'  -- replace: s3a://, abfss://, or gs://
+  URL 's3://ranger-demo-ext_loc_tmp__USER__subdir/'
   WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
 
 -- Ranger path: /tmp/a/b
 CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_tmp_a_b`
-  URL 's3a://<bucket>/tmp/a/b/'  -- replace: s3a://, abfss://, or gs://
+  URL 's3://ranger-demo-ext_loc_tmp_a_b/'
   WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
 
 -- Ranger path: /tmp/ab
 CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_tmp_ab`
-  URL 's3a://<bucket>/tmp/ab/'  -- replace: s3a://, abfss://, or gs://
+  URL 's3://ranger-demo-ext_loc_tmp_ab/'
   WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
 
 -- Ranger path: /tmp/ac/d/e/f
 CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_tmp_ac_d_e_f`
-  URL 's3a://<bucket>/tmp/ac/d/e/f/'  -- replace: s3a://, abfss://, or gs://
+  URL 's3://ranger-demo-ext_loc_tmp_ac_d_e_f/'
   WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
 
 -- Ranger path: /tmp.txt
 CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_tmp_txt`
-  URL 's3a://<bucket>/tmp.txt/'  -- replace: s3a://, abfss://, or gs://
+  URL 's3://ranger-demo-ext_loc_tmp_txt/'
   WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
 
 -- Ranger path: /tmpa/b
 CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_tmpa_b`
-  URL 's3a://<bucket>/tmpa/b/'  -- replace: s3a://, abfss://, or gs://
+  URL 's3://ranger-demo-ext_loc_tmpa_b/'
   WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
 
 -- Ranger path: /tmpfile
 CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_tmpfile`
-  URL 's3a://<bucket>/tmpfile/'  -- replace: s3a://, abfss://, or gs://
+  URL 's3://ranger-demo-ext_loc_tmpfile/'
   WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
 
 -- Ranger path: /unaudited-resource
 CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_unaudited_resource`
-  URL 's3a://<bucket>/unaudited-resource/'  -- replace: s3a://, abfss://, or gs://
+  URL 's3://ranger-demo-ext_loc_unaudited_resource/'
   WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
 
 -- Ranger path: /user/{USER}/*
 CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_user__USER___`
-  URL 's3a://<bucket>/user/{USER}/'  -- replace: s3a://, abfss://, or gs://
+  URL 's3://ranger-demo-ext_loc_user__USER___/'
   WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
 
 -- Ranger path: /user/dir
 CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_user_dir`
-  URL 's3a://<bucket>/user/dir/'  -- replace: s3a://, abfss://, or gs://
+  URL 's3://ranger-demo-ext_loc_user_dir/'
   WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
 
 -- Ranger path: /user/dir/subdir
 CREATE EXTERNAL LOCATION IF NOT EXISTS `ext_loc_user_dir_subdir`
-  URL 's3a://<bucket>/user/dir/subdir/'  -- replace: s3a://, abfss://, or gs://
+  URL 's3://ranger-demo-ext_loc_user_dir_subdir/'
   WITH (STORAGE CREDENTIAL `<your_storage_credential>`);
 
 -- ════════════════════════════════════════════════════════════════════
